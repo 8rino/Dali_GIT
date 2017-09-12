@@ -2,7 +2,10 @@
 #+STARTUP: hidestars
 #+LANGUAGE: it
 
-* PREPARAZIONE INIZIALE
+* Clonare un repository remoto di github
+ qui ci scriverà la Dalila
+
+* Preparazione repository locali
   Si presuppone un repository centrale remoto e due locali, tipicamante
   portatile e fisso
 
