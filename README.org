@@ -130,8 +130,8 @@
 
   Aggiungi al commit delle cose rimaste fuori e ricordate all'ultimo
   momento [[http://lostechies.com/derickbailey/2010/06/09/git-oops-i-forgot-to-add-those-new-files-before-committing/][Vedi qui]] 
-
-  > git commit --amend –C HEAD
+  > git add -u
+  > git commit --amend -C HEAD
 
   Aggiungi tutte le modifiche non staged [[https://drupal.org/node/1086094][Vedi qui]]
 
@@ -162,6 +162,39 @@
   squash df71a27 Updated CSS for new elements
 
   alla fine C-c C-c per eseguire e cambiare il messaggio di commit
+
+* gitk
+  http://gitolite.com/gitk.html
+** Colori della struttura 
+*** local branch names are in a green background
+*** remote branch names are in a mixed orange/green background
+*** the currently checked out branch name is in bold
+*** tags are on a yellow background
+*** a yellow dot marks the current HEAD
+*** a yellow square marks commits which have "notes" ('man git-notes' for what that means)
+** repository operations
+
+*** right clicking on a commit message
+         create a tag
+         create a new branch
+         reset the current branch to this commit (soft/mixed/hard)
+         cherry-pick this current onto the current branch
+*** right clicking on a branch name
+         checkout the branch (please heed the warning above
+         remove the branch
+
+
+* notes
+  Per aggiungere delle note ai commit, in modo da avere piu' spazio a
+  disposizione o per sottolineare qualcosa
+
+  Il comando
+
+  > git notes add -m "Questo tabellone si riferisce...." 2043d525c9c38d5ccfc2e7962079661b7b1ceced
+
+  aggiunge una nota al commit 2043d525c9...
+
+  Se si vuole sovrascrivereuna nota, si aggiunge -f
 
 * stash 
 
@@ -199,9 +232,16 @@
 
 * tag
 
-  git tag -a v1.0 -m "Modifiche dopo il crash SSD del Fujitsu"
-  git push origin v1.0
-
+  > git tag -a v1.0 -m "Modifiche dopo il crash SSD del Fujitsu"
+  > git push origin v1.0
+  oppure
+  > git push -- tags
+  per mandare a remoto tutti i tags
+  > git tag -d released/aug2016
+  per cancellare un tag locale (di nome "released/aug2016") fatto per sbaglio
+  > git push origin :refs/tags/released/aug2016
+  per cancellare lo stesso tag in remoto
+  http://www.manikrathee.com/how-to-delete-a-tag-in-git.html
 * Varia
 ** Eliminare tutti i file untracked
    Pulizia file untracked [[http://stackoverflow.com/questions/61212/how-do-i-remove-local-untracked-files-from-my-current-git-branch][Vedi qui]]

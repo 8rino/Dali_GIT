@@ -1,0 +1,7 @@
+# Escludi questi file e directory dal subversionamento
+tesi/auto/*
+tesi/Tesi_GITDalila.tex
+tesi/Tesi_GITDalila.rel
+tesi/Tesi_GITDalila.R
+tesi/Tesi_GITDalila-frn.tex
+tesi/figure/*

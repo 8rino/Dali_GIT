@@ -34,7 +34,7 @@
 %% Questa parte sotto controlla i colori dei riferimenti cliccabili
 \hypersetup{colorlinks,
   linkcolor={red!50!black},
-  citecolor={red},
+  citecolor={blue},
   urlcolor={blue!80!black},
   pdfstartview={XYZ null null 1}
 }
@@ -182,11 +182,45 @@
 
 \usepackage[nogin]{Sweave}
 % https://tex.stackexchange.com/questions/11619/resize-arrays-and-figures-in-a-sweave-document
-% nogin serve per definiore le dimensioni delle figure e passarle a latex
+% nogin serve per definire le dimensioni delle figure e passarle a latex
+\SweaveOpts{prefix.string= figure/Fig}
+% https://stackoverflow.com/questions/4674567/how-to-make-sweave-copy-generated-graphics-to-a-subfolder
 
 \usepackage{lipsum}
 % blocchi di testo fittizi
+<<PacchettiRichiesti, echo=FALSE, eval=TRUE>>=
+library(nlme)
+library(plyr)
+library(lattice)
+library(xtable)
+library(foreign)
+library(agricolae)
+library(multcomp)
+@
 
+<<setupDir, include=FALSE, cache=FALSE, echo=FALSE>>=
+info.sistema <-
+    Sys.info()[c(1,7)]
+if(info.sistema[1]=="Windows"){
+    DirMain <- paste("C:/Users/", info.sistema[2], "/Dropbox/MOLTE_R", sep="")
+} else {
+    if(info.sistema[2]=="dalila" ){
+        DirMain <-"~/Dali_GIT"
+    }else{
+        DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
+    }
+}
+DirData <-
+    file.path(DirMain,"dati_grezzi")
+DirElab <-
+    file.path(DirMain,"dati_elaborati")
+DirGraf <-
+    file.path(DirMain, "grafici")
+DirFunz <-
+    file.path(DirMain, "funzioni")
+DirCod <-
+    file.path(DirMain, "codice")
+@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,7 +229,7 @@
 \begin{document}
 \begin{frontespizio}
   \Margini{5cm}{1.5cm}{3cm}{1cm}
-  \Logo[2.5cm]{logo-unifi_positivo.jpeg}
+  \Logo[2.5cm]{./figure/logo-unifi_positivo.jpeg}
   \Istituzione{Universit\`a degli Studi di Firenze}
   \Divisione{Scuola di Agraria}
   \Scuola{Corso di Laurea in Scienze e tecnologie agrarie (LM-69)}
@@ -240,6 +274,48 @@
 
 qui ci va il testo
 
+\citet{JOHNSON19986}
+
+\begin{figure}[ht]
+  \centering
+ 
+<<label = grafico_prova, echo=FALSE, fig = TRUE,  width=5.4, height=5.4, include = TRUE>>=
+plot(1:10, col = 1:10, pch = 1:10, cex = 2)
+@ %def 
+
+
+
+\caption[Disdascalia corta Boxplot dei valori di densit\`a apparente:
+metodo \emph{Clod} ]{Didascalia lunga Boxplot dei valori di densit\`a
+  apparente ottenuti col metodo di analisi \emph{Clod}; gli
+  appezzamenti condotti convenzionalmente (a sinistra) hanno valori
+  leggermente più alti degli appezzamenti condotti a biologico (a
+  destra) una misura \SI{\Sexpr{round(mean(rnorm(10)),2)}}{\micro\metre}}
+  \label{fig:boxplotClod}
+
+\end{figure}
+
+\section{Prove}
+
+<<Summary_Campo, echo=FALSE, eval=FALSE, results=tex>>=
+names(summary.campo) <-  
+    c("Anno", "Conduzione", "Lavorazione", "Media", "Dev. std", "n", "Tukey")
+summary.campo$Anno <- 
+    c("2015", rep(" ", 5), "2016", rep(" ", 5))
+summary.campo$Conduzione <-
+    c("Co", rep(" ", 2), "Or", rep(" ", 2),
+      "Co", rep(" ", 2), "Or", rep(" ", 2))
+tabella.campo <-
+    xtable(summary.campo[,-7],
+           label = 'tab:summaryCore', align  = "llllccc",
+           caption =
+               "Valori medi della densit\\`a apparente (in \\SI{}{\\gram\\per\\cubic\\centi\\metre}),
+                condizionati per \\emph{Anno}, \\emph{Conduzione} e \\emph{Lavorazione} " )
+print(tabella.campo, include.rownames=FALSE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+@
 
 \begin{appendices}
 
