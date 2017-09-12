@@ -270,11 +270,352 @@ DirCod <-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{boh}
+\chapter{Introduzione}
+\section{Suolo}
+\subsection{Qualche definizione}
+Il suolo può essere considerato come “la pelle vivente della Terra” (Pepper et al.,
+2009) e si può definire come un corpo naturale che si trova sulla superficie
+terrestre e che consiste in un insieme di minerali, sostanza organica, fluidi e una
+varietà di organismi che permettono la crescita e la diffusione della vita.
 
-qui ci va il testo
+La Soil Taxonomy, il sistema di classificazione elaborato dall’USDA (United States
+Department of Agriculture), ha definito il suolo come un corpo naturale
+tridimensionale composto da solidi, quali la sostanza organica e i minerali, da
+liquidi e da gas (USDA, 1999a). Per lo stesso ente il suolo deve trovarsi sulla
+superficie terrestre e deve essere caratterizzato da almeno una delle seguenti
+caratteristiche: deve permettere la vita e la crescita delle piante superiori e/o
+presentare gli orizzonti (USDA, 1999a).
 
-\citet{JOHNSON19986}
+Johnson, nel 1998, diede invece una definizione cosiddetta cosmica: “Il suolo è
+formato da qualsiasi materiale minerale o organico posto sulla superficie di
+pianeti o corpi simili, ed è alterato da agenti biologici, chimici e fisici” (Johnson,
+1998).
+\subsection{I cinque componenti del suolo}
+Per potersi formare, il suolo ha bisogno di alcuni ingredienti, i quali sono stati
+enunciati da Jenny (1994) nella nota funzione:
+Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
+\begin{itemize}
+\item Si considera il clima sia a livello macroscopico che microscopico. Di questo
+ci interessano prevalentemente le precipitazioni e la temperatura poiché
+entrambe vanno a modificare l’andamento e la velocità delle reazioni di
+alterazione del sistema suolo;
+\item la topografia influenza le caratteristiche e le proprietà del suolo, tramite la
+pendenza, che può comportare variazioni nella distribuzione spaziale delle
+particelle che vengono influenzate dai fenomeni erosivi, e tramite
+l’esposizione, da cui dipende l’irraggiamento che comporta una varazione
+della temperatura e del grado di umidità;
+\item l’appartenenza della roccia madre ad una o ad un’altra famiglia comporta
+un’ineguale suscettibilità nel subire alterazioni e caratteristiche chimico
+fisiche differenti;
+\item gli organismi presenti nel suolo sono molteplici: la pedosfera rappresenta
+infatti l’ambiente con il pool genetico più grande della biosfera. Questi
+organismi sono sia di origine animale che vegetale e svolgono azioni molto
+diverse tra loro, tra cui quella di rendere il suolo un habitat complesso e
+favorevole alla vita;
+\item infine il suolo non è stabile e immutabile, ma viene continuamente alterato
+da fenomeni pedogenetici che ne modificano l’aspetto e la composizione.
+Tali alterazioni possono essere fisiche e/o chimiche e richiedono tempo
+per avvenire.
+\end{itemize}
+\subsection{Le sue funzioni}
+Il suolo svolge numerose e importani funzioni che permettono lo sviluppo della
+vita. Rappresentando il substrato dove gli organismi, sia vegetali che animali,
+possono accrescersi, alimentarsi e riprodursi, svolge la funzione carrier.
+Permette inoltre la produzione di materiali primari utili allo sviluppo umano
+quali alimenti, medicinali, legname ecc. Persegue alla regolazione e al
+miglioramento della qualità dell’acqua, favorendone la depurazione; inoltre,
+permettendone un miglior reflusso, assicura una maggior difesa idrogeologica. È
+poi il luogo dove avviene la degradazione di spoglie e residui biologici, così da
+rendere nuovamente disponibili gli elementi nutritivi. Infine permette anche la
+cattura ed il trattenimento di una buona parte del carbonio atmosferico,
+funzionando da carbon sink.
+
+\subsection{Sistema trifasico}
+Il suolo è un sistema trifasico, ovvero è composto dalle tre le fasi della materia:
+corpi solidi quali i minerali e la materia organica, ed elementi fluidi, sia liquidi
+che gassosi. Queste tre componenti devono essere tutte presenti e la loro
+ripartizione ottimale è 50\% di fase solida, di cui il 5-10\% di materia organica, e il
+50\% di pori: 25\% di micropori utili per il movimento dei liquidi e 25\% di
+macropori per il movimento dei gas (Radaelli and Calamai, 2001 ).
+Jongerius(1957) dinstinse 3 classi di pori: i micropori aventi un diametro
+inferiore ai 30 µm, utili per la trattenuta dell’acqua; i mesopori con diametro tra
+i 30 e i 100 µm importanti sia per il rinnovamento dell’aria che per il movimento
+dell’acqua e infine i macropori con diametro superiore ai 100 µm, che
+permettono invece il movimento dell’aria e il rapido infiltrarsi dell’acqua.
+Naturalmente il rapporto e la percentuale degli spazi porosi nei suoli risente
+dell’influenza della vegetazione e della fauna che ci vive, nonché delle pratiche
+agronomiche.
+
+\paragraph{Fase solida}
+I componenti della fase solida sono i minerali, che rappresentano la componente
+inorganica, e la materia organica. I primi rappresentano una percentuale
+maggiore, solitamente oltre il 90\% di tutta la porzione solida. I minerali possono
+essere classificati in base all’origine: primari se formati durante la
+solidificazione delle masse magmatiche fuse subendo leggere alterazioni;
+secondari se invece si sono originati in seguito a lunghi processi di alterazione,
+soprattutto chimica (Radaelli e Calamai, 2001).
+
+La componente minerale prevalente delle rocce e del terreno è costituita dai
+silicati (\chem{SiO4-}), che si dividono in più famiglie in base alla disposizione dei loro
+elementi (Fig. 1.1): nesosilicati, singoli tetraedri carichi e uniti da legami ionici
+grazie a ioni metallici (Olivina), sorosilicati ovvero coppie di tetraedri unite con
+legami ionici (Gneiss), ciclosilicati anelli uniti tra loro (Tormalina), inosilicati a
+catena singola (Augite) e doppia (Orneblenda), fillosilicati, con sviluppo
+bidimensionale a maglie esagonali e presenza di un’elevata carica negativa
+dovuta alle sostituzioni isomorfe e infine tectosilicati, strutture tridimensionali, i
+cui vertici sono tutti condivisi, presentando la massima stabilità e resistenza alle
+aterazioni (Feldspati, Zeoliti).
+
+Il fenomeno della sostituzione isomorfa consiste nella sostituzione di un catione,
+posto nella struttura del minerale, con un altro catione che abbia dimensioni
+simili, senza modificarne la struttura, ma avente carica uguale o diversa. Se la
+sostituzione avviene con cationi aventi la stessa carica, il minerale rimane
+elettricamente neutro, mentre se la carica è diversa si verifica uno squilibrio e la
+particella colloidale risulta essere elettricamente attiva. La superficie del
+colloide presenta quindi una carica negativa che comporta un&#39;attrazione di ioni
+di segno opposto che, non formando un vero e proprio legame, si muovono nelle
+immediate vicinanze della sua superficie. Mano a mano che ci si allontana dalla
+superficie la concentrazione di questi ioni si fa sempre più labile e si mischiano
+con ioni di segno congruente al colloide. A questo punto si ha un equilibrio tra gli
+ioni e si forma il cosiddetto \emph{doppio strato elettrico diffuso} (Radaelli e Calamai,
+2001). È il raggio di quest'ultimo a permettere o meno la formazione di
+aggregati, detta flocculazione, e questo fenomeno è alla base della formazione
+della struttura del suolo.
+
+Queste cariche, la cui presenza non solo è dovuta esclusivamente alle
+sostituzioni isomorfe, ma anche al pH (come nei gruppi a carattere acido), fanno
+sì che vengano richiamati cationi dalla soluzione, i quali sono trattenuti nel suolo
+invece di essere persi per dilavamento, diventando disponibili per essere
+scambiati e utilizzati dai vari microrganismi e organismi vegetali superiori.
+Questo è un punto chiave per la nutrizione delle piante e dei microrganismi
+dell’habitat tellurico e rappresenta la base della fertilità chimica del terreno.
+La componente inorganica può inoltre essere formata da minerali costituiti da
+un solo elemento come la grafite (C), oppure da ossidi anidri o idrati di Si
+(quarzo), Fe (ematite), Al (corindone) ecc. Inoltre si possono trovare anche:
+cloruri e nitrati, come la salgemma (\chem{NaCl}) e silvite (\chem{KCl}); solfuri, come la pirite
+(\chem{FeS2}); carbonati, come la calcite, l’aragonite, la dolomite; solfati e fosfati (gesso
+e apatiti).
+
+La fase solida è costituita anche dalla materia organica che ha un’elevata carica
+variabile, dell’ordine di 
+% 200-400meq/100 g. 
+Questa permette una buona
+capacità di scambio, fornendo vantaggi a livello biologico: promuove l’aumeno
+dello sviluppo radicale, la crescita vegetale e microbica, e un aumento
+dell’attività enzimatica. A differenza dei silicati, ha carica netta positiva, come gli
+ossidi idrati di Fe e Al, comportando dunque la trattenuta e lo scambio di anioni.
+
+Inoltre ha un’importante funzione di collante e permette la formazione di una
+struttura più stabile e complessa, migliorando la porosità e aumentando la
+capacità idrica nei terreni sabbiosi e la permeabilità in quelli argillosi.
+
+La materia organica è molto variegata e se ne distinguono sei frazioni:
+\begin{itemize}
+\item la biomassa vivente;
+\item la necromassa, ovvero il materiale vegetale o animale ormai morto
+inalterato o in via di decomposizione;
+\item la sostanza umica labile, ovvero la materia organica trasformata ma non
+incorporata alla frazione minerale;
+\item la sostanza umica stabile, cioè l’\emph{humus} legato alla frazione minerale con la
+formazione di complessi argillo-umici;
+\item il carbone vegetale (\emph{biochar}) che presenta una limitata capacità di
+scambio, ma, essendo molto poroso, può trattenere molta acqua;
+\item i prodotti organici di sintesi, derivanti dall’azione umana, quali pesticidi e
+concimi, i quali, una volta giunti al suolo, possono comportarne alterazioni
+alla struttura e alla vita degli organismi.
+\end{itemize}
+
+La componente organica trasformata (\emph{humus}) costituisce circa il 65\% della
+sostanza organica del suolo. È il prodotto di processi di decomposizione e
+trasformazione chimica e biologica di biomolecole derivanti dalle spoglie ed
+emissioni di organismi vegetali e animali (Stevenson, 1994). L’\emph{humus} è formato
+da composti amorfi, di colore scuro, parzialmente aromatici e chimicamente
+complessi (Schnitzer and Khan, 1972). Risulta essere la frazione organica più
+eterogenea e migliore ai fini dell’aumento della capacità di scambio, infatti
+costituisce una vera e propria riserva di nutrienti nel suolo. In base al suo
+contenuto i terreni sono classificati in: umiferi ($>$10\%), ricchi di humus (5-10\%),
+sufficientemente dotati di humus (3-5\%), mediamente dotati di humus (2-3\%),
+poveri di humus ($<$2\%) (Giardini, 1992 ).
+
+Infine, la diversa grandezza di questi elementi solidi va a costituire la tessitura
+del terreno, cioè la sua composizione granulometrica. In base al diametro
+(fittizio perchè si suppone che le particelle abbiano forma sferica, regolare e
+misurabile) delle particelle, queste si classificano come in Tabella 1.1:
+
+E in base al contenuto percentuale di ogni classe granulometrica, i suoli vengono
+classificati in varie classi tessiturali (Fig. 1.2).
+
+La tessitura non cambia velocemente nel tempo e per questo è considerata una
+proprietà stabile; influenza sia la capacità di drenaggio ed aerazione del suolo,
+infatti è strettamente legata alla porosità ed al rapporto dei fluidi contenuti in
+esso, sia il movimento della fauna e delle radici.
+
+\paragraph{Fase liquida}
+La microporosità interessa e permette il movimento dell’acqua, componente
+necessaria per la vita di tutti gli organismi viventi. L’acqua svolge numerose
+funzioni: permette il turgore cellulare; è il flusso tramite cui avviene la
+nutrizione poiché in essa sono disciolti i macro e i microelementi; regola
+l’attivazione di molti processi metabolici; e permette anche la regolazione della
+temperatura sia del suolo che degli individui viventi.
+
+Non tutta l’acqua che arriva al suolo è disponibile per le piante e gli altri
+organismi, ma si può distinguere in quattro porzioni: acqua gravitazionale,
+riserva disponibile, riserva non disponibile e acqua igroscopica.
+
+L’acqua che percola per gravità, allontanandosi più o meno velocemente in base
+alle capacità di trattenuta del suolo stesso, è la porzione che va dal punto di
+saturazione (quando tutti i pori sono pieni di acqua) alla capacità di campo e
+viene chiamata acqua gravitazionale. La capacità di campo è lo stato del suolo
+nel quale l’acqua rimasta viene trattenuta dal suolo grazie a fenomeni di
+adesione. Questa è la porzione realmente utilizzata dagli organismi viventi e
+viene infatti chiamata riserva utile. Se questa non viene restituita né
+artificialmente né attraverso le precipitazioni, il suo volume diminuisce fino al
+punto di avvizzimento, quando cioè l’acqua è trattenuta così fortemente dalle
+particelle del suolo che le radici non riescono più ad assorbirla.
+
+Se il contenuto idrico nel suolo continua a diminuire si andrà a formare un film
+intorno alle particelle del suolo. In questo caso l’acqua è trattenuta con una forza
+tale che potrà andarsene solo in forma di vapore in seguito all’essiccazione in
+stufa. Questo film prende il nome di acqua igroscopica.
+
+\paragraph{Fase gassosa}
+I pori del suolo svolgono un ruolo importante oltre che per il movimento idrico
+anche per lo spostamento della componente gassosa. Questa interessa
+prevalentemente i macropori poichè sono quelli che più velocemente si liberano
+dell’acqua e si riempiono d’aria. Quest’ultima ha una composizione differente
+rispetto a quella atmosferica, c’è una simile percentuale di N, circa il 79\%, un po’
+meno ossigeno, circa il 18\%, ma soprattutto si ha una maggior concentrazione di
+biossido di carbonio (0.3-5\%) e anche di vapore acqueo. Queste due componenti
+permettono al suolo di essere un buon volano termico. Inoltre nel terreno si
+possono anche trovare gas come \chem{NH3} e \chem{CH4} formati dall’attività microbica.
+
+1.2 Relazione microrganismi e suolo
+La maggior parte delle funzioni dell’ecosistema suolo sono garantite dai miliardi
+di organismi ivi presenti. Questi sono sia di origine animale che vegetale e sono i
+responsabili della formazione e rigenerazione del suolo. Gli organismi sono
+diffusi in tutti i tipi di ambienti, concentrati prevalentemente nei primi
+centimetri dalla superficie e in quantità variabile in base al clima e alle
+caratteristiche pedologiche in cui ci troviamo.
+La complessità di questo habitat è enorme (Fig. 1.3), si pensi che in un solo
+grammo di suolo ci possono essere da un milione un miliardo di batteri (Torsvik
+et al., 1996), più di 100 000 specie di funghi, che formano da 1 a 3 metri di miceli
+fungini (Hawksworth, 2001; Vian, 2015; Trap et al., 2015), e poi ci sono diversi
+milioni di protozoi (Wall et al., 2001; Jones et al., 2009), dai 1000 ai 2000
+nematodi (Hawksworth and Mound, 1991; Lavelle and Spain, 2001; Wall et al.,
+2010) e lombrichi (Lee, 1985), senza menzionare gli altri gruppi di invertebrati
+della mesofauna, collemboli, acari ed enchitreidi e della macrofauna, formiche,
+termiti, coleotteri e ragni (Schaefer et Schauermann, 1990; Alphei et al., 1996).
+Gli organismi edafici, da ἔδαφος “suolo”, interagiscono tra loro creando una fitta
+rete alimentare e contribuiscono più o meno attivamente ai numerosi servizi
+ecosistemici. I microrganismi, ovvero gli organismi inferiori al millimetro di
+grandezza, come nematodi, protozoi e alcuni acari, permettono la
+decomposizione della sostanza organica e quindi fanno sì che gli elementi
+nutritivi siano nuovamente disponibili nell’ambiente. Gli attinomiceti
+decompongono sostanze difficilmente modificabili come la lignina o le corazze
+chitiniche degli insetti; i funghi riescono a sciogliere i complessi legami fra azoto
+e carbonio presenti nelle sostanze umiche; ed infine altri gruppi di batteri
+permettono la fissazione dell’azoto e il sequestro del carbonio.
+Gli organismi della mesofauna del suolo, collemboli, acari, proturi, dipluri,
+enchitreidi, ecc, si nutrono soprattutto di miceli fungini, batteri e piccoli insetti.
+Le loro feci, avendo una capacità di trattenere acqua maggiore di quella della
+lettiera, rivestono un ruolo importante nella formazione e stabilizzazione del
+suolo Miller and Jastrow(2000).
+Gli animali superiori che compongono la macro e megafauna, come termiti,
+lombrichi, talpe, ecc, contribuiscono, con il loro movimento, a rendere gli strati
+superficiali ben mescolati e aerati. Inoltre rompendo gli aggregati modificano la
+densità del suolo, incrementando così l’aerazione e l’infiltrazione di acqua,
+nonché apportano materiale organico sia tramite le deiezioni che con la propria
+necromassa.
+Uno degli organismi più importanti dell’habitat tellurico, nonché bioindicatore di
+fertilità, è il lombrico che mangiando sminuzza la biomassa presente nel suolo.
+Nel suo intestino, il lombrico, impasta le sostanze minerali e quelle organiche,
+trasformandole in complessi stabili argilla-humus, arricchendo molto la terra
+con le sue deiezioni. Nelle regioni temperate, i lombrichi sono in grado di
+elaborare fino a 4 kg di suolo per metro quadrato al giorno (Feller et al., 2003) e
+i primi studi relativi al ruolo della fauna del suolo, riguardarono proprio questi
+invertebrati e risalgono a Darwin (1881). La vita di tutti questi organismi è però
+fortemente dipendente dalle caratteristiche fisiche e chimiche del terreno e da
+quelle climatiche dell’ambiente in cui vivono.
+Kubiëna nel 1938 descrisse il microambiente tellurico come “cavità in cui si
+possono trovare pochi o miriadi di organismi attivi, in funzione delle dimensioni,
+del clima e della condizione nutritiva delle varie cavità” (Kubiëna, 1938). La
+dimensione dei pori non influenza solo la presenza e il movimento dei fluidi, ma
+anche il movimento dei microrganismi. Ad esempio i funghi aventi corpi
+vegetativi e fruttificazioni grandi risentono maggiormente della tessitura del
+terreno, rispetto invece ai batteri e attinomiceti di dimensioni più piccole
+(Griffin, 1963). Inoltre i micropori, abbondanti nei suoli argillosi, risultano
+praticamente inaccessibili per i protozoi e se siamo in presenza di un suolo
+molto compatto sono limitati anche i movimenti delle radici delle piante
+superiori.
+Inoltre i microrganismi che risiedono nei micropori hanno una minor
+disponibilità di nutrienti ed ossigeno, ma sono maggiormente protetti dal rischio
+di stress idrico rispetto agli organismi che vivono nei macropori e che invece
+risentiranno di una maggior alternanza tra periodi umidi e secchi.
+La maggior parte degli organismi ha come coefficiente di avvizzimento valori
+prossimi ai -15, -25 bar (in scala logaritmica 4.2, 4.4 pF). Tale coefficiente, che è
+diverso per ogni organismo, rappresenta il potenziale ovvero la pressione che
+l’individuo deve creare per vincere le forze che trattengono il liquido nelle
+particelle del suolo.
+Tramite gli studi di Warcup (1957) sappiamo che i funghi possono sopravvivere
+a lunghi periodi di siccità grazie a strutture come le spore, gli sclerozi e le ife.
+Griffin (1963) vide che i funghi, come le piante, arrestano la propria crescita a
+valori intorno a 4.2 pF e solo l’aspergillus riesce a crescere fino a pF 5.6. Rah
+(1913[libro biblio unifi]) trovò che i batteri Gram positivi crescevano intorno a
+valori di pF 2.0, mentre Miller e Johnson (1964) studiarono i batteri nitrificanti,
+dimostrando che questi crescevano meglio in terreni con pF inferiore a 3.0.
+Oltre che l’acqua, nei pori si muove anche l’aria. Questa si trova in abbondanza
+nei terreni sabbiosi, prevalentemente secchi, mentre è assente in terreni
+argillosi mal strutturati e umidi. Gli abitanti dell’habitat tellurico reagiscono in
+maniera differente alle variazioni di concentrazione dei gas nel suolo. Al
+contrario dell’acqua, che risulta necessaria per tutti gli organismi, si hanno, nel
+caso dei gas, i funghi che sono organismi aerobi stretti, i batteri che possono
+essere sia strettamente anaerobi (clostridium e botulinum), che strettamente
+aerobi (pseudonomas e la maggior parte degli attinomiceti), ma ne esistono
+anche alcuni che crescono meglio a basse concentrazioni di ossigeno detti
+microareofili (Burges, 1958).
+Anche il pH del suolo ha un ruolo centrale nel permettere lo sviluppo degli
+organismi viventi. Solitamente la vita è più intensa in un range di pH prossimo
+alla neutralità, anche se i batteri e gli attinomiceti del suolo preferiscono
+condizioni neutro-alcaline, mentre i funghi le preferiscono acide, continuando a
+crescere anche con valori prossimi al 3.
+In generale però nei suoli aventi un valore di pH vicino agli estremi della scala, la
+vita si presenta stentata. Con valori di pH acidi si può vedere una variazione di
+solubilità di alcune sostanze, come ad esempio i composti del calcio e del fosforo
+che divengono più solubili, comportando una loro perdita per dilavamento e una
+relativa carenza nutritiva. Altri elementi, come il ferro e il nichel, diventando più
+solubili, possono comportare tossicità per i microrganismi e le piante (Holding
+and Jeffrey 1968).
+
+Anche la componente inorganica dei minerali influenza l’attività della microflora
+tellurica. Sia perchè la presenza di determinate argille o un certo contenuto in
+sostanza organica permette livelli differenti di elementi nutritivi assimilabili e
+disponibili, ma anche perchè alcune matrici possono comportare dei danni letali.
+Ad esempio la montmorillonite, anche a basse concentrazioni, riduce la
+respirazione fungina, non permettendo, per via delle sue caratteristiche fisico
+chimiche, una buona diffusione dell’ossigeno e stimola le attività batteriche
+(Stotzky and Rem, 1966).
+Infine è necessario osservare anche la temperatura del suolo. Naturalmente
+l’energia assorbita dipende dalla latitudine e altitudine, ma anche
+dall’inclinazione della superficie del suolo, nonché dalla densità della copertura
+vegetale e dal colore del terreno. Inoltre la temperatura presenta un grande
+intervallo di variabilità se misurata in prossimità della superficie, mentre già a 7
+cm di profondità risulta avere un range più ristretto, quale 4-14° C (Raney,
+1965).
+Ogni organismo presenta “il proprio minimo e massimo ecologico di
+temperatura, compresi entro un intervallo che rappresenta i suoi limiti di
+tolleranza” (Odum, 1971). In base a questi valori di minimo, massimo e optimum
+si distinguono microrganimsi psicrofili, mesofili e termofili (Tabella 1.2).
+La grande maggioranza dei microrganismi del suolo è mesofila e generalmente
+in suoli e in stagioni dove si ha una temperatura media di 10°C dominano i
+funghi e i batteri, mentre a 20°C sono maggiori i protozoi, i nematodi e gli
+attinomiceti.
+Comunque bisogna dire che la temperatura del suolo ha un effetto diretto
+sull’attività metabolica della microflora, ma non comporta un’azione letale,
+anche al di sotto del punto di congelamento.
+
+
+
+
 
 \begin{figure}[ht]
   \centering
