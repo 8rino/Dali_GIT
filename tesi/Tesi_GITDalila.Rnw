@@ -61,8 +61,8 @@
 %% \usepackage{threeparttable}
 % vedi http://www.tug.org/pracjourn/2007-2/asknelly/
 
-%% \usepackage{lineno}
-%% \linenumbers
+\usepackage{lineno}
+\linenumbers
 % Queste due righe sopra aggiungono la numerazione delle righe
 % scommentare nella versione finale
 
@@ -275,8 +275,7 @@ DirCod <-
 \section{Suolo}
 \subsection{Qualche definizione}
 Il suolo può essere considerato come \emph{la pelle vivente della Terra}
-\citep{AskinBulkDensity} (Pepper et al., 2009) 
-e si può definire come un corpo naturale che si
+\citep{pepper_soil:_2009} e si può definire come un corpo naturale che si
 trova sulla superficie terrestre e che consiste in un insieme di
 minerali, sostanza organica, fluidi e una varietà di organismi che
 permettono la crescita e la diffusione della vita.
@@ -284,11 +283,11 @@ permettono la crescita e la diffusione della vita.
 La Soil Taxonomy, il sistema di classificazione elaborato dall’USDA
 (United States Department of Agriculture), ha definito il suolo come
 un corpo naturale tridimensionale composto da solidi, quali la
-sostanza organica e i minerali, da liquidi e da gas \citep{united1999soil}. Per
+sostanza organica e i minerali, da liquidi e da gas \citep{usda_soil_1999}. Per
 lo stesso ente il suolo deve trovarsi sulla superficie terrestre e
 deve essere caratterizzato da almeno una delle seguenti
 caratteristiche: deve permettere la vita e la crescita delle piante
-superiori e/o presentare gli orizzonti \citep{united1999soil}.
+superiori e/o presentare gli orizzonti \citep{usda_soil_1999}.
 
 Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 “Il suolo è formato da qualsiasi materiale minerale o organico posto
@@ -297,8 +296,10 @@ biologici, chimici e fisici” \citep{JOHNSON19986}.
 
 \subsection{I cinque componenti del suolo}
 Per potersi formare, il suolo ha bisogno di alcuni ingredienti, i
-quali sono stati enunciati da Jenny \citep{jenny_factors_1994} nella nota funzione: Suolo=
-f (clima, topografia, roccia madre, organismi, tempo,...)
+quali sono stati enunciati da \citet{jenny_factors_1994} nella nota funzione: 
+\begin{equation} 
+Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
+\end{equation}
 \begin{itemize}
 \item Si considera il clima sia a livello macroscopico che
   microscopico. Di questo ci interessano prevalentemente le
@@ -324,6 +325,9 @@ f (clima, topografia, roccia madre, organismi, tempo,...)
   l’aspetto e la composizione. Tali alterazioni possono essere fisiche
   e/o chimiche e richiedono tempo per avvenire.
 \end{itemize}
+
+
+
 \subsection{Le sue funzioni}
 Il suolo svolge numerose e importani funzioni che permettono lo
 sviluppo della vita. Rappresentando il substrato dove gli organismi,
@@ -346,8 +350,8 @@ elementi fluidi, sia liquidi che gassosi. Queste tre componenti devono
 essere tutte presenti e la loro ripartizione ottimale è 50\% di fase
 solida, di cui il 5-10\% di materia organica, e il 50\% di pori: 25\%
 di micropori utili per il movimento dei liquidi e 25\% di macropori
-per il movimento dei gas (Radaelli and Calamai, 2001 ).
-Jongerius(1957) dinstinse 3 classi di pori: i micropori aventi un
+per il movimento dei gas \todo[inline]{(Radaelli and Calamai, 2001 )}.
+ \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i micropori aventi un
 diametro inferiore ai 30 µm, utili per la trattenuta dell’acqua; i
 mesopori con diametro tra i 30 e i 100 µm importanti sia per il
 rinnovamento dell’aria che per il movimento dell’acqua e infine i
@@ -365,11 +369,25 @@ porzione solida. I minerali possono essere classificati in base
 all’origine: primari se formati durante la solidificazione delle masse
 magmatiche fuse subendo leggere alterazioni; secondari se invece si
 sono originati in seguito a lunghi processi di alterazione,
-soprattutto chimica (Radaelli e Calamai, 2001).
+soprattutto chimica \todo{(Radaelli e Calamai, 2001)}.
 
 La componente minerale prevalente delle rocce e del terreno è
 costituita dai silicati (\ce{SiO4-}), che si dividono in più
-famiglie in base alla disposizione dei loro elementi (Fig. 1.1):
+famiglie in base alla disposizione dei loro elementi \ref{fig:famiglia_silicati}:
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/silicati.jpg}
+
+\caption{Famiglie dei silicati: nesosilicati (a), sorosilicati (b), 
+ciclosilicati (c), inosilicati a catena singola 
+(d), inosilicati a catena doppia (e), fillosilicati (f) e tectosilicati (g)}
+\label{fig:famiglia_silicati}
+\end{figure}
+\todo{citazione}
+
+
 nesosilicati, singoli tetraedri carichi e uniti da legami ionici
 grazie a ioni metallici (Olivina), sorosilicati ovvero coppie di
 tetraedri unite con legami ionici (Gneiss), ciclosilicati anelli uniti
@@ -394,7 +412,7 @@ superficie. Mano a mano che ci si allontana dalla superficie la
 concentrazione di questi ioni si fa sempre più labile e si mischiano
 con ioni di segno congruente al colloide. A questo punto si ha un
 equilibrio tra gli ioni e si forma il cosiddetto \emph{doppio strato
-  elettrico diffuso} (Radaelli e Calamai, 2001). È il raggio di
+  elettrico diffuso} \todo{(Radaelli e Calamai, 2001)}. È il raggio di
 quest'ultimo a permettere o meno la formazione di aggregati, detta
 flocculazione, e questo fenomeno è alla base della formazione della
 struttura del suolo.
@@ -408,8 +426,8 @@ dai vari microrganismi e organismi vegetali superiori. Questo è un
 punto chiave per la nutrizione delle piante e dei microrganismi
 dell’habitat tellurico e rappresenta la base della fertilità chimica
 del terreno. La componente inorganica può inoltre essere formata da
-minerali costituiti da un solo elemento come la grafite (C), oppure da
-ossidi anidri o idrati di Si (quarzo), Fe (ematite), Al (corindone)
+minerali costituiti da un solo elemento come la grafite (\ce{C}), oppure da
+ossidi anidri o idrati di \ce{Si} (quarzo), \ce{Fe} (ematite), \ce{Al} (corindone)
 ecc. Inoltre si possono trovare anche: cloruri e nitrati, come la
 salgemma (\ce{NaCl}) e silvite (\ce{KCl}); solfuri, come la pirite
 (\ce{FeS2}); carbonati, come la calcite, l’aragonite, la dolomite;
@@ -417,12 +435,13 @@ solfati e fosfati (gesso e apatiti).
 
 La fase solida è costituita anche dalla materia organica che ha
 un’elevata carica variabile, dell’ordine di
-% 200-400meq/100 g. 
+%\SIrange[range-phrase= "-"]{200}{400}{\meq\per\100g}
+\todo{definire meq con siunitx}. 
 Questa permette una buona capacità di scambio, fornendo vantaggi a
 livello biologico: promuove l’aumeno dello sviluppo radicale, la
 crescita vegetale e microbica, e un aumento dell’attività enzimatica.
 A differenza dei silicati, ha carica netta positiva, come gli ossidi
-idrati di Fe e Al, comportando dunque la trattenuta e lo scambio di
+idrati di \ce{Fe} e \ce{Al}, comportando dunque la trattenuta e lo scambio di
 anioni.
 
 Inoltre ha un’importante funzione di collante e permette la formazione
@@ -453,24 +472,55 @@ La componente organica trasformata (\emph{humus}) costituisce circa il
 65\% della sostanza organica del suolo. È il prodotto di processi di
 decomposizione e trasformazione chimica e biologica di biomolecole
 derivanti dalle spoglie ed emissioni di organismi vegetali e animali
-(Stevenson, 1994). L’\emph{humus} è formato da composti amorfi, di
+\todo{(Stevenson, 1994)}. L’\emph{humus} è formato da composti amorfi, di
 colore scuro, parzialmente aromatici e chimicamente complessi
-(Schnitzer and Khan, 1972). Risulta essere la frazione organica più
+\todo{(Schnitzer and Khan, 1972)}. Risulta essere la frazione organica più
 eterogenea e migliore ai fini dell’aumento della capacità di scambio,
 infatti costituisce una vera e propria riserva di nutrienti nel suolo.
 In base al suo contenuto i terreni sono classificati in: umiferi
 ($>$10\%), ricchi di humus (5-10\%), sufficientemente dotati di humus
 (3-5\%), mediamente dotati di humus (2-3\%), poveri di humus ($<$2\%)
-(Giardini, 1992 ).
+\todo{(Giardini, 1992 )}.
 
 Infine, la diversa grandezza di questi elementi solidi va a costituire
 la tessitura del terreno, cioè la sua composizione granulometrica. In
 base al diametro (fittizio perchè si suppone che le particelle abbiano
 forma sferica, regolare e misurabile) delle particelle, queste si
-classificano come in Tabella 1.1:
+classificano come in Tabella \ref{tab:Classi_granulometriche}
+
+\info[inline]{usda99b}
+
+\begin{table}[ht]
+\caption{Classi granulometriche secondo }
+ \label{tab:Classi_granulometriche}
+\centering
+  \begin{tabular}{lc}
+    \toprule
+    Frazione & Diametro (mm)   \\
+    \midrule
+    Scheletro  & > 2.0 \\
+    Sabbia molto grossa  &  1.0 - 2.0    \\
+    Sabbia grossa & 0.5 - 1.0 \\
+    Sabbia media & 0.25 - 0.5 \\
+    Sabbia fine & 0.1. - 0.25 \\
+    Sabbia molto fine & 0.05 - 0.10 \\
+    Limo & 0.002 - 0.05 \\
+    Argilla & < 0.002 	\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
 
 E in base al contenuto percentuale di ogni classe granulometrica, i
-suoli vengono classificati in varie classi tessiturali (Fig. 1.2).
+suoli vengono classificati in varie classi tessiturali \ref{fig:Triangolo_USDA}.
+
+\begin{figure}
+\includegraphics[scale=0.5]{./foto/triangoloUSDA.jpg}
+\caption{Triangolo per la determinazione della classe tessiturale}
+\label{fig:Triangolo_USDA}
+\end{figure}
+\todo{usda51}
 
 La tessitura non cambia velocemente nel tempo e per questo è
 considerata una proprietà stabile; influenza sia la capacità di
