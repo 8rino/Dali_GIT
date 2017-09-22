@@ -82,7 +82,7 @@
 % Debug Sort by entry key. This is intended for debugging only.
 
 %% Qui sotto ci va il nome del file della bibliografia
-\bibliography{bibliomone.bib}
+\bibliography{bibliomoneDali.bib}
 % non ho capito a che serve ma dovrebbe essere utile a citare R in bib
 % \newcommand{\code}[1]{\texttt{\smaller #1}}
 
@@ -230,7 +230,7 @@ DirCod <-
 \SweaveOpts{concordance=TRUE}
 \begin{frontespizio}
   \Margini{5cm}{1.5cm}{3cm}{1cm}
-  \Logo[2.5cm]{./figure/logo-unifi_positivo.jpeg}
+  \Logo[2.5cm]{./foto/logo-unifi_positivo.jpeg}
   \Istituzione{Universit\`a degli Studi di Firenze}
   \Divisione{Scuola di Agraria}
   \Scuola{Corso di Laurea in Scienze e tecnologie agrarie (LM-69)}
@@ -274,8 +274,9 @@ DirCod <-
 \chapter{Introduzione}
 \section{Suolo}
 \subsection{Qualche definizione}
-Il suolo può essere considerato come “la pelle vivente della Terra”
-(Pepper et al., 2009) e si può definire come un corpo naturale che si
+Il suolo può essere considerato come \emph{la pelle vivente della Terra}
+\citep{AskinBulkDensity} (Pepper et al., 2009) 
+e si può definire come un corpo naturale che si
 trova sulla superficie terrestre e che consiste in un insieme di
 minerali, sostanza organica, fluidi e una varietà di organismi che
 permettono la crescita e la diffusione della vita.
@@ -283,20 +284,20 @@ permettono la crescita e la diffusione della vita.
 La Soil Taxonomy, il sistema di classificazione elaborato dall’USDA
 (United States Department of Agriculture), ha definito il suolo come
 un corpo naturale tridimensionale composto da solidi, quali la
-sostanza organica e i minerali, da liquidi e da gas (USDA, 1999a). Per
+sostanza organica e i minerali, da liquidi e da gas \citep{united1999soil}. Per
 lo stesso ente il suolo deve trovarsi sulla superficie terrestre e
 deve essere caratterizzato da almeno una delle seguenti
 caratteristiche: deve permettere la vita e la crescita delle piante
-superiori e/o presentare gli orizzonti (USDA, 1999a).
+superiori e/o presentare gli orizzonti \citep{united1999soil}.
 
 Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 “Il suolo è formato da qualsiasi materiale minerale o organico posto
 sulla superficie di pianeti o corpi simili, ed è alterato da agenti
-biologici, chimici e fisici” (Johnson, 1998).
+biologici, chimici e fisici” \citep{JOHNSON19986}.
 
 \subsection{I cinque componenti del suolo}
 Per potersi formare, il suolo ha bisogno di alcuni ingredienti, i
-quali sono stati enunciati da Jenny (1994) nella nota funzione: Suolo=
+quali sono stati enunciati da Jenny \citep{jenny_factors_1994} nella nota funzione: Suolo=
 f (clima, topografia, roccia madre, organismi, tempo,...)
 \begin{itemize}
 \item Si considera il clima sia a livello macroscopico che
@@ -632,6 +633,17 @@ solubili, comportando una loro perdita per dilavamento e una relativa
 carenza nutritiva. Altri elementi, come il ferro e il nichel,
 diventando più solubili, possono comportare tossicità per i
 microrganismi e le piante (Holding and Jeffrey 1968).
+\begin{figure}[ht]
+  \centering
+ 
+\includegraphics[scale=2]{./foto/fig1_10.jpeg}
+
+\caption[Disdascalia corta foto Dali ]{Didascalia lunga dalila lunga
+  lunga lunga \SI{-0.33}{\micro\metre}}
+  \label{fig:boxplotClod}
+
+\end{figure}
+
 
 Anche la componente inorganica dei minerali influenza l’attività della microflora
 tellurica. Sia perchè la presenza di determinate argille o un certo contenuto in
