@@ -12,7 +12,7 @@ Sweave:
 	pdflatex $(PRINCIPALE)
 	pdflatex $(PRINCIPALE)-frn.tex
 	pdflatex $(PRINCIPALE_TEX)
-	xreader $(PRINCIPALE).pdf
+	evince $(PRINCIPALE).pdf
 
 
 biblio:
@@ -33,6 +33,6 @@ tutto:
 	pdflatex $(PRINCIPALE)
 	pdflatex $(PRINCIPALE)-frn.tex
 	pdflatex $(PRINCIPALE_TEX)
-	xreader $(PRINCIPALE).pdf
+	evince $(PRINCIPALE).pdf
 
 

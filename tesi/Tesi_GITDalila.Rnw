@@ -227,6 +227,7 @@ DirCod <-
 \author{Dalila Pasquini}
 \title{titolo Da definire}
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 \begin{frontespizio}
   \Margini{5cm}{1.5cm}{3cm}{1cm}
   \Logo[2.5cm]{./figure/logo-unifi_positivo.jpeg}
