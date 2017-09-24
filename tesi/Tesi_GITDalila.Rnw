@@ -4,7 +4,7 @@
 % Circa 80 lettere per pagina con draft al posto di final fa il pdf senza foto
 \usepackage[toc,page]{appendix}
 
-\usepackage[english, italian]{babel}
+\usepackage[english, greek, italian]{babel}
 % per la sillabazione corretta e per biblatex
 % \usepackage[english]english serve se c'e' bisogno di una parte da scriver ion inglese
 
@@ -238,9 +238,9 @@ DirCod <-
   \NCandidato{Candidata}
   \Candidato{Dalila Pasquini}
   \NRelatore{Relatore}{}
-  \Relatore{Dott. Ottorino-Luca Pantani}
+  \Relatore{Prof. Luca Calamai}
   \NCorrelatore{Correlatori}{Correlatori}
-  \Correlatore{Dott. Luigi Paolo D'Acqui}
+  \Correlatore{Dott. Ottorino-Luca Pantani}
   \Correlatore{Prof. Gaio Cesare Pacini}
   \Piede{Anno accademico 2017-2018}
 \end{frontespizio}
@@ -292,7 +292,7 @@ superiori e/o presentare gli orizzonti \citep{usda_soil_1999}.
 Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 “Il suolo è formato da qualsiasi materiale minerale o organico posto
 sulla superficie di pianeti o corpi simili, ed è alterato da agenti
-biologici, chimici e fisici” \citep{JOHNSON19986}.
+biologici, chimici e fisici” \citep{JOHNSON19986}. 
 
 \subsection{I cinque componenti del suolo}
 Per potersi formare, il suolo ha bisogno di alcuni ingredienti, i
@@ -300,6 +300,7 @@ quali sono stati enunciati da \citet{jenny_factors_1994} nella nota funzione:
 \begin{equation} 
 Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
 \end{equation}
+\todo{sistema equazione}
 \begin{itemize}
 \item Si considera il clima sia a livello macroscopico che
   microscopico. Di questo ci interessano prevalentemente le
@@ -350,10 +351,11 @@ elementi fluidi, sia liquidi che gassosi. Queste tre componenti devono
 essere tutte presenti e la loro ripartizione ottimale è 50\% di fase
 solida, di cui il 5-10\% di materia organica, e il 50\% di pori: 25\%
 di micropori utili per il movimento dei liquidi e 25\% di macropori
-per il movimento dei gas \todo[inline]{(Radaelli and Calamai, 2001 )}.
- \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i micropori aventi un
-diametro inferiore ai 30 µm, utili per la trattenuta dell’acqua; i
-mesopori con diametro tra i 30 e i 100 µm importanti sia per il
+per il movimento dei gas \citep{radaelli2001chimica}.
+ \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i 
+micropori aventi un diametro inferiore ai 30 µm, utili per la 
+trattenuta dell’acqua; i mesopori con diametro tra i 30 e i 100 µm 
+importanti sia per il 
 rinnovamento dell’aria che per il movimento dell’acqua e infine i
 macropori con diametro superiore ai 100 µm, che permettono invece il
 movimento dell’aria e il rapido infiltrarsi dell’acqua. Naturalmente
@@ -361,7 +363,10 @@ il rapporto e la percentuale degli spazi porosi nei suoli risente
 dell’influenza della vegetazione e della fauna che ci vive, nonché
 delle pratiche agronomiche.
 
-\paragraph{Fase solida}
+\subsubsection{Fase solida} 
+
+
+
 I componenti della fase solida sono i minerali, che rappresentano la
 componente inorganica, e la materia organica. I primi rappresentano
 una percentuale maggiore, solitamente oltre il 90\% di tutta la
@@ -369,7 +374,7 @@ porzione solida. I minerali possono essere classificati in base
 all’origine: primari se formati durante la solidificazione delle masse
 magmatiche fuse subendo leggere alterazioni; secondari se invece si
 sono originati in seguito a lunghi processi di alterazione,
-soprattutto chimica \todo{(Radaelli e Calamai, 2001)}.
+soprattutto chimica \citep{radaelli2001chimica}.
 
 La componente minerale prevalente delle rocce e del terreno è
 costituita dai silicati (\ce{SiO4-}), che si dividono in più
@@ -382,11 +387,10 @@ famiglie in base alla disposizione dei loro elementi \ref{fig:famiglia_silicati}
 
 \caption{Famiglie dei silicati: nesosilicati (a), sorosilicati (b), 
 ciclosilicati (c), inosilicati a catena singola 
-(d), inosilicati a catena doppia (e), fillosilicati (f) e tectosilicati (g)}
+(d), inosilicati a catena doppia (e), fillosilicati (f) e tectosilicati (g) 
+\citep{radaelli_chimica_2002} }
 \label{fig:famiglia_silicati}
 \end{figure}
-\todo{citazione}
-
 
 nesosilicati, singoli tetraedri carichi e uniti da legami ionici
 grazie a ioni metallici (Olivina), sorosilicati ovvero coppie di
@@ -412,7 +416,7 @@ superficie. Mano a mano che ci si allontana dalla superficie la
 concentrazione di questi ioni si fa sempre più labile e si mischiano
 con ioni di segno congruente al colloide. A questo punto si ha un
 equilibrio tra gli ioni e si forma il cosiddetto \emph{doppio strato
-  elettrico diffuso} \todo{(Radaelli e Calamai, 2001)}. È il raggio di
+  elettrico diffuso} \citep{radaelli2001chimica}. È il raggio di
 quest'ultimo a permettere o meno la formazione di aggregati, detta
 flocculazione, e questo fenomeno è alla base della formazione della
 struttura del suolo.
@@ -472,15 +476,15 @@ La componente organica trasformata (\emph{humus}) costituisce circa il
 65\% della sostanza organica del suolo. È il prodotto di processi di
 decomposizione e trasformazione chimica e biologica di biomolecole
 derivanti dalle spoglie ed emissioni di organismi vegetali e animali
-\todo{(Stevenson, 1994)}. L’\emph{humus} è formato da composti amorfi, di
+\citep{stevenson_humus_1994}. L’\emph{humus} è formato da composti amorfi, di
 colore scuro, parzialmente aromatici e chimicamente complessi
-\todo{(Schnitzer and Khan, 1972)}. Risulta essere la frazione organica più
+\citep{schnitzer_humic_1972}. Risulta essere la frazione organica più
 eterogenea e migliore ai fini dell’aumento della capacità di scambio,
 infatti costituisce una vera e propria riserva di nutrienti nel suolo.
 In base al suo contenuto i terreni sono classificati in: umiferi
 ($>$10\%), ricchi di humus (5-10\%), sufficientemente dotati di humus
-(3-5\%), mediamente dotati di humus (2-3\%), poveri di humus ($<$2\%)
-\todo{(Giardini, 1992 )}.
+(3-5\%), mediamente dotati di humus (2-3\%), poveri di humus ($<$2\%) 
+\citep{giardini_agronomia_1992}.
 
 Infine, la diversa grandezza di questi elementi solidi va a costituire
 la tessitura del terreno, cioè la sua composizione granulometrica. In
@@ -488,10 +492,9 @@ base al diametro (fittizio perchè si suppone che le particelle abbiano
 forma sferica, regolare e misurabile) delle particelle, queste si
 classificano come in Tabella \ref{tab:Classi_granulometriche}
 
-\info[inline]{usda99b}
 
 \begin{table}[ht]
-\caption{Classi granulometriche secondo }
+\caption{Classi granulometriche secondo \citep{usda_soil_1999} }
  \label{tab:Classi_granulometriche}
 \centering
   \begin{tabular}{lc}
@@ -515,12 +518,12 @@ classificano come in Tabella \ref{tab:Classi_granulometriche}
 E in base al contenuto percentuale di ogni classe granulometrica, i
 suoli vengono classificati in varie classi tessiturali \ref{fig:Triangolo_USDA}.
 
-\begin{figure}
+\begin{figure}[ht]
 \includegraphics[scale=0.5]{./foto/triangoloUSDA.jpg}
-\caption{Triangolo per la determinazione della classe tessiturale}
+\caption{Triangolo per la determinazione della classe tessiturale 
+\citep{usda_textural_1951}}
 \label{fig:Triangolo_USDA}
 \end{figure}
-\todo{usda51}
 
 La tessitura non cambia velocemente nel tempo e per questo è
 considerata una proprietà stabile; influenza sia la capacità di
@@ -528,7 +531,9 @@ drenaggio ed aerazione del suolo, infatti è strettamente legata alla
 porosità ed al rapporto dei fluidi contenuti in esso, sia il movimento
 della fauna e delle radici.
 
-\paragraph{Fase liquida}
+\subsubsection{Fase liquida}
+
+
 La microporosità interessa e permette il movimento dell’acqua,
 componente necessaria per la vita di tutti gli organismi viventi.
 L’acqua svolge numerose funzioni: permette il turgore cellulare; è il
@@ -561,7 +566,9 @@ l’acqua è trattenuta con una forza tale che potrà andarsene solo in
 forma di vapore in seguito all’essiccazione in stufa. Questo film
 prende il nome di acqua igroscopica.
 
-\paragraph{Fase gassosa}
+\subsubsection{Fase gassosa}
+
+
 I pori del suolo svolgono un ruolo importante oltre che per il
 movimento idrico anche per lo spostamento della componente gassosa.
 Questa interessa prevalentemente i macropori poichè sono quelli che
@@ -574,7 +581,7 @@ acqueo. Queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
 
-1.2 Relazione microrganismi e suolo
+\section{Relazione microrganismi e suolo} \info{sistema impaginazione}
 
 La maggior parte delle funzioni dell’ecosistema suolo sono garantite
 dai miliardi di organismi ivi presenti. Questi sono sia di origine
@@ -582,20 +589,32 @@ animale che vegetale e sono i responsabili della formazione e
 rigenerazione del suolo. Gli organismi sono diffusi in tutti i tipi di
 ambienti, concentrati prevalentemente nei primi centimetri dalla
 superficie e in quantità variabile in base al clima e alle
-caratteristiche pedologiche in cui ci troviamo. La complessità di
-questo habitat è enorme (Fig. 1.3), si pensi che in un solo grammo di
-suolo ci possono essere da un milione un miliardo di batteri (Torsvik
-et al., 1996), più di 100 000 specie di funghi, che formano da 1 a 3
-metri di miceli fungini (Hawksworth, 2001; Vian, 2015; Trap et al.,
-2015), e poi ci sono diversi milioni di protozoi (Wall et al., 2001;
-Jones et al., 2009), dai 1000 ai 2000 nematodi (Hawksworth and Mound,
-1991; Lavelle and Spain, 2001; Wall et al., 2010) e lombrichi (Lee,
-1985), senza menzionare gli altri gruppi di invertebrati della
-mesofauna, collemboli, acari ed enchitreidi e della macrofauna,
-formiche, termiti, coleotteri e ragni (Schaefer et Schauermann, 1990;
-Alphei et al., 1996). Gli organismi edafici, da
-% ἔδαφος
-“suolo”,
+caratteristiche pedologiche in cui ci troviamo.
+
+La complessità di
+questo habitat è enorme \ref{fig:Classific_microrganismi}, si pensi che in un solo grammo di
+suolo ci possono essere da un milione un miliardo di batteri 
+\citep{torsvik_total_1996}, più di 100 000 specie di funghi, 
+che formano da 1 a 3 metri di miceli fungini \citep{hawksworth_magnitude_2001}, 
+\info{ Vian, 2015}, \citep{trap_ecological_2016}, e 
+poi ci sono diversi milioni di protozoi \citep{wall_soil_2001}, 
+\citep{jones_carbon_2009}, dai 1000 ai 2000 nematodi 
+\citep{hawksworth_biodiversity_1991}, \citep{lavelle_soil_2001}, 
+\citep{wall_biodiversity_2010} e lombrichi 
+\citep{lee_earthworms:_1985}, senza menzionare gli altri gruppi 
+di invertebrati della mesofauna, collemboli, acari ed enchitreidi 
+e della macrofauna, formiche, termiti, coleotteri e ragni 
+\citep{schaefer_soil_1990}, \citep{alphei_protozoa_1996}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/microorganism.jpg}
+\caption{Classificazione dimensionale degli organismi \citep{swift_decomposition_1979}}
+\label{fig:Classific_microrganismi}
+\end{figure}
+
+\newcommand{\greco}[1]{\foreignlanguage{greek}{#1}}
+Gli organismi edafici, da \greco{>`edafoc} “suolo”,
 interagiscono tra loro creando una fitta rete alimentare e
 contribuiscono più o meno attivamente ai numerosi servizi
 ecosistemici. I microrganismi, ovvero gli organismi inferiori al
@@ -606,94 +625,98 @@ Gli attinomiceti decompongono sostanze difficilmente modificabili come
 la lignina o le corazze chitiniche degli insetti; i funghi riescono a
 sciogliere i complessi legami fra azoto e carbonio presenti nelle
 sostanze umiche; ed infine altri gruppi di batteri permettono la
-fissazione dell’azoto e il sequestro del carbonio. Gli organismi della
-mesofauna del suolo, collemboli, acari, proturi, dipluri, enchitreidi,
-ecc, si nutrono soprattutto di miceli fungini, batteri e piccoli
-insetti. Le loro feci, avendo una capacità di trattenere acqua
-maggiore di quella della lettiera, rivestono un ruolo importante nella
-formazione e stabilizzazione del suolo Miller and Jastrow(2000). Gli
-animali superiori che compongono la macro e megafauna, come termiti,
+fissazione dell’azoto e il sequestro del carbonio. 
+
+Gli organismi della mesofauna del suolo, collemboli, acari, proturi, 
+dipluri, enchitreidi, ecc, si nutrono soprattutto di miceli fungini, 
+batteri e piccoli insetti. Le loro feci, avendo una capacità di trattenere 
+acqua maggiore di quella della lettiera, rivestono un ruolo importante nella
+formazione e stabilizzazione del suolo \citep{miller_mycorrhizal_2000}. 
+
+Gli animali superiori che compongono la macro e megafauna, come termiti,
 lombrichi, talpe, ecc, contribuiscono, con il loro movimento, a
 rendere gli strati superficiali ben mescolati e aerati. Inoltre
 rompendo gli aggregati modificano la densità del suolo, incrementando
 così l’aerazione e l’infiltrazione di acqua, nonché apportano
 materiale organico sia tramite le deiezioni che con la propria
-necromassa. Uno degli organismi più importanti dell’habitat tellurico,
+necromassa. 
+
+Uno degli organismi più importanti dell’habitat tellurico,
 nonché bioindicatore di fertilità, è il lombrico che mangiando
 sminuzza la biomassa presente nel suolo. Nel suo intestino, il
 lombrico, impasta le sostanze minerali e quelle organiche,
 trasformandole in complessi stabili argilla-humus, arricchendo molto
 la terra con le sue deiezioni. Nelle regioni temperate, i lombrichi
 sono in grado di elaborare fino a 4 kg di suolo per metro quadrato al
-giorno (Feller et al., 2003) e i primi studi relativi al ruolo della
+giorno \citep{feller_charles_2003} e i primi studi relativi al ruolo della
 fauna del suolo, riguardarono proprio questi invertebrati e risalgono
-a Darwin (1881). La vita di tutti questi organismi è però fortemente
-dipendente dalle caratteristiche fisiche e chimiche del terreno e da
-quelle climatiche dell’ambiente in cui vivono. Kubiëna nel 1938
-descrisse il microambiente tellurico come “cavità in cui si possono
-trovare pochi o miriadi di organismi attivi, in funzione delle
-dimensioni, del clima e della condizione nutritiva delle varie cavità”
-(Kubiëna, 1938). La dimensione dei pori non influenza solo la presenza
-e il movimento dei fluidi, ma anche il movimento dei microrganismi. Ad
-esempio i funghi aventi corpi vegetativi e fruttificazioni grandi
-risentono maggiormente della tessitura del terreno, rispetto invece ai
-batteri e attinomiceti di dimensioni più piccole (Griffin, 1963).
-Inoltre i micropori, abbondanti nei suoli argillosi, risultano
-praticamente inaccessibili per i protozoi e se siamo in presenza di un
-suolo molto compatto sono limitati anche i movimenti delle radici
-delle piante superiori. Inoltre i microrganismi che risiedono nei
-micropori hanno una minor disponibilità di nutrienti ed ossigeno, ma
-sono maggiormente protetti dal rischio di stress idrico rispetto agli
-organismi che vivono nei macropori e che invece risentiranno di una
-maggior alternanza tra periodi umidi e secchi. La maggior parte degli
-organismi ha come coefficiente di avvizzimento valori prossimi ai -15,
--25 bar (in scala logaritmica 4.2, 4.4 pF). Tale coefficiente, che è
-diverso per ogni organismo, rappresenta il potenziale ovvero la
-pressione che l’individuo deve creare per vincere le forze che
-trattengono il liquido nelle particelle del suolo. Tramite gli studi
-di Warcup (1957) sappiamo che i funghi possono sopravvivere a lunghi
-periodi di siccità grazie a strutture come le spore, gli sclerozi e le
-ife. Griffin (1963) vide che i funghi, come le piante, arrestano la
-propria crescita a valori intorno a 4.2 pF e solo l’aspergillus riesce
-a crescere fino a pF 5.6. Rah (1913[libro biblio unifi]) trovò che i
+a Darwin \citet{darwin_formation_1881}. La vita di tutti questi organismi 
+è però fortemente dipendente dalle caratteristiche fisiche e chimiche 
+del terreno e da quelle climatiche dell’ambiente in cui vivono.
+
+\citet{kubiena_micropedology_1938} descrisse il microambiente tellurico 
+come “cavità in cui si possono trovare pochi o miriadi di organismi attivi, 
+in funzione delle dimensioni, del clima e della condizione nutritiva 
+delle varie cavità” \citep{kubiena_micropedology_1938}. La dimensione dei 
+pori non influenza solo la presenza e il movimento dei fluidi, ma anche il 
+movimento dei microrganismi. Ad esempio i funghi aventi corpi vegetativi 
+e fruttificazioni grandi risentono maggiormente della tessitura del terreno, 
+rispetto invece ai batteri e attinomiceti di dimensioni più piccole 
+\citep{griffin_soil_1963}. Inoltre i micropori, abbondanti nei suoli 
+argillosi, risultano praticamente inaccessibili per i protozoi e se siamo 
+in presenza di un suolo molto compatto sono limitati anche i movimenti 
+delle radici delle piante superiori. 
+
+Inoltre i microrganismi che risiedono nei micropori hanno una minor 
+disponibilità di nutrienti ed ossigeno, ma sono maggiormente protetti 
+dal rischio di stress idrico rispetto agli organismi che vivono nei 
+macropori e che invece risentiranno di una maggior alternanza tra 
+periodi umidi e secchi. 
+
+La maggior parte degli organismi ha come coefficiente di avvizzimento 
+valori prossimi ai -15, -25 bar (in scala logaritmica 4.2, 4.4 pF). 
+Tale coefficiente, che è diverso per ogni organismo, rappresenta 
+il potenziale ovvero la pressione che l’individuo deve creare per 
+vincere le forze che trattengono il liquido nelle particelle del suolo. 
+
+Tramite gli studi di Warcup \citet{warcup_studies_1957} sappiamo che 
+i funghi possono sopravvivere a lunghi periodi di siccità grazie a 
+strutture come le  spore, gli sclerozi e le ife. \citet{griffin_soil_1963} 
+vide che i funghi, come le piante, arrestano la propria crescita a 
+valori intorno a 4.2 pF e solo l’\emph{aspergillus} riesce a crescere fino a pF 5.6. 
+Rah \todo{Rah (1913[libro biblio unifi])} trovò che i
 batteri Gram positivi crescevano intorno a valori di pF 2.0, mentre
-Miller e Johnson (1964) studiarono i batteri nitrificanti, dimostrando
-che questi crescevano meglio in terreni con pF inferiore a 3.0. Oltre
-che l’acqua, nei pori si muove anche l’aria. Questa si trova in
+\citet{miller_effect_1964} studiarono i batteri nitrificanti, dimostrando
+che questi crescevano meglio in terreni con pF inferiore a 3.0. 
+
+Oltre che l’acqua, nei pori si muove anche l’aria. Questa si trova in
 abbondanza nei terreni sabbiosi, prevalentemente secchi, mentre è
 assente in terreni argillosi mal strutturati e umidi. Gli abitanti
 dell’habitat tellurico reagiscono in maniera differente alle
 variazioni di concentrazione dei gas nel suolo. Al contrario
 dell’acqua, che risulta necessaria per tutti gli organismi, si hanno,
 nel caso dei gas, i funghi che sono organismi aerobi stretti, i
-batteri che possono essere sia strettamente anaerobi (clostridium e
-botulinum), che strettamente aerobi (pseudonomas e la maggior parte
+batteri che possono essere sia strettamente anaerobi (\emph{clostridium} e
+\emph{botulinum}), che strettamente aerobi (\emph{pseudonomas} e la maggior parte
 degli attinomiceti), ma ne esistono anche alcuni che crescono meglio a
-basse concentrazioni di ossigeno detti microareofili (Burges, 1958).
+basse concentrazioni di ossigeno detti microareofili \citep{burges_micro-organisms_1958}.
+
+
 Anche il pH del suolo ha un ruolo centrale nel permettere lo sviluppo
 degli organismi viventi. Solitamente la vita è più intensa in un range
 di pH prossimo alla neutralità, anche se i batteri e gli attinomiceti
 del suolo preferiscono condizioni neutro-alcaline, mentre i funghi le
 preferiscono acide, continuando a crescere anche con valori prossimi
-al 3. In generale però nei suoli aventi un valore di pH vicino agli
+al 3. 
+
+In generale però nei suoli aventi un valore di pH vicino agli
 estremi della scala, la vita si presenta stentata. Con valori di pH
 acidi si può vedere una variazione di solubilità di alcune sostanze,
 come ad esempio i composti del calcio e del fosforo che divengono più
 solubili, comportando una loro perdita per dilavamento e una relativa
 carenza nutritiva. Altri elementi, come il ferro e il nichel,
 diventando più solubili, possono comportare tossicità per i
-microrganismi e le piante (Holding and Jeffrey 1968).
-\begin{figure}[ht]
-  \centering
- 
-\includegraphics[scale=2]{./foto/fig1_10.jpeg}
-
-\caption[Disdascalia corta foto Dali ]{Didascalia lunga dalila lunga
-  lunga lunga \SI{-0.33}{\micro\metre}}
-  \label{fig:boxplotClod}
-
-\end{figure}
-
+microrganismi e le piante \citep{holding_effects_1968}.
 
 Anche la componente inorganica dei minerali influenza l’attività della microflora
 tellurica. Sia perchè la presenza di determinate argille o un certo contenuto in
@@ -701,49 +724,1037 @@ sostanza organica permette livelli differenti di elementi nutritivi assimilabili
 disponibili, ma anche perchè alcune matrici possono comportare dei danni letali.
 Ad esempio la montmorillonite, anche a basse concentrazioni, riduce la
 respirazione fungina, non permettendo, per via delle sue caratteristiche fisico
-chimiche, una buona diffusione dell’ossigeno e stimola le attività batteriche
-(Stotzky and Rem, 1966).
+chimiche, una buona diffusione dell’ossigeno e stimola le attività batteriche 
+\citep{stotzky_influence_1966}.
+
 Infine è necessario osservare anche la temperatura del suolo. Naturalmente
 l’energia assorbita dipende dalla latitudine e altitudine, ma anche
 dall’inclinazione della superficie del suolo, nonché dalla densità della copertura
 vegetale e dal colore del terreno. Inoltre la temperatura presenta un grande
 intervallo di variabilità se misurata in prossimità della superficie, mentre già a 7
-cm di profondità risulta avere un range più ristretto, quale 4-14° C (Raney,
-1965).
+cm di profondità risulta avere un range più ristretto, quale 4-14° C \citep{raney_physical_1965}.
+
 Ogni organismo presenta “il proprio minimo e massimo ecologico di
 temperatura, compresi entro un intervallo che rappresenta i suoi limiti di
-tolleranza” (Odum, 1971). In base a questi valori di minimo, massimo e optimum
-si distinguono microrganimsi psicrofili, mesofili e termofili (Tabella 1.2).
+tolleranza” \citep{odum_environment_1971}. In base a questi valori di minimo, massimo e
+\emph{optimum} si distinguono microrganimsi psicrofili, mesofili e termofili 
+\ref{tab:classif_Odum}.
+
+
+\begin{table}[ht]
+\caption{Classificazione dei microrganismi in base al range di temperatura \citep{odum_environment_1971}}
+ \label{tab:classif_Odum}
+\centering
+  \begin{tabular}{lccc}
+    \toprule
+    Microrganismi & Minimo °C & Ottimo °C & Massimo °C  \\
+    \midrule
+    Psicrofili & 0 & 15 & 30\\
+    Mesofili & 5-25 & 25-37 & 30 -50    \\
+    Termofili & 25-45 & 55 & 60-90 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
 La grande maggioranza dei microrganismi del suolo è mesofila e generalmente
 in suoli e in stagioni dove si ha una temperatura media di 10°C dominano i
 funghi e i batteri, mentre a 20°C sono maggiori i protozoi, i nematodi e gli
 attinomiceti.
+
 Comunque bisogna dire che la temperatura del suolo ha un effetto diretto
 sull’attività metabolica della microflora, ma non comporta un’azione letale,
 anche al di sotto del punto di congelamento.
 
 
+\section{Gestione agraria e lavorazioni}
+
+Il complesso ecosistema suolo è influenzato da molti fattori e modificandone 
+anche solo uno si può innescare una sorta di reazione a catena che va ad alterare 
+tutti gli altri. 
+
+In un ambiente completamente naturale i cambiamenti sono legati soprattutto 
+all’alternarsi delle stagioni e al modificarsi della copertura del suolo, 
+comportando una variazione del range di umidità e temperatura presente. 
+Mentre in un ambiente antropico, come quello agricolo si ha un continuo disturbo 
+della pedosfera, dovuto principalmente alle lavorazioni e al passaggio di 
+macchinari e persone \citep{pagliai_effetti_1992}, \citep{marsili_changes_1998}.
+
+Il passaggio dei mezzi agricoli comporta un aumento della compattazione del 
+terreno e un relativo aumento della densità apparente \citep{yvan_role_2012} che va a 
+ridurre la diffusione dell’aria, la trattenuta dell’acqua  \citep{marshall_relation_1958}, 
+\citep{childs_e.c._introduction_1969} e anche il movimento degli organismi biologici 
+\citep{pezzarossa_investigation_1990}. Ad esempio la quantità di lombrichi diminuisce nei due mesi 
+successivi al passaggio di macchine per poi riaumentare mano a mano che l’effetto 
+della compattazione viene meno \citep{yvan_role_2012}.
+
+Con la compattazione viene danneggiata la struttura del suolo, i pori si rompono, 
+collassano e non sono più comunicanti. Questo comporta una diminuzione dello 
+scambio di nutrienti e va ad intaccare l’attività dei micro e macro organismi. 
+Infatti la forma e la dimensione dei pori è correllata a proprietà chimiche, 
+biochimiche e biologiche, come la crescita delle radici e l’attività enzimatica 
+\citep{sequi_positive_nodate}, \citep{pagliai_relationships_1993}, 
+\citep{giusquiani_urban_1995}. 
+Di conseguenza, un peggioramento nella componente fisica del suolo va ad influire 
+anche sugli aspetti chimici e biologici \citep{oades_role_1993}, \citep{boizard_using_2013}. 
+Oltre a ciò, le continue lavorazioni favoriscono l’azione dell’erosione 
+\citep{miller_soil_1992}, \citep{reeves_cover_1994} che rimuove la porzione più 
+superficiale del piano di campagna, e solitamente più ricca di nutrienti, 
+comportandone un ulteriore impoverimento.
+
+Le lavorazioni agricole inoltre disturbano enormemente l’habitat tellurico, 
+con tagli, solchi, fori e soprattutto con il rivoltamento della zolla, 
+caratteristica principale dell’aratura. Con quest’operazione si ha una maggior 
+ossigenazione del suolo e un accelerazione della mineralizzazione comportando, 
+nel breve periodo, una maggior disponibilità degli elementi nutritivi  e un 
+aumento delle rese; ma nel lungo periodo promuove l’impoverimento degli stessi, 
+provocando una vera e propria diminuzione della fertilità del suolo che risulta 
+diventare sempre più povero e sterile \citep{certini_spectroscopic_2007}.
+
+Si sono diffuse, per questo motivo, aziende a gestione minimum tillage 
+(che svolgono lavorazioni minime), così da ridurre le lavorazioni e il disturbo 
+fisico, fino ad arrivare al completo abbandono delle macchine con il no tillage 
+(diffuso molto anche per motivi economici, in quanto non si hanno più spese per 
+macchinari e carburante).
+
+Si deve comunque considerare che la pratica del no tillage (i.e. nessuna 
+lavorazione) provoca comunque degli svantaggi, il maggiore dei quali è 
+rappresentato da un eccessivo uso di diserbanti e fungicidi chimici. Proprio 
+per questo si cercano vie intermedie tra l’uso di lavorazioni profonde come 
+l’aratura a 45-50cm e la gestione no tillage, ovvero tecniche agricole 
+conservative e meno impattanti.
+
+\citet{nugis_estimation_2016} hanno dimostrato, ad esempio, che con l’utilizzo 
+di lavorazioni minime, si ha un minor impatto e il suolo presenta un maggior 
+contenuto idrico rispetto alle lavorazioni profonde. 
+
+Con i sistemi di minimum tillage, non si ha solo una modificazione nelle 
+caratteristiche fisiche del suolo, ma si è visto un vero e proprio incremento 
+nella dimensione, complessità e attività della comunità microbica \citep{piovanelli_tillage_1998}, 
+\citep{feng_effects_2002}, \citep{kuntz_influence_2013}. 
+ 
+Naturalmente le lavorazioni non comportano solamente svantaggi, anzi in alcuni 
+casi non sono in nessun modo evitabili: il terreno ha bisogno di essere lavorato 
+per preparare un buon letto di semina, soprattutto se è particolarmente compatto o 
+se il seme ha problemi nella germinazione perchè troppo piccolo; risultano 
+necessarie anche nel caso in cui nel terreno ci siano troppi residui o radici.  
+Inoltre è vero che, se non si dovesse fare alcuna lavorazione, si avrebbe un 
+maggior contenuto di sostanza organica e fosforo organico nei primi cm di suolo, 
+ma questo risulterebbe mancante in profondità. Al contrario le lavorazioni 
+permettono di distribuire in maniera più omogenea, nei vari livelli di profondità, 
+tali sostanze, anche se il loro contenuto risulta minore in superficie. 
+
+Oltre che al disturbo dovuto al passaggio delle macchine, la gestione agricola 
+può provocare un’alterazione dell’equilibrio anche per l’introduzione di prodotti 
+chimici legati all’utilizzo di fitosanitari, erbicidi, anticrittogamici di sintesi.
+
+Questi prodotti sono accettati nell’agricoltura convenzionale, come anche nel no 
+tillage, nell’agricoltura di precisione e in molte altre tipologie di gestione; 
+mentre non sono utilizzati nell’agricoltura biologia. 
+
+Le aziende biologiche non possono utilizzare prodotti di sintesi, in quanto sono 
+considerati dannosi all’ambiente e ai consumatori. Si pensa infatti che “la salute 
+pubblica globale e l'integrità ecologica potrebbero essere migliorate attraverso 
+l'adozione di queste pratiche biologiche che riducono le quantità di pesticidi e 
+concimi commerciali applicati nell'agricoltura” \citep{nas_frontiers_2003}.
+
+Con la conoscenza e la consapevolezza dei danni provocati negli ultimi 50 anni 
+di errate lavorazioni e gestioni \citep{reeves_cover_1994} \citep{miller_soil_1992},  
+è necessario identificare tecniche di gestione agricole che salvaguardino la 
+vitalità e conseguentemente la fertilità biologica, oltre che chimica, del 
+terreno e la salubrità del prodotto finale così da permettere una buona resa 
+produttiva e la sicurezza alimentare oltre che ambientale \citep{seufert_comparing_2012}.  
+Proprio per questo motivo negli ultimi anni  è cambiato il mercato alimentare e 
+agro-alimentare, vedendo un forte aumento nella domanda di prodotti biologici
+\citep{willer_world_2016}.
+
+Negli ultimi decenni è aumentato molto il numero di aziende agricole biologiche, 
+raggiungendo, a livello mondiale, i 2.3 milioni di unità nel 2014. Queste 
+occupavano 11 milioni di ettari nel 1999 e oggi interessano invece una superficie 
+pari a 43.7 milioni di ettari \ref{fig:andamento_bio} \citep{willer_organic_2016}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/ettari_bio.jpg}
+\caption{Andamento delle superfici coltivate a Biologico nel mondo 1999-2014 \citep{willer_organic_2016}}
+\label{fig:andamento_bio}
+\end{figure}
+
+Dunque i prodotti biologici sono sempre più presenti negli scaffali dei negozi e
+la filosofia di questa tipologia di gestione agraria è quella di provocare il 
+minor numero possibile di impatti all’ambiente usando prodotti naturali rispetto a 
+quelli di sintesi. 
+
+Di contro però l’agricoltura convenzionale permette rese superiori 
+\citep{seufert_comparing_2012}, punto importante visto il continuo aumento della 
+popolazione mondiale. Pur dipendendo dalla coltura scelta e dal luogo,  questo 
+incremento può variare da un 5\% di rese in più nel convenzionale, fino ad un 34\% 
+\citep{seufert_comparing_2012}. 
+
+A livello economico è difficile dire con certezza quale dei due sistemi sia più 
+costoso, perchè questo dipende dalla coltura scelta, dal suo prezzo di mercato, 
+dal luogo in cui ci troviamo e dalle sue caratteristiche. Vero è che, annualmente, 
+nel biologico si hanno minori spese per pesticidi e fertilizzanti, ma va anche 
+detto come si abbiano solitamente maggiori spese per i macchinari e le sementi 
+\citep{pimentel_organic_2005}. Inoltre i sistemi biologici richiedono, annualmente,  
+circa il 15\% in più di lavorazioni ad ettaro rispetto al convenzionale \citep{sorby_production_2002}
+, \citep{granatstein_tree_2004}. 
+
+Proprio in seguito a questi disturbi si rendono necessari studi per monitorare e 
+capire come salvaguardare la fertilità del terreno \citep{feng_effects_2002} e 
+valutare l’impatto che le lavorazioni hanno su di essa \citep{pagliai2002soil}.
+
+Per determinare la sostenibilità di un tipo di gestione,  si osserva la componente 
+biochimica e biologica perché questa è più suscettibile ai cambiamenti e risente 
+maggiormente delle attività umane. Naturalmente questi cambiamenti richiedono del 
+tempo per avvenire e quindi sono necessari esperimenti dalla durata di almeno 10 
+anni. Però è importante non solo tener conto delle piante superiori e degli 
+animali, ma anche della comunità microbica nel terreno, componente spesso 
+dimenticata, anche se fondamentale \citep{kennedy_soil_1995}, usando come 
+indice di fertilità del suolo la sua diversità e vitalità. 
+
+\section{Tecniche di analisi}
+
+Essendo la comunità microbica del suolo così varia, anche in quantità di 
+terreno assai piccole, non si può applicare l’approccio classico di conta
+usato per animali e piante \citep{bossio_determinants_nodate}, ma si devono 
+prendere in considerazione tecniche di analisi specifiche. Le principali 
+tecniche sono: la PCR (\emph{Polymerase Chain Reaction}), il  RFLP 
+(\emph{Restriction Fragment Length Polymorphism}), e l’analisi PLFA (
+\emph{Phospholipid Fatty Acid}) o CLPP (\emph{Community Level Physiological 
+Profiling}) \citep{ovreas_population_2000}.
+
+Sebbene l’applicazione di queste tecniche abbia fortemente migliorato le 
+conoscenze sulla struttura e la dinamica delle comunità microbiche del suolo, 
+la loro applicazione soffre di alcune limitazioni legate principalmente alle 
+caratteristiche della matrice, e nessuna di loro, singolarmente, è in grado di 
+fornire una misura completa sulla diversità delle comunità microbiche del suolo. 
+Per questo motivo la letteratura scientifica a riguardo raccomanda la combinazione 
+di più metodi che si complementino a vicenda \citep{zhang_assessing_2008}.
+
+L’analisi CLPP produce grandi numeri di variabili ed è altamente sensibile ai 
+cambiamenti della comunità microbica, però richiede la crescita dei microbi in 
+laboratorio su piastre. Molti degli organismi presenti nel suolo non possono 
+crescere in questo ambiente, il che causa una perdita in sensibilità. 
+
+La tecnica di analisi RFLP è lenta e laboriosa. Richiede grandi quantità di 
+DNA ed i processi di costruzione della sonda, di frammentazione del DNA, di 
+elettroforesi, di blotting, di ibridazione, di lavaggio e autoradiografia 
+potrebbero richiedere fino a un mese di tempo per essere portati a termine. 
+Per questo viene generalmente preferito il modo più rapido mediante la PCR 
+\citep{sipila_cross-site_2012}.
+
+L’analisi tramite PCR richiede piccole quantità di DNA, funziona anche con campioni 
+di non ottima qualità, ed è una procedura rapida e poco costosa con alta 
+riproducibilità, specificità e sensibilità. Ha però il difetto di richiedere una 
+conoscenza pregressa della sequenza del DNA analizzata \citep{ramsey_choice_2006}.
+
+L’analisi dei PLFA invece fornisce una sorta di impronta digitale 
+\citep{bossio_determinants_nodate} della struttura e dell’attività della comunità 
+microbica e risente maggiormente dei cambiamenti dovuti alla differente gestione e 
+lavorazione.  Questa tecnica è stata dimostrata essere più sensibile rispetto 
+all’analisi con CLPP, PCR e RFLP nel mostrare i cambiamenti nella comunità microbica
+del suolo \citep{grayston_assessing_2004}. Anche in altri studi le analisi basate 
+sulla PCR non sono risultate sufficienti a superare la risposta del PLFA 
+\citep{bossio_determinants_nodate}, \citep{feng_effects_2002}, \citep{dierksen_high_2002},
+\citep{thirup_microbial_2003}, \citep{leckie_characterization_2004}, 
+\citep{ritz_spatial_2004}, \citep{suhadolc_effects_2004}, \citep{kong_microbial_2012}, 
+\citep{guo_effects_2014}. 
+
+In un articolo di revisione del 2006 \citep{ramsey_choice_2006}, gli autori hanno 
+paragonato diversi studi che analizzavano la comunità microbica con diverse tecniche.
+In 14 di 32 studi (44\% degli studi identificati) i trattamenti riscontrati con il 
+PLFA non sono stati risolti con CLPP e in 5 studi su 25 (20\%) i dati ottenuti con 
+PLFA non sono stati differenziati e risolti con la PCR; inoltre gli autori 
+evidenziarono come la PCR e la CLPP producessero più alti tassi di errore rispetto 
+al PLFA.
+ 
+Delle varie tipologie la PCR è comunque la più utilizzata, perchè presenta più 
+potenzialità nel caratterizzare il cambiamento nelle popolazioni specifiche anche 
+se le informazioni ottenute sono più limite rispetto a quelle del PLFA. Dai pattern 
+di analisi della PCR si ottiene infatti minori informazioni statisticamente 
+rilevanti rispetto ai profili ottenibili con il PLFA \citep{ramsey_choice_2006}.
+
+La scelta del metodo di analisi comunque varia in base allo studio da svolgere: 
+se, ad esempio, servono delle informazioni a più basso livello la PCR fornisce 
+delle risposte che la PLFA non può dare. In generale, se si vogliono studiare gli 
+effetti di un trattamento o effettuare misure sull’inquinamento, prima si svolge un 
+analisi con PLFA per rilevare le possibili differenze, e  poi, successivamente, se 
+sono state trovate, si usa la PCR per differenziare le popolazioni \citep{piotrowska-seget_signature_2003},
+ \citep{ramsey_choice_2006}.
+
+\subsection{Gas Cromatografia}
+
+\emph{La cromatografia è la scienza e l’arte che si occupa di separare, gli uni dagli 
+altri, i componenti di una miscela} \citep{tswett_physical-chemical_1906}. 
+Il termine cromatografia, indica un insieme di tecniche aventi l’obiettivo di 
+separare una miscela complessa nei suoi componenti chimici. È impiegata a scopo 
+analitico e permette l’identificazione qualitativa ed il riconoscimento 
+quantitativo. La sua invenzione viene attribuita al biochimico italo-russo 
+Mikhail Tsvet nel 1906 quando riuscì, con questa tecnica, a separare la 
+clorofilla da un estratto vegetale. 
+
+Queste tecniche sono basate sulla differente interazione dei vari componenti con le 
+due fasi presenti, una stazionaria ed una mobile la quale fluisce in continuazione 
+attraverso la prima. I componenti di una miscela vengono infatti trasportati dalla 
+fase mobile attraverso la fase stazionaria e la separazione avviene in virtù delle 
+differenti interazioni che si instaurano fra di loro. Alcune sostanze interagiscono 
+con la fase stazionaria e quindi vengono più o meno ritardate nel loro cammino, 
+altre invece non sono in alcun modo bloccate: ciò comporta tempi di uscita diversi 
+\ref{fig:principio_cromatografia}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/principio_crom.jpg}
+\caption{Schema del principio di separazione cromatografica.}
+\label{fig:principio_cromatografia}
+\end{figure}
+
+Per separare al meglio le varie componenti di una miscela, risulta importante 
+conoscere le caratteristiche chimico-fisiche delle molecole analizzate: la carica, 
+le dimensioni, la massa, la polarità dei legami, il potenziale redox, ecc. Dunque 
+esistono diversi meccanismi di separazione (fenomeno dell’adsorbimento, ripartizione,
+ scambio ionico, esclusione...), che non si escludono a vicenda, e, di conseguenza, 
+ diverse soluzioni sperimentali adottabili. Proprio per questo motivo si sono 
+ sviluppate numerose tecniche cromatografiche: 
+
+\begin{itemize}
+\item cromatografia su strato sottile (TLC, \emph{Thin Layer Chromatography}) dove 
+la fase stazionaria può essere un gel di silice, allumina o cellulosa in polvere, 
+aderente ad un apposito supporto. La fase mobile è invece derivante da vari solventi 
+organici;
+\item cromatografia su carta (PC, \emph{Paper Chromatography}), dove la fase 
+stazionaria è costituita dall’acqua presente nella cellulosa e la fase mobile, 
+contenente anch’essa acqua, dipende dalle proprietà chimiche dei composti da 
+separare;
+\item cromatografia su colonna a bassa pressione (LPC, \emph{Low Pressure 
+Chromatography}) dove la fase mobile è un liquido organico poco viscoso, mentre la 
+fase stazionaria può essere solida, liquida o gel;
+\item cromatografia in fase liquida ad elevate prestazioni (HPLC, \emph{High 
+Performance Liquid Chromatography}) dove l’eluente viene fatto fluire ad alta 
+pressione e le sostanze in uscita sono rilevate strumentalmente con idonei 
+dispositivi;
+\item gascromatografia (GC, \emph{Gas Chromatography}) dove la fase mobile è un gas 
+e questo fluisce attraverso una colonna in cui si trova la fase stazionaria che può 
+essere liquida (Cromatografia Gas Liquido, GLC) o solida (GSC).
+
+\end{itemize}
+Le ultime tre tecniche elencate, GC, LC e HPLC, risultano molto efficienti, 
+altamente selettive e non distruttive. La tecnica gas-cromatografica ha visto un 
+importante sviluppo dagli anni ’60  ed è impiegata per la separazione di sostanze 
+volatili (aromi, idrocarburi a catena corta, ecc...).  Con questa tecnica è 
+possibile analizzare campioni gassosi, liquidi o solidi opportunamente solubilizzati,
+vaporizzati e poi iniettati in colonna. L’unica limitazione è che può analizzare 
+solo quelle sostanze che possono essere vaporizzate ad una temperatura compresa 
+tra quella ambientale e i 350-400°C, ovvero la temperatura comunemente raggiunta 
+dai forni in commercio e compatibile con le colonne cromatografiche usate. Inoltre 
+le sostanze da analizzare non devono essere termolabili, vale a dire che non devono
+degradarsi per effetto della temperatura, altrimenti risulta impossibile 
+riconoscerle. Per questo motivo, in alcuni casi tale tecnica viene soppiantata 
+dall’HPLC. A parte ciò le applicazioni possibili sono molteplici e abbracciano 
+tutti i settori delle scienze e dell’industria: medicina, biochimica, prodotti 
+alimentari e chimica ambientale, industria chimica e farmaceutica.
+ 
+La fase stazionaria, nella tecnica gas-cromatografica, dunque può essere liquida 
+oppure solida, mentre la fase mobile è un gas, che in questo caso non ha alcuna 
+interazione con i soluti, ma funge solo da trasporto. Questo è detto carrier e 
+generalmente sono usati gas chimicamente inerti, a bassa viscosità ed elevata 
+purezza (99.9\%) come l’azoto, l’elio e l’argon \citep{martin_new_1941},
+\citep{james_gas-liquid_1952}.
+
+Il gascromatografo è formato da un iniettore, da una colonna e dal detector e 
+fornisce in output un diagramma che rappresenta il segnale generato dal rivelatore 
+in funzione del tempo, dove lo 0 rappresenta il momento in cui il campione viene 
+immesso nella colonna \ref{fig:gascromat}. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/fig1_6.jpeg}
+\caption{schema di una gas-cromatografo e di tutti i suoi componenti.}
+\label{fig:gascromat}
+\end{figure}
+
+
+Questo diagramma prende il nome di cromatogramma del campione \ref{fig:2picchi} e si 
+presenta come una sequenza di picchi di ampiezza e altezza variabile, distribuiti 
+lungo l’asse delle ascisse che rappresenta il tempo. 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{./foto/picchi.jpg}
+\caption{Esempio di cromatogramma a due picchi. 
+Rappresentano due sostanze che interagiscono in modo differente con la 
+fase stazionaria: il picco di sinistra rappresenta un soluto che non ha alcuna 
+interazione con la fase stazionaria ed esce al cosiddetto tempo morto, t\ped{M}; il 
+picco di destra rappresenta un soluto che ha, invece, interazione con la fase 
+stazionaria ed esce al tempo t\ped{R} , maggiore di  t\ped{M}.}
+\label{fig:2picchi}
+\end{figure}
+
+Ogni sostanza iniettata in 
+colonna è caratterizzata da un proprio tempo di ritenzione (variabile in base al 
+flusso del \emph{carrier}, alla fase stazionaria ed alla temperatura), che 
+corrisponde al tempo che intercorre tra l’introduzione del campione e la sua uscita 
+dalla colonna. 
+
+
+\subsubsection{Iniettore} 
+
+L’iniezione può essere effettuata manualmente oppure tramite un’autocampionatore 
+che fornisce miglior riproducibilità e ottimizza i tempi di analisi. Il campione 
+introdotto è di pochi microgrammi e può essere inserito sciolto in un solvente, 
+oppure, nell’analisi dello spazio di testa, si inseriscono i vapori del campione 
+che si sono sviluppati in una vial chiusa e riscaldata. L’iniezione può essere
+effettuata in modi differenti: il campione può essere introdotto direttamente in 
+colonna (introduzione \emph{on column}, detta “a freddo”) o depositato inizialmente
+in un iniettore e qui verrà vaporizzato all’istante e, prima di arrivare in colonna,
+può subire una ripartizione (\emph{splitless} e \emph{split}).
+
+Il foro adibito all’introduzione dell’ago è protetto dall’ambiente esterno tramite 
+una guarnizione di uno speciale polimero resistente alle alte temperature. Con la 
+tecnica \emph{on column}, il foro non presenta questa guarnizione di protezione, ma 
+bensì una valvola che si apre all’istante quando l’ago sta per toccarla, e si 
+richiude subito dopo la sua uscita. 
+
+L’iniettore è una scatola chiusa termicamente stabilizzata con all’interno un 
+inserto di vetro (\emph{liner}) e, a differenza dell’iniezione “a freddo”, permette 
+l’istantanea vaporizzazione del campione, il quale risulta così maggiormente 
+omogeneizzato; però il tempo di iniezione è più lungo perchè bisogna aspettare che 
+l’iniettore si scaldi. 
+
+Si possono fare due tipi di iniezioni a “vaporizzazione istantanea”: l’iniezione 
+\emph{split}  e quella \emph{splitless}. La prima \ref{fig:split} si usa quando il 
+campione presenta un’elevata concentrazione e quindi potrebbe saturare la risposta 
+del detector e sfalzare il risultato. In questa tipologia il campione viene diluito 
+con il gas \emph{carrier} e in parte, questa miscela, esce da uno sfiatatoio. La 
+quantità di campione uscente è regolata e, dopo un certo periodo di tempo, misurato 
+per via empirica, l’uscita si chiude e la porzione rimasta nel liner va in colonna. 
+Questo metodo è utilizzato soprattutto quando si deve analizzare delle essenze 
+(timo, lavanda, limone ecc).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{./foto/iniett_split.jpg}
+\caption{ Iniettore tecnica split: 1. siringa; 2. setto poroso; 3. zona di 
+evaporazione del campione; 4. ingresso del \emph{carrier}; 5. corpo dell’iniettore; 
+6. camera di miscelazione; 7. spurgo (\emph{vent}); 8. valvola di regolazione del 
+vent; 9. polmone; 10. testa della colonna capillare.}
+\label{fig:split}
+\end{figure}
+
+Nell’iniezione splitless \ref{fig:splitless} invece il campione è tutto inviato in colonna e,
+similmente all’iniezione \emph{on column}, si ha all’inizio del cromatogramma il 
+picco del solvente. Questo tipo di iniezione si usa per l’analisi in tracce come ad 
+esempio per gli acidi volatili identificativi dellla maturazione o della putrefazione
+o per le droghe.
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{./foto/splitless.jpg}
+\caption{Iniettore tecnica splitless: 1. siringa; 2. setto poroso; 3. sngresso del 
+gas di trasporto; 4. sfiato; 5. \emph{vent}; 6. valvola di regolazione del vent; 
+7. polmone; 8. camera di miscelazione e vaporizzazione; 9. colonna.}
+\label{fig:splitless}
+\end{figure}
+
+Sono ormai diffusi iniettori che possono, grazie all’uso di valvole, utilizzare 
+entrambe le tecniche. 
+
+Esistono poi gli iniettori PTV (\emph{Programmed Temperature Vaporization}): in 
+questi il campione viene iniettato in un inserto freddo che poi mano a mano aumenta 
+di temperatura e si vaporizza, è quindi adatta a composti termolabili e presenti in 
+tracce. La temperatura del \emph{liner}, inizialmente, è posta poco sotto la 
+temperatura di ebollizione del solvente così da permettere la dispersione di una 
+buona quantità di questo, senza perdere invece i soluti dato che la temperatura è 
+troppo bassa per farli gassificare. Poi la valvola viene chiusa e si alza la 
+temperatura fino a superare il grado del componente della miscela più altobollente. 
+Dunque è fondamentale programmare attentamente i tempi di scarico e la temperatura. 
+È considerato il sistema più universale per inserire il campione e prevede un 
+funzionamento combinato \emph{split-splitless}, la possibilità di volumi di iniezione
+elevati  e l’eliminazione del solvente. Inoltre essendo una tipologia di iniezione 
+“a freddo” richiede un tempo di iniezione più breve, similmente a quello 
+dell'iniezione \emph{on column}. 
+
+\subsubsection{Colonna}
+
+La colonna cromatografica contiene la fase stazionaria in grado di ritardare il 
+flusso dei vari componenti della miscela in maniera differenziata, in funzione del 
+coefficiente di ripartizione (tra fase gassosa e fase liquida) oppure in funzione 
+del coefficiente di adsorbimento (tra fase gassosa e solida).
+
+Le colonne si trovano in un’apposita camera termostatica a circolazione di aria 
+calda, detta forno \ref{fig:colonna}, dove la temperatura, giunta al livello desiderato, 
+rimane il più possibile costante, così da permettere una buona riproducibilità 
+dell’analisi.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=2]{./foto/fig1_10.jpeg}
+\caption{Vista interna del forno con colonna capillare avvolta sul suo sostegno in 
+metallo.}
+\label{fig:colonna}
+\end{figure}
+
+Le colonne possono essere impaccate o capillari: 
+\begin{itemize}
+\item le prime sono tubi di teflon, acciaio o vetro con un diametro dell’ordine del 
+centimetro (solitamente 1-5mm) e con una lunghezza non superiore ai 10 metri 
+(solitamente 1-6m); piegate a spirale o a U e riempite di silice solida e un liquido 
+non volatile, che varia in base alla sostanza che si vuole separare. Queste due 
+componenti rappresentano la fase stazionaria;
+\item le colonne capillari sono sottilissimi tubi di silice fusa con un diametro 
+solitamente non superiore agli 0.53 millimetri e con una lunghezza tra i 10 e i 200 
+metri, avvolte a spirale su un supporto metallico. In questo caso la fase stazionaria
+ è disposta in maniera uniforme sulla superficie interna formando un film di spessore
+  compreso tra 0.5 e 2.5 micron. Il film è costituito solitamente da metil-silossani 
+  modificati con diversi gruppi funzionali in base al campione da analizzare e 
+  possono essere più o meno polari,  comportando una differente forza d’interazione 
+  tra fase stazionaria e soluto. Più sono similmente polari, superiore sarà 
+  l’interazione, ed il soluto sarà trattenuto maggiormente con tempi di ritenzione 
+  più lunghi. 
+\end{itemize}
+
+Il primo vantaggio che presentano le colonne capillari è che, pur avendo un diametro 
+interno minore, offrono al gas un canale di passaggio molto più grande poiché 
+continuo, invece che frammentato \ref{fig:sezione_long} come nelle colonne impaccate; quindi 
+permettono portate maggiori, nonché tempi di analisi più brevi. Le colonne capillari 
+presentano inoltre elevata sensibilità ed efficienza, e consentono la separazione di 
+un numero maggiore di componenti della miscela.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/fig1_11.jpg}
+\caption{Disegno della sezione longitudinale di una colonna capillare ed una 
+impaccata con presenza della fase stazionaria.}
+\label{fig:sezione_long}
+\end{figure}
+
+Le colonne impaccate hanno però una maggior capacità e vengono utilizzate per 
+analisi in cui non è necessario separare tanti elementi.
+
+\subsubsection{Detector}
+
+Il \emph{detector} o rivelatore è la parte terminale di un gas cromatografo e 
+permette di indicare la presenza e la concentrazione del soluto nel gas di trasporto.
+
+Uno dei punti di forza della tecnica GC è la grande varietà dei rivelatori 
+disponibili,  differenziati in base al principio fisico utilizzato per rivelare le 
+sostanze in uscita dalla colonna. Si possono suddividere in distruttivi (FID) o non 
+(ECD, TCD) e questi ultimi possono permettere l’invio delle molecole ad un ulteriore 
+strumento di analisi come ad esempio alla massa (MS). Inoltre possono essere 
+universali (TCD, FID), ovvero consentono di individuare tutti i componenti di una 
+miscela, o selettivi (ECD) se rivelano solo particolari categorie di composti:
+\begin{itemize}
+\item Il FID (\emph{Flame Ionization Detector}) è un rivelatore a ionizzazione di 
+fiamma distruttivo: il gas in uscita dalla colonna è mescolato all’aria e, quando 
+va nella fiamma di idrogeno, si produce una corrente elettrica che, amplificata, 
+rappresenta il segnale del detector. Facendo la differenza tra il gas puro e quello 
+contenente la sostanza si ottiene il picco. Il FID anche se distruttivo e cieco per 
+quelle sostanza che non bruciano come ad esempio \ce{NH3}, \ce{CO2} o l’acqua, è il 
+\emph{detector } più usato perchè molto robusto ed universale;
+\item il TCD (\emph{Thermal Conductivity Detector}) è un rivelatore a conducibilità 
+termica non distruttivo ed universale: è formato da due filamenti riscaldati 
+elettricamente e mantenuti a temperatura costante. Su un filamento si ha lo scorrere 
+del gas puro, sull’altro il gas in uscita dalla colonna. Il secondo filamento quindi 
+subirà un raffreddamento o riscaldamento rispetto al primo in base alla sostanza 
+eluita. Questa differenza di temperatura si riflette in una variazione di resistenza 
+che viene amplificata e rappresenta il segnale del \emph{detector};
+\item L’ECD (\emph{Electron Capture Detector}) cioè il rivelvatore a cattura di 
+elettroni, è non distruttivo e molto selettivo: il rivelatore è formato da un catodo 
+e un anodo. Il catodo è rivestito da un materiale radioattivo a bassa energia, 
+mentre l’anodo, con forma tubolare, permette l’ingresso del gas. Il gas viene 
+ionizzato dal catodo e i nuovi ioni così formati si dirigono ai rispettivi elettrodi 
+a creare una corrente di fondo che forma la linea di base.  Se nel gas sono presenti
+sostanze elettronaffine, queste reagiscono e formano molecole neutre che fanno 
+abbassare la corrente di base. 
+\end{itemize}
+
+Il GC si può accoppiare, se prevede un detector non distruttivo, ad uno spettrometro 
+di massa così da ottenere indicazioni sulla natura e struttura di ogni singola 
+sostanza eluita. 
+
+\subsection{Spettrometria di massa}
+Lo spettrometro di massa (MS) rappresenta un rivelatore adatto alla gascromatografia 
+e permette di analizzare in tempo reale i singoli picchi in uscita dalla colonna, 
+effettuando sia un’analisi quantitativa che qualitativa, mediante il confronto dello 
+spettro ottenuto con uno memorizzato nella banca dati. Questo  accoppiamento viene 
+solitamente effetuato poiché nella Gas-Cromatografia, a differenza della MS, il 
+tempo di ritenzione non fornisce una conoscenza certa ed univoca della molecola.
+
+Il campione, in fase gassosa, giunge nella sorgente dello spettrometro di massa e 
+le molecole che lo compongono vengono frammentate (ionizzate). Gli ioni proseguono 
+nell’analizzatore che permette la loro separazione, poichè, immessi in un campo 
+elettromagnetico, percorrono traiettorie diverse in base al rapporto carica/massa 
+(m/z) e si separano gli uni dagli altri. 
+
+Infine si ha un moltiplicatore che amplifica il segnale e il rivelatore; in output 
+si viene ad ottenere uno spettro che rappresenta, con delle bande, i vari frammenti 
+di ionizzazione, ordinati in base alla loro massa atomica \ref{fig:GC-MS}. Questo, 
+come una sorta di impronta digitale, permette di ricostruire la formula della 
+molecola e, confrontandolo con i numerosi spettri memorizzati nella banca dati, si 
+possono riconoscere i vari componenti.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{./foto/fig1_12.jpg}
+\caption{Schema di congiunzione GC-MS.}
+\label{fig:GC-MS}
+\end{figure}
+Il sistema GC-MS così accoppiato permette di scendere a livelli di rivelabilità 
+bassissimi, fino all’ordine dei picogrammi e in alcuni casi anche dei femtogrammi. 
+
+\subsubsection{Sorgenti}
+
+
+Il campione entra “neutro” nello spettrometro e giunge alla sorgente; qui, prima di 
+raggiungere l’analizzatore, viene trasformato in un gas ionizzato. Le sorgenti 
+possono essere di più tipologie come anche le modalità con cui si formano gli ioni, 
+comportando risultati differenti. Dunque la sorgente da utilizzare deve essere 
+scelta in base al campione che abbiamo e alle informazioni che ci interessano.
+
+Le principali tipologie di sorgenti ioniche sono \todo{(ARPAT, 2010)}: 
+\begin{itemize}
+\item interazione elettronica (EI, \emph{ electron ionisation impact});
+\item ionizzazione chimica (CI, \emph{chemical ionisation});
+\item ionizzazione di campo (FI, \emph{field ionization});
+\item desassorbimento di campo (FD, \emph{field desorption});
+\item ionizzazione chimica per desassorbimento (DCI, \emph{desorption chemical 
+ionisation});
+\item ionizzazione con atomi veloci (FAB,  \emph{fast atom bombardment}).
+\end{itemize}
+
+Solo le prime tre tipologie di sorgenti prevedono l’introduzione del campione in 
+fase gassosa e la tecnica più comune tra queste è l’EI dove le molecole gassose 
+vengono bombardate da un fascio di elettroni ad alta energia (70 eV); a questo 
+valore energetico l’aspetto qualitativo dello spettro rimane invariato e quello 
+quantitativo cambia di pochissimo \todo{(ARPAT, 2010)}. Gli elettroni del fascio 
+sono formati con il riscaldamento di un filamento, a circa 2000°C, e sono accelerati
+per mezzo di una caduta di potenziale ottenuta con la presenza di un anodo. 
+
+La sorgente CI invece prevede una ionizzazione primaria come nell’EI e gli ioni 
+formati reagiscono con le molecole neutre del gas introdotto nella sorgente ad 
+elevata pressione. Da questa reazione si ha una ionizzazione secondaria e gli 
+spettri ottenuti rappresentano i prodotti della reazione chimica tra le molecole 
+del campione e quelle del gas. Quindi le informazioni sulla struttura iniziale 
+saranno di più difficile interpretazione. 
+
+Infine abbiamo il FI che è simile all’EI ma prevede l’utilizzo di un diverso 
+elemento ionizzante rappresentato da una punta metallica. Questo metodo presenta 
+dei limiti, poiché risulta essere fragile e meno sensibile dell’EI. 
+
+In tutti e tre i casi, gli ioni formatisi subiscono un’accelerazione grazie a 
+delle piastre acceleratrici di metallo e vengono espulsi, tramite una fenditura, 
+dalla sorgente e guidati verso l’analizzatore.
+
+\subsubsection{Analizzatore}
+
+In questa fase si ha una sorta di filtro che separa i vari ioni ottenuti in base al 
+rapporto m/z o comunque a proprietà ad esso collegate.
+
+Anche in questo caso ci possono essere più tipologie di analizzatori: 
+\begin{itemize}
+\item a settori magnetici;
+\item quadrupoli;
+\item trappole ioniche;
+\item a tempo di volo (TOF);
+\item a risonanza ciclotronica.
+\end{itemize}
+Nella prima tipologia di analizzatore si ha una struttura semicircolare con dei 
+magneti che deviano le traiettorie degli ioni in percorsi circolari. Il raggio di 
+queste traiettorie dipende dal rapporto momento angolare/carica dello ione e quindi 
+ioni con m/z maggiore percorrono dei raggi più ampi rispetto a ioni aventi un 
+rapporto minore. La posizione della fenditura si comporta da filtro e permette il 
+passaggio solo di alcuni ioni aventi uno specifico rapporto m/z. La separazione 
+degli ioni avviene dunque disperdendoli nello spazio.
+
+Negli analizzatori con quadrupolo, invece, ci si basa sulla stabilità dello ione 
+una volta inserito nello strumento. Si ha un campo elettrico quadrupolare grazie a 
+quattro elettrodi a barra cilindrica, lunghi circa 20 cm, che hanno un potenziale 
+elettromagnetico oscillante: quando le due barre verticali hanno carica negativa, 
+le due orizzontali hanno carica positiva e viceversa. Gli ioni seguono questa sorta 
+di tunnel e oscillano tra l’anodo e il catodo in base al rapporto potenziale/massa 
+dello ione. Se l’oscillazione è stabile con la radiofrequenza imposta riescono a 
+percorrere tutto il percorso ed a raggiungere il \emph{detector}; gli ioni con un 
+valore m/z non idoneo invece collidono contro le barre e non vengono rivelati. 
+Cambiando radiofrequenza, altri ioni raggiungono il detector e modulando questa si 
+ottiene lo spettro di massa. I sistemi con quadrupolo permettono di usare pressioni 
+alte e quindi sistemi di vuoto più semplici, però hanno una bassa risoluzione.
+
+Gli analizzatori con la trappola ionica prevedono un elettrodo ad anello e due 
+elettrodi cilindrici; agendo sulla radiofrequenza si fanno muovere gli ioni dalla 
+trappola verso il \emph{detector}. Questa tipologia di analizzatore fornisce gli stessi 
+vantaggi e svantaggi della tipologia precedente di analizzatore, ma presenta una 
+caratteristica interessante poiché permette di mantenere gli ioni confinati e 
+intrappolati per un tempo finito nella trappola e quindi si possono effettuare vari 
+tipi di esperimenti sugli ioni stessi.
+
+Nel caso del TOF invece lo ione viene accelerato con un energia cinetica nota e si 
+misura il “tempo di volo” impiegato dallo stesso per raggiungere l’analizzatore. 
+Dunque si ha una separazione degli ioni disperdendoli nel tempo. Il principio di 
+base quindi è che ioni con ugual energia, ma massa diversa,  richiederanno tempi 
+diversi per percorrere la stessa distanza.  Dunque permette l'acquisizione di 
+spettri in tempi brevissimi ed una  risoluzione uniforme su tutto l’intervallo di 
+massa, a differenza degli altri analizzatori.
+
+Infine l’analizzatore ciclotronico prevede una cella dove vengono intrappolati gli 
+ioni. Questa è posta in un campo magnetico costante che obbliga gli ioni ad un 
+percorso curvo. Ma il campo è così forte che questi sono intrappolati in questo 
+moto circolare e il tutto viene modulato da opportune radiofrequenze e registrato 
+da un ricevitore. Questo analizzatore permette di avere uno spettro di massa 
+simultaneo senza la distruzione degli ioni, in questo modo possono essere 
+analizzati nuovamente e subire altri esperimenti. Questa tipologia di strumento 
+fornisce un’ottima risoluzione e efficienza di rivelazione; nonché alte velocità di 
+scansione, ma richiede la formazione di un altissimo vuoto ed è quindi molto costosa 
+e difficile da accoppiare con i sistemi cromatografici.
+
+\subsubsection{Rivelatore}
+
+Dopo la separazione gli ioni devono essere rivelati e deve essere misurata la loro 
+abbondanza relativa. Anche qui esistono diversi tipi di sistemi:
+\begin{itemize}
+\item gabbia di Faraday;
+\item moltiplicatore di elettroni;
+\item lastra fotografica.
+\end{itemize}
+L’uso di uno o un’altro tipo di rivelatore va a differenziare lo strumento in 
+spettrometo....
+
+\chapter{Obiettivi}
+
+Lo scopo di questa ricerca è quello di studiare e determinare la risposta della 
+popolazione microbica, usata come indicatore di fertilità  biologica,  in due 
+diverse gestioni agronomiche: la gestione biologica e quella convenzionale. 
+Entrambe le gestioni sono state poi sottoposte a tre diverse lavorazioni: aratura, 
+frangizollatura e rippatura. I campionamenti sono stati effettuati sia in estate, 
+nel mese di Giugno, che in autunno, Ottobre-Novembre, per tenere conto anche di una 
+possibile variazione dovuta alla stagionalità.
+
+Per analizzare la microfauna e microflora edafica si è utilizzato il metodo 
+biochimico degli acidi grassi dei fosfolipidi di membrana (PLFA) che si basa sul 
+principio secondo cui la composizione in acidi grassi dei fosfolipidi di membrana è 
+specifica per i diversi gruppi di microrganismi \citep{zhang_assessing_2008}. Con 
+questo tipo di analisi si può misurare la diversità di una comunità microbica e 
+valutarne i cambiamenti in funzione di disturbi esterni come le pratiche agricole 
+\citep{esperschutz_response_2007}, \citep{steinbeiss_effect_2009} e ottenere una 
+misura della qualità dei suoli \citep{mele_application_2008}, \citep{winding_use_2005}.
+
+Tale metodo prevede l’estrazione degli acidi grassi dal campione, i quali subiranno 
+poi una metilazione ed infine verrà effettuata un’analisi mediante gas cromatografia
+\citep{ibekwe_fatty_1999}.
+
+\chapter{Materiali e metodi}
+\section{Area di studio}
+l campo sperimentale è situato nell’azienda agricola della Scuola di Agraria di 
+Firenze, in località Montepaldi, San Casciano Val di Pesa (Latitudine 43°40’16’’ N, 
+Longitudine 11°09’08’’ E) a 90 m sopra il livello del mare. 
+
+L’area di studio \ref{fig:panorama_dispaa} presenta un clima sub-appenninico con precipitazioni 
+annuali di circa 800 mm, con minimi nel periodo estivo e massimi in primavera e in 
+autunno. La temperatura media annuale è di 14.1°C con massime in estate, anche 
+superiori a 30°C e minime a gennaio \todo{(DISPAA, 2016)}. 
+
+Dal punto di vista pedologico, il suolo deriva da sedimenti pliocenici di tipo 
+conglomeratico con presenza di lenti sabbiose e argillose e da sedimenti trasportati 
+dal fiume Pesa. Ha una pendenza del ?\% e la tessitura appartiene al gruppo 
+limo-argilloso/argilloso con scheletro di piccole e medie dimensioni 
+\todo{(DISPAA, 2016)}.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{./foto/panorama.jpg}
+\caption{Veduta panoramica del sito sperimentale.}
+\label{fig:panorama_dispaa}
+\end{figure}
+\info{citazioneDISPAA}
+
+Nel 1992  le caratteristiche fisico chimiche del campo biologico erano 
+\info{(DISPAA, 2016)}:
+\begin{itemize}
+\item tessitura:  46.3\% limo, 20.2\% sabbia  e 32.9\% argilla; mentre lo scheletro 
+rappresentava il 6.3\%;
+\item pH (misurato in acqua):  8.3;
+\item capacità di scambio cationica:  17.6 meq 100 ;
+\item \ce{P2O5} totale: 1.63\%;
+\item \ce{K2O}:  171
+\end{itemize}
+
+Le stesse caratteristiche per il campo convenzionale invece erano \info{(DISPAA, 2016)}:
+\begin{itemize}
+\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo scheletro;
+\item pH (in acqua): 8.3;
+\item CSC: 19.4 meq 100 ;
+\item \ce{P2O5} totale: 1.60%;
+\item \ce{K2O}: 134.
+
+\end{itemize}
+\section{Disegno sperimentale e gestione agronomica}
+Questo studio fa parte del progetto MoLTE (Moltepaldi Long Term Experiment), 
+progetto europeo attivo dal 1991 e interessa una superficie di 15 ha suddivisa in 
+10 appezzamenti, di 1.3 ha ciascuno: OO1, OO2, OO3, OO4, CO9, CO10 e 4 appartenenti 
+al BioNuovo \ref{fig:panorama_satellite}. Le sigle stanno ad indicare la conduzione utilizzata: gli 
+appezzamenti con prefisso OO- indicano conduzione organica, mentre quelli con 
+prefisso CO- stanno ad indicare la gestione convenzionale. 
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{./foto/BAH.jpg}
+\caption{Area di studio (Google Earth).}
+\label{fig:panorama_satellite}
+\end{figure}
+I quattro appezzamenti a conduzione biologica più recente, per questo definiti 
+BioNuovo, non sono stati presi in considerazione in questo esperimento, come anche 
+il campo OO1 ed OO3.
+
+I campi del BioNuovo separano quelli a conduzione biologica da quelli a conduzione 
+convenzionale. Oltre a ciò, le due conduzioni biologiche, nuovo e vecchio, sono 
+separate da una siepe naturale larga 6 metri che termina con una striscia inerbita 
+di 2 metri su ambo i lati; mentre il biologico nuovo e il convenzionale sono 
+separati da una striscia inerbita di 8 metri. Il biologico vecchio prevede anche 
+una siepe artificiale di 6 metri di larghezza più 4 metri di striscia inerbita, 
+che lo separa dai campi adiacenti. Questa è stata piantata agli inizi del 1990 dal 
+DISAT(Dipartimento di Scienze Agronomiche e Gestione del Territorio Agroforestale) 
+con l’aiuto del WWF ed è formata da specie autoctone.  Infine una viottola di 4 
+metri separa gli appezzamenti OO1 e OO2 da dagli OO3 e OO4. Tali campi sono 
+coltivati, dal 2001,  seguendo la rotazione:
+
+\begin{itemize}
+\item quadriennale per gli appezzamenti biologici (sovescio + coltura da rinnovo; 
+cereale + leguminosa; leguminosa; cereale);
+\item biennale intensiva nei due appezzamenti convenzionali (coltura da rinnovo; 
+cereale) \info{(DISPAA, 2016)}.
+\end{itemize}
+
+Oltre alle due gestioni menzionate, l’esperimento vuole anche confrontare la 
+risposta a diverse lavorazioni. Ogni appezzamento vede 3 principali lavorazioni 
+differenti: frangizzolatura in presemina più aratura (A), frangizzolatura in 
+presemina più rippatura (B) e frangizzolatura in presemina più una frangizollatura 
+successiva (C). Ogni lavorazione è stata replicata tre volte e quindi ogni 
+appezzamento è stato suddiviso in 9 parcelle: 3 repliche (segnalate con numeri 
+arabi a pedice) per ognuna delle 3 lavorazioni \ref{fig:bioconv}.
 
 
 
 \begin{figure}[ht]
-  \centering
- 
-<<label = grafico_prova, echo=FALSE, fig = TRUE,  width=5.4, height=5.4, include = TRUE>>=
-plot(1:10, col = 1:10, pch = 1:10, cex = 2)
-@ %def 
-
-
-
-\caption[Disdascalia corta Boxplot dei valori di densit\`a apparente:
-metodo \emph{Clod} ]{Didascalia lunga Boxplot dei valori di densit\`a
-  apparente ottenuti col metodo di analisi \emph{Clod}; gli
-  appezzamenti condotti convenzionalmente (a sinistra) hanno valori
-  leggermente più alti degli appezzamenti condotti a biologico (a
-  destra) una misura \SI{\Sexpr{round(mean(rnorm(10)),2)}}{\micro\metre}}
-  \label{fig:boxplotClod}
-
+\centering
+\includegraphics[scale=0.4]{./foto/bioconv.jpg}
+\caption{Appezzamenti a biologico a sinistra e convenzionale  a destra. I plot 
+sono indicati con codici alfanumerici identificativi: OO seguito da un numero 
+indica l'appezzamento biologico e CO seguito dal numero rappresenta invece il 
+convenzionale; la lettera maiuscola indica la lavorazione A (aratura), B 
+(rippatura), C (frangizollatura); il numero (1,2,3) a pedice differenzia le 
+repliche della lavorazione; le lettere minuscole (a, m, b,) stanno ad indicare i 
+tre campioni all’interno di ogni singolo plot .}
+\label{fig:bioconv}
 \end{figure}
+
+Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il Girasole, varietà 
+\emph{Solaris} non trattato, usando una seminatrice di precisione con una densità di 
+75 000 piante ad ettaro. La coltura precedente era la lenticchia, varietà \emph{Val di 
+Nevola}.  Le lavorazioni per preparare il letto di semina sono state tutte svolte 
+l’8 Settembre 2016 in base alla parcella, ovvero l’aratura nelle parcelle A, la 
+rippatura nelle parcelle B e la frangizzolatura nelle C. É stata poi effettuata 
+una concimazione con pollina il 22 Febbraio 2017 e il giorno successivo è stata 
+fatta una frangizzolatura. Il 29 Marzo il campo è stato erpicato e il giorno 
+successivo è avvenuta la semina.
+
+Lo stesso anno, nel campo OO4, precedentemente coltivato a cece, varietà \emph{Pascià}
+, è stato coltivato l’orzo, varietà \emph{Campagne} non trattato, con una 
+seminatrice a righe. Anche qui la preparazione del letto di semina, in base alla 
+parcella, è stata effettuata l’8 Settembre 2016. C’è stata una frangizzollatura il 
+5 Dicembre con successiva semina, dando 190 Kg di seme ad ettaro, ed il 15 Marzo del 
+2017 è stata fatta una strigliatura.
+
+Nel campo CO09 invece è stato seminato l’orzo distico varietà \emph{Campagne} 
+trattato con Redico puro all’8.7\%. La coltura precedente era il girasole, varietà 
+\emph{Solaris} trattato con Apron-xl p.a metalaxil-m. 
+
+L’8 Settembre 2016 sono state effettuate le lavorazioni che distinguono le 
+differenti parcelle, poi una prima concimazione il 5 Dicembre dando 192 Kg/ha di 
+fosfato biammonico (18:46), ed a seguire è stata effettuata una frangizzolatura e 
+la semina con una seminatrice a righe, dando 190 Kg/ha di seme. Il 15 Marzo è stata 
+fatta una seconda concimazione con nitrato d’ammonio (150 Kg/ha) e due settimane 
+dopo c’è stato il diserbo usando un mix composto da Axial (1 L) + Axial Proto 
+(250 mL) + Logran(55 g) ad ettaro. L’11 Aprile è stata poi distribuita l’urea con 
+una dose di 150 Kg a ettaro.
+
+Infine, nel campo CO10, precedentemente coltivato ad orzo distico \emph{Campagne} 
+trattato con Redico, è stato seminato il Girasole, varietà \emph{Solaris} 
+trattato con Apron-xl p.a metalaxil-m. Le lavorazioni iniziali sono state fatte 
+sempre ad inizio autunno, nella stessa data degli altri campi e a seguire una 
+frangizzollatura il 23 Febbraio e poi un’erpicatura il 29 Marzo. La semina è stata 
+fatta il 30 Marzo, con una densità di 75 000 piante ad ettaro usando una seminatrice 
+di precisione. Contemporaneamente alla semina è stata fatta una concimazione con 
+20:10:10 (150 Kg/ha) e un diserbo a fascia usando 500 mL del prodotto GOAL.
+
+\section{Metodo di campionamento}
+Il campionamento ha previsto, per ogni parcella, 3 campioni di terreno di circa 
+500 g l’uno,  presi a 5-10 cm di profondità. Il primo è stato preso al centro di 
+ogni plot (m=medio) e gli altri due a 4 metri di distanza dal centro tenendo conto 
+della pendenza del campo, uno a 4 metri a valle (b=basso), ovvero verso la Pesa e 
+l’altro a 4 metri a monte (a=alto).
+
+Il primo campionamento ha richiesto tre giorni tra fine ottobre e inizio Novembre 
+del 2016, il secondo è stato svolto a Giugno 2017. In entrambi i casi, sono stati 
+collezionati 108 campioni, separati in appositi sacchetti di plastica \ref{fig:campione} 
+e poi portati in laboratorio.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=1]{./foto/campione.jpg}
+\caption{Un sacchetto contenente un campione.}
+\label{fig:campione}
+\end{figure}
+
+Una volta in laboratorio, i campioni sono stati tenuti aperti all’aria per perdere 
+umidità, ed una volta asciutti sono stati messi in cella frigorifera a 3°C.
+
+I primi ad essere stati preparati sono stati i 36 campioni “m” autunnali i quali, 
+tolti dalla cella frigorifera, sono stati setacciati a 2 mm. Di tutto il campione 
+omogeneizzato, sono stati pesati 5 g  che sono stati successivamente macinati con 
+il mulino a palle e poi setacciati a 200 µm \ref{fig:macinato}.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=1]{./foto/macinato.jpg}
+\caption{Un campione dopo esser stato macinato col mulino a palle e setacciato a 
+200µm.}
+\label{fig:macinato}
+\end{figure}
+
+É stato inoltre preparato un campione composito con tutti gli “m” macinati a 200 
+µm, pesandone 1 g per ciascun campione, identificato poi con MIX SOIL.
+
+\section{Analisi PLFA}
+
+La procedura utilizzata è stata modificata basandosi sul metodo di \citet{bligh_rapid_1959},
+a sua volta modificato da White et al. (1979) \citet{white_determination_1979}
+e da \citet{bossio_determinants_nodate}.
+ 
+\subsection{Preparazione prima del GC-MS}
+\subsubsection{Prima fase - Estrazione}
+Reagenti:
+\begin{itemize}
+\item metanolo (\ce{CH3OH});
+\item cloroformio (\ce{CHCl3});
+\item tampone citrato 0.15 M, pH 4;
+\item estraente Bligh \& Dyer: \ce{CHCl3}:\ce{CH3OH}:tampone citrato, 1:2:0.8 v/v/v.
+
+\end{itemize}
+
+Procedura:
+\begin{enumerate}
+\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro adatta per la 
+centrifuga ed includere il bianco;
+\item aggiungere ad ogni campione 9.2 ml di B\&D e tappare;
+\item vortez e mettere nell’ultrasuono per un minuto;
+\item lasciar separare almeno 2 ore, agitando i campioni ogni 10 minuti;
+\item mettere nell’ultrasuono per un minuto;
+\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
+\item trasferire il surnatante in una vial pulita;
+\item lavare il suolo sedimentato con altri 2.5 ml di B\&D;
+\item vortex e mettere nell’ultrasuono per un minuto;
+\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
+\item aggiungere il surnatante a quello separato precedentemente;
+\item suddividere le fasi aggiungendo ad ogni vial: 3.1 ml di cloroformio e 3.1 ml 
+di tampone citrato e agitare per bene con vortex;
+\item ultrasonicare per un minuto;
+\item centrifugare a 3000 giri per 15 minuti;
+\item dopo trasferire 3 ml della fase sottostante in una vial da 2 ml;
+\item portare a secco sotto flusso di N a 40°C;
+\item quando è evaporato tutto tappare e mettere in congelatore o passare   	
+alla fase 2.
+
+
+\end{enumerate}
+\subsubsection{Seconda fase - Purificazione e frazionamento dei lipidi}
+Reagenti:
+\begin{itemize}
+\item cloroformio (\ce{CHCl3});
+\item metanolo (\ce{CH3OH});
+\item acetone (\ce{C3H6O})
+\end{itemize}
+
+In questa fase i lipidi vengono separati in tre fasi differenti in base alla 
+polarità: i lipidi neutri, i glicolipidi e i lipidi polari ovvero i fosfolipidi.
+
+Procedura:
+\begin{enumerate}
+\item posizionare la colonna (marca e capienza 0.50 g Si \info{(Supelco, Inc.?)}) 
+su un supporto idoneo e, sotto di essa, mettere un becher per lo scarto;
+\item attivare la colonna con 0.5 ml di cloroformio;
+\item dissolvere il materiale lipidico secco proveninte dalla fase precedente in 
+0.25 ml di cloroformio e chiudere la vial;
+\item agitare la vial con il vortex, ultrasonicare per un minuto e trasferire il 
+tutto nella colonna con una pipetta paster;
+\item ripulire la vial con altri 0.25 ml di cloroformio;
+\item agitare nuovamente la vial tramite il vortex, ultrasonicare e trasferire il 
+tutto nella colonna;
+\item aggiungere 1 ml di cloroformio nella colonna così da eluire i lipidi neutri;
+\item quando tutto il solvente sarà sceso aggiungere 4 ml di acetone, in porzioni 
+da 1 ml, così da eluire i glicolipidi;
+\item quando tutto l’acetone sarà sceso, rimuovere il becher e mettere sotto la 
+colonna una vial pulita da 2 ml;
+\item eluire i fosfolipidi con 1 ml di metanolo e raccogliere tutto nella vial;
+\item far evaporare tutto il campione sotto flusso di azoto a 40°C;
+\item tappare e congelare o passare direttamente alla terza fase.
+
+\end{enumerate}
+
+\subsubsection{Terza fase - Derivatizzazione alcalina}
+Reagenti:
+\begin{itemize}
+\item \ce{MeOH}-Tolwene (1:1);
+\item esano cloroformio (4:1) necessario per separare le fasi;
+\item acido acetico 1 M;
+\item eptano (\ce{C7H16});
+\item \ce{KOH} in metanolo 2 M;
+\item C19 in esano (0.00923 ng/40 mL esano);
+\item acqua milliQ.
+\end{itemize}
+
+Procedura:
+\begin{enumerate}
+\item aggiungere 10 µl di C19 in ogni vial;
+\item dissolvere il campione in 0.5 ml di \ce{MeOH}-Tolwene;
+\item aggiungere 0.1 ml di KOH e incubare a 60°C per 15 minuti;
+\item aggiungere 1 ml di esano cloroformio e 0.3 ml di acido acetico;
+\item agitare e usare il vortex per un minuto;
+\item centrifugare per 5 minuti a 3000 giri;
+\item trasferire il surnatante organico in una vial pulita;
+\item lavare nuovamente lo strato inferiore con 1 ml di esano cloroformio;
+\item agitare, usare il vortex per un minuto e centrifugare per 5 minuti a 3000 giri;
+\item aggiungere anche questa fase superiore nella vial;
+\item portare a secco sotto corrente di azoto a 25-30°C ;
+\item conservare a -20°C o riprendere in un baccellino con 200 µl di eptano.
+\end{enumerate}
+
+\subsection{ Analisi in GC-MS}
+
+
+%
+%\begin{figure}[ht]
+%  \centering
+% 
+%<<label = grafico_prova, echo=FALSE, fig = TRUE,  width=5.4, height=5.4, include = TRUE>>=
+%plot(1:10, col = 1:10, pch = 1:10, cex = 2)
+%@ %def 
+%
+%
+%
+%\caption[Disdascalia corta Boxplot dei valori di densit\`a apparente:
+%metodo \emph{Clod} ]{Didascalia lunga Boxplot dei valori di densit\`a
+%  apparente ottenuti col metodo di analisi \emph{Clod}; gli
+%  appezzamenti condotti convenzionalmente (a sinistra) hanno valori
+%  leggermente più alti degli appezzamenti condotti a biologico (a
+%  destra) una misura \SI{\Sexpr{round(mean(rnorm(10)),2)}}{\micro\metre}}
+%  \label{fig:boxplotClod}
+%
+%\end{figure}
 
 \section{Prove}
 
