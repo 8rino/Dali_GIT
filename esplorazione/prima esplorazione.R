@@ -1,12 +1,21 @@
 source("prima importazione.R")
-cbind.data.frame(df.data$MAN, df.data$Type)
+
 require(compositions)
 ## lis.data$Sample <-
 ##     lis.data$Sample[order(lis.data$Sample$INJ.DATE),]
+df.elabora <-lis.data$Sample[-c(15:16), c(1:12, 49:50, 13:48)]
+
+PLFA.no <- c(17:18, 36:39, 49:50)
+TIC.no <- c(16, 29, 42)
+
+row.names(df.elabora) <- 1:dim(df.elabora)[1]
 Y.aree <-
-    acomp(lis.data$Sample[,i.PLFA])
-fattore <- ##lis.data$Sample$TIL
-    interaction(lis.data$Sample$MAN,lis.data$Sample$TIL)
+    acomp( df.elabora[,-c(1:14, PLFA.no,TIC.no)])
+
+fattore <-  df.elabora$TIL
+    interaction(df.elabora$MAN, df.elabora$TIL)
+fattore <- fattore[drop= TRUE]
+
 lm.1 <-
     lm(ilr(Y.aree) ~ fattore)
 anova(lm.1)
@@ -44,7 +53,7 @@ fun.MyBiplot <-
     function (x, y, var.axes = TRUE, col=2, cex = rep(par("cex"), 2),
               xlabs = NULL, ylabs = NULL, expand = 1, xlim = NULL, ylim = NULL,
               arrow.len = 0.1, main = NULL, sub = NULL, xlab = NULL, ylab = NULL,
-              col.obs, col, ...)
+              col.obs, ...)
 {
     n <- nrow(x)
     p <- nrow(y)
@@ -107,23 +116,22 @@ fun.MyBiplot <-
     invisible()
 }
 
-x.PLFA <-
-    acomp(lis.data$Sample[,i.PLFA[-c(4,22,35)]])
 
-pcx.PLFA <- princomp(x.PLFA)
+##########################
+
+pcx.PLFA <- princomp(Y.aree)
 
 ##pdf(file.path(DirGraf, "PCAcomposizionale_Medie.pdf")
-colori <-    as.numeric(lis.data$Sample$MAN)+3
-    as.numeric(
-               interaction(lis.data$Sample$MAN,
-                           lis.data$Sample$TIL))
-fun.biplot(x=pcx.PLFA,  col=c(2, "transparent"),
+
+colori <-
+    as.numeric(df.elabora$TIL)
+fun.biplot(x=pcx.PLFA,#  col=c(2, "transparent"),
            ## main="foglie",
            choices=c(1,2), ## assi/componenti da considerare
            scale=1,
            pc.biplot=TRUE,
            col.obs = colori,
-           #etich = lis.data$Sample$STRINGA
+           etich = df.elabora$STRINGA
            )
                                         # dev.off()
 
@@ -133,3 +141,15 @@ plot(x=pcx.PLFA,
             scale=1,
             pc.biplot=TRUE
             )
+
+somma.aree <-
+apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
+
+lm.1 <-
+    lm(somma.aree ~ MAN+TIL, data = df.elabora[-18,])
+anova(lm.1)
+summary(lm.1)
+
+bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
+
+               )
