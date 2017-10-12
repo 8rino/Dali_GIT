@@ -17,6 +17,7 @@ i -C17.0 sul tic  Results;15MetC17.0.on.TIC
 i-C17:0 Results;15MetC17.0
 C16:1 om5 ? Results;00LinC16.1.om5.UNK
 a-C17:0 Results;14MetC17.0
+forse12propylC18:0;12ProC18.0
 2HydroxyC16:0 Results;02HydC16.0
 C17:0 Results;00LinC17.0
 cis 9,10 methylenehexadecanoate Results;00LinC17.2.9.10CIS
@@ -25,6 +26,7 @@ C17:1 om 9 Results;00LinC17.1.om9
 10MethylC17:0 sol 74 Results;10MetC17.0.on.74
 10MethylC17:0 Results;10MetC17.0
 C18:0 Results;00LinC18.0
+forse i-C19:0;18MetC19.0
 C18:1 om 6 cis e trans Results;00LinC18.1.om6.CISTRANS
 10MethylC18:0 sul tic Results;10MetC18.0.on.TIC
 10MethylC18:0 sul 74 Results;10MetC18.0.on.74

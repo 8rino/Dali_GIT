@@ -23,22 +23,28 @@ DirFunz <-
     file.path(DirMain, "funzioni")
 DirCod <-
     file.path(DirMain, "codice")
-    require(plyr)
-    ## Corrispondenze tra massa e programmazione
-df.MOLTE <-
-    read.table(file.path(DirData, "corrispondenze_MOLTEBIS.csv" ),
+require(plyr)
+## Corrispondenze tra massa e programmazione
+df.ottobre <-
+    read.table(file.path(DirData, "corrispondenzeCampioniOttobre.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
                colClasses="character")
+df.giugno <-
+    read.table(file.path(DirData, "corrispondenzeCampioniGiugno.csv" ),
+               sep= ";", dec=",", header=TRUE,
+               fileEncoding = "UTF-8",
+               colClasses="character")
+df.MOLTE <-rbind.data.frame(df.ottobre, df.giugno)
 df.composti <-
     read.table(file.path(DirData, "corrispondenze_PLFA.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
                colClasses="character")
 
-#for (i in 2){
+for (i in 1:2){
     nome.file.da.importare <-
-        c("batchAutunno.csv","batchEstate.csv")[2]
+        c("batchCampioniOttobre.csv","batchCampioniGiugno.csv")[i]
     ## Dati veri e propri
     df.data <-
         read.table(file.path(DirData, nome.file.da.importare ),
@@ -63,66 +69,81 @@ df.composti <-
         c(vec.nomi.colonne2[1:7],
           vec.nomi.colonne1[-(1:7)]
           )
-
+    ##
     names(df.data) <- vec.nomi
-    names(df.data)[c(1:2,4,7)] <-
-        c(paste("MH", 1:2, sep="."),
-          "DATA.FILE","INJ.DATE")
-    ## Pericoloso modo di agire, ma necessario
-    ## Attenzione all'INDISPENSABILE sort !!!
-    df.data$STRINGA <-
-        as.character(
-            mapvalues(df.data$DATA.FILE,
-                      from =
-                          sort(as.character(unique(df.data$DATA.FILE))),
-                      to = df.MOLTE$CAMPIONI.R)
-        )
-    df.data$MAN <-
-        factor(
-            substr(df.data$STRINGA,1,2),
-            levels = c("CO", "OO", "MS", "ST")
-        )
-    df.data$FIELD <-
-        factor(
-            substr(df.data$STRINGA,3,4)
-        )
-    df.data$TIL <-
-        factor(
-            substr(df.data$STRINGA,5,5),
-            levels = c("A", "B", "C", "D")
-        )
-    df.data$PARC <-
-        factor(
-            substr(df.data$STRINGA,6,6)
-        )
+    if(i==1){
+        df.autunno <- df.data
+        df.autunno$STAGIONE <- "Aut"
+    }else{
+        df.data$STAGIONE <- "Est"
+        df.data <- rbind.data.frame(df.autunno, df.data)
+        rm(df.autunno)
+    }
+}
 
-    df.data[df.data$Type=="Cal", 45:48] <- NA
-    df.data$TIL <-
-        mapvalues(df.data$TIL,
-                  from = LETTERS[1:3],
-                  to = c("Ara", "Rip","Fzo")
-                  )
-    ## df.data$INJ.DATE <-
-    ##     strptime(as.character(df.data$INJ.DATE), "%d/%m/%Y %R")
-    ## df.data <- df.data[order(df.data$INJ.DATE),]
-    df.data <-
-        df.data[,c(1:7, 44:48, 8:43)]
-    i.PLFA <- 13:48
-    names(df.data)[i.PLFA] <- df.composti$NOME.R
-    df.data$SOMMA.AREE <-
-        apply(df.data[,i.PLFA], 1,
-              function(x) sum(x, na.rm=TRUE))
-    table(df.data$MAN, df.data$TIL)
+names(df.data)[c(1,2, 4,7)] <-
+    c("MH1", "MH2", "Data.File", "Acq.Date.Time")
 
-    ## if(nome.file.da.importare=="batchAutunno.csv"){
-    ##     df.autunno <- df.data
-    ##     df.autunno$STAGIONE <- "Aut"
-    ## }else{
-         df.data$STAGIONE <- "Est"
-    ##     df.data <- rbind.data.frame(df.autunno, df.data)
-    ## }
-#}
+## Pericoloso modo di agire, ma necessario
+## Attenzione all'INDISPENSABILE sort !!!\
 
+ordina <-
+    order(as.character(df.MOLTE$CAMPIONI.MASSHUNTER))
+df.MOLTE <- df.MOLTE[ordina,]
+df.data$STRINGA <-
+    as.character(
+        mapvalues(df.data$Data.File,
+                  from =
+                      sort(as.character(df.data$Data.File)),
+                  to = df.MOLTE$CAMPIONI.R)
+    )
+
+df.data$MAN <-
+    factor(
+        substr(df.data$STRINGA,1,2),
+        levels = c("CO", "OO", "MS", "ST", "BI")
+    )
+df.data$FIELD <-
+    factor(
+        substr(df.data$STRINGA,3,4)
+    )
+df.data$TIL <-
+    factor(
+        substr(df.data$STRINGA,5,5),
+        levels = c("A", "B", "C", "D", "N")
+    )
+df.data$PARC <-
+    factor(
+        substr(df.data$STRINGA,6,6),
+        levels = c("1", "2", "3", "0", "A")
+    )
+##
+df.data[df.data$Type=="Cal", 47:50] <- NA
+df.data$TIL <-
+    mapvalues(df.data$TIL,
+              from = LETTERS[1:3],
+              to = c("Ara", "Rip","Fzo")
+              )
+df.data$STAGIONE <-
+    factor(df.data$STAGIONE, levels= c("Aut", "Est"))
+df.data$Acq.Date.Time <-
+    strptime(as.character(df.data$Acq.Date.Time), "%d/%m/%Y %R")
+## df.data <- df.data[order(df.data$INJ.DATE),]
+
+
+df.data <-
+    df.data[ ,c(1:7, 46:51, 8:45)]
+i.PLFA <- 14:51
+
+##cbind(names(df.data)[i.PLFA], df.composti$NOME.R)
+
+names(df.data)[i.PLFA] <- df.composti$NOME.R
+
+df.data$SOMMA.AREE <-
+    apply(df.data[,i.PLFA], 1,
+          function(x) sum(x, na.rm=TRUE))
+##table(df.data$MAN, df.data$TIL)
+##
 
 
 write.table(df.data, file=file.path(DirElab, "TuttiDati.csv"),
@@ -144,7 +165,7 @@ raggruppa <-
     with(lis.data$Sample, interaction(MAN,TIL, STAGIONE))##,EXTRACT,INJECTION))
 
 pdf(file.path(DirGraf, "primo tentativo.pdf"))
-for (i in c(i.PLFA, 49)){
+for (i in c(i.PLFA, 52)){
     print(
         dotplot(raggruppa ~ lis.data$Sample[,i],
                 data = lis.data$Sample,
