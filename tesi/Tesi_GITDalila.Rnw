@@ -125,7 +125,7 @@
 \usepackage[raggedright]{titlesec}
 % Serve per evitare la sillabazione nei titoli
 
-\newcommand{\sectionbreak}{\clearpage}
+%\newcommand{\sectionbreak}{\clearpage}
 %% serve per mettere ogni section a pagina nuova
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}}
@@ -179,6 +179,7 @@
 
 \usepackage{amsmath}
 \numberwithin{equation}{chapter} % numera le equazioni col numero di capitolo
+\numberwithin{figure}{chapter}
 
 \usepackage[nogin]{Sweave}
 % https://tex.stackexchange.com/questions/11619/resize-arrays-and-figures-in-a-sweave-document
@@ -294,8 +295,8 @@ Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 sulla superficie di pianeti o corpi simili, ed è alterato da agenti
 biologici, chimici e fisici” \citep{JOHNSON19986}. 
 
-\subsection{I cinque componenti del suolo}
-Per potersi formare, il suolo ha bisogno di alcuni ingredienti, i
+\subsection{I cinque fattori di formazione del suolo}
+Per potersi formare, il suolo ha bisogno di alcuni "ingredienti", i
 quali sono stati enunciati da \citet{jenny_factors_1994} nella nota funzione: 
 \begin{equation} 
 Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
@@ -381,7 +382,7 @@ costituita dai silicati (\ce{SiO4-}), che si dividono in più
 famiglie in base alla disposizione dei loro elementi \ref{fig:famiglia_silicati}:
 
 
-\begin{figure}[ht]
+\begin{figure}[]
 \centering
 \includegraphics[scale=0.5]{./foto/silicati.jpg}
 
@@ -444,22 +445,22 @@ un’elevata carica variabile, dell’ordine di
 Questa permette una buona capacità di scambio, fornendo vantaggi a
 livello biologico: promuove l’aumeno dello sviluppo radicale, la
 crescita vegetale e microbica, e un aumento dell’attività enzimatica.
-A differenza dei silicati, ha carica netta positiva, come gli ossidi
-idrati di \ce{Fe} e \ce{Al}, comportando dunque la trattenuta e lo scambio di
+A differenza dei silicati, pu\'o avere carica netta positiva, come anche gli ossidi
+idrati di \ce{Fe} e \ce{Al} (in funzione del pH), comportando dunque la trattenuta e lo scambio di
 anioni.
 
-Inoltre ha un’importante funzione di collante e permette la formazione
+Inoltre ha un’importante funzione di cemento e permette la formazione
 di una struttura più stabile e complessa, migliorando la porosità e
 aumentando la capacità idrica nei terreni sabbiosi e la permeabilità
 in quelli argillosi.
 
-La materia organica è molto variegata e se ne distinguono sei
+La natura della materia organica è molto variegata e se ne distinguono sei
 frazioni:
 \begin{itemize}
-\item la biomassa vivente;
-\item la necromassa, ovvero il materiale vegetale o animale ormai
+\item le biomasse viventi;
+\item le necromasse, ovvero il materiale vegetale o animale ormai
   morto inalterato o in via di decomposizione;
-\item la sostanza umica labile, ovvero la materia organica trasformata
+\item le sostanze umiche labili, ovvero la materia organica trasformata
   ma non incorporata alla frazione minerale;
 \item la sostanza umica stabile, cioè l’\emph{humus} legato alla
   frazione minerale con la formazione di complessi argillo-umici;
@@ -488,7 +489,7 @@ In base al suo contenuto i terreni sono classificati in: umiferi
 
 Infine, la diversa grandezza di questi elementi solidi va a costituire
 la tessitura del terreno, cioè la sua composizione granulometrica. In
-base al diametro (fittizio perchè si suppone che le particelle abbiano
+base al diametro equivalente(fittizio perchè si suppone che le particelle abbiano
 forma sferica, regolare e misurabile) delle particelle, queste si
 classificano come in Tabella \ref{tab:Classi_granulometriche}
 
@@ -559,7 +560,6 @@ artificialmente né attraverso le precipitazioni, il suo volume
 diminuisce fino al punto di avvizzimento, quando cioè l’acqua è
 trattenuta così fortemente dalle particelle del suolo che le radici
 non riescono più ad assorbirla.
-
 Se il contenuto idrico nel suolo continua a diminuire si andrà a
 formare un film intorno alle particelle del suolo. In questo caso
 l’acqua è trattenuta con una forza tale che potrà andarsene solo in
@@ -581,7 +581,7 @@ acqueo. Queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
 
-\section{Relazione microrganismi e suolo} \info{sistema impaginazione}
+\section{Relazione tra microrganismi e suolo} \info{sistema impaginazione}
 
 La maggior parte delle funzioni dell’ecosistema suolo sono garantite
 dai miliardi di organismi ivi presenti. Questi sono sia di origine
@@ -608,7 +608,7 @@ e della macrofauna, formiche, termiti, coleotteri e ragni
 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.5]{./foto/microorganism.jpg}
+\includegraphics[scale=0.65]{./foto/microorganism.jpg}
 \caption{Classificazione dimensionale degli organismi \citep{swift_decomposition_1979}}
 \label{fig:Classific_microrganismi}
 \end{figure}
@@ -636,21 +636,21 @@ formazione e stabilizzazione del suolo \citep{miller_mycorrhizal_2000}.
 Gli animali superiori che compongono la macro e megafauna, come termiti,
 lombrichi, talpe, ecc, contribuiscono, con il loro movimento, a
 rendere gli strati superficiali ben mescolati e aerati. Inoltre
-rompendo gli aggregati modificano la densità del suolo, incrementando
+rompendo e/o formando gli aggregati modificano la densità del suolo, incrementando
 così l’aerazione e l’infiltrazione di acqua, nonché apportano
 materiale organico sia tramite le deiezioni che con la propria
 necromassa. 
 
-Uno degli organismi più importanti dell’habitat tellurico,
-nonché bioindicatore di fertilità, è il lombrico che mangiando
-sminuzza la biomassa presente nel suolo. Nel suo intestino, il
-lombrico, impasta le sostanze minerali e quelle organiche,
+Alcuni tra gli organismi più importanti dell’habitat tellurico,
+nonché bioindicatori di fertilità, sono i lombrichi che mangiando
+sminuzzano la biomassa presente nel suolo. Nel loro intestino, i
+lombrichi, impastano le sostanze minerali e quelle organiche,
 trasformandole in complessi stabili argilla-humus, arricchendo molto
-la terra con le sue deiezioni. Nelle regioni temperate, i lombrichi
+la terra con le proprie deiezioni. Nelle regioni temperate, i lombrichi
 sono in grado di elaborare fino a 4 kg di suolo per metro quadrato al
 giorno \citep{feller_charles_2003} e i primi studi relativi al ruolo della
 fauna del suolo, riguardarono proprio questi invertebrati e risalgono
-a Darwin \citet{darwin_formation_1881}. La vita di tutti questi organismi 
+a  \citet{darwin_formation_1881}. La vita di tutti questi organismi 
 è però fortemente dipendente dalle caratteristiche fisiche e chimiche 
 del terreno e da quelle climatiche dell’ambiente in cui vivono.
 
@@ -663,7 +663,7 @@ movimento dei microrganismi. Ad esempio i funghi aventi corpi vegetativi
 e fruttificazioni grandi risentono maggiormente della tessitura del terreno, 
 rispetto invece ai batteri e attinomiceti di dimensioni più piccole 
 \citep{griffin_soil_1963}. Inoltre i micropori, abbondanti nei suoli 
-argillosi, risultano praticamente inaccessibili per i protozoi e se siamo 
+argillosi, risultano praticamente inaccessibili per i protozoi e 
 in presenza di un suolo molto compatto sono limitati anche i movimenti 
 delle radici delle piante superiori. 
 
@@ -676,14 +676,14 @@ periodi umidi e secchi.
 La maggior parte degli organismi ha come coefficiente di avvizzimento 
 valori prossimi ai -15, -25 bar (in scala logaritmica 4.2, 4.4 pF). 
 Tale coefficiente, che è diverso per ogni organismo, rappresenta 
-il potenziale ovvero la pressione che l’individuo deve creare per 
+il potenziale ovvero la pressione che l’individuo dovrebbe creare per 
 vincere le forze che trattengono il liquido nelle particelle del suolo. 
 
-Tramite gli studi di Warcup \citet{warcup_studies_1957} sappiamo che 
+Tramite gli studi di  \citet{warcup_studies_1957} sappiamo che 
 i funghi possono sopravvivere a lunghi periodi di siccità grazie a 
 strutture come le  spore, gli sclerozi e le ife. \citet{griffin_soil_1963} 
 vide che i funghi, come le piante, arrestano la propria crescita a 
-valori intorno a 4.2 pF e solo l’\emph{aspergillus} riesce a crescere fino a pF 5.6. 
+valori intorno a pF 4.2 e solo l’\emph{aspergillus} riesce a crescere fino a pF 5.6. 
 Rah \todo{Rah (1913[libro biblio unifi])} trovò che i
 batteri Gram positivi crescevano intorno a valori di pF 2.0, mentre
 \citet{miller_effect_1964} studiarono i batteri nitrificanti, dimostrando
@@ -712,14 +712,14 @@ al 3.
 In generale però nei suoli aventi un valore di pH vicino agli
 estremi della scala, la vita si presenta stentata. Con valori di pH
 acidi si può vedere una variazione di solubilità di alcune sostanze,
-come ad esempio i composti del calcio e del fosforo che divengono più
+come ad esempio i composti del calcio che divengono più
 solubili, comportando una loro perdita per dilavamento e una relativa
 carenza nutritiva. Altri elementi, come il ferro e il nichel,
 diventando più solubili, possono comportare tossicità per i
 microrganismi e le piante \citep{holding_effects_1968}.
 
 Anche la componente inorganica dei minerali influenza l’attività della microflora
-tellurica. Sia perchè la presenza di determinate argille o un certo contenuto in
+tellurica, sia perchè la presenza di determinate argille o un certo contenuto in
 sostanza organica permette livelli differenti di elementi nutritivi assimilabili e
 disponibili, ma anche perchè alcune matrici possono comportare dei danni letali.
 Ad esempio la montmorillonite, anche a basse concentrazioni, riduce la
@@ -759,7 +759,7 @@ tolleranza” \citep{odum_environment_1971}. In base a questi valori di minimo, 
 
 La grande maggioranza dei microrganismi del suolo è mesofila e generalmente
 in suoli e in stagioni dove si ha una temperatura media di 10°C dominano i
-funghi e i batteri, mentre a 20°C sono maggiori i protozoi, i nematodi e gli
+funghi e i batteri, mentre a 20°C sono prevalenti i protozoi, i nematodi e gli
 attinomiceti.
 
 Comunque bisogna dire che la temperatura del suolo ha un effetto diretto
@@ -776,14 +776,14 @@ tutti gli altri.
 In un ambiente completamente naturale i cambiamenti sono legati soprattutto 
 all’alternarsi delle stagioni e al modificarsi della copertura del suolo, 
 comportando una variazione del range di umidità e temperatura presente. 
-Mentre in un ambiente antropico, come quello agricolo si ha un continuo disturbo 
+In un ambiente antropico, come quello agricolo si ha invece un continuo disturbo 
 della pedosfera, dovuto principalmente alle lavorazioni e al passaggio di 
 macchinari e persone \citep{pagliai_effetti_1992}, \citep{marsili_changes_1998}.
 
 Il passaggio dei mezzi agricoli comporta un aumento della compattazione del 
 terreno e un relativo aumento della densità apparente \citep{yvan_role_2012} che va a 
 ridurre la diffusione dell’aria, la trattenuta dell’acqua  \citep{marshall_relation_1958}, 
-\citep{childs_e.c._introduction_1969} e anche il movimento degli organismi biologici 
+\citep{childs_e.c._introduction_1969} e anche il movimento degli organismi 
 \citep{pezzarossa_investigation_1990}. Ad esempio la quantità di lombrichi diminuisce nei due mesi 
 successivi al passaggio di macchine per poi riaumentare mano a mano che l’effetto 
 della compattazione viene meno \citep{yvan_role_2012}.
@@ -803,11 +803,11 @@ superficiale del piano di campagna, e solitamente più ricca di nutrienti,
 comportandone un ulteriore impoverimento.
 
 Le lavorazioni agricole inoltre disturbano enormemente l’habitat tellurico, 
-con tagli, solchi, fori e soprattutto con il rivoltamento della zolla, 
+con tagli, solchi, fori e soprattutto con il rivoltamento delle zolle, 
 caratteristica principale dell’aratura. Con quest’operazione si ha una maggior 
 ossigenazione del suolo e un accelerazione della mineralizzazione comportando, 
 nel breve periodo, una maggior disponibilità degli elementi nutritivi  e un 
-aumento delle rese; ma nel lungo periodo promuove l’impoverimento degli stessi, 
+aumento delle rese; ma nel lungo periodo ciò promuove l’impoverimento degli stessi, 
 provocando una vera e propria diminuzione della fertilità del suolo che risulta 
 diventare sempre più povero e sterile \citep{certini_spectroscopic_2007}.
 
@@ -846,7 +846,7 @@ tali sostanze, anche se il loro contenuto risulta minore in superficie.
 
 Oltre che al disturbo dovuto al passaggio delle macchine, la gestione agricola 
 può provocare un’alterazione dell’equilibrio anche per l’introduzione di prodotti 
-chimici legati all’utilizzo di fitosanitari, erbicidi, anticrittogamici di sintesi.
+chimici legati all’utilizzo di fitosanitari, erbicidi e anticrittogamici di sintesi.
 
 Questi prodotti sono accettati nell’agricoltura convenzionale, come anche nel no 
 tillage, nell’agricoltura di precisione e in molte altre tipologie di gestione; 
@@ -890,7 +890,6 @@ Di contro però l’agricoltura convenzionale permette rese superiori
 popolazione mondiale. Pur dipendendo dalla coltura scelta e dal luogo,  questo 
 incremento può variare da un 5\% di rese in più nel convenzionale, fino ad un 34\% 
 \citep{seufert_comparing_2012}. 
-
 A livello economico è difficile dire con certezza quale dei due sistemi sia più 
 costoso, perchè questo dipende dalla coltura scelta, dal suo prezzo di mercato, 
 dal luogo in cui ci troviamo e dalle sue caratteristiche. Vero è che, annualmente, 
@@ -899,16 +898,14 @@ detto come si abbiano solitamente maggiori spese per i macchinari e le sementi
 \citep{pimentel_organic_2005}. Inoltre i sistemi biologici richiedono, annualmente,  
 circa il 15\% in più di lavorazioni ad ettaro rispetto al convenzionale \citep{sorby_production_2002}
 , \citep{granatstein_tree_2004}. 
-
 Proprio in seguito a questi disturbi si rendono necessari studi per monitorare e 
 capire come salvaguardare la fertilità del terreno \citep{feng_effects_2002} e 
 valutare l’impatto che le lavorazioni hanno su di essa \citep{pagliai2002soil}.
-
 Per determinare la sostenibilità di un tipo di gestione,  si osserva la componente 
 biochimica e biologica perché questa è più suscettibile ai cambiamenti e risente 
 maggiormente delle attività umane. Naturalmente questi cambiamenti richiedono del 
 tempo per avvenire e quindi sono necessari esperimenti dalla durata di almeno 10 
-anni. Però è importante non solo tener conto delle piante superiori e degli 
+anni. \'E però importante non solo tener conto delle piante superiori e degli 
 animali, ma anche della comunità microbica nel terreno, componente spesso 
 dimenticata, anche se fondamentale \citep{kennedy_soil_1995}, usando come 
 indice di fertilità del suolo la sua diversità e vitalità. 
@@ -917,8 +914,11 @@ indice di fertilità del suolo la sua diversità e vitalità.
 
 Essendo la comunità microbica del suolo così varia, anche in quantità di 
 terreno assai piccole, non si può applicare l’approccio classico di conta
-usato per animali e piante \citep{bossio_determinants_nodate}, ma si devono 
-prendere in considerazione tecniche di analisi specifiche. Le principali 
+usato per animali e piante \citep{bossio_determinants_nodate}. Anche dal 
+punto di vista microbiologico è ormai acclamato che solo una piccola parte di
+microrganismi presenti nel suolo può essere moltiplicata in laboratorio con le 
+odierne tecniche di coltivazione in piastrina (\todo{biblio}). Si devono 
+quindi prendere in considerazione tecniche di analisi specifiche. Le principali 
 tecniche sono: la PCR (\emph{Polymerase Chain Reaction}), il  RFLP 
 (\emph{Restriction Fragment Length Polymorphism}), e l’analisi PLFA (
 \emph{Phospholipid Fatty Acid}) o CLPP (\emph{Community Level Physiological 
@@ -935,7 +935,7 @@ di più metodi che si complementino a vicenda \citep{zhang_assessing_2008}.
 L’analisi CLPP produce grandi numeri di variabili ed è altamente sensibile ai 
 cambiamenti della comunità microbica, però richiede la crescita dei microbi in 
 laboratorio su piastre. Molti degli organismi presenti nel suolo non possono 
-crescere in questo ambiente, il che causa una perdita in sensibilità. 
+crescere in questo ambiente, il che causa una perdita di informazione. 
 
 La tecnica di analisi RFLP è lenta e laboriosa. Richiede grandi quantità di 
 DNA ed i processi di costruzione della sonda, di frammentazione del DNA, di 
@@ -947,40 +947,43 @@ Per questo viene generalmente preferito il modo più rapido mediante la PCR
 L’analisi tramite PCR richiede piccole quantità di DNA, funziona anche con campioni 
 di non ottima qualità, ed è una procedura rapida e poco costosa con alta 
 riproducibilità, specificità e sensibilità. Ha però il difetto di richiedere una 
-conoscenza pregressa della sequenza del DNA analizzata \citep{ramsey_choice_2006}.
+conoscenza pregressa della sequenza del DNA del microrganismo da riconoscere
+ \citep{ramsey_choice_2006}.
 
-L’analisi dei PLFA invece fornisce una sorta di impronta digitale 
+L’analisi dei PLFA fornisce una sorta di impronta digitale 
 \citep{bossio_determinants_nodate} della struttura e dell’attività della comunità 
 microbica e risente maggiormente dei cambiamenti dovuti alla differente gestione e 
-lavorazione.  Questa tecnica è stata dimostrata essere più sensibile rispetto 
-all’analisi con CLPP, PCR e RFLP nel mostrare i cambiamenti nella comunità microbica
-del suolo \citep{grayston_assessing_2004}. Anche in altri studi le analisi basate 
-sulla PCR non sono risultate sufficienti a superare la risposta del PLFA 
-\citep{bossio_determinants_nodate}, \citep{feng_effects_2002}, \citep{dierksen_high_2002},
-\citep{thirup_microbial_2003}, \citep{leckie_characterization_2004}, 
-\citep{ritz_spatial_2004}, \citep{suhadolc_effects_2004}, \citep{kong_microbial_2012}, 
+lavorazione.  Questa tecnica è stata dimostrata essere più adatta rispetto 
+all’analisi con CLPP, PCR e RFLP nel mostrare i cambiamenti, a livello generale, 
+nella comunità microbica del suolo \citep{grayston_assessing_2004}. Anche in altri 
+studi le analisi basate sulla PCR non sono risultate più informative rispetto alla
+risposta del PLFA \citep{bossio_determinants_nodate}, \citep{feng_effects_2002}, 
+\citep{dierksen_high_2002}, \citep{thirup_microbial_2003}, 
+\citep{leckie_characterization_2004}, \citep{ritz_spatial_2004}, 
+\citep{suhadolc_effects_2004}, \citep{kong_microbial_2012}, 
 \citep{guo_effects_2014}. 
 
-In un articolo di revisione del 2006 \citep{ramsey_choice_2006}, gli autori hanno 
+In una review del 2006 \citep{ramsey_choice_2006}, gli autori hanno 
 paragonato diversi studi che analizzavano la comunità microbica con diverse tecniche.
-In 14 di 32 studi (44\% degli studi identificati) i trattamenti riscontrati con il 
-PLFA non sono stati risolti con CLPP e in 5 studi su 25 (20\%) i dati ottenuti con 
+In 14 di 32 studi (44\% degli studi identificati) le differenze riscontrate con il 
+PLFA non sono stati risolte con CLPP e in 5 studi su 25 (20\%) i dati ottenuti con 
 PLFA non sono stati differenziati e risolti con la PCR; inoltre gli autori 
 evidenziarono come la PCR e la CLPP producessero più alti tassi di errore rispetto 
 al PLFA.
  
 Delle varie tipologie la PCR è comunque la più utilizzata, perchè presenta più 
-potenzialità nel caratterizzare il cambiamento nelle popolazioni specifiche anche 
-se le informazioni ottenute sono più limite rispetto a quelle del PLFA. Dai pattern 
-di analisi della PCR si ottiene infatti minori informazioni statisticamente 
-rilevanti rispetto ai profili ottenibili con il PLFA \citep{ramsey_choice_2006}.
+potenzialità nel caratterizzare il cambiamento nelle popolazioni specifiche, anche 
+se le informazioni ottenute sono più limitate rispetto a quelle del PLFA a livello
+di gruppi microbici. Dai pattern di analisi della PCR si ottiene infatti minori 
+informazioni statisticamente rilevanti rispetto ai profili ottenibili con il 
+PLFA \citep{ramsey_choice_2006}.
 
 La scelta del metodo di analisi comunque varia in base allo studio da svolgere: 
 se, ad esempio, servono delle informazioni a più basso livello la PCR fornisce 
 delle risposte che la PLFA non può dare. In generale, se si vogliono studiare gli 
-effetti di un trattamento o effettuare misure sull’inquinamento, prima si svolge un 
+effetti di un trattamento o valutare gli effetti dell’inquinamento, prima si svolge un 
 analisi con PLFA per rilevare le possibili differenze, e  poi, successivamente, se 
-sono state trovate, si usa la PCR per differenziare le popolazioni \citep{piotrowska-seget_signature_2003},
+sono state trovate, si passa ad un'analisi PCR per differenziare le popolazioni \citep{piotrowska-seget_signature_2003},
  \citep{ramsey_choice_2006}.
 
 \subsection{Gas Cromatografia}
@@ -988,7 +991,7 @@ sono state trovate, si usa la PCR per differenziare le popolazioni \citep{piotro
 \emph{La cromatografia è la scienza e l’arte che si occupa di separare, gli uni dagli 
 altri, i componenti di una miscela} \citep{tswett_physical-chemical_1906}. 
 Il termine cromatografia, indica un insieme di tecniche aventi l’obiettivo di 
-separare una miscela complessa nei suoi componenti chimici. È impiegata a scopo 
+separare una miscela complessa nei suoi componenti singoli. È impiegata a scopo 
 analitico e permette l’identificazione qualitativa ed il riconoscimento 
 quantitativo. La sua invenzione viene attribuita al biochimico italo-russo 
 Mikhail Tsvet nel 1906 quando riuscì, con questa tecnica, a separare la 
@@ -996,12 +999,12 @@ clorofilla da un estratto vegetale.
 
 Queste tecniche sono basate sulla differente interazione dei vari componenti con le 
 due fasi presenti, una stazionaria ed una mobile la quale fluisce in continuazione 
-attraverso la prima. I componenti di una miscela vengono infatti trasportati dalla 
-fase mobile attraverso la fase stazionaria e la separazione avviene in virtù delle 
-differenti interazioni che si instaurano fra di loro. Alcune sostanze interagiscono 
-con la fase stazionaria e quindi vengono più o meno ritardate nel loro cammino, 
-altre invece non sono in alcun modo bloccate: ciò comporta tempi di uscita diversi 
-\ref{fig:principio_cromatografia}.
+attraverso la prima. %I componenti di una miscela vengono infatti trasportati dalla 
+%fase mobile attraverso la fase stazionaria e la separazione avviene in virtù delle 
+%differenti interazioni che si instaurano fra di loro. 
+Alcune sostanze interagiscono diversamente con la fase stazionaria e quindi vengono più o meno 
+ritardate nel loro cammino, altre invece non sono in alcun modo trattenute e ciò 
+comporta tempi di eluizione diversi \ref{fig:principio_cromatografia}.
 
 \begin{figure}[ht]
 \centering
@@ -1044,13 +1047,14 @@ altamente selettive e non distruttive. La tecnica gas-cromatografica ha visto un
 importante sviluppo dagli anni ’60  ed è impiegata per la separazione di sostanze 
 volatili (aromi, idrocarburi a catena corta, ecc...).  Con questa tecnica è 
 possibile analizzare campioni gassosi, liquidi o solidi opportunamente solubilizzati,
-vaporizzati e poi iniettati in colonna. L’unica limitazione è che può analizzare 
-solo quelle sostanze che possono essere vaporizzate ad una temperatura compresa 
-tra quella ambientale e i 350-400°C, ovvero la temperatura comunemente raggiunta 
-dai forni in commercio e compatibile con le colonne cromatografiche usate. Inoltre 
-le sostanze da analizzare non devono essere termolabili, vale a dire che non devono
+vaporizzati e poi iniettati in colonna che contiene la fase stazionaria. L’unica 
+limitazione è che sono analizzabili solo quelle sostanze che possono essere 
+vaporizzate ad una temperatura compresa tra quella ambientale e i 350-400°C, 
+ovvero la temperatura comunemente raggiunta dalle apparecchiature in commercio e 
+compatibile con le colonne cromatografiche usate. Inoltre le sostanze da analizzare
+ non devono essere termolabili, vale a dire che non devono
 degradarsi per effetto della temperatura, altrimenti risulta impossibile 
-riconoscerle. Per questo motivo, in alcuni casi tale tecnica viene soppiantata 
+riconoscerle. Per questo motivo, in alcuni casi tale tecnica viene "soppiantata" 
 dall’HPLC. A parte ciò le applicazioni possibili sono molteplici e abbracciano 
 tutti i settori delle scienze e dell’industria: medicina, biochimica, prodotti 
 alimentari e chimica ambientale, industria chimica e farmaceutica.
@@ -1060,12 +1064,12 @@ oppure solida, mentre la fase mobile è un gas, che in questo caso non ha alcuna
 interazione con i soluti, ma funge solo da trasporto. Questo è detto carrier e 
 generalmente sono usati gas chimicamente inerti, a bassa viscosità ed elevata 
 purezza (99.9\%) come l’azoto, l’elio e l’argon \citep{martin_new_1941},
-\citep{james_gas-liquid_1952}.
+\citep{james_gas-liquid_1952} e idrogeno.
 
 Il gascromatografo è formato da un iniettore, da una colonna e dal detector e 
 fornisce in output un diagramma che rappresenta il segnale generato dal rivelatore 
 in funzione del tempo, dove lo 0 rappresenta il momento in cui il campione viene 
-immesso nella colonna \ref{fig:gascromat}. 
+iniettato nella colonna \ref{fig:gascromat}. 
 
 \begin{figure}[ht]
 \centering
