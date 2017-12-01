@@ -29,48 +29,35 @@ df.ottobre <-
     read.table(file.path(DirData, "corrispondenzeCampioniOttobre.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[,1:2]
+               colClasses="character")[,3:4]
 df.giugno <-
     read.table(file.path(DirData, "corrispondenzeCampioniGiugno.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[1:40,1:2]
-df.MOLTE <-rbind.data.frame(df.ottobre, df.giugno)
+               colClasses="character")[,3:4]
+df.MOLTE <- rbind.data.frame(df.ottobre, df.giugno)
 df.composti <-
     read.table(file.path(DirData, "corrispondenze_PLFA.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[,1:2]
+               colClasses="character")[,3:4]
 
 for (i in 1:2){
     nome.file.da.importare <-
-        c("batchCampioniOttobre.csv","batchCampioniGiugno.csv")[i]
+        c("Ott_elaboratoAREA.csv","Giu_elaboratoAREA.csv")[i]
     ## Dati veri e propri
     df.data <-
-        read.table(file.path(DirData, nome.file.da.importare ),
+        read.table(file.path(DirElab, nome.file.da.importare ),
                    sep= ";",
-                   skip=2)
+                   skip=2)[,-1]
     ## Ginnastica per importare dati di massa
     vec.nomi.colonne <-
-        readLines(file.path(DirData,
-                            nome.file.da.importare ),n=2)
-    vec.nomi.colonne1 <-
+        readLines(file.path(DirElab,
+                            nome.file.da.importare ), n=1)
+    vec.nomi.colonne <-
         unlist(strsplit(vec.nomi.colonne[1], "[;]"))
-    vec.nomi.colonne2 <-
-        unlist(strsplit(vec.nomi.colonne[2], "[;]"))
-    ## toglie la tringa finale "Results"
-    vec.nomi.colonne1[-1] <-
-        substr(vec.nomi.colonne1[-1],
-               1,
-               nchar(vec.nomi.colonne1[-1])-
-               nchar("Results")-1
-               )
-    vec.nomi <-
-        c(vec.nomi.colonne2[1:7],
-          vec.nomi.colonne1[-(1:7)]
-          )
-    ##
-    names(df.data) <- vec.nomi
+     ##
+    names(df.data) <- vec.nomi.colonne[-1]
     if(i==1){
         df.autunno <- df.data
         df.autunno$STAGIONE <- "Aut"
@@ -86,6 +73,11 @@ names(df.data)[c(1,2, 4,7)] <-
 
 ## Pericoloso modo di agire, ma necessario
 ## Attenzione all'INDISPENSABILE sort !!!\
+
+pippo <-
+    which(df.data$Data.File %in%
+          df.MOLTE$CAMPIONI.MASSHUNTER.nuovi)
+
 
 ordina <-
     order(as.character(df.MOLTE$CAMPIONI.MASSHUNTER))
@@ -146,7 +138,7 @@ df.data$SOMMA.AREE <-
 ##
 
 
-write.table(df.data, file=file.path(DirElab, "TuttiDati.csv"),
+write.table(df.data, file=file.path(DirElb, "TuttiDatiNUOVI.csv"),
             sep= ";", dec=",",
             fileEncoding = "UTF-8",
             col.names = NA)
