@@ -1,39 +1,39 @@
-NOME.MASSHUNTER;NOME.R
-i-C14:0 sul 242 Results;12MetC14.0.on.242
-i-C14:0 Results;12MetC14.0.on.TIC
-a-C14:0 sul 242 Results;11MetC14.0.on.242
-a-C14:0 Results;11MetC14.0.on.TIC
-C14:0 Results;00LinC14.0
-i-C15:0 Results;13MetC15.0
-a-C15:0 Results;12MetC15.0
-8MethylC15:0 Results;08MetC15.0
-C15:0 Results;00LinC15.0
-i-C16:0 Results;14MetC16.0
-12EthylC16:0 Results;12EthC16.0
-C16:0 Results;00Linc16.0
-12EthylC17:0 Results;12EthC17.0
-C16-1 Results;00LinC16.1
-i -C17.0 sul tic  Results;15MetC17.0.on.TIC
-i-C17:0 Results;15MetC17.0
-C16:1 om5 ? Results;00LinC16.1.om5.UNK
-a-C17:0 Results;14MetC17.0
-forse12propylC18:0;12ProC18.0
-2HydroxyC16:0 Results;02HydC16.0
-C17:0 Results;00LinC17.0
-cis 9,10 methylenehexadecanoate Results;00LinC17.2.9.10CIS
-C17:1 om 9 Results;00LinC17.1.om9
-10MethylC17:0 sul tic Results;10MetC17.0.on.TIC
-10MethylC17:0 sol 74 Results;10MetC17.0.on.74
-10MethylC17:0 Results;10MetC17.0
-C18:0 Results;00LinC18.0
-forse i-C19:0;18MetC19.0
-C18:1 om 6 cis e trans Results;00LinC18.1.om6.CISTRANS
-10MethylC18:0 sul tic Results;10MetC18.0.on.TIC
-10MethylC18:0 sul 74 Results;10MetC18.0.on.74
-C18:1 om 5 Results;00LinC18.1.om5
-C18 :2 Results;00LinC18.2
-C19:0 Results;00LinC19.0
-C19:0 delta Results;00LinC19.0.delta
-C20:0 Results;00LinC20.0
-C20:2 Results;00LinC20.2
-cis-11,14-Eicosadienoic acid methyl ester Results;00LinC20.2.11.14CIS
+NOME.MASSHUNTER vecchio;NOME.R;NOME.MASSHUNTER nuovo;NOME.R nuovo
+i-C14:0 sul 242 Results;12MetC14.0.on.242;i-C14:0;12MetC14.0
+i-C14:0 Results;12MetC14.0.on.TIC;a-C14:0;11MetC14.0
+a-C14:0 sul 242 Results;11MetC14.0.on.242;C14:0;00LinC14.0
+a-C14:0 Results;11MetC14.0.on.TIC;i-C15:0;13MetC15.0
+C14:0 Results;00LinC14.0;a-C15:0;12MetC15.0
+i-C15:0 Results;13MetC15.0;bohMe C16:0;00MetC16.0
+a-C15:0 Results;12MetC15.0;C15:0;00LinC15.0
+8MethylC15:0 Results;08MetC15.0;ribohMe C16:0;01MetC16.0
+C15:0 Results;00LinC15.0;i-C16:0;14MetC16.0
+i-C16:0 Results;14MetC16.0;7Me C17:0;07MetC17.0
+12EthylC16:0 Results;12EthC16.0;C16:0;00LinC16.0
+C16:0 Results;00Linc16.0;bohMe C17:0 sul284;00MetC17.0.sul.284
+12EthylC17:0 Results;12EthC17.0;bohMe C17:0 ;00MetC17.0 
+C16-1 Results;00LinC16.1;C16:1omega7;00LinC16.1.omega7
+i -C17.0 sul tic  Results;15MetC17.0.on.TIC;ribohMe C17:0;01MetC17.0
+i-C17:0 Results;15MetC17.0;C16:1 omega5 ;00LinC16.1.omega5
+C16:1 om5 ? Results;00LinC16.1.om5.UNK;i-C17:0;15MetC17.0
+a-C17:0 Results;14MetC17.0;a-C17:0;14MetC17.0
+forse12propylC18:0;12ProC18.0;10Me C18:0;10MetC18.0
+2HydroxyC16:0 Results;02HydC16.0;C17:0;00LinC17.0
+C17:0 Results;00LinC17.0;bohMe C18:0;00MetC18.0
+cis 9,10 methylenehexadecanoate Results;00LinC17.2.9.10CIS;C17delta;00CycC17.0
+C17:1 om 9 Results;00LinC17.1.om9;unk 126;00UnkC12.6
+10MethylC17:0 sul tic Results;10MetC17.0.on.TIC;C17:1 omega 9;00LinC17.1.omega9
+10MethylC17:0 sol 74 Results;10MetC17.0.on.74;C18:0;00LinC18.0
+10MethylC17:0 Results;10MetC17.0;2-OH C14:0;02HydC14.0
+C18:0 Results;00LinC18.0;bohMe C19:0;00MetC19.0
+forse i-C19:0;18MetC19.0;C18:1 omega 9 cis;00LinC18.1.omega9cis
+C18:1 om 6 cis e trans Results;00LinC18.1.om6.CISTRANS;C18:1 omega 9trans e 7cis;00LinC18.1.omega9t&omega7cis
+10MethylC18:0 sul tic Results;10MetC18.0.on.TIC;boh C18:1;00LinC18.1
+10MethylC18:0 sul 74 Results;10MetC18.0.on.74;C18:2;00LinC18.2
+C18:1 om 5 Results;00LinC18.1.om5;3-OH C14:0;03HydC14.0
+C18 :2 Results;00LinC18.2;C19:0;00LinC19.0
+C19:0 Results;00LinC19.0;C19:0 delta;00CycC19.0
+C19:0 delta Results;00LinC19.0.delta;C20:0;00LinC20.0
+C20:0 Results;00LinC20.0;2-OH C16:0;02HydC16.0
+C20:2 Results;00LinC20.2;C20:2;00LinC20.2
+cis-11,14-Eicosadienoic acid methyl ester Results;00LinC20.2.11.14CIS;cis-11.14-Eicosadienoic acid methyl ester;00LinC20.2.cis11.14

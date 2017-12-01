@@ -29,18 +29,18 @@ df.ottobre <-
     read.table(file.path(DirData, "corrispondenzeCampioniOttobre.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")
+               colClasses="character")[1:40,1:2]
 df.giugno <-
     read.table(file.path(DirData, "corrispondenzeCampioniGiugno.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")
+               colClasses="character")[1:40,1:2]
 df.MOLTE <-rbind.data.frame(df.ottobre, df.giugno)
 df.composti <-
     read.table(file.path(DirData, "corrispondenze_PLFA.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")
+               colClasses="character")[,1:2]
 
 for (i in 1:2){
     nome.file.da.importare <-
