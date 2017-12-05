@@ -48,8 +48,7 @@ for (i in 1:2){
     ## Dati veri e propri
     df.data <-
         read.table(file.path(DirElab, nome.file.da.importare ),
-                   sep= ";",
-                   skip=2)[,-1]
+                   sep= ";", fileEncoding = "UTF-8",)[-1,]
     ## Ginnastica per importare dati di massa
     vec.nomi.colonne <-
         readLines(file.path(DirElab,
@@ -57,7 +56,7 @@ for (i in 1:2){
     vec.nomi.colonne <-
         unlist(strsplit(vec.nomi.colonne[1], "[;]"))
      ##
-    names(df.data) <- vec.nomi.colonne[-1]
+    names(df.data) <- vec.nomi.colonne
     if(i==1){
         df.autunno <- df.data
         df.autunno$STAGIONE <- "Aut"
@@ -73,10 +72,6 @@ names(df.data)[c(1,2, 4,7)] <-
 
 ## Pericoloso modo di agire, ma necessario
 ## Attenzione all'INDISPENSABILE sort !!!\
-
-pippo <-
-    which(df.data$Data.File %in%
-          df.MOLTE$CAMPIONI.MASSHUNTER.nuovi)
 
 
 ordina <-
@@ -95,6 +90,7 @@ df.data$MAN <-
         substr(df.data$STRINGA,1,2),
         levels = c("CO", "OO", "MS", "ST", "BI")
     )
+
 df.data$FIELD <-
     factor(
         substr(df.data$STRINGA,3,4)
@@ -129,10 +125,10 @@ i.PLFA <- 14:51
 
 ##cbind(names(df.data)[i.PLFA], df.composti$NOME.R)
 
-names(df.data)[i.PLFA] <- df.composti$NOME.R
+names(df.data)[i.PLFA] <- df.composti$NOME.R.nuovo
 
 df.data$SOMMA.AREE <-
-    apply(df.data[,i.PLFA], 1,
+    apply(df.data[1,i.PLFA], 1,
           function(x) sum(x, na.rm=TRUE))
 ##table(df.data$MAN, df.data$TIL)
 ##
