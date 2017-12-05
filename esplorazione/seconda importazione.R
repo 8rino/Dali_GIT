@@ -44,11 +44,15 @@ df.composti <-
 
 for (i in 1:2){
     nome.file.da.importare <-
-        c("Ott_elaboratoAREA.csv","Giu_elaboratoAREA.csv")[i]
+        if (AREA){
+          c("Ott_elaboratoAREA.csv","Giu_elaboratoAREA.csv")[i]
+        }else{
+           c("Ott_elaboratoCONCbis.csv","Giu_elaboratoCONCbis.csv")[i]
+        }
     ## Dati veri e propri
     df.data <-
         read.table(file.path(DirElab, nome.file.da.importare ),
-                   sep= ";", fileEncoding = "UTF-8",)[-1,]
+                   sep= ";", dec=",",skip=1)
     ## Ginnastica per importare dati di massa
     vec.nomi.colonne <-
         readLines(file.path(DirElab,
@@ -128,13 +132,13 @@ i.PLFA <- 14:51
 names(df.data)[i.PLFA] <- df.composti$NOME.R.nuovo
 
 df.data$SOMMA.AREE <-
-    apply(df.data[1,i.PLFA], 1,
+    apply(df.data[,i.PLFA], 1,
           function(x) sum(x, na.rm=TRUE))
 ##table(df.data$MAN, df.data$TIL)
 ##
 
 
-write.table(df.data, file=file.path(DirElb, "TuttiDatiNUOVI.csv"),
+write.table(df.data, file=file.path(DirElab, "TuttiDatiNUOVI.csv"),
             sep= ";", dec=",",
             fileEncoding = "UTF-8",
             col.names = NA)
@@ -150,10 +154,10 @@ lis.data <-
 require(lattice)
 
 raggruppa <-
-    with(lis.data$Sample, interaction(MAN,TIL, STAGIONE))##,EXTRACT,INJECTION))
+    with(lis.data$Sample, interaction(TIL, MAN, STAGIONE))##,EXTRACT,INJECTION))
 
-pdf(file.path(DirGraf, "primo tentativo.pdf"))
-for (i in c(i.PLFA, 52)){
+pdf(file.path(DirGraf, "secondo tentativo.pdf"))
+for (i in c(i.PLFA, 52)){ #52 per le aree
     print(
         dotplot(raggruppa ~ lis.data$Sample[,i],
                 data = lis.data$Sample,

@@ -104,5 +104,5 @@ names(df.giu) <- vec.nomi
 
 write.table(df.ott, file="Ott_elaboratoAREA.csv", sep=";", col.names = NA)
 write.table(df.giu, file="Giu_elaboratoAREA.csv", sep=";", col.names = NA)
-write.table(df.ottCONC, file="Ott_elaboratoCONC.csv", sep=";", col.names = NA)
-write.table(df.giuCONC, file="Giu_elaboratoCONC.csv", sep=";", col.names = NA)
+write.table(df.ottCONC, file="Ott_elaboratoCONCbis.csv", sep=";", col.names = NA)
+write.table(df.giuCONC, file="Giu_elaboratoCONCbis.csv", sep=";", col.names = NA)
