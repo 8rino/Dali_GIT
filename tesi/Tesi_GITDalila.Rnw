@@ -1831,6 +1831,70 @@ standard.
 
 \section{Risultati}
 
+<<PLFA_m_organismi, echo=FALSE, eval=TRUE>>=
+df.gruppiMicrobici <-
+    read.table(file.path(DirData,"spettriBATCH1.csv"),
+               sep= ";", header= TRUE,
+               colClasses =
+                   c("character", rep("numeric",6), "character")
+               )
+unique(df.gruppiMicrobici[,2:7])
+##8 il comando sopra (da dare nella console) scova le righe uguali
+##quindi
+
+questi.no <-
+    which(
+        is.na(
+            rowSums(df.gruppiMicrobici[,2:7])
+        ))
+df.gruppiMicrobici <-
+    df.gruppiMicrobici[-questi.no,]
+
+##8 va bene anche apply come hai scritto tu
+composti.non.assegnabili <-
+    which(rowSums(df.gruppiMicrobici[,2:7])==0)
+nomi.composti.non.assegnabili <-
+    df.gruppiMicrobici$composti[composti.non.assegnabili]
+
+perc.non.assegnabile <-
+    round(
+    (length(composti.non.assegnabili)/
+     dim(df.gruppiMicrobici)[1]*100),
+    2)
+
+mtx.gruppiMicrobici <-
+    matrix(nrow = 6, ncol = 6)
+
+for(i in 2:7){
+    mtx.gruppiMicrobici[i,] <-
+        df.gruppiMicrobici$composti[which(df.gruppiMicrobici[,i]==1)]
+}
+
+## gramMeno <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramN==1)],
+## gramPiu <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramP==1)],
+## attinoBac <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$actinobacteria==1)],
+## funghi <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$fungi==1)],
+## protozoi <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$protozoi==1)],
+## micorrize <- 
+df.gruppiMicrobici$composti[which(df.gruppiMicrobici$micorrizze==1)]
+)
+
+
+
+@
+
+Dall'analisi della biblio bla bla risulta che il
+\Sexpr{perc.non.assegnabile} \% dei PLFA ritrovati non è assegnabile ad
+alcun gruppo microbico
+
+
+
+
 
 
 
