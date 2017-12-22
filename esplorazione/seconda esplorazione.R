@@ -2,6 +2,7 @@ AREA <- FALSE
 setwd("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione")
 source("seconda importazione.R")
 source(file.path(DirFunz, "biplotAcomp.R"))
+source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
 
 require(compositions)
 ## lis.data$Sample <-
@@ -56,7 +57,7 @@ lm.1 <-
     lm(ilr(Y.MOLI) ~ df.elabora$MAN + df.elabora$STAGIONE + df.elabora$TIL)
 anova(lm.1)
 
-qqnorm(ilrInv(resid(lm.1), orig=Y.CONC))
+## qqnorm(ilrInv(resid(lm.1), orig=Y.CONC))
 
 ##########################
 lis.elabora <- split(df.elabora, df.elabora$STAGIONE)
@@ -105,10 +106,60 @@ fun.biplot(x=pcx.PLFA,
            choices=c(1,2), ## assi/componenti da considerare
            scale=1,
            pc.biplot=FALSE,
-           col.obs = as.numeric(df.elabora$PARC),
+#           col.obs = as.numeric(df.elabora$PARC),
+           col.obs = as.numeric(df.elabora$STAGIONE),
            etich = interaction(df.elabora$TIL, df.elabora$MAN)
            )
-                                        # dev.off()
+# dev.off()
+###CONTROLLINO NON BUTTARE !!
+## butta <-
+## cbind(df.gruppiMicrobici$composti,
+##       dimnames(pcx.PLFA$loadings)[[1]]
+##       )
+
+## sum(butta[,1]!=butta[,2])
+
+par(mfrow = c(2,4))
+fun.biplot(x=pcx.PLFA,
+           col=c(1,"transparent"),
+           choices=c(1,2), ## assi/componenti da considerare
+           scale=1,
+           pc.biplot=FALSE,
+#           col.obs = as.numeric(df.elabora$PARC),
+           col.obs = as.numeric(df.elabora$STAGIONE),
+           etich = interaction(df.elabora$TIL, df.elabora$MAN)
+           )
+for (dalila in 2:7){
+    titolo <-
+        names(df.gruppiMicrobici)[dalila]
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = titolo
+     )
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+    posizioneX <-
+        pcx.PLFA$loadings[i,1]
+    posizioneY <- pcx.PLFA$loadings[i,2]
+    titolo <-
+        names(df.gruppiMicrobici)[dalila]
+    colore <-
+        ifelse(df.gruppiMicrobici[i, dalila]==1,
+               "black", ## nero se vero
+               "transparent")# grifgiochiaro se falso
+arrows(0, 0,
+       posizioneX, posizioneY,
+       col=colore,
+       length=0.1)
+text(posizioneX, posizioneY,
+     label = dimnames(pcx.PLFA$loadings)[[1]][i],
+     pos= 1,
+     offset=0.5, col=colore)
+    }
+}
+
+
+
 
 
 biplot(x=pcx.PLFA,
@@ -116,9 +167,17 @@ biplot(x=pcx.PLFA,
             ## main="foglie",
             choices=c(1,2), ## assi/componenti da considerare
             scale=1,
-            pc.biplot=TRUE
-            )
+       pc.biplot=TRUE
+       )
 
+
+ plot(1:10, xlim=c(-1,1), ylim=c(-1,1))
+ arrows(0,0,-0.536,0.418, col=2)
+ arrows(0,0,-0.583,0.188, col=2)
+ arrows(0,0,-0.278,-0.873, col=2)
+  arrows(0,0,-0.543,-0.167, col=2)
+
+#################### AVANZI
 somma.aree <-
 apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
 

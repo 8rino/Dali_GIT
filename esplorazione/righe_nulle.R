@@ -9,7 +9,7 @@ if(info.sistema[1]=="Windows"){
     if(info.sistema[2]=="dalila" ){
         DirMain <-"~/Dali_GIT"
     }else{
-        DirMain <-"~/Documenti/BitBucket/Dali_GIT"
+        DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
     }
 }
 
@@ -44,6 +44,7 @@ df.gruppiMicrobici <-
 ##8 ok vedere l'oggetto ma rischi di vedere passare centinaia di
 ##8 pagine se è grosso. Quindi;
 
+
 head(df.gruppiMicrobici)
 names(df.gruppiMicrobici)
 sapply(df.gruppiMicrobici, class)
@@ -55,9 +56,12 @@ unique(df.gruppiMicrobici[,2:7])
 
 questi.no <-
     which(
-        is.na(
-            rowSums(df.gruppiMicrobici[,2:7])
-        ))
+        is.na(rowSums(df.gruppiMicrobici[,2:7]))|
+        df.gruppiMicrobici$composti== "C.00UnkC12.6" |
+        df.gruppiMicrobici$composti== "C.11MetC14.0"
+        )
+
+
 df.gruppiMicrobici <-
     df.gruppiMicrobici[-questi.no,]
 
