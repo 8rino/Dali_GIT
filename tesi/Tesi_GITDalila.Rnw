@@ -379,7 +379,7 @@ soprattutto chimica \citep{radaelli2001chimica}.
 
 La componente minerale prevalente delle rocce e del terreno è
 costituita dai silicati (\ce{SiO4-}), che si dividono in più
-famiglie in base alla disposizione dei loro elementi \ref{fig:famiglia_silicati}:
+famiglie in base alla disposizione dei loro elementi (Fig. \ref{fig:famiglia_silicati}):
 
 
 \begin{figure}[]
@@ -1449,7 +1449,7 @@ poi una metilazione ed infine verrà effettuata un’analisi mediante gas cromat
 
 \chapter{Materiali e metodi}
 \section{Area di studio}
-l campo sperimentale è situato nell’azienda agricola della Scuola di Agraria di 
+Il campo sperimentale è situato nell’azienda agricola della Scuola di Agraria di 
 Firenze, in località Montepaldi, San Casciano Val di Pesa (Latitudine 43°40’16’’ N, 
 Longitudine 11°09’08’’ E) a 90 m sopra il livello del mare. 
 
@@ -1630,8 +1630,11 @@ il mulino a palle e poi setacciati a 200 µm \ref{fig:macinato}.
 \label{fig:macinato}
 \end{figure}
 
-É stato inoltre preparato un campione composito con tutti gli “m” macinati a 200 
-µm, pesandone 1 g per ciascun campione, identificato poi con MIX SOIL.
+Sono stati inoltre preparati due campioni compositi, uno con tutti gli “m” del 2016,
+macinati a 200 µm e pesandone  1g per ciascun campione e uno con tutti quelli del 
+2017. Questi due campioni sono stati identificati con MIX SOIL 2016 e MIX SOIL 2017 
+e sono stati  utilizzati come verifica per la PCA, poiché rappresentano la media 
+dei campioni dei due anni poiché compositi da aliquote omogenee. 
 
 \section{Analisi PLFA}
 
@@ -1737,7 +1740,99 @@ Procedura:
 \item conservare a -20°C o riprendere in un baccellino con 200 µl di eptano.
 \end{enumerate}
 
-\subsection{ Analisi in GC-MS}
+\subsection{ Standard e prova di validazione}
+Nella sequenza, oltre ai 72 campioni e ai 2 MIX SOIL, sono stati inseriti anche 
+dei Bianchi di controllo, così da assicurarsi che non ci siano interferenti nel 
+sistema di preparazione e iniezione: vials sporche, solventi impuri, siringa del 
+GC, liner e/o colonna con residui di iniezioni precedenti.
+
+Infine è stata preparata la curva di taratura tramite il BAMEs MIX (\emph{SIGMA-ALDRICH})
+contenente 26 composti in 10mg/mL totali e quindi ogni analita ha una concentrazione
+di 10.000 ppm / 26 uguale a 385ppm.
+
+\begin{figure}[]
+\centering
+\includegraphics[scale=1]{./foto/bames.jpg}
+\caption{Componenti del BAMEs Mix della SIGMA-ALDRICH, ognuno ad una concentrazione
+di 385 ppm.}
+\label{fig:BAMEs MIX}
+\end{figure}
+
+Gli standard sono stati diluiti in eptano in concentrazioni crescenti, 1:20 
+(19 ppm), 1:50 (7 ppm), 1:100 (3,8 ppm), 1:200 (1,9 ppm), 1:300 (1,25 ppm) e poi 
+sono stati iniettati senza subire alcuna delle tre fasi di preparazione dei 
+campioni, poiché i composti del BAMEs MIX sono già methyl esteri e dunque non 
+adatti a tale procedura. Per questo motivo, oltre ad aver utilizzato tale MIX per 
+costruire la curva di taratura e permettere quindi l’analisi quantitativa, è stato 
+acquistato uno standard di fosfolipide, quale la fosfatidilcolina, così da fare 
+una prova di validazione della procedura di analisi. 
+
+Di questo standard ne è stata presa una quantità nota e messa in un suolo già 
+estratto e successivamente sono state ripetute e controllate tutte e tre le fasi 
+della preparazione dei campioni.
+
+\subsection{GC-MS}
+La separazione cromatografica è stata effettuata tramite un sistema GC-MS Agilent 
+7890A dotato di autocampionatore per la riproducibilità e di un sistema per la 
+termostatazione della colonna cromatografica.
+
+La colonna utilizzata per quest’analisi è un’HP-INNOWax (Polyethylen Glyco) 
+dell’Agilent, avente una lunghezza di 50 m, per 2 mm di diametro e 0.4 di film 
+interno. 
+
+Il metodo di iniezione vede un volume di 2ul del campione a \emph{pulsed splitles} 
+tramite una siringa da 10 ul e una temperatura del liner di 260°C.
+
+La separazione cromatografica è stata effettuata mediante un flusso di 
+1,2 ml/minuto con un gradiente di temperatura controllato. 
+
+Le condizioni iniziali del metodo sono di 35°C e una pressione di 33psi, dopo 
+il primo minuto la temperatura ha iniziato ad aumentare di 30 gradi al minuto 
+fino ai 180°C e successivamente 3 gradi al minuto fino a 260°C, temperatura 
+massima raggiungibile per la colonna e qui è rimasta in isoterma per 3 minuti in 
+modo da far uscire tutti gli analiti e ripulire la colonna per l’iniezione 
+successiva, senza rischiare un peggioramento nelle cromatografie future. 
+
+La corsa, nel totale, dura 35 minuti e mezzo per campione.
+
+Prima e dopo ogni iniezione, inoltre, il metodo prevede anche un lavaggio della 
+siringa, con un primo passaggio in metanolo e un secondo in ethyl acetate così da 
+annullare un possibile effetto memoria.
+
+Il sistema GC è interfacciato direttamente con lo spettrometro di massa avente 
+una sorgente EI  e un quadrupolo.
+
+L’analisi è effettuata con ionizzazione positiva e la temperatura della sorgente è 
+di 230° e il voltaggio di ionizzazione di 70Hz.
+
+\subsection{Markers, analisi qualitativa e quantitativa}
+
+I dati in uscita sono poi stati elaborati con il programma \emph{Mass Hunter}
+così da effettuare l’analisi qualitativa e quantitativa. Per il riconoscimento 
+qualitativo sono state prese in considerazione le molecole contenute nel BAMEs MIX 
+e alcuni composti trovati tramite analisi bibliografica e presentati come 
+specifici \emph{Markers} di determinati gruppi microbici. 
+
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.8]{./foto/gruppi.jpg}
+\caption{//}
+\label{fig: Gruppi Microbici}
+\end{figure}
+
+Il riconoscimento è stato effettuato tramite la \emph{NIST14} e la quantitativa è 
+stata invece effettuata utilizzando \emph{MS Quantitative Analysis} e 
+successivamente abbiamo preso le aree dei composti contenuti nel BAMEs MIX per 
+poter quantificare anche le quantità degli altri composti non presenti nello 
+standard.
+
+\subsection{Analisi Statistica}
+
+
+\section{Risultati}
+
+
+
 
 
 %
