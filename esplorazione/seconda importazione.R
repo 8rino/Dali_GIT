@@ -29,48 +29,38 @@ df.ottobre <-
     read.table(file.path(DirData, "corrispondenzeCampioniOttobre.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[,1:2]
+               colClasses="character")[,3:4]
 df.giugno <-
     read.table(file.path(DirData, "corrispondenzeCampioniGiugno.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[1:40,1:2]
-df.MOLTE <-rbind.data.frame(df.ottobre, df.giugno)
+               colClasses="character")[,3:4]
+df.MOLTE <- rbind.data.frame(df.ottobre, df.giugno)
 df.composti <-
     read.table(file.path(DirData, "corrispondenze_PLFA.csv" ),
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
-               colClasses="character")[,1:2]
+               colClasses="character")[,3:4]
 
 for (i in 1:2){
     nome.file.da.importare <-
-        c("batchCampioniOttobre.csv","batchCampioniGiugno.csv")[i]
+        if (AREA){
+          c("Ott_elaboratoAREA.csv","Giu_elaboratoAREA.csv")[i]
+        }else{
+           c("Ott_elaboratoCONCbis.csv","Giu_elaboratoCONCbis.csv")[i]
+        }
     ## Dati veri e propri
     df.data <-
-        read.table(file.path(DirData, nome.file.da.importare ),
-                   sep= ";",
-                   skip=2)
+        read.table(file.path(DirElab, nome.file.da.importare ),
+                   sep= ";", dec=",",skip=1)
     ## Ginnastica per importare dati di massa
     vec.nomi.colonne <-
-        readLines(file.path(DirData,
-                            nome.file.da.importare ),n=2)
-    vec.nomi.colonne1 <-
+        readLines(file.path(DirElab,
+                            nome.file.da.importare ), n=1)
+    vec.nomi.colonne <-
         unlist(strsplit(vec.nomi.colonne[1], "[;]"))
-    vec.nomi.colonne2 <-
-        unlist(strsplit(vec.nomi.colonne[2], "[;]"))
-    ## toglie la tringa finale "Results"
-    vec.nomi.colonne1[-1] <-
-        substr(vec.nomi.colonne1[-1],
-               1,
-               nchar(vec.nomi.colonne1[-1])-
-               nchar("Results")-1
-               )
-    vec.nomi <-
-        c(vec.nomi.colonne2[1:7],
-          vec.nomi.colonne1[-(1:7)]
-          )
-    ##
-    names(df.data) <- vec.nomi
+     ##
+    names(df.data) <- vec.nomi.colonne
     if(i==1){
         df.autunno <- df.data
         df.autunno$STAGIONE <- "Aut"
@@ -86,6 +76,7 @@ names(df.data)[c(1,2, 4,7)] <-
 
 ## Pericoloso modo di agire, ma necessario
 ## Attenzione all'INDISPENSABILE sort !!!\
+
 
 ordina <-
     order(as.character(df.MOLTE$CAMPIONI.MASSHUNTER))
@@ -103,6 +94,7 @@ df.data$MAN <-
         substr(df.data$STRINGA,1,2),
         levels = c("CO", "OO", "MS", "ST", "BI")
     )
+
 df.data$FIELD <-
     factor(
         substr(df.data$STRINGA,3,4)
@@ -137,7 +129,7 @@ i.PLFA <- 14:51
 
 ##cbind(names(df.data)[i.PLFA], df.composti$NOME.R)
 
-names(df.data)[i.PLFA] <- df.composti$NOME.R
+names(df.data)[i.PLFA] <- df.composti$NOME.R.nuovo
 
 df.data$SOMMA.AREE <-
     apply(df.data[,i.PLFA], 1,
@@ -146,7 +138,7 @@ df.data$SOMMA.AREE <-
 ##
 
 
-write.table(df.data, file=file.path(DirElab, "TuttiDati.csv"),
+write.table(df.data, file=file.path(DirElab, "TuttiDatiNUOVI.csv"),
             sep= ";", dec=",",
             fileEncoding = "UTF-8",
             col.names = NA)
@@ -162,10 +154,10 @@ lis.data <-
 require(lattice)
 
 raggruppa <-
-    with(lis.data$Sample, interaction(MAN,TIL, STAGIONE))##,EXTRACT,INJECTION))
+    with(lis.data$Sample, interaction(TIL, MAN, STAGIONE))##,EXTRACT,INJECTION))
 
-pdf(file.path(DirGraf, "primo tentativo.pdf"))
-for (i in c(i.PLFA, 52)){
+pdf(file.path(DirGraf, "secondo tentativo.pdf"))
+for (i in c(i.PLFA, 52)){ #52 per le aree
     print(
         dotplot(raggruppa ~ lis.data$Sample[,i],
                 data = lis.data$Sample,
@@ -188,4 +180,3 @@ for (i in c(i.PLFA, 52)){
     )
 }
 dev.off()
-
