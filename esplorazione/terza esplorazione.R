@@ -1,9 +1,11 @@
 AREA <- FALSE
-setwd("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione")
+#setwd("/home/Documenti/BitBucket/Dalila_GIT/esplorazione")
+setwd("/home/dalila/Dali_GIT/esplorazione")
+
 source("seconda importazione.R")
 source(file.path(DirFunz, "biplotAcomp.R"))
-source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
-
+#source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
+source("/home/dalila/Dali_GIT/esplorazione/righe_nulle.R")
 require(compositions)
 ## lis.data$Sample <-
 ##     lis.data$Sample[order(lis.data$Sample$INJ.DATE),]
@@ -189,3 +191,121 @@ summary(lm.1)
 bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 
                )
+##################################
+par(mfrow = c(2,2))
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = 
+)
+
+
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+  posizioneX <-
+    pcx.PLFA$loadings[i,1]
+  posizioneY <- pcx.PLFA$loadings[i,2]
+  titolo <-
+    names(df.gruppiMicrobici)[2:7]
+  colore <-
+    ifelse(pcx.PLFA$loadings[i, ]>=0,
+           "black", ## nero se vero
+           "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, posizioneY,
+         col=colore,
+         length=0.1)
+  text(posizioneX, posizioneY,
+       label = dimnames(pcx.PLFA$loadings)[[1]][i],
+       pos= 1,
+       offset=0.5, col=colore)
+}
+}
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = 
+)
+
+
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+  posizioneX <-
+    pcx.PLFA$loadings[i,1]
+  posizioneY <- pcx.PLFA$loadings[i,2]
+  titolo <-
+    names(df.gruppiMicrobici)[2:7]
+  colore <-
+    ifelse(pcx.PLFA$loadings[i, ]<=0,
+           "black", ## nero se vero
+           "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, posizioneY,
+         col=colore,
+         length=0.1)
+  text(posizioneX, posizioneY,
+       label = dimnames(pcx.PLFA$loadings)[[1]][i],
+       pos= 1,
+       offset=0.5, col=colore)
+}
+}
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = 
+)
+
+
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+  posizioneX <-
+    pcx.PLFA$loadings[i,1]
+  posizioneY <- pcx.PLFA$loadings[i,2]
+  titolo <-
+    names(df.gruppiMicrobici)[2:7]
+  colore <-
+    ifelse(pcx.PLFA$loadings[,i ]>=0, #non ha senso... come gli dico che voglio le y positive?
+           "black", ## nero se vero
+           "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, posizioneY,
+         col=colore,
+         length=0.1)
+  text(posizioneX, posizioneY,
+       label = dimnames(pcx.PLFA$loadings)[[1]][i],
+       pos= 1,
+       offset=0.5, col=colore)
+}
+}
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = 
+)
+
+
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+  posizioneX <-
+    pcx.PLFA$loadings[i,1]
+  posizioneY <- pcx.PLFA$loadings[i,2]
+  titolo <-
+    names(df.gruppiMicrobici)[2:7]
+  colore <-
+    ifelse(pcx.PLFA$loadings[,i]<=0, #non ha senso... come gli dico che voglio le y negative?
+           "black", ## nero se vero
+           "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, posizioneY,
+         col=colore,
+         length=0.1)
+  text(posizioneX, posizioneY,
+       label = dimnames(pcx.PLFA$loadings)[[1]][i],
+       pos= 1,
+       offset=0.5, col=colore)
+}
+}
