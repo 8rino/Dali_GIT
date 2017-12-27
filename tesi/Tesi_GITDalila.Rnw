@@ -20,7 +20,7 @@
 % \setcounter{tocdepth}{4} % nell'indice
 \usepackage{url}
 \usepackage{comment}
-\usepackage{mhchem}
+\usepackage[version=4]{mhchem}
 % hyperref serve per i link
 % Tutti le opzioni che ci sono adesso non sappiamo se servono: le disattivo per il momento
 %
@@ -67,7 +67,7 @@
 % scommentare nella versione finale
 
 % Queste righe sotto si occupano della bibliografia
-%\usepackage[babel]{csquotes}
+\usepackage[babel]{csquotes}
 \usepackage[backend=biber, sorting=nyt, style=authoryear, autolang=hyphen, natbib=true, backref]{biblatex}
 %% style=numeric
 
@@ -443,7 +443,7 @@ un’elevata carica variabile, dell’ordine di
 %\SIrange[range-phrase= "-"]{200}{400}{\meq\per\100g}
 \todo{definire meq con siunitx}. 
 Questa permette una buona capacità di scambio, fornendo vantaggi a
-livello biologico: promuove l’aumeno dello sviluppo radicale, la
+livello biologico: promuove l’aumento dello sviluppo radicale, la
 crescita vegetale e microbica, e un aumento dell’attività enzimatica.
 A differenza dei silicati, pu\'o avere carica netta positiva, come anche gli ossidi
 idrati di \ce{Fe} e \ce{Al} (in funzione del pH), comportando dunque la trattenuta e lo scambio di
@@ -454,7 +454,7 @@ di una struttura più stabile e complessa, migliorando la porosità e
 aumentando la capacità idrica nei terreni sabbiosi e la permeabilità
 in quelli argillosi.
 
-La natura della materia organica è molto variegata e se ne distinguono sei
+La natura della materia organica è molto "variegata" e se ne distinguono sei
 frazioni:
 \begin{itemize}
 \item le biomasse viventi;
@@ -489,9 +489,9 @@ In base al suo contenuto i terreni sono classificati in: umiferi
 
 Infine, la diversa grandezza di questi elementi solidi va a costituire
 la tessitura del terreno, cioè la sua composizione granulometrica. In
-base al diametro equivalente(fittizio perchè si suppone che le particelle abbiano
+base al diametro equivalente (fittizio perchè si suppone che le particelle abbiano
 forma sferica, regolare e misurabile) delle particelle, queste si
-classificano come in Tabella \ref{tab:Classi_granulometriche}
+classificano come in Tabella (Tab. \ref{tab:Classi_granulometriche}):
 
 
 \begin{table}[ht]
@@ -517,7 +517,7 @@ classificano come in Tabella \ref{tab:Classi_granulometriche}
 
 
 E in base al contenuto percentuale di ogni classe granulometrica, i
-suoli vengono classificati in varie classi tessiturali \ref{fig:Triangolo_USDA}.
+suoli vengono classificati in varie classi tessiturali (Fig. \ref{fig:Triangolo_USDA}).
 
 \begin{figure}[ht]
 \includegraphics[scale=0.5]{./foto/triangoloUSDA.jpg}
@@ -592,7 +592,7 @@ superficie e in quantità variabile in base al clima e alle
 caratteristiche pedologiche in cui ci troviamo.
 
 La complessità di
-questo habitat è enorme \ref{fig:Classific_microrganismi}, si pensi che in un solo grammo di
+questo habitat è enorme (Fig. \ref{fig:Classific_microrganismi}), si pensi che in un solo grammo di
 suolo ci possono essere da un milione un miliardo di batteri 
 \citep{torsvik_total_1996}, più di 100 000 specie di funghi, 
 che formano da 1 a 3 metri di miceli fungini \citep{hawksworth_magnitude_2001}, 
@@ -608,7 +608,7 @@ e della macrofauna, formiche, termiti, coleotteri e ragni
 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.65]{./foto/microorganism.jpg}
+\includegraphics[scale=0.7]{./foto/microorganism.jpg}
 \caption{Classificazione dimensionale degli organismi \citep{swift_decomposition_1979}}
 \label{fig:Classific_microrganismi}
 \end{figure}
@@ -738,7 +738,7 @@ Ogni organismo presenta “il proprio minimo e massimo ecologico di
 temperatura, compresi entro un intervallo che rappresenta i suoi limiti di
 tolleranza” \citep{odum_environment_1971}. In base a questi valori di minimo, massimo e
 \emph{optimum} si distinguono microrganimsi psicrofili, mesofili e termofili 
-\ref{tab:classif_Odum}.
+(Tab. \ref{tab:classif_Odum}).
 
 
 \begin{table}[ht]
@@ -871,7 +871,7 @@ agro-alimentare, vedendo un forte aumento nella domanda di prodotti biologici
 Negli ultimi decenni è aumentato molto il numero di aziende agricole biologiche, 
 raggiungendo, a livello mondiale, i 2.3 milioni di unità nel 2014. Queste 
 occupavano 11 milioni di ettari nel 1999 e oggi interessano invece una superficie 
-pari a 43.7 milioni di ettari \ref{fig:andamento_bio} \citep{willer_organic_2016}.
+pari a 43.7 milioni di ettari (Fig. \ref{fig:andamento_bio}) \citep{willer_organic_2016}.
 
 \begin{figure}[ht]
 \centering
@@ -915,7 +915,7 @@ indice di fertilità del suolo la sua diversità e vitalità.
 Essendo la comunità microbica del suolo così varia, anche in quantità di 
 terreno assai piccole, non si può applicare l’approccio classico di conta
 usato per animali e piante \citep{bossio_determinants_nodate}. Anche dal 
-punto di vista microbiologico è ormai acclamato che solo una piccola parte di
+punto di vista microbiologico è ormai acclamato che solo una piccola parte dei
 microrganismi presenti nel suolo può essere moltiplicata in laboratorio con le 
 odierne tecniche di coltivazione in piastrina (\todo{biblio}). Si devono 
 quindi prendere in considerazione tecniche di analisi specifiche. Le principali 
@@ -966,7 +966,7 @@ risposta del PLFA \citep{bossio_determinants_nodate}, \citep{feng_effects_2002},
 In una review del 2006 \citep{ramsey_choice_2006}, gli autori hanno 
 paragonato diversi studi che analizzavano la comunità microbica con diverse tecniche.
 In 14 di 32 studi (44\% degli studi identificati) le differenze riscontrate con il 
-PLFA non sono stati risolte con CLPP e in 5 studi su 25 (20\%) i dati ottenuti con 
+PLFA non sono state risolte con CLPP e in 5 studi su 25 (20\%) i dati ottenuti con 
 PLFA non sono stati differenziati e risolti con la PCR; inoltre gli autori 
 evidenziarono come la PCR e la CLPP producessero più alti tassi di errore rispetto 
 al PLFA.
@@ -1004,7 +1004,7 @@ attraverso la prima. %I componenti di una miscela vengono infatti trasportati da
 %differenti interazioni che si instaurano fra di loro. 
 Alcune sostanze interagiscono diversamente con la fase stazionaria e quindi vengono più o meno 
 ritardate nel loro cammino, altre invece non sono in alcun modo trattenute e ciò 
-comporta tempi di eluizione diversi \ref{fig:principio_cromatografia}.
+comporta tempi di eluizione diversi \todo{(Fig. \ref{fig:principio_cromatografia})}.
 
 \begin{figure}[ht]
 \centering
@@ -1069,7 +1069,7 @@ purezza (99.9\%) come l’azoto, l’elio e l’argon \citep{martin_new_1941},
 Il gascromatografo è formato da un iniettore, da una colonna e dal detector e 
 fornisce in output un diagramma che rappresenta il segnale generato dal rivelatore 
 in funzione del tempo, dove lo 0 rappresenta il momento in cui il campione viene 
-iniettato nella colonna \ref{fig:gascromat}. 
+iniettato nella colonna (Fig. \ref{fig:gascromat}). 
 
 \begin{figure}[ht]
 \centering
@@ -1079,7 +1079,7 @@ iniettato nella colonna \ref{fig:gascromat}.
 \end{figure}
 
 
-Questo diagramma prende il nome di cromatogramma del campione \ref{fig:2picchi} e si 
+Questo diagramma prende il nome di cromatogramma del campione (Fig. \ref{fig:2picchi}) e si 
 presenta come una sequenza di picchi di ampiezza e altezza variabile, distribuiti 
 lungo l’asse delle ascisse che rappresenta il tempo. 
 \begin{figure}[h]
@@ -1126,7 +1126,7 @@ omogeneizzato; però il tempo di iniezione è più lungo perchè bisogna aspetta
 l’iniettore si scaldi. 
 
 Si possono fare due tipi di iniezioni a “vaporizzazione istantanea”: l’iniezione 
-\emph{split}  e quella \emph{splitless}. La prima \ref{fig:split} si usa quando il 
+\emph{split}  e quella \emph{splitless}. La prima (Fig. \ref{fig:split}) si usa quando il 
 campione presenta un’elevata concentrazione e quindi potrebbe saturare la risposta 
 del detector e sfalzare il risultato. In questa tipologia il campione viene diluito 
 con il gas \emph{carrier} e in parte, questa miscela, esce da uno sfiatatoio. La 
@@ -1145,7 +1145,7 @@ vent; 9. polmone; 10. testa della colonna capillare.}
 \label{fig:split}
 \end{figure}
 
-Nell’iniezione splitless \ref{fig:splitless} invece il campione è tutto inviato in colonna e,
+Nell’iniezione splitless (Fig. \ref{fig:splitless}) invece il campione è tutto inviato in colonna e,
 similmente all’iniezione \emph{on column}, si ha all’inizio del cromatogramma il 
 picco del solvente. Questo tipo di iniezione si usa per l’analisi in tracce come ad 
 esempio per gli acidi volatili identificativi dellla maturazione o della putrefazione
@@ -1186,7 +1186,7 @@ coefficiente di ripartizione (tra fase gassosa e fase liquida) oppure in funzion
 del coefficiente di adsorbimento (tra fase gassosa e solida).
 
 Le colonne si trovano in un’apposita camera termostatica a circolazione di aria 
-calda, detta forno \ref{fig:colonna}, dove la temperatura, giunta al livello desiderato, 
+calda, detta forno (Fig. \ref{fig:colonna}), dove la temperatura, giunta al livello desiderato, 
 rimane il più possibile costante, così da permettere una buona riproducibilità 
 dell’analisi.
 
@@ -1219,7 +1219,7 @@ metri, avvolte a spirale su un supporto metallico. In questo caso la fase stazio
 
 Il primo vantaggio che presentano le colonne capillari è che, pur avendo un diametro 
 interno minore, offrono al gas un canale di passaggio molto più grande poiché 
-continuo, invece che frammentato \ref{fig:sezione_long} come nelle colonne impaccate; quindi 
+continuo, invece che frammentato (Fig. \ref{fig:sezione_long}) come nelle colonne impaccate; quindi 
 permettono portate maggiori, nonché tempi di analisi più brevi. Le colonne capillari 
 presentano inoltre elevata sensibilità ed efficienza, e consentono la separazione di 
 un numero maggiore di componenti della miscela.
@@ -1293,7 +1293,7 @@ elettromagnetico, percorrono traiettorie diverse in base al rapporto carica/mass
 
 Infine si ha un moltiplicatore che amplifica il segnale e il rivelatore; in output 
 si viene ad ottenere uno spettro che rappresenta, con delle bande, i vari frammenti 
-di ionizzazione, ordinati in base alla loro massa atomica \ref{fig:GC-MS}. Questo, 
+di ionizzazione, ordinati in base alla loro massa atomica (Fig. \ref{fig:GC-MS}). Questo, 
 come una sorta di impronta digitale, permette di ricostruire la formula della 
 molecola e, confrontandolo con i numerosi spettri memorizzati nella banca dati, si 
 possono riconoscere i vari componenti.
@@ -1453,7 +1453,7 @@ Il campo sperimentale è situato nell’azienda agricola della Scuola di Agraria
 Firenze, in località Montepaldi, San Casciano Val di Pesa (Latitudine 43°40’16’’ N, 
 Longitudine 11°09’08’’ E) a 90 m sopra il livello del mare. 
 
-L’area di studio \ref{fig:panorama_dispaa} presenta un clima sub-appenninico con precipitazioni 
+L’area di studio (Fig. \ref{fig:panorama_dispaa}) presenta un clima sub-appenninico con precipitazioni 
 annuali di circa 800 mm, con minimi nel periodo estivo e massimi in primavera e in 
 autunno. La temperatura media annuale è di 14.1°C con massime in estate, anche 
 superiori a 30°C e minime a gennaio \todo{(DISPAA, 2016)}. 
@@ -1467,37 +1467,17 @@ limo-argilloso/argilloso con scheletro di piccole e medie dimensioni
 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.4]{./foto/panorama.jpg}
+\includegraphics[scale=0.6]{./foto/panorama.jpg}
 \caption{Veduta panoramica del sito sperimentale.}
 \label{fig:panorama_dispaa}
 \end{figure}
 \info{citazioneDISPAA}
 
-Nel 1992  le caratteristiche fisico chimiche del campo biologico erano 
-\info{(DISPAA, 2016)}:
-\begin{itemize}
-\item tessitura:  46.3\% limo, 20.2\% sabbia  e 32.9\% argilla; mentre lo scheletro 
-rappresentava il 6.3\%;
-\item pH (misurato in acqua):  8.3;
-\item capacità di scambio cationica:  17.6 meq 100 ;
-\item \ce{P2O5} totale: 1.63\%;
-\item \ce{K2O}:  171
-\end{itemize}
-
-Le stesse caratteristiche per il campo convenzionale invece erano \info{(DISPAA, 2016)}:
-\begin{itemize}
-\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo scheletro;
-\item pH (in acqua): 8.3;
-\item CSC: 19.4 meq 100 ;
-\item \ce{P2O5} totale: 1.60%;
-\item \ce{K2O}: 134.
-
-\end{itemize}
 \section{Disegno sperimentale e gestione agronomica}
 Questo studio fa parte del progetto MoLTE (Moltepaldi Long Term Experiment), 
 progetto europeo attivo dal 1991 e interessa una superficie di 15 ha suddivisa in 
 10 appezzamenti, di 1.3 ha ciascuno: OO1, OO2, OO3, OO4, CO9, CO10 e 4 appartenenti 
-al BioNuovo \ref{fig:panorama_satellite}. Le sigle stanno ad indicare la conduzione utilizzata: gli 
+al BioNuovo (Fig.\ref{fig:panorama_satellite}). Le sigle stanno ad indicare la conduzione utilizzata: gli 
 appezzamenti con prefisso OO- indicano conduzione organica, mentre quelli con 
 prefisso CO- stanno ad indicare la gestione convenzionale. 
 
@@ -1508,6 +1488,7 @@ prefisso CO- stanno ad indicare la gestione convenzionale.
 \caption{Area di studio (Google Earth).}
 \label{fig:panorama_satellite}
 \end{figure}
+
 I quattro appezzamenti a conduzione biologica più recente, per questo definiti 
 BioNuovo, non sono stati presi in considerazione in questo esperimento, come anche 
 il campo OO1 ed OO3.
@@ -1537,8 +1518,7 @@ differenti: frangizzolatura in presemina più aratura (A), frangizzolatura in
 presemina più rippatura (B) e frangizzolatura in presemina più una frangizollatura 
 successiva (C). Ogni lavorazione è stata replicata tre volte e quindi ogni 
 appezzamento è stato suddiviso in 9 parcelle: 3 repliche (segnalate con numeri 
-arabi a pedice) per ognuna delle 3 lavorazioni \ref{fig:bioconv}.
-
+arabi a pedice) per ognuna delle 3 lavorazioni (Fig. \ref{fig:bioconv}).
 
 
 \begin{figure}[ht]
@@ -1553,6 +1533,29 @@ repliche della lavorazione; le lettere minuscole (a, m, b,) stanno ad indicare i
 tre campioni all’interno di ogni singolo plot .}
 \label{fig:bioconv}
 \end{figure}
+
+
+Nel 1992  le caratteristiche fisico chimiche del campo biologico erano 
+\info{(DISPAA, 2016)}:
+\begin{itemize}
+\item tessitura:  46.3\% limo, 20.2\% sabbia  e 32.9\% argilla; mentre lo scheletro 
+rappresentava il 6.3\%;
+\item pH (misurato in acqua):  8.3;
+\item capacità di scambio cationica:  17.6 meq 100 ;
+\item \ce{P2O5} totale: 1.63\%;
+\item \ce{K2O}:  171
+\end{itemize}
+
+Le stesse caratteristiche per il campo convenzionale invece erano \info{(DISPAA, 2016)}:
+\begin{itemize}
+\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo scheletro;
+\item pH (in acqua): 8.3;
+\item CSC: 19.4 meq 100 ;
+\item \ce{P2O5} totale: 1.60%;
+\item \ce{K2O}: 134.
+
+\end{itemize}
+
 
 Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il Girasole, varietà 
 \emph{Solaris} non trattato, usando una seminatrice di precisione con una densità di 
@@ -1602,7 +1605,7 @@ l’altro a 4 metri a monte (a=alto).
 
 Il primo campionamento ha richiesto tre giorni tra fine ottobre e inizio Novembre 
 del 2016, il secondo è stato svolto a Giugno 2017. In entrambi i casi, sono stati 
-collezionati 108 campioni, separati in appositi sacchetti di plastica \ref{fig:campione} 
+collezionati 108 campioni, separati in appositi sacchetti di plastica (Fig. \ref{fig:campione}) 
 e poi portati in laboratorio.
 
 
@@ -1619,7 +1622,7 @@ umidità, ed una volta asciutti sono stati messi in cella frigorifera a 3°C.
 I primi ad essere stati preparati sono stati i 36 campioni “m” autunnali i quali, 
 tolti dalla cella frigorifera, sono stati setacciati a 2 mm. Di tutto il campione 
 omogeneizzato, sono stati pesati 5 g  che sono stati successivamente macinati con 
-il mulino a palle e poi setacciati a 200 µm \ref{fig:macinato}.
+il mulino a palle e poi setacciati a 200 µm (Fig. \ref{fig:macinato}).
 
 
 \begin{figure}[ht]
@@ -1630,11 +1633,11 @@ il mulino a palle e poi setacciati a 200 µm \ref{fig:macinato}.
 \label{fig:macinato}
 \end{figure}
 
-Sono stati inoltre preparati due campioni compositi, uno con tutti gli “m” del 2016,
-macinati a 200 µm e pesandone  1g per ciascun campione e uno con tutti quelli del 
-2017. Questi due campioni sono stati identificati con MIX SOIL 2016 e MIX SOIL 2017 
-e sono stati  utilizzati come verifica per la PCA, poiché rappresentano la media 
-dei campioni dei due anni poiché compositi da aliquote omogenee. 
+Sono stati inoltre preparati due campioni compositi, identificati con MIX SOIL 2016 
+e MIX SOIL 2017. Il primo è stato ottenuto prendendo 1g di suolo macinato a 
+ 200 µm da tutti i campioni "m" del 2016, mentre il secondo con tutti i campioni del 2017.
+ Questi due campioni sono stati utilizzati come verifica per la PCA, rappresentando
+ la media dei campioni dei due anni poiché composti da aliquote omogenee. 
 
 \section{Analisi PLFA}
 
@@ -1642,7 +1645,7 @@ La procedura utilizzata è stata modificata basandosi sul metodo di \citet{bligh
 a sua volta modificato da White et al. (1979) \citet{white_determination_1979}
 e da \citet{bossio_determinants_nodate}.
  
-\subsection{Preparazione prima del GC-MS}
+\subsection{Preparazione dei campioni}
 \subsubsection{Prima fase - Estrazione}
 Reagenti:
 \begin{itemize}
@@ -1741,35 +1744,73 @@ Procedura:
 \end{enumerate}
 
 \subsection{ Standard e prova di validazione}
-Nella sequenza, oltre ai 72 campioni e ai 2 MIX SOIL, sono stati inseriti anche 
+Nella sequenza di iniezione, oltre ai 72 campioni e ai 2 MIX SOIL, sono stati inseriti anche 
 dei Bianchi di controllo, così da assicurarsi che non ci siano interferenti nel 
-sistema di preparazione e iniezione: vials sporche, solventi impuri, siringa del 
-GC, liner e/o colonna con residui di iniezioni precedenti.
+sistema di preparazione e iniezione, come ad esempio: vials sporche, solventi impuri,
+siringa del GC, liner e/o colonna con residui di iniezioni precedenti.
 
 Infine è stata preparata la curva di taratura tramite il BAMEs MIX (\emph{SIGMA-ALDRICH})
-contenente 26 composti in 10mg/mL totali e quindi ogni analita ha una concentrazione
-di 10.000 ppm / 26 uguale a 385ppm.
+contenente 26 composti in 10mg/mL (10.000 ppm) totali (Tab. \ref{tab:BAMEs MIX}).
 
-\begin{figure}[]
+\begin{table}[ht]
+\caption{BAMEs MIX }
+\label{tab:BAMEs MIX}
 \centering
-\includegraphics[scale=1]{./foto/bames.jpg}
-\caption{Componenti del BAMEs Mix della SIGMA-ALDRICH, ognuno ad una concentrazione
-di 385 ppm.}
-\label{fig:BAMEs MIX}
-\end{figure}
+\begin{tabular}{lc}
+\toprule
+Composto & Concentrazione  \\
+\midrule
+Methyl undecanoate & 385ppm \\
+Methyl-2-hydroxydecanoate & 385ppm \\
+Methyl dodecanoate & 385ppm \\
+Methyl tridecanoate & 385ppm \\
+Methyl-2-hydroxydodecanoate & 385ppm \\
+Methyl-3-hydroxydodecanoate & 385ppm \\
+Methyl myristate & 385ppm \\
+Methyl-13-methyltetradecanoate & 385ppm \\
+Methyl-12-methyltetradecanoate & 385ppm \\
+Methyl pentadecanoate & 385ppm \\
+Methyl-2-hydroxytetradecanoiate & 385ppm \\
+Methyl-3-hydroxytetradecanoate & 385ppm \\
+Methyl-14-methylpentadecanate & 385ppm \\
+Methyl cis-9-hexadecenoate & 385ppm \\
+Methyl palmitate & 385ppm \\
+Methyl-15-methylhexadecanoate & 385ppm \\
+Methyl cis-9,10-methylenehexadecanoate & 385ppm \\
+Methyl heptadecanoate & 385ppm \\
+Methyl-2-hydroxyhexadecanoate & 385ppm \\
+Methyl linoleate & 385ppm \\
+Methyl oleate & 385ppm \\
+Methyl trans-9-octadecenoate & 385ppm \\
+Methyl stearate & 385ppm \\
+Methyl cis-9,10-methyleneoctadecanoate & 385ppm \\
+Methyl nonadecanoate & 385ppm \\
+Methyl eicosenoate & 385ppm\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Gli standard sono stati diluiti in eptano in concentrazioni crescenti, 1:20 
-(19 ppm), 1:50 (7 ppm), 1:100 (3,8 ppm), 1:200 (1,9 ppm), 1:300 (1,25 ppm) e poi 
-sono stati iniettati senza subire alcuna delle tre fasi di preparazione dei 
-campioni, poiché i composti del BAMEs MIX sono già methyl esteri e dunque non 
-adatti a tale procedura. Per questo motivo, oltre ad aver utilizzato tale MIX per 
+% \begin{figure}[]
+% \centering
+% \includegraphics[scale=1]{./foto/bames.jpg}
+% \caption{Componenti del BAMEs Mix della SIGMA-ALDRICH, ognuno ad una concentrazione
+% di 385 ppm.}
+% \label{fig:BAMEs MIX}
+% \end{figure}
+
+Gli standard sono stati diluiti in eptano in concentrazioni crescenti: 1:20 
+(19 ppm), 1:50 (7 ppm), 1:100 (3,8 ppm), 1:200 (1,9 ppm), 1:300 (1,25 ppm).
+Successivamente sono stati iniettati senza subire alcuna delle tre fasi di 
+preparazione dei campioni, poiché i composti del BAMEs MIX, essendo già methyl esteri, 
+non sono adatti a tale procedura. Per questo motivo, oltre ad aver utilizzato tale MIX per 
 costruire la curva di taratura e permettere quindi l’analisi quantitativa, è stato 
-acquistato uno standard di fosfolipide, quale la fosfatidilcolina, così da fare 
+acquistato uno standard di fosfolipide, quale la fosfatidilcolina, così da effettuare 
 una prova di validazione della procedura di analisi. 
 
-Di questo standard ne è stata presa una quantità nota e messa in un suolo già 
-estratto e successivamente sono state ripetute e controllate tutte e tre le fasi 
-della preparazione dei campioni.
+Una quantità nota di questo standard è stata presa e iniettata in un suolo già estratto, 
+sul quale successivamente sono state ripetute e controllate tutte e tre le fasi della
+preparazione dei campioni.
+
 
 \subsection{GC-MS}
 La separazione cromatografica è stata effettuata tramite un sistema GC-MS Agilent 
@@ -1777,124 +1818,209 @@ La separazione cromatografica è stata effettuata tramite un sistema GC-MS Agile
 termostatazione della colonna cromatografica.
 
 La colonna utilizzata per quest’analisi è un’HP-INNOWax (Polyethylen Glyco) 
-dell’Agilent, avente una lunghezza di 50 m, per 2 mm di diametro e 0.4 di film 
-interno. 
+dell’Agilent, avente una lunghezza di 50 m, per 2 mm di diametro e 0.4mm di film 
+interno. La separazione cromatografica è stata effettuata mediante un flusso di 
+1,2 ml/minuto con un gradiente di temperatura controllato. 
 
 Il metodo di iniezione vede un volume di 2ul del campione a \emph{pulsed splitles} 
 tramite una siringa da 10 ul e una temperatura del liner di 260°C.
 
-La separazione cromatografica è stata effettuata mediante un flusso di 
-1,2 ml/minuto con un gradiente di temperatura controllato. 
-
-Le condizioni iniziali del metodo sono di 35°C e una pressione di 33psi, dopo 
-il primo minuto la temperatura ha iniziato ad aumentare di 30 gradi al minuto 
-fino ai 180°C e successivamente 3 gradi al minuto fino a 260°C, temperatura 
-massima raggiungibile per la colonna e qui è rimasta in isoterma per 3 minuti in 
-modo da far uscire tutti gli analiti e ripulire la colonna per l’iniezione 
-successiva, senza rischiare un peggioramento nelle cromatografie future. 
-
+Le condizioni iniziali del forno sono di 35°C e una pressione di 33psi. Dopo 
+il primo minuto la temperatura inizia ad aumentare di 30 gradi al minuto 
+fino al raggiungimento di 180°C e successivamente di 3 gradi al minuto fino a 260°C,
+temperatura massima raggiungibile per la colonna. A questa temperatura rimane in 
+isoterma per 3 minuti in modo da far uscire tutti gli analiti e ripulire la colonna 
+per l’iniezione successiva, senza rischiare un peggioramento nelle cromatografie 
+future. 
 La corsa, nel totale, dura 35 minuti e mezzo per campione.
 
-Prima e dopo ogni iniezione, inoltre, il metodo prevede anche un lavaggio della 
+Prima e dopo ogni iniezione,  il metodo prevede anche un lavaggio della 
 siringa, con un primo passaggio in metanolo e un secondo in ethyl acetate così da 
 annullare un possibile effetto memoria.
 
-Il sistema GC è interfacciato direttamente con lo spettrometro di massa avente 
-una sorgente EI  e un quadrupolo.
-
-L’analisi è effettuata con ionizzazione positiva e la temperatura della sorgente è 
-di 230° e il voltaggio di ionizzazione di 70Hz.
+Il sistema GC è interfacciato direttamente con lo spettrometro di massa avente una 
+sorgente EI , in cui l’analisi è effettuata con ionizzazione positiva a temperatura 
+di 230°C e voltaggio di 70Hz. Infine, gli ioni formatisi,  attraversano l’analizzatore 
+che è costituito da un quadrupolo, ovvero quattro barre cilindriche metalliche, 
+lunghe circa 20 cm e aventi carica alterna opposta. Queste barre delimitano il 
+percorso degli ioni provenienti dalla camera di ionizzazione verso il detector.
 
 \subsection{Markers, analisi qualitativa e quantitativa}
 
 I dati in uscita sono poi stati elaborati con il programma \emph{Mass Hunter}
-così da effettuare l’analisi qualitativa e quantitativa. Per il riconoscimento 
+in modo da effettuare l’analisi qualitativa e quantitativa. Per il riconoscimento 
 qualitativo sono state prese in considerazione le molecole contenute nel BAMEs MIX 
-e alcuni composti trovati tramite analisi bibliografica e presentati come 
-specifici \emph{Markers} di determinati gruppi microbici. 
+e alcuni composti trovati tramite analisi bibliografica [BIBLIO] e presentati come 
+specifici \emph{Markers} di determinati gruppi microbici (Tab. \ref{tab:Gruppi_microbici}). 
 
-\begin{figure}[]
-\centering
-\includegraphics[scale=0.8]{./foto/gruppi.jpg}
-\caption{//}
-\label{fig: Gruppi Microbici}
-\end{figure}
+% \begin{table}[ht]
+% \caption{Gruppi Microbici }
+% \label{tab:Gruppi_microbici}
+% \centering
+%  \begin{tabular}{lc}
+%    \toprule
+%    Gram - & Gram + & Fungi & Protozoi & Micorrize & Actinomiceti   \\
+%    \midrule
+%    C17:0 Cy  &  iC14:0  &  C18:0 \omega 9  cis  &  C20:2 trans  &  C16:1 \omega 5  &  10MetC16:0 \\
+%    C18:1 \omega 9 cis  &  iC15:0  &  C18:1 \omega 9 trans  &  C20:2 cis  &  &  10MetC17:0   \\
+%    C18:1 \omega 9 trans  &  aC15:0  &  &  &  &  10MetC18:0 \\
+%    C19:0 Cy  &  iC16:0  &  &  &  & \\
+%      &  iC17:0  &  &  &  & \\
+%      &  aC17:0  &  &  &  & \\
+%        \bottomrule
+%  \end{tabular}
+% \end{table}
 
-Il riconoscimento è stato effettuato tramite la \emph{NIST14} e la quantitativa è 
-stata invece effettuata utilizzando \emph{MS Quantitative Analysis} e 
-successivamente abbiamo preso le aree dei composti contenuti nel BAMEs MIX per 
+
+Il riconoscimento è stato possibile tramite la \emph{NIST14} (...), mentre l'analisi 
+quantitativa è stata effettuata utilizzando \emph{MS Quantitative Analysis}.
+Successivamente sono state considerate le aree dei composti contenuti nel BAMEs MIX per 
 poter quantificare anche le quantità degli altri composti non presenti nello 
 standard.
 
-\subsection{Analisi Statistica}
+
+\section{Analisi Statistica}
 
 
-\section{Risultati}
+\chapter{Risultati}
 
-<<PLFA_m_organismi, echo=FALSE, eval=TRUE>>=
-df.gruppiMicrobici <-
-    read.table(file.path(DirData,"spettriBATCH1.csv"),
-               sep= ";", header= TRUE,
-               colClasses =
-                   c("character", rep("numeric",6), "character")
-               )
-unique(df.gruppiMicrobici[,2:7])
-##8 il comando sopra (da dare nella console) scova le righe uguali
-##quindi
+%#<<label= qualcosa, fig.width=0.8, fig.height=0.8, echo= FALSE, eval=TRUE, fig=TRUE, incluede=FALSE>>=
+%#par(mfrow=c(2,2))
+%#plot()
+%#@
+%
+%#<<PLFA_m_organismi, echo=FALSE, eval=TRUE>>=
+%# for (i in 1:2){
+%#     nome.file.da.importare <-
+%#         c("batchCampioniOttobre.csv","batchCampioniGiugno.csv")[i]
+%#     
+%#   df.data <-
+%#         read.table(file.path(DirData, nome.file.da.importare ),
+%#                    sep= ";",
+%#                    skip=2)
+%# 
+%# lis.data <-
+%#     split(df.data, df.data$Type)
+%# require(lattice)
+%# 
+%# df.elabora <-
+%#     lis.data$Sample
+%# 
+%# colori <-   # as.numeric(df.elabora$TIL)
+%#     as.numeric(interaction(df.elabora$MAN, df.elabora$TIL))
+%# 
+%# fun.biplot(x=pcx.PLFA,
+%#            col=c(1,"transparent"),
+%#            choices=c(1,2), ## assi/componenti da considerare
+%#            scale=1,
+%#            pc.biplot=FALSE,
+%# #           col.obs = as.numeric(df.elabora$PARC),
+%#            col.obs = as.numeric(df.elabora$STAGIONE),
+%#            etich = interaction(df.elabora$TIL, df.elabora$MAN)
+%#            )
+%# 
+%# par(mfrow = c(2,4))
+%# fun.biplot(x=pcx.PLFA,
+%#            col=c(1,"transparent"),
+%#            choices=c(1,2), ## assi/componenti da considerare
+%#            scale=1,
+%#            pc.biplot=FALSE,
+%# #           col.obs = as.numeric(df.elabora$PARC),
+%#            col.obs = as.numeric(df.elabora$STAGIONE),
+%#            etich = interaction(df.elabora$TIL, df.elabora$MAN)
+%#            )
+%# for (dalila in 2:7){
+%#     titolo <-
+%#         names(df.gruppiMicrobici)[dalila]
+%# plot(0, 0,
+%#      xlim=c(-0.6,0.6),
+%#      ylim=c(-0.6, 0.6),
+%#      main = titolo
+%#      )
+%# for (i in 1:dim(pcx.PLFA$loadings)[1]){
+%#     posizioneX <-
+%#         pcx.PLFA$loadings[i,1]
+%#     posizioneY <- pcx.PLFA$loadings[i,2]
+%#     titolo <-
+%#         names(df.gruppiMicrobici)[dalila]
+%#     colore <-
+%#         ifelse(df.gruppiMicrobici[i, dalila]==1,
+%#                "black", ## nero se vero
+%#                "transparent")# grifgiochiaro se falso
+%# arrows(0, 0,
+%#        posizioneX, posizioneY,
+%#        col=colore,
+%#        length=0.1)
+%# text(posizioneX, posizioneY,
+%#      label = dimnames(pcx.PLFA$loadings)[[1]][i],
+%#      pos= 1,
+%#      offset=0.5, col=colore)
+%#     }
+%# }
+%@
 
-questi.no <-
-    which(
-        is.na(
-            rowSums(df.gruppiMicrobici[,2:7])
-        ))
-df.gruppiMicrobici <-
-    df.gruppiMicrobici[-questi.no,]
+%<<PLFA_m_organismi, echo=FALSE, eval=TRUE>>=
+%df.gruppiMicrobici <-
+%    read.table(file.path(DirData,"spettriBATCH1.csv"),
+%               sep= ";", header= TRUE,
+%               colClasses =
+%                   c("character", rep("numeric",6), "character")
+%               )
+%unique(df.gruppiMicrobici[,2:7])
+%##8 il comando sopra (da dare nella console) scova le righe uguali
+%##quindi
+%
+%questi.no <-
+%    which(
+%        is.na(
+%            rowSums(df.gruppiMicrobici[,2:7])
+%        ))
+%df.gruppiMicrobici <-
+%    df.gruppiMicrobici[-questi.no,]
+%
+%##8 va bene anche apply come hai scritto tu
+%composti.non.assegnabili <-
+%    which(rowSums(df.gruppiMicrobici[,2:7])==0)
+%nomi.composti.non.assegnabili <-
+%    df.gruppiMicrobici$composti[composti.non.assegnabili]
+%
+%perc.non.assegnabile<-
+%    round(
+%    (length(composti.non.assegnabili)/
+%     dim(df.gruppiMicrobici)[1]*100),
+%    2)
+%
+%mtx.gruppiMicrobici <-
+%    matrix(nrow = 6, ncol = 6)
+%
+%for(i in 2:7){
+%    mtx.gruppiMicrobici[i,] <-
+%        df.gruppiMicrobici$composti[which(df.gruppiMicrobici[,i]==1)]
+%}
+%
+%## gramMeno <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramN==1)],
+%## gramPiu <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramP==1)],
+%## attinoBac <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$actinobacteria==1)],
+%## funghi <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$fungi==1)],
+%## protozoi <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$protozoi==1)],
+%## micorrize <- 
+%df.gruppiMicrobici$composti[which(df.gruppiMicrobici$micorrizze==1)]
+%)
+%
+%
+%
+%@
+%
 
-##8 va bene anche apply come hai scritto tu
-composti.non.assegnabili <-
-    which(rowSums(df.gruppiMicrobici[,2:7])==0)
-nomi.composti.non.assegnabili <-
-    df.gruppiMicrobici$composti[composti.non.assegnabili]
-
-perc.non.assegnabile <-
-    round(
-    (length(composti.non.assegnabili)/
-     dim(df.gruppiMicrobici)[1]*100),
-    2)
-
-mtx.gruppiMicrobici <-
-    matrix(nrow = 6, ncol = 6)
-
-for(i in 2:7){
-    mtx.gruppiMicrobici[i,] <-
-        df.gruppiMicrobici$composti[which(df.gruppiMicrobici[,i]==1)]
-}
-
-## gramMeno <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramN==1)],
-## gramPiu <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$gramP==1)],
-## attinoBac <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$actinobacteria==1)],
-## funghi <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$fungi==1)],
-## protozoi <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$protozoi==1)],
-## micorrize <- 
-df.gruppiMicrobici$composti[which(df.gruppiMicrobici$micorrizze==1)]
-)
-
-
-
-@
-
-Dall'analisi della biblio bla bla risulta che il
-\Sexpr{perc.non.assegnabile} \% dei PLFA ritrovati non è assegnabile ad
-alcun gruppo microbico
-
-
-
-
+%
+%
+%
+%
 
 
 
@@ -1919,27 +2045,27 @@ alcun gruppo microbico
 %
 %\end{figure}
 
-\section{Prove}
-
-<<Summary_Campo, echo=FALSE, eval=FALSE, results=tex>>=
-names(summary.campo) <-  
-    c("Anno", "Conduzione", "Lavorazione", "Media", "Dev. std", "n", "Tukey")
-summary.campo$Anno <- 
-    c("2015", rep(" ", 5), "2016", rep(" ", 5))
-summary.campo$Conduzione <-
-    c("Co", rep(" ", 2), "Or", rep(" ", 2),
-      "Co", rep(" ", 2), "Or", rep(" ", 2))
-tabella.campo <-
-    xtable(summary.campo[,-7],
-           label = 'tab:summaryCore', align  = "llllccc",
-           caption =
-               "Valori medi della densit\\`a apparente (in \\SI{}{\\gram\\per\\cubic\\centi\\metre}),
-                condizionati per \\emph{Anno}, \\emph{Conduzione} e \\emph{Lavorazione} " )
-print(tabella.campo, include.rownames=FALSE,
-      caption.placement = "top",
-      table.placement= "hb")
-
-@
+%\section{Prove}
+%
+%<<Summary_Campo, echo=FALSE, eval=FALSE, results=tex>>=
+%names(summary.campo) <-  
+%    c("Anno", "Conduzione", "Lavorazione", "Media", "Dev. std", "n", "Tukey")
+%summary.campo$Anno <- 
+%    c("2015", rep(" ", 5), "2016", rep(" ", 5))
+%summary.campo$Conduzione <-
+%    c("Co", rep(" ", 2), "Or", rep(" ", 2),
+%      "Co", rep(" ", 2), "Or", rep(" ", 2))
+%tabella.campo <-
+%    xtable(summary.campo[,-7],
+%           label = 'tab:summaryCore', align  = "llllccc",
+%           caption =
+%               "Valori medi della densit\\`a apparente (in \\SI{}{\\gram\\per\\cubic\\centi\\metre}),
+%                condizionati per \\emph{Anno}, \\emph{Conduzione} e \\emph{Lavorazione} " )
+%print(tabella.campo, include.rownames=FALSE,
+%      caption.placement = "top",
+%      table.placement= "hb")
+%
+%@
 
 \begin{appendices}
 
