@@ -192,16 +192,67 @@ bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 
                )
 ##################################
-par(mfrow = c(2,2))
+par(mfrow = c(1,1))
 
 
 plot(0, 0,
-     xlim=c(-0.6,0.6),
-     ylim=c(-0.6, 0.6),
+     xlim=c(0,0.6),
+     ylim=c(-0.2, 0.2),
      main = 
 )
 
+#restringendo tra x > 0.2 e y>0.1 non ho niente di "interessante", e anche con 0.1 e 0.1
+# for (i in 1:dim(pcx.PLFA$loadings)[1]){
+#   posizioneX <-
+#     pcx.PLFA$loadings[i,1]
+#   posizioneY <- pcx.PLFA$loadings[i,2]
+#   titolo <-
+#     names(df.gruppiMicrobici)[2:7]
+#   colore <-
+#     ifelse(pcx.PLFA$loadings[i,1]>=0.2 & pcx.PLFA$loadings[i,2]>=0.1, 
+#            #restringrndo così tanto ho solo C17:1omeg9, non è tipico  
+#            "black", ## nero se vero
+#            "transparent")# grifgiochiaro se falso
+#   arrows(0, 0,
+#          posizioneX, posizioneY,
+#          col=colore,
+#          length=0.1)
+#   text(posizioneX, posizioneY,
+#        label = dimnames(pcx.PLFA$loadings)[[1]][i],
+#        pos= 1,
+#        offset=0.5, col=colore)
+# }
+# }
 
+#con 0.05 sia in x che in y ho c18:1 cis e trans identific dei funghi e gram-
+# for (i in 1:dim(pcx.PLFA$loadings)[1]){
+#   posizioneX <-
+#     pcx.PLFA$loadings[i,1]
+#   posizioneY <- pcx.PLFA$loadings[i,2]
+#   titolo <-
+#     names(df.gruppiMicrobici)[2:7]
+#   colore <-
+#     ifelse(pcx.PLFA$loadings[i,1]>=0.05 & pcx.PLFA$loadings[i,2]>=0.05, 
+#              
+#            "black", ## nero se vero
+#            "transparent")# grifgiochiaro se falso
+#   arrows(0, 0,
+#          posizioneX, posizioneY,
+#          col=colore,
+#          length=0.1)
+#   text(posizioneX, posizioneY,
+#        label = dimnames(pcx.PLFA$loadings)[[1]][i],
+#        pos= 1,
+#        offset=0.5, col=colore)
+# }
+# }
+
+
+#restringendo con le sole x positive e y tra -0.05 e 0.05
+#ho i 3 composti tipici dei gram -
+#il cyclico c19 e i c16:1 sia omega 5 che 7, mi mancherebbe solo il ciclico 17
+#se allargo un poà, 0.1 e -0.1 ho anche i due composti dei gram - comuni con
+#funghi e micorrize, ovvero c18:1 
 for (i in 1:dim(pcx.PLFA$loadings)[1]){
   posizioneX <-
     pcx.PLFA$loadings[i,1]
@@ -209,7 +260,9 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
   titolo <-
     names(df.gruppiMicrobici)[2:7]
   colore <-
-    ifelse(pcx.PLFA$loadings[i, ]>=0,
+    ifelse(pcx.PLFA$loadings[i,1]>=0 & 
+             pcx.PLFA$loadings[i,2]>= -0.05 & 
+             pcx.PLFA$loadings[i,2]<=0.05, 
            "black", ## nero se vero
            "transparent")# grifgiochiaro se falso
   arrows(0, 0,
@@ -225,20 +278,21 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
 
 
 plot(0, 0,
-     xlim=c(-0.6,0.6),
-     ylim=c(-0.6, 0.6),
+     xlim=c(-0.05,0.05),
+     ylim=c(-0.2, 0.2),
      main = 
 )
 
-
+#su, di interessante ci sono solo i protozoi con i c20:2
 for (i in 1:dim(pcx.PLFA$loadings)[1]){
   posizioneX <-
     pcx.PLFA$loadings[i,1]
   posizioneY <- pcx.PLFA$loadings[i,2]
   titolo <-
     names(df.gruppiMicrobici)[2:7]
-  colore <-
-    ifelse(pcx.PLFA$loadings[i, ]<=0,
+  colore <- ifelse(pcx.PLFA$loadings[i,2]>=0 & 
+                     pcx.PLFA$loadings[i,1]>= -0.05 & 
+                     pcx.PLFA$loadings[i,1]<=0.05,
            "black", ## nero se vero
            "transparent")# grifgiochiaro se falso
   arrows(0, 0,
@@ -254,20 +308,21 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
 
 
 plot(0, 0,
-     xlim=c(-0.6,0.6),
-     ylim=c(-0.6, 0.6),
+     xlim=c(-0.2,0.3),
+     ylim=c(-0.4, 0),
      main = 
 )
 
-
+# ho 5 su 6 componenti dei gram +
 for (i in 1:dim(pcx.PLFA$loadings)[1]){
   posizioneX <-
     pcx.PLFA$loadings[i,1]
   posizioneY <- pcx.PLFA$loadings[i,2]
   titolo <-
     names(df.gruppiMicrobici)[2:7]
-  colore <-
-    ifelse(pcx.PLFA$loadings[,i ]>=0, #non ha senso... come gli dico che voglio le y positive?
+  colore <- ifelse(pcx.PLFA$loadings[i,2]<=0 & 
+                     pcx.PLFA$loadings[i,1]>= -0.05 & 
+                     pcx.PLFA$loadings[i,1]<=0.05, 
            "black", ## nero se vero
            "transparent")# grifgiochiaro se falso
   arrows(0, 0,
@@ -283,20 +338,22 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
 
 
 plot(0, 0,
-     xlim=c(-0.6,0.6),
-     ylim=c(-0.6, 0.6),
+     xlim=c(-0.5,0),
+     ylim=c(-0.2, 0.2),
      main = 
 )
 
-
+#così ho un fungo, l'altro è tutto a destra con i gram - e un attinomiceto 
+# l'altro degli attinomiceti, segnato come met01c17 va in giù
 for (i in 1:dim(pcx.PLFA$loadings)[1]){
   posizioneX <-
     pcx.PLFA$loadings[i,1]
   posizioneY <- pcx.PLFA$loadings[i,2]
   titolo <-
     names(df.gruppiMicrobici)[2:7]
-  colore <-
-    ifelse(pcx.PLFA$loadings[,i]<=0, #non ha senso... come gli dico che voglio le y negative?
+  colore <- ifelse(pcx.PLFA$loadings[i,1]<=0 & 
+                     pcx.PLFA$loadings[i,2]>= -0.05 & 
+                     pcx.PLFA$loadings[i,2]<=0.05, 
            "black", ## nero se vero
            "transparent")# grifgiochiaro se falso
   arrows(0, 0,
