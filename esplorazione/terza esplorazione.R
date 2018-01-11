@@ -1,11 +1,11 @@
 AREA <- FALSE
-#setwd("/home/Documenti/BitBucket/Dalila_GIT/esplorazione")
-setwd("/home/dalila/Dali_GIT/esplorazione")
+setwd("C:/Users/Dalila/Documents/GitHub/Dali_GIT/esplorazione")
+#setwd("/home/dalila/Dali_GIT/esplorazione")
 
 source("seconda importazione.R")
 source(file.path(DirFunz, "biplotAcomp.R"))
 #source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
-source("/home/dalila/Dali_GIT/esplorazione/righe_nulle.R")
+source("C:/Users/Dalila/Documents/GitHub/Dali_GIT/esplorazione/righe_nulle.R")
 require(compositions)
 ## lis.data$Sample <-
 ##     lis.data$Sample[order(lis.data$Sample$INJ.DATE),]
@@ -28,15 +28,82 @@ df.masse <-
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
                colClasses=c(rep("character",4), "numeric"))[,4:5]
+
 df.masse$NOME.R.nuovo <-
     paste("C", df.masse$NOME.R.nuovo, sep=".")
 sum(names(df.elabora)[14:51]!=df.masse$NOME.R.nuovo)
+
 
 ## PLFA.no <- c(17:18, 36:39, 49:50)
 ## TIC.no <- c(16, 29, 42)
 ## sopra colonne o doppie o indesiderate
 
 elimina.questi <- -c(1:13, 15,36, 52)
+
+
+
+######## PROVE DALILA
+
+
+#names(df.masse)[elimina.questi] <- df.composti$NOME.R.nuovo
+
+df.elabora$SOMMA.CONC <-
+  apply(df.elabora[,14:51], 1,
+        function(x) sum(x, na.rm=TRUE))
+
+ls()
+
+lm.proviamo<-
+  lm(log(SOMMA.CONC) ~ STAGIONE+TIL+MAN, data=df.elabora)
+
+
+
+anova(lm.proviamo)
+
+summary(lm.proviamo)
+
+with(df.elabora, boxplot(log(SOMMA.CONC)~STAGIONE*MAN*TIL))
+
+
+
+#### da qui il DISASTRO!
+
+lis.disastro <-
+  list(df.elabora$TIL,
+    df.elabora$STAGIONE,
+    df.elabora$MAN
+  )
+
+df.disastro <-
+  aggregate(df.elabora[,14:51],
+            by= lis.disastro,
+            function(x) mean(x, na.rm=TRUE))
+
+row.names(df.disastro) <-
+  as.character(interaction(df.disastro[,1] ,df.disastro[,2],df.disastro[,3]))
+
+stars(df.disastro[,-(1:length(lis.disastro))],
+      key.loc = c(0.8,1),
+      key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = TRUE)
+
+#per avere le moli -> concentrazione * 10^-3 (VOLUME) tutto / pm (df.masse) e poi rimoltiplicato per 10^-6
+
+Moli <- ((df.elabora[,14:51]*(10^-3)) / df.masse$PM) *(10^-6)
+
+moli <- cbind( Moli, df.elabora$MAN , df.elabora$STAGIONE, df.elabora$TIL)
+moli
+
+lm.provaMoli<-
+  lm((moli) ~ STAGIONE+TIL+MAN, data=df.elabora)
+
+
+
+##### FINE PROVE DALILA
+
+
 
 Y.CONC <-
     acomp( df.elabora[, elimina.questi])
@@ -179,16 +246,7 @@ biplot(x=pcx.PLFA,
  arrows(0,0,-0.278,-0.873, col=2)
   arrows(0,0,-0.543,-0.167, col=2)
 
-#################### AVANZI
-somma.aree <-
-apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
 
-lm.1 <-
-    lm(somma.aree ~ MAN+TIL, data = df.elabora[-18,])
-anova(lm.1)
-summary(lm.1)
-
-bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 
                )
 ##################################
@@ -366,3 +424,14 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
        offset=0.5, col=colore)
 }
 }
+
+#################### AVANZI
+somma.aree <-
+  apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
+
+lm.1 <-
+  lm(somma.aree ~ MAN+TIL, data = df.elabora[-18,])
+anova(lm.1)
+summary(lm.1)
+
+bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)

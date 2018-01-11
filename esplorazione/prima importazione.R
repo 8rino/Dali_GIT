@@ -1,10 +1,10 @@
 info.sistema <-
-    Sys.info()[c(1,7)]
+  Sys.info()[c(1,7)]
 if(info.sistema[1]=="Windows"){
-    DirMain <-
-        paste("C:/Users/",
-              info.sistema[2],
-              "/Dropbox/MOLTE_R", sep="")
+  DirMain <-
+    paste("C:/Users/",
+          info.sistema[2],
+          "/Documents/GitHub/Dali_GIT", sep="")
 } else {
     if(info.sistema[2]=="dalila" ){
         DirMain <-"~/Dali_GIT"
