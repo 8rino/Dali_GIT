@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## ics <- seq(-2,2, by=0.01)
 ## ics2 <- ics^2
 ## yps2 <- 2^2-ics^2
@@ -31,10 +32,27 @@ DirCod <-
     file.path(DirMain, "codice")
 
 setwd(file.path(DirMain,"esplorazione"))
+||||||| merged common ancestors
+AREA <- FALSE
+#setwd("/home/Documenti/BitBucket/Dalila_GIT/esplorazione")
+setwd("/home/dalila/Dali_GIT/esplorazione")
+=======
+AREA <- FALSE
+setwd("C:/Users/Dalila/Documents/GitHub/Dali_GIT/esplorazione")
+#setwd("/home/dalila/Dali_GIT/esplorazione")
+>>>>>>> f9f9192d0948345537c1773844b183283a904ed1
 
 source("seconda importazione.R")
 source(file.path(DirFunz, "biplotAcomp.R"))
+<<<<<<< HEAD
 source("righe_nulle.R")
+||||||| merged common ancestors
+#source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
+source("/home/dalila/Dali_GIT/esplorazione/righe_nulle.R")
+=======
+#source("/home/ottorino/Documenti/BitBucket/Dalila_GIT/esplorazione/righe_nulle.R")
+source("C:/Users/Dalila/Documents/GitHub/Dali_GIT/esplorazione/righe_nulle.R")
+>>>>>>> f9f9192d0948345537c1773844b183283a904ed1
 require(compositions)
 ## lis.data$Sample <-
 ##     lis.data$Sample[order(lis.data$Sample$INJ.DATE),]
@@ -57,11 +75,13 @@ df.masse <-
                sep= ";", dec=",", header=TRUE,
                fileEncoding = "UTF-8",
                colClasses=c(rep("character",4), "numeric"))[,4:5]
+
 df.masse$NOME.R.nuovo <-
     paste("C", df.masse$NOME.R.nuovo, sep=".")
 
 ## riga sotto; un controllo sui nomi
 ## sum(names(df.elabora)[i.PLFA]!=df.masse$NOME.R.nuovo[-c(2,23)])
+
 
 ## PLFA.no <- c(17:18, 36:39, 49:50)
 ## TIC.no <- c(16, 29, 42)
@@ -69,6 +89,7 @@ df.masse$NOME.R.nuovo <-
 
 elimina.questi <- -c(1:13, 15,36, 52)
 
+<<<<<<< HEAD
 
 
 ######## PROVE DALILA
@@ -249,6 +270,74 @@ p
 elimina.questi <- -c(1:13, 50)
 
 
+||||||| merged common ancestors
+=======
+
+
+######## PROVE DALILA
+
+
+#names(df.masse)[elimina.questi] <- df.composti$NOME.R.nuovo
+
+df.elabora$SOMMA.CONC <-
+  apply(df.elabora[,14:51], 1,
+        function(x) sum(x, na.rm=TRUE))
+
+ls()
+
+lm.proviamo<-
+  lm(log(SOMMA.CONC) ~ STAGIONE+TIL+MAN, data=df.elabora)
+
+
+
+anova(lm.proviamo)
+
+summary(lm.proviamo)
+
+with(df.elabora, boxplot(log(SOMMA.CONC)~STAGIONE*MAN*TIL))
+
+
+
+#### da qui il DISASTRO!
+
+lis.disastro <-
+  list(df.elabora$TIL,
+    df.elabora$STAGIONE,
+    df.elabora$MAN
+  )
+
+df.disastro <-
+  aggregate(df.elabora[,14:51],
+            by= lis.disastro,
+            function(x) mean(x, na.rm=TRUE))
+
+row.names(df.disastro) <-
+  as.character(interaction(df.disastro[,1] ,df.disastro[,2],df.disastro[,3]))
+
+stars(df.disastro[,-(1:length(lis.disastro))],
+      key.loc = c(0.8,1),
+      key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = TRUE)
+
+#per avere le moli -> concentrazione * 10^-3 (VOLUME) tutto / pm (df.masse) e poi rimoltiplicato per 10^-6
+
+Moli <- ((df.elabora[,14:51]*(10^-3)) / df.masse$PM) *(10^-6)
+
+moli <- cbind( Moli, df.elabora$MAN , df.elabora$STAGIONE, df.elabora$TIL)
+moli
+
+lm.provaMoli<-
+  lm((moli) ~ STAGIONE+TIL+MAN, data=df.elabora)
+
+
+
+##### FINE PROVE DALILA
+
+
+
+>>>>>>> f9f9192d0948345537c1773844b183283a904ed1
 Y.CONC <-
     acomp( df.elabora[, c(elimina.questi,-togli)])
 Y.MOLI <-
@@ -394,16 +483,17 @@ arrows(0,0,-0.543,-0.167, col=2)
 
 
 
+<<<<<<< HEAD
 #################### AVANZI
 somma.aree <-
     apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
+||||||| merged common ancestors
+#################### AVANZI
+somma.aree <-
+apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
+=======
+>>>>>>> f9f9192d0948345537c1773844b183283a904ed1
 
-lm.1 <-
-    lm(somma.aree ~ MAN+TIL, data = df.elabora[-18,])
-anova(lm.1)
-summary(lm.1)
-
-bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 
 )
 ##################################
@@ -604,6 +694,7 @@ for(i in seq(1,36, 4)){
                 main= names(Y.CONC)[i+k], ylab="Y.CONC")
     }
 }
+<<<<<<< HEAD
 dev.off()
 
 df.elabora$TIL <- factor(df.elabora$TIL, levels=c("Fzo","Rip", "Ara")[c(3,2,1)])
@@ -714,3 +805,17 @@ plot(fit) # display dendogram
 groups <- cutree(fit, k=5) # cut tree into 5 clusters
 # draw dendogram with red borders around the 5 clusters
 rect.hclust(hc , k=5, border="red")
+||||||| merged common ancestors
+=======
+
+#################### AVANZI
+somma.aree <-
+  apply(df.elabora[-18,-c(1:14, PLFA.no,TIC.no)], 1, function(x) sum(x,na.rm=TRUE))
+
+lm.1 <-
+  lm(somma.aree ~ MAN+TIL, data = df.elabora[-18,])
+anova(lm.1)
+summary(lm.1)
+
+bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
+>>>>>>> f9f9192d0948345537c1773844b183283a904ed1
