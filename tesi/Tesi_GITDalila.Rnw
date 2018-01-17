@@ -131,7 +131,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.2pt}
-% \cfoot{Pag. \thepage\, Compilata il \today\ alle \currenttime}
+ \cfoot{Pag. \thepage\, Compilata il \today\ alle \currenttime}
 % \lfoot{}
 % \rfoot{}
 % E Even page
@@ -187,8 +187,7 @@
 \SweaveOpts{prefix.string= figure/Fig}
 % https://stackoverflow.com/questions/4674567/how-to-make-sweave-copy-generated-graphics-to-a-subfolder
 
-\usepackage{lipsum}
-% blocchi di testo fittizi
+\usepackage{lipsum} % blocchi di testo fittizi
 <<PacchettiRichiesti, echo=FALSE, eval=TRUE>>=
 library(nlme)
 library(plyr)
@@ -197,13 +196,17 @@ library(xtable)
 library(foreign)
 library(agricolae)
 library(multcomp)
+library(compositions)
 @
 
 <<setupDir, include=FALSE, cache=FALSE, echo=FALSE>>=
 info.sistema <-
     Sys.info()[c(1,7)]
 if(info.sistema[1]=="Windows"){
-    DirMain <- paste("C:/Users/", info.sistema[2], "/Dropbox/MOLTE_R", sep="")
+    DirMain <-
+        paste("C:/Users/",
+              info.sistema[2],
+              "/Documents/GitHub/Dali_GIT", sep="")
 } else {
     if(info.sistema[2]=="dalila" ){
         DirMain <-"~/Dali_GIT"
@@ -211,6 +214,7 @@ if(info.sistema[1]=="Windows"){
         DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
     }
 }
+
 DirData <-
     file.path(DirMain,"dati_grezzi")
 DirElab <-
@@ -221,12 +225,15 @@ DirFunz <-
     file.path(DirMain, "funzioni")
 DirCod <-
     file.path(DirMain, "codice")
+## importo la listona dei dati 
+source(file.path(DirCod, "seconda importazione.R"))
+source(file.path(DirFunz, "biplotAcomp.R"))
 @
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{Dalila Pasquini}
-\title{titolo Da definire}
+\title{Determinazione PLFA in suoli condotti biologicamente}
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 \begin{frontespizio}
@@ -275,29 +282,31 @@ DirCod <-
 \chapter{Introduzione}
 \section{Suolo}
 \subsection{Qualche definizione}
-Il suolo può essere considerato come \emph{la pelle vivente della Terra}
-\citep{pepper_soil:_2009} e si può definire come un corpo naturale che si
-trova sulla superficie terrestre e che consiste in un insieme di
-minerali, sostanza organica, fluidi e una varietà di organismi che
-permettono la crescita e la diffusione della vita.
+Il suolo può essere considerato come \emph{la pelle vivente della
+  Terra} \citep{pepper_soil:_2009} e si può definire come un corpo
+naturale che si trova sulla superficie terrestre e che consiste in un
+insieme di minerali, sostanza organica, fluidi e una varietà di
+organismi che permettono la crescita e la diffusione della vita.
 
 La Soil Taxonomy, il sistema di classificazione elaborato dall’USDA
 (United States Department of Agriculture), ha definito il suolo come
 un corpo naturale tridimensionale composto da solidi, quali la
-sostanza organica e i minerali, da liquidi e da gas \citep{usda_soil_1999}. Per
-lo stesso ente il suolo deve trovarsi sulla superficie terrestre e
-deve essere caratterizzato da almeno una delle seguenti
-caratteristiche: deve permettere la vita e la crescita delle piante
-superiori e/o presentare gli orizzonti \citep{usda_soil_1999}.
+sostanza organica e i minerali, da liquidi e da gas
+\citep{usda_soil_1999}. Per lo stesso ente il suolo deve trovarsi
+sulla superficie terrestre e deve essere caratterizzato da almeno una
+delle seguenti caratteristiche: deve permettere la vita e la crescita
+delle piante superiori e/o presentare gli orizzonti
+\citep{usda_soil_1999}.
 
 Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 “Il suolo è formato da qualsiasi materiale minerale o organico posto
 sulla superficie di pianeti o corpi simili, ed è alterato da agenti
-biologici, chimici e fisici” \citep{JOHNSON19986}. 
+biologici, chimici e fisici” \citep{JOHNSON19986}.
 
 \subsection{I cinque fattori di formazione del suolo}
 Per potersi formare, il suolo ha bisogno di alcuni "ingredienti", i
-quali sono stati enunciati da \citet{jenny_factors_1994} nella nota funzione: 
+quali sono stati enunciati da \citet{jenny_factors_1994} nella nota
+funzione:
 \begin{equation} 
 Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
 \end{equation}
@@ -378,18 +387,19 @@ sono originati in seguito a lunghi processi di alterazione,
 soprattutto chimica \citep{radaelli2001chimica}.
 
 La componente minerale prevalente delle rocce e del terreno è
-costituita dai silicati (\ce{SiO4-}), che si dividono in più
-famiglie in base alla disposizione dei loro elementi (Fig. \ref{fig:famiglia_silicati}):
+costituita dai silicati (\ce{SiO4-}), che si dividono in più famiglie
+in base alla disposizione dei loro elementi (Fig.
+\ref{fig:famiglia_silicati}):
 
 
 \begin{figure}[]
 \centering
 \includegraphics[scale=0.5]{./foto/silicati.jpg}
 
-\caption{Famiglie dei silicati: nesosilicati (a), sorosilicati (b), 
-ciclosilicati (c), inosilicati a catena singola 
-(d), inosilicati a catena doppia (e), fillosilicati (f) e tectosilicati (g) 
-\citep{radaelli_chimica_2002} }
+\caption{Famiglie dei silicati: nesosilicati (a), sorosilicati (b),
+  ciclosilicati (c), inosilicati a catena singola (d), inosilicati a
+  catena doppia (e), fillosilicati (f) e tectosilicati (g)
+  \citep{radaelli_chimica_2002} }
 \label{fig:famiglia_silicati}
 \end{figure}
 
@@ -533,7 +543,6 @@ porosità ed al rapporto dei fluidi contenuti in esso, sia il movimento
 della fauna e delle radici.
 
 \subsubsection{Fase liquida}
-
 
 La microporosità interessa e permette il movimento dell’acqua,
 componente necessaria per la vita di tutti gli organismi viventi.
@@ -1851,7 +1860,35 @@ I dati in uscita sono poi stati elaborati con il programma \emph{Mass Hunter}
 in modo da effettuare l’analisi qualitativa e quantitativa. Per il riconoscimento 
 qualitativo sono state prese in considerazione le molecole contenute nel BAMEs MIX 
 e alcuni composti trovati tramite analisi bibliografica [BIBLIO] e presentati come 
-specifici \emph{Markers} di determinati gruppi microbici (Tab. \ref{tab:Gruppi_microbici}). 
+specifici \emph{Markers} di determinati gruppi microbici (Tab. \ref{tab:GruppiMicrobici}). 
+
+\begin{landscape}
+  \scriptsize
+<<tabellaMicrobi, eval = TRUE, results=tex, echo=FALSE>>=
+
+mtx.tabMicrobi <- 
+    matrix(ncol = length(lis.nomi.PLFA.microbi), 
+           nrow = length(lis.nomi.PLFA.microbi$gramN),
+           dimnames = list(NULL, names(lis.nomi.PLFA.microbi)
+                            )
+           )
+for (i in 1:6){
+mtx.tabMicrobi[,i] <- 
+    lis.nomi.PLFA.microbi[[i]]
+}
+tabella.microbi <-
+    xtable(mtx.tabMicrobi,
+           label = 'tab:GruppiMicrobici', 
+           align  = "lllllll",
+           caption =
+               " qui ci si scrive la disdascalia ")
+print(tabella.microbi, 
+      include.rownames=FALSE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+@ 
+\end{landscape}
 
 % \begin{table}[ht]
 % \caption{Gruppi Microbici }
@@ -1879,10 +1916,139 @@ poter quantificare anche le quantità degli altri composti non presenti nello
 standard.
 
 
-\section{Analisi Statistica}
+\section{Analisi e trattamento dati}
+
+\begin{itemize}
+\item anova modello lineare sulle somme
+\item anova dati composizionali
+\item PCA composizionale
+\item discriminant analisys composizionale
+\end{itemize}
 
 
 \chapter{Risultati}
+
+\section{Generale}
+
+<<disastro>>=
+lis.disastro <-
+    with(lis.tutto$CATEGORIA,
+        list(TIL, STAGIONE, MAN)
+        )
+df.disastro <-
+    aggregate(lis.tutto$PLFA$nMOLI,
+              by= lis.disastro,
+              function(x) mean(x, na.rm=TRUE))
+names(df.disastro)[1:3] <-
+    c("TIL", "STAGIONE", "MAN")
+row.names(df.disastro) <-
+    as.character(interaction(df.disastro[,1],df.disastro[,2],df.disastro[,3]))
+
+
+    stars(df.disastro,
+      #key.loc = c(0.8,1),
+      #key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = FALSE)
+df.butta <- 
+    lis.tutto$PLFA$nMOLI
+row.names(df.butta) <- 
+    with(lis.tutto$CATEGORIA, 
+         paste(as.character(STAGIONE), 
+               as.character(MAN),
+               as.character(TIL), 
+               1:dim(df.butta)[1], 
+               sep  = ".")
+         )
+   stars(df.butta,
+      #key.loc = c(0.8,1),
+      #key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = TRUE)
+rm(df.butta)
+
+@ 
+
+
+
+\section{Somme Moli}
+Qui sotto si vede che la gestione (MAN) non è significativa sulla
+quantita totale di moli di PLFA
+
+<<anovaSommeMoli,  echo=FALSE, include = FALSE>>=
+lm.SommeMoli.1 <-  
+    lm(log(lis.tutto$SOMME$nMOLI) ~ 
+           MAN*TIL*STAGIONE, 
+       data  =  lis.tutto$CATEGORIA)
+lm.SommeMoli.2 <-  
+    lm(log(lis.tutto$SOMME$nMOLI) ~ 
+           TIL+STAGIONE, 
+       data  =  lis.tutto$CATEGORIA)
+
+anova(lm.SommeMoli.1, lm.SommeMoli.2)
+
+summary(lm.SommeMoli.2)
+
+fattore <- 
+    interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
+
+amod <- 
+    aov(log(lis.tutto$SOMME$nMOLI) ~ fattore)
+HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
+tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
+tuk.cld<- cld(tuk)
+@ 
+
+<<fig1plot, fig=FALSE, echo=FALSE, include = FALSE >>=
+
+boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
+        ylab = "log(somma moli PLFA)",
+        main = "pippo"
+        )
+@ 
+
+
+
+\begin{figure}[ht]
+  \centering
+  
+<<label=boxplotsommamoli,fig=TRUE,echo=FALSE>>=
+<<fig1plot>>
+@
+  \caption{boxplot della log(sommamoli)}
+  \label{fig:boxplot_somma_moli}
+\end{figure}
+
+
+
+\section{Analisi composizionale}
+
+<<composizionale1>>=
+Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
+attach(lis.tutto$CATEGORIA)
+lm.1 <-
+    lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
+lm.2 <-
+    lm(ilr(Y.MOLI) ~ MAN + STAGIONE + TIL+ MAN:STAGIONE +MAN:TIL+STAGIONE:TIL)
+
+
+anova(lm.1, lm.2)
+
+anova(lm.2)
+detach(lis.tutto$CATEGORIA)
+
+@ 
+
+
+
+
+
+
+
+
+
 
 %#<<label= qualcosa, fig.width=0.8, fig.height=0.8, echo= FALSE, eval=TRUE, fig=TRUE, incluede=FALSE>>=
 %#par(mfrow=c(2,2))
