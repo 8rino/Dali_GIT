@@ -30,7 +30,7 @@ forse i-C19:0;18MetC19.0;C18:1 omega 9 cis;00LinC18.1.omega9cis;296
 C18:1 om 6 cis e trans Results;00LinC18.1.om6.CISTRANS;C18:1 omega 9trans e 7cis;00LinC18.1.omega9t&omega7cis;296
 10MethylC18:0 sul tic Results;10MetC18.0.on.TIC;boh C18:1;00LinC18.1;296
 10MethylC18:0 sul 74 Results;10MetC18.0.on.74;C18:2;00LinC18.2;294
-C18:1 om 5 Results;00LinC18.1.om5;3-OH C14:0;03HydC14.0;208
+C18:1 om 5 Results;00LinC18.1.om5;3-OH C14:0;03HydC14.0;258
 C18 :2 Results;00LinC18.2;C19:0;00LinC19.0;312
 C19:0 Results;00LinC19.0;C19:0 delta;00CycC19.0;310
 C19:0 delta Results;00LinC19.0.delta;C20:0;00LinC20.0;326
