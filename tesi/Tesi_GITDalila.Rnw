@@ -242,7 +242,8 @@ source(file.path(DirFunz, "biplotAcomp.R"))
   \Istituzione{Universit\`a degli Studi di Firenze}
   \Divisione{Scuola di Agraria}
   \Scuola{Corso di Laurea in Scienze e tecnologie agrarie (LM-69)}
-  \Titolo{titolo Da definire}
+  \Titolo{Determinazione dei PLFA microbici, tramite GC-MS, in suoli sottoposti
+  a diversi metodi di gestione.}
   \NCandidato{Candidata}
   \Candidato{Dalila Pasquini}
   \NRelatore{Relatore}{}
@@ -683,7 +684,7 @@ macropori e che invece risentiranno di una maggior alternanza tra
 periodi umidi e secchi. 
 
 La maggior parte degli organismi ha come coefficiente di avvizzimento 
-valori prossimi ai -15, -25 bar (in scala logaritmica 4.2, 4.4 pF). 
+valori prossimi ai -15, -25 bar (in scala logaritmica pF 4.2, 4.4). 
 Tale coefficiente, che è diverso per ogni organismo, rappresenta 
 il potenziale ovvero la pressione che l’individuo dovrebbe creare per 
 vincere le forze che trattengono il liquido nelle particelle del suolo. 
@@ -1741,8 +1742,8 @@ frigorifera a 3°C.
 I primi ad essere stati preparati sono stati i 36 campioni “m”
 autunnali i quali, tolti dalla cella frigorifera, sono stati
 setacciati a 2 mm. Di tutto il campione omogeneizzato, sono stati
-pesati 5 g che sono stati successivamente macinati con il mulino a
-palle e poi setacciati a 200 µm (Fig. \ref{fig:macinato}).
+pesati 5 g che sono stati successivamente macinati per 5 minuti con il mulino 
+colloidale e poi setacciati a 200 µm (Fig. \ref{fig:macinato}).
 
 
 \begin{figure}[ht]
@@ -1779,6 +1780,21 @@ Reagenti:
 \end{itemize}
 
 Procedura:
+è stato pesato un grammo di suolo liofilizzato in una vial da 20 mL di vetro
+ed è stato incluso anche il bianco; in ogni campione è stato aggiunto 9.2mL di B \& D
+e, dopo averlo tappato e vortexato per un minuto, è stato lasciato negli 
+ultrasuoni per un ulteriore minuto. A questo punto i campioni sono stati lasciati
+2 ore circa a estrarre e, per non far sedimentare tutto, ogni 10 minuti i campioni 
+venivano agitati mediante il vortex.
+Passate le due ore le vial sono state messe in centrifuga a 3000 giri per 10 minuti
+a 25-30°C e, ottenuto il limpido, è stato trasferito il surnatante in una vial pulita.
+Il suolo rimasto nella vial è stato nuovamente lavato conaltri 2.5 mL di B \& D, passato 
+nel vortex per un minuto e altrettanto tempo negli ultrasuoni.
+dopo una decina di minuti la vial con il terreno è stata nuovamente messa in 
+centrifuga a 3000 giri per 10 minuti a 25-30°C e il surnatante è stato trasferito
+e aggiunto al limpido precedente.
+A questo punto...
+
 \begin{enumerate}
 \item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro adatta per la 
 centrifuga ed includere il bianco;
@@ -1983,7 +1999,7 @@ I dati in uscita sono poi stati elaborati con il programma \emph{Mass
   Hunter} in modo da effettuare l’analisi qualitativa e
 quantitativa. Per il riconoscimento qualitativo sono state prese in
 considerazione le molecole contenute nel BAMEs MIX e alcuni composti
-trovati tramite analisi bibliografica [BIBLIO] e presentati come
+trovati tramite analisi bibliografica e presentati come
 specifici \emph{Markers} di determinati gruppi microbici
 (Tab. \ref{tab:GruppiMicrobici}).
 
@@ -2032,7 +2048,27 @@ print(tabella.microbi,
 %        \bottomrule
 %  \end{tabular}
 % \end{table}
-
+Di tutti questi 37 composti identificati, 21 sono stati ritenuti identificativi per 
+i gruppi microbici esaminati in questo lavoro, e vengono riportati in tabella:
+I gram positivi sono identificati da Ic14;0, Ic15:0, Ac15:0, Ic16:0, Ic17:0, Ac17:0 
+come trovato in bibliografia ( \todo{o'Leary and wilkinson 1988}, zelles et al 1994, white 
+et al. 1996, zelles 1997, fierer 2002, frostegard 2010); 
+%abbiamo trovato una 
+%contraddizione con quanto viene affermato da  feng 2000 che dice che il 10 methyl 
+%c16 e’ caratteristico dei Gram +, mentre noi lo abbiamo attribuito, insieme al 10Me 
+C17 e 10Methyl C18 agli attinomiceti come d’accordo con Kroppenstedt 1985, Bresson 
+1988, zelles 1994, fierer 2002. 
+Per quanto riguarda i Gram negati invece abbiamo preso i composti C16:1omega7, 
+omega5, il cyclo C17 e c19 e anche il c18:1 omega 9 sia cis che trans (o'Leary and 
+wilkinson 1988, schoug et al 2008  , zelles 1994, white et al. 1996, zelles 1997, 
+fierer 2002, frostegard 2010, I c16:1 omega 5 e 7 secondo Soderberg et al 2014, 
+wilkinson 1988).
+I funghi hanno invece il C18:2 *(kong and six 2012, Frostegard and baath 1996, 
+zelles 1997)e il C18:1 omega nove sia trans che cis forstegard 2010, kaiser et al 
+2010, frostegard 1993, zelles 1997, fierer 2002. Le  micorrize sono rappresentate 
+dal solo C16:1omega5 (frostegard 2010, olsson et al 1995) e, come ultimo gruppo 
+microbico da noi preso in esame, abbiamo i protozoi con c20:2 sia trans che cis 
+(White et al 1996, fierer 2002).
 
 Il riconoscimento è stato possibile tramite la \emph{NIST14} (...),
 mentre l'analisi quantitativa è stata effettuata utilizzando \emph{MS
@@ -2042,11 +2078,25 @@ le quantità degli altri composti non presenti nello standard.
 
 
 \section{Analisi e trattamento dati}
+I dati sono stati analizzati mediante il linguaggio di programmazione R 3.4.?. 
 
 \begin{itemize}
-\item anova modello lineare sulle somme
+\item anova modello lineare sulle somme: l'esplorazione è stata fatta tramite 
+confronto dei modelli statistici lineari e analisi della varianza (ANOVA).
+Nei modelli sono state inizialmente valutate eventuali interazioni tra stagionalità
+e lavorazioni e conduzione.????
+Sui modelli definitivi è stata anche applicata un'analisi della varianza (ANOVA).
+Inoltre è stato anche effettuato il \todo{cit Tukey test}.
+
 \item anova dati composizionali
-\item PCA composizionale
+\item PCA composizionale:
+La concentrazione dei PLFA individuale, calcolata sulle moli, è stata usata come 
+input nell'analisi delle componenti principali (PCA) così da determinare come 
+i BAMEs si modificano in base alla stagione, gestione e lavorazioni effettuate.
+Usando la PCA si combinano i dati a 37 dimensioni (dovute ai 37 PLFA differenti 
+identificati nei campioni), in una serie di assi lineari che incorporano la 
+massima varianza nei dati. La PCA è stata condotta usando il programma R 3.4.?.
+
 \item discriminant analisys composizionale
 \end{itemize}
 
@@ -2054,6 +2104,57 @@ le quantità degli altri composti non presenti nello standard.
 \chapter{Risultati}
 
 \section{Generale}
+In figura (tal de tali 4,1) abbiamo il cromatogramma dello standard tal di tali e
+vediamo  che tutti i composti presi in esame in questa tesi risultano ben 
+separati e identificati. 
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{./foto/stddil50.png}
+\caption{Standard BAMEs MIX Diluito 50.}
+\label{fig:crom_std}
+\end{figure}
+Il cromatogramma successivo (Fig. 4.2) è invece quello di un campione preso 
+a Ottobre 2016, il CO10C3m, quindi su campo a gestione convenzionale dove è 
+stata effettuata la frangizollatura e vediamo dei composti in più rispetto a 
+quelli presenti negli standard:
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{./foto/cromatco10c3mOTT.png}
+\caption{Campione autunnale in campo convenzionale (CO10) e lavorazione Frangizollato.}
+\label{fig:crom_CO10C3}
+\end{figure}
+i C14:0, a C14:0, Me C16:0, 10MeC16:0, 7Me C17:0, bohC17:0, C16:omega5, a C17:0,
+10MeC18:0, bohMeC18:0, c17:1omega9, bohMeC18:0, bohC18:1, c20:2 e questo perchè il 
+BAMEs MIX in commercio non è specifico del suolo e quindi è mancante di alcuni
+acidi grassi avendo l'habitat tellurico una grande biodiversità.
+Paragonando il cromatogramma precedente con il seguente (Fig.4.3) che 
+rappresenta un campione biologico preso nello stesso anno e che ha subito 
+identiche lavorazioni,  OO4C3m, vediamo che non ci sono delle differenze 
+immediatamente evidenti tra i due.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{./foto/OO04C3mOtt.png}
+\caption{Campione autunnale in campo Biologico (OO04) e lavorazione Frangizollato.}
+\label{fig:crom_OO04C3m}
+\end{figure}
+Notiamo la presenza degli stessi composti e con intensità simili; dunque con un 
+esame puramente visivo, anche se ci si aspetterebbe di vedere andamenti 
+cromatografici differenti in base alle due gestioni e/o lavorazioni, queste non 
+sono riscontrabili.
+Invece una certa differenza si vede nella stagionalità, infatti comparando il 
+primo cromatogramma (Fig.4.2) con quello ottenuto dal campione preso nel medesimo 
+punto, CO10C3m, ma in estate (Fig.4.4) vediamo uno spiccato innalzamento del C19:0.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{./foto/10c3mest.png}
+\caption{Campione estivo in campo convenzionale (CO10) e lavorazione Frangizollato.}
+\label{fig:crom_CO10C3est}
+\end{figure}
+Comunque, per avere dei risultati più (chiari e visibili?), le differenze sono 
+da cercare tramite l'analisi quantitativa statistica dei dati 
+(tramite modelli lineari, tukey test, PCA e anova(?)).
+
+
 
 <<FigStarplotCampioni, fig=FALSE, echo=FALSE, include = FALSE >>=
 lis.disastro <-
@@ -2076,23 +2177,23 @@ df.disastro <- df.disastro[ordina,]
       draw.segments = TRUE,
       scale = TRUE,
       full = FALSE)
-df.butta <- 
-    lis.tutto$PLFA$nMOLI
-row.names(df.butta) <- 
-    with(lis.tutto$CATEGORIA, 
-         paste(as.character(STAGIONE), 
-               as.character(MAN),
-               as.character(TIL), 
-               1:dim(df.butta)[1], 
-               sep  = ".")
-         )
-   stars(df.butta,
-      #key.loc = c(0.8,1),
-      #key.xpd=TRUE,
-      draw.segments = TRUE,
-      scale = TRUE,
-      full = TRUE)
-rm(df.butta)
+# df.butta <- 
+#     lis.tutto$PLFA$nMOLI
+# row.names(df.butta) <- 
+#     with(lis.tutto$CATEGORIA, 
+#          paste(as.character(STAGIONE), 
+#                as.character(MAN),
+#                as.character(TIL), 
+#                1:dim(df.butta)[1], 
+#                sep  = ".")
+#          )
+#    stars(df.butta,
+#       #key.loc = c(0.8,1),
+#       #key.xpd=TRUE,
+#       draw.segments = TRUE,
+#       scale = TRUE,
+#       full = TRUE)
+# rm(df.butta)
 
 @ 
 
@@ -2106,6 +2207,24 @@ rm(df.butta)
   \label{fig:starplot_campioni}
 \end{figure}
 
+In figura (tal de tali) abbiamo 12 starplot dove le variabili sono i 37 BAMEs 
+determinati tramite l'analisi cromatografica. 
+Ogni starplot mostra la media dei PLFA trovati nei campioni corrispondenti alla 
+lavorazione-stagione-gestione segnalata. 
+Per righe vediamo le differenze dovute alle lavorazioni, mentre in colonna, 
+a coppie, vediamo quelle legate alle due gestioni. Inoltre i primi sei 
+starplots appartengono tutti alla stagione autunnale, mentre dal settimo 
+al dodicesimo abbiamo i campioni presi in estate.
+Notiamo immediatamente una differenza tra le due stagioni, con un'estate più 
+ricca(?) in tutte le combinazioni di gestione e lavoro. 
+Guardando poi gli starplots entro stagione vediamo che nel convenzionale i 
+PLFA sono più presenti che nel biologico (2 casi su 3 sia nell'estate che 
+nell'autunno). 
+Per quanto riguara le lavorazioni vediamo che il rippato mostra 
+sempre una quantità di PLFA maggiore rispetto alle altre due lavorazioni, 
+tranne nel caso del biologico autunnale dove invece è il frangizollato.
+
+
 
 
 
@@ -2113,10 +2232,11 @@ rm(df.butta)
 Qui sotto si vede che la gestione (MAN) non è significativa sulla
 quantita totale di moli di PLFA
 
+
 <<anovaSommeMoli,  echo=FALSE, include = FALSE>>=
 
-summary(lm(log(lis.tutto$SOMME$nMOLI) ~ 
-           til))
+#summary(lm(log(lis.tutto$SOMME$nMOLI) ~ 
+ #          til))
 
 
 lm.SommeMoli.1 <-  
@@ -2162,6 +2282,17 @@ boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
   \label{fig:boxplot_somma_moli}
 \end{figure}
 
+L'immagine (tale) rappresenta i 6 boxplot delle somme delle moli dei vari PLFA,
+uno per ogni lavorazione entro stagione. (abbiamo usato la funzione log() così 
+da ridurre la varianza).
+Tramite questi boxplots vediamo che la somma delle moli in estate è maggiore 
+rispetto a quella in autunno, con una media sempre superiore a 4.0; 
+come visto con gli starplots.
+Anche in questo caso osserviamo che il rippato prevede una media più alta (circa 4.5)
+sia in autunno che nella stagione estiva, mentre l'arato è inferiore in autunno 
+e più o meno simile al frangizollato in estate.
+In questo caso non sono state messe in evidenza le due gestioni.
+
 
 
 \section{Analisi composizionale}
@@ -2175,7 +2306,15 @@ pcx.Y.MOLI <- princomp(Y.MOLI)
 screeplot(pcx.Y.MOLI)
 @ 
 
-<<FigPCAcomposizionale_1_2, eval = TRUE, echo = FALSE, result = hide>>=
+
+Dallo screegraph composizionale delle moli vediamo che la prima componente, 
+contiene (rappresenta?) oltre l'80\% della varianza totale.
+Mentre, già la seconda, rappresenta solo il 18\% (dato preciso?) e le successive, 
+sommate insieme, rappresentano una percentuale irrisoria.
+Per questo motivo abbiamo utilizzato solo le prime due componenti.
+
+
+<<FigPCAcomposizionale_1_2, eval = FALSE, echo = FALSE, result = hide>>=
 
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
               col = c(1,2),
@@ -2240,133 +2379,133 @@ fun.biplot(x=pcx.Y.MOLI,
 
 
 Qui ci vanno le tabelle dei modelli composizionali con anova e modelli marginali
-<<ModelloComposizionale, eval = TRUE, results = tex>>=
-MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
-MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
-df.metlin <- 
-    cbind.data.frame(
-        BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
-        MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
-        LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
-    )
-
-Y.metlin <- acomp(df.metlin)
-lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
-anova(lm.2)
-
-SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
-SatInsat[which(SatInsat  == "2")] <- "1"
-vec.satinsat.ratio <- 
-        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
-        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
-
-lm.satinsat <- 
-    lm(log(vec.satinsat.ratio)  ~ 
-      STAGIONE*MAN*TIL ,  
-   data = lis.tutto$CATEGORIA)
-anova(lm.satinsat)
-
-summary(lm.satinsat)
-attach(lis.tutto$CATEGORIA)
-lm.1 <-
-    lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
-lm.2 <-
-    lm(ilr(Y.MOLI) ~ MAN + 
-           STAGIONE + TIL+ 
-           MAN:STAGIONE +
-           MAN:TIL+STAGIONE:TIL)
-
-
-anova(lm.1, lm.2)
-
-anova(lm.2)
-detach(lis.tutto$CATEGORIA)
-
-stag <- lis.tutto$CATEGORIA$STAGIONE
-til <- lis.tutto$CATEGORIA$TIL
-man <- lis.tutto$CATEGORIA$MAN
-contrasts(stag) <- "contr.sum"
-contrasts(til) <- "contr.sum"
-contrasts(man) <- "contr.sum"
-
-fattore <- 
-    interaction(lis.tutto$CATEGORIA$STAGIONE, 
-                lis.tutto$CATEGORIA$TIL, 
-                lis.tutto$CATEGORIA$MAN)
-contrasts(fattore) <- "contr.sum"
-
-lm.2 <-
-    lm(ilr(Y.MOLI) ~  man + 
-           stag + til+ 
-           man:stag +
-           man:til+stag:til)
-
-anova(lm.2)
-coefs <- 
-    ilrInv(coef(lm.2), orig=Y.metlin)
-#barplot(coefs, las=2, col=rainbow(4))
-B <- clr(coefs[-1,])
-svdlm <- svd(B)
-nomi.frecce <- 
-    substr(
-        dimnames(B)[[1]]
-       ,8,21)
-
-coloredBiplot(x=svdlm$v[,1:2], pc.biplot = TRUE,
-              y=svdlm$u[,1:2],
-              scale=0,
-              xlabs.pc= dimnames(B)[[2]],
-              xlabs.col  = 1,#ifelse(substr(dimnames(B)[[2]],5,5) == "M", 3,4), 
-              ylabs = nomi.frecce
-
-              )
-
-xarrows=TRUE,
-              ypch=4, ynames=colnames(B),
-              xnames=rownames(B)
-              )
-
-sum(svdlm$d[1:2]^2/sum(svdlm$d^2))
-
-require(MASS)
-
- questi <- names(lis.tutto$PLFA$AREA)[-composti.non.assegnabili]
-
-xc <- acomp(lis.tutto$PLFA$nMOLI)
-dd <- as.dist(
-    variation(xc))
-hc <-  hclust(dd, method="ward.D2")
-      (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
-plot(dend1)
-rect.hclust(hc , k=4, border="red")
- 
-prova <- as.vector(cutree(hc, k = 3))
-
-
-df.prova <- 
-    cbind.data.frame(
-        UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
-        DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
-        TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
-    )
-
-Y.prova <- acomp(df.prova)
-plot(Y.prova, col = as.numeric(stag))
-lm.1 <-
-    lm(ilr(Y.prova) ~  STAGIONE, data = lis.tutto$CATEGORIA)
-anova(lm.1)
-
-    ilrInv(coef(lm.1), orig=Y.prova)
-############ linear discriminant analysis
-fattore <- 
-    interaction(lis.tutto$CATEGORIA$STAGIONE, 
-                lis.tutto$CATEGORIA$TIL, 
-                lis.tutto$CATEGORIA$MAN)
-
-
-
-res <- lda(x=data.frame(ilr(Y.MOLI)), grouping=fattore)
-pairs(res, col=(1:12)[as.integer(fattore)])
+<<ModelloComposizionale, eval = FALSE, results = tex>>=
+# MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
+# MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
+# df.metlin <- 
+#     cbind.data.frame(
+#         BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
+#         MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
+#         LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
+#     )
+# 
+# Y.metlin <- acomp(df.metlin)
+# lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
+# anova(lm.2)
+# 
+# SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
+# SatInsat[which(SatInsat  == "2")] <- "1"
+# vec.satinsat.ratio <- 
+#         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
+#         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
+# 
+# lm.satinsat <- 
+#     lm(log(vec.satinsat.ratio)  ~ 
+#       STAGIONE*MAN*TIL ,  
+#    data = lis.tutto$CATEGORIA)
+# anova(lm.satinsat)
+# 
+# summary(lm.satinsat)
+# attach(lis.tutto$CATEGORIA)
+# lm.1 <-
+#     lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
+# lm.2 <-
+#     lm(ilr(Y.MOLI) ~ MAN + 
+#            STAGIONE + TIL+ 
+#            MAN:STAGIONE +
+#            MAN:TIL+STAGIONE:TIL)
+# 
+# 
+# anova(lm.1, lm.2)
+# 
+# anova(lm.2)
+# detach(lis.tutto$CATEGORIA)
+# 
+# stag <- lis.tutto$CATEGORIA$STAGIONE
+# til <- lis.tutto$CATEGORIA$TIL
+# man <- lis.tutto$CATEGORIA$MAN
+# contrasts(stag) <- "contr.sum"
+# contrasts(til) <- "contr.sum"
+# contrasts(man) <- "contr.sum"
+# 
+# fattore <- 
+#     interaction(lis.tutto$CATEGORIA$STAGIONE, 
+#                 lis.tutto$CATEGORIA$TIL, 
+#                 lis.tutto$CATEGORIA$MAN)
+# contrasts(fattore) <- "contr.sum"
+# 
+# lm.2 <-
+#     lm(ilr(Y.MOLI) ~  man + 
+#            stag + til+ 
+#            man:stag +
+#            man:til+stag:til)
+# 
+# anova(lm.2)
+# coefs <- 
+#     ilrInv(coef(lm.2), orig=Y.metlin)
+# #barplot(coefs, las=2, col=rainbow(4))
+# B <- clr(coefs[-1,])
+# svdlm <- svd(B)
+# nomi.frecce <- 
+#     substr(
+#         dimnames(B)[[1]]
+#        ,8,21)
+# 
+# coloredBiplot(x=svdlm$v[,1:2], pc.biplot = TRUE,
+#               y=svdlm$u[,1:2],
+#               scale=0,
+#               xlabs.pc= dimnames(B)[[2]],
+#               xlabs.col  = 1,#ifelse(substr(dimnames(B)[[2]],5,5) == "M", 3,4), 
+#               ylabs = nomi.frecce
+# 
+#               )
+# 
+# xarrows=TRUE,
+#               ypch=4, ynames=colnames(B),
+#               xnames=rownames(B)
+#               )
+# 
+# sum(svdlm$d[1:2]^2/sum(svdlm$d^2))
+# 
+# require(MASS)
+# 
+#  questi <- names(lis.tutto$PLFA$AREA)[-composti.non.assegnabili]
+# 
+# xc <- acomp(lis.tutto$PLFA$nMOLI)
+# dd <- as.dist(
+#     variation(xc))
+# hc <-  hclust(dd, method="ward.D2")
+#       (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
+# plot(dend1)
+# rect.hclust(hc , k=4, border="red")
+#  
+# prova <- as.vector(cutree(hc, k = 3))
+# 
+# 
+# df.prova <- 
+#     cbind.data.frame(
+#         UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
+#         DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
+#         TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
+#     )
+# 
+# Y.prova <- acomp(df.prova)
+# plot(Y.prova, col = as.numeric(stag))
+# lm.1 <-
+#     lm(ilr(Y.prova) ~  STAGIONE, data = lis.tutto$CATEGORIA)
+# anova(lm.1)
+# 
+#     ilrInv(coef(lm.1), orig=Y.prova)
+# ############ linear discriminant analysis
+# fattore <- 
+#     interaction(lis.tutto$CATEGORIA$STAGIONE, 
+#                 lis.tutto$CATEGORIA$TIL, 
+#                 lis.tutto$CATEGORIA$MAN)
+# 
+# 
+# 
+# res <- lda(x=data.frame(ilr(Y.MOLI)), grouping=fattore)
+# pairs(res, col=(1:12)[as.integer(fattore)])
 
 @ 
 
@@ -2561,7 +2700,30 @@ pairs(res, col=(1:12)[as.integer(fattore)])
 %      table.placement= "hb")
 %
 %@
+\chapter{Discussioni}
+perchè gc e problema risolvibile del 126, problema 10 methyl qualcosa, perchè pca 
+Avendo in questo caso di studio 37 variabili da manovrare e osservare nello 
+spazio multidimensionale, è risultato utile utilizzare la PCA( Analisi in 
+Componenti Principali) che ci permette di sostituire le 37 variabili originari
+con un numero ridotto di componenti principali così che sia facilitata la 
+lettura ma anche deve essere garantita la minor perdita possibile di informazione.
+Dunque ci mostra la componente con la combinazione lineare di massima varianza, 
+che sarà nominata con Comp.1, successivamente verrà mostratala Comp.2 e quindi 
+la seconda combinazione lineare in termini di varianza e così via a decrescere.
+A questo punto ci è possibile scegliere il numero di componenti principali 
+ritenuto più facile da interpretare e anche più idoneo per avere la minima 
+perdita di dati.
 
+ecc.
+spiegare :
+l'estate più che l'autunno? se maggiori i protozoi è scritto anche a pagina 25
+che dico che preferiscono t sopra i 20 gradi ecc, cerca lì
+il rippato forse perchè minor disturbo rispetto alle altre due lavorazioni che invece
+alterano completamente il terreno e invece nel rip posso aver campionato in una porzione
+di terreno non modificato
+biologico meno o comunque non variazione rispetto il convenzionale perchè i microrganismi
+si modificano per alcuni fattori quali nutrienti (?), t (clima), acqua-ossigeno-asfissia
+(lavorazioni-clima) e pH ma suolo tamponante e quindi bona.
 \begin{appendices}
 
 \end{appendices}

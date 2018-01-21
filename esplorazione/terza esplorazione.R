@@ -426,9 +426,9 @@ fun.biplot(x=pcx.PLFA,
 
 ## sum(butta[,1]!=butta[,2])
 
-par(mfrow = c(2,4))
+par(mfrow = c(1,1))
 fun.biplot(x=pcx.PLFA,
-           col=c(1,"transparent"),
+           #col=c(1,"transparent"),
            choices=c(1,2), ## assi/componenti da considerare
            scale=1,
            pc.biplot=FALSE,
@@ -436,7 +436,9 @@ fun.biplot(x=pcx.PLFA,
            col.obs = as.numeric(df.elabora$STAGIONE),
            etich = interaction(df.elabora$TIL, df.elabora$MAN)
            )
+
 for (dalila in 2:7){
+  
     titolo <-
         names(df.gruppiMicrobici)[dalila]
     plot(0, 0,
@@ -446,23 +448,24 @@ for (dalila in 2:7){
          )
     for (i in 1:dim(pcx.PLFA$loadings)[1]){
         posizioneX <-
-            pcx.PLFA$loadings[i,1]
-        posizioneY <- pcx.PLFA$loadings[i,2]
+            pcx.PLFA$loadings[,1]
+        posizioneY <- pcx.PLFA$loadings[,2]
         titolo <-
             names(df.gruppiMicrobici)[dalila]
-        colore <-
-            ifelse(df.gruppiMicrobici[i, dalila]==1,
-                   "black", ## nero se vero
-                   "transparent")# grifgiochiaro se falso
+        # colore <-
+        #     ifelse(df.gruppiMicrobici[i, dalila]==1,
+        #            "black", ## nero se vero
+        #            "transparent")# grifgiochiaro se falso
         arrows(0, 0,
                posizioneX, posizioneY,
-               col=colore,
+               col=1,
                length=0.1)
         text(posizioneX, posizioneY,
              label = dimnames(pcx.PLFA$loadings)[[1]][i],
              pos= 1,
              offset=0.5, col=colore)
     }
+    
 }
 
 
@@ -819,3 +822,54 @@ summary(lm.1)
 
 bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 >>>>>>> f9f9192d0948345537c1773844b183283a904ed1
+
+
+########################
+#PROVA 
+########################
+
+xc <- acomp(lis.tutto$PLFA$nMOLI)
+dd <- as.dist(
+  variation(xc))
+hc <-  hclust(dd, method="ward.D2")
+(dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
+plot(dend1)
+rect.hclust(hc , k=3, border="red")
+prova <- as.vector(cutree(hc, k = 3))
+
+df.prova <-
+  cbind.data.frame(
+    UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
+    DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
+    TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
+  )
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     main = "titolo"
+)
+for (i in 1:dim(pcx.PLFA$loadings)[1]){
+  posizioneX <-
+    pcx.PLFA$loadings[,1]
+  posizioneY <- pcx.PLFA$loadings[,2]
+  #titolo <-
+   # names(df.gruppiMicrobici)[dalila]
+    #col= (prova)
+  # colore <-
+  #     ifelse(df.gruppiMicrobici[i, dalila]==1,
+  #            "black", ## nero se vero
+  #            "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, 
+         posizioneY,
+         col=prova,
+         length=0.1)
+  # text(posizioneX, posizioneY,
+  #      label = dimnames(pcx.PLFA$loadings)[[1]][i],
+  #      pos= 1,
+  #      offset=0.5, col=colore)
+}
+
+########
