@@ -2107,22 +2107,22 @@ massima varianza nei dati. La PCA è stata condotta usando il programma R 3.4.?.
 In figura (tal de tali 4,1) abbiamo il cromatogramma dello standard tal di tali e
 vediamo  che tutti i composti presi in esame in questa tesi risultano ben 
 separati e identificati. 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.2]{./foto/stddil50.png}
-\caption{Standard BAMEs MIX Diluito 50.}
-\label{fig:crom_std}
-\end{figure}
+%% \begin{figure}[ht]
+%% \centering
+%% \includegraphics[scale=0.2]{./foto/stddil50.png}
+%% \caption{Standard BAMEs MIX Diluito 50.}
+%% \label{fig:crom_std}
+%% \end{figure}
 Il cromatogramma successivo (Fig. 4.2) è invece quello di un campione preso 
 a Ottobre 2016, il CO10C3m, quindi su campo a gestione convenzionale dove è 
 stata effettuata la frangizollatura e vediamo dei composti in più rispetto a 
 quelli presenti negli standard:
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.2]{./foto/cromatco10c3mOTT.png}
-\caption{Campione autunnale in campo convenzionale (CO10) e lavorazione Frangizollato.}
-\label{fig:crom_CO10C3}
-\end{figure}
+%% \begin{figure}[ht]
+%% \centering
+%% \includegraphics[scale=0.2]{./foto/cromatco10c3mOTT.png}
+%% \caption{Campione autunnale in campo convenzionale (CO10) e lavorazione Frangizollato.}
+%% \label{fig:crom_CO10C3}
+%% \end{figure}
 i C14:0, a C14:0, Me C16:0, 10MeC16:0, 7Me C17:0, bohC17:0, C16:omega5, a C17:0,
 10MeC18:0, bohMeC18:0, c17:1omega9, bohMeC18:0, bohC18:1, c20:2 e questo perchè il 
 BAMEs MIX in commercio non è specifico del suolo e quindi è mancante di alcuni
@@ -2131,12 +2131,12 @@ Paragonando il cromatogramma precedente con il seguente (Fig.4.3) che
 rappresenta un campione biologico preso nello stesso anno e che ha subito 
 identiche lavorazioni,  OO4C3m, vediamo che non ci sono delle differenze 
 immediatamente evidenti tra i due.
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.2]{./foto/OO04C3mOtt.png}
-\caption{Campione autunnale in campo Biologico (OO04) e lavorazione Frangizollato.}
-\label{fig:crom_OO04C3m}
-\end{figure}
+%% \begin{figure}[ht]
+%% \centering
+%% \includegraphics[scale=0.2]{./foto/OO04C3mOtt.png}
+%% \caption{Campione autunnale in campo Biologico (OO04) e lavorazione Frangizollato.}
+%% \label{fig:crom_OO04C3m}
+%% \end{figure}
 Notiamo la presenza degli stessi composti e con intensità simili; dunque con un 
 esame puramente visivo, anche se ci si aspetterebbe di vedere andamenti 
 cromatografici differenti in base alle due gestioni e/o lavorazioni, queste non 
@@ -2144,19 +2144,19 @@ sono riscontrabili.
 Invece una certa differenza si vede nella stagionalità, infatti comparando il 
 primo cromatogramma (Fig.4.2) con quello ottenuto dal campione preso nel medesimo 
 punto, CO10C3m, ma in estate (Fig.4.4) vediamo uno spiccato innalzamento del C19:0.
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.2]{./foto/10c3mest.png}
-\caption{Campione estivo in campo convenzionale (CO10) e lavorazione Frangizollato.}
-\label{fig:crom_CO10C3est}
-\end{figure}
+%% \begin{figure}[ht]
+%% \centering
+%% \includegraphics[scale=0.2]{./foto/10c3mest.png}
+%% \caption{Campione estivo in campo convenzionale (CO10) e lavorazione Frangizollato.}
+%% \label{fig:crom_CO10C3est}
+%% \end{figure}
 Comunque, per avere dei risultati più (chiari e visibili?), le differenze sono 
 da cercare tramite l'analisi quantitativa statistica dei dati 
 (tramite modelli lineari, tukey test, PCA e anova(?)).
 
 
 
-<<FigStarplotCampioni, fig=FALSE, echo=FALSE, include = FALSE >>=
+<<FigStarplotMedie, fig=FALSE, echo=FALSE, include = FALSE >>=
 lis.disastro <-
     with(lis.tutto$CATEGORIA,
         list(TIL, STAGIONE, MAN)
@@ -2177,23 +2177,29 @@ df.disastro <- df.disastro[ordina,]
       draw.segments = TRUE,
       scale = TRUE,
       full = FALSE)
-# df.butta <- 
-#     lis.tutto$PLFA$nMOLI
-# row.names(df.butta) <- 
-#     with(lis.tutto$CATEGORIA, 
-#          paste(as.character(STAGIONE), 
-#                as.character(MAN),
-#                as.character(TIL), 
-#                1:dim(df.butta)[1], 
-#                sep  = ".")
-#          )
-#    stars(df.butta,
-#       #key.loc = c(0.8,1),
-#       #key.xpd=TRUE,
-#       draw.segments = TRUE,
-#       scale = TRUE,
-#       full = TRUE)
-# rm(df.butta)
+@ 
+
+<<FigStarplotCampioni, fig=FALSE, echo=FALSE, include = FALSE >>=
+df.butta <- 
+    lis.tutto$PLFA$nMOLI
+row.names(df.butta) <- 
+    with(lis.tutto$CATEGORIA, 
+         paste(substr(as.character(STAGIONE), 1,2),
+               substr(as.character(MAN),1,1),
+              substr( as.character(TIL),1,1),                
+               1:dim(df.butta)[1], 
+               sep  = ".")
+         )
+ordina <- 
+    with(lis.tutto$CATEGORIA, order(STAGIONE, MAN,TIL, FIELD))
+df.butta <- df.butta[ ordina,]
+   stars(df.butta,
+      #key.loc = c(0.8,1),
+      #key.xpd=TRUE,
+      draw.segments = TRUE, cex = 0.6,
+      scale = TRUE,
+      full = FALSE)
+rm(df.butta)
 
 @ 
 
@@ -2207,20 +2213,30 @@ df.disastro <- df.disastro[ordina,]
   \label{fig:starplot_campioni}
 \end{figure}
 
-In figura (tal de tali) abbiamo 12 starplot dove le variabili sono i 37 BAMEs 
-determinati tramite l'analisi cromatografica. 
-Ogni starplot mostra la media dei PLFA trovati nei campioni corrispondenti alla 
-lavorazione-stagione-gestione segnalata. 
-Per righe vediamo le differenze dovute alle lavorazioni, mentre in colonna, 
-a coppie, vediamo quelle legate alle due gestioni. Inoltre i primi sei 
-starplots appartengono tutti alla stagione autunnale, mentre dal settimo 
-al dodicesimo abbiamo i campioni presi in estate.
-Notiamo immediatamente una differenza tra le due stagioni, con un'estate più 
-ricca(?) in tutte le combinazioni di gestione e lavoro. 
-Guardando poi gli starplots entro stagione vediamo che nel convenzionale i 
-PLFA sono più presenti che nel biologico (2 casi su 3 sia nell'estate che 
-nell'autunno). 
-Per quanto riguara le lavorazioni vediamo che il rippato mostra 
+La figura \ref{fig:starplot_medie} permette di notare una differenza
+tra le due stagioni, con un'estate più ricca(?) in tutte le
+combinazioni di gestione e lavoro.  Guardando poi gli starplots entro
+stagione vediamo che nel convenzionale i PLFA sono più presenti che
+nel biologico (2 casi su 3 sia nell'estate che nell'autunno).
+
+\begin{figure}[ht]
+  \centering
+  
+<<label=StarplotMedie, fig=TRUE, fig.width = 0.7, fig.height = 0.7, echo=FALSE>>=
+<<FigStarplotMedie>>
+@
+\caption{mostra 12 elementi ove ogni spicchio rappresenta uno dei 37
+  BAMEs.  Ogni elemento (starplot) mostra la media dei PLFA trovati
+  nei campioni corrispondenti alla lavorazione-stagione-gestione sotto
+  indicata.  Per righe vediamo le differenze dovute alle lavorazioni,
+  mentre in colonna, a coppie, vediamo quelle legate alle due
+  gestioni. Inoltre i primi sei starplots appartengono tutti alla
+  stagione autunnale, mentre dal settimo al dodicesimo abbiamo i
+  campioni presi in estate.}
+  \label{fig:starplot_medie}
+\end{figure}
+
+Per quanto riguarda le lavorazioni vediamo che il rippato mostra 
 sempre una quantità di PLFA maggiore rispetto alle altre due lavorazioni, 
 tranne nel caso del biologico autunnale dove invece è il frangizollato.
 
@@ -2268,6 +2284,7 @@ boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
         ylab = "log(somma moli PLFA)",
         main = "pippo"
         )
+
 @ 
 
 
@@ -2299,29 +2316,45 @@ In questo caso non sono state messe in evidenza le due gestioni.
 \subsection{PCA composizionale}
 Qui ci vanno le rilfessioni di Dalila sui risultati della PCA composizionale
 
-<<FigScreeplotcomposizionale, eval = TRUE, results = tex>>=
+<<FigScreeplotcomposizionale, eval = TRUE, results = tex, echo = FALSE>>=
 Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
 Y.CONC <- acomp(lis.tutto$PLFA$CONC.ng.ul)
+Y.AREA <- acomp(lis.tutto$PLFA$AREA)
 pcx.Y.MOLI <- princomp(Y.MOLI)
-screeplot(pcx.Y.MOLI)
+plot(pcx.Y.MOLI, type = "screeplot")
+
+text(x = 1:10, y = (pcx.Y.MOLI$sdev^2)[1:10], pos = 4,
+     as.character(round((pcx.Y.MOLI$sdev)^2/sum((pcx.Y.MOLI$sdev^2)),2)[1:10])
+)
 @ 
 
 
-Dallo screegraph composizionale delle moli vediamo che la prima componente, 
-contiene (rappresenta?) oltre l'80\% della varianza totale.
-Mentre, già la seconda, rappresenta solo il 18\% (dato preciso?) e le successive, 
+Dallo screeplot composizionale delle moli vediamo che la prima componente, 
+contiene il 63\% della varianza totale.
+Mentre, già la seconda, rappresenta solo il 12\% (dato preciso?) e le successive, 
 sommate insieme, rappresentano una percentuale irrisoria.
 Per questo motivo abbiamo utilizzato solo le prime due componenti.
 
+Gia alla 5 siamo sotto al 3\%
 
-<<FigPCAcomposizionale_1_2, eval = FALSE, echo = FALSE, result = hide>>=
+
+<<FigPCAcomposizionale_1_2, eval = FALSE, echo = FALSE, results = hide>>=
 
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
-              col = c(1,2),
+              col = c(1,"transparent"),
               xlabs.pc=as.character(lis.tutto$CATEGORIA$MAN), 
               xlabs.col=as.numeric(lis.tutto$CATEGORIA$TIL),
               ylabs = names(lis.tutto$PLFA$nMOLI)
               )
+legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
+       legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
+    
+coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
+              col = c("transparent",1),
+              ylabs = names(lis.tutto$PLFA$nMOLI)
+              )
+
 
 fun.biplot(x=pcx.Y.MOLI,
            col=c(1,5),
@@ -2338,7 +2371,7 @@ fun.biplot(x=pcx.Y.MOLI,
 legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
        legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
 
-<<FigPCAcomposizionale_2_3, eval = FALSE, results = tex>>=
+<<FigPCAcomposizionale_2_3, eval = FALSE, results = tex, echo =  FALSE>>=
 fun.biplot(x=pcx.Y.MOLI,
            col=c(1,5),
            choices=c(2,3), ## assi/componenti da considerare
@@ -2379,134 +2412,147 @@ fun.biplot(x=pcx.Y.MOLI,
 
 
 Qui ci vanno le tabelle dei modelli composizionali con anova e modelli marginali
-<<ModelloComposizionale, eval = FALSE, results = tex>>=
-# MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
-# MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
-# df.metlin <- 
-#     cbind.data.frame(
-#         BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
-#         MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
-#         LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
-#     )
-# 
-# Y.metlin <- acomp(df.metlin)
-# lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
-# anova(lm.2)
-# 
-# SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
-# SatInsat[which(SatInsat  == "2")] <- "1"
-# vec.satinsat.ratio <- 
-#         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
-#         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
-# 
-# lm.satinsat <- 
-#     lm(log(vec.satinsat.ratio)  ~ 
-#       STAGIONE*MAN*TIL ,  
-#    data = lis.tutto$CATEGORIA)
-# anova(lm.satinsat)
-# 
-# summary(lm.satinsat)
-# attach(lis.tutto$CATEGORIA)
-# lm.1 <-
-#     lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
-# lm.2 <-
-#     lm(ilr(Y.MOLI) ~ MAN + 
-#            STAGIONE + TIL+ 
-#            MAN:STAGIONE +
-#            MAN:TIL+STAGIONE:TIL)
-# 
-# 
-# anova(lm.1, lm.2)
-# 
-# anova(lm.2)
-# detach(lis.tutto$CATEGORIA)
-# 
-# stag <- lis.tutto$CATEGORIA$STAGIONE
-# til <- lis.tutto$CATEGORIA$TIL
-# man <- lis.tutto$CATEGORIA$MAN
-# contrasts(stag) <- "contr.sum"
-# contrasts(til) <- "contr.sum"
-# contrasts(man) <- "contr.sum"
-# 
-# fattore <- 
-#     interaction(lis.tutto$CATEGORIA$STAGIONE, 
-#                 lis.tutto$CATEGORIA$TIL, 
-#                 lis.tutto$CATEGORIA$MAN)
-# contrasts(fattore) <- "contr.sum"
-# 
-# lm.2 <-
-#     lm(ilr(Y.MOLI) ~  man + 
-#            stag + til+ 
-#            man:stag +
-#            man:til+stag:til)
-# 
-# anova(lm.2)
-# coefs <- 
-#     ilrInv(coef(lm.2), orig=Y.metlin)
-# #barplot(coefs, las=2, col=rainbow(4))
-# B <- clr(coefs[-1,])
-# svdlm <- svd(B)
-# nomi.frecce <- 
-#     substr(
-#         dimnames(B)[[1]]
-#        ,8,21)
-# 
-# coloredBiplot(x=svdlm$v[,1:2], pc.biplot = TRUE,
-#               y=svdlm$u[,1:2],
-#               scale=0,
-#               xlabs.pc= dimnames(B)[[2]],
-#               xlabs.col  = 1,#ifelse(substr(dimnames(B)[[2]],5,5) == "M", 3,4), 
-#               ylabs = nomi.frecce
-# 
-#               )
-# 
-# xarrows=TRUE,
-#               ypch=4, ynames=colnames(B),
-#               xnames=rownames(B)
-#               )
-# 
-# sum(svdlm$d[1:2]^2/sum(svdlm$d^2))
-# 
-# require(MASS)
-# 
-#  questi <- names(lis.tutto$PLFA$AREA)[-composti.non.assegnabili]
-# 
-# xc <- acomp(lis.tutto$PLFA$nMOLI)
-# dd <- as.dist(
-#     variation(xc))
-# hc <-  hclust(dd, method="ward.D2")
-#       (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
-# plot(dend1)
-# rect.hclust(hc , k=4, border="red")
-#  
-# prova <- as.vector(cutree(hc, k = 3))
-# 
-# 
-# df.prova <- 
-#     cbind.data.frame(
-#         UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
-#         DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
-#         TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
-#     )
-# 
-# Y.prova <- acomp(df.prova)
-# plot(Y.prova, col = as.numeric(stag))
-# lm.1 <-
-#     lm(ilr(Y.prova) ~  STAGIONE, data = lis.tutto$CATEGORIA)
-# anova(lm.1)
-# 
-#     ilrInv(coef(lm.1), orig=Y.prova)
-# ############ linear discriminant analysis
-# fattore <- 
-#     interaction(lis.tutto$CATEGORIA$STAGIONE, 
-#                 lis.tutto$CATEGORIA$TIL, 
-#                 lis.tutto$CATEGORIA$MAN)
-# 
-# 
-# 
-# res <- lda(x=data.frame(ilr(Y.MOLI)), grouping=fattore)
-# pairs(res, col=(1:12)[as.integer(fattore)])
+<<ModelloComposizionale, eval = FALSE, results = hide, echo = FALSE>>=
+MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
+MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
+df.metlin <- 
+    cbind.data.frame(
+        BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
+        MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
+        LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
+    )
 
+Y.metlin <- acomp(df.metlin)
+lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
+anova(lm.2)
+
+SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
+SatInsat[which(SatInsat  == "2")] <- "1"
+vec.satinsat.ratio <- 
+        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
+        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
+
+lm.satinsat <- 
+    lm(log(vec.satinsat.ratio)  ~ 
+      STAGIONE*MAN*TIL ,  
+   data = lis.tutto$CATEGORIA)
+anova(lm.satinsat)
+
+summary(lm.satinsat)
+attach(lis.tutto$CATEGORIA)
+lm.1 <-
+    lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
+
+
+lm.2 <-
+    lm(ilr(Y.MOLI) ~ MAN + 
+           STAGIONE + TIL+ 
+           MAN:STAGIONE +
+           MAN:TIL+STAGIONE:TIL)
+
+lm.3 <-
+    lm(ilr(Y.MOLI) ~ MAN + 
+           STAGIONE + TIL )
+anova(lm.2, lm.3)
+
+
+anova(lm.2)
+
+detach(lis.tutto$CATEGORIA)
+
+stag <- lis.tutto$CATEGORIA$STAGIONE
+til <- lis.tutto$CATEGORIA$TIL
+man <- lis.tutto$CATEGORIA$MAN
+contrasts(stag) <- "contr.sum"
+contrasts(til) <- "contr.sum"
+contrasts(man) <- "contr.sum"
+
+fattore <- 
+    interaction(lis.tutto$CATEGORIA$STAGIONE, 
+                lis.tutto$CATEGORIA$TIL, 
+                lis.tutto$CATEGORIA$MAN)
+contrasts(fattore) <- "contr.sum"
+
+lm.2 <-
+    lm(ilr(Y.MOLI) ~  man + 
+           stag + til+ 
+           man:stag +
+           man:til+stag:til)
+
+anova(lm.2)
+coefs <- 
+    ilrInv(coef(lm.2), orig=Y.MOLI)
+#barplot(coefs, las=2, col=rainbow(4))
+B <- clr(coefs[-1,])
+svdlm <- svd(B)
+nomi.frecce <- 
+    substr(
+        dimnames(B)[[1]]
+       ,8,21)
+
+coloredBiplot(x=svdlm$v[,1:2], pc.biplot = TRUE,
+              y=svdlm$u[,1:2],
+              scale=0,
+              xlabs.pc= dimnames(B)[[2]],
+              xlabs.col  = 1,#ifelse(substr(dimnames(B)[[2]],5,5) == "M", 3,4), 
+              ylabs = nomi.frecce
+
+              )
+
+## xarrows=TRUE,
+##               ypch=4, ynames=colnames(B),
+##               xnames=rownames(B)
+##               )
+
+sum(svdlm$d[1:2]^2/sum(svdlm$d^2))
+
+require(MASS)
+
+ questi <- names(lis.tutto$PLFA$AREA)[-composti.non.assegnabili]
+
+xc <- acomp(lis.tutto$PLFA$nMOLI)
+dd <- as.dist(
+    variation(xc))
+hc <-  hclust(dd, method="ward.D2")
+      (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
+plot(dend1)
+rect.hclust(hc , k=4, border="red")
+ 
+prova <- as.vector(cutree(hc, k = 3))
+
+
+df.prova <- 
+    cbind.data.frame(
+        UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
+        DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
+        TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
+    )
+
+Y.prova <- acomp(df.prova)
+plot(Y.prova, col = as.numeric(stag))
+lm.1 <-
+    lm(ilr(Y.prova) ~  STAGIONE, data = lis.tutto$CATEGORIA)
+anova(lm.1)
+
+    ilrInv(coef(lm.1), orig=Y.prova)
+############ linear discriminant analysis
+fattore <- 
+    interaction(lis.tutto$CATEGORIA$STAGIONE, 
+                lis.tutto$CATEGORIA$TIL, 
+                lis.tutto$CATEGORIA$MAN)
+fattore <- 
+    interaction(
+       substr(fattore, 1,1),
+        substr(fattore, 5,5),
+        substr(fattore, 9,9), sep = ""
+        )
+
+xc <- Y.MOLI
+res <- lda(x=data.frame(ilr(xc)), grouping=fattore)
+ilrInv(res$means, orig=xc)
+pdf("getta.pdf", paper = "A4")
+pairs(res, col=as.integer(fattore))
+dev.off()
 @ 
 
 

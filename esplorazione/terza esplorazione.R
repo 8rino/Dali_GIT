@@ -828,15 +828,31 @@ bwplot(interaction(df.elabora$MAN, df.elabora$TIL)[-18] ~ somma.aree)
 #PROVA 
 ########################
 
-xc <- acomp(lis.tutto$PLFA$nMOLI)
-dd <- as.dist(
-  variation(xc))
+xc<-
+           acomp(df.disastro)
+        acomp(lis.tutto$PLFA$nMOLI)
+    acomp(lis.tutto$PLFA$nMOLI[lis.tutto$CATEGORIA$STAGIONE == "Est", ])
+
+row.names(xc) <-
+    as.character(with(
+        lis.tutto$CATEGORIA,        
+       # lis.tutto$CATEGORIA[lis.tutto$CATEGORIA$STAGIONE == "Est", ],
+        interaction(MAN,TIL))
+        )
+dd <- dist(xc)
+## dd <- as.dist(
+##   variation(xc))
 hc <-  hclust(dd, method="ward.D2")
-(dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
+(dend1 <- as.dendrogram(hc, horizontal = TRUE
+                        )) # "print()" method
 plot(dend1)
-rect.hclust(hc , k=3, border="red")
+rect.hclust(hc , k=3, border="blue")
 prova <- as.vector(cutree(hc, k = 3))
 
+
+
+
+pcx.PLFA <- princomp(Y.MOLI)
 df.prova <-
   cbind.data.frame(
     UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
@@ -844,6 +860,12 @@ df.prova <-
     TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
   )
 
+
+colori.microbi <- rep("lightgray", dim(Y.MOLI)[2])
+for (i in 1:6){
+    colori.microbi[which(names(Y.MOLI) %in% lis.nomi.PLFA.microbi[[i]])] <-
+        rainbow(6)[i]
+}
 
 plot(0, 0,
      xlim=c(-0.6,0.6),
@@ -866,10 +888,84 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
          posizioneY,
          col=prova,
          length=0.1)
-  # text(posizioneX, posizioneY,
-  #      label = dimnames(pcx.PLFA$loadings)[[1]][i],
-  #      pos= 1,
-  #      offset=0.5, col=colore)
+   ## text(posizioneX, posizioneY,
+   ##      label = dimnames(pcx.PLFA$loadings)[[1]][i],
+   ##      pos= 1,
+   ##      offset=0.5, col=1)
 }
 
+
+
+
 ########
+verdi <-
+    prova == 3
+rossi <-
+    prova == 2
+neri <-
+    prova == 1
+
+mvar.verdi <-
+    mvar(acomp(lis.tutto$PLFA$nMOLI[ ,verdi]))
+mvar.rossi <-
+    mvar(acomp(lis.tutto$PLFA$nMOLI[ ,rossi]))
+mvar.neri <-
+    mvar(acomp(lis.tutto$PLFA$nMOLI[ ,neri]))
+
+c(mvar.rossi, mvar.verdi, mvar.neri)
+/mvar(Y.MOLI)
+
+
+
+questi <- 
+lapply(lis.PLFA.microbi, function(x) x[1])
+df.butta <- 
+    lis.tutto$PLFA$nMOLI[,unlist(questi)]
+row.names(df.butta) <- 
+    with(lis.tutto$CATEGORIA, 
+         paste(as.character(STAGIONE), 
+               as.character(MAN),
+               as.character(TIL), 
+               as.character(FIELD),                
+               1:dim(df.butta)[1], 
+               sep  = ".")
+         )
+ordina <- 
+    with(lis.tutto$CATEGORIA, order(STAGIONE, FIELD,MAN,TIL,))
+df.butta <- df.butta[ ordina,]
+   stars(df.butta,
+      key.loc = c(0.8,1),
+      key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = TRUE)
+
+Y.microbi <- acomp(df.butta)
+pcx.microbi <- princomp(Y.microbi)
+attach(lis.tutto$CATEGORIA)
+ lm.microbi <-
+     lm(ilr(Y.microbi) ~ TIL )
+detach(lis.tutto$CATEGORIA)
+
+coloredBiplot(pcx.butta, pc.biplot=TRUE,
+              col = c(1,2))
+
+,
+              xlabs.pc=as.character(lis.tutto$CATEGORIA$MAN), 
+              xlabs.col=as.numeric(lis.tutto$CATEGORIA$TIL),
+              ylabs = names(df.butta)
+              )
+legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
+       legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
+barplot(coefs[,5], main = "Fzo")
+
+par(mfrow = c(3,2))
+barplot(coefs[4,], main = "rip",ylim=c(0,0.08))
+barplot(coefs[5,], main = "fzo",ylim=c(0,0.08))
+
+
+barplot(coefs[7,], main = "OO RIP",ylim=c(0,0.06))
+ barplot(coefs[8,], main = "OO FZO",ylim=c(0,0.06))
+ barplot(coefs[9,], main = "est RIP",ylim=c(0,0.06))
+ barplot(coefs[10,], main = "est FZO",ylim=c(0,0.06))
