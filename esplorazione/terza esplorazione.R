@@ -867,15 +867,24 @@ for (i in 1:6){
         rainbow(6)[i]
 }
 
+
+df.colori <-
+    
+    cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
+
+df.colori <- df.colori[order(df.colori$MASSE),]
+df.colori$COLORI <- 1:36
+df.colori <-  df.colori[order(df.colori$origine),]
+
 plot(0, 0,
      xlim=c(-0.6,0.6),
      ylim=c(-0.6, 0.6),
      main = "titolo"
 )
-for (i in 1:dim(pcx.PLFA$loadings)[1]){
+for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
   posizioneX <-
-    pcx.PLFA$loadings[,1]
-  posizioneY <- pcx.PLFA$loadings[,2]
+    pcx.Y.MOLI$loadings[,1]
+  posizioneY <- pcx.Y.MOLI$loadings[,2]
   #titolo <-
    # names(df.gruppiMicrobici)[dalila]
     #col= (prova)
@@ -886,12 +895,14 @@ for (i in 1:dim(pcx.PLFA$loadings)[1]){
   arrows(0, 0,
          posizioneX, 
          posizioneY,
-         col=prova,
-         length=0.1)
-   ## text(posizioneX, posizioneY,
-   ##      label = dimnames(pcx.PLFA$loadings)[[1]][i],
-   ##      pos= 1,
-   ##      offset=0.5, col=1)
+         col=#as.numeric(cut(df.colori$MASSE, breaks = 2)),
+             ifelse(df.colori$MASSE < 275, "gray", "black"),
+          length=0.1)
+    ## text(posizioneX, posizioneY,
+    ##      label = paste(df.colori$MASSE, df.colori$origine, sep = "."),
+    ##      pos= 1, adj = c(4,4),
+    ##      offset=-2,
+    ##      col="black")
 }
 
 

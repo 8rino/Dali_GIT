@@ -90,7 +90,8 @@
 \usepackage{siunitx}
 \sisetup{detect-all = true, detect-family = true, output-decimal-marker = {,}}
 % http://tex.stackexchange.com/questions/66713/can-i-make-siunitx-commands-use-serif-fonts-like-the-rest-of-the-math-in-beamer
-
+\DeclareSIUnit\cmol{cmol[+]}
+%\DeclareSIUnit\gmol{cmol}
 %% questa roba sotto serve per non perdere il filo sulle copie stampate
 %% commentare opportunamente nella versione finale
 \usepackage[short, hhmmss]{datetime}
@@ -99,7 +100,7 @@
 \usepackage{graphicx} %per le figure
 \pagestyle{fancy}
 % \setlength{\headheight}{14pt} % il compilatore si lamenta che c'e' poco spazio 1 ott 2016 Siena
-% \usepackage[]{subfig} % per le figure affiancate
+\usepackage[]{subfig} % per le figure affiancate
 
 \usepackage{float}
 % per forzare il posizionamento delle figure
@@ -128,10 +129,25 @@
 %\newcommand{\sectionbreak}{\clearpage}
 %% serve per mettere ogni section a pagina nuova
 
+
+
+
+
+\pagestyle{fancy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% The paper headers
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}}
-\renewcommand{\headrulewidth}{0.4pt}
+
+\renewcommand{\sectionmark}[1]{\markright{\arabic{section}.\ #1}}
+
+\fancyhead[RO,LE]{\small \thepage}
+\fancyhead[LO]{\small \chaptermark}% odd page header and number to right top
+\fancyhead[RE]{\small \sectionmark}%Even page header and number at left top
+\fancyfoot[L,R,C]{}
+
+
+%% \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.2pt}
- \cfoot{Pag. \thepage\, Compilata il \today\ alle \currenttime}
+% \cfoot{Pag. \thepage\, Compilata il \today\ alle \currenttime}
 % \lfoot{}
 % \rfoot{}
 % E Even page
@@ -242,7 +258,7 @@ source(file.path(DirFunz, "biplotAcomp.R"))
   \Istituzione{Universit\`a degli Studi di Firenze}
   \Divisione{Scuola di Agraria}
   \Scuola{Corso di Laurea in Scienze e tecnologie agrarie (LM-69)}
-  \Titolo{Determinazione dei PLFA microbici, tramite GC-MS, in suoli sottoposti
+  \Titolo{Determinazione dei PLFA microbici, tramite GC-MS, in suoli agrari sottoposti
   a diversi metodi di gestione.}
   \NCandidato{Candidata}
   \Candidato{Dalila Pasquini}
@@ -311,7 +327,6 @@ funzione:
 \begin{equation} 
 Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
 \end{equation}
-\todo{sistema equazione}
 \begin{itemize}
 \item Si considera il clima sia a livello macroscopico che
   microscopico. Di questo ci interessano prevalentemente le
@@ -375,7 +390,6 @@ dell’influenza della vegetazione e della fauna che ci vive, nonché
 delle pratiche agronomiche.
 
 \subsubsection{Fase solida} 
-
 
 
 I componenti della fase solida sono i minerali, che rappresentano la
@@ -451,14 +465,15 @@ solfati e fosfati (gesso e apatiti).
 
 La fase solida è costituita anche dalla materia organica che ha
 un’elevata carica variabile, dell’ordine di
-%\SIrange[range-phrase= "-"]{200}{400}{\meq\per\100g}
-\todo{definire meq con siunitx}. 
+\SIrange[range-phrase= -, range-units=single]{200}{400}{\cmol\per\kg}.
+
+
 Questa permette una buona capacità di scambio, fornendo vantaggi a
 livello biologico: promuove l’aumento dello sviluppo radicale, la
 crescita vegetale e microbica, e un aumento dell’attività enzimatica.
-A differenza dei silicati, pu\'o avere carica netta positiva, come anche gli ossidi
-idrati di \ce{Fe} e \ce{Al} (in funzione del pH), comportando dunque la trattenuta e lo scambio di
-anioni.
+A differenza dei silicati, pu\'o avere carica netta positiva, come
+anche gli ossidi idrati di \ce{Fe} e \ce{Al} (in funzione del pH),
+comportando dunque la trattenuta e lo scambio di anioni.
 
 Inoltre ha un’importante funzione di cemento e permette la formazione
 di una struttura più stabile e complessa, migliorando la porosità e
@@ -591,7 +606,7 @@ acqueo. Queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
 
-\section{Relazione tra microrganismi e suolo} \info{sistema impaginazione}
+\section{Relazione tra microrganismi e suolo} 
 
 La maggior parte delle funzioni dell’ecosistema suolo sono garantite
 dai miliardi di organismi ivi presenti. Questi sono sia di origine
@@ -601,19 +616,19 @@ ambienti, concentrati prevalentemente nei primi centimetri dalla
 superficie e in quantità variabile in base al clima e alle
 caratteristiche pedologiche in cui ci troviamo.
 
-La complessità di
-questo habitat è enorme (Fig. \ref{fig:Classific_microrganismi}), si pensi che in un solo grammo di
-suolo ci possono essere da un milione un miliardo di batteri 
-\citep{torsvik_total_1996}, più di 100 000 specie di funghi, 
-che formano da 1 a 3 metri di miceli fungini \citep{hawksworth_magnitude_2001}, 
-\info{ Vian, 2015}, \citep{trap_ecological_2016}, e 
-poi ci sono diversi milioni di protozoi \citep{wall_soil_2001}, 
-\citep{jones_carbon_2009}, dai 1000 ai 2000 nematodi 
-\citep{hawksworth_biodiversity_1991}, \citep{lavelle_soil_2001}, 
-\citep{wall_biodiversity_2010} e lombrichi 
-\citep{lee_earthworms:_1985}, senza menzionare gli altri gruppi 
-di invertebrati della mesofauna, collemboli, acari ed enchitreidi 
-e della macrofauna, formiche, termiti, coleotteri e ragni 
+La complessità di questo habitat è enorme (Fig.
+\ref{fig:Classific_microrganismi}), si pensi che in un solo grammo di
+suolo ci possono essere da un milione un miliardo di batteri
+\citep{torsvik_total_1996}, più di 100 000 specie di funghi, che
+formano da 1 a 3 metri di miceli fungini
+\citep{hawksworth_magnitude_2001}, \info{ Vian, 2015},
+\citep{trap_ecological_2016}, e poi ci sono diversi milioni di
+protozoi \citep{wall_soil_2001}, \citep{jones_carbon_2009}, dai 1000
+ai 2000 nematodi \citep{hawksworth_biodiversity_1991},
+\citep{lavelle_soil_2001}, \citep{wall_biodiversity_2010} e lombrichi
+\citep{lee_earthworms:_1985}, senza menzionare gli altri gruppi di
+invertebrati della mesofauna, collemboli, acari ed enchitreidi e della
+macrofauna, formiche, termiti, coleotteri e ragni
 \citep{schaefer_soil_1990}, \citep{alphei_protozoa_1996}.
 
 \begin{figure}[ht]
@@ -623,81 +638,84 @@ e della macrofauna, formiche, termiti, coleotteri e ragni
 \label{fig:Classific_microrganismi}
 \end{figure}
 
-\newcommand{\greco}[1]{\foreignlanguage{greek}{#1}}
-Gli organismi edafici, da \greco{>`edafoc} “suolo”,
-interagiscono tra loro creando una fitta rete alimentare e
-contribuiscono più o meno attivamente ai numerosi servizi
-ecosistemici. I microrganismi, ovvero gli organismi inferiori al
-millimetro di grandezza, come nematodi, protozoi e alcuni acari,
-permettono la decomposizione della sostanza organica e quindi fanno sì
-che gli elementi nutritivi siano nuovamente disponibili nell’ambiente.
-Gli attinomiceti decompongono sostanze difficilmente modificabili come
-la lignina o le corazze chitiniche degli insetti; i funghi riescono a
-sciogliere i complessi legami fra azoto e carbonio presenti nelle
-sostanze umiche; ed infine altri gruppi di batteri permettono la
-fissazione dell’azoto e il sequestro del carbonio. 
+\newcommand{\greco}[1]{\foreignlanguage{greek}{#1}} Gli organismi
+edafici, da \greco{>`edafoc} “suolo”, interagiscono tra loro creando
+una fitta rete alimentare e contribuiscono più o meno attivamente ai
+numerosi servizi ecosistemici. I microrganismi, ovvero gli organismi
+inferiori al millimetro di grandezza, come nematodi, protozoi e alcuni
+acari, permettono la decomposizione della sostanza organica e quindi
+fanno sì che gli elementi nutritivi siano nuovamente disponibili
+nell’ambiente. Gli attinomiceti decompongono sostanze difficilmente
+modificabili come la lignina o le corazze chitiniche degli insetti; i
+funghi riescono a sciogliere i complessi legami fra azoto e carbonio
+presenti nelle sostanze umiche; ed infine altri gruppi di batteri
+permettono la fissazione dell’azoto e il sequestro del carbonio.
 
-Gli organismi della mesofauna del suolo, collemboli, acari, proturi, 
-dipluri, enchitreidi, ecc, si nutrono soprattutto di miceli fungini, 
-batteri e piccoli insetti. Le loro feci, avendo una capacità di trattenere 
-acqua maggiore di quella della lettiera, rivestono un ruolo importante nella
-formazione e stabilizzazione del suolo \citep{miller_mycorrhizal_2000}. 
+Gli organismi della mesofauna del suolo, collemboli, acari, proturi,
+dipluri, enchitreidi, ecc, si nutrono soprattutto di miceli fungini,
+batteri e piccoli insetti. Le loro feci, avendo una capacità di
+trattenere acqua maggiore di quella della lettiera, rivestono un ruolo
+importante nella formazione e stabilizzazione del suolo
+\citep{miller_mycorrhizal_2000}.
 
-Gli animali superiori che compongono la macro e megafauna, come termiti,
-lombrichi, talpe, ecc, contribuiscono, con il loro movimento, a
-rendere gli strati superficiali ben mescolati e aerati. Inoltre
-rompendo e/o formando gli aggregati modificano la densità del suolo, incrementando
-così l’aerazione e l’infiltrazione di acqua, nonché apportano
-materiale organico sia tramite le deiezioni che con la propria
-necromassa. 
+Gli animali superiori che compongono la macro e megafauna, come
+termiti, lombrichi, talpe, ecc, contribuiscono, con il loro movimento,
+a rendere gli strati superficiali ben mescolati e aerati. Inoltre
+rompendo e/o formando gli aggregati modificano la densità del suolo,
+incrementando così l’aerazione e l’infiltrazione di acqua, nonché
+apportano materiale organico sia tramite le deiezioni che con la
+propria necromassa.
 
-Alcuni tra gli organismi più importanti dell’habitat tellurico,
-nonché bioindicatori di fertilità, sono i lombrichi che mangiando
-sminuzzano la biomassa presente nel suolo. Nel loro intestino, i
-lombrichi, impastano le sostanze minerali e quelle organiche,
-trasformandole in complessi stabili argilla-humus, arricchendo molto
-la terra con le proprie deiezioni. Nelle regioni temperate, i lombrichi
-sono in grado di elaborare fino a 4 kg di suolo per metro quadrato al
-giorno \citep{feller_charles_2003} e i primi studi relativi al ruolo della
+Alcuni tra gli organismi più importanti dell’habitat tellurico, nonché
+bioindicatori di fertilità, sono i lombrichi che mangiando sminuzzano
+la biomassa presente nel suolo. Nel loro intestino, i lombrichi,
+impastano le sostanze minerali e quelle organiche, trasformandole in
+complessi stabili argilla-humus, arricchendo molto la terra con le
+proprie deiezioni. Nelle regioni temperate, i lombrichi sono in grado
+di elaborare fino a 4 kg di suolo per metro quadrato al giorno
+\citep{feller_charles_2003} e i primi studi relativi al ruolo della
 fauna del suolo, riguardarono proprio questi invertebrati e risalgono
-a  \citet{darwin_formation_1881}. La vita di tutti questi organismi 
-è però fortemente dipendente dalle caratteristiche fisiche e chimiche 
+a \citet{darwin_formation_1881}. La vita di tutti questi organismi è
+però fortemente dipendente dalle caratteristiche fisiche e chimiche
 del terreno e da quelle climatiche dell’ambiente in cui vivono.
 
-\citet{kubiena_micropedology_1938} descrisse il microambiente tellurico 
-come “cavità in cui si possono trovare pochi o miriadi di organismi attivi, 
-in funzione delle dimensioni, del clima e della condizione nutritiva 
-delle varie cavità” \citep{kubiena_micropedology_1938}. La dimensione dei 
-pori non influenza solo la presenza e il movimento dei fluidi, ma anche il 
-movimento dei microrganismi. Ad esempio i funghi aventi corpi vegetativi 
-e fruttificazioni grandi risentono maggiormente della tessitura del terreno, 
-rispetto invece ai batteri e attinomiceti di dimensioni più piccole 
-\citep{griffin_soil_1963}. Inoltre i micropori, abbondanti nei suoli 
-argillosi, risultano praticamente inaccessibili per i protozoi e 
-in presenza di un suolo molto compatto sono limitati anche i movimenti 
-delle radici delle piante superiori. 
+\citet{kubiena_micropedology_1938} descrisse il microambiente
+tellurico come “cavità in cui si possono trovare pochi o miriadi di
+organismi attivi, in funzione delle dimensioni, del clima e della
+condizione nutritiva delle varie cavità”
+\citep{kubiena_micropedology_1938}. La dimensione dei pori non
+influenza solo la presenza e il movimento dei fluidi, ma anche il
+movimento dei microrganismi. Ad esempio i funghi aventi corpi
+vegetativi e fruttificazioni grandi risentono maggiormente della
+tessitura del terreno, rispetto invece ai batteri e attinomiceti di
+dimensioni più piccole \citep{griffin_soil_1963}. Inoltre i micropori,
+abbondanti nei suoli argillosi, risultano praticamente inaccessibili
+per i protozoi e in presenza di un suolo molto compatto sono limitati
+anche i movimenti delle radici delle piante superiori.
 
-Inoltre i microrganismi che risiedono nei micropori hanno una minor 
-disponibilità di nutrienti ed ossigeno, ma sono maggiormente protetti 
-dal rischio di stress idrico rispetto agli organismi che vivono nei 
-macropori e che invece risentiranno di una maggior alternanza tra 
-periodi umidi e secchi. 
+Inoltre i microrganismi che risiedono nei micropori hanno una minor
+disponibilità di nutrienti ed ossigeno, ma sono maggiormente protetti
+dal rischio di stress idrico rispetto agli organismi che vivono nei
+macropori e che invece risentiranno di una maggior alternanza tra
+periodi umidi e secchi.
 
-La maggior parte degli organismi ha come coefficiente di avvizzimento 
-valori prossimi ai -15, -25 bar (in scala logaritmica pF 4.2, 4.4). 
-Tale coefficiente, che è diverso per ogni organismo, rappresenta 
-il potenziale ovvero la pressione che l’individuo dovrebbe creare per 
-vincere le forze che trattengono il liquido nelle particelle del suolo. 
+La maggior parte degli organismi ha come coefficiente di avvizzimento
+valori prossimi ai -15, -25 bar (in scala logaritmica pF 4.2, 4.4).
+Tale coefficiente, che è diverso per ogni organismo, rappresenta il
+potenziale ovvero la pressione che l’individuo dovrebbe creare per
+vincere le forze che trattengono il liquido nelle particelle del
+suolo.
 
-Tramite gli studi di  \citet{warcup_studies_1957} sappiamo che 
-i funghi possono sopravvivere a lunghi periodi di siccità grazie a 
-strutture come le  spore, gli sclerozi e le ife. \citet{griffin_soil_1963} 
-vide che i funghi, come le piante, arrestano la propria crescita a 
-valori intorno a pF 4.2 e solo l’\emph{aspergillus} riesce a crescere fino a pF 5.6. 
-Rah \todo{Rah (1913[libro biblio unifi])} trovò che i
-batteri Gram positivi crescevano intorno a valori di pF 2.0, mentre
-\citet{miller_effect_1964} studiarono i batteri nitrificanti, dimostrando
-che questi crescevano meglio in terreni con pF inferiore a 3.0. 
+Tramite gli studi di \citet{warcup_studies_1957} sappiamo che i funghi
+possono sopravvivere a lunghi periodi di siccità grazie a strutture
+come le spore, gli sclerozi e le ife. \citet{griffin_soil_1963} vide
+che i funghi, come le piante, arrestano la propria crescita a valori
+intorno a pF 4.2 e solo l’\emph{aspergillus} riesce a crescere fino a
+pF 5.6. Rah \todo{Rah (1913[libro biblio unifi])} trovò che i batteri
+Gram positivi crescevano intorno a valori di pF 2.0, mentre
+\citet{miller_effect_1964} studiarono i batteri nitrificanti,
+dimostrando che questi crescevano meglio in terreni con pF inferiore a
+3.0.
 
 Oltre che l’acqua, nei pori si muove anche l’aria. Questa si trova in
 abbondanza nei terreni sabbiosi, prevalentemente secchi, mentre è
@@ -706,10 +724,11 @@ dell’habitat tellurico reagiscono in maniera differente alle
 variazioni di concentrazione dei gas nel suolo. Al contrario
 dell’acqua, che risulta necessaria per tutti gli organismi, si hanno,
 nel caso dei gas, i funghi che sono organismi aerobi stretti, i
-batteri che possono essere sia strettamente anaerobi (\emph{clostridium} e
-\emph{botulinum}), che strettamente aerobi (\emph{pseudonomas} e la maggior parte
-degli attinomiceti), ma ne esistono anche alcuni che crescono meglio a
-basse concentrazioni di ossigeno detti microareofili \citep{burges_micro-organisms_1958}.
+batteri che possono essere sia strettamente anaerobi
+(\emph{clostridium} e \emph{botulinum}), che strettamente aerobi
+(\emph{pseudonomas} e la maggior parte degli attinomiceti), ma ne
+esistono anche alcuni che crescono meglio a basse concentrazioni di
+ossigeno detti microareofili \citep{burges_micro-organisms_1958}.
 
 
 Anche il pH del suolo ha un ruolo centrale nel permettere lo sviluppo
@@ -728,27 +747,31 @@ carenza nutritiva. Altri elementi, come il ferro e il nichel,
 diventando più solubili, possono comportare tossicità per i
 microrganismi e le piante \citep{holding_effects_1968}.
 
-Anche la componente inorganica dei minerali influenza l’attività della microflora
-tellurica, sia perchè la presenza di determinate argille o un certo contenuto in
-sostanza organica permette livelli differenti di elementi nutritivi assimilabili e
-disponibili, ma anche perchè alcune matrici possono comportare dei danni letali.
-Ad esempio la montmorillonite, anche a basse concentrazioni, riduce la
-respirazione fungina, non permettendo, per via delle sue caratteristiche fisico
-chimiche, una buona diffusione dell’ossigeno e stimola le attività batteriche 
-\citep{stotzky_influence_1966}.
+Anche la componente inorganica dei minerali influenza l’attività della
+microflora tellurica, sia perchè la presenza di determinate argille o
+un certo contenuto in sostanza organica permette livelli differenti di
+elementi nutritivi assimilabili e disponibili, ma anche perchè alcune
+matrici possono comportare dei danni letali. Ad esempio la
+montmorillonite, anche a basse concentrazioni, riduce la respirazione
+fungina, non permettendo, per via delle sue caratteristiche fisico
+chimiche, una buona diffusione dell’ossigeno e stimola le attività
+batteriche \citep{stotzky_influence_1966}.
 
-Infine è necessario osservare anche la temperatura del suolo. Naturalmente
-l’energia assorbita dipende dalla latitudine e altitudine, ma anche
-dall’inclinazione della superficie del suolo, nonché dalla densità della copertura
-vegetale e dal colore del terreno. Inoltre la temperatura presenta un grande
-intervallo di variabilità se misurata in prossimità della superficie, mentre già a 7
-cm di profondità risulta avere un range più ristretto, quale 4-14° C \citep{raney_physical_1965}.
+Infine è necessario osservare anche la temperatura del suolo.
+Naturalmente l’energia assorbita dipende dalla latitudine e
+altitudine, ma anche dall’inclinazione della superficie del suolo,
+nonché dalla densità della copertura vegetale e dal colore del
+terreno. Inoltre la temperatura presenta un grande intervallo di
+variabilità se misurata in prossimità della superficie, mentre già a 7
+cm di profondità risulta avere un range più ristretto, quale 4-14° C
+\citep{raney_physical_1965}.
 
 Ogni organismo presenta “il proprio minimo e massimo ecologico di
-temperatura, compresi entro un intervallo che rappresenta i suoi limiti di
-tolleranza” \citep{odum_environment_1971}. In base a questi valori di minimo, massimo e
-\emph{optimum} si distinguono microrganimsi psicrofili, mesofili e termofili 
-(Tab. \ref{tab:classif_Odum}).
+temperatura, compresi entro un intervallo che rappresenta i suoi
+limiti di tolleranza” \citep{odum_environment_1971}. In base a questi
+valori di minimo, massimo e \emph{optimum} si distinguono
+microrganimsi psicrofili, mesofili e termofili (Tab.
+\ref{tab:classif_Odum}).
 
 
 \begin{table}[ht]
@@ -767,28 +790,29 @@ tolleranza” \citep{odum_environment_1971}. In base a questi valori di minimo, 
 \end{table}
 
 
-La grande maggioranza dei microrganismi del suolo è mesofila e generalmente
-in suoli e in stagioni dove si ha una temperatura media di 10°C dominano i
-funghi e i batteri, mentre a 20°C sono prevalenti i protozoi, i nematodi e gli
-attinomiceti.
+La grande maggioranza dei microrganismi del suolo è mesofila e
+generalmente in suoli e in stagioni dove si ha una temperatura media
+di 10°C dominano i funghi e i batteri, mentre a 20°C sono prevalenti i
+protozoi, i nematodi e gli attinomiceti.
 
-Comunque bisogna dire che la temperatura del suolo ha un effetto diretto
-sull’attività metabolica della microflora, ma non comporta un’azione letale,
-anche al di sotto del punto di congelamento.
+Comunque bisogna dire che la temperatura del suolo ha un effetto
+diretto sull’attività metabolica della microflora, ma non comporta
+un’azione letale, anche al di sotto del punto di congelamento.
 
 
 \section{Gestione agraria e lavorazioni}
 
-Il complesso ecosistema suolo è influenzato da molti fattori e modificandone 
-anche solo uno si può innescare una sorta di reazione a catena che va ad alterare 
-tutti gli altri. 
+Il complesso ecosistema suolo è influenzato da molti fattori e
+modificandone anche solo uno si può innescare una sorta di reazione a
+catena che va ad alterare tutti gli altri.
 
-In un ambiente completamente naturale i cambiamenti sono legati soprattutto 
-all’alternarsi delle stagioni e al modificarsi della copertura del suolo, 
-comportando una variazione del range di umidità e temperatura presente. 
-In un ambiente antropico, come quello agricolo si ha invece un continuo disturbo 
-della pedosfera, dovuto principalmente alle lavorazioni e al passaggio di 
-macchinari e persone \citep{pagliai_effetti_1992}, \citep{marsili_changes_1998}.
+In un ambiente completamente naturale i cambiamenti sono legati
+soprattutto all’alternarsi delle stagioni e al modificarsi della
+copertura del suolo, comportando una variazione del range di umidità e
+temperatura presente. In un ambiente antropico, come quello agricolo
+si ha invece un continuo disturbo della pedosfera, dovuto
+principalmente alle lavorazioni e al passaggio di macchinari e persone
+\citep{pagliai_effetti_1992}, \citep{marsili_changes_1998}.
 
 Il passaggio dei mezzi agricoli comporta un aumento della
 compattazione del terreno e un relativo aumento della densità
@@ -803,18 +827,17 @@ compattazione viene meno \citep{yvan_role_2012}.
 Con la compattazione viene danneggiata la struttura del suolo, i pori
 si rompono, collassano e non sono più comunicanti. Questo comporta una
 diminuzione dello scambio di nutrienti e va ad intaccare l’attività
-dei micro e macro organismi.  Infatti la forma e la dimensione dei
-pori è correllata a proprietà chimiche, biochimiche e biologiche, come
-la crescita delle radici e l’attività enzimatica
+dei micro e macro organismi. Infatti la forma e la dimensione dei pori
+è correllata a proprietà chimiche, biochimiche e biologiche, come la
+crescita delle radici e l’attività enzimatica
 \citep{sequi_positive_nodate}, \citep{pagliai_relationships_1993},
-\citep{giusquiani_urban_1995}.  Di conseguenza, un peggioramento nella
+\citep{giusquiani_urban_1995}. Di conseguenza, un peggioramento nella
 componente fisica del suolo va ad influire anche sugli aspetti chimici
-e biologici \citep{oades_role_1993}, \citep{boizard_using_2013}.
-Oltre a ciò, le continue lavorazioni favoriscono l’azione
-dell’erosione \citep{miller_soil_1992}, \citep{reeves_cover_1994} che
-rimuove la porzione più superficiale del piano di campagna, e
-solitamente più ricca di nutrienti, comportandone un ulteriore
-impoverimento.
+e biologici \citep{oades_role_1993}, \citep{boizard_using_2013}. Oltre
+a ciò, le continue lavorazioni favoriscono l’azione dell’erosione
+\citep{miller_soil_1992}, \citep{reeves_cover_1994} che rimuove la
+porzione più superficiale del piano di campagna, e solitamente più
+ricca di nutrienti, comportandone un ulteriore impoverimento.
 
 Le lavorazioni agricole inoltre disturbano enormemente l’habitat
 tellurico, con tagli, solchi, fori e soprattutto con il rivoltamento
@@ -856,7 +879,7 @@ in alcuni casi non sono in nessun modo evitabili: il terreno ha
 bisogno di essere lavorato per preparare un buon letto di semina,
 soprattutto se è particolarmente compatto o se il seme ha problemi
 nella germinazione perchè troppo piccolo; risultano necessarie anche
-nel caso in cui nel terreno ci siano troppi residui o radici.  Inoltre
+nel caso in cui nel terreno ci siano troppi residui o radici. Inoltre
 è vero che, se non si dovesse fare alcuna lavorazione, si avrebbe un
 maggior contenuto di sostanza organica e fosforo organico nei primi cm
 di suolo, ma questo risulterebbe mancante in profondità. Al contrario
@@ -902,7 +925,8 @@ interessano invece una superficie pari a 43.7 milioni di ettari
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/ettari_bio.jpg}
-\caption{Andamento delle superfici coltivate a Biologico nel mondo 1999-2014 \citep{willer_organic_2016}}
+\caption{Andamento delle superfici coltivate a Biologico nel mondo
+  1999-2014 \citep{willer_organic_2016}}
 \label{fig:andamento_bio}
 \end{figure}
 
@@ -925,11 +949,11 @@ abbiano solitamente maggiori spese per i macchinari e le sementi
 \citep{pimentel_organic_2005}. Inoltre i sistemi biologici richiedono,
 annualmente, circa il 15\% in più di lavorazioni ad ettaro rispetto al
 convenzionale \citep{sorby_production_2002} ,
-\citep{granatstein_tree_2004}.  Proprio in seguito a questi disturbi
-si rendono necessari studi per monitorare e capire come salvaguardare
-la fertilità del terreno \citep{feng_effects_2002} e valutare
-l’impatto che le lavorazioni hanno su di essa \citep{pagliai2002soil}.
-Per determinare la sostenibilità di un tipo di gestione, si osserva la
+\citep{granatstein_tree_2004}. Proprio in seguito a questi disturbi si
+rendono necessari studi per monitorare e capire come salvaguardare la
+fertilità del terreno \citep{feng_effects_2002} e valutare l’impatto
+che le lavorazioni hanno su di essa \citep{pagliai2002soil}. Per
+determinare la sostenibilità di un tipo di gestione, si osserva la
 componente biochimica e biologica perché questa è più suscettibile ai
 cambiamenti e risente maggiormente delle attività umane. Naturalmente
 questi cambiamenti richiedono del tempo per avvenire e quindi sono
@@ -943,16 +967,15 @@ usando come indice di fertilità del suolo la sua diversità e vitalità.
 
 Essendo la comunità microbica del suolo così varia, anche in quantità
 di terreno assai piccole, non si può applicare l’approccio classico di
-conta usato per animali e piante
-\citep{bossio_determinants_nodate}. Anche dal punto di vista
-microbiologico è ormai acclamato che solo una piccola parte dei
-microrganismi presenti nel suolo può essere moltiplicata in
-laboratorio con le odierne tecniche di coltivazione in piastrina
-(\todo{biblio}). Si devono quindi prendere in considerazione tecniche
-di analisi specifiche. Le principali tecniche sono: la PCR
-(\emph{Polymerase Chain Reaction}), il RFLP (\emph{Restriction
-  Fragment Length Polymorphism}), e l’analisi PLFA (
-\emph{Phospholipid Fatty Acid}) o CLPP (\emph{Community Level
+conta usato per animali e piante \citep{bossio_determinants_nodate}.
+Anche dal punto di vista microbiologico è ormai acclamato che solo una
+piccola parte dei microrganismi presenti nel suolo, meno dell'1\%
+\citep{torsvik1990}, può essere moltiplicata in laboratorio con le
+odierne tecniche di coltivazione in piastrina. Si devono quindi
+prendere in considerazione tecniche di analisi specifiche. Le
+principali tecniche sono: la PCR (\emph{Polymerase Chain Reaction}),
+il RFLP (\emph{Restriction Fragment Length Polymorphism}), e l’analisi
+PLFA ( \emph{Phospholipid Fatty Acid}) o CLPP (\emph{Community Level
   Physiological Profiling}) \citep{ovreas_population_2000}.
 
 Sebbene l’applicazione di queste tecniche abbia fortemente migliorato
@@ -1041,11 +1064,12 @@ Queste tecniche sono basate sulla differente interazione dei vari
 componenti con le due fasi presenti, una stazionaria ed una mobile la
 quale fluisce in continuazione attraverso la
 prima. %I componenti di una miscela vengono infatti trasportati dalla
-%fase mobile attraverso la fase stazionaria e la separazione avviene in virtù delle 
-%differenti interazioni che si instaurano fra di loro. 
-Alcune sostanze interagiscono diversamente con la fase stazionaria e quindi vengono più o meno 
-ritardate nel loro cammino, altre invece non sono in alcun modo trattenute e ciò 
-comporta tempi di eluizione diversi \todo{(Fig. \ref{fig:principio_cromatografia})}.
+% fase mobile attraverso la fase stazionaria e la separazione avviene
+% in virtù delle differenti interazioni che si instaurano fra di loro.
+Alcune sostanze interagiscono diversamente con la fase stazionaria e
+quindi vengono più o meno ritardate nel loro cammino, altre invece non
+sono in alcun modo trattenute e ciò comporta tempi di eluizione
+diversi (Fig. \ref{fig:principio_cromatografia}).
 
 \begin{figure}[ht]
 \centering
@@ -1091,7 +1115,7 @@ Le ultime tre tecniche elencate, GC, LC e HPLC, risultano molto
 efficienti, altamente selettive e non distruttive. La tecnica
 gas-cromatografica ha visto un importante sviluppo dagli anni ’60 ed è
 impiegata per la separazione di sostanze volatili (aromi, idrocarburi
-a catena corta, ecc...).  Con questa tecnica è possibile analizzare
+a catena corta, ecc...). Con questa tecnica è possibile analizzare
 campioni gassosi, liquidi o solidi opportunamente solubilizzati,
 vaporizzati e poi iniettati in colonna che contiene la fase
 stazionaria. L’unica limitazione è che sono analizzabili solo quelle
@@ -1196,18 +1220,20 @@ lavanda, limone ecc).
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./foto/iniett_split.jpg}
-\caption{ Iniettore tecnica split: 1. siringa; 2. setto poroso; 3. zona di 
-evaporazione del campione; 4. ingresso del \emph{carrier}; 5. corpo dell’iniettore; 
-6. camera di miscelazione; 7. spurgo (\emph{vent}); 8. valvola di regolazione del 
-vent; 9. polmone; 10. testa della colonna capillare.}
+\caption[Iniettore tecnica split]{ Iniettore tecnica split: 1.
+  siringa; 2. setto poroso; 3. zona di evaporazione del campione; 4.
+  ingresso del \emph{carrier}; 5. corpo dell’iniettore; 6. camera di
+  miscelazione; 7. spurgo (\emph{vent}); 8. valvola di regolazione del
+  vent; 9. polmone; 10. testa della colonna capillare.}
 \label{fig:split}
 \end{figure}
 
-Nell’iniezione splitless (Fig. \ref{fig:splitless}) invece il campione è tutto inviato in colonna e,
-similmente all’iniezione \emph{on column}, si ha all’inizio del cromatogramma il 
-picco del solvente. Questo tipo di iniezione si usa per l’analisi in tracce come ad 
-esempio per gli acidi volatili identificativi dellla maturazione o della putrefazione
-o per le droghe.
+Nell’iniezione splitless (Fig. \ref{fig:splitless}) invece il campione
+è tutto inviato in colonna e, similmente all’iniezione \emph{on
+  column}, si ha all’inizio del cromatogramma il picco del solvente.
+Questo tipo di iniezione si usa per l’analisi in tracce come ad
+esempio per gli acidi volatili identificativi dellla maturazione o
+della putrefazione o per le droghe.
  
 \begin{figure}[h]
 \centering
@@ -1219,8 +1245,8 @@ o per le droghe.
 \label{fig:splitless}
 \end{figure}
 
-Sono ormai diffusi iniettori che possono, grazie all’uso di valvole, utilizzare 
-entrambe le tecniche. 
+Sono ormai diffusi iniettori che possono, grazie all’uso di valvole,
+utilizzare entrambe le tecniche.
 
 Esistono poi gli iniettori PTV (\emph{Programmed Temperature
   Vaporization}): in questi il campione viene iniettato in un inserto
@@ -1229,11 +1255,11 @@ quindi adatta a composti termolabili e presenti in tracce. La
 temperatura del \emph{liner}, inizialmente, è posta poco sotto la
 temperatura di ebollizione del solvente così da permettere la
 dispersione di una buona quantità di questo, senza perdere invece i
-soluti dato che la temperatura è troppo bassa per farli
-gassificare. Poi la valvola viene chiusa e si alza la temperatura fino
-a superare il grado del componente della miscela più altobollente.
-Dunque è fondamentale programmare attentamente i tempi di scarico e la
-temperatura.  È considerato il sistema più universale per inserire il
+soluti dato che la temperatura è troppo bassa per farli gassificare.
+Poi la valvola viene chiusa e si alza la temperatura fino a superare
+il grado del componente della miscela più altobollente. Dunque è
+fondamentale programmare attentamente i tempi di scarico e la
+temperatura. È considerato il sistema più universale per inserire il
 campione e prevede un funzionamento combinato \emph{split-splitless},
 la possibilità di volumi di iniezione elevati e l’eliminazione del
 solvente. Inoltre essendo una tipologia di iniezione “a freddo”
@@ -1256,8 +1282,8 @@ costante, così da permettere una buona riproducibilità dell’analisi.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=2]{./foto/fig1_10.jpeg}
-\caption{Vista interna del forno con colonna capillare avvolta sul suo sostegno in 
-metallo.}
+\caption{Vista interna del forno con colonna capillare avvolta sul suo
+  sostegno in metallo.}
 \label{fig:colonna}
 \end{figure}
 
@@ -1296,13 +1322,14 @@ componenti della miscela.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/fig1_11.jpg}
-\caption{Disegno della sezione longitudinale di una colonna capillare ed una 
-impaccata con presenza della fase stazionaria.}
+\caption{Disegno della sezione longitudinale di una colonna capillare
+  ed una impaccata con presenza della fase stazionaria.}
 \label{fig:sezione_long}
 \end{figure}
 
-Le colonne impaccate hanno però una maggior capacità e vengono utilizzate per 
-analisi in cui non è necessario separare tanti elementi.
+Le colonne impaccate hanno però una maggior capacità e vengono
+utilizzate per analisi in cui non è necessario separare tanti
+elementi.
 
 \subsubsection{Detector}
 
@@ -1535,8 +1562,8 @@ anche di una possibile variazione dovuta alla stagionalità.
 
 Per analizzare la microfauna e microflora edafica si è utilizzato il
 metodo biochimico degli acidi grassi dei fosfolipidi di membrana
-(PLFA) che si basa sul principio secondo cui la composizione in acidi
-grassi dei fosfolipidi di membrana è specifica per i diversi gruppi di
+(PLFA) che si basa sul principio secondo cui la composizione dei PLFA
+di membrana è specifica per i diversi gruppi di
 microrganismi \citep{zhang_assessing_2008}. Con questo tipo di analisi
 si può misurare la diversità di una comunità microbica e valutarne i
 cambiamenti in funzione di disturbi esterni come le pratiche agricole
@@ -1549,7 +1576,10 @@ quali subiranno poi una metilazione ed infine verrà effettuata
 un’analisi mediante gas cromatografia \citep{ibekwe_fatty_1999}.
 
 \chapter{Materiali e metodi}
-\section{Area di studio}
+\section{Campo}
+
+\subsection{Area di studio}
+
 Il campo sperimentale è situato nell’azienda agricola della Scuola di
 Agraria di Firenze, in località Montepaldi, San Casciano Val di Pesa
 (Latitudine 43°40’16’’ N, Longitudine 11°09’08’’ E) a 90 m sopra il
@@ -1559,24 +1589,24 @@ L’area di studio (Fig. \ref{fig:panorama_dispaa}) presenta un clima
 sub-appenninico con precipitazioni annuali di circa 800 mm, con minimi
 nel periodo estivo e massimi in primavera e in autunno. La temperatura
 media annuale è di 14.1°C con massime in estate, anche superiori a
-30°C e minime a gennaio \todo{(DISPAA, 2016)}.
+30°C e minime a gennaio \citep{DISPAA}.
 
 Dal punto di vista pedologico, il suolo deriva da sedimenti pliocenici
 di tipo conglomeratico con presenza di lenti sabbiose e argillose e da
-sedimenti trasportati dal fiume Pesa. Ha una pendenza del ?\% e la
+sedimenti trasportati dal fiume Pesa. Ha una pendenza del \todo{?}\% e la
 tessitura appartiene al gruppo limo-argilloso/argilloso con scheletro
-di piccole e medie dimensioni \todo{(DISPAA, 2016)}.
+di piccole e medie dimensioni \citep{DISPAA}.
 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.6]{./foto/panorama.jpg}
-\caption{Veduta panoramica del sito sperimentale.}
+\caption{Veduta panoramica del sito sperimentale \citep{DISPAA}.}
 \label{fig:panorama_dispaa}
 \end{figure}
-\info{citazioneDISPAA}
 
-\section{Disegno sperimentale e gestione agronomica}
+
+\subsection{Disegno sperimentale e gestione agronomica}
 Questo studio fa parte del progetto MoLTE (Moltepaldi Long Term
 Experiment), progetto europeo attivo dal 1991 e interessa una
 superficie di 15 ha suddivisa in 10 appezzamenti, di 1.3 ha ciascuno:
@@ -1606,7 +1636,7 @@ biologico nuovo e il convenzionale sono separati da una striscia
 inerbita di 8 metri. Il biologico vecchio prevede anche una siepe
 artificiale di 6 metri di larghezza più 4 metri di striscia inerbita,
 che lo separa dai campi adiacenti. Questa è stata piantata agli inizi
-del 1990 dal DISAT(Dipartimento di Scienze Agronomiche e Gestione del
+del 1990 dal DISAT (Dipartimento di Scienze Agronomiche e Gestione del
 Territorio Agroforestale) con l’aiuto del WWF ed è formata da specie
 autoctone.  Infine una viottola di 4 metri separa gli appezzamenti OO1
 e OO2 da dagli OO3 e OO4. Tali campi sono coltivati, dal 2001,
@@ -1616,12 +1646,12 @@ seguendo la rotazione:
 \item quadriennale per gli appezzamenti biologici (sovescio + coltura
   da rinnovo; cereale + leguminosa; leguminosa; cereale);
 \item biennale intensiva nei due appezzamenti convenzionali (coltura
-  da rinnovo; cereale) \info{(DISPAA, 2016)}.
+  da rinnovo; cereale) \citep{DISPAA}.
 \end{itemize}
 
 Oltre alle due gestioni menzionate, l’esperimento vuole anche
 confrontare la risposta a diverse lavorazioni. Ogni appezzamento vede
-3 principali lavorazioni differenti: frangizzolatura in presemina più
+3 principali lavorazioni differenti: franginzolatura in presemina più
 aratura (A), frangizzolatura in presemina più rippatura (B) e
 frangizzolatura in presemina più una frangizollatura successiva
 (C). Ogni lavorazione è stata replicata tre volte e quindi ogni
@@ -1646,22 +1676,23 @@ con numeri arabi a pedice) per ognuna delle 3 lavorazioni
 
 
 Nel 1992 le caratteristiche fisico chimiche del campo biologico erano
-\info{(DISPAA, 2016)}:
+ \citep{DISPAA}:
 \begin{itemize}
 \item tessitura:  46.3\% limo, 20.2\% sabbia  e 32.9\% argilla; mentre lo scheletro 
 rappresentava il 6.3\%;
 \item pH (misurato in acqua):  8.3;
-\item capacità di scambio cationica:  17.6 meq 100 ;
+\item capacità di scambio cationica:  \SI{17.6}{\cmol\per\kg} ;
 \item \ce{P2O5} totale: 1.63\%;
 \item \ce{K2O}:  171
 \end{itemize}
 
-Le stesse caratteristiche per il campo convenzionale invece erano \info{(DISPAA, 2016)}:
+Le stesse caratteristiche per il campo convenzionale invece erano:
 \begin{itemize}
-\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo scheletro;
+\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo
+  scheletro;
 \item pH (in acqua): 8.3;
-\item CSC: 19.4 meq 100 ;
-\item \ce{P2O5} totale: 1.60%;
+\item CSC: \SI{19.4}{\cmol\per\kg};
+\item \ce{P2O5} totale: 1.60\,\%;
 \item \ce{K2O}: 134.
 
 \end{itemize}
@@ -1670,50 +1701,51 @@ Le stesse caratteristiche per il campo convenzionale invece erano \info{(DISPAA,
 Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il
 Girasole, varietà \emph{Solaris} non trattato, usando una seminatrice
 di precisione con una densità di 75 000 piante ad ettaro. La coltura
-precedente era la lenticchia, varietà \emph{Val di Nevola}.  Le
+precedente era la lenticchia, varietà \emph{Val di Nevola}. Le
 lavorazioni per preparare il letto di semina sono state tutte svolte
 l’8 Settembre 2016 in base alla parcella, ovvero l’aratura nelle
-parcelle A, la rippatura nelle parcelle B e la frangizzolatura nelle
-C. É stata poi effettuata una concimazione con pollina il 22 Febbraio
+parcelle A, la rippatura nelle parcelle B e la frangizolatura nelle C.
+É stata poi effettuata una concimazione con pollina il 22 Febbraio
 2017 e il giorno successivo è stata fatta una frangizzolatura. Il 29
 Marzo il campo è stato erpicato e il giorno successivo è avvenuta la
 semina.
 
 Lo stesso anno, nel campo OO4, precedentemente coltivato a cece,
-varietà \emph{Pascià} , è stato coltivato l’orzo, varietà
+varietà \emph{Pascià}, è stato coltivato l’orzo, varietà
 \emph{Campagne} non trattato, con una seminatrice a righe. Anche qui
 la preparazione del letto di semina, in base alla parcella, è stata
-effettuata l’8 Settembre 2016. C’è stata una frangizzollatura il 5
-Dicembre con successiva semina, dando 190 Kg di seme ad ettaro, ed il
+effettuata l’8 Settembre 2016. C’è stata una frangizollatura il 5
+Dicembre con successiva semina, dando 190\,kg di seme ad ettaro, ed il
 15 Marzo del 2017 è stata fatta una strigliatura.
 
 Nel campo CO09 invece è stato seminato l’orzo distico varietà
-\emph{Campagne} trattato con Redico puro all’8.7\%. La coltura
+\emph{Campagne} trattato con Redico puro all’8.7\,\%. La coltura
 precedente era il girasole, varietà \emph{Solaris} trattato con
 Apron-xl p.a metalaxil-m.
 
 L’8 Settembre 2016 sono state effettuate le lavorazioni che
 distinguono le differenti parcelle, poi una prima concimazione il 5
-Dicembre dando 192 Kg/ha di fosfato biammonico (18:46), ed a seguire è
-stata effettuata una frangizzolatura e la semina con una seminatrice a
-righe, dando 190 Kg/ha di seme. Il 15 Marzo è stata fatta una seconda
-concimazione con nitrato d’ammonio (150 Kg/ha) e due settimane dopo
-c’è stato il diserbo usando un mix composto da Axial (1 L) + Axial
-Proto (250 mL) + Logran(55 g) ad ettaro. L’11 Aprile è stata poi
-distribuita l’urea con una dose di 150 Kg a ettaro.
+Dicembre dando \SI{192}{\kg\per\hectare} di fosfato biammonico
+(18:46), ed a seguire è stata effettuata una frangizzolatura e la
+semina con una seminatrice a righe, dando \SI{190}{\kg\per\hectare} di
+seme. Il 15 Marzo è stata fatta una seconda concimazione con nitrato
+d’ammonio ( \SI{150}{\kg\per\hectare}) e due settimane dopo c’è stato
+il diserbo usando un mix composto da Axial (1 L) + Axial Proto (250
+mL) + Logran(55 g) ad ettaro. L’11 Aprile è stata poi distribuita
+l’urea con una dose di 150\,kg a ettaro.
 
 Infine, nel campo CO10, precedentemente coltivato ad orzo distico
 \emph{Campagne} trattato con Redico, è stato seminato il Girasole,
 varietà \emph{Solaris} trattato con Apron-xl p.a metalaxil-m. Le
 lavorazioni iniziali sono state fatte sempre ad inizio autunno, nella
-stessa data degli altri campi e a seguire una frangizzollatura il 23
+stessa data degli altri campi e a seguire una frangizollatura il 23
 Febbraio e poi un’erpicatura il 29 Marzo. La semina è stata fatta il
 30 Marzo, con una densità di 75 000 piante ad ettaro usando una
 seminatrice di precisione. Contemporaneamente alla semina è stata
-fatta una concimazione con 20:10:10 (150 Kg/ha) e un diserbo a fascia
-usando 500 mL del prodotto GOAL.
+fatta una concimazione con 20:10:10 (\SI{150}{\kg\per\hectare}) e un
+diserbo a fascia usando 500 mL del prodotto GOAL (Oxifluorfen).
 
-\section{Metodo di campionamento}
+\subsection{Metodo di campionamento}
 Il campionamento ha previsto, per ogni parcella, 3 campioni di terreno
 di circa 500 g l’uno, presi a 5-10 cm di profondità. Il primo è stato
 preso al centro di ogni plot (m=medio) e gli altri due a 4 metri di
@@ -1749,8 +1781,8 @@ colloidale e poi setacciati a 200 µm (Fig. \ref{fig:macinato}).
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=1]{./foto/macinato.jpg}
-\caption{Un campione dopo esser stato macinato col mulino a palle e setacciato a 
-200µm.}
+\caption{Un campione dopo esser stato macinato col mulino a palle e
+  setacciato a 200µm.}
 \label{fig:macinato}
 \end{figure}
 
@@ -1761,11 +1793,11 @@ secondo con tutti i campioni del 2017.  Questi due campioni sono stati
 utilizzati come verifica per la PCA, rappresentando la media dei
 campioni dei due anni poiché composti da aliquote omogenee.
 
-\section{Analisi PLFA}
+\section{Laboratorio}
 
 La procedura utilizzata è stata modificata basandosi sul metodo di
-\citet{bligh_rapid_1959}, a sua volta modificato da White et
-al. (1979) \citet{white_determination_1979} e da
+\citet{bligh_rapid_1959}, a sua volta modificato da
+\citet{white_determination_1979} e da
 \citet{bossio_determinants_nodate}.
  
 \subsection{Preparazione dei campioni}
@@ -1775,29 +1807,33 @@ Reagenti:
 \item metanolo (\ce{CH3OH});
 \item cloroformio (\ce{CHCl3});
 \item tampone citrato 0.15 M, pH 4;
-\item estraente Bligh \& Dyer: \ce{CHCl3}:\ce{CH3OH}:tampone citrato, 1:2:0.8 v/v/v.
+\item estraente Bligh \& Dyer: \ce{CHCl3}:\ce{CH3OH}:tampone citrato,
+  1:2:0.8 v/v/v.
 
 \end{itemize}
 
-Procedura:
-è stato pesato un grammo di suolo liofilizzato in una vial da 20 mL di vetro
-ed è stato incluso anche il bianco; in ogni campione è stato aggiunto 9.2mL di B \& D
-e, dopo averlo tappato e vortexato per un minuto, è stato lasciato negli 
-ultrasuoni per un ulteriore minuto. A questo punto i campioni sono stati lasciati
-2 ore circa a estrarre e, per non far sedimentare tutto, ogni 10 minuti i campioni 
-venivano agitati mediante il vortex.
-Passate le due ore le vial sono state messe in centrifuga a 3000 giri per 10 minuti
-a 25-30°C e, ottenuto il limpido, è stato trasferito il surnatante in una vial pulita.
-Il suolo rimasto nella vial è stato nuovamente lavato conaltri 2.5 mL di B \& D, passato 
-nel vortex per un minuto e altrettanto tempo negli ultrasuoni.
-dopo una decina di minuti la vial con il terreno è stata nuovamente messa in 
-centrifuga a 3000 giri per 10 minuti a 25-30°C e il surnatante è stato trasferito
-e aggiunto al limpido precedente.
-A questo punto...
+Procedura.
+
+
+è stato pesato un grammo di suolo liofilizzato in una vial da 20 mL di
+vetro ed è stato incluso anche il bianco; in ogni campione è stato
+aggiunto 9.2mL di B \& D e, dopo averlo tappato e vortexato per un
+minuto, è stato lasciato negli ultrasuoni per un ulteriore minuto. A
+questo punto i campioni sono stati lasciati 2 ore circa a estrarre e,
+per non far sedimentare tutto, ogni 10 minuti i campioni venivano
+agitati mediante il vortex. Passate le due ore le vial sono state
+messe in centrifuga a 3000 giri per 10 minuti a 25-30°C e, ottenuto il
+limpido, è stato trasferito il surnatante in una vial pulita. Il suolo
+rimasto nella vial è stato nuovamente lavato conaltri 2.5 mL di B \&
+D, passato nel vortex per un minuto e altrettanto tempo negli
+ultrasuoni. dopo una decina di minuti la vial con il terreno è stata
+nuovamente messa in centrifuga a 3000 giri per 10 minuti a 25-30°C e
+il surnatante è stato trasferito e aggiunto al limpido precedente. A
+questo punto...
 
 \begin{enumerate}
-\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro adatta per la 
-centrifuga ed includere il bianco;
+\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro
+  adatta per la centrifuga ed includere il bianco;
 \item aggiungere ad ogni campione 9.2 ml di B\&D e tappare;
 \item vortez e mettere nell’ultrasuono per un minuto;
 \item lasciar separare almeno 2 ore, agitando i campioni ogni 10 minuti;
@@ -1844,7 +1880,8 @@ Procedura:
 \item ripulire la vial con altri 0.25 ml di cloroformio;
 \item agitare nuovamente la vial tramite il vortex, ultrasonicare e
   trasferire il tutto nella colonna;
-\item aggiungere 1 ml di cloroformio nella colonna così da eluire i lipidi neutri;
+\item aggiungere 1 ml di cloroformio nella colonna così da eluire i
+  lipidi neutri;
 \item quando tutto il solvente sarà sceso aggiungere 4 ml di acetone,
   in porzioni da 1 ml, così da eluire i glicolipidi;
 \item quando tutto l’acetone sarà sceso, rimuovere il becher e mettere
@@ -1858,7 +1895,7 @@ Procedura:
 \subsubsection{Terza fase - Derivatizzazione alcalina}
 Reagenti:
 \begin{itemize}
-\item \ce{MeOH}-Tolwene (1:1);
+\item \ce{MeOH}-Toluene (1:1);
 \item esano cloroformio (4:1) necessario per separare le fasi;
 \item acido acetico 1 M;
 \item eptano (\ce{C7H16});
@@ -1870,7 +1907,7 @@ Reagenti:
 Procedura:
 \begin{enumerate}
 \item aggiungere 10 µl di C19 in ogni vial;
-\item dissolvere il campione in 0.5 ml di \ce{MeOH}-Tolwene;
+\item dissolvere il campione in 0.5 ml di \ce{MeOH}-Toluene;
 \item aggiungere 0.1 ml di KOH e incubare a 60°C per 15 minuti;
 \item aggiungere 1 ml di esano cloroformio e 0.3 ml di acido acetico;
 \item agitare e usare il vortex per un minuto;
@@ -1880,10 +1917,10 @@ Procedura:
 \item agitare, usare il vortex per un minuto e centrifugare per 5 minuti a 3000 giri;
 \item aggiungere anche questa fase superiore nella vial;
 \item portare a secco sotto corrente di azoto a 25-30°C ;
-\item conservare a -20°C o riprendere in un baccellino con 200 µl di eptano.
+\item conservare a -20°C o riprendere in un baccellino con \SI{200}{\ul} di eptano.
 \end{enumerate}
 
-\subsection{ Standard e prova di validazione}
+\subsection{Standard e prova di validazione}
 Nella sequenza di iniezione, oltre ai 72 campioni e ai 2 MIX SOIL,
 sono stati inseriti anche dei Bianchi di controllo, così da
 assicurarsi che non ci siano interferenti nel sistema di preparazione
@@ -1956,7 +1993,7 @@ suolo già estratto, sul quale successivamente sono state ripetute e
 controllate tutte e tre le fasi della preparazione dei campioni.
 
 
-\subsection{GC-MS}
+\subsection{Gas Cromatografia e Spettrometria di Massa}
 La separazione cromatografica è stata effettuata tramite un sistema
 GC-MS Agilent 7890A dotato di autocampionatore per la riproducibilità
 e di un sistema per la termostatazione della colonna cromatografica.
@@ -2048,31 +2085,32 @@ print(tabella.microbi,
 %        \bottomrule
 %  \end{tabular}
 % \end{table}
-Di tutti questi 37 composti identificati, 21 sono stati ritenuti identificativi per 
-i gruppi microbici esaminati in questo lavoro, e vengono riportati in tabella:
-I gram positivi sono identificati da Ic14;0, Ic15:0, Ac15:0, Ic16:0, Ic17:0, Ac17:0 
-come trovato in bibliografia ( \todo{o'Leary and wilkinson 1988}, zelles et al 1994, white 
-et al. 1996, zelles 1997, fierer 2002, frostegard 2010); 
+Di tutti questi 37 composti identificati, 21 sono stati ritenuti
+identificativi per i gruppi microbici esaminati in questo lavoro, e
+vengono riportati in tabella: I gram positivi sono identificati da
+Ic14;0, Ic15:0, Ac15:0, Ic16:0, Ic17:0, Ac17:0 come trovato in
+bibliografia ( \todo{o'Leary and wilkinson 1988}, zelles et al 1994,
+white et al. 1996, zelles 1997, fierer 2002, frostegard 2010);
 %abbiamo trovato una 
 %contraddizione con quanto viene affermato da  feng 2000 che dice che il 10 methyl 
 %c16 e’ caratteristico dei Gram +, mentre noi lo abbiamo attribuito, insieme al 10Me 
-C17 e 10Methyl C18 agli attinomiceti come d’accordo con Kroppenstedt 1985, Bresson 
-1988, zelles 1994, fierer 2002. 
-Per quanto riguarda i Gram negati invece abbiamo preso i composti C16:1omega7, 
-omega5, il cyclo C17 e c19 e anche il c18:1 omega 9 sia cis che trans (o'Leary and 
-wilkinson 1988, schoug et al 2008  , zelles 1994, white et al. 1996, zelles 1997, 
-fierer 2002, frostegard 2010, I c16:1 omega 5 e 7 secondo Soderberg et al 2014, 
-wilkinson 1988).
-I funghi hanno invece il C18:2 *(kong and six 2012, Frostegard and baath 1996, 
-zelles 1997)e il C18:1 omega nove sia trans che cis forstegard 2010, kaiser et al 
-2010, frostegard 1993, zelles 1997, fierer 2002. Le  micorrize sono rappresentate 
-dal solo C16:1omega5 (frostegard 2010, olsson et al 1995) e, come ultimo gruppo 
-microbico da noi preso in esame, abbiamo i protozoi con c20:2 sia trans che cis 
-(White et al 1996, fierer 2002).
+C17 e 10Methyl C18 agli attinomiceti come d’accordo con Kroppenstedt
+1985, Bresson 1988, zelles 1994, fierer 2002. Per quanto riguarda i
+Gram negati invece abbiamo preso i composti C16:1omega7, omega5, il
+cyclo C17 e c19 e anche il c18:1 omega 9 sia cis che trans (o'Leary
+and wilkinson 1988, schoug et al 2008 , zelles 1994, white et al.
+1996, zelles 1997, fierer 2002, frostegard 2010, I c16:1 omega 5 e 7
+secondo Soderberg et al 2014, wilkinson 1988). I funghi hanno invece
+il C18:2 *(kong and six 2012, Frostegard and baath 1996, zelles 1997)e
+il C18:1 omega nove sia trans che cis forstegard 2010, kaiser et al
+2010, frostegard 1993, zelles 1997, fierer 2002. Le micorrize sono
+rappresentate dal solo C16:1omega5 (frostegard 2010, olsson et al
+1995) e, come ultimo gruppo microbico da noi preso in esame, abbiamo i
+protozoi con c20:2 sia trans che cis (White et al 1996, fierer 2002).
 
 Il riconoscimento è stato possibile tramite la \emph{NIST14} (...),
 mentre l'analisi quantitativa è stata effettuata utilizzando \emph{MS
-  Quantitative Analysis}.  Successivamente sono state considerate le
+  Quantitative Analysis}. Successivamente sono state considerate le
 aree dei composti contenuti nel BAMEs MIX per poter quantificare anche
 le quantità degli altri composti non presenti nello standard.
 
@@ -2081,21 +2119,23 @@ le quantità degli altri composti non presenti nello standard.
 I dati sono stati analizzati mediante il linguaggio di programmazione R 3.4.?. 
 
 \begin{itemize}
-\item anova modello lineare sulle somme: l'esplorazione è stata fatta tramite 
-confronto dei modelli statistici lineari e analisi della varianza (ANOVA).
-Nei modelli sono state inizialmente valutate eventuali interazioni tra stagionalità
-e lavorazioni e conduzione.????
-Sui modelli definitivi è stata anche applicata un'analisi della varianza (ANOVA).
-Inoltre è stato anche effettuato il \todo{cit Tukey test}.
+\item anova modello lineare sulle somme: l'esplorazione è stata fatta
+  tramite confronto dei modelli statistici lineari e analisi della
+  varianza (ANOVA). Nei modelli sono state inizialmente valutate
+  eventuali interazioni tra stagionalità e lavorazioni e
+  conduzione.???? Sui modelli definitivi è stata anche applicata
+  un'analisi della varianza (ANOVA). Inoltre è stato anche effettuato
+  il \todo{cit Tukey test}.
 
 \item anova dati composizionali
-\item PCA composizionale:
-La concentrazione dei PLFA individuale, calcolata sulle moli, è stata usata come 
-input nell'analisi delle componenti principali (PCA) così da determinare come 
-i BAMEs si modificano in base alla stagione, gestione e lavorazioni effettuate.
-Usando la PCA si combinano i dati a 37 dimensioni (dovute ai 37 PLFA differenti 
-identificati nei campioni), in una serie di assi lineari che incorporano la 
-massima varianza nei dati. La PCA è stata condotta usando il programma R 3.4.?.
+\item PCA composizionale: La concentrazione dei PLFA individuale,
+  calcolata sulle moli, è stata usata come input nell'analisi delle
+  componenti principali (PCA) così da determinare come i BAMEs si
+  modificano in base alla stagione, gestione e lavorazioni effettuate.
+  Usando la PCA si combinano i dati a 37 dimensioni (dovute ai 37 PLFA
+  differenti identificati nei campioni), in una serie di assi lineari
+  che incorporano la massima varianza nei dati. La PCA è stata
+  condotta usando il programma R 3.4.?.
 
 \item discriminant analisys composizionale
 \end{itemize}
@@ -2104,55 +2144,58 @@ massima varianza nei dati. La PCA è stata condotta usando il programma R 3.4.?.
 \chapter{Risultati}
 
 \section{Generale}
-In figura (tal de tali 4,1) abbiamo il cromatogramma dello standard tal di tali e
-vediamo  che tutti i composti presi in esame in questa tesi risultano ben 
-separati e identificati. 
+In figura (tal de tali 4,1) abbiamo il cromatogramma dello standard
+tal di tali e vediamo che tutti i composti presi in esame in questa
+tesi risultano ben separati e identificati.
 %% \begin{figure}[ht]
 %% \centering
 %% \includegraphics[scale=0.2]{./foto/stddil50.png}
 %% \caption{Standard BAMEs MIX Diluito 50.}
 %% \label{fig:crom_std}
 %% \end{figure}
-Il cromatogramma successivo (Fig. 4.2) è invece quello di un campione preso 
-a Ottobre 2016, il CO10C3m, quindi su campo a gestione convenzionale dove è 
-stata effettuata la frangizollatura e vediamo dei composti in più rispetto a 
-quelli presenti negli standard:
+Il cromatogramma successivo (Fig. 4.2) è invece quello di un campione
+preso a Ottobre 2016, il CO10C3m, quindi su campo a gestione
+convenzionale dove è stata effettuata la frangizollatura e vediamo dei
+composti in più rispetto a quelli presenti negli standard:
 %% \begin{figure}[ht]
 %% \centering
 %% \includegraphics[scale=0.2]{./foto/cromatco10c3mOTT.png}
 %% \caption{Campione autunnale in campo convenzionale (CO10) e lavorazione Frangizollato.}
 %% \label{fig:crom_CO10C3}
 %% \end{figure}
-i C14:0, a C14:0, Me C16:0, 10MeC16:0, 7Me C17:0, bohC17:0, C16:omega5, a C17:0,
-10MeC18:0, bohMeC18:0, c17:1omega9, bohMeC18:0, bohC18:1, c20:2 e questo perchè il 
-BAMEs MIX in commercio non è specifico del suolo e quindi è mancante di alcuni
-acidi grassi avendo l'habitat tellurico una grande biodiversità.
-Paragonando il cromatogramma precedente con il seguente (Fig.4.3) che 
-rappresenta un campione biologico preso nello stesso anno e che ha subito 
-identiche lavorazioni,  OO4C3m, vediamo che non ci sono delle differenze 
+i C14:0, a C14:0, Me C16:0, 10MeC16:0, 7Me C17:0, bohC17:0,
+C16:omega5, a C17:0, 10MeC18:0, bohMeC18:0, c17:1omega9, bohMeC18:0,
+bohC18:1, c20:2 e questo perchè il BAMEs MIX in commercio non è
+specifico del suolo e quindi è mancante di alcuni acidi grassi avendo
+l'habitat tellurico una grande biodiversità. Paragonando il
+cromatogramma precedente con il seguente (Fig.4.3) che rappresenta un
+campione biologico preso nello stesso anno e che ha subito identiche
+lavorazioni, OO4C3m, vediamo che non ci sono delle differenze
 immediatamente evidenti tra i due.
 %% \begin{figure}[ht]
 %% \centering
 %% \includegraphics[scale=0.2]{./foto/OO04C3mOtt.png}
-%% \caption{Campione autunnale in campo Biologico (OO04) e lavorazione Frangizollato.}
+%% \caption{Campione autunnale in campo Biologico (OO04) e lavorazione
+%% Frangizollato.}
 %% \label{fig:crom_OO04C3m}
 %% \end{figure}
-Notiamo la presenza degli stessi composti e con intensità simili; dunque con un 
-esame puramente visivo, anche se ci si aspetterebbe di vedere andamenti 
-cromatografici differenti in base alle due gestioni e/o lavorazioni, queste non 
-sono riscontrabili.
-Invece una certa differenza si vede nella stagionalità, infatti comparando il 
-primo cromatogramma (Fig.4.2) con quello ottenuto dal campione preso nel medesimo 
-punto, CO10C3m, ma in estate (Fig.4.4) vediamo uno spiccato innalzamento del C19:0.
+Notiamo la presenza degli stessi composti e con intensità simili;
+dunque con un esame puramente visivo, anche se ci si aspetterebbe di
+vedere andamenti cromatografici differenti in base alle due gestioni
+e/o lavorazioni, queste non sono riscontrabili. Invece una certa
+differenza si vede nella stagionalità, infatti comparando il primo
+cromatogramma (Fig.4.2) con quello ottenuto dal campione preso nel
+medesimo punto, CO10C3m, ma in estate (Fig.4.4) vediamo uno spiccato
+innalzamento del C19:0.
 %% \begin{figure}[ht]
 %% \centering
 %% \includegraphics[scale=0.2]{./foto/10c3mest.png}
 %% \caption{Campione estivo in campo convenzionale (CO10) e lavorazione Frangizollato.}
 %% \label{fig:crom_CO10C3est}
 %% \end{figure}
-Comunque, per avere dei risultati più (chiari e visibili?), le differenze sono 
-da cercare tramite l'analisi quantitativa statistica dei dati 
-(tramite modelli lineari, tukey test, PCA e anova(?)).
+Comunque, per avere dei risultati più (chiari e visibili?), le
+differenze sono da cercare tramite l'analisi quantitativa statistica
+dei dati (tramite modelli lineari, tukey test, PCA e anova(?)).
 
 
 
@@ -2226,9 +2269,9 @@ nel biologico (2 casi su 3 sia nell'estate che nell'autunno).
 <<FigStarplotMedie>>
 @
 \caption{mostra 12 elementi ove ogni spicchio rappresenta uno dei 37
-  BAMEs.  Ogni elemento (starplot) mostra la media dei PLFA trovati
-  nei campioni corrispondenti alla lavorazione-stagione-gestione sotto
-  indicata.  Per righe vediamo le differenze dovute alle lavorazioni,
+  BAMEs. Ogni elemento (starplot) mostra la media dei PLFA trovati nei
+  campioni corrispondenti alla lavorazione-stagione-gestione sotto
+  indicata. Per righe vediamo le differenze dovute alle lavorazioni,
   mentre in colonna, a coppie, vediamo quelle legate alle due
   gestioni. Inoltre i primi sei starplots appartengono tutti alla
   stagione autunnale, mentre dal settimo al dodicesimo abbiamo i
@@ -2243,31 +2286,54 @@ tranne nel caso del biologico autunnale dove invece è il frangizollato.
 
 
 
+\section{Analisi quantitativa per il totale di PLFA rilevati}
+Qui sotto va messo il discorso sui modelli marginali coi dettagli
+anche dei log 
 
-\section{Somme Moli}
-Qui sotto si vede che la gestione (MAN) non è significativa sulla
-quantita totale di moli di PLFA
 
 
-<<anovaSommeMoli,  echo=FALSE, include = FALSE>>=
+
+
+<<anovaSommeMoli,  echo=FALSE, eval=TRUE, results=tex>>=
 
 #summary(lm(log(lis.tutto$SOMME$nMOLI) ~ 
  #          til))
 
 
+logMoli <- log(lis.tutto$SOMME$nMOLI)
+
 lm.SommeMoli.1 <-  
-    lm(log(lis.tutto$SOMME$nMOLI) ~ 
+    lm(logMoli ~ 
            MAN*TIL*STAGIONE, 
        data  =  lis.tutto$CATEGORIA)
 
 lm.SommeMoli.2 <-  
-    lm(log(lis.tutto$SOMME$nMOLI) ~ 
+    lm(logMoli ~ 
            TIL+STAGIONE, 
        data  =  lis.tutto$CATEGORIA)
 
-anova(lm.SommeMoli.1, lm.SommeMoli.2)
+df.xtabANOVAmarginali <-
+cbind.data.frame(
+    ## Modello =  c("log(Moli) ~ MAN * TIL * Stagione",  
+    ##              "log(Moli) ~ Lavorazione + Stagione"),
+        anova(lm.SommeMoli.1, lm.SommeMoli.2)
+    )
 
-summary(lm.SommeMoli.2)
+ xtabANOVAmarginali <- 
+    xtable(df.xtabANOVAmarginali,
+           label  = "tab:ANOVAmarginali",
+           align  = "lllllll",
+            caption =
+               "Confronto tra modelli marginali per la quantità di PLFA nel suolo. 
+               modello 1) con tutte le interazioni, \\emph{log(Moli) ~ Gestione * Lavorazione * Stagione}; 
+                modello 2) \\emph{log(Moli) ~ Lavorazione + Stagione}, il più parsimonioso\\newline"
+ )
+print(xtabANOVAmarginali, 
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+#summary(lm.SommeMoli.2)
 
 fattore <- 
     interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
@@ -2276,18 +2342,56 @@ amod <-
     aov(log(lis.tutto$SOMME$nMOLI) ~ fattore)
 HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
 tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
-tuk.cld<- cld(tuk)
+tuk.cld <- cld(tuk)
 @ 
 
 <<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
 boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
         ylab = "log(somma moli PLFA)",
-        main = "pippo"
+        main = ""
         )
+for(i in 1:6){
+text(i,5, tuk.cld$mcletters$Letters[i], cex = 2)
+}
+
+## altrofattore <-   
+##     with(lis.tutto$CATEGORIA, 
+##          interaction(MAN,TIL,STAGIONE)  
+##          )
+
+## boxplot(log(lis.tutto$SOMME$nMOLI) ~ altrofattore,
+##         ylab = "log(somma moli PLFA)",
+##         main = "", col = c("lightgray", "yellow")
+##         )
+
 
 @ 
 
 
+
+Il modello statistico adattato è il seguente:
+
+\begin{modello}
+  \label{mod:ANOVAmoli}
+  log(y) \sim \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon
+\end{modello}
+%\nopagebreak
+
+\begin{samepage}
+Dove:
+
+\nopagebreak
+\begin{tabular}{lp{12cm}}
+  $y$       & = log(\si{\mol} di PLFA \\
+  $\beta_0$     & = media generale (intercetta del modello)\\
+  $x_1$ & = variabile categorica \emph{lavorazione}, tre livelli: \emph{Arato, Rippato, Frangizollato}\\
+  $x_2$  & = variabile categorica \emph{stagione}, due livelli:
+           \emph{Autunno, Estate}\\
+
+  $\epsilon$ & = residui o errore
+\end{tabular}
+\end{samepage}
+\vspace*{2em}
 
 \begin{figure}[ht]
   \centering
@@ -2299,22 +2403,22 @@ boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
   \label{fig:boxplot_somma_moli}
 \end{figure}
 
-L'immagine (tale) rappresenta i 6 boxplot delle somme delle moli dei vari PLFA,
-uno per ogni lavorazione entro stagione. (abbiamo usato la funzione log() così 
-da ridurre la varianza).
-Tramite questi boxplots vediamo che la somma delle moli in estate è maggiore 
-rispetto a quella in autunno, con una media sempre superiore a 4.0; 
-come visto con gli starplots.
-Anche in questo caso osserviamo che il rippato prevede una media più alta (circa 4.5)
-sia in autunno che nella stagione estiva, mentre l'arato è inferiore in autunno 
-e più o meno simile al frangizollato in estate.
-In questo caso non sono state messe in evidenza le due gestioni.
+La figura \ref{fig:boxplot_somma_moli} mostra i 6 boxplot delle
+somme delle moli dei vari PLFA, uno per ogni lavorazione entro
+stagione. (abbiamo usato la funzione log() così da ridurre la
+varianza). Tramite questi boxplots vediamo che la somma delle moli in
+estate è maggiore rispetto a quella in autunno, con una media sempre
+superiore a 4.0; come visto con gli starplots. Anche in questo caso
+osserviamo che il rippato prevede una media più alta (circa 4.5) sia
+in autunno che nella stagione estiva, mentre l'arato è inferiore in
+autunno e più o meno simile al frangizollato in estate. In questo caso
+non sono state messe in evidenza le due gestioni.
 
 
 
 \section{Analisi composizionale}
 \subsection{PCA composizionale}
-Qui ci vanno le rilfessioni di Dalila sui risultati della PCA composizionale
+Qui ci vanno le riflessioni di Dalila sui risultati della PCA composizionale
 
 <<FigScreeplotcomposizionale, eval = TRUE, results = tex, echo = FALSE>>=
 Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
@@ -2329,49 +2433,60 @@ text(x = 1:10, y = (pcx.Y.MOLI$sdev^2)[1:10], pos = 4,
 @ 
 
 
-Dallo screeplot composizionale delle moli vediamo che la prima componente, 
-contiene il 63\% della varianza totale.
-Mentre, già la seconda, rappresenta solo il 12\% (dato preciso?) e le successive, 
-sommate insieme, rappresentano una percentuale irrisoria.
-Per questo motivo abbiamo utilizzato solo le prime due componenti.
+Dallo screeplot composizionale delle moli vediamo che la prima
+componente, contiene il 63\% della varianza totale. Mentre, già la
+seconda, rappresenta solo il 12\% (dato preciso?) e le successive,
+sommate insieme, rappresentano una percentuale irrisoria. Per questo
+motivo abbiamo utilizzato solo le prime due componenti.
 
 Gia alla 5 siamo sotto al 3\%
 
 
-<<FigPCAcomposizionale_1_2, eval = FALSE, echo = FALSE, results = hide>>=
+<<FigPCAcomposizionale_1, eval = FALSE, echo = FALSE, results = hide>>=
+
+df.colori <-   
+    cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
+
+df.colori <- df.colori[order(df.colori$MASSE),]
+df.colori$COLORI <- 1:36
+df.colori <-  df.colori[order(df.colori$origine),]
+##
 
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
               col = c(1,"transparent"),
               xlabs.pc=as.character(lis.tutto$CATEGORIA$MAN), 
               xlabs.col=as.numeric(lis.tutto$CATEGORIA$TIL),
-              ylabs = names(lis.tutto$PLFA$nMOLI)
+              ylabs = names(lis.tutto$PLFA$nMOLI), main = "Individui"
               )
 legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
        legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
 text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
-    
+@ 
+
+<<FigPCAcomposizionale_2, eval = FALSE, echo = FALSE, results = hide>>=  
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
               col = c("transparent",1),
-              ylabs = names(lis.tutto$PLFA$nMOLI)
-              )
+              ylabs = 1:36,#substr(names(lis.tutto$PLFA$nMOLI),3,7)
+               main = "PLFA")
 
 
-fun.biplot(x=pcx.Y.MOLI,
-           col=c(1,5),
-           choices=c(1,2), ## assi/componenti da considerare
-           scale=0, 
-           pc.biplot=FALSE,
-           col.obs =  as.numeric(lis.tutto$CATEGORIA$TIL),
-           ## as.numeric(interaction(lis.tutto$CATEGORIA$TIL, 
-           ##                             lis.tutto$CATEGORIA$MAN)),
-           etich = as.character(lis.tutto$CATEGORIA$MAN)
-               ## interaction(lis.tutto$CATEGORIA$TIL,
-               ##             lis.tutto$CATEGORIA$MAN)
-           )
-legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
-       legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+## fun.biplot(x=pcx.Y.MOLI,
+##            col=c(1,5),
+##            choices=c(1,2), ## assi/componenti da considerare
+##            scale=0, 
+##            pc.biplot=FALSE,
+##            col.obs =  as.numeric(lis.tutto$CATEGORIA$TIL),
+##            ## as.numeric(interaction(lis.tutto$CATEGORIA$TIL, 
+##            ##                             lis.tutto$CATEGORIA$MAN)),
+##            etich = as.character(lis.tutto$CATEGORIA$MAN)
+##                ## interaction(lis.tutto$CATEGORIA$TIL,
+##                ##             lis.tutto$CATEGORIA$MAN)
+##            )
+## legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
+##        legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+@ 
 
-<<FigPCAcomposizionale_2_3, eval = FALSE, results = tex, echo =  FALSE>>=
+<<FigPCAcomposizionale_3_4, eval = FALSE, results = tex, echo =  FALSE>>=
 fun.biplot(x=pcx.Y.MOLI,
            col=c(1,5),
            choices=c(2,3), ## assi/componenti da considerare
@@ -2391,7 +2506,7 @@ fun.biplot(x=pcx.Y.MOLI,
 \begin{figure}[ht]
   \centering
   
-<<label=printScreeplotComposiz, fig=TRUE, fig.width = 0.7, fig.height = 0.7, echo=FALSE>>=
+<<label=printScreeplotComposiz, fig=TRUE, fig.width = 0.6, fig.height = 0.6, echo=FALSE>>=
 <<FigScreeplotcomposizionale>>
 @
   \caption{screeplot composizionale moli}
@@ -2402,12 +2517,108 @@ fun.biplot(x=pcx.Y.MOLI,
 \begin{figure}[ht]
   \centering
   
-<<label=printPCAcomposizionale_1_2, fig=TRUE, fig.width = 0.7, fig.height = 0.7, echo=FALSE>>=
-<<FigPCAcomposizionale_1_2>>
+<<label=printPCAcomposizionale_1, fig=TRUE, fig.width = 0.7, fig.height = 0.7, echo=FALSE>>=
+<<FigPCAcomposizionale_1>>
 @
-  \caption{PCA composizionale moli}
+  \caption{PCA composizionali moli}
   \label{fig:PCA_composiz}
 \end{figure}
+
+
+\begin{figure}[ht]
+\centering
+
+
+\subfloat[][\emph{prima figura}.]
+{%apre
+<<label=printPCAcomposizionale_1, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
+<<FigPCAcomposizionale_1>>
+@
+}\quad
+
+\subfloat[][\emph{2a figura}.]
+{
+<<label=printPCAcomposizionale_2, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
+<<FigPCAcomposizionale_2>>
+@    
+} 
+\caption{PCA composizionali moli}
+  \label{fig:PCA_composiz}
+\end{figure}
+
+
+
+<<printPCAcomposizionale_PM,  fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     xlab = "Comp.1", 
+     ylab = "Comp.2",
+     main = "titolo"
+)
+for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
+  posizioneX <-
+    pcx.Y.MOLI$loadings[,1]
+  posizioneY <- pcx.Y.MOLI$loadings[,2]
+  #titolo <-
+   # names(df.gruppiMicrobici)[dalila]
+    #col= (prova)
+  # colore <-
+  #     ifelse(df.gruppiMicrobici[i, dalila]==1,
+  #            "black", ## nero se vero
+  #            "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, 
+         posizioneY,
+         col=#as.numeric(cut(df.colori$MASSE, breaks = 2)),
+             ifelse(df.colori$MASSE < 275, "gray", "black"),
+          length=0.1)
+     text(posizioneX, 
+          posizioneY,
+          label = df.colori$MASSE,
+          pos= 1,
+          offset=-0.5,
+          col="black")
+}
+
+@ 
+
+\begin{landscape}
+<<clusterIndividui_1, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE  >>=
+xc <- Y.MOLI
+row.names(xc) <-
+    as.character(with(
+        lis.tutto$CATEGORIA,        
+        interaction(STAGIONE, MAN,TIL))
+        )
+dd <- dist(xc)
+hc <-  hclust(dd, method="ward.D2")
+dend1 <- as.dendrogram(hc, horizontal = TRUE)
+plot(dend1)
+#rect.hclust(hc , k=3, border="red")
+ 
+prova <- as.vector(cutree(hc, k = 3))
+@ 
+
+<<clusterIndividui_2, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE  >>=
+xc <- 
+    aggregate(Y.MOLI, 
+              by = list(STAGIONE = lis.tutto$CATEGORIA$STAGIONE,
+                        MAN = lis.tutto$CATEGORIA$MAN,
+                        TIL = lis.tutto$CATEGORIA$TIL), 
+              mean)
+
+row.names(xc) <- 
+    with(xc, as.character(interaction(STAGIONE, MAN, TIL)))
+ 
+dd <- dist(xc[,-(1:3)])
+hc <-  hclust(dd, method="ward.D2")
+dend1 <- as.dendrogram(hc, horizontal = TRUE)
+plot(dend1)
+
+@ 
+
+\end{landscape}
 
 
 
@@ -2516,7 +2727,7 @@ dd <- as.dist(
 hc <-  hclust(dd, method="ward.D2")
       (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
 plot(dend1)
-rect.hclust(hc , k=4, border="red")
+rect.hclust(hc , k=3, border="red")
  
 prova <- as.vector(cutree(hc, k = 3))
 
@@ -2547,7 +2758,7 @@ fattore <-
         substr(fattore, 9,9), sep = ""
         )
 
-xc <- Y.MOLI
+
 res <- lda(x=data.frame(ilr(xc)), grouping=fattore)
 ilrInv(res$means, orig=xc)
 pdf("getta.pdf", paper = "A4")
@@ -2746,31 +2957,100 @@ dev.off()
 %      table.placement= "hb")
 %
 %@
-\chapter{Discussioni}
-perchè gc e problema risolvibile del 126, problema 10 methyl qualcosa, perchè pca 
-Avendo in questo caso di studio 37 variabili da manovrare e osservare nello 
-spazio multidimensionale, è risultato utile utilizzare la PCA( Analisi in 
-Componenti Principali) che ci permette di sostituire le 37 variabili originari
-con un numero ridotto di componenti principali così che sia facilitata la 
-lettura ma anche deve essere garantita la minor perdita possibile di informazione.
-Dunque ci mostra la componente con la combinazione lineare di massima varianza, 
-che sarà nominata con Comp.1, successivamente verrà mostratala Comp.2 e quindi 
-la seconda combinazione lineare in termini di varianza e così via a decrescere.
-A questo punto ci è possibile scegliere il numero di componenti principali 
-ritenuto più facile da interpretare e anche più idoneo per avere la minima 
-perdita di dati.
+\chapter{Discussione}
+perchè gc e problema risolvibile del 126, problema 10 methyl qualcosa,
+perchè pca Avendo in questo caso di studio 37 variabili da manovrare e
+osservare nello spazio mul tidimensionale, è risultato utile
+utilizzare la PCA( Analisi in Componenti Principali) che ci permette
+di sostituire le 37 variabili originari con un numero ridotto di
+componenti principali così che sia facilitata la lettura ma anche deve
+essere garantita la minor perdita possibile di informazione. Dunque ci
+mostra la componente con la combinazione lineare di massima varianza,
+che sarà nominata con Comp.1, successivamente verrà mostratala Comp.2
+e quindi la seconda combinazione lineare in termini di varianza e così
+via a decrescere. A questo punto ci è possibile scegliere il numero di
+componenti principali ritenuto più facile da interpretare e anche più
+idoneo per avere la minima perdita di dati.
 
-ecc.
-spiegare :
-l'estate più che l'autunno? se maggiori i protozoi è scritto anche a pagina 25
-che dico che preferiscono t sopra i 20 gradi ecc, cerca lì
-il rippato forse perchè minor disturbo rispetto alle altre due lavorazioni che invece
-alterano completamente il terreno e invece nel rip posso aver campionato in una porzione
-di terreno non modificato
-biologico meno o comunque non variazione rispetto il convenzionale perchè i microrganismi
-si modificano per alcuni fattori quali nutrienti (?), t (clima), acqua-ossigeno-asfissia
+ecc. spiegare : l'estate più che l'autunno? se maggiori i protozoi è
+scritto anche a pagina 25 che dico che preferiscono t sopra i 20 gradi
+ecc, cerca lì il rippato forse perchè minor disturbo rispetto alle
+altre due lavorazioni che invece alterano completamente il terreno e
+invece nel rip posso aver campionato in una porzione di terreno non
+modificato biologico meno o comunque non variazione rispetto il
+convenzionale perchè i microrganismi si modificano per alcuni fattori
+quali nutrienti (?), t (clima), acqua-ossigeno-asfissia
 (lavorazioni-clima) e pH ma suolo tamponante e quindi bona.
 \begin{appendices}
+  
+<<label = qqplotANOVAmoli, fig.width=0.5, fig.height=0.5, echo=FALSE, eval = TRUE, fig=TRUE, include = FALSE>>=
+ par(mfrow = c(2,2))
+ plot(lm.SommeMoli.2)
+@ 
+
+ \begin{figure}[ht]
+  \centering
+<<label = figurina2, fig = TRUE, echo=FALSE>>=
+<<qqplotANOVAmoli>>
+@
+\caption{Distribuzione dei residui
+  del modello \ref{mod:ANOVAmoli}, p. \pageref{mod:Anovamoli})}
+  \label{fig:qqplot_ANOVAmoli}
+\end{figure}
+
+\begin{table}[ht]
+\caption{Pesi molecolari e nomi molecole PLFA }
+\label{tab:PM_PLFA}
+\centering
+ \begin{tabular}{lclcccc}
+  \toprule
+NOME.R	&Peso molecolare	&Nome	&	&	&	&\\
+   \midrule
+C.12MetC14.0	&242	&Methyl-12-methyltetradecanoate	&	&	&	&\\
+C.11MetC14.0	&242	&	&	&	&	&\\
+C.00LinC14.0	&242	&Methyl myristate	&	&	&	&\\
+C.13MetC15.0	&256	&	&	&	&	&\\
+C.12MetC15.0	&256	&	&	&	&	&\\
+C.00MetC16.0	&270	&	&	&	&	&\\
+C.00LinC15.0	&256	&Methyl pentadecanoate	&	&	&	&\\
+C.01MetC16.0	&270	&	&	&	&	&\\
+C.14MetC16.0	&270	&Methyl-14-methylpentadecanoate	&	&	&	&\\
+C.07MetC17.0	&284	&	&	&	&	&\\
+C.00LinC16.0	&270	&Methyl palmitate	&	&	&	&\\
+C.00MetC17.0.sul.284	&284	&	&	&	&	&\\
+C.00MetC17.0	&284	&	&	&	&	&\\
+C.00LinC16.1.omega7	&268	&Methyl cis-9-hexadecenoate	&	&	&	&\\
+C.01MetC17.0	&284	&	&	&	&	&\\
+C.00LinC16.1.omega5	&268	&	&	&	&	&\\
+C.15MetC17.0	&284	&Methyl-15-methylhexadecanoate	&	&	&	&\\
+C.14MetC17.0	&284	&	&	&	&	&\\
+C.10MetC18.0	&298	&	&	&	&	&\\
+C.00LinC17.0	&284	&Methyl heptadecanoate	&	&	&	&\\
+C.00MetC18.0	&298	&	&	&	&	&\\
+C.00CycC17.0	&282	&Methyl cis-9,10-methylenehexadecanoate	&	&	&	&\\
+C.00UnkC12.6	&210	&	&	&	&	&\\
+C.00LinC17.1.omega9	&282	&	&	&	&	&\\
+C.00LinC18.0	&298	&Methyl stearate	&	&	&	&\\
+C.02HydC14.0	&258	&Methyl-2-hydroxytetradecanoate	&	&	&	&\\
+C.00MetC19.0	&312	&	&	&	&	&\\
+C.00LinC18.1.omega9cis	&296	&Methyl cis-9,10-methyleneoctadecanoate	&	&	&	&\\
+C.00LinC18.1.omega9t\&omega7cis	&296	&Methyl trans-9-octadecenoate	&	&	&	&\\
+C.00LinC18.1	&296	&Methyl oleate	&	&	&	&\\
+C.00LinC18.2	&294	&Methyl linoleate	&	&	&	&\\
+C.03HydC14.0	&258	&Methyl-3-hydroxytetradecanoate	&	&	&	&\\
+C.00LinC19.0	&312	&Methyl nonadecanoate	&	&	&	&\\
+C.00CycC19.0	&310	&	&	&	&	&\\
+C.00LinC20.0	&326	&Methyl eicosenoate	&	&	&	&\\
+C.02HydC16.0	&286	&	&	&	&	&\\
+C.00LinC20.2	&322	&	&	&	&	&\\
+C.00LinC20.2.cis11.14	&322	&	&	&	&	&\\
+
+        \bottomrule
+  \end{tabular}
+ \end{table}
+
+
+
 
 \end{appendices}
 
