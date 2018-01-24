@@ -318,7 +318,7 @@ delle piante superiori e/o presentare gli orizzonti
 Johnson, nel 1998, diede invece una definizione cosiddetta cosmica:
 “Il suolo è formato da qualsiasi materiale minerale o organico posto
 sulla superficie di pianeti o corpi simili, ed è alterato da agenti
-biologici, chimici e fisici” \citep{JOHNSON19986}.
+biologici, chimici e fisici” \citep{JOHNSON1998}.
 
 \subsection{I cinque fattori di formazione del suolo}
 Per potersi formare, il suolo ha bisogno di alcuni "ingredienti", i
@@ -379,11 +379,11 @@ solida, di cui il 5-10\% di materia organica, e il 50\% di pori: 25\%
 di micropori utili per il movimento dei liquidi e 25\% di macropori
 per il movimento dei gas \citep{radaelli2001chimica}.
  \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i 
-micropori aventi un diametro inferiore ai 30 µm, utili per la 
-trattenuta dell’acqua; i mesopori con diametro tra i 30 e i 100 µm 
+micropori aventi un diametro inferiore ai 30\,µm, utili per la 
+trattenuta dell’acqua; i mesopori con diametro tra i 30 e i 100\,µm 
 importanti sia per il 
 rinnovamento dell’aria che per il movimento dell’acqua e infine i
-macropori con diametro superiore ai 100 µm, che permettono invece il
+macropori con diametro superiore ai 100\,µm, che permettono invece il
 movimento dell’aria e il rapido infiltrarsi dell’acqua. Naturalmente
 il rapporto e la percentuale degli spazi porosi nei suoli risente
 dell’influenza della vegetazione e della fauna che ci vive, nonché
@@ -411,10 +411,10 @@ in base alla disposizione dei loro elementi (Fig.
 \centering
 \includegraphics[scale=0.5]{./foto/silicati.jpg}
 
-\caption{Famiglie dei silicati: nesosilicati (a), sorosilicati (b),
+\caption[Famiglie dei silicati]{Famiglie dei silicati: nesosilicati (a), sorosilicati (b),
   ciclosilicati (c), inosilicati a catena singola (d), inosilicati a
   catena doppia (e), fillosilicati (f) e tectosilicati (g)
-  \citep{radaelli_chimica_2002} }
+  \citep{radaelli_chimica_2002}. }
 \label{fig:famiglia_silicati}
 \end{figure}
 
@@ -509,8 +509,8 @@ colore scuro, parzialmente aromatici e chimicamente complessi
 eterogenea e migliore ai fini dell’aumento della capacità di scambio,
 infatti costituisce una vera e propria riserva di nutrienti nel suolo.
 In base al suo contenuto i terreni sono classificati in: umiferi
-($>$10\%), ricchi di humus (5-10\%), sufficientemente dotati di humus
-(3-5\%), mediamente dotati di humus (2-3\%), poveri di humus ($<$2\%) 
+($>$10\,\%), ricchi di humus (5-10\,\%), sufficientemente dotati di humus
+(3-5\,\%), mediamente dotati di humus (2-3\,\%), poveri di humus ($<$2\,\%) 
 \citep{giardini_agronomia_1992}.
 
 Infine, la diversa grandezza di questi elementi solidi va a costituire
@@ -548,7 +548,7 @@ suoli vengono classificati in varie classi tessiturali (Fig. \ref{fig:Triangolo_
 \begin{figure}[ht]
 \includegraphics[scale=0.5]{./foto/triangoloUSDA.jpg}
 \caption{Triangolo per la determinazione della classe tessiturale 
-\citep{usda_textural_1951}}
+\citep{usda_textural_1951}.}
 \label{fig:Triangolo_USDA}
 \end{figure}
 
@@ -599,9 +599,9 @@ movimento idrico anche per lo spostamento della componente gassosa.
 Questa interessa prevalentemente i macropori poichè sono quelli che
 più velocemente si liberano dell’acqua e si riempiono d’aria.
 Quest’ultima ha una composizione differente rispetto a quella
-atmosferica, c’è una simile percentuale di N, circa il 79\%, un po’
-meno ossigeno, circa il 18\%, ma soprattutto si ha una maggior
-concentrazione di biossido di carbonio (0.3-5\%) e anche di vapore
+atmosferica, c’è una simile percentuale di N, circa il 79\,\%, un po’
+meno ossigeno, circa il 18\,\%, ma soprattutto si ha una maggior
+concentrazione di biossido di carbonio (0.3-5\,\%) e anche di vapore
 acqueo. Queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
@@ -634,7 +634,7 @@ macrofauna, formiche, termiti, coleotteri e ragni
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.7]{./foto/microorganism.jpg}
-\caption{Classificazione dimensionale degli organismi \citep{swift_decomposition_1979}}
+\caption{Classificazione dimensionale degli organismi \citep{swift_decomposition_1979}.}
 \label{fig:Classific_microrganismi}
 \end{figure}
 
@@ -672,7 +672,7 @@ la biomassa presente nel suolo. Nel loro intestino, i lombrichi,
 impastano le sostanze minerali e quelle organiche, trasformandole in
 complessi stabili argilla-humus, arricchendo molto la terra con le
 proprie deiezioni. Nelle regioni temperate, i lombrichi sono in grado
-di elaborare fino a 4 kg di suolo per metro quadrato al giorno
+di elaborare fino a 4\,kg di suolo per metro quadrato al giorno
 \citep{feller_charles_2003} e i primi studi relativi al ruolo della
 fauna del suolo, riguardarono proprio questi invertebrati e risalgono
 a \citet{darwin_formation_1881}. La vita di tutti questi organismi è
@@ -700,7 +700,7 @@ macropori e che invece risentiranno di una maggior alternanza tra
 periodi umidi e secchi.
 
 La maggior parte degli organismi ha come coefficiente di avvizzimento
-valori prossimi ai -15, -25 bar (in scala logaritmica pF 4.2, 4.4).
+valori prossimi ai -15, -25\,bar (in scala logaritmica pF\,4,2, 4,4).
 Tale coefficiente, che è diverso per ogni organismo, rappresenta il
 potenziale ovvero la pressione che l’individuo dovrebbe creare per
 vincere le forze che trattengono il liquido nelle particelle del
@@ -710,12 +710,12 @@ Tramite gli studi di \citet{warcup_studies_1957} sappiamo che i funghi
 possono sopravvivere a lunghi periodi di siccità grazie a strutture
 come le spore, gli sclerozi e le ife. \citet{griffin_soil_1963} vide
 che i funghi, come le piante, arrestano la propria crescita a valori
-intorno a pF 4.2 e solo l’\emph{aspergillus} riesce a crescere fino a
-pF 5.6. Rah \todo{Rah (1913[libro biblio unifi])} trovò che i batteri
-Gram positivi crescevano intorno a valori di pF 2.0, mentre
+intorno a pF\,4,2 e solo l’\emph{aspergillus} riesce a crescere fino a
+pF\,5,6. Rah \todo{Rah (1913[libro biblio unifi])} trovò che i batteri
+Gram positivi crescevano intorno a valori di pF\,2,0, mentre
 \citet{miller_effect_1964} studiarono i batteri nitrificanti,
 dimostrando che questi crescevano meglio in terreni con pF inferiore a
-3.0.
+3,0.
 
 Oltre che l’acqua, nei pori si muove anche l’aria. Questa si trova in
 abbondanza nei terreni sabbiosi, prevalentemente secchi, mentre è
@@ -762,8 +762,8 @@ Naturalmente l’energia assorbita dipende dalla latitudine e
 altitudine, ma anche dall’inclinazione della superficie del suolo,
 nonché dalla densità della copertura vegetale e dal colore del
 terreno. Inoltre la temperatura presenta un grande intervallo di
-variabilità se misurata in prossimità della superficie, mentre già a 7
-cm di profondità risulta avere un range più ristretto, quale 4-14° C
+variabilità se misurata in prossimità della superficie, mentre già a 7\,cm
+ di profondità risulta avere un range più ristretto, quale 4-14\,°C
 \citep{raney_physical_1965}.
 
 Ogni organismo presenta “il proprio minimo e massimo ecologico di
@@ -792,7 +792,7 @@ microrganimsi psicrofili, mesofili e termofili (Tab.
 
 La grande maggioranza dei microrganismi del suolo è mesofila e
 generalmente in suoli e in stagioni dove si ha una temperatura media
-di 10°C dominano i funghi e i batteri, mentre a 20°C sono prevalenti i
+di 10\,°C dominano i funghi e i batteri, mentre a 20\,°C sono prevalenti i
 protozoi, i nematodi e gli attinomiceti.
 
 Comunque bisogna dire che la temperatura del suolo ha un effetto
@@ -917,16 +917,16 @@ vedendo un forte aumento nella domanda di prodotti biologici
 \citep{willer_world_2016}.
 
 Negli ultimi decenni è aumentato molto il numero di aziende agricole
-biologiche, raggiungendo, a livello mondiale, i 2.3 milioni di unità
+biologiche, raggiungendo, a livello mondiale, i 2,3 milioni di unità
 nel 2014. Queste occupavano 11 milioni di ettari nel 1999 e oggi
-interessano invece una superficie pari a 43.7 milioni di ettari
+interessano invece una superficie pari a 43,7 milioni di ettari
 (Fig. \ref{fig:andamento_bio}) \citep{willer_organic_2016}.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/ettari_bio.jpg}
 \caption{Andamento delle superfici coltivate a Biologico nel mondo
-  1999-2014 \citep{willer_organic_2016}}
+  1999-2014 \citep{willer_organic_2016}.}
 \label{fig:andamento_bio}
 \end{figure}
 
@@ -938,8 +938,8 @@ usando prodotti naturali rispetto a quelli di sintesi.
 Di contro però l’agricoltura convenzionale permette rese superiori
 \citep{seufert_comparing_2012}, punto importante visto il continuo
 aumento della popolazione mondiale. Pur dipendendo dalla coltura
-scelta e dal luogo, questo incremento può variare da un 5\% di rese in
-più nel convenzionale, fino ad un 34\% \citep{seufert_comparing_2012}.
+scelta e dal luogo, questo incremento può variare da un 5\,\% di rese in
+più nel convenzionale, fino ad un 34\,\% \citep{seufert_comparing_2012}.
 A livello economico è difficile dire con certezza quale dei due
 sistemi sia più costoso, perchè questo dipende dalla coltura scelta,
 dal suo prezzo di mercato, dal luogo in cui ci troviamo e dalle sue
@@ -947,7 +947,7 @@ caratteristiche. Vero è che, annualmente, nel biologico si hanno
 minori spese per pesticidi e fertilizzanti, ma va anche detto come si
 abbiano solitamente maggiori spese per i macchinari e le sementi
 \citep{pimentel_organic_2005}. Inoltre i sistemi biologici richiedono,
-annualmente, circa il 15\% in più di lavorazioni ad ettaro rispetto al
+annualmente, circa il 15\,\% in più di lavorazioni ad ettaro rispetto al
 convenzionale \citep{sorby_production_2002} ,
 \citep{granatstein_tree_2004}. Proprio in seguito a questi disturbi si
 rendono necessari studi per monitorare e capire come salvaguardare la
@@ -969,7 +969,7 @@ Essendo la comunità microbica del suolo così varia, anche in quantità
 di terreno assai piccole, non si può applicare l’approccio classico di
 conta usato per animali e piante \citep{bossio_determinants_nodate}.
 Anche dal punto di vista microbiologico è ormai acclamato che solo una
-piccola parte dei microrganismi presenti nel suolo, meno dell'1\%
+piccola parte dei microrganismi presenti nel suolo, meno dell'1\,\%
 \citep{torsvik1990}, può essere moltiplicata in laboratorio con le
 odierne tecniche di coltivazione in piastrina. Si devono quindi
 prendere in considerazione tecniche di analisi specifiche. Le
@@ -1023,9 +1023,9 @@ rispetto alla risposta del PLFA \citep{bossio_determinants_nodate},
 
 In una review del 2006 \citep{ramsey_choice_2006}, gli autori hanno
 paragonato diversi studi che analizzavano la comunità microbica con
-diverse tecniche.  In 14 di 32 studi (44\% degli studi identificati)
+diverse tecniche.  In 14 di 32 studi (44\,\% degli studi identificati)
 le differenze riscontrate con il PLFA non sono state risolte con CLPP
-e in 5 studi su 25 (20\%) i dati ottenuti con PLFA non sono stati
+e in 5 studi su 25 (20\,\%) i dati ottenuti con PLFA non sono stati
 differenziati e risolti con la PCR; inoltre gli autori evidenziarono
 come la PCR e la CLPP producessero più alti tassi di errore rispetto
 al PLFA.
@@ -1120,7 +1120,7 @@ campioni gassosi, liquidi o solidi opportunamente solubilizzati,
 vaporizzati e poi iniettati in colonna che contiene la fase
 stazionaria. L’unica limitazione è che sono analizzabili solo quelle
 sostanze che possono essere vaporizzate ad una temperatura compresa
-tra quella ambientale e i 350-400°C, ovvero la temperatura comunemente
+tra quella ambientale e i 350-400\,°C, ovvero la temperatura comunemente
 raggiunta dalle apparecchiature in commercio e compatibile con le
 colonne cromatografiche usate. Inoltre le sostanze da analizzare non
 devono essere termolabili, vale a dire che non devono degradarsi per
@@ -1135,7 +1135,7 @@ La fase stazionaria, nella tecnica gas-cromatografica, dunque può
 essere liquida oppure solida, mentre la fase mobile è un gas, che in
 questo caso non ha alcuna interazione con i soluti, ma funge solo da
 trasporto. Questo è detto carrier e generalmente sono usati gas
-chimicamente inerti, a bassa viscosità ed elevata purezza (99.9\%)
+chimicamente inerti, a bassa viscosità ed elevata purezza (99.9\,\%)
 come l’azoto, l’elio e l’argon \citep{martin_new_1941},
 \citep{james_gas-liquid_1952} e idrogeno.
 
@@ -1148,7 +1148,7 @@ il momento in cui il campione viene iniettato nella colonna
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/fig1_6.jpeg}
-\caption{schema di una gas-cromatografo e di tutti i suoi componenti.}
+\caption{Schema di una gas-cromatografo e di tutti i suoi componenti.}
 \label{fig:gascromat}
 \end{figure}
 
@@ -1160,7 +1160,8 @@ che rappresenta il tempo.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./foto/picchi.jpg}
-\caption{Esempio di cromatogramma a due picchi.  Rappresentano due
+\caption[Esempio di cromatogramma]
+{Esempio di cromatogramma a due picchi.  Rappresentano due
   sostanze che interagiscono in modo differente con la fase
   stazionaria: il picco di sinistra rappresenta un soluto che non ha
   alcuna interazione con la fase stazionaria ed esce al cosiddetto
@@ -1238,7 +1239,8 @@ della putrefazione o per le droghe.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./foto/splitless.jpg}
-\caption{Iniettore tecnica splitless: 1. siringa; 2. setto poroso;
+\caption[Iniettore tecnica splitless] 
+{Iniettore tecnica splitless: 1. siringa; 2. setto poroso;
   3. sngresso del gas di trasporto; 4. sfiato; 5. \emph{vent};
   6. valvola di regolazione del vent; 7. polmone; 8. camera di
   miscelazione e vaporizzazione; 9. colonna.}
@@ -1282,7 +1284,8 @@ costante, così da permettere una buona riproducibilità dell’analisi.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=2]{./foto/fig1_10.jpeg}
-\caption{Vista interna del forno con colonna capillare avvolta sul suo
+\caption[Forno cromatografico.]
+{Vista interna del forno con colonna capillare avvolta sul suo
   sostegno in metallo.}
 \label{fig:colonna}
 \end{figure}
@@ -1300,7 +1303,7 @@ Le colonne possono essere impaccate o capillari:
   lunghezza tra i 10 e i 200 metri, avvolte a spirale su un supporto
   metallico. In questo caso la fase stazionaria è disposta in maniera
   uniforme sulla superficie interna formando un film di spessore
-  compreso tra 0.5 e 2.5 micron. Il film è costituito solitamente da
+  compreso tra 0,5 e 2,5 micron. Il film è costituito solitamente da
   metil-silossani modificati con diversi gruppi funzionali in base al
   campione da analizzare e possono essere più o meno polari,
   comportando una differente forza d’interazione tra fase stazionaria
@@ -1322,7 +1325,8 @@ componenti della miscela.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/fig1_11.jpg}
-\caption{Disegno della sezione longitudinale di una colonna capillare
+\caption[Sezioni longitudinali di colonne cromatografiche]
+{Disegno della sezione longitudinale di una colonna capillare
   ed una impaccata con presenza della fase stazionaria.}
 \label{fig:sezione_long}
 \end{figure}
@@ -1441,10 +1445,10 @@ ionisation});
 Solo le prime tre tipologie di sorgenti prevedono l’introduzione del
 campione in fase gassosa e la tecnica più comune tra queste è l’EI
 dove le molecole gassose vengono bombardate da un fascio di elettroni
-ad alta energia (70 eV); a questo valore energetico l’aspetto
+ad alta energia (70\,eV); a questo valore energetico l’aspetto
 qualitativo dello spettro rimane invariato e quello quantitativo
 cambia di pochissimo \todo{(ARPAT, 2010)}. Gli elettroni del fascio
-sono formati con il riscaldamento di un filamento, a circa 2000°C, e
+sono formati con il riscaldamento di un filamento, a circa 2000\,°C, e
 sono accelerati per mezzo di una caduta di potenziale ottenuta con la
 presenza di un anodo.
 
@@ -1492,7 +1496,7 @@ nello spazio.
 Negli analizzatori con quadrupolo, invece, ci si basa sulla stabilità
 dello ione una volta inserito nello strumento. Si ha un campo
 elettrico quadrupolare grazie a quattro elettrodi a barra cilindrica,
-lunghi circa 20 cm, che hanno un potenziale elettromagnetico
+lunghi circa 20\,cm, che hanno un potenziale elettromagnetico
 oscillante: quando le due barre verticali hanno carica negativa, le
 due orizzontali hanno carica positiva e viceversa. Gli ioni seguono
 questa sorta di tunnel e oscillano tra l’anodo e il catodo in base al
@@ -1557,7 +1561,7 @@ fertilità biologica, in due diverse gestioni agronomiche: la gestione
 biologica e quella convenzionale.  Entrambe le gestioni sono state poi
 sottoposte a tre diverse lavorazioni: aratura, frangizollatura e
 rippatura. I campionamenti sono stati effettuati sia in estate, nel
-mese di Giugno, che in autunno, Ottobre-Novembre, per tenere conto
+mese di giugno, che in autunno, ottobre-novembre, per tenere conto
 anche di una possibile variazione dovuta alla stagionalità.
 
 Per analizzare la microfauna e microflora edafica si è utilizzato il
@@ -1582,14 +1586,14 @@ un’analisi mediante gas cromatografia \citep{ibekwe_fatty_1999}.
 
 Il campo sperimentale è situato nell’azienda agricola della Scuola di
 Agraria di Firenze, in località Montepaldi, San Casciano Val di Pesa
-(Latitudine 43°40’16’’ N, Longitudine 11°09’08’’ E) a 90 m sopra il
+(Latitudine 43°40’16’’ N, Longitudine 11°09’08’’ E) a 90\,m sopra il
 livello del mare.
 
 L’area di studio (Fig. \ref{fig:panorama_dispaa}) presenta un clima
-sub-appenninico con precipitazioni annuali di circa 800 mm, con minimi
+sub-appenninico con precipitazioni annuali di circa 800\,mm, con minimi
 nel periodo estivo e massimi in primavera e in autunno. La temperatura
-media annuale è di 14.1°C con massime in estate, anche superiori a
-30°C e minime a gennaio \citep{DISPAA}.
+media annuale è di 14,1\,°C con massime in estate, anche superiori a
+30\,°C e minime a gennaio \citep{DISPAA}.
 
 Dal punto di vista pedologico, il suolo deriva da sedimenti pliocenici
 di tipo conglomeratico con presenza di lenti sabbiose e argillose e da
@@ -1652,8 +1656,8 @@ seguendo la rotazione:
 Oltre alle due gestioni menzionate, l’esperimento vuole anche
 confrontare la risposta a diverse lavorazioni. Ogni appezzamento vede
 3 principali lavorazioni differenti: franginzolatura in presemina più
-aratura (A), frangizzolatura in presemina più rippatura (B) e
-frangizzolatura in presemina più una frangizollatura successiva
+aratura (A), frangizolatura in presemina più rippatura (B) e
+frangizolatura in presemina più una frangizollatura successiva
 (C). Ogni lavorazione è stata replicata tre volte e quindi ogni
 appezzamento è stato suddiviso in 9 parcelle: 3 repliche (segnalate
 con numeri arabi a pedice) per ognuna delle 3 lavorazioni
@@ -1663,14 +1667,14 @@ con numeri arabi a pedice) per ognuna delle 3 lavorazioni
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.4]{./foto/bioconv.jpg}
-\caption{Appezzamenti a biologico a sinistra e convenzionale a
+\caption[Mappa sperimentale]{Appezzamenti a biologico a sinistra e convenzionale a
   destra. I plot sono indicati con codici alfanumerici identificativi:
   OO seguito da un numero indica l'appezzamento biologico e CO seguito
   dal numero rappresenta invece il convenzionale; la lettera maiuscola
   indica la lavorazione A (aratura), B (rippatura), C
   (frangizollatura); il numero (1,2,3) a pedice differenzia le
   repliche della lavorazione; le lettere minuscole (a, m, b,) stanno
-  ad indicare i tre campioni all’interno di ogni singolo plot .}
+  ad indicare i tre campioni all’interno di ogni singolo plot.}
 \label{fig:bioconv}
 \end{figure}
 
@@ -1678,83 +1682,83 @@ con numeri arabi a pedice) per ognuna delle 3 lavorazioni
 Nel 1992 le caratteristiche fisico chimiche del campo biologico erano
  \citep{DISPAA}:
 \begin{itemize}
-\item tessitura:  46.3\% limo, 20.2\% sabbia  e 32.9\% argilla; mentre lo scheletro 
-rappresentava il 6.3\%;
-\item pH (misurato in acqua):  8.3;
+\item tessitura:  46,3\,\% limo, 20,2\,\% sabbia  e 32,9\,\% argilla; mentre lo 
+scheletro rappresentava il 6,3\,\%;
+\item pH (misurato in acqua):  8,3;
 \item capacità di scambio cationica:  \SI{17.6}{\cmol\per\kg} ;
-\item \ce{P2O5} totale: 1.63\%;
+\item \ce{P2O5} totale: 1,63\,\%;
 \item \ce{K2O}:  171
 \end{itemize}
 
 Le stesse caratteristiche per il campo convenzionale invece erano:
 \begin{itemize}
-\item tessitura: 44.6\% limo, 21.0\% sabbia, 33.8\% argilla e 6.1\% lo
+\item tessitura: 44,6\,\% limo, 21,0\,\% sabbia, 33,8\,\% argilla e 6,1\,\% lo
   scheletro;
-\item pH (in acqua): 8.3;
+\item pH (in acqua): 8,3;
 \item CSC: \SI{19.4}{\cmol\per\kg};
-\item \ce{P2O5} totale: 1.60\,\%;
+\item \ce{P2O5} totale: 1,60\,\%;
 \item \ce{K2O}: 134.
 
 \end{itemize}
 
 
 Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il
-Girasole, varietà \emph{Solaris} non trattato, usando una seminatrice
+girasole, varietà \emph{Solaris} non trattato, usando una seminatrice
 di precisione con una densità di 75 000 piante ad ettaro. La coltura
 precedente era la lenticchia, varietà \emph{Val di Nevola}. Le
 lavorazioni per preparare il letto di semina sono state tutte svolte
-l’8 Settembre 2016 in base alla parcella, ovvero l’aratura nelle
+l’8 settembre 2016 in base alla parcella, ovvero l’aratura nelle
 parcelle A, la rippatura nelle parcelle B e la frangizolatura nelle C.
-É stata poi effettuata una concimazione con pollina il 22 Febbraio
-2017 e il giorno successivo è stata fatta una frangizzolatura. Il 29
-Marzo il campo è stato erpicato e il giorno successivo è avvenuta la
+É stata poi effettuata una concimazione con pollina il 22 febbraio
+2017 e il giorno successivo è stata fatta una frangizolatura. Il 29
+marzo il campo è stato erpicato e il giorno successivo è avvenuta la
 semina.
 
 Lo stesso anno, nel campo OO4, precedentemente coltivato a cece,
 varietà \emph{Pascià}, è stato coltivato l’orzo, varietà
 \emph{Campagne} non trattato, con una seminatrice a righe. Anche qui
 la preparazione del letto di semina, in base alla parcella, è stata
-effettuata l’8 Settembre 2016. C’è stata una frangizollatura il 5
-Dicembre con successiva semina, dando 190\,kg di seme ad ettaro, ed il
-15 Marzo del 2017 è stata fatta una strigliatura.
+effettuata l’8 settembre 2016. C’è stata una frangizollatura il 5
+dicembre con successiva semina, dando 190\,kg di seme ad ettaro, ed il
+15 marzo del 2017 è stata fatta una strigliatura.
 
 Nel campo CO09 invece è stato seminato l’orzo distico varietà
-\emph{Campagne} trattato con Redico puro all’8.7\,\%. La coltura
+\emph{Campagne} trattato con Redico puro all’8,7\,\%. La coltura
 precedente era il girasole, varietà \emph{Solaris} trattato con
 Apron-xl p.a metalaxil-m.
 
-L’8 Settembre 2016 sono state effettuate le lavorazioni che
+L’8 settembre 2016 sono state effettuate le lavorazioni che
 distinguono le differenti parcelle, poi una prima concimazione il 5
-Dicembre dando \SI{192}{\kg\per\hectare} di fosfato biammonico
-(18:46), ed a seguire è stata effettuata una frangizzolatura e la
+dicembre dando \SI{192}{\kg\per\hectare} di fosfato biammonico
+(18:46), ed a seguire è stata effettuata una frangizolatura e la
 semina con una seminatrice a righe, dando \SI{190}{\kg\per\hectare} di
-seme. Il 15 Marzo è stata fatta una seconda concimazione con nitrato
+seme. Il 15 marzo è stata fatta una seconda concimazione con nitrato
 d’ammonio ( \SI{150}{\kg\per\hectare}) e due settimane dopo c’è stato
-il diserbo usando un mix composto da Axial (1 L) + Axial Proto (250
-mL) + Logran(55 g) ad ettaro. L’11 Aprile è stata poi distribuita
+il diserbo usando un mix composto da Axial (1\,l) + Axial Proto (250\,ml) 
++ Logran(55\,g) ad ettaro. L’11 Aprile è stata poi distribuita
 l’urea con una dose di 150\,kg a ettaro.
 
 Infine, nel campo CO10, precedentemente coltivato ad orzo distico
-\emph{Campagne} trattato con Redico, è stato seminato il Girasole,
+\emph{Campagne} trattato con Redico, è stato seminato il girasole,
 varietà \emph{Solaris} trattato con Apron-xl p.a metalaxil-m. Le
 lavorazioni iniziali sono state fatte sempre ad inizio autunno, nella
 stessa data degli altri campi e a seguire una frangizollatura il 23
-Febbraio e poi un’erpicatura il 29 Marzo. La semina è stata fatta il
-30 Marzo, con una densità di 75 000 piante ad ettaro usando una
+Febbraio e poi un’erpicatura il 29 marzo. La semina è stata fatta il
+30 marzo, con una densità di 75 000 piante ad ettaro usando una
 seminatrice di precisione. Contemporaneamente alla semina è stata
 fatta una concimazione con 20:10:10 (\SI{150}{\kg\per\hectare}) e un
-diserbo a fascia usando 500 mL del prodotto GOAL (Oxifluorfen).
+diserbo a fascia usando 500\,ml del prodotto GOAL (Oxifluorfen).
 
 \subsection{Metodo di campionamento}
 Il campionamento ha previsto, per ogni parcella, 3 campioni di terreno
-di circa 500 g l’uno, presi a 5-10 cm di profondità. Il primo è stato
+di circa 500\,g l’uno, presi a 5-10\,cm di profondità. Il primo è stato
 preso al centro di ogni plot (m=medio) e gli altri due a 4 metri di
 distanza dal centro tenendo conto della pendenza del campo, uno a 4
 metri a valle (b=basso), ovvero verso la Pesa e l’altro a 4 metri a
 monte (a=alto).
 
 Il primo campionamento ha richiesto tre giorni tra fine ottobre e
-inizio Novembre del 2016, il secondo è stato svolto a Giugno 2017. In
+inizio novembre del 2016, il secondo è stato svolto a giugno 2017. In
 entrambi i casi, sono stati collezionati 108 campioni, separati in
 appositi sacchetti di plastica (Fig. \ref{fig:campione}) e poi portati
 in laboratorio.
@@ -1769,26 +1773,26 @@ in laboratorio.
 
 Una volta in laboratorio, i campioni sono stati tenuti aperti all’aria
 per perdere umidità, ed una volta asciutti sono stati messi in cella
-frigorifera a 3°C.
+frigorifera a 3\,°C.
 
 I primi ad essere stati preparati sono stati i 36 campioni “m”
 autunnali i quali, tolti dalla cella frigorifera, sono stati
-setacciati a 2 mm. Di tutto il campione omogeneizzato, sono stati
-pesati 5 g che sono stati successivamente macinati per 5 minuti con il mulino 
-colloidale e poi setacciati a 200 µm (Fig. \ref{fig:macinato}).
+setacciati a 2\,mm. Di tutto il campione omogeneizzato, sono stati
+pesati 5\,g che sono stati successivamente macinati per 5 minuti con il mulino 
+colloidale e poi setacciati a 200\,µm (Fig. \ref{fig:macinato}).
 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=1]{./foto/macinato.jpg}
-\caption{Un campione dopo esser stato macinato col mulino a palle e
-  setacciato a 200µm.}
+\caption{Un campione dopo esser stato macinato col mulino colloidale e
+  setacciato a 200\,µm.}
 \label{fig:macinato}
 \end{figure}
 
 Sono stati inoltre preparati due campioni compositi, identificati con
 MIX SOIL 2016 e MIX SOIL 2017. Il primo è stato ottenuto prendendo 1g
-di suolo macinato a 200 µm da tutti i campioni "m" del 2016, mentre il
+di suolo macinato a 200\,µm da tutti i campioni "m" del 2016, mentre il
 secondo con tutti i campioni del 2017.  Questi due campioni sono stati
 utilizzati come verifica per la PCA, rappresentando la media dei
 campioni dei due anni poiché composti da aliquote omogenee.
@@ -1814,47 +1818,57 @@ Reagenti:
 
 Procedura.
 
+Per ogni campione è stato pesato un grammo di suolo ed è stato messo in una vial
+da 20\,ml di vetro, incluso il bianco; in ogni campione sono stati aggiunti 9,2\,ml
+di B \& D e successivamente è stato risospeso con l'ausilio del vortex \todo{marca}
+e ultrasonicato per un minuto. 
 
-è stato pesato un grammo di suolo liofilizzato in una vial da 20 mL di
-vetro ed è stato incluso anche il bianco; in ogni campione è stato
-aggiunto 9.2mL di B \& D e, dopo averlo tappato e vortexato per un
-minuto, è stato lasciato negli ultrasuoni per un ulteriore minuto. A
-questo punto i campioni sono stati lasciati 2 ore circa a estrarre e,
-per non far sedimentare tutto, ogni 10 minuti i campioni venivano
-agitati mediante il vortex. Passate le due ore le vial sono state
-messe in centrifuga a 3000 giri per 10 minuti a 25-30°C e, ottenuto il
-limpido, è stato trasferito il surnatante in una vial pulita. Il suolo
-rimasto nella vial è stato nuovamente lavato conaltri 2.5 mL di B \&
-D, passato nel vortex per un minuto e altrettanto tempo negli
-ultrasuoni. dopo una decina di minuti la vial con il terreno è stata
-nuovamente messa in centrifuga a 3000 giri per 10 minuti a 25-30°C e
-il surnatante è stato trasferito e aggiunto al limpido precedente. A
-questo punto...
+A questo punto i campioni sono stati lasciati 2 ore ad estrarre su un agitatore
+\todo{marca} così da favorire un'estrazione omogenea senza far sedimentare il 
+campione.
 
-\begin{enumerate}
-\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro
-  adatta per la centrifuga ed includere il bianco;
-\item aggiungere ad ogni campione 9.2 ml di B\&D e tappare;
-\item vortez e mettere nell’ultrasuono per un minuto;
-\item lasciar separare almeno 2 ore, agitando i campioni ogni 10 minuti;
-\item mettere nell’ultrasuono per un minuto;
-\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
-\item trasferire il surnatante in una vial pulita;
-\item lavare il suolo sedimentato con altri 2.5 ml di B\&D;
-\item vortex e mettere nell’ultrasuono per un minuto;
-\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
-\item aggiungere il surnatante a quello separato precedentemente;
-\item suddividere le fasi aggiungendo ad ogni vial: 3.1 ml di cloroformio e 3.1 ml 
-di tampone citrato e agitare per bene con vortex;
-\item ultrasonicare per un minuto;
-\item centrifugare a 3000 giri per 15 minuti;
-\item dopo trasferire 3 ml della fase sottostante in una vial da 2 ml;
-\item portare a secco sotto flusso di N a 40°C;
-\item quando è evaporato tutto tappare e mettere in congelatore o passare   	
-alla fase 2.
+Passate le due ore le vial sono state centrifugate a 3000 giri per 10 minuti a 
+25-30\,°C e il surnatante limpido è stato prelevato e trasferito in una vial pulita.
+
+Il campione di terreno è stato nuovamente lavato con 2,5\,ml di B \& D, risospeso
+con il vortex e ultrasonicato per un minuto. Dopo altri 10 minuti di estrazione
+in agitatore, le vial sono state messe in centrifuga a 3000 giri per 10 minuti a
+25-30\,°C e il supernatante è stato prelevato e aggiunto a quello preso precedentemente.
+
+In ogni vial ottenuta sono stati aggiunti 3,1\,ml di cloroformio e altrettanti di 
+tampone citrato, così da mantenere il giusto pH. 
+
+Sono poi state risospese con il vortex e ultrasonicate per un minuto e poi
+centrifugate per 15 minuti a 3000 giri, così da favorire la separazione delle 
+due fasi.
+
+Sono stati prelevati 3\,ml della fase organica sottostante e questi sono stati 
+portati a secco sotto flusso di N a 40\,°C.
 
 
-\end{enumerate}
+%\begin{enumerate}
+%\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro
+%  adatta per la centrifuga ed includere il bianco;
+%\item aggiungere ad ogni campione 9.2 ml di B\&D e tappare;
+%\item vortez e mettere nell’ultrasuono per un minuto;
+%\item lasciar separare almeno 2 ore, agitando i campioni ogni 10 minuti;
+%\item mettere nell’ultrasuono per un minuto;
+%\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
+%\item trasferire il surnatante in una vial pulita;
+%\item lavare il suolo sedimentato con altri 2.5 ml di B\&D;
+%\item vortex e mettere nell’ultrasuono per un minuto;
+%%\item centrifugare a 3000 giri per 10 minuti a 25-30°C;
+%%\item aggiungere il surnatante a quello separato precedentemente;
+%\item suddividere le fasi aggiungendo ad ogni vial: 3.1 ml di cloroformio e 3.1 ml 
+%di tampone citrato e agitare per bene con vortex;
+%\item ultrasonicare per un minuto;
+%%\item centrifugare a 3000 giri per 15 minuti;
+%\item dopo trasferire 3 ml della fase sottostante in una vial da 2 ml;
+%\item portare a secco sotto flusso di N a 40°C;
+%\item quando è evaporato tutto tappare e mettere in congelatore o passare   	
+%%alla fase 2.
+%\end{enumerate}
+
 \subsubsection{Seconda fase - Purificazione e frazionamento dei lipidi}
 Reagenti:
 \begin{itemize}
@@ -1867,30 +1881,55 @@ In questa fase i lipidi vengono separati in tre fasi differenti in
 base alla polarità: i lipidi neutri, i glicolipidi e i lipidi polari
 ovvero i fosfolipidi.
 
-Procedura:
-\begin{enumerate}
-\item posizionare la colonna (marca e capienza 0.50 g Si
-  \info{(Supelco, Inc.?)})  su un supporto idoneo e, sotto di essa,
-  mettere un becher per lo scarto;
-\item attivare la colonna con 0.5 ml di cloroformio;
-\item dissolvere il materiale lipidico secco proveninte dalla fase
-  precedente in 0.25 ml di cloroformio e chiudere la vial;
-\item agitare la vial con il vortex, ultrasonicare per un minuto e
-  trasferire il tutto nella colonna con una pipetta paster;
-\item ripulire la vial con altri 0.25 ml di cloroformio;
-\item agitare nuovamente la vial tramite il vortex, ultrasonicare e
-  trasferire il tutto nella colonna;
-\item aggiungere 1 ml di cloroformio nella colonna così da eluire i
-  lipidi neutri;
-\item quando tutto il solvente sarà sceso aggiungere 4 ml di acetone,
-  in porzioni da 1 ml, così da eluire i glicolipidi;
-\item quando tutto l’acetone sarà sceso, rimuovere il becher e mettere
-  sotto la colonna una vial pulita da 2 ml;
-\item eluire i fosfolipidi con 1 ml di metanolo e raccogliere tutto nella vial;
-\item far evaporare tutto il campione sotto flusso di azoto a 40°C;
-\item tappare e congelare o passare direttamente alla terza fase.
+Procedura.
 
-\end{enumerate}
+Utilizzando un apposito sopporto per le colonnine SPME \todo{Supelco, 
+capienza 0,5\,g Si}, sono state inizialmente attivate con 0,5\,ml di cloroformio 
+così da eliminare l'aria tra le particelle di silici e favorire la trattenuta 
+del materiale organico del campione.
+ 
+Le vial ottenute dalla fase precedente sono state lavate e il campione è stato
+recuperato con 0,35\,ml di cloroformio; sono state poi risospese tramite il vortex
+e ultrasonicate per un minuto. A questo punto il materiale è stato completamente 
+trasferito nella colonnina idonea.
+
+Ogni vial ha subito poi un secondo lavaggio con cloroformio come quello precedente.
+
+Recuperato tutto il materiale lipidico secco si è passati al lavaggio delle colonnine;
+per primo è stato aggiunto 1\,ml di cloroformio ad ogni colonnina, così da eluire
+i lipidi neutri, poi sono stati aggiunti 4\,ml di acetone per eluire i glicolipidi.
+
+Sceso tutto l'acetone si è posizionata, sotto ogni colonnina, una vial col nome
+corrispondente e si è proceduto all'ultimo lavaggio con 1\, di metanolo, così da
+far eluire i fosfolipi.
+
+Il contenuto delle vial così ottenuto è stato portato a secco sotto flusso di 
+azoto a 40\,°C.
+%
+%\begin{enumerate}
+%\item posizionare la colonna (marca e capienza 0.50 g Si
+%  \info{(Supelco, Inc.?)})  su un supporto idoneo e, sotto di essa,
+%  mettere un becher per lo scarto;
+%\item attivare la colonna con 0.5 ml di cloroformio;
+%\item dissolvere il materiale lipidico secco proveninte dalla fase
+%  precedente in 0.25 ml di cloroformio e chiudere la vial;
+%\item agitare la vial con il vortex, ultrasonicare per un minuto e
+%  trasferire il tutto nella colonna con una pipetta paster;
+%\item ripulire la vial con altri 0.25 ml di cloroformio;
+%\item agitare nuovamente la vial tramite il vortex, ultrasonicare e
+%  trasferire il tutto nella colonna;
+%\item aggiungere 1 ml di cloroformio nella colonna così da eluire i
+%  lipidi neutri;
+%\item quando tutto il solvente sarà sceso aggiungere 4 ml di acetone,
+%  in porzioni da 1 ml, così da eluire i glicolipidi;
+%\item quando tutto l’acetone sarà sceso, rimuovere il becher e mettere
+%  sotto la colonna una vial pulita da 2 ml;
+%\item eluire i fosfolipidi con 1 ml di metanolo e raccogliere tutto nella vial;
+%\item far evaporare tutto il campione sotto flusso di azoto a 40°C;
+%\item tappare e congelare o passare direttamente alla terza fase.
+%
+%\end{enumerate}
+%
 
 \subsubsection{Terza fase - Derivatizzazione alcalina}
 Reagenti:
@@ -1900,25 +1939,41 @@ Reagenti:
 \item acido acetico 1 M;
 \item eptano (\ce{C7H16});
 \item \ce{KOH} in metanolo 2 M;
-\item C19 in esano (0.00923 ng/40 mL esano);
+\item C19 in esano (0.00923 ng/40 ml esano);
 \item acqua milliQ.
 \end{itemize}
 
-Procedura:
-\begin{enumerate}
-\item aggiungere 10 µl di C19 in ogni vial;
-\item dissolvere il campione in 0.5 ml di \ce{MeOH}-Toluene;
-\item aggiungere 0.1 ml di KOH e incubare a 60°C per 15 minuti;
-\item aggiungere 1 ml di esano cloroformio e 0.3 ml di acido acetico;
-\item agitare e usare il vortex per un minuto;
-\item centrifugare per 5 minuti a 3000 giri;
-\item trasferire il surnatante organico in una vial pulita;
-\item lavare nuovamente lo strato inferiore con 1 ml di esano cloroformio;
-\item agitare, usare il vortex per un minuto e centrifugare per 5 minuti a 3000 giri;
-\item aggiungere anche questa fase superiore nella vial;
-\item portare a secco sotto corrente di azoto a 25-30°C ;
-\item conservare a -20°C o riprendere in un baccellino con \SI{200}{\ul} di eptano.
-\end{enumerate}
+Procedura.
+
+Ad ogni vial ottenuta nella fase precedente sono stati aggiunti 10\,µl di C19, 
+0,5\,ml di \ce{MeOH}-Toluene e 0,1\,ml di KOH. Per far avvenire la derivatizzazione,
+i campioni sono stati messi in incubazione a 60\,°C per 15 minuti.
+
+Successivamente è stato aggiunto 1\,ml di esano cloroformio e 0,3\,ml di acido acetico.
+Il tutto è stato agitato mediante vortex per un minuto e poi centrifugato per 5 minuti
+a 3000 giri.
+
+\'E stato prelevato il surnatante organico e trasferito in una vial pulita e la 
+procedura di lavaggio con un millilitro di esano cloroformio è stata ripetuta 
+una seconda volta.
+
+Il tutto è stato poi portato a secco sotto flusso di N a 25-30\,°C e infine è
+stato recuperato con 200\,µl di eptano.
+%
+%\begin{enumerate}
+%\item aggiungere 10 µl di C19 in ogni vial;
+%\item dissolvere il campione in 0.5 ml di \ce{MeOH}-Toluene;
+%\item aggiungere 0.1 ml di KOH e incubare a 60°C per 15 minuti;
+%\item aggiungere 1 ml di esano cloroformio e 0.3 ml di acido acetico;
+%\item agitare e usare il vortex per un minuto;
+%\item centrifugare per 5 minuti a 3000 giri;
+%\item trasferire il surnatante organico in una vial pulita;
+%\item lavare nuovamente lo strato inferiore con 1 ml di esano cloroformio;
+%\item agitare, usare il vortex per un minuto e centrifugare per 5 minuti a 3000 giri;
+%\item aggiungere anche questa fase superiore nella vial;
+%\item portare a secco sotto corrente di azoto a 25-30°C ;
+%\item conservare a -20°C o riprendere in un baccellino con \SI{200}{\ul} di eptano.
+%\end{enumerate}
 
 \subsection{Standard e prova di validazione}
 Nella sequenza di iniezione, oltre ai 72 campioni e ai 2 MIX SOIL,
@@ -1999,19 +2054,19 @@ GC-MS Agilent 7890A dotato di autocampionatore per la riproducibilità
 e di un sistema per la termostatazione della colonna cromatografica.
 
 La colonna utilizzata per quest’analisi è un’HP-INNOWax (Polyethylen
-Glyco) dell’Agilent, avente una lunghezza di 50 m, per 2 mm di
-diametro e 0.4mm di film interno. La separazione cromatografica è
-stata effettuata mediante un flusso di 1,2 ml/minuto con un gradiente
+Glyco) dell’Agilent, avente una lunghezza di 50\,m, per 2\,mm di
+diametro e 0.4\,mm di film interno. La separazione cromatografica è
+stata effettuata mediante un flusso di 1,2\,ml/minuto con un gradiente
 di temperatura controllato.
 
-Il metodo di iniezione vede un volume di 2ul del campione a
-\emph{pulsed splitles} tramite una siringa da 10 ul e una temperatura
-del liner di 260°C.
+Il metodo di iniezione vede un volume di 2\,ul del campione a
+\emph{pulsed splitles} tramite una siringa da 10\,ul e una temperatura
+del liner di 260\,°C.
 
-Le condizioni iniziali del forno sono di 35°C e una pressione di
-33psi. Dopo il primo minuto la temperatura inizia ad aumentare di 30
-gradi al minuto fino al raggiungimento di 180°C e successivamente di 3
-gradi al minuto fino a 260°C, temperatura massima raggiungibile per la
+Le condizioni iniziali del forno sono di 35\,°C e una pressione di
+33\,psi. Dopo il primo minuto la temperatura inizia ad aumentare di 30
+gradi al minuto fino al raggiungimento di 180\,°C e successivamente di 3
+gradi al minuto fino a 260\,°C, temperatura massima raggiungibile per la
 colonna. A questa temperatura rimane in isoterma per 3 minuti in modo
 da far uscire tutti gli analiti e ripulire la colonna per l’iniezione
 successiva, senza rischiare un peggioramento nelle cromatografie
@@ -2023,10 +2078,10 @@ acetate così da annullare un possibile effetto memoria.
 
 Il sistema GC è interfacciato direttamente con lo spettrometro di
 massa avente una sorgente EI , in cui l’analisi è effettuata con
-ionizzazione positiva a temperatura di 230°C e voltaggio di
-70Hz. Infine, gli ioni formatisi, attraversano l’analizzatore che è
+ionizzazione positiva a temperatura di 230\,°C e voltaggio di
+70\,Hz. Infine, gli ioni formatisi, attraversano l’analizzatore che è
 costituito da un quadrupolo, ovvero quattro barre cilindriche
-metalliche, lunghe circa 20 cm e aventi carica alterna opposta. Queste
+metalliche, lunghe circa 20\,cm e aventi carica alterna opposta. Queste
 barre delimitano il percorso degli ioni provenienti dalla camera di
 ionizzazione verso il detector.
 
@@ -2154,7 +2209,7 @@ tesi risultano ben separati e identificati.
 %% \label{fig:crom_std}
 %% \end{figure}
 Il cromatogramma successivo (Fig. 4.2) è invece quello di un campione
-preso a Ottobre 2016, il CO10C3m, quindi su campo a gestione
+preso a ottobre 2016, il CO10C3m, quindi su campo a gestione
 convenzionale dove è stata effettuata la frangizollatura e vediamo dei
 composti in più rispetto a quelli presenti negli standard:
 %% \begin{figure}[ht]
@@ -2268,7 +2323,7 @@ nel biologico (2 casi su 3 sia nell'estate che nell'autunno).
 <<label=StarplotMedie, fig=TRUE, fig.width = 0.7, fig.height = 0.7, echo=FALSE>>=
 <<FigStarplotMedie>>
 @
-\caption{mostra 12 elementi ove ogni spicchio rappresenta uno dei 37
+\caption[Starplot delle medie]{Mostra 12 elementi ove ogni spicchio rappresenta uno dei 37
   BAMEs. Ogni elemento (starplot) mostra la media dei PLFA trovati nei
   campioni corrispondenti alla lavorazione-stagione-gestione sotto
   indicata. Per righe vediamo le differenze dovute alle lavorazioni,
