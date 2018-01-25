@@ -67,7 +67,7 @@
 % scommentare nella versione finale
 
 % Queste righe sotto si occupano della bibliografia
-\usepackage[babel]{csquotes}
+% \usepackage[babel]{csquotes} %% QUESTO GENERA QUADRATINI DENTRO ALLA BIBLIO
 \usepackage[backend=biber, sorting=nyt, style=authoryear, autolang=hyphen, natbib=true, backref]{biblatex}
 %% style=numeric
 
@@ -276,7 +276,28 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 
 
 \begin{abstract}
- \lipsum[1]
+  Lo scopo principale di questo lavoro è quello di determinare una
+  possibile variazione nella comunità tellurica, comparando due
+  sistemi agronomici (biologico e convenzionale); ma anche valutare se
+  ci sono differenze in tale habitat in seguito a tre diverse
+  lavorazioni primarie: aratura, rippatura e frangizollatura, tenendo
+  conto anche della stagionalità (autunno ed estate).
+
+  Il lavoro di ricerca è inserito nel progetto MoLTE dell’università
+  di Firenze che riguarda un esperimento alungo termine attivo dal
+  1991 nei terreni dell’azienda agricola Montepaldi, a San Casciano di
+  Val di Pesa (Firenze).  Per analizzare la microfauna e microflora edafica
+  si è utilizzato il metodo biochimico degli acidi grassi dei
+  fosfolipidi di membrana (PLFA) che si basa sul principio secondo cui
+  la composizione in acidi grassi dei fosfolipidi di membrana è
+  specifica per i diversi gruppi di microrganismi
+
+  I risultati delle analisi statistiche non hanno
+  mostrato una significativa variazione dovuta ai due metodi di
+  gestione , mentre sulla stagione \ldots
+
+ 
+
 \end{abstract}
 
 
@@ -298,7 +319,7 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 
 \chapter{Introduzione}
 \section{Suolo}
-\subsection{Qualche definizione}
+\subsection{Alcune definizioni}
 Il suolo può essere considerato come \emph{la pelle vivente della
   Terra} \citep{pepper_soil:_2009} e si può definire come un corpo
 naturale che si trova sulla superficie terrestre e che consiste in un
@@ -355,7 +376,7 @@ Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
 
 
 
-\subsection{Le sue funzioni}
+\subsection{Funzioni}
 Il suolo svolge numerose e importani funzioni che permettono lo
 sviluppo della vita. Rappresentando il substrato dove gli organismi,
 sia vegetali che animali, possono accrescersi, alimentarsi e
@@ -370,7 +391,7 @@ elementi nutritivi. Infine permette anche la cattura ed il
 trattenimento di una buona parte del carbonio atmosferico, funzionando
 da carbon sink.
 
-\subsection{Sistema trifasico}
+\subsection{Un sistema trifasico}
 Il suolo è un sistema trifasico, ovvero è composto dalle tre le fasi
 della materia: corpi solidi quali i minerali e la materia organica, ed
 elementi fluidi, sia liquidi che gassosi. Queste tre componenti devono
@@ -963,7 +984,7 @@ animali, ma anche della comunità microbica nel terreno, componente
 spesso dimenticata, anche se fondamentale \citep{kennedy_soil_1995},
 usando come indice di fertilità del suolo la sua diversità e vitalità.
 
-\section{Tecniche di analisi}
+\section{Tecniche analitiche}
 
 Essendo la comunità microbica del suolo così varia, anche in quantità
 di terreno assai piccole, non si può applicare l’approccio classico di
@@ -1611,6 +1632,7 @@ di piccole e medie dimensioni \citep{DISPAA}.
 
 
 \subsection{Disegno sperimentale e gestione agronomica}
+\label{subsec:Dis_Sperim}
 Questo studio fa parte del progetto MoLTE (Moltepaldi Long Term
 Experiment), progetto europeo attivo dal 1991 e interessa una
 superficie di 15 ha suddivisa in 10 appezzamenti, di 1.3 ha ciascuno:
@@ -1975,7 +1997,7 @@ stato recuperato con 200\,µl di eptano.
 %\item conservare a -20°C o riprendere in un baccellino con \SI{200}{\ul} di eptano.
 %\end{enumerate}
 
-\subsection{Standard e prova di validazione}
+\subsection{Standard analitici e validazione del metodo}
 Nella sequenza di iniezione, oltre ai 72 campioni e ai 2 MIX SOIL,
 sono stati inseriti anche dei Bianchi di controllo, così da
 assicurarsi che non ci siano interferenti nel sistema di preparazione
@@ -1983,7 +2005,7 @@ e iniezione, come ad esempio: vials sporche, solventi impuri, siringa
 del GC, liner e/o colonna con residui di iniezioni precedenti.
 
 Infine è stata preparata la curva di taratura tramite il BAMEs MIX
-(\emph{SIGMA-ALDRICH}) contenente 26 composti in 10mg/mL (10.000 ppm)
+(\emph{SIGMA-ALDRICH}) contenente 26 composti in \SI{10}{\mg\per\ml} (10.000 ppm)
 totali (Tab. \ref{tab:BAMEs MIX}).
 
 \begin{table}[ht]
@@ -2056,8 +2078,8 @@ e di un sistema per la termostatazione della colonna cromatografica.
 La colonna utilizzata per quest’analisi è un’HP-INNOWax (Polyethylen
 Glyco) dell’Agilent, avente una lunghezza di 50\,m, per 2\,mm di
 diametro e 0.4\,mm di film interno. La separazione cromatografica è
-stata effettuata mediante un flusso di 1,2\,ml/minuto con un gradiente
-di temperatura controllato.
+stata effettuata mediante un flusso di \SI{1.2}{\ml\per\minute} con un
+gradiente di temperatura controllato.
 
 Il metodo di iniezione vede un volume di 2\,ul del campione a
 \emph{pulsed splitles} tramite una siringa da 10\,ul e una temperatura
@@ -2171,7 +2193,20 @@ le quantità degli altri composti non presenti nello standard.
 
 
 \section{Analisi e trattamento dati}
-I dati sono stati analizzati mediante il linguaggio di programmazione R 3.4.?. 
+
+Il disegno sperimentale è riportato nella sezione
+\ref{subsec:Dis_Sperim}.Il risultato del disewgno sperimentale
+abbinato alle analisi di laboratorio ha formato un insieme di dati
+composto da una matrice di \Sexpr{dim(lis.tutto$PLFA$nMOLI)[2]}
+colonne (composti PLFA) e \Sexpr{dim(lis.tutto$PLFA$nMOLI)[1]} righe
+(campioni analizzati).
+
+
+
+
+I dati sono stati analizzati mediante il linguaggio di programmazione
+R 3.4.3 attraverso l'adattamento di modelli lineari, composizionali e
+analisi multivariata. 
 
 \begin{itemize}
 \item anova modello lineare sulle somme: l'esplorazione è stata fatta
@@ -2182,7 +2217,8 @@ I dati sono stati analizzati mediante il linguaggio di programmazione R 3.4.?.
   un'analisi della varianza (ANOVA). Inoltre è stato anche effettuato
   il \todo{cit Tukey test}.
 
-\item anova dati composizionali
+
+  
 \item PCA composizionale: La concentrazione dei PLFA individuale,
   calcolata sulle moli, è stata usata come input nell'analisi delle
   componenti principali (PCA) così da determinare come i BAMEs si
@@ -2190,9 +2226,8 @@ I dati sono stati analizzati mediante il linguaggio di programmazione R 3.4.?.
   Usando la PCA si combinano i dati a 37 dimensioni (dovute ai 37 PLFA
   differenti identificati nei campioni), in una serie di assi lineari
   che incorporano la massima varianza nei dati. La PCA è stata
-  condotta usando il programma R 3.4.?.
-
-\item discriminant analisys composizionale
+  condotta usando il programma R 3.4.3.
+ \item anova dati composizionali
 \end{itemize}
 
 
@@ -2380,8 +2415,8 @@ cbind.data.frame(
            align  = "lllllll",
             caption =
                "Confronto tra modelli marginali per la quantità di PLFA nel suolo. 
-               modello 1) con tutte le interazioni, \\emph{log(Moli) ~ Gestione * Lavorazione * Stagione}; 
-                modello 2) \\emph{log(Moli) ~ Lavorazione + Stagione}, il più parsimonioso\\newline"
+               modello 1) con tutte le interazioni, \\emph{log(Moli) $~$ Gestione * Lavorazione * Stagione}; 
+                modello 2) \\emph{log(Moli) $~$ Lavorazione + Stagione}, il più parsimonioso\\newline"
  )
 print(xtabANOVAmarginali, 
       include.rownames=TRUE,
@@ -2583,60 +2618,15 @@ fun.biplot(x=pcx.Y.MOLI,
 \begin{figure}[ht]
 \centering
 
-
-\subfloat[][\emph{prima figura}.]
-{%apre
-<<label=printPCAcomposizionale_1, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
-<<FigPCAcomposizionale_1>>
-@
-}\quad
-
-\subfloat[][\emph{2a figura}.]
-{
 <<label=printPCAcomposizionale_2, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
 <<FigPCAcomposizionale_2>>
 @    
-} 
+
 \caption{PCA composizionali moli}
-  \label{fig:PCA_composiz}
+  \label{fig:PCA_composizPLFA}
 \end{figure}
 
 
-
-<<printPCAcomposizionale_PM,  fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
-plot(0, 0,
-     xlim=c(-0.6,0.6),
-     ylim=c(-0.6, 0.6),
-     xlab = "Comp.1", 
-     ylab = "Comp.2",
-     main = "titolo"
-)
-for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
-  posizioneX <-
-    pcx.Y.MOLI$loadings[,1]
-  posizioneY <- pcx.Y.MOLI$loadings[,2]
-  #titolo <-
-   # names(df.gruppiMicrobici)[dalila]
-    #col= (prova)
-  # colore <-
-  #     ifelse(df.gruppiMicrobici[i, dalila]==1,
-  #            "black", ## nero se vero
-  #            "transparent")# grifgiochiaro se falso
-  arrows(0, 0,
-         posizioneX, 
-         posizioneY,
-         col=#as.numeric(cut(df.colori$MASSE, breaks = 2)),
-             ifelse(df.colori$MASSE < 275, "gray", "black"),
-          length=0.1)
-     text(posizioneX, 
-          posizioneY,
-          label = df.colori$MASSE,
-          pos= 1,
-          offset=-0.5,
-          col="black")
-}
-
-@ 
 
 \begin{landscape}
 <<clusterIndividui_1, fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE  >>=
@@ -2678,37 +2668,37 @@ plot(dend1)
 
 
 Qui ci vanno le tabelle dei modelli composizionali con anova e modelli marginali
-<<ModelloComposizionale, eval = FALSE, results = hide, echo = FALSE>>=
-MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
-MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
-df.metlin <- 
-    cbind.data.frame(
-        BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
-        MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
-        LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
-    )
 
-Y.metlin <- acomp(df.metlin)
-lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
-anova(lm.2)
+<<ModelloComposizionale, eval = TRUE, results = tex, echo = FALSE>>=
+## MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
+## MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
+## df.metlin <- 
+##     cbind.data.frame(
+##         BOH = apply(lis.tutto$PLFA$nMOLI[,MetLin == "BOH"], 1,sum),
+##         MET = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Met"], 1,sum),
+##         LIN = apply(lis.tutto$PLFA$nMOLI[,MetLin == "Lin"], 1,sum)
+##     )
 
-SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
-SatInsat[which(SatInsat  == "2")] <- "1"
-vec.satinsat.ratio <- 
-        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
-        apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
+## Y.metlin <- acomp(df.metlin)
+## lm.2 <- lm(ilr(Y.metlin)  ~  STAGIONE*TIL, data = lis.tutto$CATEGORIA)
+## anova(lm.2)
 
-lm.satinsat <- 
-    lm(log(vec.satinsat.ratio)  ~ 
-      STAGIONE*MAN*TIL ,  
-   data = lis.tutto$CATEGORIA)
-anova(lm.satinsat)
+## SatInsat <- substr(names(lis.tutto$PLFA$AREA),12,12)
+## SatInsat[which(SatInsat  == "2")] <- "1"
+## vec.satinsat.ratio <- 
+##         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "0"], 1, sum)/
+##         apply(lis.tutto$PLFA$nMOLI[,SatInsat == "1"], 1,sum)
 
-summary(lm.satinsat)
+## lm.satinsat <- 
+##     lm(log(vec.satinsat.ratio)  ~ 
+##       STAGIONE*MAN*TIL ,  
+##    data = lis.tutto$CATEGORIA)
+## anova(lm.satinsat)
+
+## summary(lm.satinsat)
 attach(lis.tutto$CATEGORIA)
 lm.1 <-
     lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
-
 
 lm.2 <-
     lm(ilr(Y.MOLI) ~ MAN + 
@@ -2719,12 +2709,45 @@ lm.2 <-
 lm.3 <-
     lm(ilr(Y.MOLI) ~ MAN + 
            STAGIONE + TIL )
-anova(lm.2, lm.3)
-
-
-anova(lm.2)
 
 detach(lis.tutto$CATEGORIA)
+
+xtabANOVAmargAcomp <- 
+    xtable(anova(lm.1, lm.2, lm.3),
+           label  = "tab:ANOVAmargAcomp",
+           align  = "lllllllll",
+            caption =
+               "Confronto tra modelli marginali per la composizione di PLFA nel suolo. \\newline
+               modello 1) \\emph{Composizione $~$ Gestione * Lavorazione * Stagione}; \\newline
+ modello 2) \\emph{Composizione $~$ Gestione + Lavorazione + Stagione + Gestione:Stagione + Gestione:Lavorazione + Stagione:Lavorazione};\\newline
+               modello 3) \\emph{Composizione $~$ Gestione + Lavorazione + Stagione}. Il più parsimonioso risulta essere il modello 2"
+)
+print(xtabANOVAmargAcomp,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+@ 
+
+
+<<ModelloComposizionale_2, eval = TRUE, results = tex, echo = FALSE>>=
+
+xtabANOVAModAcomp <- 
+    xtable(anova(lm.2),
+           label  = "tab:ANOVAModAcomp",
+           align  = "lllllll",
+            caption =
+               "Tabella ANOVA per la composizione in PLFA"
+)
+print(xtabANOVAModAcomp,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+@ 
+
+
+<<ModelloComposizionale_prove, eval = FALSE, results = hide, echo = FALSE>>=
 
 stag <- lis.tutto$CATEGORIA$STAGIONE
 til <- lis.tutto$CATEGORIA$TIL
@@ -3027,7 +3050,7 @@ via a decrescere. A questo punto ci è possibile scegliere il numero di
 componenti principali ritenuto più facile da interpretare e anche più
 idoneo per avere la minima perdita di dati.
 
-ecc. spiegare : l'estate più che l'autunno? se maggiori i protozoi è
+ecc. spiegare: l'estate più che l'autunno? se maggiori i protozoi è
 scritto anche a pagina 25 che dico che preferiscono t sopra i 20 gradi
 ecc, cerca lì il rippato forse perchè minor disturbo rispetto alle
 altre due lavorazioni che invece alterano completamente il terreno e
@@ -3049,63 +3072,118 @@ quali nutrienti (?), t (clima), acqua-ossigeno-asfissia
 <<qqplotANOVAmoli>>
 @
 \caption{Distribuzione dei residui
-  del modello \ref{mod:ANOVAmoli}, p. \pageref{mod:Anovamoli})}
+  del modello \ref{mod:ANOVAmoli}, p. \pageref{mod:ANOVAmoli})}
   \label{fig:qqplot_ANOVAmoli}
 \end{figure}
+
 
 \begin{table}[ht]
 \caption{Pesi molecolari e nomi molecole PLFA }
 \label{tab:PM_PLFA}
 \centering
- \begin{tabular}{lclcccc}
+\small
+ \begin{tabular}{p{1.3cm}p{4cm}cl}
   \toprule
-NOME.R	&Peso molecolare	&Nome	&	&	&	&\\
+Ordine di ritenzione & Nome in R	&Peso molecolare
+   &Specie chimica		\\
    \midrule
-C.12MetC14.0	&242	&Methyl-12-methyltetradecanoate	&	&	&	&\\
-C.11MetC14.0	&242	&	&	&	&	&\\
-C.00LinC14.0	&242	&Methyl myristate	&	&	&	&\\
-C.13MetC15.0	&256	&	&	&	&	&\\
-C.12MetC15.0	&256	&	&	&	&	&\\
-C.00MetC16.0	&270	&	&	&	&	&\\
-C.00LinC15.0	&256	&Methyl pentadecanoate	&	&	&	&\\
-C.01MetC16.0	&270	&	&	&	&	&\\
-C.14MetC16.0	&270	&Methyl-14-methylpentadecanoate	&	&	&	&\\
-C.07MetC17.0	&284	&	&	&	&	&\\
-C.00LinC16.0	&270	&Methyl palmitate	&	&	&	&\\
-C.00MetC17.0.sul.284	&284	&	&	&	&	&\\
-C.00MetC17.0	&284	&	&	&	&	&\\
-C.00LinC16.1.omega7	&268	&Methyl cis-9-hexadecenoate	&	&	&	&\\
-C.01MetC17.0	&284	&	&	&	&	&\\
-C.00LinC16.1.omega5	&268	&	&	&	&	&\\
-C.15MetC17.0	&284	&Methyl-15-methylhexadecanoate	&	&	&	&\\
-C.14MetC17.0	&284	&	&	&	&	&\\
-C.10MetC18.0	&298	&	&	&	&	&\\
-C.00LinC17.0	&284	&Methyl heptadecanoate	&	&	&	&\\
-C.00MetC18.0	&298	&	&	&	&	&\\
-C.00CycC17.0	&282	&Methyl cis-9,10-methylenehexadecanoate	&	&	&	&\\
-C.00UnkC12.6	&210	&	&	&	&	&\\
-C.00LinC17.1.omega9	&282	&	&	&	&	&\\
-C.00LinC18.0	&298	&Methyl stearate	&	&	&	&\\
-C.02HydC14.0	&258	&Methyl-2-hydroxytetradecanoate	&	&	&	&\\
-C.00MetC19.0	&312	&	&	&	&	&\\
-C.00LinC18.1.omega9cis	&296	&Methyl cis-9,10-methyleneoctadecanoate	&	&	&	&\\
-C.00LinC18.1.omega9t\&omega7cis	&296	&Methyl trans-9-octadecenoate	&	&	&	&\\
-C.00LinC18.1	&296	&Methyl oleate	&	&	&	&\\
-C.00LinC18.2	&294	&Methyl linoleate	&	&	&	&\\
-C.03HydC14.0	&258	&Methyl-3-hydroxytetradecanoate	&	&	&	&\\
-C.00LinC19.0	&312	&Methyl nonadecanoate	&	&	&	&\\
-C.00CycC19.0	&310	&	&	&	&	&\\
-C.00LinC20.0	&326	&Methyl eicosenoate	&	&	&	&\\
-C.02HydC16.0	&286	&	&	&	&	&\\
-C.00LinC20.2	&322	&	&	&	&	&\\
-C.00LinC20.2.cis11.14	&322	&	&	&	&	&\\
+1	&C.12MetC14.0	&242	&Methyl-12-methyltridecanoate	\\
+2	&C.11MetC14.0	&242	&Methyl-11-methyltridecanoate   \\
+3	&C.00LinC14.0	&242	&Methyl myristate		\\
+4	&C.13MetC15.0	&256	&Methyl-13-methyltetradecanoate \\
+5	&C.12MetC15.0	&256	&Methyl-12-methyltetradecanoate \\
+6	&C.00MetC16.0	&270	&Methyl-qualcosa1-methylpentadecanoate	                \\
+7	&C.00LinC15.0	&256	&Methyl pentadecanoate		\\
+8	&C.01MetC16.0	&270	&Methyl-qualcosa2-methylpentadecanoate	\\
+9	&C.14MetC16.0	&270	
+   &Methyl-14-methylpentadecanoate	\\
+10	&C.07MetC17.0	&284	&Methyl-qualcosa1-methylhexadecanoate	\\
+11	&C.00LinC16.0	&270	&Methyl palmitate		\\
+12	&C.00MetC17.0.sul.284	&284		&	\\
+13	&C.00MetC17.0	&284	&Methyl-qualcosa2-methylhexadecanoate	\\
+14      &C.00LinC16.1.omega7     &268	&Methyl cis-9-hexadecenoate		\\
+15	&C.01MetC17.0	&284	&Methyl-qualcosa3-methylhexadecanoate		\\
+16      &C.00LinC16.1.omega5     &268	&Methyl cis-11-hexadecenoate	\\
+17	&C.15MetC17.0	&284	&Methyl-15-methylhexadecanoate			\\
+18	&C.14MetC17.0	&284	&Methyl-14-methylhexadecanoate		\\
+19	&C.10MetC18.0	&298	&Methyl-10-methylheptadecanoate		\\
+20	&C.00LinC17.0	&284	&Methyl heptadecanoate			\\
+21	&C.00MetC18.0	&298	&Methyl-qualcosa-methylheptadecanoate		\\
+22	&C.00CycC17.0	&282	&Methyl cis-9,10-methylenehexadecanoate			\\
+23	&C.00UnkC12.6	&210		&	\\
+24      &C.00LinC17.1.omega9     &282		&Methyl cis-8-methylene heptadecenoate	\\
+25	&C.00LinC18.0	&298	&Methyl stearate		\\
+26	&C.02HydC14.0	&258	&Methyl-2-hydroxytetradecanoate		\\
+27	&C.00MetC19.0	&312		&Methyl-qualcosa-methyloctadecanoate		\\
+28	&C.00LinC18.1.omega9cis	&296	&Methyl cis-9-octadecenoate		\\
+29      &C.00LinC18.1.omega9t\&omega7cis	&296	&\scriptsize{Methyl trans-9-octadecenoate e Methyl cis-11-octadecenoate}\\
+30	&C.00LinC18.1	&296	&Methyl oleate		\\
+31	&C.00LinC18.2	&294	&Methyl linoleate		\\
+32	&C.03HydC14.0	&258	&Methyl-3-hydroxytetradecanoate		\\
+33	&C.00LinC19.0	&312	&Methyl nonadecanoate		\\
+34	&C.00CycC19.0	&310	&Methyl cis-9,10-methyleneoctadecanoate	\\
+35	&C.00LinC20.0	&326	&Methyl eicosenoate		\\
+36	&C.02HydC16.0	&286	&Methyl-2-hydroxyhexadecanoate	\\
+37	&C.00LinC20.2	&322	&Methyl cis-11,14-eicosenoate	\\
+38	&C.00LinC20.2.cis11.14	&322		&Methyl cis-11,14-eicosenoate	\\
 
         \bottomrule
   \end{tabular}
+  \normalsize
  \end{table}
 
 
 
+
+<<printPCAcomposizionale_PM,  fig=TRUE, fig.width = 0.1, fig.height = 0.1, echo=FALSE>>=
+
+
+
+df.colori <-   
+    cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
+
+df.colori <- df.colori[order(df.colori$MASSE),]
+df.colori$COLORI <- 1:36
+df.colori <-  df.colori[order(df.colori$origine),]
+
+
+plot(0, 0,
+     xlim=c(-0.6,0.6),
+     ylim=c(-0.6, 0.6),
+     xlab = "Comp.1", 
+     ylab = "Comp.2",
+     main = "titolo"
+)
+for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
+  posizioneX <-
+    pcx.Y.MOLI$loadings[,1]
+  posizioneY <- pcx.Y.MOLI$loadings[,2]
+  #titolo <-
+   # names(df.gruppiMicrobici)[dalila]
+    #col= (prova)
+  # colore <-
+  #     ifelse(df.gruppiMicrobici[i, dalila]==1,
+  #            "black", ## nero se vero
+  #            "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX, 
+         posizioneY,
+         col=#as.numeric(cut(df.colori$MASSE, breaks = 2)),
+              ifelse(df.colori$origine <= 15, "gray", "black"),
+             #ifelse(df.colori$MASSE < 275, "gray", "black"),
+          length=0.1)
+     text(posizioneX, 
+          posizioneY,
+          label = df.colori$MASSE,
+          pos= 1, cex = 0.8,
+          offset=-0.5,
+          col="black")
+}
+
+@ 
+ 
+ 
+ 
 
 \end{appendices}
 
