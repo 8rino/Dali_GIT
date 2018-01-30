@@ -1070,7 +1070,8 @@ DNA del microrganismo da riconoscere \citep{ramsey_choice_2006}.
 La tecnica dei \acs{PLFA} fornisce una sorta di impronta digitale
 \citep{bossio_determinants_nodate} della struttura e dell’attività
 della comunità microbica e risente maggiormente dei cambiamenti dovuti
-alla differente gestione e lavorazione \todo{riferimento file biblio!!}.  Questa tecnica è stata
+alla differente gestione e lavorazione \cite{bossio_determinants_nodate, 
+kong_microbial_2012} \todo{perchè loro si e noi no?! biblio!!}.  Questa tecnica è stata
 dimostrata essere più adatta rispetto all’analisi \acs{CLPP}, \acs{PCR} e 
 \acs{RFLP}
 nel mostrare i cambiamenti, a livello generale, nella comunità
@@ -1131,7 +1132,7 @@ Alcune sostanze interagiscono diversamente con la fase stazionaria e
 quindi vengono più o meno ritardate nel loro cammino, altre invece non
 sono in alcun modo trattenute e ciò comporta tempi di eluizione
 diversi (Fig. \ref{fig:principio_cromatografia}).
-
+\todo{immagini quadrupolo ecc}
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/principio_crom.jpg}
@@ -1334,13 +1335,13 @@ dell'iniezione \emph{on column}.
 
 La colonna cromatografica contiene la fase stazionaria in grado di
 ritardare il flusso dei vari componenti della miscela in maniera
-differenziata, in funzione del coefficiente di ripartizione (tra fase
-gassosa e fase liquida) oppure in funzione del coefficiente di
-adsorbimento (tra fase gassosa e solida).
+differenziata, in funzione del coefficiente di ripartizione tra fase
+gassosa e liquida oppure in funzione del coefficiente di
+adsorbimento tra fase gassosa e solida.
 
-Le colonne si trovano in un’apposita camera termostatica a
+La colonna si trova in un’apposita camera termostatica a
 circolazione di aria calda, detta forno (Fig. \ref{fig:colonna}), dove
-la temperatura, giunta al livello desiderato, rimane il più possibile
+la temperatura, giunta al livello desiderato, viene mantenuta
 costante, così da permettere una buona riproducibilità dell’analisi.
 
 \begin{figure}[ht]
@@ -1352,26 +1353,26 @@ costante, così da permettere una buona riproducibilità dell’analisi.
 \label{fig:colonna}
 \end{figure}
 
-Le colonne possono essere impaccate o capillari: 
+Le colonne possono essere del tipo impaccate o capillari: 
 \begin{itemize}
 \item le prime sono tubi di teflon, acciaio o vetro con un diametro
-  dell’ordine del centimetro (solitamente 1-5\,mm) e con una lunghezza
-  non superiore ai 10 metri (solitamente 1-6\,m); piegate a spirale o a
+  intorno a 1-5\,mm e con una lunghezza
+  di circa 1-6\,m; piegate a spirale o a
   U e riempite di silice solida e un liquido non volatile, che varia
   in base alla sostanza che si vuole separare. Queste due componenti
   rappresentano la fase stazionaria;
 \item le colonne capillari sono sottilissimi tubi di silice fusa con
-  un diametro solitamente non superiore agli 0,53 millimetri e con una
-  lunghezza tra i 10 e i 200 metri, avvolte a spirale su un supporto
+  un diametro solitamente non superiore agli 0,53\,mm e con una
+  lunghezza tra i 10\,m e i 200\,m, avvolte a spirale su un supporto
   metallico. In questo caso la fase stazionaria è disposta in maniera
   uniforme sulla superficie interna formando un film di spessore
-  compreso tra 0,5 e 2,5 micron. Il film è costituito solitamente da
-  metil-silossani modificati con diversi gruppi funzionali in base al
+  compreso tra 0,5 e 2,5 micron\todo{micron}. Il film è costituito solitamente da
+  metil-silossani modificati con diversi gruppi funzionali selezionati in base al
   campione da analizzare e possono essere più o meno polari,
   comportando una differente forza d’interazione tra fase stazionaria
   e soluto. Più sono similmente polari, superiore sarà l’interazione,
   ed il soluto sarà trattenuto maggiormente con tempi di ritenzione
-  più lunghi.
+  più lunghi.\todo{calamai}
 \end{itemize}
 
 Le colonne capillari permettono maggiori portate di gas e tempi di 
@@ -1384,10 +1385,6 @@ componenti della miscela.
 Le colonne impaccate hanno però una maggior capacità e vengono
 utilizzate per analisi in cui non è necessario separare tanti
 elementi.
-
-
- 
-
 
 \begin{figure}[ht]
 \centering
@@ -1405,23 +1402,24 @@ Il \emph{detector} o rivelatore è la parte terminale di un gas
 cromatografo e segnala la presenza e la concentrazione
 del soluto nel \emph{carrier}.
 
-Uno dei punti di forza della tecnica \acs{GC} è la grande varietà dei
+Uno dei punti di forza della tecnica \acs{GC} è la grande varietà di
 rivelatori disponibili, differenziati in base al principio fisico
-utilizzato per rivelare le sostanze in uscita dalla colonna. Si
-possono suddividere in distruttivi (\acs{FID}) o non (\acs{ECD}, \acs{TCD}) e questi
-ultimi possono permettere l’invio delle molecole ad un ulteriore
-strumento di analisi come ad esempio alla massa (\acs{MS}). Inoltre possono
-essere universali (\acs{TCD}, \acs{FID}), ovvero consentono di individuare tutti i
-componenti di una miscela, o selettivi (\acs{ECD}) se rivelano solo
-particolari categorie di composti:
+utilizzato per rivelare le sostanze. Si
+possono suddividere in distruttivi e non distruttivi, questi ultimi 
+possono permettere l'invio delle molecole ad un ulteriore rivelatore 
+come ad esempio alla massa (\acs(MS). Inoltre possono essere universali,
+ovvero consentono di individuare tutti i componenti di una miscela,
+o selettivi se rivelano solo particolari categorie di composti:
+
+
 \begin{itemize}
 \item Il \acs{FID} (\emph{Flame Ionization Detector}) è un rivelatore a
-  ionizzazione di fiamma distruttivo: il gas in uscita dalla colonna è
+  ionizzazione di fiamma distruttivo e \info{controlla}non selettivo: il carrier è
   mescolato all’aria e, quando va nella fiamma di idrogeno, si produce
   una corrente elettrica che, amplificata, rappresenta il segnale del
   detector. Facendo la differenza tra il gas puro e quello contenente
-  la sostanza si ottiene il picco. Il \acs{FID} anche se distruttivo e cieco
-  per quelle sostanza che non bruciano come ad esempio \ce{NH3},
+  la sostanza si ottiene il picco. Il \acs{FID} non rivela le sostanze 
+  che non bruciano come ad esempio \ce{NH3},
   \ce{CO2} o l’acqua, è il \emph{detector } più usato perchè molto
   robusto ed universale;
 \item il \acs{TCD} (\emph{Thermal Conductivity Detector}) è un rivelatore a
@@ -1434,27 +1432,28 @@ particolari categorie di composti:
   variazione di resistenza che viene amplificata e rappresenta il
   segnale del \emph{detector};
 \item L’\acs{ECD} (\emph{Electron Capture Detector}) cioè il rivelatore a
-  cattura di elettroni, è non distruttivo e molto selettivo: il
-  rivelatore è formato da un catodo e un anodo. Il catodo è rivestito
+  cattura di elettroni, è non distruttivo e molto selettivo: è formato 
+  da un catodo e un anodo. Il catodo è rivestito
   da un materiale radioattivo a bassa energia, mentre l’anodo, con
   forma tubolare, permette l’ingresso del gas. Il gas viene ionizzato
   dal catodo e i nuovi ioni così formati si dirigono ai rispettivi
   elettrodi a creare una corrente di fondo che forma la linea di base.
-  Se nel gas sono presenti sostanze elettronaffine, queste reagiscono
-  e formano molecole neutre che fanno abbassare la corrente di base.
+  Se nel gas sono presenti sostanze elettronaffini, queste reagiscono
+  e formano molecole neutre che abbassano la corrente di base.
 \end{itemize}
 
-Il \acs{GC} si può accoppiare, se prevede un detector non distruttivo, ad
+
+\subsection{Spettrometria di massa}
+Al \acs{GC} si può accoppiare, se prevede un detector non distruttivo, 
 uno spettrometro di massa così da ottenere indicazioni sulla natura e
 struttura di ogni singola sostanza eluita.
 
-\subsection{Spettrometria di massa}
 Lo spettrometro di massa (\acs{MS}) rappresenta un rivelatore adatto alla
 gascromatografia e permette di analizzare in tempo reale i singoli
 picchi in uscita dalla colonna, effettuando sia un’analisi
 quantitativa che qualitativa, mediante il confronto dello spettro
-ottenuto con uno memorizzato nella banca dati. Questo accoppiamento
-viene solitamente effetuato poiché nella Gas-Cromatografia, a
+ottenuto con uno memorizzato in una banca dati. Questo accoppiamento
+viene solitamente effettuato poiché nella gas-cromatografia, a
 differenza della \acs{MS}, il tempo di ritenzione non fornisce una
 conoscenza certa ed univoca della molecola.
 
@@ -1462,14 +1461,15 @@ Il campione, in fase gassosa, giunge nella sorgente dello spettrometro
 di massa e le molecole che lo compongono vengono frammentate
 (ionizzate). Gli ioni proseguono nell’analizzatore che permette la
 loro separazione, poichè, immessi in un campo elettromagnetico,
-percorrono traiettorie diverse in base al rapporto carica/massa (m/z)
+percorrono traiettorie diverse in base al rapporto \info{controlla}
+massa/carica (m/z)
 e si separano gli uni dagli altri.
 
 Infine si ha un moltiplicatore che amplifica il segnale e il
-rivelatore; in output si viene ad ottenere uno spettro che
+rivelatore; in uscita si ottiene uno spettro che
 rappresenta, con delle bande, i vari frammenti di ionizzazione,
 ordinati in base alla loro massa atomica
-(Fig. \ref{fig:GC-MS}). Questo, come una sorta di impronta digitale,
+\todo{dalila che figura?}(Fig. \ref{fig:GC-MS}). Questo, come una sorta di impronta digitale,
 permette di ricostruire la formula della molecola e, confrontandolo
 con i numerosi spettri memorizzati nella banca dati, si possono
 riconoscere i vari componenti.
@@ -1488,12 +1488,13 @@ casi anche dei femtogrammi.
 \subsubsection{Sorgenti}
 
 
-Il campione entra “neutro” nello spettrometro e giunge alla sorgente;
+Il campione entra non carico elettricamente nello spettrometro e giunge 
+alla sorgente;
 qui, prima di raggiungere l’analizzatore, viene trasformato in un gas
-ionizzato. Le sorgenti possono essere di più tipologie come anche le
+ionizzato. Le sorgenti possono essere di più tipi come anche le
 modalità con cui si formano gli ioni, comportando risultati
 differenti. Dunque la sorgente da utilizzare deve essere scelta in
-base al campione che abbiamo e alle informazioni che ci interessano.
+base al campione da analizzare e alle informazioni che ci interessano.
 
 Le principali tipologie di sorgenti ioniche sono \todo{(ARPAT, 2010)}: 
 \begin{itemize}
@@ -1525,12 +1526,12 @@ più difficile interpretazione.
 
 Infine abbiamo il \acs{FI} che è simile all’\acs{EI} ma prevede l’utilizzo di un
 diverso elemento ionizzante rappresentato da una punta
-metallica. Questo metodo presenta dei limiti, poiché risulta essere
+metallica. Questo metodo ha dei limiti, essendo
 fragile e meno sensibile dell’\acs{EI}.
 
-In tutti e tre i casi, gli ioni formatisi subiscono un’accelerazione
+In tutti e tre i casi, gli ioni formatisi subiscono, nella sorgente, un’accelerazione
 grazie a delle piastre acceleratrici di metallo e vengono espulsi,
-tramite una fenditura, dalla sorgente e guidati verso l’analizzatore.
+tramite una fenditura, verso l’analizzatore.
 
 \subsubsection{Analizzatore}
 
@@ -1543,71 +1544,74 @@ Anche in questo caso ci possono essere più tipologie di analizzatori:
 \item a settori magnetici;
 \item quadrupoli;
 \item trappole ioniche;
-\item a tempo di volo (\acs{TOF});
-\item a risonanza ciclotronica.
+\item a risonanza ciclotronica;
+\item a tempo di volo (\ac{TOF}).
+
 \end{itemize}
-Nella prima tipologia di analizzatore si ha una struttura
+Nell'analizzatore a \emph{setti magnetici} si ha una struttura
 semicircolare con dei magneti che deviano le traiettorie degli ioni in
 percorsi circolari. Il raggio di queste traiettorie dipende dal
-rapporto momento angolare/carica dello ione e quindi ioni con m/z
+rapporto tra momento angolare e carica dello ione e quindi ioni con m/z
 maggiore percorrono dei raggi più ampi rispetto a ioni aventi un
 rapporto minore. La posizione della fenditura si comporta da filtro e
 permette il passaggio solo di alcuni ioni aventi uno specifico
 rapporto m/z. La separazione degli ioni avviene dunque disperdendoli
-nello spazio.
+controllatamente nello spazio.
 
-Negli analizzatori con quadrupolo, invece, ci si basa sulla stabilità
+Negli analizzatori con \emph{quadrupolo}, invece, ci si basa sulla stabilità
 dello ione una volta inserito nello strumento. Si ha un campo
 elettrico quadrupolare grazie a quattro elettrodi a barra cilindrica,
 lunghi circa 20\,cm, che hanno un potenziale elettromagnetico
 oscillante: quando le due barre verticali hanno carica negativa, le
 due orizzontali hanno carica positiva e viceversa. Gli ioni seguono
 questa sorta di tunnel e oscillano tra l’anodo e il catodo in base al
-rapporto potenziale/massa dello ione. Se l’oscillazione è stabile con
-la radiofrequenza imposta riescono a percorrere tutto il percorso ed a
-raggiungere il \emph{detector}; gli ioni con un valore m/z non idoneo
+rapporto \todo{?} massa/potenziale dello ione. Se l’oscillazione è stabile con
+la radiofrequenza imposta, essi riescono a percorrere tutto il percorso ed a
+raggiungere il detector; gli ioni con un valore m/z non idoneo
 invece collidono contro le barre e non vengono rivelati.  Cambiando
 radiofrequenza, altri ioni raggiungono il detector e modulando questa
 si ottiene lo spettro di massa. I sistemi con quadrupolo permettono di
 usare pressioni alte e quindi sistemi di vuoto più semplici, però
-hanno una bassa risoluzione. \label{rif:quadrupolo}
+hanno una bassa risoluzione. \todo{depressione meno spinta, calamai} \label{rif:quadrupolo}
 
-Gli analizzatori con la trappola ionica prevedono un elettrodo ad
-anello e due elettrodi cilindrici; agendo sulla radiofrequenza si
-fanno muovere gli ioni dalla trappola verso il \emph{detector}. Questa
-tipologia di analizzatore fornisce gli stessi vantaggi e svantaggi
-della tipologia precedente di analizzatore, ma presenta una
-caratteristica interessante poiché permette di mantenere gli ioni
+Gli analizzatori con la \emph{trappola ionica} prevedono un elettrodo ad
+anello e due elettrodi cilindrici; variando sulla radiofrequenza \todo{calamai, quale freq?} si
+fanno muovere gli ioni dalla trappola verso il detector. Questo
+ analizzatore fornisce gli stessi vantaggi e svantaggi
+della tipologia precedente, ma permette di mantenere gli ioni
 confinati e intrappolati per un tempo finito nella trappola e quindi
-si possono effettuare vari tipi di esperimenti sugli ioni stessi.
+si possono effettuare vari tipi di manipolazioni sugli ioni stessi.
 
-Nel caso del TOF invece lo ione viene accelerato con un energia
-cinetica nota e si misura il “tempo di volo” impiegato dallo stesso
-per raggiungere l’analizzatore.  Dunque si ha una separazione degli
-ioni disperdendoli nel tempo. Il principio di base quindi è che ioni
-con ugual energia, ma massa diversa, richiederanno tempi diversi per
-percorrere la stessa distanza.  Dunque permette l'acquisizione di
-spettri in tempi brevissimi ed una risoluzione uniforme su tutto
-l’intervallo di massa, a differenza degli altri analizzatori.
-
-Infine l’analizzatore ciclotronico prevede una cella dove vengono
+Anche l’analizzatore \emph{ciclotronico} prevede una cella dove vengono
 intrappolati gli ioni. Questa è posta in un campo magnetico costante
 che obbliga gli ioni ad un percorso curvo. Ma il campo è così forte
 che questi sono intrappolati in questo moto circolare e il tutto viene
-modulato da opportune radiofrequenze e registrato da un
-ricevitore. Questo analizzatore permette di avere uno spettro di massa
-simultaneo senza la distruzione degli ioni, in questo modo possono
-essere analizzati nuovamente e subire altri esperimenti. Questa
+modulato da opportune radiofrequenze. Questo analizzatore 
+permette di avere uno spettro di massa
+\info{simultaneo?} simultaneo senza la distruzione degli ioni, in questo modo possono
+essi essere analizzati nuovamente e subire altri esperimenti. Questa
 tipologia di strumento fornisce un’ottima risoluzione e efficienza di
 rivelazione; nonché alte velocità di scansione, ma richiede la
 formazione di un altissimo vuoto ed è quindi molto costosa e difficile
-da accoppiare con i sistemi cromatografici.
+da accoppiare con i sistemi cromatografici che lavorano necessariamente a 
+pressione atmosferica o poco più alta.
+
+Nel caso del TOF  lo ione viene accelerato da un energia
+cinetica nota e se ne misura il tempo di volo necessario a 
+raggiungere l’analizzatore.  Dunque si ha una separazione degli
+ioni disperdendoli controllatamente nel tempo. 
+Il principio di base è che ioni con ugual energia, ma massa 
+diversa, richiederanno tempi di volo differenti per percorrere la stessa  
+distanza.  I pregi di questo analizzatore sono l'acquisizione di
+spettri in tempi brevissimi ed una risoluzione uniforme su tutto
+l’intervallo di massa.
+
 
 \subsubsection{Rivelatore}
 
-Dopo la separazione gli ioni devono essere rivelati e deve essere
-misurata la loro abbondanza relativa. Anche qui esistono diversi tipi
-di sistemi:
+Dopo la separazione, gli ioni devono essere rivelati e deve essere
+misurata la loro abbondanza relativa. Anche qui esistono diversi 
+sistemi:
 \begin{itemize}
 \item gabbia di Faraday;
 \item moltiplicatore di elettroni;
@@ -1620,21 +1624,20 @@ spettrometo....
 
 Lo scopo di questa ricerca è quello di studiare e determinare la
 risposta della popolazione microbica, usata come indicatore di
-fertilità biologica, in due diverse gestioni agronomiche: la gestione
-biologica e quella convenzionale.  Entrambe le gestioni sono state 
-inoltre
-sottoposte a tre diverse lavorazioni: aratura, frangizollatura e
+fertilità e diversità biologica, in due diverse gestioni agronomiche: la gestione
+biologica e quella convenzionale.  Entrambe le gestioni comprendono 
+tre diverse lavorazioni: aratura, frangizollatura e
 rippatura. I campionamenti sono stati effettuati sia in estate, nel
 mese di giugno, che in autunno, ottobre-novembre, per tenere conto
 anche di una possibile variazione dovuta alla stagionalità.
 
-Per analizzare la microfauna e microflora edafica si è utilizzato il
+Per analizzare la microfauna e microflora edafica è stato utilizzato il
 metodo biochimico degli acidi grassi dei fosfolipidi di membrana
-(\acs{PLFA}) che si basa sul principio secondo cui la composizione dei \acs{PLFA}
-di membrana è specifica per i diversi gruppi di
+(\acs{PLFA}) che si basa sul principio secondo cui la composizione dei \acs{PLFA} 
+è specifica per i diversi gruppi di
 microrganismi \citep{zhang_assessing_2008}. Con questo tipo di analisi
 si può misurare la diversità di una comunità microbica e valutarne i
-cambiamenti in funzione di disturbi esterni come le pratiche agricole
+cambiamenti in funzione di sollecitazioni esterne come le pratiche agricole
 \cite{esperschutz_response_2007, steinbeiss_effect_2009} e
 ottenere una misura della qualità dei suoli
 \cite{mele_application_2008, winding_use_2005}.
@@ -1644,13 +1647,13 @@ quali subiranno poi una metilazione ed infine verrà effettuata
 un’analisi mediante gas cromatografia \citep{ibekwe_fatty_1999}.
 
 \chapter{Materiali e metodi}
-\section{Campo}
-
+\section{Campo sperimentale} 
+\info{appezzamenti sono oo4, oo2 , sinonimi no?}
 \subsection{Area di studio}
 
-Il campo sperimentale è situato nell’azienda agricola della Scuola di
+I campi sperimentali sono situati nell’azienda agricola della Scuola di
 Agraria di Firenze, in località Montepaldi, San Casciano Val di Pesa
-(43°40’16’’ N, 11°09’08’’ E) a 90\,m sopra il
+(43°40’16’’ N, 11°09’08’’ E), a 20\,Km da Firenze \todo{controlla} e 90\,m sopra il
 livello del mare.
 
 L’area di studio (Fig. \ref{fig:panorama_dispaa}) presenta un clima
@@ -1661,8 +1664,8 @@ media annuale è di 14,1\,°C con massime in estate, anche superiori a
 
 Dal punto di vista pedologico, il suolo deriva da sedimenti pliocenici
 di tipo conglomeratico con presenza di lenti sabbiose e argillose e da
-sedimenti trasportati dal fiume Pesa. Ha una pendenza del \todo{?}\% e la
-tessitura appartiene al gruppo limo-argilloso/argilloso con scheletro
+sedimenti trasportati dal fiume Pesa. Ha una pendenza del \todo{?}\% e 
+tessitura limo-argillosa/argillosa con scheletro
 di piccole e medie dimensioni \citep{DISPAA}.
 
 
@@ -1678,11 +1681,11 @@ di piccole e medie dimensioni \citep{DISPAA}.
 \subsection{Disegno sperimentale e gestione agronomica}
 \label{subsec:Dis_Sperim}
 Questo studio fa parte del progetto \acs{MoLTE}, progetto europeo attivo dal 1991 e interessa una
-superficie di 15\,ha suddivisa in 10 appezzamenti, di 1,3\,ha ciascuno:
+superficie di circa 15\,ha suddivisa in 10 appezzamenti, di 1,3\,ha ciascuno, denominati
 OO1, OO2, OO3, OO4, CO9, CO10 e 4 appartenenti al BioNuovo
 (Fig. \ref{fig:panorama_satellite}). Le sigle stanno ad indicare la
-conduzione utilizzata: gli appezzamenti con prefisso \acs{OO}- indicano
-conduzione organica, mentre quelli con prefisso \acs{CO}- stanno ad indicare
+conduzione utilizzata: gli appezzamenti con prefisso \acs{OO} indicano
+conduzione organica, mentre quelli con prefisso \acs{CO} stanno ad indicare
 la gestione convenzionale.
 
 
@@ -1695,20 +1698,20 @@ la gestione convenzionale.
 
 I quattro appezzamenti a conduzione biologica più recente, per questo
 definiti BioNuovo, non sono stati presi in considerazione in questo
-esperimento, come anche il campo OO1 ed OO3.
+esperimento, come anche gli appezzamenti OO1 ed OO3.
 
-I campi del BioNuovo separano quelli a conduzione biologica da quelli
+I campi\info{sinonimo?} del BioNuovo separano quelli a conduzione biologica da quelli
 a conduzione convenzionale. Oltre a ciò, le due conduzioni biologiche,
 nuovo e vecchio, sono separate da una siepe naturale larga 6\,m che
 termina con una striscia inerbita di 2\,m su ambo i lati; mentre il
 biologico nuovo e il convenzionale sono separati da una striscia
 inerbita di 8\,. Il biologico vecchio prevede anche una siepe
 artificiale di 6\,m di larghezza più 4\,m di striscia inerbita,
-che lo separa dai campi adiacenti. Questa è stata piantata agli inizi
+che lo separa dagli appezzamenti adiacenti. Questa è stata piantata agli inizi
 del 1990 dal DISAT (Dipartimento di Scienze Agronomiche e Gestione del
 Territorio Agroforestale) con l’aiuto del WWF ed è formata da specie
 autoctone.  Infine una viottola di 4\,m separa gli appezzamenti OO1
-e OO2 da dagli OO3 e OO4. Tali campi sono coltivati, dal 2001,
+e OO2 dagli OO3 e OO4. Tali appezzamenti sono coltivati dal 2001
 seguendo la rotazione:
 
 \begin{itemize}
@@ -1718,8 +1721,8 @@ seguendo la rotazione:
   da rinnovo; cereale) \citep{DISPAA}.
 \end{itemize}
 
-Oltre alle due gestioni menzionate, l’esperimento vuole anche
-confrontare la risposta a diverse lavorazioni. Ogni appezzamento vede
+Oltre alle due gestioni menzionate, il presente esperimento vuole anche
+confrontare l'effetto di diverse lavorazioni. Ogni appezzamento vede
 3 lavorazioni primarie differenti: 
 \begin{enumerate}[label=(\Alph*)]
 \item frangizollatura in presemina più aratura
@@ -1728,8 +1731,7 @@ confrontare la risposta a diverse lavorazioni. Ogni appezzamento vede
 
 \end{enumerate}
 Ogni lavorazione è stata replicata tre volte in ciascun appezzamento il quale,
-quindi è suddiviso in 9 parcelle: 3 repliche (segnalate
-con numeri arabi a pedice) per ognuna delle 3 lavorazioni
+quindi è suddiviso in 9 parcelle: 3 repliche per ognuna delle 3 lavorazioni
 (Fig. \ref{fig:bioconvmod}).
 
 
@@ -1749,67 +1751,93 @@ con numeri arabi a pedice) per ognuna delle 3 lavorazioni
 \end{figure}
 \info{bordi?}
 
-Nel 1992 le caratteristiche fisico chimiche del campo biologico erano
- \citep{DISPAA}:
-\begin{itemize}
-\item tessitura:  46,3\,\% limo, 20,2\,\% sabbia  e 32,9\,\% argilla; mentre lo 
-scheletro rappresentava il 6,3\,\%;
-\item pH (misurato in acqua):  8,3;
-\item capacità di scambio cationica:  \SI{17.6}{\cmol\per\kg} ;
-\item \ce{P2O5} totale: 1,63\,\%;
-\item \ce{K2O}:  171
-\end{itemize}
+Le caratteristiche fisico chimiche degli appezzamenti a inizio esperimento
+erano \ref{tab:CarattMoLTE1992}
 
-Le stesse caratteristiche per il campo convenzionale invece erano:
-\begin{itemize}
-\item tessitura: 44,6\,\% limo, 21,0\,\% sabbia, 33,8\,\% argilla e 6,1\,\% lo
-  scheletro;
-\item pH (in acqua): 8,3;
-\item CSC: \SI{19.4}{\cmol\per\kg};
-\item \ce{P2O5} totale: 1,60\,\%;
-\item \ce{K2O}: 134.
+\begin{table}[ht]
+\caption[Caratteristiche fisico chimiche del 1992]
+{Caratteristiche fisico chimiche degli appezzamenti a conduzione biologica
+e convenzionale prese nel 1992 \citep{DISPAA}. }
+ \label{tab:CarattMoLTE1992}
+\centering
+  \begin{tabular}{ll}
+    \toprule
+    Biologico & Convenzionale   \\
+    \midrule
+    32,9\,\% argilla            &  33,8\,\% argilla \\
+    46,3\,\% limo               &  44,6\,\% limo\\
+    20,2\,\% sabbia             &  21,0\,\% sabbia    \\
+    6,3\,\% scheletro           &  6,1\,\% scheletro\\
+    8,3 pH\_\ce{H2O}            &  8,3 pH\_$(H\_2 O)$ \\
+    \SI{17.6}{\cmol\per\kg} CSC & \SI{19.4}{\cmol\per\kg} CSC \\
+    1,63\,\%  \ce{P2O5} totale  & 1,60\,\% \ce{P2O5} totale \\
+    171\,ppm \ce{K2O}             & 134\,ppm \ce{K2O} \\
+   
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-\end{itemize}
+% \label{tab:CarattMoLTE1992}
+%\centering
+%  \begin{tabular}{lll}
+%    \toprule
+%    & Biologico & Convenzionale   \\
+%    \midrule
+%    argilla          &   32,9\,\%                 &  33,8\,\%  \\
+%    limo             &   46,3\,\%                 &  44,6\,\% \\
+%    sabbia           &   20,2\,\%                 &  21,0\,\%     \\
+%    scheletro        &   6,3\,\%                  &  6,1\,\% \\
+%    pH\_\ce{H2O}     &   8,3                      &  8,3 pH\_$(H\_2 O)$ \\
+%    CSC              &   \SI{17.6}{\cmol\per\kg}  & \SI{19.4}{\cmol\per\kg}  \\
+%    \ce{P2O5} totale & 1,63\,\%                   & 1,60\,\%  \\
+%    \ce{K2O}         &171\,ppm                    & 134\,ppm  \\
+%   
+%    \bottomrule
+%  \end{tabular}
+%\end{table}
 
 
+\todo{tabella!?}
 Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il
 girasole (\emph{Helianthus annuus}, varietà \emph{Solaris} non trattato, usando una seminatrice
 di precisione con una densità di 75'000 piante ad ettaro. La coltura
 precedente era la lenticchia (\emph{Lens culinaris}), varietà \emph{Val di Nevola}. Le
 lavorazioni per preparare il letto di semina sono state tutte svolte
-l’8 settembre 2016 in base alla parcella, ovvero l’aratura nelle
+in data 8 settembre 2016 in base alla parcella, ovvero l’aratura nelle
 parcelle A, la rippatura nelle parcelle B e la frangizollatura nelle C.
-É stata poi effettuata una concimazione con pollina il 22 febbraio
+É stata poi effettuata una concimazione con pollina in data 22 febbraio
 2017 e il giorno successivo è stata fatta una frangizollatura. Il 29
 marzo il campo è stato erpicato e il giorno successivo è avvenuta la
 semina.
 
-Lo stesso anno, nel campo OO4, precedentemente coltivato a cece (\emph{Cicer arietinum}),
-varietà \emph{Pascià}, è stato coltivato l’orzo (\emph{Hordeum vulgare}), varietà
-\emph{Campagne} non trattato, con una seminatrice a righe. Anche qui
+Lo stesso anno, nel campo OO4, precedentemente coltivato a cece 
+(\emph{Cicer arietinum},
+varietà \emph{Pascià}), è stato coltivato l’orzo (\emph{Hordeum vulgare}, varietà
+\emph{Campagne}) non trattato, con una seminatrice a righe. Anche qui
 la preparazione del letto di semina, in base alla parcella, è stata
 effettuata l’8 settembre 2016. C’è stata una frangizollatura il 5
-dicembre con successiva semina, dando 190\,kg di seme ad ettaro, ed il
+dicembre con successiva semina, distribuendo 190\,kg di seme ad ettaro, ed il
 15 marzo del 2017 è stata fatta una strigliatura.
 
 Nel campo CO09 invece è stato seminato l’orzo distico varietà
-\emph{Campagne} trattato con Redico puro all’8,7\,\%. La coltura
+\emph{Campagne} trattato con Redigo (p.a. propiconazolo all’8,7\,\%). La coltura
 precedente era il girasole, varietà \emph{Solaris} trattato con
-Apron-xl p.a metalaxil-m.
+Apron-xl (p.a metalaxil-m all'30,95\%).
 
 L’8 settembre 2016 sono state effettuate le lavorazioni che
 distinguono le differenti parcelle, poi una prima concimazione il 5
-dicembre dando \SI{192}{\kg\per\hectare} di fosfato biammonico
+dicembre distribuendo \SI{192}{\kg\per\hectare} di fosfato biammonico
 (18:46), ed a seguire è stata effettuata una frangizollatura e la
-semina con una seminatrice a righe, dando \SI{190}{\kg\per\hectare} di
+semina con una seminatrice a righe, distribuendo \SI{190}{\kg\per\hectare} di
 seme. Il 15 marzo è stata fatta una seconda concimazione con nitrato
-d’ammonio ( \SI{150}{\kg\per\hectare}) e due settimane dopo c’è stato
+d’ammonio (\SI{150}{\kg\per\hectare}) e due settimane dopo c’è stato
 il diserbo usando un mix composto da Axial (1\,l) + Axial Proto (250\,ml) 
-+ Logran(55\,g) ad ettaro. L’11 Aprile è stata poi distribuita
++ Logran(55\,g) (p.a. pinoxaden 6,4\,\%, p.a. cloquintocet-mexyl 1,55\,\%, p.a.
+triasulfuron 20\,\%) ad ettaro. In data 11 Aprile è stata poi distribuita
 l’urea con una dose di 150\,kg a ettaro.
 
 Infine, nel campo CO10, precedentemente coltivato ad orzo distico
-\emph{Campagne} trattato con Redico, è stato seminato il girasole,
+\emph{Campagne} trattato con Redigo, è stato seminato il girasole,
 varietà \emph{Solaris} trattato con Apron-xl p.a metalaxil-m. Le
 lavorazioni iniziali sono state fatte sempre ad inizio autunno, nella
 stessa data degli altri campi e a seguire una frangizollatura il 23
@@ -1820,9 +1848,9 @@ fatta una concimazione con 20:10:10 (\SI{150}{\kg\per\hectare}) e un
 diserbo a fascia usando 500\,ml del prodotto GOAL (Oxifluorfen).
 
 \subsection{Metodo di campionamento}
-Il campionamento ha previsto, per ogni parcella, %3 campioni di terreno
+Il campionamento ha previsto %3 campioni di terreno
 un campione di terreno
-di circa 500\,g, preso al centro di ogni plot, a 5-10\,cm di profondità.
+di circa 500\,g, preso al centro di ogni parcella, a 5-10\,cm di profondità.
 % Il primo è stato
 %preso al centro di ogni plot \todo{levare a e b}(m=medio) e gli altri due a 4 metri di
 %distanza dal centro tenendo conto della pendenza del campo, uno a 4
@@ -1836,13 +1864,26 @@ entrambi i casi, sono stati collezionati 36 campioni,
 separati in appositi sacchetti di plastica (Fig. \ref{fig:campione}) e poi portati
 in laboratorio.
 
+%
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[scale=1]{./foto/campione.jpg}
+%\caption[Campione]{Un sacchetto contenente un campione.}
+%\label{fig:campione}
+%\end{figure}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=1]{./foto/campione.jpg}
-\caption[Campione]{Un sacchetto contenente un campione.}
-\label{fig:campione}
+\begin{figure}
+     \centering
+     \subfloat[][]{\includegraphics{./foto/campione.jpg}\label{fig:campione}}
+     \qquad
+     \subfloat[][]{\includegraphics{./foto/macinato.jpg}\label{fig:macinato}}
+     \caption[Campioni]{Fasi differenti della preparazione di un campione 
+     (a) in campo (b) in laboratorio
+     dopo la macinazione con il mulino colloidale.}
+     \label{steady_state}
 \end{figure}
+\FloatBarrier
+
 
 Una volta in laboratorio, i campioni sono stati tenuti aperti all’aria
 per perdere umidità, ed una volta asciutti sono stati messi in cella
@@ -1850,25 +1891,25 @@ frigorifera a 3\,°C.
 
 I primi ad essere stati preparati sono stati i 36 campioni %“m”
 autunnali i quali, tolti dalla cella frigorifera, sono stati
-setacciati a 2\,mm. Di tutto il campione omogeneizzato, sono stati
-pesati 5\,g che sono stati successivamente macinati per 5 minuti con il mulino 
-colloidale e poi setacciati a 200\,µm (Fig. \ref{fig:macinato}).
+setacciati a 2\,mm. Di tutto il campione così omogeneizzato, sono stati
+pesati 5\,g che sono stati successivamente macinati per 5\,min con il mulino 
+colloidale e poi setacciati ulteriormente a 200\,µm (Fig. \ref{fig:macinato}).
 
-
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=1]{./foto/macinato.jpg}
-\caption{Un campione dopo esser stato macinato col mulino colloidale e
-  setacciato a 200\,µm.}
-\label{fig:macinato}
-\end{figure}
+%
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[scale=1]{./foto/macinato.jpg}
+%\caption{Un campione dopo esser stato macinato col mulino colloidale e
+%  setacciato a 200\,µm.}
+%\label{fig:macinato}
+%\end{figure}
 
 Sono stati inoltre preparati due campioni compositi, identificati con
-MIX SOIL 2016 e MIX SOIL 2017. Il primo è stato ottenuto prendendo 1g
-di suolo macinato a 200\,µm di tutti i campioni del 2016, mentre il
+MIX SOIL 2016 e MIX SOIL 2017. Il primo è stato ottenuto prendendo 1\,g
+di suolo vagliato a 200\,µm di tutti i campioni del 2016, mentre il
 secondo dai campioni del 2017.  Questi due campioni sono stati
 utilizzati come verifica per la \ac{PCA}, rappresentando la media dei
-campioni dei due anni poiché composti da aliquote omogenee.
+campioni dei due anni poiché composti da aliquote bilanciate.
 \info{pantani:MIX}
 \section{Laboratorio}
 
@@ -1880,45 +1921,46 @@ La procedura utilizzata è stata modificata basandosi sul metodo di
 \subsection{Preparazione dei campioni}
 \subsubsection{Prima fase - Estrazione}
 Reagenti:
-\begin{itemize}
-\item metanolo (\ce{CH3OH});
-\item cloroformio (\ce{CHCl3});
+\begin{enumerate}
+\item \ce{CH3OH} (metanolo);
+\item \ce{CHCl3} (cloroformio);
 \item tampone citrato 0.15 M, pH 4;
-\item estraente Bligh \& Dyer (B \& D): \ce{CHCl3}:\ce{CH3OH}: tampone citrato,
-  1:2:0.8 v/v/v.
+\item estraente Bligh \& Dyer (B \& D): 
+\ce{CHCl3}:\ce{CH3OH}:\\
+tampone citrato, 1:2:0.8 Vol/Vol/Vol.
 
-\end{itemize}
+\end{enumerate}
 
 Procedura.
 
-Per ogni campione è stato pesato un grammo di suolo ed è stato messo in una vial
-da 20\,ml di vetro, incluso il bianco; in ogni campione sono stati aggiunti 9,2\,ml
-di B \& D e successivamente è stato risospeso con l'ausilio del vortex \todo{calamai marca}
+Per ogni campione è stato pesato 1\,g di suolo ed è stato messo in una vial
+da 20\,ml di vetro; in ogni campione sono stati aggiunti 
+9,2\,ml di estraente B \& D e successivamente è stato risospeso 
+con l'ausilio del vortex \todo{calamai marca}
 e ultrasonicato per un minuto. 
 
-A questo punto i campioni sono stati lasciati 2 ore ad estrarre su un agitatore
+I campioni sono stati lasciati quindi 2 ore ad estrarre su un agitatore
 \todo{marca} così da favorire un'estrazione omogenea senza far sedimentare il 
 terreno.
+Passate le due ore, le vial sono state centrifugate a 3'000 giri al minuto \todo{misura} 
+per 10 minuti a 25-30\,°C e il surnatante liquido
+è stato prelevato e trasferito in una nuova vial.
 
-Passate le due ore, le vial sono state centrifugate a 3'000 giri al minuto 
-per 10 minuti a 25-30\,°C e il surnatante %limpido
-è stato prelevato e trasferito in una vial pulita.
-
-Il campione di terreno è stato nuovamente lavato con 2,5\,ml di B \& D, risospeso
-con il vortex e ultrasonicato per un minuto. Dopo altri 10 minuti di estrazione
-in agitatore, le vial sono state messe in centrifuga a 3'000 giri al minuto 
-per 10 minuti a 25-30\,°C e il supernatante è stato prelevato e 
+Il campione di terreno è stato nuovamente lavato con 2,5\,ml di estraente B \& D, risospeso
+con il vortex e ultrasonicato per 1\,min. Dopo altri 10\,min di estrazione
+in agitatore, le vial sono state messe in centrifuga a 3'000 giri al minuto \todo{come prima}
+per 10\,min a 25-30\,°C e il supernatante è stato prelevato e 
 aggiunto a quello preso precedentemente.
 
-In ogni vial ottenuta sono stati aggiunti 3,1\,ml di cloroformio e altrettanti di 
+In ogni vial ottenuta sono stati aggiunti 3,1\,ml di \ce{CHCl3} e altrettanti di 
 tampone citrato, così da mantenere il giusto pH. Per favorire la
 separazione delle due fasi, la soluzione è stata risospesa con il 
-vortex e ultrasonicata per un minuto e infine
-centrifugata per 15 minuti a 3'000 giri al minuto. 
+vortex e ultrasonicata per 1\,min e infine
+centrifugata per 15\,min a 3'000 giri al minuto \todo{idem con patatine}. 
 
-Sono stati prelevati 3\,ml della fase organica sottostante e questi sono stati 
+Sono stati prelevati 3\,ml della fase organica (\ce{CH3OH}) sottostante e questi sono stati 
 portati a secco sotto flusso di N a 40\,°C.
-
+\info{vial singolare?}
 
 %\begin{enumerate}
 %\item pesare 1 g di suolo liofilizzato in una vial da 20 ml di vetro
@@ -1945,36 +1987,39 @@ portati a secco sotto flusso di N a 40\,°C.
 
 \subsubsection{Seconda fase - Purificazione e frazionamento dei lipidi}
 Reagenti:
-\begin{itemize}
-\item cloroformio (\ce{CHCl3});
-\item metanolo (\ce{CH3OH});
-\item acetone (\ce{C3H6O})
-\end{itemize}
+\begin{enumerate}
+\item \ce{CHCl3} (cloroformio);
+\item \ce{CH3OH} (metanolo);
+\item \ce{C3H6O} (acetone).
+\end{enumerate}
 
-In questa fase i lipidi sono stati separati in tre fasi differenti in
-base alla polarità: i lipidi neutri, i glicolipidi e i lipidi polari
+I lipidi vengono ora separati in tre fasi differenti in
+base alla loro polarità: i lipidi neutri, i glicolipidi e i lipidi polari
 ovvero i fosfolipidi.
 
 Procedura.
 
 \'E stato utilizzato un apposito supporto per le colonnine \acs{SPME} \todo{Supelco, 
 capienza 0,5\,g Si}, le quali sono state attivate con 0,5\,ml 
-di cloroformio, in modo tale da far fuoriuscire l'aria tra le particelle di silice 
-così da favorire la trattenuta del materiale organico del campione.
+di CHCl3, in modo tale da far fuoriuscire l'aria tra le particelle di silice 
+così da favorire il trattenimento del materiale organico del campione.
  
 Il campione secco ottenuto dalla fase precedente è stato
-recuperato con 0,35\,ml di cloroformio; sono state poi risospese tramite il vortex
-e ultrasonicate per un minuto. A questo punto il materiale è stato completamente 
+recuperato con 0,35\,ml di \ce{CHCl3}; sono state poi risospese tramite il vortex
+e ultrasonicate per 1\,min. Il materiale è stato quindi 
 trasferito nella colonnina idonea.
 
-Ogni vial ha subito poi un secondo lavaggio con cloroformio come quello precedente.
+Ogni vial ha subito poi un secondo lavaggio con 0,35\,ml di \ce{CHCl3} come quello 
+appena descritto.
 
-Recuperato tutto il materiale lipidico secco si è passati al lavaggio delle colonnine;
-per primo è stato aggiunto 1\,ml di cloroformio ad ogni colonnina, così da eluire
-i lipidi neutri, poi sono stati aggiunti 4\,ml di acetone per eluire i glicolipidi.
+\'E stato aggiunto 1\,ml di \ce{CHCl3} ad ogni colonnina, così da eluire
+i lipidi neutri, poi sono stati aggiunti 4\,ml di \ce{C3H6O} per eluire i 
+glicolipidi.
 
-Andatosene (?) tutto l'acetone si è posizionata, sotto ogni colonnina, una vial col nome
-corrispondente e si è proceduto all'ultimo lavaggio con 1\,ml di metanolo, così da
+Andatosene \todo{?} tutto l'\ce{C3H6O} si è posizionata, sotto ogni colonnina, 
+una vial col nome
+corrispondente e si è proceduto all'ultimo lavaggio con 1\,ml di \ce{CH3OH}, 
+così da
 far eluire i fosfolipi.
 
 Il contenuto delle vial così ottenuto è stato portato a secco sotto flusso di 
@@ -2007,25 +2052,26 @@ azoto a 40\,°C.
 
 \subsubsection{Terza fase - Derivatizzazione alcalina}
 Reagenti:
-\begin{itemize}
-\item \ce{MeOH}-Toluene (1:1);
-\item esano cloroformio (4:1) necessario per separare le fasi;
+\begin{enumerate}
+\item \ce{CH3OH}-\ce{C7H8} (1:1) (miscela metanolo-toluene);
+\item \ce{C6H14}-\ce{CHCl3} (4:1) (miscela esano-cloroformio); %necessario per separare le fasi;
 \item acido acetico 1 M;
-\item eptano (\ce{C7H16});
-\item \ce{KOH} in metanolo 2 M;
-\item C19 in esano (0.00923 ng/40 ml esano);
-\item acqua milliQ.
-\end{itemize}
+\item \ce{C7H16} (eptano);
+\item \ce{KOH} 2M in \ce{CH3OH} (soluzione idrossido di potassio 2M in metanolo);
+\item \ce{C19H40} in \ce{C6H14} (0.00923\,ng/40\,ml esano);
+%\item acqua milliQ.
+\end{enumerate}
 
 Procedura.
 
-Ad ogni vial ottenuta nella fase precedente sono stati aggiunti 10\,µl di C19, 
-0,5\,ml di \ce{MeOH}-Toluene e 0,1\,ml di \ce{KOH}. Per far avvenire la derivatizzazione,
-i campioni sono stati messi in incubazione a 60\,°C per 15 minuti.
-
+Ad ogni vial ottenuta nella fase precedente sono stati aggiunti 10\,µl di \ce{C19H40}, 
+0,5\,ml di \ce{CH3OH}-\ce{C7H8} e 0,1\,ml di \ce{KOH}. Per far avvenire la 
+derivatizzazione,
+i campioni sono stati messi in incubazione a 60\,°C per 15\,min.
+\todo{rifer soluzioni}
 Successivamente è stato aggiunto 1\,ml di esano cloroformio e 0,3\,ml di acido acetico.
-Il tutto è stato agitato mediante vortex per un minuto e poi centrifugato per 5 minuti
-a 3'000 giri al minuto.
+Il tutto è stato agitato mediante vortex per un minuto e poi centrifugato per 5\,min
+a 3'000 giri al minuto. \todo{centrif}
 
 \'E stato prelevato il surnatante organico e trasferito in una vial pulita e la 
 procedura di lavaggio con un millilitro di esano cloroformio è stata ripetuta 
@@ -2051,15 +2097,17 @@ stato recuperato con 200\,µl di eptano.
 
 \subsection{Standard analitici e validazione del metodo}
 Nella sequenza di iniezione, oltre ai 72 campioni e ai 2 MIX SOIL,
-sono stati inseriti anche dei Bianchi di controllo, così da
-assicurarsi che non ci siano interferenti nel sistema di preparazione
-e iniezione, come ad esempio: vials sporche, solventi impuri, siringa
-del \acs{GC}, liner e/o colonna con residui di iniezioni precedenti.
+sono stati inseriti anche dei bianchi di controllo, \info{rileggi} ovvero 3 vial 
+che hanno subito la medesima procedura dei campioni ma mancanti del grammo di 
+suolo, così da
+assicurarsi che non ci fossero interferenti nel sistema di preparazione
+e iniezione, come ad esempio: vial sporche, solventi impuri, siringa
+del \acs{GC}, liner e/o colonna con residui di iniezioni precedenti, etc...
 
 Infine è stata preparata la curva di taratura tramite il \acs{BAMEs} Mix 
-(\emph{Bacterial Acid Metil Ester})
-(\emph{SIGMA-ALDRICH}) contenente 26 composti in \SI{10}{\mg\per\ml} %(10.000 ppm)
-totali (Fig. \ref{fig:BAMEs MIX}).
+(\emph{Bacterial Acid Metil Ester}) della \emph{SIGMA-ALDRICH} contenente 26 
+acidi grassi metilesteri in \SI{10}{\mg\per\ml} %(10.000 ppm)
+totali (Tab. \todo{tabellona}).
 
 %\begin{table}[ht]
 %\caption{BAMEs MIX }
@@ -2107,74 +2155,77 @@ totali (Fig. \ref{fig:BAMEs MIX}).
  \label{fig:BAMEs MIX}
  \end{figure}
 
-Gli standard sono stati diluiti in eptano in concentrazioni crescenti:
-1:20%(19 ppm)
-, 1:50%(7 ppm)
+Dalla soluzione di standard BAMEs sono stati ottenuti 5 punti della
+curva di taratura, diluendo tale soluzione in \ce{C7H16} in concentrazioni crescenti:
+1:300%(19 ppm)
+, 1:200%(7 ppm)
 , 1:100% (3,8 ppm)
-, 1:200% (1,9 ppm), \todo{DALLA:no 1:500?}
-, 1:300
+, 1:50% (1,9 ppm), \todo{DALLA:no 1:500?}
+, 1:20
 %(1,25 ppm)
 .  
 
 Successivamente sono stati iniettati senza subire alcuna
 delle tre fasi di preparazione dei campioni, poiché i composti del
-\acs{BAMEs} Mix, essendo già metil esteri, non sono adatti a tale
+\acs{BAMEs} Mix, essendo già metilesteri, non sono adatti a tale
 procedura. Per questo motivo, oltre ad aver utilizzato tale MIX per
 costruire la curva di taratura e permettere quindi l’analisi
-quantitativa, è stato acquistato uno standard di fosfolipide, quale la
+quantitativa, è stato usato uno standard di fosfolipide, quale la
 fosfatidilcolina, così da effettuare una prova di \todo{calamai}validazione della
 procedura di analisi.
-Una quantità nota di questo standard è stata presa e iniettata in un
+Una quantità nota di fosfatidilcolina è stata presa e iniettata in un
 suolo già estratto, sul quale successivamente sono state ripetute e
-controllate tutte e tre le fasi della preparazione dei campioni.
+controllate le tre fasi di estrazione, purificazione e derivatizzazione.
 \todo{...}
 
-\subsection{Gas Cromatografia e Spettrometria di Massa}
+\subsection{Gas Cromatografia e Spettrometria di Massa} \info{revisione?}
 La separazione cromatografica è stata effettuata tramite un sistema
 \acs{GC-MS} Agilent 7890A dotato di autocampionatore per la riproducibilità
 e di un sistema per la termostatazione della colonna cromatografica.
 
-La colonna utilizzata per quest’analisi è un’HP-INNOWax (Polyetilen
-Glyco) dell’Agilent, avente una lunghezza di 50\,m, per 2\,mm di
+La colonna utilizzata è una HP-INNOWax (Polyetilen
+Glycol) dell’Agilent, avente una lunghezza di 50\,m, 2\,mm di
 diametro e 0.4\,mm di film interno. La separazione cromatografica è
-stata effettuata mediante un flusso di \SI{1.2}{\ml\per\minute} con un
+stata effettuata mediante un flusso di \SI{1.2}{\ml\per\minute} (\ce{He})con un
 gradiente di temperatura controllato.
 
 Il metodo di iniezione vede un volume di 2\,µl del campione a
-\emph{pulsed splitles} tramite una siringa da 10\,µl e una temperatura
+\emph{pulsed splitless} \todo{calamai} tramite una siringa da 10\,µl e una temperatura
 del liner di 260\,°C.
 
-Le condizioni iniziali del forno sono di 35\,°C e una pressione di
-33\,psi. Dopo il primo minuto la temperatura inizia ad aumentare di 30
-gradi al minuto fino al raggiungimento di 180\,°C e successivamente di 3
-gradi al minuto fino a 260\,°C, temperatura massima raggiungibile per la
-colonna. A questa temperatura rimane in isoterma per 3 minuti in modo
+\todo{foto rampa, via testo e tutto in didascalia?}
+Le condizioni iniziali del forno del cromatografo sono di 35\,°C e una pressione di
+33\,psi. Dopo il primo minuto la temperatura inizia ad aumentare di 30\,°C 
+al minuto fino al raggiungimento di 180\,°C e successivamente di 3
+gradi al minuto fino a 260\,°C, temperatura massima sopportabile per la
+colonna. A questa temperatura rimane in isoterma per 3\,min in modo
 da far uscire tutti gli analiti e ripulire la colonna per l’iniezione
 successiva%, senza rischiare un peggioramento nelle cromatografie
 %future
-.  La corsa, nel totale, dura 35 minuti e mezzo per campione.
+.  La corsa, dura 35, 5 minuti per campione.
 
 Prima e dopo ogni iniezione, il metodo prevede anche un lavaggio della
-siringa, con un primo passaggio in metanolo e un secondo in \todo{nomi composti in inglese o italiano}
-etil
-acetate così da annullare un possibile effetto memoria.
+siringa, con un primo passaggio in \ce{CH3OH} e un secondo in \ce{C4H8O2} 
+così da annullare un possibile effetto memoria della siringa.
 
 Il sistema \acs{GC} è interfacciato direttamente con lo spettrometro di
 massa avente una sorgente \acs{EI} (\pageref{rif:EI}) , in cui l’analisi è effettuata con
-ionizzazione positiva a temperatura di 230\,°C e voltaggio di
+ionizzazione positiva a temperatura di 230\,°C e \info{voltaggio?} voltaggio di
 70\,Hz. Infine, gli ioni formatisi, attraversano l’analizzatore che è
-costituito da un quadrupolo (\pageref{rif:quadrupolo}), ovvero quattro barre cilindriche
-metalliche, lunghe circa 20\,cm e aventi carica alterna opposta. Queste
-barre delimitano il percorso degli ioni provenienti dalla camera di
-ionizzazione verso il detector.
+%costituito da un quadrupolo (\pageref{rif:quadrupolo}), ovvero quattro barre cilindriche
+%metalliche, lunghe circa 20\,cm e aventi carica alterna opposta. Queste
+%barre delimitano il percorso degli ioni provenienti dalla camera di
+%ionizzazione verso il detector 
+\info{giusto?}
+.
 
 \subsection{Markers, analisi qualitativa e quantitativa}
 
-I dati in uscita sono stati elaborati con il programma \emph{Mass
+I dati in uscita dal detector sono stati elaborati con il programma \emph{Mass
   Hunter\textsuperscript{\textregistered}} in modo da effettuare 
   l’analisi qualitativa e quantitativa. 
 
-Sono stati identificati 37 composti e, di questi, 21 sono stati ritenuti
+Sono stati identificati 37 acidi grassi e, di questi, 21 sono stati ritenuti
 specifici \emph{markers} di determinati gruppi microbici
 (Tab. \ref{tab:GruppiMicrobici}).
 
@@ -2223,10 +2274,10 @@ specifici \emph{markers} di determinati gruppi microbici
 %        \bottomrule
 %  \end{tabular}
 % \end{table}
-
+\todo{rif tabellona}
 \begin{table}[hb]
 \centering
-\caption{I 6 gruppi microbici presi in esame e i rispettivi markers.} 
+\caption{I 6 gruppi microbici presi in esame e i rispettivi markers .} 
 \label{tab:GruppiMicrobici}
 \begin{tabular}{llllll}
   \hline
@@ -2242,7 +2293,7 @@ Gram - & Gram + & Attinomiceti & Funghi & Protozoi & Micorrize \\
 \end{tabular}
 \end{table}
 
-
+\todo{solo biblio, via composti solo tabella!!}
 Dalla bibliografia i Gram positivi sono identificati da  
 Metil-12-metil tridecanoato, Metil-13-metil tetradecanoato, 
 Metil-12-metil tetradecanoato,  Metil-14-metil pentadecanoato, 
@@ -2285,13 +2336,13 @@ le quantità degli altri composti non presenti nello standard.
 
 
 \section{Analisi e trattamento dati}
-\todo{pantani: mancano librerie e la descrizione dell'anova composizionale}
-
+\todo{pantani: mancano librerie e la descrizione dell'anova composizionale, citazioni}
+\todo{dalila le moli e il perchè }
 Il disegno sperimentale è riportato nella sezione
-\ref{subsec:Dis_Sperim} e il risultato del disegno sperimentale
+\ref{subsec:Dis_Sperim}. Il risultato del disegno sperimentale
 abbinato alle analisi di laboratorio ha formato un insieme di dati
 composto da una matrice di \Sexpr{dim(lis.tutto$PLFA$nMOLI)[2]}
-colonne (composti \acs{PLFA}) e \Sexpr{dim(lis.tutto$PLFA$nMOLI)[1]} righe
+colonne (composti \acs{PLFA}) per \Sexpr{dim(lis.tutto$PLFA$nMOLI)[1]} righe
 (campioni analizzati).
 
 
@@ -2304,7 +2355,7 @@ di analisi multivariata:
   tramite confronto dei modelli statistici lineari e analisi della
   varianza (ANOVA). Nei modelli sono state inizialmente valutate
   tutte le interazioni possibili, per poi considerare solo il modello 
-   più parsimonioso. Sui modelli definitivi è stata anche applicata
+   più parsimonioso. Sui modelli definitivi è stata quindi applicata
   l'analisi della varianza (ANOVA) e il Tukey test \todo{cit Tukey test}.
 
 
@@ -2317,7 +2368,7 @@ di analisi multivariata:
   Usando la \acs{PCA} si combinano i dati a 37 dimensioni (dovute ai 37 \acs{PLFA}
   differenti identificati nei campioni), in una serie di assi lineari
   che incorporano la massima varianza. 
-  La \acs{PCA} è stata condotta usando il programma R 3.4.3 \todo{bibliografia}.
+  
   
  \item anova dati composizionali
 \end{itemize}
