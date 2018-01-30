@@ -40,7 +40,7 @@
 }
 % \usepackage{textcomp}
 % Sperimentale per le liste; non attivare
-%% \usepackage{enumitem}
+\usepackage{enumitem}
 %% \setlist{nosep} %
 
 \usepackage{longtable} % per avere tabelle spezzate tra le pagine
@@ -78,12 +78,14 @@
 %\usepackage[authoryear]{natbib}
 %\bibliographystyle{unsrtnat}
 
-\usepackage[backend=biber, 
+\usepackage[
+backend=biber, 
 sorting=nyt, 
 style=nature, 
 autolang=hyphen, 
 natbib=true, 
-backref]{biblatex}
+backref=FALSE
+]{biblatex}
 %% style=numeric
 
 % nty Sort by name, title, year.
@@ -101,6 +103,11 @@ backref]{biblatex}
 \bibliography{bibliomoneDali.bib}
 % non ho capito a che serve ma dovrebbe essere utile a citare R in bib
 % \newcommand{\code}[1]{\texttt{\smaller #1}}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\AtEveryBibitem{\clearlist{issn}}
+\AtEveryBibitem{\clearlist{urldate}}
+\AtEveryBibitem{\clearlist{month}}
 
 \usepackage[]{acronym}
 
@@ -348,9 +355,8 @@ organismi che permettono la crescita e la diffusione della vita.
 
 La Soil Taxonomy, il sistema di classificazione elaborato dall’USDA\footnote{\ac{USDA}}, 
 ha definito il suolo come
-un corpo naturale tridimensionale composto da solidi, quali la
-sostanza organica e i minerali, da liquidi e da gas
-\citep{usda_soil_1999}. Per lo stesso ente il suolo deve trovarsi
+un corpo naturale tridimensionale composto da solidi, 
+da liquidi e da gas che deve trovarsi
 sulla superficie terrestre e deve essere caratterizzato da almeno una
 delle seguenti caratteristiche: deve permettere la vita e la crescita
 delle piante superiori e/o presentare gli orizzonti
@@ -366,37 +372,42 @@ Per potersi formare, il suolo ha bisogno di alcuni "ingredienti", i
 quali sono stati enunciati da \citet{jenny_factors_1994} nella nota
 funzione:
 \begin{equation} 
-Suolo= f (clima, topografia, roccia madre, organismi, tempo,...)
+Suolo= f (clima,\quad topografia, \quad roccia \quad madre, \quad organismi,\quad tempo, \quad...)
 \end{equation}
-\begin{itemize}
-\item Si considera il clima sia a livello macroscopico che
+
+Il \emph{clima} viene considerato sia a livello macroscopico che
   microscopico. Di questo ci interessano prevalentemente le
   precipitazioni e la temperatura poiché entrambe vanno a modificare
   l’andamento e la velocità delle reazioni di alterazione del sistema
-  suolo;
-\item la topografia influenza le caratteristiche e le proprietà del
+  suolo.
+La \emph{topografia} influenza le caratteristiche e le proprietà del
   suolo, tramite la pendenza, che può comportare variazioni nella
   distribuzione spaziale delle particelle che vengono influenzate dai
   fenomeni erosivi, e tramite l’esposizione, da cui dipende
   l’irraggiamento che comporta una varazione della temperatura e del
-  grado di umidità;
-\item l’appartenenza della roccia madre ad una o ad un’altra famiglia
+  grado di umidità.
+L’appartenenza della \emph{roccia madre} ad una o ad un’altra famiglia
   comporta un’ineguale suscettibilità nel subire alterazioni e
-  caratteristiche chimico fisiche differenti;
-\item gli organismi presenti nel suolo sono molteplici: la pedosfera
+  caratteristiche chimico fisiche differenti.
+Gli \emph{organismi} presenti nel suolo sono molteplici: la pedosfera
   rappresenta infatti l’ambiente con il pool genetico più grande della
   biosfera. Questi organismi sono sia di origine animale che vegetale
   e svolgono azioni molto diverse tra loro, tra cui quella di rendere
-  il suolo un habitat complesso e favorevole alla vita;
-\item infine il suolo non è stabile e immutabile, ma viene
-  continuamente alterato da fenomeni pedogenetici che ne modificano
-  l’aspetto e la composizione. Tali alterazioni possono essere fisiche
-  e/o chimiche e richiedono tempo per avvenire.
-\end{itemize}
+  il suolo un habitat complesso e favorevole alla vita.
+Infine con il passare del tempo avvengono i fenomeni pedogenetici che modificano 
+l'aspetto e la composizione del suolo con alterazioni fisiche e/o chimiche.
+\info{controlla}
+
+
+%il suolo non è stabile e immutabile, ma viene
+%  continuamente alterato da fenomeni pedogenetici che ne modificano
+ % l’aspetto e la composizione. Tali alterazioni possono essere fisiche
+  %e/o chimiche e richiedono tempo per avvenire.
 
 
 
-\subsection{Funzioni}
+
+\paragraph{Funzioni}
 Il suolo svolge numerose e importani funzioni che permettono lo
 sviluppo della vita. Svolge la funzione carrier rappresentando il 
 substrato dove gli organismi,
@@ -410,24 +421,24 @@ idrogeologica. È poi il luogo dove avviene la degradazione di spoglie
 e residui biologici, così da rendere nuovamente disponibili gli
 elementi nutritivi. Infine permette anche la cattura ed il
 trattenimento di una buona parte del carbonio atmosferico, funzionando
-da carbon sink.
+da \emph{carbon sink}.
 
 \subsection{Un sistema trifasico}
 Il suolo è un sistema trifasico, ovvero è composto dalle tre le fasi
-della materia: corpi solidi quali i minerali e la materia organica, ed
+della materia: solidi, quali i minerali e la materia organica; ed
 elementi fluidi, sia liquidi che gassosi. Queste tre componenti devono
 essere tutte presenti e la loro ripartizione ottimale è 50\% di fase
 solida, di cui il 5-10\% di materia organica, e il 50\% di pori: 25\%
 di micropori utili per il movimento dei liquidi e 25\% di macropori
 per il movimento dei gas \citep{radaelli2001chimica}.
  \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i 
-micropori aventi un diametro inferiore ai 30\,µm, utili per la 
-trattenuta dell’acqua; i mesopori con diametro tra i 30 e i 100\,µm 
+micropori aventi un diametro inferiore ai 30\,µm, utili a trattenere
+l’acqua; i mesopori con diametro tra i 30 e i 100\,µm, 
 importanti sia per il 
 rinnovamento dell’aria che per il movimento dell’acqua e infine i
 macropori con diametro superiore ai 100\,µm, che permettono invece il
 movimento dell’aria e il rapido infiltrarsi dell’acqua. Naturalmente
-il rapporto e la percentuale degli spazi porosi nei suoli risente
+il rapporto e la percentuale degli spazi porosi nei suoli risente grandemente
 dell’influenza della vegetazione e della fauna che ci vive, nonché
 delle pratiche agronomiche.
 
@@ -439,11 +450,18 @@ componente inorganica, e la materia organica. I primi rappresentano
 una percentuale maggiore, solitamente oltre il 90\% di tutta la
 porzione solida. I minerali possono essere classificati in base
 all’origine: primari se formati durante la solidificazione delle masse
-magmatiche fuse subendo leggere alterazioni; secondari se invece si
+magmatiche fuse; secondari se invece si
 sono originati in seguito a lunghi processi di alterazione,
 soprattutto chimica \citep{radaelli2001chimica}.
-
-La componente minerale prevalente delle rocce e del terreno è
+\info{rileggi}
+La componente inorganica può inoltre essere formata da
+minerali costituiti da un solo elemento come la grafite (\ce{C}), oppure da
+ossidi anidri o idrati di \ce{Si} (quarzo), \ce{Fe} (ematite), \ce{Al} (corindone)
+ecc. Inoltre si possono trovare anche: cloruri e nitrati, come la
+salgemma (\ce{NaCl}) e silvite (\ce{KCl}); solfuri, come la pirite
+(\ce{FeS2}); carbonati, come la calcite, l’aragonite, la dolomite;
+solfati e fosfati (gesso e apatiti).
+La componente minerale prevalente delle rocce e del terreno è però
 costituita dai silicati (\ce{SiO4-}), che si dividono in più famiglie
 in base alla disposizione dei loro elementi (Fig.
 \ref{fig:famiglia_silicati}):
@@ -460,16 +478,16 @@ in base alla disposizione dei loro elementi (Fig.
 \label{fig:famiglia_silicati}
 \end{figure}
 
-nesosilicati, singoli tetraedri carichi e uniti da legami ionici
-grazie a ioni metallici (Olivina), sorosilicati ovvero coppie di
-tetraedri unite con legami ionici (Gneiss), ciclosilicati anelli uniti
-tra loro (Tormalina), inosilicati a catena singola (Augite) e doppia
-(Orneblenda), fillosilicati, con sviluppo bidimensionale a maglie
+\emph{nesosilicati}, singoli tetraedri carichi e uniti da legami ionici
+grazie a ioni metallici (Olivina), \emph{sorosilicati} ovvero coppie di
+tetraedri unite con legami ionici (Gneiss), \emph{ciclosilicati} anelli uniti
+tra loro (Tormalina), \emph{inosilicati} a catena singola (Augite) e doppia
+(Orneblenda), \emph{fillosilicati}, con sviluppo bidimensionale a maglie
 esagonali e presenza di un’elevata carica negativa dovuta alle
-sostituzioni isomorfe e infine tectosilicati, strutture
+sostituzioni isomorfe e infine \emph{tectosilicati}, strutture
 tridimensionali, i cui vertici sono tutti condivisi, presentando la
 massima stabilità e resistenza alle aterazioni (Feldspati, Zeoliti).
-
+\info{lega il discorso}
 Il fenomeno della sostituzione isomorfa consiste nella sostituzione di
 un catione, posto nella struttura del minerale, con un altro catione
 che abbia dimensioni simili, senza modificarne la struttura, ma avente
@@ -481,7 +499,7 @@ colloide presenta quindi una carica negativa che comporta
 un'attrazione di ioni di segno opposto che, non formando un vero e
 proprio legame, si muovono nelle immediate vicinanze della sua
 superficie. Mano a mano che ci si allontana dalla superficie la
-concentrazione di questi ioni si fa sempre più labile e si mischiano
+concentrazione di questi ioni si fa sempre più labile e si mescolano
 con ioni di segno congruente al colloide. A questo punto si ha un
 equilibrio tra gli ioni e si forma il cosiddetto \emph{doppio strato
   elettrico diffuso} \citep{radaelli2001chimica}. È il raggio di
@@ -489,54 +507,47 @@ quest'ultimo a permettere o meno la formazione di aggregati, detta
 flocculazione, e questo fenomeno è alla base della formazione della
 struttura del suolo.
 
-Queste cariche, la cui presenza non solo è dovuta esclusivamente alle
+Queste cariche, la cui presenza non è dovuta esclusivamente alle
 sostituzioni isomorfe, ma anche al pH (come nei gruppi a carattere
 acido), fanno sì che vengano richiamati cationi dalla soluzione, i
-quali sono trattenuti nel suolo invece di essere persi per
+quali sono trattenuti dalla fase solida invece di essere persi per
 dilavamento, diventando disponibili per essere scambiati e utilizzati
-dai vari microrganismi e organismi vegetali superiori. Questo è un
+dai vari microrganismi e organismi vegetali superiori. Questa capacità di 
+trattenere i catini è un
 punto chiave per la nutrizione delle piante e dei microrganismi
 dell’habitat tellurico e rappresenta la base della fertilità chimica
-del terreno. La componente inorganica può inoltre essere formata da
-minerali costituiti da un solo elemento come la grafite (\ce{C}), oppure da
-ossidi anidri o idrati di \ce{Si} (quarzo), \ce{Fe} (ematite), \ce{Al} (corindone)
-ecc. Inoltre si possono trovare anche: cloruri e nitrati, come la
-salgemma (\ce{NaCl}) e silvite (\ce{KCl}); solfuri, come la pirite
-(\ce{FeS2}); carbonati, come la calcite, l’aragonite, la dolomite;
-solfati e fosfati (gesso e apatiti).
+del terreno. 
 
 La fase solida è costituita anche dalla materia organica che ha
 un’elevata carica variabile, dell’ordine di
-\SIrange[range-phrase= -, range-units=single]{200}{400}{\cmol\per\kg}.
-
-
-Questa permette una buona capacità di scambio, fornendo vantaggi a
-livello biologico: promuove l’aumento dello sviluppo radicale, la
-crescita vegetale e microbica, e un aumento dell’attività enzimatica.
+\SIrange[range-phrase= -, range-units=single]{200}{400}{\cmol\per\kg}, 
+quindi permette una buona capacità di scambio, fornendo vantaggi a
+livello biologico. Essa promuove inoltre lo sviluppo radicale, la
+crescita vegetale e microbica, e l’attività enzimatica.
 A differenza dei silicati, pu\'o avere carica netta positiva, come
 anche gli ossidi idrati di \ce{Fe} e \ce{Al} (in funzione del pH),
-comportando dunque la trattenuta e lo scambio di anioni.
+comportando dunque il trattenimento e lo scambio di anioni.
 
 Inoltre ha un’importante funzione di cemento e permette la formazione
 di una struttura più stabile e complessa, migliorando la porosità e
 aumentando la capacità idrica nei terreni sabbiosi e la permeabilità
 in quelli argillosi.
 
-La natura della materia organica è molto "variegata" e se ne distinguono sei
+La natura della materia organica è complessa e se ne distinguono sei
 frazioni:
 \begin{itemize}
 \item le biomasse viventi;
 \item le necromasse, ovvero il materiale vegetale o animale ormai
   morto inalterato o in via di decomposizione;
 \item le sostanze umiche labili, ovvero la materia organica trasformata
-  ma non incorporata alla frazione minerale;
+  ma ancora non incorporata alla frazione minerale;
 \item la sostanza umica stabile, cioè l’\emph{humus} legato alla
   frazione minerale con la formazione di complessi argillo-umici;
 \item il carbone vegetale (\emph{biochar}) che presenta una limitata
   capacità di scambio, ma, essendo molto poroso, può trattenere molta
   acqua;
 \item i prodotti organici di sintesi, derivanti dall’azione umana,
-  quali pesticidi e concimi, i quali, una volta giunti al suolo,
+  quali pesticidi e fertilizzanti, i quali, una volta giunti al suolo,
   possono comportarne alterazioni alla struttura e alla vita degli
   organismi.
 \end{itemize}
@@ -547,7 +558,7 @@ decomposizione e trasformazione chimica e biologica di biomolecole
 derivanti dalle spoglie ed emissioni di organismi vegetali e animali
 \citep{stevenson_humus_1994}. L’\emph{humus} è formato da composti amorfi, di
 colore scuro, parzialmente aromatici e chimicamente complessi
-\citep{schnitzer_humic_1972}. Risulta essere la frazione organica più
+\citep{schnitzer_humic_1972}. Esso risulta essere la frazione organica più
 eterogenea e migliore ai fini dell’aumento della capacità di scambio,
 infatti costituisce una vera e propria riserva di nutrienti nel suolo.
 In base al suo contenuto i terreni sono classificati in: umiferi
@@ -555,7 +566,7 @@ In base al suo contenuto i terreni sono classificati in: umiferi
 (3-5\,\%), mediamente dotati di humus (2-3\,\%), poveri di humus ($<$2\,\%) 
 \citep{giardini_agronomia_1992}.
 
-Infine, la diversa grandezza di questi elementi solidi va a costituire
+Infine, la diversa dimensione delle particelle della fase solida va a costituire
 la tessitura del terreno, cioè la sua composizione granulometrica. In
 base al diametro equivalente (fittizio perchè si suppone che le particelle abbiano
 forma sferica, regolare e misurabile) delle particelle, queste si
@@ -585,7 +596,7 @@ classificano come in Tabella \ref{tab:Classi_granulometriche}:
 
 
 
-E in base al contenuto percentuale di ogni classe granulometrica, i
+In base al contenuto percentuale di ogni classe granulometrica, i
 suoli vengono classificati in varie classi tessiturali (Fig. \ref{fig:Triangolo_USDA}).
 
 \begin{figure}[ht]
@@ -596,14 +607,16 @@ suoli vengono classificati in varie classi tessiturali (Fig. \ref{fig:Triangolo_
 \label{fig:Triangolo_USDA}
 \end{figure}
 
+
+\info{riguarda}
 La tessitura non cambia velocemente nel tempo e per questo è
-considerata una proprietà stabile; influenza sia la capacità di
+considerata una proprietà stabile; influenza sia il movimento
+della fauna e delle radici, sia la capacità di
 drenaggio ed aerazione del suolo, infatti è strettamente legata alla
-porosità ed al rapporto dei fluidi contenuti in esso, sia il movimento
-della fauna e delle radici.
+porosità ed al rapporto dei fluidi contenuti in esso.
 
 \subsubsection{Fase liquida}
-
+\info{due righe sul fatto che la fase liquida è una soluzione}
 La microporosità interessa e permette il movimento dell’acqua,
 componente necessaria per la vita di tutti gli organismi viventi.
 L’acqua svolge numerose funzioni: permette il turgore cellulare; è il
@@ -618,34 +631,35 @@ gravitazionale, riserva disponibile, riserva non disponibile e acqua
 igroscopica.
 
 L’acqua che percola per gravità, allontanandosi più o meno velocemente
-in base alle capacità di trattenuta del suolo stesso, è la porzione
-che va dal punto di saturazione (quando tutti i pori sono pieni di
-acqua) alla capacità di campo e viene chiamata acqua gravitazionale.
-La capacità di campo è lo stato del suolo nel quale l’acqua rimasta
+in base alle capacità di trattenimento del suolo stesso, è la porzione
+che va dal punto di saturazione -quando tutti i pori sono pieni di
+acqua- alla capacità di campo e viene chiamata acqua gravitazionale.
+La capacità di campo è lo stato nel quale l’acqua rimasta
 viene trattenuta dal suolo grazie a fenomeni di adesione. Questa è la
-porzione realmente utilizzata dagli organismi viventi e viene infatti
+porzione realmente utilizzabile dagli organismi viventi e viene infatti
 chiamata riserva utile. Se questa non viene restituita né
 artificialmente né attraverso le precipitazioni, il suo volume
 diminuisce fino al punto di avvizzimento, quando cioè l’acqua è
 trattenuta così fortemente dalle particelle del suolo che le radici
 non riescono più ad assorbirla.
-Se il contenuto idrico nel suolo continua a diminuire si andrà a
-formare un film intorno alle particelle del suolo. In questo caso
+Se il contenuto idrico nel suolo continua a diminuire formerà 
+un film intorno alle particelle del suolo. In questo caso
 l’acqua è trattenuta con una forza tale che potrà andarsene solo in
-forma di vapore in seguito all’essiccazione in stufa. Questo film
+forma di vapore, ovvero con temperature superiori a 100\,°C. Questo film
 prende il nome di acqua igroscopica.
 
 \subsubsection{Fase gassosa}
 
 
-I pori del suolo svolgono un ruolo importante oltre che per il
-movimento idrico anche per lo spostamento della componente gassosa.
+I pori del suolo svolgono un ruolo importante, oltre che per il
+movimento idrico, anche per lo spostamento della componente gassosa.
 Questa interessa prevalentemente i macropori poichè sono quelli che
 più velocemente si liberano dell’acqua e si riempiono d’aria.
 Quest’ultima ha una composizione differente rispetto a quella
 atmosferica, c’è una simile percentuale di N, circa il 79\,\%, un po’
 meno ossigeno, circa il 18\,\%, ma soprattutto si ha una maggior
-concentrazione di biossido di carbonio (0.3-5\,\%) e anche di vapore
+concentrazione di biossido di carbonio rispetto al'aria in atmosfera,
+nel suolo circa 0.3-5\,\% e anche di vapore
 acqueo. Queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
@@ -658,10 +672,10 @@ animale che vegetale e sono i responsabili della formazione e
 rigenerazione del suolo. Gli organismi sono diffusi in tutti i tipi di
 ambienti, concentrati prevalentemente nei primi centimetri dalla
 superficie e in quantità variabile in base al clima e alle
-caratteristiche pedologiche in cui ci troviamo.
+caratteristiche pedologiche specifiche.
 
 La complessità di questo habitat è enorme (Fig.
-\ref{fig:Classific_microrganismi}), si pensi che in un solo grammo di
+\ref{fig:Classific_microrganismi}); si pensi che in un solo grammo di
 suolo ci possono essere da un milione un miliardo di batteri
 \citep{torsvik_total_1996}, più di 100'000 specie di funghi, che
 formano da 1 a 3 metri di miceli fungini \info{ Vian, 2015}
@@ -687,12 +701,12 @@ edafici, da \greco{>`edafoc} “suolo”, interagiscono tra loro creando
 una fitta rete alimentare e contribuiscono più o meno attivamente ai
 numerosi servizi ecosistemici. I microrganismi, ovvero gli organismi
 inferiori al millimetro di grandezza, come nematodi, protozoi e alcuni
-acari, permettono la decomposizione della sostanza organica e quindi
+acari, decompongono la sostanza organica e quindi
 fanno sì che gli elementi nutritivi siano nuovamente disponibili
 nell’ambiente. Gli attinomiceti decompongono sostanze difficilmente
-modificabili come la lignina o le corazze chitiniche degli insetti; i
-funghi riescono a sciogliere i complessi legami fra azoto e carbonio
-presenti nelle sostanze umiche; ed infine altri gruppi di batteri
+degradabili come la lignina o le corazze chitiniche degli insetti; i
+funghi riescono a rompere i complessi legami fra azoto e carbonio
+presenti nelle sostanze umiche, ed infine altri gruppi di batteri
 permettono la fissazione dell’azoto e il sequestro del carbonio.
 
 Gli organismi della mesofauna del suolo, collemboli, acari, proturi,
@@ -707,27 +721,30 @@ termiti, lombrichi, talpe, ecc, contribuiscono, con il loro movimento,
 a rendere gli strati superficiali ben mescolati e aerati. Inoltre
 rompendo e/o formando gli aggregati modificano la densità del suolo,
 incrementando così l’aerazione e l’infiltrazione di acqua, nonché
-apportano materiale organico sia tramite le deiezioni che con la
+l'apporto di materiale organico sia tramite le deiezioni che con la
 propria necromassa.
 
-Alcuni tra gli organismi più importanti dell’habitat tellurico, nonché
-bioindicatori di fertilità, sono i lombrichi che mangiando sminuzzano
-la biomassa presente nel suolo. Nel loro intestino, i lombrichi,
+\info{rileggi}
+I lombrichi, 
+con la loro nutrizione, sminuzzano la biomassa presente nel suolo
+rivestendo così un ruolo importante nell'habitat tellurico. Nel loro intestino, 
+i lombrichi,
 impastano le sostanze minerali e quelle organiche, trasformandole in
-complessi stabili argilla-humus, arricchendo molto la terra con le
-proprie deiezioni. Nelle regioni temperate, i lombrichi sono in grado
+complessi stabili argilla-humus, arricchendo molto il suolo con le
+proprie deiezioni, proprio per questo vengono considerati bioindicatori
+della fertilità. Nelle regioni temperate, i lombrichi sono in grado
 di elaborare fino a 4\,kg di suolo per metro quadrato al giorno
 \citep{feller_charles_2003} e i primi studi relativi al ruolo della
 fauna del suolo, riguardarono proprio questi invertebrati e risalgono
+addirittura 
 a \citet{darwin_formation_1881}. La vita di tutti questi organismi è
 però fortemente dipendente dalle caratteristiche fisiche e chimiche
 del terreno e da quelle climatiche dell’ambiente in cui vivono.
 
 \citet{kubiena_micropedology_1938} descrisse il microambiente
-tellurico come “cavità in cui si possono trovare pochi o miriadi di
+tellurico come \emph{cavità in cui si possono trovare pochi o miriadi di
 organismi attivi, in funzione delle dimensioni, del clima e della
-condizione nutritiva delle varie cavità”
-\citep{kubiena_micropedology_1938}. La dimensione dei pori non
+condizione nutritiva delle varie cavità}. La dimensione dei pori non
 influenza solo la presenza e il movimento dei fluidi, ma anche il
 movimento dei microrganismi. Ad esempio i funghi aventi corpi
 vegetativi e fruttificazioni grandi risentono maggiormente della
@@ -736,7 +753,6 @@ dimensioni più piccole \citep{griffin_soil_1963}. Inoltre i micropori,
 abbondanti nei suoli argillosi, risultano praticamente inaccessibili
 per i protozoi e in presenza di un suolo molto compatto sono limitati
 anche i movimenti delle radici delle piante superiori.
-
 Inoltre i microrganismi che risiedono nei micropori hanno una minor
 disponibilità di nutrienti ed ossigeno, ma sono maggiormente protetti
 dal rischio di stress idrico rispetto agli organismi che vivono nei
@@ -744,10 +760,9 @@ macropori e che invece risentiranno di una maggior alternanza tra
 periodi umidi e secchi.
 
 La maggior parte degli organismi ha come coefficiente di avvizzimento
-valori prossimi ai -15, -25\,bar (in scala logaritmica pF\,4,2, 4,4).
-Tale coefficiente, che è diverso per ogni organismo, rappresenta il
-potenziale ovvero la pressione che l’individuo dovrebbe creare per
-vincere le forze che trattengono il liquido nelle particelle del
+valori prossimi ai -15, -25\,bar (pF\,4,2-4,4).
+Tale coefficiente indica la pressione che l'organismo dovrebbe esercitare 
+per vincere le forze che trattengono il liquido nelle particelle del
 suolo.
 
 Tramite gli studi di \citet{warcup_studies_1957} sappiamo che i funghi
@@ -763,12 +778,12 @@ dimostrando che questi crescevano meglio in terreni con pF inferiore a
 
 Oltre che l’acqua, nei pori si muove anche l’aria. Questa si trova in
 abbondanza nei terreni sabbiosi, prevalentemente secchi, mentre è
-assente in terreni argillosi mal strutturati e umidi. Gli abitanti
-dell’habitat tellurico reagiscono in maniera differente alle
-variazioni di concentrazione dei gas nel suolo. Al contrario
-dell’acqua, che risulta necessaria per tutti gli organismi, si hanno,
-nel caso dei gas, i funghi che sono organismi aerobi stretti, i
-batteri che possono essere sia strettamente anaerobi
+assente in terreni argillosi mal strutturati e umidi. I microrganismi 
+del suolo reagiscono in maniera differente alle
+variazioni di concentrazione dei gas. 
+\info{rileggi}
+Gli organismi si possono classificare in aerobi stretti come i funghi, 
+i batteri invece sono sia strettamente anaerobi 
 (\emph{clostridium} e \emph{botulinum}), che strettamente aerobi
 (\emph{pseudonomas} e la maggior parte degli attinomiceti), ma ne
 esistono anche alcuni che crescono meglio a basse concentrazioni di
@@ -776,7 +791,7 @@ ossigeno detti microareofili \citep{burges_micro-organisms_1958}.
 
 
 Anche il pH del suolo ha un ruolo centrale nel permettere lo sviluppo
-degli organismi viventi. Solitamente la vita è più intensa in un range
+degli organismi viventi. Solitamente la vita è più intensa in un intervallo
 di pH prossimo alla neutralità, anche se i batteri e gli attinomiceti
 del suolo preferiscono condizioni neutro-alcaline, mentre i funghi le
 preferiscono acide, continuando a crescere anche con valori prossimi
@@ -795,13 +810,12 @@ Anche la componente inorganica dei minerali influenza l’attività della
 microflora tellurica, sia perchè la presenza di determinate argille o
 un certo contenuto in sostanza organica permette livelli differenti di
 elementi nutritivi assimilabili e disponibili, ma anche perchè alcune
-matrici possono comportare dei danni letali. Ad esempio la
+matrici possono causare danni letali. Ad esempio la
 montmorillonite, anche a basse concentrazioni, riduce la respirazione
-fungina, non permettendo, per via delle sue caratteristiche fisico
-chimiche, una buona diffusione dell’ossigeno e stimola le attività
-batteriche \citep{stotzky_influence_1966}.
+fungina, non permettendo,una buona diffusione dell’ossigeno e stimola 
+le attività batteriche \citep{stotzky_influence_1966}.
 
-Infine è necessario osservare anche la temperatura del suolo.
+Infine anche la temperatura del suolo ha un effetto.
 Naturalmente l’energia assorbita dipende dalla latitudine e
 altitudine, ma anche dall’inclinazione della superficie del suolo,
 nonché dalla densità della copertura vegetale e dal colore del
@@ -810,10 +824,10 @@ variabilità se misurata in prossimità della superficie, mentre già a 7\,cm
  di profondità risulta avere un range più ristretto, quale 4-14\,°C
 \citep{raney_physical_1965}.
 
-Ogni organismo presenta “il proprio minimo e massimo ecologico di
+Ogni organismo presenta \emph{il proprio minimo e massimo ecologico di
 temperatura, compresi entro un intervallo che rappresenta i suoi
-limiti di tolleranza” \citep{odum_environment_1971}. In base a questi
-valori di minimo, massimo e \emph{optimum} si distinguono
+limiti di tolleranza} \citet{odum_environment_1971}. In base a questi
+valori di minimo, massimo e optimum si distinguono
 microrganimsi psicrofili, mesofili e termofili (Tab.
 \ref{tab:classif_Odum}).
 
@@ -840,146 +854,146 @@ generalmente in suoli e in stagioni dove si ha una temperatura media
 di 10\,°C dominano i funghi e i batteri, mentre a 20\,°C sono prevalenti i
 protozoi, i nematodi e gli attinomiceti.
 
-Comunque bisogna dire che la temperatura del suolo ha un effetto
+In conclusione, la temperatura del suolo ha un effetto
 diretto sull’attività metabolica della microflora, ma non comporta
 un’azione letale, anche al di sotto del punto di congelamento.
 
 
 \section{Gestione agraria e lavorazioni}
 
-Il complesso ecosistema suolo è influenzato da molti fattori e
-modificandone anche solo uno si può innescare una sorta di reazione a
-catena che va ad alterare tutti gli altri.
+Il complesso ecosistema del suolo è regolato da molti fattori;
+modificandone anche solo uno si può innescare una serie di reazioni 
+che altera tutti gli altri fattori.
 
 In un ambiente completamente naturale i cambiamenti sono legati
 soprattutto all’alternarsi delle stagioni e al modificarsi della
-copertura del suolo, comportando una variazione del range di umidità e
-temperatura presente. In un ambiente antropico, come quello agricolo
+copertura del suolo, comportando una variazione di umidità e
+temperatura presente. In un ambiente antropico come quello agricolo,
 si ha invece un continuo disturbo della pedosfera, dovuto
 principalmente alle lavorazioni e al passaggio di macchinari e persone
 \cite{pagliai_effetti_1992, marsili_changes_1998}.
 
 Il passaggio dei mezzi agricoli comporta un aumento della
 compattazione del terreno e un relativo aumento della densità
-apparente \citep{yvan_role_2012} che va a ridurre la diffusione
-dell’aria, la trattenuta dell’acqua \cite{marshall_relation_1958,
+apparente \citep{yvan_role_2012} che riduce la diffusione
+dell’aria, il trattenimento dell’acqua \cite{marshall_relation_1958,
 childs_e.c._introduction_1969} e anche il movimento degli
 organismi \citep{pezzarossa_investigation_1990}. Ad esempio la
 quantità di lombrichi diminuisce nei due mesi successivi al passaggio
-di macchine per poi riaumentare mano a mano che l’effetto della
+di macchine per poi aumentare di nuovo mano a mano che l’effetto della
 compattazione viene meno \citep{yvan_role_2012}.
 
-Con la compattazione viene danneggiata la struttura del suolo, i pori
+La compattazione danneggia la struttura del suolo, i pori
 si rompono, collassano e non sono più comunicanti. Questo comporta una
-diminuzione dello scambio di nutrienti e va ad intaccare l’attività
+diminuzione dello scambio di nutrienti e va a disturbare l’attività
 dei micro e macro organismi. Infatti la forma e la dimensione dei pori
-è correllata a proprietà chimiche, biochimiche e biologiche, come la
+è correllata alle proprietà chimiche, biochimiche e biologiche, come la
 crescita delle radici e l’attività enzimatica
 \cite{sequi_positive_nodate, pagliai_relationships_1993,
 giusquiani_urban_1995}. Di conseguenza, un peggioramento nella
-componente fisica del suolo va ad influire anche sugli aspetti chimici
+componente fisica del suolo influisce anche sugli aspetti chimici
 e biologici \cite{oades_role_1993, boizard_using_2013}. Oltre
-a ciò, le continue lavorazioni favoriscono l’azione dell’erosione
+a ciò, le continue lavorazioni possono favorire l’azione dell’erosione
 \cite{miller_soil_1992, reeves_cover_1994} che rimuove la
-porzione più superficiale del piano di campagna, e solitamente più
+porzione più superficiale del piano di campagna, solitamente più
 ricca di nutrienti, comportandone un ulteriore impoverimento.
 
-Le lavorazioni agricole inoltre disturbano enormemente l’habitat
-tellurico, con tagli, solchi, fori e soprattutto con il rivoltamento
+Le lavorazioni agricole, inoltre, disturbano enormemente l’habitat
+tellurico con tagli, solchi, fori e soprattutto con il rivoltamento
 delle zolle, caratteristica principale dell’aratura. Con
-quest’operazione si ha una maggior ossigenazione del suolo e un
-accelerazione della mineralizzazione comportando, nel breve periodo,
+quest’operazione si ha una maggior ossigenazione del suolo e un'accelerazione 
+della mineralizzazione della sostanza organica comportando, nel breve periodo,
 una maggior disponibilità degli elementi nutritivi e un aumento delle
-rese; ma nel lungo periodo ciò promuove l’impoverimento degli stessi,
+rese. Ma nel lungo periodo l'aratura promuove l’impoverimento degli 
+elementi nutritivi,
 provocando una vera e propria diminuzione della fertilità del suolo
-che risulta diventare sempre più povero e sterile
+che diventa sempre più povero e sterile
 \citep{certini_spectroscopic_2007}.
 
-Si sono diffuse, per questo motivo, aziende a gestione minimum tillage
-(che svolgono lavorazioni minime), così da ridurre le lavorazioni e il
-disturbo fisico, fino ad arrivare al completo abbandono delle macchine
-con il no tillage (diffuso molto anche per motivi economici, in quanto
-non si hanno più spese per macchinari e carburante).
+Per questo motivo, si sono diffuse aziende nelle quali
+le lavorazioni sono minime (dette anche minimum tillage), 
+se non addirittura assenti (no tillage)  
+-diffuse anche per motivi economici, in quanto
+non si hanno più spese per macchinari e carburante-.
 
 Si deve comunque considerare che la pratica del no tillage
 (i.e. nessuna lavorazione) provoca comunque degli svantaggi, il
 maggiore dei quali è rappresentato da un eccessivo uso di diserbanti e
-fungicidi chimici. Proprio per questo si cercano vie intermedie tra
-l’uso di lavorazioni profonde come l’aratura a 45-50cm e la gestione
+xenobiotici. Proprio per questo si cercano vie intermedie tra
+l’uso di lavorazioni profonde e la gestione
 no tillage, ovvero tecniche agricole conservative e meno impattanti.
-
 \citet{nugis_estimation_2016} hanno dimostrato, ad esempio, che con
 l’utilizzo di lavorazioni minime, si ha un minor impatto e il suolo
 presenta un maggior contenuto idrico rispetto alle lavorazioni
 profonde.
 
-Con i sistemi di minimum tillage, non si ha solo una modificazione
-nelle caratteristiche fisiche del suolo, ma si è visto un vero e
+Con i sistemi di minimum tillage, si ha non solo una modificazione
+nelle caratteristiche fisiche del suolo, ma anche un vero e
 proprio incremento nella dimensione, complessità e attività della
 comunità microbica \cite{piovanelli_tillage_1998, feng_effects_2002, 
 kuntz_influence_2013}.
  
 Naturalmente le lavorazioni non comportano solamente svantaggi, anzi
-in alcuni casi non sono in nessun modo evitabili: il terreno ha
+in alcuni casi esse sono necessarie: il terreno ha
 bisogno di essere lavorato per preparare un buon letto di semina,
 soprattutto se è particolarmente compatto o se il seme ha problemi
-nella germinazione perchè troppo piccolo; risultano necessarie anche
+nella germinazione perchè troppo piccolo. Le lavorazioni risultano necessarie anche
 nel caso in cui nel terreno ci siano troppi residui o radici. Inoltre
 è vero che, se non si dovesse fare alcuna lavorazione, si avrebbe un
 maggior contenuto di sostanza organica e fosforo organico nei primi cm
 di suolo, ma questo risulterebbe mancante in profondità. Al contrario
-le lavorazioni permettono di distribuire in maniera più omogenea, nei
-vari livelli di profondità, tali sostanze, anche se il loro contenuto
+le lavorazioni permettono di distribuire in maniera più omogenea 
+tali sostanze, anche se il loro contenuto
 risulta minore in superficie.
 
 Oltre che al disturbo dovuto al passaggio delle macchine, la gestione
 agricola può provocare un’alterazione dell’equilibrio anche per
-l’introduzione di prodotti chimici legati all’utilizzo di
+l’introduzione di prodotti 
 fitosanitari, erbicidi e anticrittogamici di sintesi.
 
-Questi prodotti sono accettati nell’agricoltura convenzionale, come
+Questi prodotti sono utilizzati nell’agricoltura convenzionale, come
 anche nel no tillage, nell’agricoltura di precisione e in molte altre
-tipologie di gestione; mentre non sono utilizzati nell’agricoltura
+tipologie di gestione; mentre sono vietati nell’agricoltura
 biologia.
 
 Le aziende biologiche  non possono utilizzare prodotti  di sintesi, in
 quanto  sono considerati  dannosi  all’ambiente e  ai consumatori.  Si
-pensa infatti che “la salute  pubblica globale e l'integrità ecologica
+pensa infatti che \emph{la salute  pubblica globale e l'integrità ecologica
 potrebbero essere migliorate attraverso  l'adozione di queste pratiche
 biologiche che riducono le quantità di pesticidi e concimi commerciali
-applicati nell'agricoltura” \citep{nas_frontiers_2003}.
+applicati nell'agricoltura} \citet{nas_frontiers_2003}.
 
 Con la conoscenza e la consapevolezza dei danni provocati negli ultimi
-50 anni di errate lavorazioni e gestioni \cite{reeves_cover_1994,
+50 anni da errate lavorazioni e gestioni \cite{reeves_cover_1994,
 miller_soil_1992}, è necessario identificare tecniche di
-gestione agricole che salvaguardino la vitalità e conseguentemente la
-fertilità biologica, oltre che chimica, del terreno e la salubrità del
+gestione agricola che salvaguardino la vitalità e conseguentemente la
+fertilità biologica e chimica, del terreno; ma anche la salubrità del
 prodotto finale così da permettere una buona resa produttiva e la
 sicurezza alimentare oltre che ambientale
 \citep{seufert_comparing_2012}.  Proprio per questo motivo negli
 ultimi anni è cambiato il mercato alimentare e agro-alimentare,
-vedendo un forte aumento nella domanda di prodotti biologici
+che ha visto un forte aumento nella domanda di prodotti biologici
 \citep{willer_world_2016}.
 
-Negli ultimi decenni è aumentato molto il numero di aziende agricole
-biologiche, raggiungendo, a livello mondiale, i 2,3 milioni di unità
-nel 2014. Queste occupavano 11 milioni di ettari nel 1999 e oggi
+Negli ultimi decenni è aumentato molto il numero mondiale di aziende agricole
+biologiche, raggiungendo i 2,3 milioni di unità
+nel 2014. Esse occupavano 11 milioni di ettari nel 1999 e oggi
 interessano invece una superficie pari a 43,7 milioni di ettari
 (Fig. \ref{fig:andamento_bio}) \citep{willer_organic_2016}.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/ettari_bio.jpg}
-\caption[Andamento delle superfici coltivate a Biologico nel mondo dal 1999-2014]
+\caption[Incremento delle superfici coltivate a Biologico nel mondo dal 1999-2014]
 {Andamento delle superfici coltivate a Biologico nel mondo dal
   1999-2014\citep{willer_organic_2016}.}
 \label{fig:andamento_bio}
 \end{figure}
 
-Dunque i prodotti biologici sono sempre più presenti negli scaffali
-dei negozi e la filosofia di questa tipologia di gestione agraria è
-quella di provocare il minor numero possibile di impatti all’ambiente
-usando prodotti naturali rispetto a quelli di sintesi.
+Dunque i prodotti biologici sono sempre più richiesti dai consumatori e
+questa tipologia di gestione agraria si pone l'obiettivo 
+di provocare il minor impatto possibile all’ambiente
+usando prodotti e tecniche naturali invece che quelli di sintesi.
 
 Di contro però l’agricoltura convenzionale permette rese superiori
 \citep{seufert_comparing_2012}, punto importante visto il continuo
@@ -1001,63 +1015,63 @@ fertilità del terreno \citep{feng_effects_2002} e valutare l’impatto
 che le lavorazioni hanno su di essa \citep{pagliai2002soil}. Per
 determinare la sostenibilità di un tipo di gestione, si osserva la
 componente biochimica e biologica perché questa è più suscettibile ai
-cambiamenti e risente maggiormente delle attività umane. Naturalmente
-questi cambiamenti richiedono del tempo per avvenire e quindi sono
+cambiamenti e risente maggiormente delle attività umane. Questi 
+cambiamenti richiedono del tempo per avvenire e quindi sono
 necessari esperimenti dalla durata di almeno 10 anni. \'E però
 importante non solo tener conto delle piante superiori e degli
 animali, ma anche della comunità microbica nel terreno, componente
-spesso dimenticata, anche se fondamentale \citep{kennedy_soil_1995},
-usando come indice di fertilità del suolo la sua diversità e vitalità.
+spesso trascurata, anche se fondamentale \citep{kennedy_soil_1995},
+usando come indice di fertilità la sua diversità e vitalità.
 
 \section{Tecniche analitiche di determinazione dei microrganismi}
 
-Essendo la comunità microbica del suolo così varia, anche in quantità
-di terreno assai piccole, non si può applicare l’approccio classico di
+Essendo la comunità microbica del suolo così varia, 
+\info{virgola}non si può applicare l’approccio classico di
 conta usato per animali e piante \citep{bossio_determinants_nodate}.
 Anche dal punto di vista microbiologico è ormai acclamato che solo una
 piccola parte dei microrganismi presenti nel suolo, meno dell'1\,\%
 \citep{torsvik1990}, può essere moltiplicata in laboratorio con le
 odierne tecniche di coltivazione in piastrina. Si devono quindi
-prendere in considerazione tecniche di analisi specifiche. Le
-principali tecniche sono: la \emph{Polymerase Chain Reaction} (\acs{PCR}),
-il \emph{Restriction Fragment Length Polymorphism} (\acs{RFLP}), e l’analisi
+prendere in considerazione tecniche di analisi specifiche; quali: 
+la \emph{Polymerase Chain Reaction} (\acs{PCR}),
+il \emph{Restriction Fragment Length Polymorphism} (\acs{RFLP}), l’analisi
  \emph{Phospho Lipids Fatty Acids} (\acs{PLFA}) o \emph{Community Level Physiological
  Profiling} (\acs{CLPP})\citep{ovreas_population_2000}.
 
-Sebbene l’applicazione di queste tecniche abbia fortemente migliorato
+Sebbene l’applicazione di queste tecniche abbia significativamente ampliato
 le conoscenze sulla struttura e la dinamica delle comunità microbiche
 del suolo, la loro applicazione soffre di alcune limitazioni legate
 principalmente alle caratteristiche della matrice, e nessuna di loro,
-singolarmente, è in grado di fornire una misura completa sulla
+singolarmente, è in grado di fornire una valutazione completa sulla
 diversità delle comunità microbiche del suolo.  Per questo motivo la
 letteratura scientifica a riguardo raccomanda la combinazione di più
 metodi che si complementino a vicenda \citep{zhang_assessing_2008}.
 
-L’analisi \acs{CLPP} produce grandi numeri di variabili ed è altamente
+La tecnica \acs{CLPP} produce grandi numeri di variabili ed è altamente
 sensibile ai cambiamenti della comunità microbica, però richiede la
-crescita dei microbi in laboratorio su piastre. Molti degli organismi
+crescita dei microbi in laboratorio su piastra. Molti degli organismi
 presenti nel suolo non possono crescere in questo ambiente, il che
 causa una perdita di informazione.
 
-La tecnica di analisi \acs{RFLP} è lenta e laboriosa. Richiede grandi
+La tecnica \acs{RFLP} è lenta e laboriosa. Richiede grandi
 quantità di DNA ed i processi di costruzione della sonda, di
 frammentazione del DNA, di elettroforesi, di blotting, di ibridazione,
-di lavaggio e autoradiografia potrebbero richiedere fino a un mese di
-tempo per essere portati a termine.  Per questo viene generalmente
+di lavaggio e autoradiografia sono molto laboriosi e lenti. 
+Per questo viene generalmente
 preferito il modo più rapido mediante la \acs{PCR}
 \citep{sipila_cross-site_2012}.
 
-L’analisi tramite \acs{PCR} richiede piccole quantità di DNA, funziona anche
+La tecnica \acs{PCR} richiede piccole quantità di DNA, funziona anche
 con campioni di non ottima qualità, ed è una procedura rapida e poco
 costosa con alta riproducibilità, specificità e sensibilità. Ha però
 il difetto di richiedere una conoscenza pregressa della sequenza del
 DNA del microrganismo da riconoscere \citep{ramsey_choice_2006}.
 
-L’analisi dei \acs{PLFA} fornisce una sorta di impronta digitale
+La tecnica dei \acs{PLFA} fornisce una sorta di impronta digitale
 \citep{bossio_determinants_nodate} della struttura e dell’attività
 della comunità microbica e risente maggiormente dei cambiamenti dovuti
-alla differente gestione e lavorazione.  Questa tecnica è stata
-dimostrata essere più adatta rispetto all’analisi con \acs{CLPP}, \acs{PCR} e 
+alla differente gestione e lavorazione \todo{riferimento file biblio!!}.  Questa tecnica è stata
+dimostrata essere più adatta rispetto all’analisi \acs{CLPP}, \acs{PCR} e 
 \acs{RFLP}
 nel mostrare i cambiamenti, a livello generale, nella comunità
 microbica del suolo \citep{grayston_assessing_2004}. Anche in altri
@@ -1070,9 +1084,9 @@ kong_microbial_2012, guo_effects_2014}.
 
 In una review del 2006 \citep{ramsey_choice_2006}, gli autori hanno
 paragonato diversi studi che analizzavano la comunità microbica con
-diverse tecniche.  In 14 di 32 studi (44\,\% degli studi identificati)
-le differenze riscontrate con il \acs{PLFA} non sono state risolte con \acs{CLPP}
-e in 5 studi su 25 (20\,\%) i dati ottenuti con \acs{PLFA} non sono stati
+diverse tecniche.  In 14 di 32 studi 
+le differenze riscontrate nei \acs{PLFA} non sono state risolte con \acs{CLPP}
+e in 5 studi su 25 i dati ottenuti con \acs{PLFA} non sono stati
 differenziati e risolti con la \acs{PCR}; inoltre gli autori evidenziarono
 come la \acs{PCR} e la \acs{CLPP} producessero più alti tassi di errore rispetto
 al \acs{PLFA}.
@@ -1081,17 +1095,17 @@ Delle varie tipologie la \acs{PCR} è comunque la più utilizzata, perchè
 presenta più potenzialità nel caratterizzare il cambiamento nelle
 popolazioni specifiche, anche se le informazioni ottenute sono più
 limitate rispetto a quelle del \acs{PLFA} a livello di gruppi microbici. Dai
-pattern di analisi della \acs{PCR} si ottiene infatti minori informazioni
+pattern di analisi della \acs{PCR} si ottengono infatti minori informazioni
 statisticamente rilevanti rispetto ai profili ottenibili con il \acs{PLFA}
 \citep{ramsey_choice_2006}.
 
 La scelta del metodo di analisi comunque varia in base allo studio da
 svolgere: se, ad esempio, servono delle informazioni a più basso
-livello la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare. In
+livello, la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare. In
 generale, se si vogliono studiare gli effetti di un trattamento o
-valutare gli effetti dell’inquinamento, prima si svolge un analisi con
-\acs{PLFA} per rilevare le possibili differenze, e poi, successivamente, se
-sono state trovate, si passa ad un'analisi \acs{PCR} per differenziare le
+valutare gli effetti dell’inquinamento, prima si svolge un analisi
+\acs{PLFA} per rilevare le possibili differenze, e poi, successivamente, qualora
+siano state trovate, si passa ad un'analisi \acs{PCR} per differenziare le
 popolazioni \cite{piotrowska-seget_signature_2003,
 ramsey_choice_2006}.
 
@@ -1129,8 +1143,8 @@ Per separare al meglio le varie componenti di una miscela, risulta
 importante conoscere le caratteristiche chimico-fisiche delle molecole
 analizzate: la carica, le dimensioni, la massa, la polarità dei
 legami, il potenziale redox, ecc. Dunque esistono diversi meccanismi
-di separazione (fenomeno dell’adsorbimento, ripartizione, scambio
-ionico, esclusione...), che non si escludono a vicenda, e, di
+di separazione (adsorbimento, ripartizione, scambio
+ionico, esclusione\ldots), che non si escludono a vicenda, e, di
 conseguenza, diverse soluzioni sperimentali adottabili. Proprio per
 questo motivo si sono sviluppate numerose tecniche cromatografiche:
 
@@ -1160,35 +1174,35 @@ questo motivo si sono sviluppate numerose tecniche cromatografiche:
 \end{itemize}
 Le ultime tecniche elencate, \acs{GC} e \acs{HPLC}, risultano molto
 efficienti, altamente selettive e non distruttive. La tecnica
-gas-cromatografica ha visto un importante sviluppo dagli anni ’60 ed è
+\acs{GC} ha visto un importante sviluppo dagli anni ’60 ed è
 impiegata per la separazione di sostanze volatili (aromi, idrocarburi
-a catena corta, ecc...). Con questa tecnica è possibile analizzare
+a catena corta, etc \ldots). Con questa tecnica è possibile analizzare
 campioni gassosi, liquidi o solidi opportunamente solubilizzati,
-vaporizzati e poi iniettati in colonna che contiene la fase
+vaporizzati e poi iniettati in una colonna che contiene la fase
 stazionaria. L’unica limitazione è che sono analizzabili solo quelle
 sostanze che possono essere vaporizzate ad una temperatura compresa
-tra quella ambientale e i 350-400\,°C, ovvero la temperatura comunemente
+tra quella ambiente e i 350-400\,°C, ovvero la temperatura comunemente
 raggiunta dalle apparecchiature in commercio e compatibile con le
 colonne cromatografiche usate. Inoltre le sostanze da analizzare non
 devono essere termolabili, vale a dire che non devono degradarsi per
 effetto della temperatura, altrimenti risulta impossibile
 riconoscerle. Per questo motivo, in alcuni casi tale tecnica viene
-"soppiantata" dall’\acs{HPLC}. A parte ciò le applicazioni possibili sono
+sostituita dall’\acs{HPLC}. A parte ciò le applicazioni possibili sono
 molteplici e abbracciano tutti i settori delle scienze e
 dell’industria: medicina, biochimica, prodotti alimentari e chimica
 ambientale, industria chimica e farmaceutica.
  
-La fase stazionaria, nella tecnica gas-cromatografica, dunque può
+La fase stazionaria, in \acs{GC}, dunque può
 essere liquida oppure solida, mentre la fase mobile è un gas, che in
 questo caso non ha alcuna interazione con i soluti, ma funge solo da
-trasporto. Questo è detto carrier e generalmente sono usati gas
-chimicamente inerti, a bassa viscosità ed elevata purezza (99.9\,\%)
+trasporto. Questo è detto \emph{carrier} e generalmente è usato un gas
+chimicamente inerte, a bassa viscosità ed elevata purezza (99.9\,\%)
 come l’azoto, l’elio e l’argon \cite{martin_new_1941,
 james_gas-liquid_1952} e idrogeno.
 
-Il gascromatografo è formato da un iniettore, da una colonna e dal
-detector e fornisce in output un diagramma che rappresenta il segnale
-generato dal rivelatore in funzione del tempo, dove lo 0 rappresenta
+Il gascromatografo è formato da un iniettore, da una colonna e da un
+detector, il quale fornisce in uscita un cromatogramma, ivvero il segnale
+in funzione del tempo, dove lo 0 rappresenta
 il momento in cui il campione viene iniettato nella colonna
 (Fig. \ref{fig:gascromat}).
 
@@ -1200,19 +1214,18 @@ il momento in cui il campione viene iniettato nella colonna
 \end{figure}
 
 
-Questo diagramma prende il nome di cromatogramma del campione
-(Fig. \ref{fig:2picchi}) e si presenta come una sequenza di picchi di
+Il cromatogramma (Fig. \ref{fig:2picchi}) è una sequenza di picchi di
 ampiezza e altezza variabile, distribuiti lungo l’asse delle ascisse
 che rappresenta il tempo.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{./foto/picchi.jpg}
 \caption[Esempio di cromatogramma]
-{Esempio di cromatogramma a due picchi.  Rappresentano due
+{Esempio di cromatogramma con due picchi, ovvero due
   sostanze che interagiscono in modo differente con la fase
-  stazionaria: il picco di sinistra rappresenta un soluto che non ha
+  stazionaria: il picco di sinistra è un soluto che non ha
   alcuna interazione con la fase stazionaria ed esce al cosiddetto
-  tempo morto, t\ped{M}; il picco di destra rappresenta un soluto che
+  tempo morto, t\ped{M}; il picco di destra è un soluto che
   ha, invece, interazione con la fase stazionaria ed esce al tempo
   t\ped{R} , maggiore di t\ped{M}.}
 \label{fig:2picchi}
@@ -1225,11 +1238,11 @@ che intercorre tra l’introduzione del campione e la sua uscita dalla
 colonna.
 
 
-\subsubsection{Iniettore} 
+\subsubsection{Iniettori} 
 
 L’iniezione può essere effettuata manualmente oppure tramite
 un’autocampionatore che fornisce miglior riproducibilità e ottimizza i
-tempi di analisi. Il campione introdotto è di pochi microgrammi e può
+tempi di analisi. Il campione introdotto è di pochi \todo{calamai} microgrammi e può
 essere inserito sciolto in un solvente, oppure, nell’analisi dello
 spazio di testa, si inseriscono i vapori del campione che si sono
 sviluppati in una vial chiusa e riscaldata. L’iniezione può essere
@@ -1239,31 +1252,32 @@ freddo”) o depositato inizialmente in un iniettore e qui verrà
 vaporizzato all’istante e, prima di arrivare in colonna, può subire
 una ripartizione (\emph{splitless} e \emph{split}).
 
-Il foro adibito all’introduzione dell’ago è protetto dall’ambiente
+Il foro adibito all’introduzione dell’ago è isolato dall’ambiente
 esterno tramite una guarnizione di uno speciale polimero resistente
 alle alte temperature. Con la tecnica \emph{on column}, il foro non
 presenta questa guarnizione di protezione, ma bensì una valvola che si
 apre all’istante quando l’ago sta per toccarla, e si richiude subito
-dopo la sua uscita.
+dopo la sua estrazione.
 
-L’iniettore è una scatola chiusa termicamente stabilizzata con
-all’interno un inserto di vetro (\emph{liner}) e, a differenza
+L’iniettore è una scatola chiusa, termicamente stabilizzata contenente 
+un inserto di vetro (\emph{liner}) e, a differenza
 dell’iniezione “a freddo”, permette l’istantanea vaporizzazione del
-campione, il quale risulta così maggiormente omogeneizzato; però il
+campione, il quale entra in colonna in un tempo molto più bereve 
+(risulta così maggiormente omogeneizzato?); però il
 tempo di iniezione è più lungo perchè bisogna aspettare che
-l’iniettore si scaldi.
+l’iniettore si scaldi. \todo{calamai}
 
 Si possono fare due tipi di iniezioni a “vaporizzazione istantanea”:
 l’iniezione \emph{split} e quella \emph{splitless}. La prima
 (Fig. \ref{fig:split}) si usa quando il campione presenta un’elevata
 concentrazione e quindi potrebbe saturare la risposta del detector e
-sfalzare il risultato. In questa tipologia il campione viene diluito
-con il gas \emph{carrier} e in parte, questa miscela, esce da uno
+sfalsare il risultato. In questa tipologia il campione viene diluito
+con il \emph{carrier} e in parte, questa miscela, esce da uno
 sfiatatoio. La quantità di campione uscente è regolata e, dopo un
-certo periodo di tempo, misurato per via empirica, l’uscita si chiude
-e la porzione rimasta nel liner va in colonna.  Questo metodo è
-utilizzato soprattutto quando si deve analizzare delle essenze (timo,
-lavanda, limone ecc).
+certo periodo di tempo misurato per via empirica, l’uscita si chiude
+e la porzione rimasta nel \emph{liner} va in colonna.  Questo metodo è
+utilizzato soprattutto quando si devono analizzare delle essenze (timo,
+lavanda, limone, etc).
 
 \begin{figure}[h]
 \centering
@@ -1299,19 +1313,20 @@ utilizzare entrambe le tecniche.
 
 Esistono poi gli iniettori \acs{PTV}: in questi il campione viene 
 iniettato in un inserto
-freddo che poi mano a mano aumenta di temperatura e si vaporizza, è
-quindi adatta a composti termolabili e presenti in tracce. La
+freddo che poi mano a mano aumenta di temperatura comportando la vaporizzazione 
+del campione. Questi iniettori sono quindi adatti a composti termolabili 
+e presenti in tracce. La
 temperatura del \emph{liner}, inizialmente, è posta poco sotto la
-temperatura di ebollizione del solvente così da permettere la
-dispersione di una buona quantità di questo, senza perdere invece i
+temperatura di ebollizione del solvente così da permetterne la
+dispersione di una buona quantità, senza perdere i
 soluti dato che la temperatura è troppo bassa per farli gassificare.
 Poi la valvola viene chiusa e si alza la temperatura fino a superare
 il grado del componente della miscela più altobollente. Dunque è
 fondamentale programmare attentamente i tempi di scarico e la
-temperatura. È considerato il sistema più universale per inserire il
+temperatura. È considerato il sistema universale per inserire il
 campione e prevede un funzionamento combinato \emph{split-splitless},
 la possibilità di volumi di iniezione elevati e l’eliminazione del
-solvente. Inoltre essendo una tipologia di iniezione “a freddo”
+solvente. Inoltre essendo una tipologia di iniezione \info{"} a freddo
 richiede un tempo di iniezione più breve, similmente a quello
 dell'iniezione \emph{on column}.
 
@@ -1498,7 +1513,7 @@ qualitativo dello spettro rimane invariato e quello quantitativo
 cambia di pochissimo \todo{(ARPAT, 2010)}. Gli elettroni del fascio
 sono formati con il riscaldamento di un filamento, a circa 200\,°C, e
 sono accelerati per mezzo di una caduta di potenziale ottenuta con la
-presenza di un anodo.
+presenza di un anodo. \label{rif:EI}
 
 La sorgente \acs{CI} invece prevede una ionizzazione primaria come nell’\acs{EI} e
 gli ioni formati reagiscono con le molecole neutre del gas introdotto
@@ -1555,7 +1570,7 @@ invece collidono contro le barre e non vengono rivelati.  Cambiando
 radiofrequenza, altri ioni raggiungono il detector e modulando questa
 si ottiene lo spettro di massa. I sistemi con quadrupolo permettono di
 usare pressioni alte e quindi sistemi di vuoto più semplici, però
-hanno una bassa risoluzione.
+hanno una bassa risoluzione. \label{rif:quadrupolo}
 
 Gli analizzatori con la trappola ionica prevedono un elettrodo ad
 anello e due elettrodi cilindrici; agendo sulla radiofrequenza si
@@ -1666,8 +1681,8 @@ Questo studio fa parte del progetto \acs{MoLTE}, progetto europeo attivo dal 199
 superficie di 15\,ha suddivisa in 10 appezzamenti, di 1,3\,ha ciascuno:
 OO1, OO2, OO3, OO4, CO9, CO10 e 4 appartenenti al BioNuovo
 (Fig. \ref{fig:panorama_satellite}). Le sigle stanno ad indicare la
-conduzione utilizzata: gli appezzamenti con prefisso OO- indicano
-conduzione organica, mentre quelli con prefisso CO- stanno ad indicare
+conduzione utilizzata: gli appezzamenti con prefisso \acs{OO}- indicano
+conduzione organica, mentre quelli con prefisso \acs{CO}- stanno ad indicare
 la gestione convenzionale.
 
 
@@ -1684,15 +1699,15 @@ esperimento, come anche il campo OO1 ed OO3.
 
 I campi del BioNuovo separano quelli a conduzione biologica da quelli
 a conduzione convenzionale. Oltre a ciò, le due conduzioni biologiche,
-nuovo e vecchio, sono separate da una siepe naturale larga 6 metri che
-termina con una striscia inerbita di 2 metri su ambo i lati; mentre il
+nuovo e vecchio, sono separate da una siepe naturale larga 6\,m che
+termina con una striscia inerbita di 2\,m su ambo i lati; mentre il
 biologico nuovo e il convenzionale sono separati da una striscia
-inerbita di 8 metri. Il biologico vecchio prevede anche una siepe
-artificiale di 6 metri di larghezza più 4 metri di striscia inerbita,
+inerbita di 8\,. Il biologico vecchio prevede anche una siepe
+artificiale di 6\,m di larghezza più 4\,m di striscia inerbita,
 che lo separa dai campi adiacenti. Questa è stata piantata agli inizi
 del 1990 dal DISAT (Dipartimento di Scienze Agronomiche e Gestione del
 Territorio Agroforestale) con l’aiuto del WWF ed è formata da specie
-autoctone.  Infine una viottola di 4 metri separa gli appezzamenti OO1
+autoctone.  Infine una viottola di 4\,m separa gli appezzamenti OO1
 e OO2 da dagli OO3 e OO4. Tali campi sono coltivati, dal 2001,
 seguendo la rotazione:
 
@@ -1705,10 +1720,14 @@ seguendo la rotazione:
 
 Oltre alle due gestioni menzionate, l’esperimento vuole anche
 confrontare la risposta a diverse lavorazioni. Ogni appezzamento vede
-3 lavorazioni primarie differenti: frangizollatura in presemina più
-aratura (A), frangizollatura in presemina più rippatura (B) e
-frangizollatura in presemina più una frangizollatura successiva
-(C). Ogni lavorazione è stata replicata tre volte in ciascun appezzamento il quale,
+3 lavorazioni primarie differenti: 
+\begin{enumerate}[label=(\Alph*)]
+\item frangizollatura in presemina più aratura
+\item frangizollatura in presemina più rippatura
+\item frangizollatura in presemina più una frangizollatura successiva
+
+\end{enumerate}
+Ogni lavorazione è stata replicata tre volte in ciascun appezzamento il quale,
 quindi è suddiviso in 9 parcelle: 3 repliche (segnalate
 con numeri arabi a pedice) per ognuna delle 3 lavorazioni
 (Fig. \ref{fig:bioconvmod}).
@@ -2141,10 +2160,10 @@ etil
 acetate così da annullare un possibile effetto memoria.
 
 Il sistema \acs{GC} è interfacciato direttamente con lo spettrometro di
-massa avente una sorgente \acs{EI} , in cui l’analisi è effettuata con
+massa avente una sorgente \acs{EI} (\pageref{rif:EI}) , in cui l’analisi è effettuata con
 ionizzazione positiva a temperatura di 230\,°C e voltaggio di
 70\,Hz. Infine, gli ioni formatisi, attraversano l’analizzatore che è
-costituito da un quadrupolo, ovvero quattro barre cilindriche
+costituito da un quadrupolo (\pageref{rif:quadrupolo}), ovvero quattro barre cilindriche
 metalliche, lunghe circa 20\,cm e aventi carica alterna opposta. Queste
 barre delimitano il percorso degli ioni provenienti dalla camera di
 ionizzazione verso il detector.
@@ -2266,6 +2285,7 @@ le quantità degli altri composti non presenti nello standard.
 
 
 \section{Analisi e trattamento dati}
+\todo{pantani: mancano librerie e la descrizione dell'anova composizionale}
 
 Il disegno sperimentale è riportato nella sezione
 \ref{subsec:Dis_Sperim} e il risultato del disegno sperimentale
@@ -2297,7 +2317,7 @@ di analisi multivariata:
   Usando la \acs{PCA} si combinano i dati a 37 dimensioni (dovute ai 37 \acs{PLFA}
   differenti identificati nei campioni), in una serie di assi lineari
   che incorporano la massima varianza. 
-  La \acs{PCA} è stata condotta usando il programma R 3.4.3.
+  La \acs{PCA} è stata condotta usando il programma R 3.4.3 \todo{bibliografia}.
   
  \item anova dati composizionali
 \end{itemize}
@@ -2499,7 +2519,7 @@ Gli starplot in figura \ref{fig:starplot_campioni} raffigurano i 72 campioni
  \acs{PLFA} maggiore rispetto a quelli autunnali, anche se c'è
  una grande eterogeneità fra di loro. 
  
- Ad esempio il campione 71, che è un estivo biologico arato (Es.O.A) e anche il
+ Ad esempio i campioni 70 e 71 (Estivi, che è un estivo biologico arato (Es.O.A) e anche il
  70esimo, che invece è un estivo convenzionale arato (Es.C.A) si presentano con
  un contenuto di \acs{BAMEs} molto basso, molto più simile alla maggioranza dei campioni
  autunnali; invece il 17 e il 21, entrambi autunnali e rippati, il primo 
@@ -2558,7 +2578,8 @@ tranne nel caso del biologico autunnale dove invece è il frangizollato.
 \section{Analisi quantitativa per il totale di PLFA rilevati}
 
 Dopo aver constatato la forte eterogeneità dei dati (Fig. \ref{fig:starplot_campioni}), 
-questi non sono 
+questi non sono \todo{moli prima e cambia... nonquesto il motivo, ma perchè
+si normalizza?}
 stati maneggiati tal quali, ma sono state prese le somme delle 
 moli dei \acs{PLFA} \todo{migliora}; inoltre  notando la forte disomogeneità 
 tra le varianze dei campioni (Fig. \ref{fig:starplot_campioni}) è stata 
@@ -2569,6 +2590,7 @@ tenuto conto di tutte le possibili interazioni \todo{pantani:tab significativit�
 singole o solo confronto?} e vedendo che queste non erano
 significative, come neanche %qualsiasi combinazione con 
 la variabile Gestione presa individualmente,
+\todo{PANTANI}
 è stato creato un modello più semplice, tenendo conto
 delle sole variabili Stagione e Lavorazione, senza considerare alcuna  
 interazione.
@@ -3452,12 +3474,12 @@ parisi: economicamente però?
 \label{tab:PM_PLFA}
 \centering
 \small
- \begin{tabular}{p{1.3cm}p{4cm}cl}
+ \begin{tabular}{p{1.3cm}p{4cm}p{1cm}l}
   \toprule
 Ordine di ritenzione & Nome in R	&Peso molecolare
    &Specie chimica		\\
    \midrule
-1	&C.12MetC14.0	&242	&Metil-12-metiltridecanoato	\\
+1	&C.12MetC14.0	&242	&\emph{Metil-12-metiltridecanoato}	\\
 2	&C.11MetC14.0	&242	&Metil-11-metiltridecanoato   \\
 3	&C.00LinC14.0	&242	&Metil miristato		\\
 4	&C.13MetC15.0	&256	&Metil-13-metiltetradecanoato \\
@@ -3504,7 +3526,7 @@ Ordine di ritenzione & Nome in R	&Peso molecolare
 
 
 
-\section*{Acronimi}
+\section*{Acronimi e sigle}
 \begin{acronym}[WYSIWYM]
 \acro{BAMEs}[BAMEs]{Bacterial Acid Methyl Ester}
 {\small Metil esteri degli acidi grassi derivanti dai batteri\par}
@@ -3518,6 +3540,9 @@ Ordine di ritenzione & Nome in R	&Peso molecolare
 
 \acro{CLPP}[CLPP]{Community Level Physiological Profiling}
 {\small ...\par}
+
+\acro{CO}[CO]{Conventional}
+{\small Convenzionale\par}
 
 \acro{DCI}[DCI]{Desorption Chemical Ionization}
 {\small Ionizzazione chimica per desassorbimento\par}
@@ -3557,6 +3582,9 @@ Ordine di ritenzione & Nome in R	&Peso molecolare
 
 \acro{MS}[MS]{Mass Spectrometry}
 {\small Spettrometria di massa\par}
+
+\acro{OO}[OO]{Old Organic}
+{\small Vecchio biologico\par}
 \acro{PC}[PC]{Paper Chromatography}
 {\small Cromatografia su carta\par}
 \acro{PCA}[PCA]{Principal Component Analysis}
