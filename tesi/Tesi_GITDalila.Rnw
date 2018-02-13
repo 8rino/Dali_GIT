@@ -57,10 +57,11 @@
 % e altri controlli sulle liste
 
 \usepackage{longtable} % per avere tabelle spezzate tra le pagine
+
 \usepackage{tabularx} % per le tabelle con molto testo
 \usepackage{lscape} % per ruotare qualche pagina in landscape
 \usepackage{booktabs} % per fare tabelle semplici come nei libri (top mid e bottomrule)
-
+\usepackage[flushleft]{threeparttable}%per note in tabella
 \usepackage{setspace} % permette di cambiare la spaziatura quando necessario
 %\doublespacing % per avere spazio per scrivere a penna
 \onehalfspacing  % per l'interlinea finale
@@ -77,8 +78,7 @@
 
 %% \usepackage{multirow} % tabelle multiriga e multicolonna
 
-%% \usepackage{threeparttable}
-% vedi http://www.tug.org/pracjourn/2007-2/asknelly/
+
 
 \usepackage{lineno}
 \linenumbers
@@ -358,7 +358,7 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 
 %{\fontsize{4mm}{7mm}\selectfont 
 The main aim of this thesis is to determine possible variations in
-the telluric community, comparing two agricaltural systems
+the telluric microbial community, comparing two agricultural systems
 (i.e. organic and conventional). Additionally, we aim to evaluate the impacts
 of three differents primary processes: plowing,
 ripping and disk-harrowing, considering also the seasonality (Autumn and Spring)
@@ -375,7 +375,8 @@ since these acids are specific to different microbial groups.
 Results from statistical analysis did not show significant
 variation nor between the two agricultural systems, neither with regards
 to the three different prymary processes.
-Significant differences were only found when comparing microbial
+Significant differences were only found when comparing profiles obtained 
+of microbial
 communities collected in different seasons.
 %}
  
@@ -635,7 +636,7 @@ forma sferica, regolare e misurabile) delle particelle, queste si
 classificano come in  \autoref{tab:Classi_granulometriche}:
 
 \begin{table}[h]
-\caption[Classi glanulometriche]
+\caption[Classi granulometriche]
 {Classi granulometriche secondo \citet{usda_soil_1999}. }
  \label{tab:Classi_granulometriche}
 \centering
@@ -658,7 +659,7 @@ classificano come in  \autoref{tab:Classi_granulometriche}:
 In base al contenuto percentuale di ogni classe granulometrica, i
 suoli vengono classificati in varie classi tessiturali (\autoref{fig:Triangolo_USDA}).
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \includegraphics[scale=0.5]{./foto/triangoloUSDA.png}
 \caption[Triangolo tessiturale]
 {Triangolo per la determinazione della classe tessiturale
@@ -1908,12 +1909,16 @@ quindi è suddiviso in 9 parcelle: 3 repliche per ognuna delle 3 lavorazioni
 \end{landscape} 
  \FloatBarrier
 
-\info{pantani: A, R , F}
 
-Le caratteristiche fisico chimiche dei campi a inizio esperimento
-erano (\autoref{tab:CarattMoLTE1992}):
 
-\begin{table}[ht]
+In \autoref{tab:CarattMoLTE1992} sono riportate le caratteristiche 
+fisico-chimiche dei campi a inizio esperimento, mentre nella 
+\autoref{tab:lavorazioniCampiBio} sono elencate le lavorazioni effettuate
+nell'anno agrario 2016/2017 per la conduzione biologica e nella 
+%\autoref{tab:lavorazioniCampiCONV} 
+per la conduzione convenzionale.
+
+\begin{table}[h]
 \caption[Caratteristiche fisico chimiche del 1992]
 {Caratteristiche fisico chimiche dei campi a conduzione biologica
 e convenzionale prese nell'anno 1992 \citep{DISPAA}. }
@@ -1934,40 +1939,27 @@ e convenzionale prese nell'anno 1992 \citep{DISPAA}. }
     \bottomrule
   \end{tabular}
 \end{table}
- \FloatBarrier
+ %\FloatBarrier
 
-% \label{tab:CarattMoLTE1992}
-%\centering
-%  \begin{tabular}{lll}
-%    \toprule
-%    & Biologico & Convenzionale   \\
-%    \midrule
-%    argilla          &   32,9\,\%                 &  33,8\,\%  \\
-%    limo             &   46,3\,\%                 &  44,6\,\% \\
-%    sabbia           &   20,2\,\%                 &  21,0\,\%     \\
-%    scheletro        &   6,3\,\%                  &  6,1\,\% \\
-%    pH\_\ce{H2O}     &   8,3                      &  8,3 pH\_$(H\_2 O)$ \\
-%    CSC              &   \SI{17.6}{\cmol\per\kg}  & \SI{19.4}{\cmol\per\kg}  \\
-%    \ce{P2O5} totale & 1,63\,\%                   & 1,60\,\%  \\
-%    \ce{K2O}         &171\,ppm                    & 134\,ppm  \\
-%
-%    \bottomrule
-%  \end{tabular}
-%\end{table}
 
-Di seguito sono riportate 2 tabelle (\autoref{tab:lavorazioniCampiBio}, 
-\autoref{tab:lavorazioniCampiCONV})
-che mostrano le lavorazioni effettuate nell'anno
-agrario 2016-2017, la prima riguardanti i campi biologici (\acs{OO}02 e \acs{OO}04),
-la successiva i due campi convenzionali (\acs{CO}09 e \acs{CO}10).
+%Di seguito sono riportate 2 tabelle (\autoref{tab:lavorazioniCampiBio}, 
+%\autoref{tab:lavorazioniCampiCONV})
+%che mostrano le lavorazioni effettuate nell'anno
+%agrario 2016-2017, la prima riguardanti i campi biologici (\acs{OO}02 e \acs{OO}04),
+%la successiva i due campi convenzionali (\acs{CO}09 e \acs{CO}10).
 
-\begin{table}[ht]
-\caption[Lavorazioni nell'anno 2016-2017 nei campi a biologico]
+\begin{table}[h]
+\caption[Lavorazioni nell'anno 2016-2017 (conduzione biologica)]
 {Lavorazioni nell'anno 2016-2017 per i due campi a conduzione biologica. \\
 * la lavorazione applicata varia in base alla parcella (\autoref{fig:bioconvmod}).}
 \label{tab:lavorazioniCampiBio}
 \centering
-\small
+\small%Di seguito sono riportate 2 tabelle (\autoref{tab:seminaCampiBIO},
+%\autoref{tab:seminaCampiCONV})
+%che mostrano le colture seminate nell'anno precedente allo studio effettuato
+%e quelle presenti durante il campionamento e anche la loro densità di semina;
+% la prima tabella è relativa ai campi biologici (\acs{OO}02 e \acs{OO}04),
+%la s
  \begin{tabular}{p{2.5cm}p{4cm}p{3cm}}
   \toprule
 Lavorazioni                    & OO02                               & OO04      \\
@@ -1987,10 +1979,10 @@ Strigliatura                   & assente                            & 15/3/2017 
   \end{tabular}
   \normalsize
  \end{table}
-\FloatBarrier
+%\FloatBarrier
 
 \begin{table}[ht]
-\caption[Lavorazioni nell'anno 2016-2017 nei campi a convenzionale]
+\caption[Lavorazioni nell'anno 2016-2017 (conduzione convenzionale)]
 {Lavorazioni nell'anno 2016-2017 per i due campi a conduzione convenzionale.\\
 * la lavorazione applicata varia in base alla parcella (\autoref{fig:bioconvmod}).\\
 ** fosfato biammonico \\
@@ -2026,57 +2018,86 @@ Terza \newline concimazione    & 11/4/2017 \newline urea \newline \SI{150}{\kg\p
  \end{table}
  \FloatBarrier
  \todo{pacini quale GOAL? 480, 240, 2xl}
+ 
+%\begin{table}[hb]
+%  \begin{threeparttable}
+%    \caption[Lavorazioni nell'anno 2016-2017 nei campi a convenzionale]
+%    {Lavorazioni nell'anno 2016-2017 per i due campi a conduzione convenzionale.}
+%    \label{tab:lavorazioniCampiCONV}
+%    \centering
+%    \small
+%    \begin{tabular}{p{2.5cm}p{3cm}p{3cm}}
+%      \toprule
+%      Lavorazioni                    & CO09                                   & CO10          \\
+%      \midrule
+%      Preparazione letto di semina   & 8/9/2016\tnote{a}                      & 8/9/2016\tnote{a} \\
+%                                     &&\\
+%      Concimazione in presemina      & 5/12/2016 \newline(18:46)\tnote{b} \newline \SI{192}{\kg\per\hectare} &  assente\\
+%                                     &&\\
+%      Frangizollatura                & 5/12/2017                              & 23/2/2017 \\
+%                                     &&\\
+%      Erpicatura                     & assente                                & 29/3/2017 \\
+%                                     &&\\
+%      Semina                         & 5/12/2016                              & 30/3/2017 \\
+%                                     &&\\
+%      Seconda \newline concimazione  & 15/3/2017 \newline \ce{(NH4)(NO3)} \newline \SI{150}{\kg\per\hectare} &30/3/2017, \newline 20:10:10, \newline \SI{150}{\kg\per\hectare} \\
+%                                     &&\\
+%      Diserbo                        & 29/3/2017 \newline mix\tnote{c}  & 30/3/2017 \newline GOAL\tnote{d} \newline 500\,ml\\
+%                                     &&\\
+%      Terza \newline concimazione    & 11/4/2017 \newline urea \newline \SI{150}{\kg\per\hectare} & assente\\
+%      \bottomrule
+%    \end{tabular}
+%    \footnotesize
+%    \begin{tablenotes}
+%    \item[a] la lavorazione applicata varia in base alla parcella (\autoref{fig:bioconvmod}).
+%    \item[b] fosfato biammonico
+%    \item[c] Axial (1\,l) + Axial Proto (250\,ml) + Logran
+%      (55\,g) (p.a. pinoxaden 6,4\,\%, p.a. cloquintocet-mexyl
+%      1,55\,\%, p.a. triasulfuron 20\,\%)
+%    \item[d] Oxifluorfen
+%    \end{tablenotes}
+%    \normal
+%  \end{threeparttable}
+%\end{table}
 
-Di seguito sono riportate 2 tabelle (\autoref{tab:seminaCampiBIO},
-\autoref{tab:seminaCampiCONV})
-che mostrano le colture seminate nell'anno precedente allo studio effettuato
+
+ \todo{pacini quale GOAL? 480, 240, 2xl}
+
+Di seguito è riportata la \autoref{tab:seminaCampi}
+che mostra le colture seminate nell'anno precedente allo studio 
+effettuato
 e quelle presenti durante il campionamento e anche la loro densità di semina;
  la prima tabella è relativa ai campi biologici (\acs{OO}02 e \acs{OO}04),
 la successiva i due campi convenzionali (\acs{CO}09 e \acs{CO}10).
 
-\begin{table}[ht]
-\caption[Colture seminate nell'anno 2016-2017 nei campi a biologico]
-{Colture seminate e rispettive densità, nei campi biologici,
-nell'anno 2016/2017. }
-\label{tab:seminaCampiBIO}
-\centering
-\small
- \begin{tabular}{p{4cm}p{4cm}p{4cm}}
-  \toprule
-                    & OO02                                                  & OO04                                                 \\
-   \midrule
-Coltura precedente      & \emph{Lens culinaris},\newline var. Val di Nevola & \emph{Cicer arietinum},\newline var. Pascià  \\
-Coltura seminata    & \emph{Heliantus annuus},\newline var. Solaris     & \emph{Hordeum vulgare},\newline var. Campagne\\
-Densità di semina   & \SI{190}{\kg\per\hectare}                         & \SI{190}{\kg\per\hectare}                    \\
-        \bottomrule
-  \end{tabular}
-  \normalsize
- \end{table}
-\FloatBarrier
-
-\begin{table}[ht]
-\caption[Colture seminate nell'anno 2016-2017 nei campi a convenzionale]
-{Colture seminate e rispettive densità, nei campi convenzionali,
-nell'anno 2016/2017.\\
+\begin{table}[h]
+\caption[Colture seminate nell'anno 2016-2017]
+{Colture seminate e rispettive densità nell'anno 2016/2017.\\
 * indica che la coltura in questione è stata trattata con Apron-xl (p.a
 metalaxil-m all'30,95\%).\\
 ** indica che la coltura in questione è stata trattata con Redigo
-(p.a. propiconazolo all’8,7\,\%).}
-\label{tab:seminaCampiCONV}
+(p.a. propiconazolo all’8,7\,\%).} 
+\label{tab:seminaCampi}
 \centering
 \small
  \begin{tabular}{p{4cm}p{4cm}p{4cm}}
   \toprule
-                    & CO09                                                 & CO10                                           \\
+                    & OO02                                              & OO04                                                 \\
    \midrule
-Coltura precedente      & \emph{Heliantus annuus},\newline var. Solaris*   & \emph{Hordeum vulgare}, var. Campagne**\\
+Coltura precedente  & \emph{Lens culinaris},\newline var. Val di Nevola & \emph{Cicer arietinum},\newline var. Pascià  \\
+Coltura seminata    & \emph{Heliantus annuus},\newline var. Solaris     & \emph{Hordeum vulgare},\newline var. Campagne\\
+Densità di semina   & \SI{190}{\kg\per\hectare}                         & \SI{190}{\kg\per\hectare}                    \\
+\midrule
+                    & CO09                                             & CO10                                           \\
+\midrule
+Coltura precedente  & \emph{Heliantus annuus},\newline var. Solaris*   & \emph{Hordeum vulgare}, var. Campagne**\\
 Coltura seminata    & \emph{Hordeum vulgare},\newline var. Campagne**  & \emph{Helianthus annuus}, var. Solaris*\\
 Densità di semina   & 75'000 piante\newline ad ettaro                  & 75'000 piante\newline ad ettaro        \\
         \bottomrule
   \end{tabular}
   \normalsize
  \end{table}
-\FloatBarrier
+% \FloatBarrier
 
 %
 %Nell’anno agrario 2016/2017 nel campo OO2 è stato coltivato il
@@ -2852,7 +2873,7 @@ presenti nello standard (\autoref{tab:Metili_campioni}).
 
 Questo è dovuto al fatto che il \acs{BAMEs}
 Mix in commercio non è specifico del suolo e quindi è mancante di
-alcuni acidi grassi presenti nell'habitat tellurico.
+alcuni acidi grassi presenti nell'ecosistema microbico del suolo.
 
 
 Invece, preso casualmente il cromatogramma di un campione (OO02C3) 
@@ -3084,6 +3105,7 @@ che la colonna cromatografica è stata accorciata di un paio di metri.
 \label{fig:cromAUTEST}
 \end{figure}
 \end{landscape}
+\info{dalila lavorazioni a confronto cromatog?}.
 
 % \begin{figure}[ht]
 % \centering
@@ -3422,14 +3444,21 @@ alle repliche di lavorazione entro campo e il risultato è mostrato in
 Anche la  \autoref{fig:starplot_medie} permette di notare una differenza
 tra le due stagioni, con un'estate avente una maggior abbondanza di
 \acs{PLFA} in tutte le combinazioni di gestione e lavorazione.
-Guardando poi gli starplot entro
-stagione vediamo che nel convenzionale l'assortimento di \acs{PLFA}
-è più esteso che nel biologico \todo{pantani è vero?}.
 
-Per quanto riguarda le lavorazioni vediamo che il rippato mostra
-sempre una quantità di \acs{PLFA} maggiore rispetto alle altre due lavorazioni,
+Guardando poi gli starplot entro
+stagione abbiamo che i composti identificati nei campi a gestione biologica
+e in quelli a gestione convenzionale sono gli stessi.
+Ovvero a livello
+qualitativo non c'è alcuna differenza tra le due gestioni:
+nessun \acs{BAMEs} ha massa pari a zero e solo il 2\,\%
+ha massa inferiore allo 0.01. Dunque la variabilità è legata solo alla
+quantità di massa che però rientra nella soglia di rivelabilita del
+GS-MS.
+
+Per quanto riguarda le lavorazioni vediamo che il rippato mostra a livello
+quantitativo dei valori maggiori rispetto alle altre due lavorazioni,
 tranne nel caso del biologico autunnale dove invece è il frangizollato a mostrare
-una maggiore quantità \info{pantani forse}.
+una maggiore quantità.
 
 \begin{figure}[h]
   \centering
@@ -3470,8 +3499,7 @@ una maggiore quantità \info{pantani forse}.
 %applicata la funzione logaritmica.
 
 L'analisi dei modelli lineari ha visto un primo approccio in cui si è
-tenuto conto di tutte le possibili interazioni \todo{pantani:tab significatività
-singole o solo confronto?} e vedendo che queste non erano
+tenuto conto di tutte le possibili interazioni e vedendo che queste non erano
 significative, come neanche %qualsiasi combinazione con
 la variabile gestione presa individualmente,
 è stato creato un modello più semplice, tenendo conto
@@ -3502,7 +3530,7 @@ lm.SommeMoli.2 <-
 
 df.xtabANOVAmarginali <-
 cbind.data.frame(
-    ## Modello =  c("log(Moli) ~ MAN * TIL * Stagione",
+    ## Modello =  c("log(Mol\info{dali) ~ MAN * TIL * Stagione",
     ##              "log(Moli) ~ Lavorazione + Stagione"),
         anova(lm.SommeMoli.1, lm.SommeMoli.2)
     )
@@ -3513,9 +3541,9 @@ cbind.data.frame(
            align  = "lllllll",
             caption =
                c("Confronto tra modelli marginali per la quantità di PLFA nel suolo. \\newline
-               Modello 1) con tutte le interazioni, \\emph{log(Moli) $~$ Gestione * Lavorazione * Stagione}; \\newline
-                Modello 2) \\emph{log(Moli) $~$ Lavorazione + Stagione}, questo risulta il più parsimonioso.\\newline",
-                "Confronto tra modelli 2 marginali per la quantità di PLFA nel suolo.")
+               Modello 1) con tutte le interazioni, \\emph{log(Moli) $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
+                Modello 2) \\emph{log(Moli) $\\sim$ Lavorazione + Stagione}, questo risulta il più parsimonioso.\\newline",
+                "Confronto tra due modelli  marginali per la quantità di PLFA nel suolo.")
 
  )
 print(xtabANOVAmarginali,
@@ -3534,40 +3562,29 @@ HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
 tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
 tuk.cld <- cld(tuk)
 @
-\info{pantani niente tilde...}
+
+
+
 <<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
+
 boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
         ylab = "log(somma moli PLFA)", xaxt="n",
-        main = ""
+        main = "", ylim= c(2.5,5.5)
         )
 labs <- levels(fattore)
-text(cex=0.8, x=(1:6), y=2.75, labs, xpd=TRUE, srt=45)
-
-#fattore <-
-#    interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
-
-
-#perFareMedie <- lis.tutto$SOMME$nMOLI
-
-#aggregate(perFareMedie, fattore, mean)
-
-#for(i in 1:6){
-#text(i, 6, aggregate(fattore, perFareMedie, mean)[i], cex=1)
-#}
-
+text(cex=0.8, x=(1:6), y=2.15, labs, xpd=TRUE, srt=45)
+testoMedie <-
+aggregate(log(lis.tutto$SOMME$nMOLI), 
+          by=list(fattore), 
+          function(x) as.character(round(mean(x),2))
+          )$x
+text(x=1:6, 
+     y=rep(c(2.7,3), each=3), 
+     testoMedie, cex=0.8)
 for(i in 1:6){
-text(i,5, tuk.cld$mcletters$Letters[i], cex = 1.5)
+text(i,5.3, tuk.cld$mcletters$Letters[i], cex = 1.5)
 }
 
-## altrofattore <-
-##     with(lis.tutto$CATEGORIA,
-##          interaction(MAN,TIL,STAGIONE)
-##          )
-
-## boxplot(log(lis.tutto$SOMME$nMOLI) ~ altrofattore,
-##         ylab = "log(somma moli PLFA)",
-##         main = "", col = c("lightgray", "yellow")
-##         )
 
 @
 
@@ -3596,7 +3613,8 @@ Dove:
 \end{samepage}
 \vspace*{2em}
 
-Effettuando il confronto \todo{pantani tab:ANOVAmarginali come inserisco ref?} si è visto che il
+Effettuando il confronto mostrato in \autoref{tab:ANOVAmarginali} 
+si è visto che il
 secondo modello è più parsimonioso del primo, infatti con 8 gradi
 libertà in meno si ha un \emph{p value} di %, dato dal confronto
 %tra i due modelli,
@@ -3622,7 +3640,6 @@ invece la gestione (\autoref{fig:boxplot_somma_moli}).
   \label{fig:boxplot_somma_moli}
 \end{figure}
 \FloatBarrier
-\info{pantani verificare p}
 
 Osserviamo in \autoref{fig:boxplot_somma_moli} che l'estate,
 rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
@@ -3630,16 +3647,16 @@ lavorazioni, una media superiore rispetto alle tre autunnali.
 
 Inoltre si vede bene che l'estate presenta una maggior varianza 
 rispetto all'autunno.
-\todo{uffi inserire media
-  box}%; in questo grafico non è stata considerata la
+%; in questo grafico non è stata considerata la
 % Gestione dopo aver dimostrato, con il modello lineare che non era
 % significativa.
 
-Guardando invece entro stagione vediamo che il rippato, in entrambe 
+
+Guardando invece entro stagione vediamo che il rippato, in entrambe
 le stagioni, è quello avente
 una media maggiore rispetto alle altre due lavorazioni, con
-\todo{ valori} un valore di... in autunno e un valore pari a
-... in estate.
+ un valore di log() pari a 3,74 in autunno e un log() pari a
+4,47 in estate.
 
 Dopo aver applicato il Tukey test (si hanno i coefficienti risultanti
 sopra i boxplot), si può notare come non siano state trovate
@@ -3735,6 +3752,7 @@ coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
 legend(0.25,1, box.col = "transparent", cex = 1.5,
        legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
 text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
+points(x=-0.75, y=1.10, pch=1, col=1, cex=4)
 @
 
 <<FigPCAcomposizionale_2, eval = FALSE, echo = FALSE, results = hide>>=
@@ -3780,9 +3798,10 @@ Possiamo quindi vedere in  \autoref{fig:PCA_composiz} una ripartizione dei
 72 campioni secondo l'asse delle ascisse, rappresentante la prima 
 componente, mentre non c'è alcuna ripartizione sulle ordinate. 
 Osservando le etichette vediamo che la
-prima componente separa quasi perfettamente le due stagioni (si ha un
-solo outlier, un autunnale che si trova in alto a sinistra nella
-colonna degli estivi) \info{pantani coordinate?}.  Invece guardando i colori, dunque le
+prima componente separa quasi perfettamente le due stagioni\footnote{Si ha 
+un solo outlier, un autunnale che si trova nelle colonna degli 
+estivi, con coordinate x=-0,75, y=1,10, evidenziato con un cerchio nero.}. 
+Invece guardando i colori, dunque le
 lavorazioni, e le due gestioni, indicate con le lettere maiuscole "C"
 e "O", non vediamo alcuna netta separazione.
 
@@ -4079,7 +4098,7 @@ agronomiche.}
 
 \caption[cluster2]{cluster2}
   \label{fig:clusterIndividui_2}
-\end{figure}
+\end{figure}ANOVAmarginali
 \FloatBarrier
 
 Anche tramite l'ausilio del cluster (\autoref{fig:clusterIndividui_1}),
@@ -4100,7 +4119,8 @@ significativa sono stati effettuati due modelli più semplici: uno
 considerando le singole variabili e le interazioni a coppie e 
 un'altro con le singole variabili senza interazioni.
 
-Effettuando il confronto \todo{tab:ANOVAmarginali?} si è visto che
+Effettuando il confronto mostrato in \autoref{tab:ANOVAmargAcomp} 
+si è visto che
  il secondo modello risulta essere più parsimonioso del primo, infatti con
 2 gradi libertà in più il valore del \emph{p value} è di 0,44 e quindi
  è da preferire, mentre il terzo è da escludere poiché
@@ -4155,10 +4175,10 @@ xtabANOVAmargAcomp <-
            align  = "lllllllll",
             caption =
                c("Confronto tra modelli marginali per la composizione di PLFA nel suolo. \\newline
-               modello 1) \\emph{Composizione $~$ Gestione * Lavorazione * Stagione}; \\newline
- modello 2) \\emph{Composizione $~$ Gestione + Lavorazione + Stagione + Gestione:Stagione + Gestione:Lavorazione + Stagione:Lavorazione};\\newline
-               modello 3) \\emph{Composizione $~$ Gestione + Lavorazione + Stagione}. Il più parsimonioso risulta essere il modello 2.",
-               "Confronto tra 3 modelli marginali per la composizione di PLFA nel suolo.")
+               modello 1) \\emph{Composizione $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
+ modello 2) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione + Gestione:Stagione + Gestione:Lavorazione + Stagione:Lavorazione};\\newline
+               modello 3) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione}. Il più parsimonioso risulta essere il modello 2.",
+               "Confronto tra tre modelli marginali per la composizione di PLFA nel suolo.")
 )
 print(xtabANOVAmargAcomp,
       include.rownames=TRUE,
@@ -4483,15 +4503,14 @@ dev.off()
 
 \section{Cromatografia}
 
-Il metodo di estrazione
-e purificazione di
+Il metodo di estrazionee purificazione di
 \citet{bligh_rapid_1959} \cite{white_determination_1979,
   bossio_determinants_nodate} e il metodo cromatografio applicato
 sono risultati validi a determinare i \acs{PLFA} di membrana dei 
 microrganismi del suolo.
 
 Dal confronto tra i cromatogrammi in uscita dal GC-MS (\autoref{fig:cromSTD_CONV}) 
-e quanto scritto in letteratura vediamo che sono stati trovati 
+e ciò che è scritto in letteratura vediamo che sono stati trovati 
 quasi tutti i metilesteri identificativi dei 6 gruppi microbici
 presi in esame (\autoref{tab:GruppiMicrobici}). 
 Abbiamo infatti identificato 37 \acs{BAMEs}, di cui 17 risultano 
@@ -4531,7 +4550,13 @@ effettuate in ambiente agrario,
  a livello cromatografico (\autoref{fig:cromCONV} e
 \autoref{fig:cromBIO}), non notiamo alcuna differenza tra le due 
  gestioni attuate. 
-\info{dalila lavorazioni a confronto cromatog?}.
+ 
+ Anche i cromatogrammi rappresentanti le tre lavorazioni prese in esame
+ (\autoref{fig:cromLAV}) non mostrano una grande differenza.
+ I picchi identificati sono i medesimi in tutte e tre le lavorazioni, 
+ magari con intensita poco differente, ma niente di significativo.
+ 
+
 
 
 %Però sono stati identificati anche dei \acs{BAMEs} in più (\autoref{tab:Metili_in_più} 
@@ -4592,8 +4617,8 @@ Abbiamo per prima cosa utilizzato il rapporto tra la molecola ciclica
 C19:0$\Delta$ e il suo precursore, poiché in letteratura è ritenuto 
 significativo per evidenziare effetti legati alla lavorazione e gestione;  
 abbiamo anche osservato i rapporti tra i Gram-negativi / Gram-positivi
-in quanto sono considerati utili per vedere alterazioni nell'habitat
-tellurico in seguito a gestioni differenti.
+in quanto sono considerati utili per vedere alterazioni nella comunità 
+microbica tellurica in seguito a gestioni differenti.
 Osservando i relativi boxplot ottenuti da questi rapporti  (\autoref{fig:RapportiTILL} e 
 \autoref{fig:RapportiMAN}) vediamo che non c'è alcuna differenza dovuta
 alla gestione e alla lavorazione applicata.
@@ -4639,8 +4664,8 @@ differenti risposte dei \acs{PLFA} dovute ai diversi usi del suolo.
 Spesso però questi \info{dalila trova più biblio, rispulcia}
 studi vedono un paragone tra suoli adibiti alla pratica agricola
 con altri gestiti a bosco \cite{zhang2016} o studi dove si confronta 
-l'habitat tellurico
-di diverse colture forestali \cite{Massaccesi15, frosteg1993}
+l'ecosistema tellurico
+in diverse gestioni forestali \cite{Massaccesi15, frosteg1993}
 
 I differenti risultati ottenuti sono ipoteticamente dovuti 
 alla diversa abbondanza e tipologia di lettiera presente nel suolo, 
@@ -4748,7 +4773,7 @@ una differenze significativa ma non è di facile interpretazione, poiché
 \chapter{Conclusioni}
 
 Con questo lavoro ci eravamo proposti di determinare eventuali variazioni
-nell'habitat tellurico in ambiente agrario in seguito a 2 diverse gestioni
+nella comunità microbica tellurica in ambiente agrario in seguito a 2 diverse gestioni
  (biologico e convenzionale) e a 3 differenti lavorazioni primarie (aratura,
   rippatura e frangizollatura), tenendo anche conto della stagionalità (estate e 
   autunno).
@@ -4857,7 +4882,7 @@ della pianta.
 \begin{appendices}
 %\chapter*{{\fontsize{9mm}{11mm}\selectfont Tabelle e figure}}
 
-\chapter*{Tabelle e figure}
+\chapter{Tabelle e figure}
 
 
 <<label = qqplotANOVAmoli, echo=FALSE, eval = TRUE, fig=TRUE, include = FALSE>>=
@@ -4938,7 +4963,7 @@ Ordine di uscita & Nome in R        &Peso molecolare
 
 %\chapter*{{\fontsize{9mm}{11mm}\selectfont Acronimi e sigle}}
 
-\chapter*{Acronimi e sigle}
+\chapter{Acronimi e sigle}
 
 \begin{acronym}[WYSIWYM]
 \acro{A, R, F}[A, R, F]{Parcella dove è stata effettuata l'Aratura, la 
