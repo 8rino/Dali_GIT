@@ -1816,7 +1816,10 @@ gruppo di sperimentazioni europee a lunga durata
 (LTE: \emph{Long Term Experiment}) della Società
 Internazionale di Ricerca sull’Agricoltura Biologica (ISOFAR). 
 è nato da un accordo tra l’azienda
-Montepaldi e il DISAT (attuale DISPAA, Università degli studi di Firenze), 
+Montepaldi e il DISAT (Dipartimento di Scienze Agronomiche e Gestione del
+Territorio Agroforestale; attuale DISPAA, Dipartimento di 
+Scienze delle Produzioni Agroalimentari e dell'Ambiente, 
+Università degli studi di Firenze), 
 stipulato nel 1989. 
 Il fine del progetto MoLTE è quello di
 valutare, sul lungo periodo, sistemi di gestione alternativi a quello 
@@ -1836,12 +1839,12 @@ integrato.
 Dal 1993 al 1998 è stato finanziato dall’Unione Europea e dal 2015 è entrato 
 a far parte del progetto Fertilcrop Horizon 2020, a cui partecipano 
 oltre 20 partners europei (\autoref{fig:fertilcrop}).
-Tale progetto -oltre a sviluppare tematiche di gestione efficienti e 
+Tale progetto --oltre a sviluppare tematiche di gestione efficienti e 
 sostenibili per l'incremento della produttività dei sistemi a 
-conduzione biologica- si interessa dell’interazione tra la coltura, 
+conduzione biologica-- si interessa dell’interazione tra la coltura, 
 le infestanti e i macro e microrganismi del suolo.
 \begin{landscape}
-\begin{figure}[h]
+\begin{figure}[]
 \centering
 \includegraphics[scale=0.4]{./foto/fertilcrop.png}
 \caption[Elenco dei 21 partners del progetto Fertilcrop]
@@ -1866,7 +1869,7 @@ media annuale è di 14,1\,°C con massime in estate, anche superiori a
 
 Dal punto di vista pedologico, il suolo deriva da sedimenti pliocenici
 di tipo conglomeratico con presenza di lenti sabbiose e argillose e da
-sedimenti trasportati dal fiume Pesa. Ha una pendenza del \todo{pacini?}\% e
+sedimenti trasportati dal fiume Pesa. \'E in lieve pendenza e ha
 tessitura limo-argillosa/argillosa con scheletro
 di piccole e medie dimensioni \citep{DISPAA}.
 
@@ -1912,8 +1915,8 @@ biologico nuovo e il convenzionale sono separati da una striscia
 inerbita di 8\,. Il biologico vecchio prevede anche una siepe
 artificiale di 6\,m di larghezza più 4\,m di striscia inerbita,
 che lo separa dai campi adiacenti. Questa è stata piantata agli inizi
-del 1990 dal DISAT (Dipartimento di Scienze Agronomiche e Gestione del
-Territorio Agroforestale) con l’aiuto del WWF ed è formata da specie
+del 1990 dal DISAT  
+con l’aiuto del WWF ed è formata da specie
 autoctone.  Infine una viottola di 4\,m separa i campi OO1
 e OO2 dagli OO3 e OO4. Tali campi sono coltivati dal 2001
 seguendo la rotazione:
@@ -2109,10 +2112,9 @@ Terza \newline concimazione    & 11/4/2017 \newline urea \newline \SI{150}{\kg\p
 %\end{table}
 
 
- \todo{pacini quale GOAL? 480, 240, 2xl}
-
 Di seguito è riportata la \autoref{tab:seminaCampi}
-che mostra le colture seminate nell'anno precedente allo studio 
+che mostra
+ le colture seminate nell'anno precedente allo studio 
 effettuato
 e quelle presenti durante il campionamento e anche la loro densità di semina;
  la prima tabella è relativa ai campi biologici (\acs{OO}02 e \acs{OO}04),
@@ -2556,10 +2558,21 @@ procedura. Per questo motivo, oltre ad aver utilizzato tale Mix per
 costruire la curva di taratura e permettere quindi l’analisi
 quantitativa, è stato usato uno standard di fosfolipide, quale la
 fosfatidilcolina, così da effettuare una prova di validazione della
-procedura di analisi. \todo{calamai validazione}
-Una quantità nota di fosfatidilcolina è stata presa e iniettata in un
-suolo già estratto, sul quale successivamente sono state ripetute e
-controllate le tre fasi di estrazione, purificazione e derivatizzazione.
+procedura di analisi. 
+
+Una quantità nota di fosfatidilcolina, 2,60\,µg --valore 
+ottenuto sommando tutte le moli dei BAMEs individuati in un campione 
+Mix e moltiplicando poi per il PM della fosfatidilcolina--, è stata
+sciolta in 2,6ml di \ce{CHCl3}.
+Di questa soluzione a 1000\,ppm sono stati iniettati tre valori noti --26\,µl,
+50\,µl e 100\,µl-- in tre vial contenenti un grammo di suolo preso 
+dal campione Soil Mix 2017. Ogni campione è stato fatto in doppio, così da 
+ottenere 6 vial e a queste sono stati 
+aggiunti due bianchi senza il fosfolipide e senza suolo e altri due 
+contenenti solamente il grammo di terreno ma senza lo standard. 
+Su questi dieci campioni ottenuti sono state 
+validate le tre fasi di estrazione, purificazione e 
+derivatizzazione. \info{correggi validazione}
 
 %\subsection{{\fontsize{5mm}{7mm}\selectfont Metodo cromatografico}}
 
@@ -2693,9 +2706,9 @@ Gram-N & Gram-P & Attinomiceti & Funghi & Protozoi & Micorrize \\
   C16:1$\omega$7      & 12MeC14:0    & 10MeC17:0 & C18:1$\omega$9    & C20:2         & C16:1$\omega$5 \\
   C16:1$\omega$5      & 13MeC15:0    & 10MeC18:0 & C18:1$\omega$7cis & C20:2cis11,14 &                \\
   C17:0$\Delta$       & 12MeC15:0    &           & C18:2             &               &                \\
-  C17:0$\omega$9      & 14MeC16:0    &           &                   &  			 &			      \\
-  C18:1$\omega$9      & 15MeC17:0    &           &                   &               &                \\
-  C18:1$\omega$7cis   & 14MeC17:0    &           &                   &               &                \\
+  C17:0$\omega$9      & 15MeC17:0    &           &                   &  			 &			      \\
+  C18:1$\omega$9      & 14MeC17:0    &           &                   &               &                \\
+  C18:1$\omega$7cis   &              &           &                   &               &                \\
   C19.0$\Delta$       &              &           &                   &               &                \\
    \hline
 \end{tabular}
@@ -2855,8 +2868,7 @@ e quindi stessa
 distanza dal fiume Pesa (replica numero 1), ma che hanno subito 
 lavorazioni differenti (\autoref{fig:cromLAV}). Vediamo i 
 medesimi picchi, magari con intensità un po' differente, ma niente
-di significativo. \info{dalila: ok?! nei crom nomi "giusti" dei boh}
-
+di significativo. 
 
 
 \begin{landscape}
@@ -2869,8 +2881,8 @@ di significativo. \info{dalila: ok?! nei crom nomi "giusti" dei boh}
 \subfloat[][ Soil Mix estivo.]
 { \includegraphics[scale=0.45]{./foto/mix_soil_estate2.png} \label{rif:c1}}
 \qquad
-\caption[3 cromatogrammi che confrontano il BAMEs standard 100 e i due Soil Mix]
-{I 3 cromatogrammi presentano dei codici alfanumerici che stanno ad indicare i
+\caption[Tre cromatogrammi che confrontano il BAMEs standard 100 e i due Soil Mix]
+{I tre cromatogrammi presentano dei codici alfanumerici che stanno ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
 in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
@@ -2891,7 +2903,8 @@ la corsa cromatografica.}
 \begin{landscape}
 \begin{table}[]
 \centering
-\caption{Metilesteri presenti nei campioni ma non nel BAMEs Mix.\\
+\caption[Metilesteri presenti nei campioni ma non nel BAMEs Mix]
+{Metilesteri presenti nei campioni ma non nel BAMEs Mix.\\
 \emph{Me} indica Metile e \emph{Et} Etile. }
 \label{tab:Metili_campioni}
 \begin{tabular}{llccc}
@@ -2903,7 +2916,7 @@ Nome MassHunter & Metilesteri & Peso molecolare & RT autunnale & RT estivo\\
 12-MeC16:0         & Metil-12-metilpentadecanoato  & 270 & 18.05& 17.49\\
 10-MeC17:0         & Metil-10-metilesadecanoato    & 284 & 19.04& 18.47\\ 
 13-EtC17:0         & Etil-13-metilpentadecanoato    & 284 & 20.24& 19.67\\
-??-MeC17:0         & Metil-qualcosa3-metilesadecanoato    & 284 & 20.40& 19.87\\
+12-EtC17:0         & Etil-12-metilesadecanoato    & 284 & 20.40& 19.87\\
 C16:1$\omega$5     & Metil cis-11-esadecenoate            & 268 & 20.59& 20.01\\
 a-C17:0            & Metil-14-metilesadecanoato           & 284 & 21.18& 20.58\\
 10Me C18:0         & Metil-10-metileptadecanoato          & 298 & 21.40& 20.81\\
@@ -2911,8 +2924,8 @@ a-C17:0            & Metil-14-metilesadecanoato           & 284 & 21.18& 20.58\\
 C17:1$\omega$9     & Metil cis-8-metilene eptadecenoato   & 282 & 23.33& 22.71\\
 17Me-C19:0         & Metil-17-metiloctadecanoato    & 312 & 24.94& 24.39\\
 %??Me-C18:1         & Metil qualcosa-octadecenoato         & 296 & 25.50& 25.00\\
-C20:2              & metil cis-11,14-eicosenoato          & 322 & 30.82& 30.51\\
-C20:2              & metil cis-11,14-eicosenoato          & 322 & 33.01& 32.92\\
+C20:2              & metil eicosenoato               & 322 & 30.82& 30.51\\
+C20:2 11,14        & metil cis-11,14-eicosenoato          & 322 & 33.01& 32.92\\
    \hline
 \end{tabular}
 \end{table}
@@ -2933,8 +2946,8 @@ C20:2              & metil cis-11,14-eicosenoato          & 322 & 33.01& 32.92\\
 %{ \includegraphics[scale=0.4]{./foto/autunnale_co9c3.png}} \\
 %\subfloat[][Campione convenzionale, frangizollato, appezzamento 10.]
 %{ \includegraphics[scale=0.4]{./foto/autunnale_co10c3.png}}
-\caption[2 cromatogrammi rappresentanti dei campioni autunnali biologici]
-{I 2 cromatogrammi autunnali biologici presentano dei codici 
+\caption[Due cromatogrammi rappresentanti dei campioni autunnali biologici]
+{I due cromatogrammi autunnali biologici presentano dei codici 
 alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
 in  \autoref{tab:PM_PLFA} in appendice. 
@@ -2962,8 +2975,8 @@ gli specifici ioni.
 { \includegraphics[scale=0.45]{./foto/autunnale_co9c3.png}} \\
 \subfloat[][Campione convenzionale, frangizollato, appezzamento 10.]
 { \includegraphics[scale=0.45]{./foto/autunnale_co10c3.png}}
-\caption[2 cromatogrammi rappresentanti dei campioni autunnali convenzionali]
-{I 2 cromatogrammi autunnali convenzionali presentano dei codici alfanumerici ad indicare i
+\caption[Due cromatogrammi rappresentanti dei campioni autunnali convenzionali]
+{I due cromatogrammi autunnali convenzionali presentano dei codici alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
 in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
@@ -2984,11 +2997,11 @@ poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 \begin{figure}
 \centering
 \subfloat[][Campo biologico, arato, appezzamento 1.]
-{ \includegraphics[scale=0.30]{./foto/aratocrom.png} \label{rif:a}} \\
+{ \includegraphics[scale=0.40]{./foto/aratocrom.png} \label{rif:a}} \\
 \subfloat[][ Campo biologico, frangizollato, appezzamento 1.]
-{ \includegraphics[scale=0.30]{./foto/frangizocrom.png} \label{rif:b}} \\
+{ \includegraphics[scale=0.40]{./foto/frangizocrom.png} \label{rif:b}} \\
 \subfloat[][ Campo biologico, rippato, appezzamento 1.]
-{ \includegraphics[scale=0.30]{./foto/rippatocrom.png} \label{rif:c}}
+{ \includegraphics[scale=0.40]{./foto/rippatocrom.png} \label{rif:c}}
 \qquad
 \caption[Confronto cromatografico delle tre lavorazioni]
 {I 3 cromatogrammi presentano dei codici alfanumerici che stanno ad 
@@ -3042,9 +3055,9 @@ in accordo con quanto riportato in bibliografia:
 tali microrganismi vogliono una temperatura superiore ai 20\,°C 
 \cite{Florenzano}; 
 mentre in
-estate sono mancanti 4 dei 6 metilesteri dei Gram-negativi (uno di
-questi è quello comune con le micorrize -C16:1$\omega$5- e uno con i 
-funghi -C18:1$\omega$7cis-);
+estate sono mancanti 4 dei 7 metilesteri dei Gram-negativi (uno di
+questi è quello comune con le micorrize --C16:1$\omega$5-- e uno con i 
+funghi --C18:1$\omega$7cis--);
 %(\autoref{tab:GruppiMicrobici}) 
  anche in questo caso otteniamo risposte
 combacianti con la letteratura, la quale afferma che i batteri sono 
@@ -3092,7 +3105,7 @@ lavorazioni; notiamo qualche differenza solo stagionale.
 { \includegraphics[scale=0.45]{./foto/autunnale_co10c3.png}}\\
 \subfloat[][Campione convenzionale, frangizollato, appezzamento 10, estivo.]
 { \includegraphics[scale=0.45]{./foto/estivo_c10c3.png}}
-\caption[Confronto tra un autunnale e un estivo]
+\caption[Confronto tra un campione autunnale e uno estivo]
 {I 2 cromatogrammi presentano dei codici alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
 in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
@@ -3187,19 +3200,29 @@ riscontrabile è legata alla stagione.
 <<FigRapportiTILL, fig=TRUE, fig.width = 0.6, fig.height = 0.6, echo=FALSE, include = FALSE, results = hide >>=
 
 NumeratoreMoli <- lis.tutto$PLFA$nMOLI$C.00CycC19.0
-DenominatoreMoli <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1.omega9t&omega7cis`
+DenominatoreMoli <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1`
 
 RapportoAnaerobiosiMoli <- NumeratoreMoli/DenominatoreMoli
 
 fattore <-interaction(lis.tutto$CATEGORIA$MAN, lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
+
 
 boxplot(RapportoAnaerobiosiMoli ~ fattore,
         ylab = "", xaxt="n",
         main = ""
         )
 labs <- levels(fattore)
-text(cex=0.7, x=(1:12), y=-0.05, labs, xpd=TRUE, srt=90)
+text(cex=0.7, x=(1:12), y=-0.15, labs, xpd=TRUE, srt=90)
 
+amod <-
+    aov(log(lis.tutto$SOMME$nMOLI) ~ fattore)
+HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
+tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
+tuk.cld <- cld(tuk)
+
+for(i in 1:12){
+text(i,1.35, tuk.cld$mcletters$Letters[i], cex = 1.5)
+}
 
 @
 
@@ -3544,7 +3567,7 @@ cbind.data.frame(
                c("Confronto tra modelli marginali per la quantità di PLFA nel suolo. \\newline
                Modello 1) con tutte le interazioni, \\emph{log(Moli) $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
                 Modello 2) \\emph{log(Moli) $\\sim$ Lavorazione + Stagione}, questo risulta il più parsimonioso.\\newline",
-                "Confronto tra due modelli  marginali per la quantità di PLFA nel suolo.")
+                "Confronto tra due modelli  marginali per la quantità di PLFA nel suolo")
 
  )
 print(xtabANOVAmarginali,
@@ -3950,7 +3973,7 @@ par(mfrow = c(2,3))
 <<FigPCAcomposizionale_gruppiMicrobo>>
 @
 
-\caption[6 plot, 1 per ogni gruppo microbico] 
+\caption[Sei plot, uno per ogni gruppo microbico] 
 {\acs{PCA} composizionali delle 
 moli dei gruppi microbici presi in esame. }
   \label{Fig: PCAcomposizionale_gruppiMicrobo}
@@ -4188,7 +4211,7 @@ xtabANOVAmargAcomp <-
                modello 1) \\emph{Composizione $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
  modello 2) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione + Gestione:Stagione + Gestione:Lavorazione + Stagione:Lavorazione};\\newline
                modello 3) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione}. Il più parsimonioso risulta essere il modello 2.",
-               "Confronto tra tre modelli marginali per la composizione di PLFA nel suolo.")
+               "Confronto tra tre modelli marginali per la composizione di PLFA nel suolo")
 )
 print(xtabANOVAmargAcomp,
       include.rownames=TRUE,
@@ -4520,7 +4543,9 @@ Il metodo di estrazione e purificazione di Blight \& Dyer, con le
 successive modificazioni \cite{bligh_rapid_1959, white_determination_1979,
   bossio_determinants_nodate} e il metodo cromatografo applicato
 sono risultati validi a determinare i \acs{PLFA} di membrana dei 
-microrganismi del suolo.
+microrganismi del suolo. Con la prova di validazione abbiamo osservato che
+tale metodo comporta una perdita di informazione del \todo{valori validazione}.
+
 
 Dal confronto tra i cromatogrammi in uscita dal \acs{GC-MS} (\autoref{fig:cromSTD_CONV}) 
 e ciò che è scritto in letteratura vediamo che sono stati trovati 
@@ -4532,7 +4557,10 @@ Gli unici markers specifici non trovati, rispetto alla letteratura,
 sono: il 10Me-C16:0
 (\emph{Metil-10-metilpentadecanoate}) identificativo
 secondo \citet{zelles_fatty_1999, kong_microbial_2012,
-  hamer_rhizosphere_2008} degli attinomiceti e il C18:3$\omega$6 e il
+  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0 
+  (\emph{Metil-14-metilpentadecanoate}) identificativo dei Gram-positivi 
+  secondo \citet{bossio_determinants_nodate, kong_microbial_2012} 
+  e il C18:3$\omega$6 e il
 C20:4$\omega$6, markers dei funghi secondo
 \citet{ovreas_population_2000}.
 
@@ -4595,7 +4623,7 @@ Metil-9-metilpentadecanoato  &   270  \\
 Metil-12-metilpentadecanoato  &   270  \\
 Metil-10-metilesadecanoato    &   284  \\
 Etil-13-metilpentadecanoato    &   284  \\
-Metil-qualcosa3-metilesadecanoato    &   284  \\
+Etil-12-metilesadecanoato    &   284  \\
 Metil-15-metileptadecanoato    &   298  \\
 Metil-17-metiloctadecanoato    &   312  \\
 %Metil qualcosa-octadecenoato         &   296  \\
@@ -4603,8 +4631,7 @@ Metil-17-metiloctadecanoato    &   312  \\
 \end{tabular}
 \end{table}
 %\FloatBarrier
-\todo{7mec17 diventa 10me e l' i c16 a c16 e poi separa i tre c18:1}
-\info{13etile!!!}
+
 Di questi composti è stata tentata un'identificazione
 tramite interpretazione degli spettri. È stato utilizzato il 
 peso molecolare e alcuni ioni caratteristici per definire il gruppo di 
@@ -4623,7 +4650,7 @@ vediamo due molecole sconosciute entrambe isomeri del esadecanoate,
 in quanto hanno peso molecolare 284 e i tipici ioni 74, 84.
 
 Il primo composto incognito (Figura \ref{rif:bs}) è stato da noi identificato come
-il 13 Etil C17 questo perchè il primo salto è dato da 284-241, ovvero 
+il 13 Etil C17 questo perché il primo salto è dato da 284-241, ovvero 
 si stacca un frammento di 43; ipoteticamente questo potrebbe essere
 dovuto alla perdita di un \ce{CH3} e due \ce{CH2}. Lo ione 241 
 spiegherebbe il punto di ramificazione. Il successivo ione ben evidente è
@@ -4645,14 +4672,14 @@ del C terziario.
 \begin{landscape}
 \begin{figure}
 \centering
-\subfloat[][Spettro del Metil eptadecanoato al minuto 21.94.]
-{ \includegraphics[scale=0.45]{./foto/spettroc17lineare.png} \label{rif:as}} \\
-\subfloat[][Spettro dell'ipotetico 13 Etil Pentadecanoate al minuto 20.249.]
-{ \includegraphics[scale=0.45]{./foto/c17ramific.png} \label{rif:bs}} \\
+\subfloat[][Spettro del Metil eptadecanoato al minuto 21.93.]
+{ \includegraphics[scale=0.35]{./foto/spettroc17lineare.png} \label{rif:as}} \\
+\subfloat[][Spettro dell'ipotetico 13 Etil Pentadecanoate al minuto 20.273.]
+{ \includegraphics[scale=0.35]{./foto/20273.png} \label{rif:bs}} \\
 \subfloat[][Spettro dell'ipotetico 10 Metil Esadecanoate al minuto 19.016.]
-{ \includegraphics[scale=0.45]{./foto/10metc17.png} \label{rif:cs}}
+{ \includegraphics[scale=0.35]{./foto/19016.png} \label{rif:cs}}
 \qquad
-\caption[3 spettri di tre \ce{C18H36O2}]
+\caption[Tre spettri di tre isomeri del \ce{C18H36O2}]
 {}
 \label{fig:c17}
 \end{figure}
@@ -4666,7 +4693,7 @@ successivi metil esteri sconosciuti.
 
 Naturalmente i nomi da noi attributi presenti in \autoref{tab:Metili_in_più} 
 sono solamente ipotetici, visto che non eravamo in possesso di alcun
-standard per poter effettuare un'identificazione più accurata(?).
+standard per poter effettuare un'identificazione più accurata.
 
 
 
@@ -4701,8 +4728,8 @@ inquinante di laboratorio  (\autoref{fig:spettro126}).
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.35]{./foto/unk126qualit.png}
-\caption[4 cromatogrammi con ione specifico 126]
-{I 4 cromatogrammi sono di un campione e di 3 bianchi. Tutti mostrano
+\caption[Quattro cromatogrammi con ione specifico 126]
+{I quattro cromatogrammi sono di un campione e di 3 bianchi. Tutti mostrano
 al tempo 22.87 un picco, riconosciuto poi come un inquinante di laboratorio.}
 \label{fig:unk126}
 \end{figure}
@@ -4722,7 +4749,7 @@ stato possibile riconoscerlo tramite la \emph{NIST14}.
 Siamo giunti ad afferare che lo ione 126 potrebbe essere dovuto da un 
 anello fenolo legato ad una molecola di S, che fa da ponte ad una 
 catena di peso 84, 
-per arrivare al peso molecolare 210. \info{interpreter 126}
+per arrivare al peso molecolare 210. 
 La teoria dell'anello fenolico è in accordo con la posizione di tale 
 composto nel 
 cromatogramma data la sua polarità; ma non siamo certi che sia proprio un 
@@ -4738,13 +4765,14 @@ inquinato.}
 \label{fig:clusterunk126camp}
 \end{figure}
 \FloatBarrier
-\info{migliora immagini}
+
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.22]{./foto/clusterS.png}
-\caption[Ingrandimento del cluster dello ione 126 ottenuto dal MS Interpreter]
-{Ingrandimento del cluster dello ione 126 ottenuto dal MS Interpreter.}
+\caption[Ingrandimento del cluster dello ione 126 ottenuto dal 
+\emph{MS Interpreter}]
+{Ingrandimento del cluster dello ione 126 ottenuto dal \emph{MS Interpreter}.}
 \label{fig:clusterS}
 \end{figure}
 \FloatBarrier
@@ -4770,7 +4798,7 @@ octadecenoati dal minuto 25 al 25.5.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{./foto/c18:1.png}
+\includegraphics[scale=0.37]{./foto/c18:1.png}
 \caption[Sequenza dei tre picchi rappresentanti i tre octadecenoati]
 {Sequenza dei tre picchi rappresentanti i tre octadecenoati.}
 \label{fig:c18:1}
@@ -5004,8 +5032,7 @@ dovuta alle interazioni tra i vari fattori.
 %\chapter{{\fontsize{9mm}{11mm}\selectfont Conclusioni}}
 
 \chapter{Conclusioni}
-\info{aggiungere che simili quantità ma forse diversa biodiversità dei plfa}
-\info{modifica tutti i nomi in piu e gli octadecen}
+
 Con questo lavoro ci eravamo proposti di determinare eventuali variazioni
 nella comunità microbica tellurica in ambiente agrario in seguito a due diverse gestioni
  (biologico e convenzionale) e a tre differenti lavorazioni primarie (aratura,
@@ -5047,7 +5074,10 @@ zelles_fatty_1999, kong_microbial_2012, frost&baat96}, tranne il
 10Me-C16:0
 (\emph{Metil-10-metilpentadecanoate})  identificativo
 secondo \citet{zelles_fatty_1999, kong_microbial_2012,
-  hamer_rhizosphere_2008} degli attinomiceti e il C18:3$\omega$6 e il
+  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0 
+  (\emph{Metil-14-metilpentadecanoate}) identificativo dei Gram-positivi 
+  secondo \citet{bossio_determinants_nodate, kong_microbial_2012}
+   e il C18:3$\omega$6 e il
 C20:4$\omega$6, markers dei funghi secondo
 \citet{ovreas_population_2000}.
 
@@ -5089,13 +5119,21 @@ atti a monitorare l'andamento della comunità tellurica entro una medesima
 stagione e/o entro un unico ciclo colturale.
 Sarebbe quindi interessante osservare 
 come l'habitat microbico possa rispondere alle varie lavorazioni 
-effettuate -dalla preparazione
-del letto di semina alla raccolta- campionando prima e dopo ogni 
+effettuate --dalla preparazione
+del letto di semina alla raccolta-- campionando prima e dopo ogni 
 operazione
 meccanica e chimica e durante le varie fasi di crescita 
 della pianta.
 
-
+Inoltre, con il metodo dei PLFA da noi adottato, è stato possibile affermare 
+che nei campi a gestione convenzionale e a conduzione biologica da noi 
+analizzati e anche nelle parcelle soggette ale tre lavorazioni ci sono gli 
+stessi gruppi microbici e all'incira nelle stesse quantità. 
+Ma non sappiamo con esattezza quali individui abbiamo trovato, ovvero
+se sono benefici o nocivi per le colture e non abbiamo informazione alcuna 
+sul grado di biodiversità. 
+Per avere un quadro più completo consiglierei di proseguire gli studi
+applicando anche l'analisi PCR.
 
 %Il metodo è valido è stata trovato anche più roba, ma non è stata riscontrata
 %una classificazione come ci si aspettava. probabilmente perchè il metodo
@@ -5157,14 +5195,14 @@ Ordine di uscita & Nome in R        &Peso molecolare
 5	& 9Me C16:0	                           &270	&Metil-9-metilpentadecanoato	                \\
 6	& C15:0	                               &256	&\emph{Metil pentadecanoato}		\\
 7	& 12Me C16:0                    	   &270	&Metil-12-metilpentadecanoato	\\
-8	& i-C16:0    	                       &270	&\emph{Metil-14-metilpentadecanoato}	\\
+8	& a-C16:0    	                       &270	&\emph{Metil-13-metilpentadecanoato}	\\
 9	& 10Me C17:0                           &284	&Metil-10-metilesadecanoato	\\
 10	& C16:0     	                       &270	&\emph{Metil palmitato}		\\
 %12	& bohMe C17:0 sul 284              	   &284    &	\\
 11	& 13Et C17:0                    	   &284	&Etil-13-metilesadecanoato	\\
 12  & C16:1$\omega$7                       &268	&\emph{Metil cis-9-esadecenoato}	\\
-13	& ribohMe C17:0	                       &284	&Metil-qualcosa3-metilesadecanoato?		\\
-14  & C16:1$\omega$5                       &268    & Metil cis-11-esadecenoato	\\
+13	& 12Et C17:0	                       &284	&Etil-12-metilesadecanoato		\\
+14  & C16:1$\omega$5                       &268 & Metil cis-11-esadecenoato	\\
 15	& i-C17:0                        	   &284	&\emph{Metil-15-metilesadecanoato}			\\
 16	& a-C17:0                       	   &284	& Metil-14-metilesadecanoato	\\
 17	& 10Me C18:0                      	   &298	& Metil-10-metileptadecanoato	\\
@@ -5176,9 +5214,9 @@ Ordine di uscita & Nome in R        &Peso molecolare
 22	& C18:0      						   &298	&\emph{Metil stearato}		\\
 23	& 2-OH C14:0						   &258	&\emph{Metil-2-idrossitetradecanoato}		\\
 24	& i-C19:0	                           &312	&Metil-17-metiloctadecanoato		\\
-25	& C18:1$\omega$9 cis	               &296	&\emph{Metil oleato}		\\
-26  & C18:1$\omega$9trans                  &296	&\emph{Metil trans-9-octadecenoato e Metil cis-11-octadecenoato}\\
-27	& C18:1$\omega$7cis                	   &296	&Metil qualcosa-octadecenoato		\\
+25	& C18:1$\omega$9cis  	               &296	&\emph{Metil oleato}		\\
+26  & C18:1$\omega$9trans                  &296	&\emph{Metil trans-9-octadecenoato}\\
+27	& C18:1$\omega$7cis                	   &296	&\emph{Metil cis-11-octadecenoato}		\\
 28	& C18:2                         	   &294	&\emph{Metil linoleato}		\\
 29	& 3-OH C14:0                     	   &258	&\emph{Metil-3-idrossitetradecanoato}		\\
 30	& C19:0                         	   &312	&\emph{Metil nonadecanoato}		\\
@@ -5186,7 +5224,7 @@ Ordine di uscita & Nome in R        &Peso molecolare
 32	& C20:0								   &326	&\emph{Metil eicosenoato}		\\
 33	& 2-OH C16:0                    	   &286	&\emph{Metil-2-idrossiesadecanoato}	\\
 34	& C20:2	                               &322	&Metil eicosenoato	\\
-35	& C20:2 11,14                          &322 &Metil cis-11,14-eicosenoato?	\\
+35	& C20:2 11,14                          &322 &Metil cis-11,14-eicosenoato\\
 
         \bottomrule
   \end{tabular}
@@ -5216,13 +5254,21 @@ Rippatura, la Frangizollatura.}
 {\small - Ionizzazone chimica.\par}
 
 \acro{CLPP}[CLPP]{\emph{Community Level Physiological Profiling} }
-{\small - ...\par}
+{\small - Profilo Fisiologico a Livello della Comunità.\par}
 
 \acro{CO}[CO]{\emph{Conventional} }
 {\small - Campi dove è stata svolta la gestione convenzionale.\par}
 
 \acro{DCI}[DCI]{\emph{Desorption Chemical Ionization} }
 {\small - Ionizzazione chimica per desassorbimento.\par}
+
+\acro{DISAT}[DISAT]{Dipartimento di Scienze Agronomiche e Gestione del
+Territorio Agroforestale}
+{\small - Università degli studi di Firenze.\par}
+
+\acro{DISPAA}[DISPAA]{Dipartimento di 
+Scienze delle Produzioni Agroalimentari e dell'Ambiente}
+{\small - Università degli studi di Firenze.\par}
 
 \acro{ECD}[ECD]{\emph{Electron Capture Detector} }
 {\small - Detector a cattura di elettroni.\par}
@@ -5379,9 +5425,9 @@ del bisogno.
 Ai miei compagni di facoltà più vecchi, che mi hanno accompagnato 
 in tutti e 5 gli anni di università: la Franci, la Cri, Pino, i Sera,
 i Sani, Caro e Gab, l'Isa e Dimitri; ma anche a quelli nuovi, 
-non per questo meno importanti: Alex, Gianma, Franceschino e Sara.
-Infine ai miei "bimbi" a cui ho fatto da tutor: Dario, Nicola, Albe, 
-Luca e Francesco.
+non per questo meno importanti: Alex, Gianma, Agne e Franceschino.
+Infine ai miei "bimbi" a cui ho fatto da tutor: Dario, Nicola, Albe 
+e Francesco.
 
 Tutti voi, chi consapevolemnte e chi meno, mi avete regalato più di un
 sorriso, abbiamo faticato per superare le stesse difficoltà, ci siamo 
@@ -5414,7 +5460,7 @@ insegnato tutto ciò che so della chimica e dello stare in
 laboratorio; ma è anche stato per me un maestro di
 vita, un amico, una spalla su cui sfogarmi, insomma un vero e proprio “babbo”.
 
-Grazie di cuore Prof.
+Grazie di cuore Prof, lavorare con Lei in questo anno e mezzo è stato un onore.
 
 $ $
 
