@@ -239,7 +239,7 @@ backref=FALSE
 
 \usepackage{lipsum} % blocchi di testo fittizi
 <<PacchettiRichiesti, echo=FALSE, eval=TRUE>>=
-library(nlme)
+#library(nlme)
 library(plyr)
 #library(lattice)
 library(xtable)
@@ -2776,11 +2776,12 @@ le quantità degli altri composti non presenti nello standard.
 
 \todo{pantani: mancano librerie e la descrizione dell'anova composizionale, citazioni}
 
-Il disegno sperimentale è riportato nella \autoref{subsec:Dis_Sperim}. Il risultato del disegno sperimentale
+Il disegno sperimentale è riportato nella
+\autoref{subsec:Dis_Sperim}. Il risultato del disegno sperimentale
 abbinato alle analisi di laboratorio ha formato un insieme di dati
 composto da una matrice di \Sexpr{dim(lis.tutto$PLFA$nMOLI)[2]}
-colonne (composti \acs{PLFA}) per \Sexpr{dim(lis.tutto$PLFA$nMOLI)[1]} righe
-(campioni analizzati).
+colonne (composti \acs{PLFA}) per \Sexpr{dim(lis.tutto$PLFA$nMOLI)[1]}
+righe (campioni analizzati).
 
 %Dei dati in uscita da \emph{Mass Hunter} sono state considerate le concentrazioni
 %($\nu$g/$\mu$l)
@@ -2796,28 +2797,37 @@ abbondanza dei \acs{BAMEs} identificati, al netto del peso molecolare di
 ogni composto.
 
 
-I dati sono stati analizzati mediante il linguaggio di programmazione
-R, versione 3.4.3, attraverso l'adattamento di modelli lineari, composizionali e
-di analisi multivariata:
+I dati sono stati analizzati attraverso l'adattamento di un modello
+lineare \autoref{mod:ANOVAmoli} per la somma totale delle moli.
+L'esplorazione è stata fatta tramite confronto dei modelli marginali
+lineari e analisi della varianza (ANOVA). Sul modello definitivo è
+stata quindi applicata l'analisi della varianza (ANOVA).
+
+La natura dei dati è intrinsecamente composizionale (i PLFA chiudono a
+somma 1 o somma 100\%) e quindi sono stati usati metodi idonei a non
+distorcere l'informazione contenuta nei dati stessi, come qui di
+seguito specificato
 
 \begin{itemize}
-\item Anova modello lineare sulle somme: l'esplorazione è stata fatta
-  tramite confronto dei modelli statistici lineari e analisi della
-  varianza (ANOVA). Nei modelli sono state inizialmente valutate
-  tutte le interazioni possibili, per poi considerare solo il modello
-   più parsimonioso. Sui modelli definitivi è stata quindi applicata
-  l'analisi della varianza (ANOVA) e il Tukey test.
-\item \acs{PCA} composizionale: %la concentrazione individuale dei PLFA,
-  %calcolata sulle moli, è stata usata come input nell'analisi delle
-  le moli dei \acs{PLFA} sono state usate come input nell'analisi delle
-  componenti principali (\acs{PCA}), così da determinare come i \acs{BAMEs} si
-  modificano in base alla stagione, gestione e lavorazioni effettuate.
-  Usando la \acs{PCA} si combinano i dati a 37 dimensioni (dovute ai 37 \acs{PLFA}
-  differenti identificati nei campioni), in una serie di assi lineari
-  che incorporano la massima varianza.
- \item anova dati composizionali
-\end{itemize}
+\item Multivariata composizionale:
+  le moli dei \acs{PLFA} sono intrinsecamente composizionali e
+  pertanto sono stati usati metodi di analisi idonei
+  \cite{van2013analyzing, aitchison1986statistical} per l'analisi dei
+  componenti principali (\acs{PCA}) e per l'analisi cluster.
+ \item Modello composizionale: in questo caso la variabile risposta non
+   è più una variabile continua (es. somma delle moli) ma una
+   composizione (es. 3\% C16:0, 8\% C14:0, 18 \% C16:1$\omega$5 ,
+   \ldots) e il modello composizionale, con conseguente ANOVA, stima la
+   significatività dei fattori considerati sui cambiamenti di composizione. 
+ 
+ \end{itemize}
 
+ L'analisi è stata condotta tramite il linguaggio di programmazione R,
+ \cite{r_programming} versione 3.4.3 e alcune delle sue librerie
+ \cite{agricolae,foreign,xtable,compositional, multcomp,
+   colorspace,dendextend,plyr  }
+ 
+ 
 \chapter{Risultati}
 %\chapter{{\fontsize{9mm}{11mm}\selectfont Risultati}}
 
@@ -3221,7 +3231,7 @@ tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
 tuk.cld <- cld(tuk)
 
 for(i in 1:12){
-text(i,1.35, tuk.cld$mcletters$Letters[i], cex = 1.5)
+text(i,1.35, tuk.cld$mcletters$Letters[i], cex = 0.8)
 }
 
 @
@@ -3522,17 +3532,23 @@ una maggiore quantità.
 %tra le varianze dei campioni (\autoref{fig:starplot_campioni}) è stata
 %applicata la funzione logaritmica.
 
-L'analisi dei modelli lineari ha visto un primo approccio in cui si è
-tenuto conto di tutte le possibili interazioni e vedendo che queste non erano
-significative, come neanche %qualsiasi combinazione con
-la variabile gestione presa individualmente,
-è stato creato un modello più semplice, tenendo conto
-delle sole variabili stagione e lavorazione, senza considerare alcuna
-interazione.
+La forte variabilità presente nei campioni
+(\autoref{fig:starplot_campioni}) era fonte di disomogeneità della
+varianza che avrebbe infranto le assunzioni dell'ANOVA. L'applicazione
+del logaritmo alla variabile risposta (\si{\micro\mol} totali), ha
+permesso di ridurre, se non di eliminare la disomogeneità della
+varianza, come attestato dall'analisi visuale dei residui del modello
+\autoref{fig:qqplot_ANOVAmoli}.
 
-Inoltre notando la forte disomogeneità
-tra le varianze dei campioni (\autoref{fig:starplot_campioni}) è stata
-applicata la funzione logaritmica, così da ridurre la deviazione standard.
+L'analisi dei dati è stata fatta tramite esplorazione e confronto di
+modelli marginali, procedendo dal modello comprendente tutte le
+interazioni tra le variabili a disposizione e confrontando questo con
+modelli più semplici, ma ugualmente informativi. La
+\autoref{tab:ANOVAmarginali} mostra il confronto tra modelli e indica
+che il modello 2, quello con le sole variabili \emph{Lavorazione} e
+\emph{Stagione}, non sia significativamente diverso (\emph{p} 0.61)
+dal modello più complesso con le interazioni a tre variabili.
+
 
 << anovaSommeMoli,  echo=FALSE, eval=TRUE, results=tex>>=
 
@@ -3585,35 +3601,12 @@ amod <-
 HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
 tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
 tuk.cld <- cld(tuk)
-@
-
-
-
-<<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
-
-boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
-        ylab = "log(somma moli PLFA)", xaxt="n",
-        main = "", ylim= c(2.5,5.5)
-        )
-labs <- levels(fattore)
-text(cex=0.8, x=(1:6), y=2.15, labs, xpd=TRUE, srt=45)
-testoMedie <-
-aggregate(log(lis.tutto$SOMME$nMOLI), 
-          by=list(fattore), 
-          function(x) as.character(round(mean(x),2))
-          )$x
-text(x=1:6, 
-     y=rep(c(2.7,3), each=3), 
-     testoMedie, cex=0.8)
-for(i in 1:6){
-text(i,5.3, tuk.cld$mcletters$Letters[i], cex = 1.5)
-}
-
 
 @
 
 
-Il modello statistico adattato quindi risulta essere il seguente:
+
+Conseguentemente, il miglior modello risulta essere il seguente:
 
 \begin{modello}
   \label{mod:ANOVAmoli}
@@ -3637,17 +3630,36 @@ Dove:
 \end{samepage}
 \vspace*{2em}
 
-Effettuando il confronto mostrato in \autoref{tab:ANOVAmarginali} 
-si è visto che il
-secondo modello è più parsimonioso del primo, infatti con 8 gradi
-libertà in meno si ha un \emph{p value} di %, dato dal confronto
-%tra i due modelli,
- 0,61 e quindi %(ottengo con meno "sforzi" un ugual informazione,)
-da preferire.
 
-Quindi, con il modello semplificato, possiamo creare dei boxplot che
-tengono conto della stagione e delle differenti lavorazioni escludendo
-invece la gestione (\autoref{fig:boxplot_somma_moli}).
+<<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
+
+boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
+        ylab = "log(somma moli PLFA)", xaxt="n",
+        main = "", ylim= c(2.5,5.5)
+        )
+labs <- levels(fattore)
+text(cex=0.8, x=(1:6), y=2.15, labs, xpd=TRUE, srt=45)
+testoMedie <-
+aggregate(log(lis.tutto$SOMME$nMOLI), 
+          by=list(fattore), 
+          function(x) as.character(round(mean(x),2))
+          )$x
+text(x=1:6, 
+     y=rep(c(2.7,3), each=3), 
+     testoMedie, cex=0.8)
+for(i in 1:6){
+text(i,5.3, tuk.cld$mcletters$Letters[i], cex = 1.5)
+}
+
+@
+
+
+Il modello sopra descritto è più parsimonioso e quindi permette di
+escludere su base formale l'effetto della variabile \emph{Gestione}.
+
+Potendo escludere questa variabile, possiamo riassumere in
+s\autoref{fig:boxplot_somma_moli} i dati attraverso dei boxplot divisi
+per \emph{Lavorazione} e \emph{Stagione}
 
 \begin{figure}[ht]
   \centering
@@ -3669,18 +3681,17 @@ Osserviamo in \autoref{fig:boxplot_somma_moli} che l'estate,
 rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
 lavorazioni, una media superiore rispetto alle tre autunnali.
 
-Inoltre si vede bene che l'estate presenta una maggior varianza 
-rispetto all'autunno.
+%% Inoltre si vede bene che l'estate presenta una maggior varianza 
+%% rispetto all'autunno.
 %; in questo grafico non è stata considerata la
 % Gestione dopo aver dimostrato, con il modello lineare che non era
 % significativa.
 
 
-Guardando invece entro stagione vediamo che il rippato, in entrambe
-le stagioni, è quello avente
-una media maggiore rispetto alle altre due lavorazioni, con
- un valore di log() pari a 3,74 in autunno e un log() pari a
-4,47 in estate.
+Guardando invece entro stagione vediamo che il rippato, in entrambe le
+stagioni, è quello avente una media maggiore rispetto alle altre due
+lavorazioni, con un valore pari a 3,74 in autunno e  
+pari a 4,47 in estate.
 
 Dopo aver applicato il Tukey test (si hanno i coefficienti risultanti
 sopra i boxplot), si può notare come non siano state trovate
@@ -3691,9 +3702,40 @@ prese in considerazione.
 % vediamo che non ci sono differenze tra le lavorazioni, ma solamente
 % tra le due stagioni.
 
-Dunque l'analisi formale del contenuto delle moli dei vari \acs{PLFA}
-mostra una differenza significativa solamente tra le due stagioni, 
-similmente a quanto ottenuto tramite gli starplot in  \autoref{fig:starplot_campioni}.
+Dunque l'analisi formale del contenuto totale delle moli dei vari
+\acs{PLFA} mostra una differenza significativa sia tra le due stagioni
+che tra le lavorazioni, similmente a quanto ottenuto tramite gli
+starplot in \autoref{fig:starplot_campioni}.
+
+
+<<TabANOVAsomme, echo=FALSE,  eval=TRUE, results =  tex >>=
+
+
+ xtabANOVAsum <-
+    xtable(anova(lm.SommeMoli.2),
+           label  = "tab:ANOVAsum",
+           #align  = "lllllll",
+            caption =
+               c("didascalia")
+
+ )
+print(xtabANOVAsum,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "hb")
+
+ xtabANOVAsummary <-
+    xtable(summary(lm.SommeMoli.2),
+           label  = "tab:ANOVAsummary",
+           #align  = "lllllll",
+            caption =
+               c("didascalia")
+           )
+print(xtabANOVAsummary,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "hb")
+@
 
 %\section{{\fontsize{6mm}{8mm}\selectfont Analisi composizionale}}
 
