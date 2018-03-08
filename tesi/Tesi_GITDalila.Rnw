@@ -5229,20 +5229,20 @@ al tempo 22.87 un picco, riconosciuto poi come un inquinante di laboratorio.}
 \`E stata tentata l'identificazione di tale composto in quanto non è 
 stato possibile riconoscerlo tramite la \emph{NIST14}.
 Lo ione a m/z 126, presente nello spettro,  potrebbe essere dovuto ad 
-un derivato del Mentolo 
+un derivato del maltolo 
 \autoref{fig:mentholpropionate}.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.42]{./foto/mentholpropionate.PNG}
-\caption[Spettro del mentolo propionato ottenuto tramite ricerca in libreria]
-{Spettro del mentolo propionato ottenuto tramite ricerca in libreria.}
+\caption[Spettro del maltolo propionato ottenuto tramite ricerca in libreria]
+{Spettro del maltolo propionato ottenuto tramite ricerca in libreria.}
 \label{fig:mentholpropionate}
 \end{figure}
 \FloatBarrier
 
 
-Il mentolo propionato ha peso molecolare pari a 182\,Th, mentre la molecola 
+Il maltolo propionato ha peso molecolare pari a 182\,Th, mentre la molecola 
 sperimentale ha un peso molecolare di 210\,Th, 
 ovvero l'analita è una molecola con un gruppo etilico in più. 
 La localizzazione di questo gruppo eccedente non è però 
