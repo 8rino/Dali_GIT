@@ -4008,7 +4008,7 @@ tuk.cld <- cld(tuk)
 @
 
 
-\begin{samepage}
+
 Conseguentemente, il miglior modello risulta essere il seguente:
 
 \begin{modello}
@@ -4030,8 +4030,7 @@ Dove:
 
   $\epsilon$ & = residui o errore
 \end{tabular}
-\end{samepage}
-\vspace*{2em}
+%\vspace*{2em}
 
 
 <<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
@@ -4063,11 +4062,11 @@ escludere su base formale l'effetto della variabile \emph{Gestione}.
 
 Potendo escludere questa variabile, possiamo riassumere in
 \autoref{fig:boxplot_somma_moli} i dati attraverso dei boxplot divisi
-per \emph{Lavorazione} e \emph{Stagione}:
- l'estate, rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
+per \emph{Lavorazione} e \emph{Stagione}.
+ L'estate, rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
 lavorazioni, una media superiore rispetto alle tre autunnali.
 
-\begin{figure}[]
+\begin{figure}[t]
   \centering
 
 <<label=boxplotsommamoli,fig=TRUE, echo=FALSE, width = 4.5, height = 4.5 >>=
@@ -4113,7 +4112,7 @@ pari a 4,47 in estate.
 print(xtabANOVAsum,
       include.rownames=TRUE,
       caption.placement = "top",
-      table.placement= "h")
+      table.placement= "b")
 @
 
 %Dopo aver applicato il Tukey test (si hanno i coefficienti risultanti
@@ -4149,12 +4148,12 @@ print(xtabANOVAsummary,
 @
 
 %\section{{\fontsize{6mm}{8mm}\selectfont Analisi composizionale}}
-
+\newpage
 \section{Analisi composizionale}
 
 %\subsection{{\fontsize{5mm}{7mm}\selectfont PCA composizionale}}
 
-\subsection{PCA composizionale}
+%\subsection{PCA composizionale}
 
 <<FigScreeplotcomposizionale, eval = TRUE, results = tex, echo = FALSE>>=
 Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
@@ -4184,7 +4183,7 @@ insieme, rappresentano una percentuale totale del
 \Sexpr{100*sum(round((pcx.Y.MOLI$sdev)^2/sum((pcx.Y.MOLI$sdev^2)),2)[4:10])}
 \%.
 
-\begin{figure}[]
+\begin{figure}[t]
   \centering
 
 <<label=printScreeplotComposiz, fig=TRUE, width = 4.5, height = 4.5, echo=FALSE>>=
@@ -4209,7 +4208,35 @@ poiché  la  diminuzione  degli  autovalori  può  essere  graduale,
 ma dato il grande salto tra il valore della prima e della seconda componente,
 sono state scelte queste due componenti principali, escludendo quindi
  il punto di flesso (il gomito)
-come in accordo con \citet{harman1976}.
+come in accordo con \citet{harman1976}. 
+
+Possiamo quindi vedere in  \autoref{fig:PCA_composiz} una divisione in due 
+gruppi dei
+72 campioni secondo l'asse delle ascisse, rappresentante la prima 
+componente, mentre non c'è alcuna ripartizione sulle ordinate. 
+Osservando le etichette vediamo che la
+prima componente separa quasi perfettamente le due stagioni\footnote{Si ha 
+un solo outlier, un autunnale che si trova nelle colonna degli 
+estivi, con coordinate x=-0,75, y=1,10, evidenziato con un cerchio nero.}. 
+Invece guardando i colori, dunque le
+lavorazioni, e le due gestioni, indicate con le lettere maiuscole “C”
+e “O”, non vediamo una separazione  altrettanto netta.
+
+In  \autoref{fig:PCA_composizPLFA} sono invece mostrati i 36 vettori
+rappresentanti le variabili dell'analisi, ovvero i 36 composti 
+identificati.  Notiamo alcuni composti che si distanziano nettamente 
+lungo la prima componente, mentre meno visibile è la separazione lungo 
+la seconda.
+Questo era riscontrabile anche dall'analisi cromatografica in quanto 
+i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi (\autoref{tab:PM_PLFA}, in appendice), 
+non sono stati identificati nei campioni autunnali, mentre sono presenti 
+in quelli  estivi,
+al contrario delle micorrize e di alcuni composti identificativi dei
+Gram-negativi, C16:1$\omega$5, C19:0$\Delta$, C16:1$\omega$7, C18:1$\omega$7cis 
+assenti
+a giugno e presenti a novembre.
+
+
 
 
 <<FigPCAcomposizionale_1, eval = FALSE, echo = FALSE, results = hide>>=
@@ -4273,19 +4300,7 @@ fun.biplot(x=pcx.Y.MOLI,
 @
 
 
-Possiamo quindi vedere in  \autoref{fig:PCA_composiz} una divisione in due 
-gruppi dei
-72 campioni secondo l'asse delle ascisse, rappresentante la prima 
-componente, mentre non c'è alcuna ripartizione sulle ordinate. 
-Osservando le etichette vediamo che la
-prima componente separa quasi perfettamente le due stagioni\footnote{Si ha 
-un solo outlier, un autunnale che si trova nelle colonna degli 
-estivi, con coordinate x=-0,75, y=1,10, evidenziato con un cerchio nero.}. 
-Invece guardando i colori, dunque le
-lavorazioni, e le due gestioni, indicate con le lettere maiuscole “C”
-e “O”, non vediamo una separazione  altrettanto netta.
-
-\begin{figure}[]
+\begin{figure}[t]
   \centering
 
 <<label=printPCAcomposizionale_1, fig=TRUE, width = 5, height = 5, echo=FALSE>>=
@@ -4301,19 +4316,7 @@ e “O”, non vediamo una separazione  altrettanto netta.
 \FloatBarrier
 
 
-In  \autoref{fig:PCA_composizPLFA} sono invece mostrati i 36 vettori
-rappresentanti le variabili dell'analisi, ovvero i 36 composti 
-identificati.  Notiamo alcuni composti che si distanziano nettamente 
-lungo la prima componente, mentre meno visibile è la separazione lungo 
-la seconda.
-Questo era riscontrabile anche dall'analisi cromatografica in quanto 
-i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi (\autoref{tab:PM_PLFA}, in appendice), 
-non sono stati identificati nei campioni autunnali, mentre sono presenti 
-in quelli  estivi,
-al contrario delle micorrize e di alcuni composti identificativi dei
-Gram-negativi, C16:1$\omega$5, C19:0$\Delta$, C16:1$\omega$7, C18:1$\omega$7cis 
-assenti
-a giugno e presenti a novembre.
+
 
 
 \begin{figure}[]
@@ -4599,7 +4602,7 @@ agronomiche.}
 \end{figure}
 \FloatBarrier
 
-\subsection{ANOVA composizionale}
+%\subsection{ANOVA composizionale}
 Infine è stata condotta l'analisi dei modelli composizionali
 attraverso il confronto tra modelli marginali per la selezione del più
 parsimonioso ma ancora esplicativo. Il risultato del confronto
@@ -5329,22 +5332,6 @@ trans è stato trovato in letteratura} e il Metil cis-11-octadecenoato dovrebbe
 invece rappresentare il terzo picco a 25.568.
 
 
-   
-Per quanto riguarda lo scopo di questo studio, ovvero determinare 
-variazioni nell'habitat tellurico in seguito a diverse operazioni 
-effettuate in ambiente agrario,
- a livello cromatografico (\autoref{fig:cromCONV} e
-\autoref{fig:cromBIO}), non abbiamo notato alcuna differenza tra le due 
- gestioni attuate. 
- 
- Anche i cromatogrammi rappresentanti le tre lavorazioni prese in esame
- (\autoref{fig:cromLAV}) non hanno mostrato una grande differenza.
- I picchi identificati sono i medesimi in tutte e tre le lavorazioni, 
- magari con intensità poco differente, ma niente di significativo.
- 
-
-
-
 \begin{landscape}
 \begin{figure}
 \centering
@@ -5361,6 +5348,22 @@ effettuate in ambiente agrario,
 \end{figure}
 \end{landscape}
 \FloatBarrier
+
+
+   
+Per quanto riguarda lo scopo di questo studio, ovvero determinare 
+variazioni nell'habitat tellurico in seguito a diverse operazioni 
+effettuate in ambiente agrario,
+ a livello cromatografico (\autoref{fig:cromCONV} e
+\autoref{fig:cromBIO}), non abbiamo notato alcuna differenza tra le due 
+ gestioni attuate. 
+ 
+ Anche i cromatogrammi rappresentanti le tre lavorazioni prese in esame
+ (\autoref{fig:cromLAV}) non hanno mostrato una grande differenza.
+ I picchi identificati sono i medesimi in tutte e tre le lavorazioni, 
+ magari con intensità poco differente, ma niente di significativo.
+ 
+
 
 
 
@@ -5536,31 +5539,30 @@ Con questo lavoro ci siamo proposti di determinare eventuali variazioni
 nelle concentrazioni di PLFA prodotti dalla comunità microbica tellurica, 
 quali indici di modifiche all'ambiente agrario in seguito a due diverse 
 gestioni (biologico e convenzionale) e a tre differenti lavorazioni 
-primarie (aratura, rippatura e frangizollatura), tenendo anche conto 
-della stagionalità (estate e autunno). I campioni sono stati presi 
+primarie (aratura, rippatura e frangizollatura), tenendo inoltre conto 
+della stagionalità (estate e autunno). I campi oggetto di studio  sono situati 
 nell'azienda agricola di Montepaldi, a San
 Casciano di Val di Pesa (Firenze). Tale azienda porta avanti sia
 l'agricoltura biologica che quella convenzionale da oltre 25 anni e questo studio 
 rientra in un progetto europeo iniziato nel 1991 (\acs{MoLTE}).
-Per effettuare la valutazione riguardante la qualità e anche la quantità 
+Per valutare la qualità e la quantità 
 dei microrganismi nel terreno è stata condotta l'analisi dei 
 \acs{PLFA} 
-presenti nelle membrane cellulari, poiché risultano specifici dei 
+presenti nelle membrane cellulari, in quanto essi risultano specifici dei 
 diversi gruppi microbici \cite{bossio_determinants_nodate,
 kong_microbial_2012, zhang_assessing_2008}.
 
-I dati ottenuti con il programma 
-\emph{Mass Hunter\textsuperscript{\textregistered}}, 
+I dati ottenuti per gasmassa, 
 sono stati 
-poi elaborati tramite analisi statistica utilizzando il linguaggio
-di programmazione R e
-oltre ai modelli lineari e alla rappresentazione
-con l'ausilio di starplot e boxplot, 
+ elaborati tramite  il linguaggio
+di programmazione R con addattamento di
+modelli lineari e con rappresentazioni grafiche 
+quali starplot e boxplot. Inoltre
 ci siamo serviti dell'analisi composizionale per ridurre la dimensionalità
 dei dati (36 composti e 72 campioni).
 
-Il metodo di estrazione in laboratorio e il metodo cromatografico 
-utilizzati sono risultati efficienti, infatti sono stati trovati 
+Entambi i metodi di estrazione e quantificazione cromatografica 
+ sono risultati efficienti e affidabili; infatti sono stati trovati 
 tutti i markers indicati in letteratura \cite{white96, FIERER2003, 
 hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995, 
 Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99, 
@@ -5577,64 +5579,56 @@ secondo \citet{zelles_fatty_1999, kong_microbial_2012,
 C20:4$\omega$6, markers dei funghi secondo
 \citet{ovreas_population_2000}.
 
-Anche l'assenza di alcuni markers identificativi 
-entro stagione è in accordo con quanto trovato in letteratura viste le
+L'assenza staginale di alcuni markers identificativi  è in accordo 
+con quanto trovato in letteratura viste le
 condizioni ambientali non idonee per la vita dei protozoi in autunno e 
 dei batteri in estate \cite{Florenzano}.
 
-Inoltre sono stati identificati dei metilesteri in più rispetto a 
-quelli segnalati in letteratura, i quali al momento 
-non sono stati attribuiti a nessun gruppo microbico, quindi non 
-sappiamo se sono generici o specifici.
+Inoltre sono stati identificati dei metilesteri non ancora  
+segnalati in letteratura, che attualmente 
+non sono stati attribuiti a nessun gruppo microbico e  quindi non 
+sappiamo se siano generici o specifici.
 
-Oltre a questa differenza stagionale non è però stata trovata, dopo 
-25 anni di diversa gestione, una ripartizione dei 
+Dopo 
+25 anni di diversa gestione, non è stato possibile 
+trovare una netta ripartizione dei 
  \acs{PLFA} dovuta alle due gestioni e alle tre 
-lavorazioni, tale risultato è in accordo con \citet{bending_changes_nodate, 
+lavorazioni: tale risultato è in accordo con \citet{bending_changes_nodate, 
 schutter_seasonal_nodate, kong_microbial_2012, SPEDDIN04, guo_effects_2014}. 
 
-La mancanza di un effetto visibile dovuto alla differente gestione e alle 
-diverse lavorazioni, potrebbe essere dovuta al fatto che il metodo 
-non è da utilizzare per esperimenti a 
-lungo termine 
-in quanto la comunità microbica, e quindi i \acs{PLFA} derivanti, 
-si rigenerano
-nel breve periodo ovvero sono composti in continuo dinamismo; 
-a riprova di ciò le uniche differenze visibili sono quelle entro stagione.
-
-%(e per questo motivo non sono riscontrabili gli effetti delle gestioni e delle 
-%lavorazioni nel lungo periodo ovvero lasciando all'habitat tellurico  il tempo di 
-%ristabilizzarsi).
+La mancanza di un effetto marcato per la differente gestione e per le 
+diverse lavorazioni, potrebbe essere dovuta alla rapida evoluzione 
+della popolazione microbica 
+e quindi dei \acs{PLFA} derivanti, i quali si rigenerano
+nel breve periodo:
+a riprova di ciò le uniche differenze marcatamente visibili 
+sono riscontrate col cambio di  stagione e con le diverse lavorazioni.
 
 
-
-Per ulteriori ricerche future, potrebbe essere importante 
-utilizzare questo metodo, 
-veloce, pratico e affidabile, in studi 
-atti a monitorare l'andamento della comunità tellurica entro una medesima 
+Per ulteriori ricerche future, 
+questo metodo, 
+veloce, pratico e affidabile, potrebbe permettere il monitoraggio
+della comunità tellurica entro una medesima 
 stagione e/o entro un unico ciclo colturale.
 Sarebbe quindi interessante osservare 
 come l'habitat microbico possa rispondere alle varie lavorazioni 
-effettuate --dalla preparazione
-del letto di semina alla raccolta-- campionando prima e dopo ogni 
+effettuate -- dalla preparazione
+del letto di semina alla raccolta -- campionando prima e dopo ogni 
 operazione
 meccanica e chimica e durante le varie fasi di crescita 
-della pianta.
-
-Questo anche al fine di valutare i limiti dell'effettiva validità di questa 
-metodologia nella composizione del suolo a diversa fertilità 
+della pianta o anche la diversa fertilità 
 in condizioni climatiche differenti.
 
 
-Inoltre, con il metodo dei PLFA adottato, è stato possibile affermare 
+Con il metodo dei PLFA adottato, è stato possibile affermare 
 che nei campi a gestione convenzionale e a conduzione biologica 
 e anche nelle parcelle soggette alle tre lavorazioni ci sono gli 
 stessi gruppi microbici, presenti nelle stesse quantità. 
-Ma non sappiamo con esattezza quali categorie abbiamo trovato, ovvero
-se sono benefici o nocivi per le colture e non abbiamo informazione alcuna 
-sul grado di biodiversità. 
+Ma non sappiamo con esattezza quali categorie siano presenti, ovvero
+se siano benefici o nocivi per le colture. 
+
 Per avere un quadro più completo sarebbe opportuno proseguire gli studi
-applicando anche l'analisi PCR.
+applicando anche l'analisi PCR per avere  informazioni sul grado di biodiversità. 
 
 
 
