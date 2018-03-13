@@ -496,7 +496,7 @@ Il suolo è un sistema trifasico, ovvero è composto dalle tre fasi
 della materia: solidi, quali i minerali e la materia organica; ed
 elementi fluidi, sia liquidi che gassosi. Queste tre componenti devono
 essere tutte presenti e la loro ripartizione ottimale è 50\% di fase
-solida --di cui il 5-10\% di materia organica-- e il 50\% di pori: 25\%
+solida --- di cui il 5--10\% di materia organica --- e il 50\% di pori: 25\%
 di micropori utili per il movimento dei liquidi e 25\% di macropori
 per il movimento dei gas \citep{radaelli2001}.
  \citet{jongerius_morfologische_1957} dinstinse 3 classi di pori: i
@@ -588,7 +588,7 @@ del terreno.
 
 La fase solida è costituita anche dalla materia organica che ha
 un’elevata carica variabile, dell’ordine di
-\SIrange[range-phrase= -, range-units=single]{200}{400}{\cmol\per\kg},
+\SIrange[range-phrase= --, range-units=single]{200}{400}{\cmol\per\kg},
 quindi permette una buona capacità di scambio, fornendo vantaggi a
 livello biologico. Essa promuove inoltre lo sviluppo radicale, la
 crescita vegetale e microbica, e l’attività enzimatica.
@@ -631,8 +631,8 @@ colore scuro, parzialmente aromatici e chimicamente complessi
 eterogenea e migliore ai fini dell’aumento della capacità di scambio,
 infatti costituisce una vera e propria riserva di nutrienti nel suolo.
 In base al suo contenuto i terreni sono classificati in: umiferi
-($>$10\,\%), ricchi di humus (5-10\,\%), sufficientemente dotati di humus
-(3-5\,\%), mediamente dotati di humus (2-3\,\%), poveri di humus ($<$2\,\%)
+($>$10\,\%), ricchi di humus (5--10\,\%), sufficientemente dotati di humus
+(3--5\,\%), mediamente dotati di humus (2--3\,\%), poveri di humus ($<$2\,\%)
 \citep{giardini_agronomia_1992}.
 
 Infine, la diversa dimensione delle particelle della fase solida va a costituire
@@ -651,33 +651,33 @@ classificano come in  \autoref{tab:Classi_granulometriche}:
     Frazione & Diametro (mm)   \\
     \midrule
     Scheletro  & > 2.0 \\
-    Sabbia molto grossa  &  1.0 - 2.0    \\
-    Sabbia grossa & 0.5 - 1.0 \\
-    Sabbia media & 0.25 - 0.5 \\
-    Sabbia fine & 0.1. - 0.25 \\
-    Sabbia molto fine & 0.05 - 0.10 \\
-    Limo & 0.002 - 0.05 \\
+    Sabbia molto grossa  &  1.0--2.0    \\
+    Sabbia grossa & 0.5--1.0 \\
+    Sabbia media & 0.25--0.5 \\
+    Sabbia fine & 0.1--0.25 \\
+    Sabbia molto fine & 0.05--0.10 \\
+    Limo & 0.002--0.05 \\
     Argilla & < 0.002   \\
     \bottomrule
   \end{tabular}
 \end{table}
 
+
 In base al contenuto percentuale di ogni classe granulometrica, i
 suoli vengono classificati in varie classi tessiturali (\autoref{fig:Triangolo_USDA}).
+La tessitura non cambia velocemente nel tempo e per questo è
+considerata una proprietà stabile; essa influenza sia il movimento
+della fauna e delle radici, sia la capacità di
+drenaggio ed aerazione del suolo, infatti è strettamente legata alla
+porosità ed al rapporto dei fluidi contenuti in esso.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \includegraphics[scale=0.5]{./foto/triangoloUSDA.png}
 \caption[Triangolo tessiturale]
 {Triangolo per la determinazione della classe tessiturale
 \citep{usda_textural_1951}.}
 \label{fig:Triangolo_USDA}
 \end{figure}
-
-La tessitura non cambia velocemente nel tempo e per questo è
-considerata una proprietà stabile; essa influenza sia il movimento
-della fauna e delle radici, sia la capacità di
-drenaggio ed aerazione del suolo, infatti è strettamente legata alla
-porosità ed al rapporto dei fluidi contenuti in esso.
 
 %\subsubsection{{\fontsize{5mm}{6mm}\selectfont Fase liquida}}
 
@@ -698,8 +698,8 @@ igroscopica.
 
 L’acqua che percola per gravità, allontanandosi più o meno velocemente
 in base alle capacità di trattenimento del suolo stesso, è la porzione
-che va dal punto di saturazione --quando tutti i pori sono pieni di
-acqua-- alla capacità di campo e viene chiamata acqua gravitazionale.
+che va dal punto di saturazione --- quando tutti i pori sono pieni di
+acqua --- alla capacità di campo e viene chiamata acqua gravitazionale.
 La capacità di campo è lo stato nel quale l’acqua rimasta
 viene trattenuta dal suolo grazie a fenomeni di adesione. Questa è la
 porzione realmente utilizzabile dagli organismi viventi e viene infatti
@@ -727,7 +727,7 @@ Quest’ultima ha una composizione differente rispetto a quella
 atmosferica, c’è una simile percentuale di N, circa il 79\,\%, un po’
 meno ossigeno, circa il 18\,\%, ma soprattutto si ha una maggior
 concentrazione di vapore acqueo e di biossido di carbonio rispetto all'aria 
-in atmosfera (nel suolo circa 0,3-5\,\%); queste due componenti permettono al suolo di essere un buon
+in atmosfera (nel suolo circa 0,3--5\,\%); queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
 
@@ -745,15 +745,15 @@ caratteristiche pedologiche specifiche.
 
 La complessità di questo habitat è enorme (\autoref{fig:Classific_microrganismi}); si pensi che in un solo grammo di
 suolo ci possono essere da un milione a un miliardo di batteri
-\citep{torsvik_total_1996}, più di 100'000 specie di funghi, che
+\citep{torsvik_total_1996}, più di 100.000 specie di funghi, che
 formano da 1 a 3 metri di miceli fungini %\info{ Vian, 2015}
 \cite{hawksworth_magnitude_2001,trap_ecological_2016}, e poi ci sono diversi milioni di
-protozoi \cite{wall_soil_2001, jones_carbon_2009}, dai 1'000
-ai 2'000 nematodi \cite{hawksworth_biodiversity_1991,
+protozoi \cite{wall_soil_2001, jones_carbon_2009}, dai 1.000
+ai 2.000 nematodi \cite{hawksworth_biodiversity_1991,
 lavelle_soil_2001, wall_biodiversity_2010} e lombrichi
 \citep{lee_earthworms:_1985}, senza menzionare gli altri gruppi di
-invertebrati della mesofauna --collemboli, acari ed enchitreidi-- e della
-macrofauna --formiche, termiti, coleotteri e ragni--
+invertebrati della mesofauna --- collemboli, acari ed enchitreidi --- e della
+macrofauna --- formiche, termiti, coleotteri e ragni ---
 \cite{schaefer_soil_1990, alphei_protozoa_1996}.
 
 \begin{figure}[ht]
@@ -779,14 +779,14 @@ presenti nelle sostanze umiche, ed infine altri gruppi di batteri
 permettono la fissazione dell’azoto e il sequestro del carbonio.
 
 Gli organismi della mesofauna del suolo, collemboli, acari, proturi,
-dipluri, enchitreidi, etc, si nutrono soprattutto di miceli fungini,
+dipluri, enchitreidi, etc., si nutrono soprattutto di miceli fungini,
 batteri e piccoli insetti. Le loro feci, avendo una capacità di
 trattenere acqua maggiore di quella della lettiera, rivestono un ruolo
 importante nella formazione e stabilizzazione del suolo
 \citep{miller_mycorrhizal_2000}.
 
 Gli animali superiori che compongono la macro e megafauna, come
-termiti, lombrichi, talpe, etc, contribuiscono, con il loro movimento,
+termiti, lombrichi, talpe, etc., contribuiscono, con il loro movimento,
 a rendere gli strati superficiali ben mescolati e aerati. Inoltre
 rompendo e/o formando gli aggregati modificano la densità del suolo,
 incrementando così l’aerazione e l’infiltrazione di acqua, nonché
@@ -827,7 +827,7 @@ macropori e che invece risentiranno di una maggior alternanza tra
 periodi umidi e secchi.
 
 La maggior parte degli organismi ha come coefficiente di avvizzimento
-valori prossimi ai -15, -25\,bar (pF\,4,2-4,4).
+valori prossimi ai -15, -25\,bar (pF\,4,2--4,4).
 Tale coefficiente indica la pressione che l'organismo dovrebbe esercitare
 per vincere le forze che trattengono il liquido nelle particelle del
 suolo.
@@ -887,7 +887,7 @@ altitudine, ma anche dall’inclinazione della superficie del suolo,
 nonché dalla densità della copertura vegetale e dal colore del
 terreno. Inoltre la temperatura presenta un grande intervallo di
 variabilità se misurata in prossimità della superficie, mentre già a 7\,cm
- di profondità risulta avere un range annuo più ristretto, quale 4-14\,°C
+ di profondità risulta avere un range annuo più ristretto, quale 4--14\,°C
 \citep{raney_physical_1965}.
 
 Ogni organismo presenta “il proprio minimo e massimo ecologico di
@@ -907,8 +907,8 @@ microrganimsi psicrofili, mesofili e termofili (\autoref{tab:classif_Odum}).
     Microrganismi & Minimo °C & Ottimo °C & Massimo °C  \\
     \midrule
     Psicrofili & 0 & 15 & 30\\
-    Mesofili & 5-25 & 25-37 & 30 -50    \\
-    Termofili & 25-45 & 55 & 60-90 \\
+    Mesofili & 5--25 & 25--37 & 30--50    \\
+    Termofili & 25--45 & 55 & 60--90 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -976,8 +976,8 @@ che diventa sempre più povero e sterile
 \citep{certini_spectroscopic_2007}.
 
 Per questo motivo, si sono diffuse aziende nelle quali
-le lavorazioni sono minime (dette anche minimum tillage),
-se non addirittura assenti (no tillage),
+le lavorazioni sono minime (\emph{minimum tillage}),
+se non addirittura assenti (\emph{no tillage}),
  diffuse anche per motivi economici, in quanto
 non si hanno più spese per macchinari e carburante.
 
@@ -1049,9 +1049,9 @@ interessano invece una superficie pari a 43,7 milioni di ettari
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{./foto/ettari_bio.png}
-\caption[Incremento delle superfici coltivate a Biologico nel mondo dal 1999-2014]
+\caption[Incremento delle superfici coltivate a Biologico nel mondo dal 1999--2014]
 {Andamento delle superfici coltivate a Biologico nel mondo dal
-  1999-2014 \citep{willer_organic_2016}.}
+  1999--2014 \citep{willer_organic_2016}.}
 \label{fig:andamento_bio}
 \end{figure}
 
@@ -1085,8 +1085,8 @@ cambiamenti e risente maggiormente delle attività umane. Questi
 cambiamenti richiedono del tempo per avvenire e quindi sono
 necessari esperimenti dalla durata di almeno 10 anni. \`E però
 importante non solo tener conto delle piante superiori e degli
-animali, ma anche della comunità microbica nel terreno --componente
-spesso trascurata, anche se fondamentale \citep{kennedy_soil_1995}--
+animali, ma anche della comunità microbica nel terreno --- componente
+spesso trascurata, anche se fondamentale \citep{kennedy_soil_1995} ---
 usando come indice di fertilità la sua diversità e vitalità.
 
 
@@ -1180,7 +1180,9 @@ statisticamente rilevanti rispetto ai profili ottenibili con il \acs{PLFA}
 
 La scelta del metodo di analisi comunque varia in base allo studio da
 svolgere: se, ad esempio, servono delle informazioni a più basso
-livello, la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare. In
+livello, la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare. 
+
+In
 generale, se si vogliono studiare gli effetti di un trattamento o
 valutare gli effetti dell’inquinamento, prima si svolge un analisi
 \acs{PLFA} per rilevare le possibili differenze, e poi, successivamente, qualora
@@ -1224,9 +1226,9 @@ diversi (\autoref{fig:principio_cromatografia}).
 Per separare al meglio le varie componenti di una miscela, risulta
 importante conoscere le caratteristiche chimico-fisiche delle molecole
 analizzate: la carica, le dimensioni, la massa, la polarità dei
-legami, il potenziale redox, etc. Dunque esistono diversi meccanismi
+legami, il potenziale redox, etc.. Dunque esistono diversi meccanismi
 di separazione (adsorbimento, ripartizione, scambio
-ionico, esclusione, etc\ldots), che non si escludono a vicenda, e, di
+ionico, esclusione, etc.), che non si escludono a vicenda, e, di
 conseguenza, diverse soluzioni sperimentali adottabili. Proprio per
 questo motivo si sono sviluppate numerose tecniche cromatografiche:
 
@@ -1258,12 +1260,12 @@ Le ultime tecniche elencate, \acs{GC} e \acs{HPLC}, risultano molto
 efficienti, altamente selettive e non distruttive. La tecnica
 \acs{GC} ha visto un importante sviluppo dagli anni ’60 ed è
 impiegata per la separazione di sostanze volatili (aromi, idrocarburi
-a catena corta, etc\ldots). Con questa tecnica è possibile analizzare
+a catena corta, etc.). Con questa tecnica è possibile analizzare
 campioni gassosi, liquidi o solidi opportunamente solubilizzati,
 vaporizzati e poi iniettati in una colonna che contiene la fase
 stazionaria. L’unica limitazione è che sono analizzabili solo quelle
 sostanze che possono essere vaporizzate ad una temperatura compresa
-tra quella ambiente e i 350-400\,°C, ovvero la temperatura comunemente
+tra quella ambiente e i 350--400\,°C, ovvero la temperatura comunemente
 raggiunta dalle apparecchiature in commercio e compatibile con le
 colonne cromatografiche usate. Inoltre le sostanze da analizzare non
 devono essere termolabili. Per questo motivo, in alcuni casi tale 
@@ -1343,7 +1345,7 @@ vaporizzato all’istante e, prima di arrivare in colonna, può subire
 una ripartizione (\emph{splitless} e \emph{split}).
 
 Il foro adibito all’introduzione dell’ago è isolato dall’ambiente
-esterno tramite una guarnizione di uno speciale polimero (Polidimetilsilossano)
+esterno tramite una guarnizione di uno speciale polimero (polidimetilsilossano)
 resistente
 alle alte temperature. Con la tecnica \emph{on column}, il foro non
 presenta questa guarnizione di protezione, ma bensì una valvola che si
@@ -1351,7 +1353,7 @@ apre all’istante quando l’ago sta per toccarla, e si richiude subito
 dopo la sua estrazione.
 
 L’iniettore è uno spazio chiuso, termicamente stabilizzato a temperatura
-elevata (200-300\,°C), contenente
+elevata (200--300\,°C), contenente
 un inserto di vetro (\emph{liner}) e, a differenza
 dell’iniezione “a freddo”, permette l’istantanea vaporizzazione del
 campione, il quale entra in colonna in un tempo molto breve.
@@ -1365,14 +1367,14 @@ con il \emph{carrier} e una frazione di questa miscela esce da uno
 sfiatatoio, che prende il nome di \emph{split valve} o 
 \emph{vent valve}. 
 
-Mediante la regolazione del flusso alla vent value, essendo nota 
+Essendo nota 
 la resistenza idraulica della colonna, può essere calcolata la proporzione 
 del flusso in colonna e anche alla vent value, con il risultato 
 di introdurre in colonna solo la proporzione voluta del campione.
 
 Questo metodo è
 utilizzato soprattutto quando si devono analizzare delle essenze (timo,
-lavanda, limone, etc\ldots).
+lavanda, limone, etc.).
 
 \begin{figure}[h]
 \centering
@@ -1445,7 +1447,7 @@ La colonna si trova in un’apposita camera termostatica a
 circolazione di aria calda, detta forno (\autoref{fig:colonna}), dove
 la temperatura può essere programmata nel tempo.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=2]{./foto/fig1_10.png}
 \caption[Forno cromatografico]
@@ -1458,8 +1460,8 @@ Le colonne possono essere del tipo impaccate o capillari:
 
 \begin{itemize}
 \item le prime sono tubi di teflon, acciaio o vetro con un diametro
-  intorno a 1-5\,mm e con una lunghezza
-  di circa 1-6\,m; piegate a spirale o a
+  intorno a 1--5\,mm e con una lunghezza
+  di circa 1--6\,m; piegate a spirale o a
   U e riempite di silice solida e un liquido non volatile, che varia
   in base alla sostanza che si vuole separare. Queste due componenti
   rappresentano la fase stazionaria;
@@ -1468,7 +1470,7 @@ Le colonne possono essere del tipo impaccate o capillari:
   lunghezza tra i 10\,m e i 200\,m, avvolte a spirale su un supporto
   metallico. In questo caso la fase stazionaria è disposta in maniera
   uniforme sulla superficie interna formando un film di spessore
-  compreso tra 0,5-2,5\,µm. Il film è costituito solitamente da
+  compreso tra 0,5--2,5\,µm. Il film è costituito solitamente da
   metil-silossani modificati con diversi gruppi funzionali selezionati in base al
   campione da analizzare e possono essere più o meno polari,
   comportando una differente interazione tra fase stazionaria
@@ -1547,9 +1549,10 @@ o selettivi se rivelano solo particolari categorie di composti:
   elettrodi così da creare una corrente di fondo che forma la linea di base.
   Se nel gas sono presenti sostanze elettronaffini, queste reagiscono
   e formano molecole neutre che abbassano la corrente di base.
-\item \acs{FPD} (\emph{Flame Photometric Detector}) è una tecnica 
-  utilizzata per analizzare composti contenenti zolfo o 
-  fosforo, è distruttivo e selettivo. Tale rivelatore utilizza una fiamma a idrogeno e aria 
+\item \acs{FPD} (\emph{Flame Photometric Detector}) è un rivelatore atto ad 
+  analizzare composti contenenti zolfo o 
+  fosforo, è distruttivo e selettivo. Tale rivelatore utilizza una fiamma 
+  a idrogeno e aria 
   attraverso cui viene passato il campione. Gli idrocarburi contenenti 
   fosforo e zolfo generano chemiluminescenza a determinate lunghezze 
   d'onda che, se passata in un fotomoltiplicatore, genera un segnale 
@@ -1618,8 +1621,7 @@ L’efficienza di una colonna è espressa in N piatti teorici
 colonna cromatografica può arrivare ad avere anche diverse migliaia di 
 piatti teorici} e quindi tanto maggiore è il numero di piatti teorici, 
 tanto maggiore è l’efficienza della colonna, in quanto riuscirà a separare 
-meglio sostanze anche molto simili tra loro, per proprietà chimico-fisiche, 
-rispetto a quelle con minor numero di piatti teorici. 
+meglio sostanze anche molto simili tra loro per proprietà chimico-fisiche. 
 Questa maggior efficienza si manifesta con picchi ben 
 separati e stretti. %Quindi possiamo dire che tanto più maggiore è N , 
 %minore è HETP, e maggiore è l’efficienza della colonna.
@@ -1707,12 +1709,12 @@ si può:
   \item diminuire la viscosità dell'eluente;
   \item aumetare il gradiente di temperatura, anche se può comportare una sovrapposizione
         dei picchi;
-  \item diminuire le dimensioni delle particelle, se colonne impaccate oppure 
-        diminuire lo spessore del film nelle colonne capillari, questo è 
-        possibile solo con determinati analiti;
+  \item diminuire le dimensioni delle particelle, nelle colonne impaccate oppure 
+        diminuire lo spessore del film nelle colonne capillari (questo è 
+        possibile solo con determinati analiti);
   \item effettuare un'iniezione split o aprire il vent una volta che il picco
-        ha raggiunto il suo massimo, se la concentrazione del campione 
-        lo permette;
+        ha raggiunto il suo massimo (se la concentrazione del campione 
+        lo permette);
   \item non si deve invece aumentare troppo la lunghezza della colonna, 
   altrimenti si avrebbero dei tempi di separazione troppo lunghi.
 \end{itemize}
@@ -1833,28 +1835,38 @@ campione in fase gassosa e la tecnica più comune tra queste è l’\acs{EI}
 dove le molecole gassose vengono bombardate da un fascio di elettroni
 ad alta energia (-70\,eV); a questo valore energetico l’aspetto
 qualitativo dello spettro rimane invariato e quello quantitativo
-cambia di pochissimo \cite{Watson2007}. Gli elettroni del fascio
+cambia di pochissimo \cite{Watson2007}. 
+
+\vspace{-0.6em}
+
+Gli elettroni del fascio
 sono formati con il riscaldamento di un filamento, a circa 200\,°C, e
 sono accelerati per mezzo di una caduta di potenziale ottenuta con la
 presenza di un anodo. \label{rif:EI}
 
+\vspace{-0.6em}
+
 La sorgente \acs{CI} invece prevede una ionizzazione primaria come nell’\acs{EI} e
 gli ioni formati reagiscono con le molecole neutre del gas reagente (metano, isobutano, 
-etc\ldots) introdotto
+etc.) introdotto
 nella sorgente ad elevata pressione. Da questa reazione si ha una
 ionizzazione secondaria e gli spettri ottenuti rappresentano i
 prodotti della reazione chimica tra le molecole del campione e quelle
 del gas. Quindi le informazioni sulla struttura iniziale saranno di
 più difficile interpretazione.
 
+\vspace{-0.6em}
+
 Abbiamo poi il \acs{FI} che è simile all’\acs{EI} ma prevede l’utilizzo di un
 diverso elemento ionizzante rappresentato da una punta
 metallica. Questo metodo ha dei limiti, essendo
 fragile e meno sensibile dell’\acs{EI}.
 
+\vspace{-0.6em}
+
 Infine si ha la sorgente \acs{APCI} dove il campione viene 
 ionizzato tramite un plasma creato da un arco elettrico, a sua volta
-generato da una punta di ago portata a 4'000-5'000\,V. 
+generato da una punta di ago portata a 4.000--5.000\,V. 
 Si ha prima la ionizzazione del gas ausiliario, con la formazione dei
 rispettivi ioni primari, e poi la ionizzazione chimica delle specie in 
 uscita dalla colonna. 
@@ -1862,6 +1874,7 @@ Dunque è simile alla sorgente CI, ma in questa tipologia di sorgente
 la ionizzazione avviene a pressione atmosferica e richiede, successivamente, 
 un sistema capillare di connessione e introduzione al vuoto.
 
+\vspace{-0.6em}
 
 In tutti e quattro i casi, gli ioni formatisi subiscono, nella sorgente, un’accelerazione
 grazie a delle piastre acceleratrici di metallo e vengono espulsi,
@@ -1955,7 +1968,7 @@ spettri in tempi brevissimi ed una risoluzione uniforme su tutto
 l’intervallo di massa; però è una tecnica molto costosa e 
 richiede un vuoto molto spinto. 
 
-L'\emph{orbitrap} è analizzatore di massa non distruttivo. Si 
+L'\emph{orbitrap} è un analizzatore di massa non distruttivo. Si 
 tratta di una particolare trappola ionica in cui gli ioni descrivono
 traiettorie attorno ad un elettrodo centrale fusiforme. 
 Con questo movimento gli ioni generano una corrente indotta sulle
@@ -1985,7 +1998,7 @@ moltiplicatore elettronico, che può essere costituito o da più dinodi
 discreti o da un solo dinodo continuo (\emph{channeltron}) (\autoref{fig:moltiplicatori}).
 
 
-\begin{figure}[t]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{./foto/Moltiplicatori.png}
 \caption[Moltiplicatori elettronici]
@@ -2006,7 +2019,7 @@ spettro.
 L’interpretazione dei cromatogrammi rappresenta l’operazione più lunga. 
 \`E necessario innanzitutto avere una serie di informazioni sulla natura 
  dei composti da analizzare (loro peso molecolare, polarità, temperatura 
- di ebolizione, etc\ldots).
+ di ebolizione, etc.).
 
 Inoltre per l’individuazione delle sostanze contenute nei campioni,
  ci basiamo sull'uso di librerie di Spettri di Massa come la NIST e/o 
@@ -2018,7 +2031,7 @@ operative.
 
 Proprio per il fatto che il tempo di ritenzione dei composti non è univoco, ma 
 cambia modificando il metodo cromatografico (temperatura, velocità del flusso, 
-colonna, etc \ldots), è utile utilizzare gli indici di Kovats poiché 
+colonna, etc.), è utile utilizzare gli indici di Kovats poiché 
 identificano i tempi relativi di eluizione dei vari composti in 
 gas-cromatografia normalizzati tramite gli alcani saturi non ramificati.
 
@@ -2035,7 +2048,7 @@ log(t'\ped{R(n)})}{log(t'\ped{R(N)}) - log(t'\ped{R(n)})}\biggl]
 
    \nopagebreak
    \begin{tabular}{lp{12cm}}
-      $I$                     & = Indice di Kovats\\
+      $I$                     & = indice di Kovats\\
       $n$          			  & = numero di carboni dell'alcano minore\\
       $N$          			  & = numero di carboni dell'alcano più grande\\
       $t'\ped{R(incognito)}$       & = tempo di ritenzione della specie incognita\\
@@ -2090,7 +2103,6 @@ cambiamenti in funzione di sollecitazioni esterne come le pratiche agricole
 \cite{esperschutz_response_2007, steinbeiss_effect_2009} e
 ottenere una misura della qualità dei suoli
 \cite{mele_application_2008, winding_use_2005}.
-
 Tale metodo prevede l’estrazione degli acidi grassi dal campione, i
 quali subiranno poi una metilazione, per renderli volatili. 
 Infine verrà effettuata
@@ -2118,32 +2130,32 @@ Experiment}), facente parte di un
 gruppo di sperimentazioni europee a lunga durata 
  della Società
 Internazionale di Ricerca sull’Agricoltura Biologica (\ac{ISOFAR}). 
-\`E nato da un accordo tra l’azienda
+Il progetto MoLTE è nato da un accordo tra l’azienda
 Montepaldi dell'Università degli Studi di Firenze e il \ac{DISAT} 
---attuale \ac{DISPAA}, 
-Università degli studi di Firenze-- 
+--- attuale \ac{DISPAA} --- dell' 
+Università Firenze  
 stipulato nel 1989. 
 Il fine del progetto \acs{MoLTE} è quello di
 valutare, sul lungo periodo, sistemi di gestione alternativi a quello 
 convenzionale intensivo e determinare
 la sostenibilità a livello sociale, economico ed ecologico-ambientale.
 La sperimentazione vera e propria è iniziata nel 1991 e 
-risulta essere la più duratura in tutta l’area
+risulta essere la più duratura nell’area
 mediterranea e anche la più completa per quanto riguarda 
 la quantità di dati disponibili.
 L'esperimento \acs{MoLTE} è stato inizialmente supportato dal progetto europeo 
-CAMAR (1991-1993), che aveva
+CAMAR (1991--1993), con
 l’obiettivo di paragonare le performance tra il sistema agricolo biologico, 
 convenzionale e quello
 integrato.
 Dal 1993 al 1998 è stato finanziato dall’Unione Europea, successivamente 
-da una serie di progetti a carattere regionale e nazionale. A partire dal 
+da una serie di progetti regionali e nazionali. A partire dal 
 2015 è entrato a far parte del progetto Fertilcrop Horizon 2020, 
 a cui partecipano 
 oltre 20 partners europei (\autoref{fig:fertilcrop}).
-Tale progetto --oltre a sviluppare tematiche di gestione efficienti e 
+Tale progetto --- oltre a sviluppare tematiche di gestione efficienti e 
 sostenibili per l'incremento della produttività dei sistemi a 
-conduzione biologica-- si interessa dell’interazione tra la coltura, 
+conduzione biologica --- si interessa dell’interazione tra la coltura, 
 le infestanti e i macro e microrganismi del suolo.
 \begin{landscape}
 \begin{figure}[]
@@ -2229,7 +2241,7 @@ autoctone.  Infine una strada di 4\,m, adibita al transito dei mezzi
 agricoli, separa i campi OO01
 e OO02 dagli OO03 e OO04 (\autoref{fig:sitosperim}). 
 
-\begin{figure}[]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=1]{./foto/molt.PNG}
 \caption[Schema del sito sperimentale con i tre sistemi di gestione]
@@ -2453,7 +2465,7 @@ Di seguito è riportata la \autoref{tab:seminaCampi}
 che mostra
  le colture seminate nell'anno precedente allo studio 
 effettuato
-e quelle presenti durante il campionamento e anche la loro densità di semina;
+e quelle presenti durante il campionamento e anche la loro densità di semina:
  la prima tabella è relativa ai campi biologici (\acs{OO}02 e \acs{OO}04),
 la successiva ai due campi convenzionali (\acs{CO}09 e \acs{CO}10).
 
@@ -2479,7 +2491,7 @@ Densità di semina   & \SI{190}{\kg\per\hectare}                         & \SI{1
 \midrule
 Coltura precedente  & \emph{Heliantus annuus},\newline var. Solaris*   & \emph{Hordeum vulgare}, var. Campagne**\\
 Coltura seminata    & \emph{Hordeum vulgare},\newline var. Campagne**  & \emph{Helianthus annuus}, var. Solaris*\\
-Densità di semina   & 75'000 piante\newline ad ettaro                  & 75'000 piante\newline ad ettaro        \\
+Densità di semina   & 75.000 piante\newline ad ettaro                  & 75.000 piante\newline ad ettaro        \\
         \bottomrule
   \end{tabular}
   \normalsize
@@ -2543,7 +2555,7 @@ Densità di semina   & 75'000 piante\newline ad ettaro                  & 75'000
 
 Al centro di ogni parcella, si è prelevato un campione %3 campioni di terreno
  di circa 500\,g di suolo,  
-a 5-10\,cm di profondità.
+a 5--10\,cm di profondità.
 % Il primo è stato
 %preso al centro di ogni plot \todo{levare a e b}(m=medio) e gli altri due a 4 metri di
 %distanza dal centro tenendo conto della pendenza del campo, uno a 4
@@ -2618,7 +2630,7 @@ metodo di
 I rapporti tra i solventi dell'estraente e il rapporto tra estraente e suolo 
 sono stati, da noi, mantenuti tali a quelli 
 di \citet{bligh_rapid_1959}, sia prima che 
-dopo la diluizione (rispettivamente 1:2:0,8 e dopo 2:2:1,8).
+dopo la diluizione (inizialmente 1:2:0,8; successivamente 2:2:1,8).
 
 Tramite una procedura di omogeneizzazione dei campioni (come riportato nel 
 paragrafo precedente) e l'utilizzo di micropipette tarate e di microvial
@@ -2629,9 +2641,9 @@ Questo ha permesso, tra l'altro, un approccio più ecocompatibile alla
 ricerca, producendo quantità 100 volte inferiori di solventi e campioni 
 esausti da smaltire in discarica. 
 
-INoltre il tempo di separazione delle due fasi dopo l'aggiunta del 
-cloroformio e del tampone citrato per raggiungere 
-il rapporto finale di 2:2:1,8 è stato ridotto da 24\,h a 15\,min mediante
+Inoltre il tempo di separazione delle due fasi dopo l'aggiunta del 
+cloroformio e del tampone citrato --- per raggiungere 
+il rapporto finale di 2:2:1,8 --- è stato ridotto da 24\,h a 15\,min mediante
 una rapida centrifugazione a 604\,\emph{g} fino a separazione delle fasi. 
 Infine la temperatura di incubazione 
 nella fase di derivatizzazione è stata portata da 37\,°C a 60\,°C per 
@@ -2682,7 +2694,7 @@ I campioni sono stati lasciati quindi 2 ore ad estrarre su un
 agitatore così da favorire un'estrazione omogenea senza far
 sedimentare il terreno.  Passate le due ore, le vial sono state
 centrifugate a 604\,\emph{g} %3'000 giri al minuto \todo{misura}
-per 10 minuti a 25-30\,°C e il surnatante liquido è stato prelevato e
+per 10 minuti a 25--30\,°C e il surnatante liquido è stato prelevato e
 trasferito in una nuova vial.
 
 Il campione di terreno è stato nuovamente estratto con 2,5\,ml di
@@ -2690,7 +2702,7 @@ estraente B \& D, risospeso con il vortex e ultrasonicato per
 1\,min. Dopo altri 10\,min di estrazione in agitatore, le vial sono
 state messe in centrifuga a
 604\,\emph{g} % 3'000 giri al minuto \todo{come prima}
-per 10\,min a 25-30\,°C e il supernatante è stato prelevato e aggiunto
+per 10\,min a 25--30\,°C e il supernatante è stato prelevato e aggiunto
 a quello preso precedentemente.
 
 In ogni vial ottenuta sono stati aggiunti 3,1\,ml di \ce{CHCl3} per far 
@@ -2702,7 +2714,7 @@ con il vortex e ultrasonicata per 1\,min e infine centrifugata per
 
 Infatti con questa aggiunta si raggiunge un rapporto di 2:2:1,8 
 \cite{bligh_rapid_1959} fra cloroformio, 
-metanolo e acqua che permette la separazione di due fasi: una organica inferiore 
+metanolo e acqua che permette la separazione di due fasi: una organica inferiore, 
 contenente i fosfolipidi disciolti in cloroformio e una superiore costituita 
 dal metanolo e dall'acqua in cui sono disciolti amminoacidi, sali e le altre 
 sostanze polari presenti nell'estratto.
@@ -2817,9 +2829,9 @@ Reagenti:
 
 \begin{enumerate}
 \item \ce{C19H40} in \ce{C6H14} (0.00923\,ng C19 in 40\,ml esano);\label{rif:1}
-\item \ce{CH3OH}-\ce{C7H8} (1:1) (miscela metanolo-toluene); \label{rif:2}
+\item \ce{CH3OH}--\ce{C7H8} (1:1) (miscela metanolo-toluene); \label{rif:2}
 \item \ce{KOH} 2M in \ce{CH3OH} (soluzione idrossido di potassio 2M in metanolo);\label{rif:3}
-\item \ce{C6H14}-\ce{CHCl3} (4:1) (miscela esano-cloroformio); \label{rif:4}%necessario per separare le fasi;
+\item \ce{C6H14}--\ce{CHCl3} (4:1) (miscela esano-cloroformio); \label{rif:4}%necessario per separare le fasi;
 \item acido acetico 1 M; \label{rif:5}
 %\item acqua milliQ.
 \end{enumerate}
@@ -2829,7 +2841,7 @@ Procedura.
 Ad ogni vial ottenuta nella fase precedente sono stati aggiunti 10\,µl di
 %ella \ref{rif:1}° soluzione, 
 \ce{C19H40} in esano,
-0,5\,ml di metanolo-toluene (\ce{CH3OH}-\ce{C7H8})
+0,5\,ml di metanolo-toluene (\ce{CH3OH}--\ce{C7H8})
 %della \ref{rif:2}° 
 e 0,1\,ml di \ce{KOH} 2M.
 %della \ref{rif:3}° soluzione.
@@ -2837,7 +2849,7 @@ Per far avvenire la derivatizzazione,
 i campioni sono stati messi in incubazione a 60\,°C per 15\,min.
 
 Successivamente è stato aggiunto 1\,ml della miscela esano-cloroformio 
-(\ce{C6H14}-\ce{CHCl3})
+(\ce{C6H14}--\ce{CHCl3})
 %della \ref{rif:4}° miscela
 e 0,3\,ml di acido acetico.
 %della \ref{rif:5}°.
@@ -2848,7 +2860,7 @@ per 5\,min a 604\,\emph{g}. %3'000 giri al minuto. \todo{centrif}
 procedura di lavaggio con un millilitro di esano-cloroformio è stata ripetuta
 una seconda volta.
 
-Il tutto è stato poi portato a secco sotto flusso di \ce{N_2} a 25-30\,°C e infine è
+Il tutto è stato poi portato a secco sotto flusso di \ce{N_2} a 25--30\,°C e infine è
 stato recuperato con 200\,µl di eptano per l'iniezione in GC-MS.
 
 %\begin{enumerate}
@@ -2876,7 +2888,7 @@ che hanno subito la medesima procedura dei campioni ma mancanti del grammo di
 suolo, così da
 controllare la presenza di eventuali interferenti nel sistema di preparazione
 e iniezione, come ad esempio: vial sporche, solventi impuri, siringa
-del \acs{GC}, liner e/o colonna con residui di iniezioni precedenti, etc\ldots
+del \acs{GC}, liner e/o colonna con residui di iniezioni precedenti, etc..
 
 Infine è stata preparata la curva di taratura tramite una miscela di 
 acidi grassi metilati certificata, ovvero il \acs{BAMEs} Mix
@@ -2948,13 +2960,13 @@ quantitativa, è stato usato uno standard di fosfolipide, quale la
 fosfatidilcolina, così da effettuare una prova di validazione della
 procedura di analisi. 
 
-Una quantità nota di fosfatidilcolina, 2,60\,µg --valore 
+Una quantità nota di fosfatidilcolina, 2,60\,µg --- valore 
 calcolato sommando le quantità molari dei BAMEs (ovvero i PLFA estratti 
 dai campioni suolo che hanno subito metilazione) individuati in un campione 
-Mix e moltiplicando poi per il PM della fosfatidilcolina--, è stata
+Mix e moltiplicando poi per il PM della fosfatidilcolina ---, è stata
 sciolta in 2,6ml di \ce{CHCl3}.
-Di questa soluzione (a 1'000\,ppm) sono stati iniettati tre volumi noti --26\,µl,
-50\,µl e 100\,µl-- in tre vial contenenti un grammo di suolo preso 
+Di questa soluzione (a 1.000\,ppm) sono stati iniettati tre volumi noti --- 26\,µl,
+50\,µl e 100\,µl --- in tre vial contenenti un grammo di suolo preso 
 dal campione Soil Mix 2017. Ogni campione è stato ripetuto in doppio, così da 
 ottenere 6 vial e a queste sono stati 
 aggiunti due bianchi senza lo standard di fosfolipide e senza suolo, altri due 
@@ -3087,7 +3099,7 @@ FIERER2003, frostegard_use_2011,guo_effects_2014, hamer_rhizosphere_2008}.
 \centering
 \caption[I 6 gruppi microbici e i rispettivi markers]
 {I 6 gruppi microbici presi in esame e i rispettivi markers
-(\autoref{tab:PM_PLFA}, in appendice).}
+(\autoref{tab:PM_PLFA}).}
 \label{tab:GruppiMicrobici}
 \begin{tabular}{llllll}
   \hline
@@ -3193,7 +3205,7 @@ stata quindi applicata l'analisi della varianza (ANOVA).
 La natura dei dati è intrinsecamente composizionale (i PLFA chiudono a
 somma 1 o somma 100\%) e quindi sono stati usati metodi idonei a non
 distorcere l'informazione contenuta nei dati stessi, come qui di
-seguito specificato
+seguito specificato:
 
 \begin{itemize}
 \item Multivariata composizionale:
@@ -3212,7 +3224,7 @@ seguito specificato
  L'analisi è stata condotta tramite il linguaggio di programmazione R,
  \cite{r_programming} versione 3.4.3 e alcune delle sue librerie
  \cite{agricolae,foreign,xtable,compositional, multcomp,
-   colorspace,dendextend,plyr  }
+   colorspace,dendextend,wickham_11}
  
  
 \chapter{Risultati}
@@ -3241,8 +3253,6 @@ quello estivo. %successivo (\autoref{fig:crom_CO10C3}) è
 Vediamo che tutti i composti del \acs{BAMEs} Mix risultano ben
 separati e identificati e che ci sono, nei due Mix, alcuni composti non
 presenti nello standard e questi sono riportati in \autoref{tab:Metili_campioni}. 
-
-
 Questo è dovuto al fatto che il \acs{BAMEs}
 Mix in commercio non è specifico e quindi risulta mancante di
 alcuni acidi grassi presenti nell'ecosistema microbico del suolo.
@@ -3280,7 +3290,7 @@ medesimi picchi, con intensità non significativamente differenti.
 \caption[Tre cromatogrammi che confrontano il BAMEs standard 100 e i due Soil Mix]
 {I tre cromatogrammi presentano dei codici alfanumerici che stanno ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
+in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
 poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare 
 gli specifici ioni.\newline
@@ -3302,7 +3312,7 @@ e renderlo nuovamente efficiente.}
 \centering
 \caption[Metilesteri presenti nei campioni ma non nel BAMEs Mix]
 {Metilesteri presenti nei campioni ma non nel BAMEs Mix.\\
-\emph{Me} indica Metile e \emph{Et} Etile. }
+\emph{Me} indica metile e \emph{Et} etile. }
 \label{tab:Metili_campioni}
 \begin{tabular}{llccc}
   \hline
@@ -3312,8 +3322,8 @@ Nome MassHunter & Metilesteri & Peso molecolare & RT autunnale & RT estivo\\
  9-MeC16:0         & Metil-9-metilpentadecanoato  & 270 & 16.88& 16.32\\
 12-MeC16:0         & Metil-12-metilpentadecanoato  & 270 & 18.05& 17.49\\
 10-MeC17:0         & Metil-10-metilesadecanoato    & 284 & 19.04& 18.47\\ 
-13-EtC17:0         & Etil-13-metilpentadecanoato    & 284 & 20.24& 19.67\\
-12-EtC17:0         & Etil-12-metilesadecanoato    & 284 & 20.40& 19.87\\
+13-EtC17:0         & Metil-13-etilpentadecanoato    & 284 & 20.24& 19.67\\
+12-EtC17:0         & Metil-12-etilpentadecanoato    & 284 & 20.40& 19.87\\
 C16:1$\omega$5     & Metil cis-11-esadecenoate            & 268 & 20.59& 20.01\\
 a-C17:0            & Metil-14-metilesadecanoato           & 284 & 21.18& 20.58\\
 10Me C18:0         & Metil-10-metileptadecanoato          & 298 & 21.40& 20.81\\
@@ -3347,7 +3357,7 @@ C20:2 11,14        & Metil icosa-E,E-11,14-dienoato          & 322 & 33.01& 32.9
 {I due cromatogrammi autunnali biologici presentano dei codici 
 alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA} in appendice. 
+in  \autoref{tab:PM_PLFA}. 
 Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
 poiché questo cromatogramma è ottenuto senza selezionare 
@@ -3375,7 +3385,7 @@ gli specifici ioni.
 \caption[Due cromatogrammi rappresentanti dei campioni autunnali convenzionali]
 {I due cromatogrammi autunnali convenzionali presentano dei codici alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
+in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
 poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 %3 cromatogrammi a confronto: \\
@@ -3404,7 +3414,7 @@ poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 {I 3 cromatogrammi presentano dei codici alfanumerici che stanno ad 
 indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, 
+in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, 
 sono oscurate
 dal picco più intenso
 poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare 
@@ -3426,7 +3436,7 @@ corrispondenti a tali picchi sono riportati in
 
 \begin{table}[ht]
 \caption[Metilesteri mancanti nelle due stagioni]
-{BAMEs mancanti in autunno e in estate (\autoref{tab:PM_PLFA}, in appendice). }
+{BAMEs mancanti in autunno e in estate (\autoref{tab:PM_PLFA}). }
 \label{tab:BAMEs_mancanti}
 \centering
 \small
@@ -3453,8 +3463,8 @@ tali microrganismi preferiscono una temperatura superiore ai 20\,°C
 \cite{Florenzano}; 
 mentre in
 estate sono mancanti 4 dei 7 metilesteri dei Gram-negativi (uno di
-questi è quello comune con le micorrize --C16:1$\omega$5-- e uno con i 
-funghi --C18:1$\omega$7cis--);
+questi è quello comune con le micorrize --- C16:1$\omega$5 --- e uno con i 
+funghi --- C18:1$\omega$7cis ---);
 %(\autoref{tab:GruppiMicrobici}) 
  anche in questo caso otteniamo risposte
 in accordo con la letteratura, la quale afferma che i batteri sono 
@@ -3505,7 +3515,7 @@ lavorazioni; notiamo qualche differenza solo stagionale.
 \caption[Confronto cromatografico tra un campione autunnale e uno estivo]
 {I 2 cromatogrammi presentano dei codici alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA} in appendice. Alcune molecole, se coeluenti, sono oscurate
+in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
 poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 Lo slittamento sull'asse temporale tra i due cromatogrammi è dovuto al fatto
@@ -3665,7 +3675,7 @@ boxplot(Rapporto3 ~ fattore,
 @
 
 \caption[Boxplot che mostra diverse condizioni di areazione nel
-terreno (C19:0$\Delta$ su C18:1$\omega$7cis)]
+terreno ($\frac{C19:0\Delta}{C18:1\omega7cis}$)]
 {I 12 boxplot, relativi
   al rapporto $\frac{C19:0\Delta}{C18:1\omega7cis}$, indicano i
   diversi contenuti di aria nel terreno tenendo conto dell'interazione
@@ -4022,10 +4032,10 @@ Dove:
 
 \nopagebreak
 \begin{tabular}{lp{12cm}}
-  $y$       & = $\displaystyle \sum_{i=1}^{36} PLFA_i(moli)$\\
-  $\beta_0$     & = media generale (intercetta del modello)\\
-  $x_1$ & = variabile categorica \emph{lavorazione}, tre livelli: \emph{Arato, Rippato, Frangizollato}\\
-  $x_2$  & = variabile categorica \emph{stagione}, due livelli:
+  $y$        & = $\displaystyle \sum_{i=1}^{36} PLFA_i(moli)$\\
+  $\beta_0$  & = media generale (intercetta del modello)\\
+  $x_1$      & = variabile categorica \emph{lavorazione}, tre livelli: \emph{Arato, Rippato, Frangizollato}\\
+  $x_2$      & = variabile categorica \emph{stagione}, due livelli:
            \emph{Autunno, Estate}\\
 
   $\epsilon$ & = residui o errore
@@ -4060,13 +4070,7 @@ text(x=1:6,
 Il modello sopra descritto è più parsimonioso e quindi permette di
 escludere su base formale l'effetto della variabile \emph{Gestione}.
 
-Potendo escludere questa variabile, possiamo riassumere in
-\autoref{fig:boxplot_somma_moli} i dati attraverso dei boxplot divisi
-per \emph{Lavorazione} e \emph{Stagione}.
- L'estate, rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
-lavorazioni, una media superiore rispetto alle tre autunnali.
-
-\begin{figure}[t]
+\begin{figure}[h]
   \centering
 
 <<label=boxplotsommamoli,fig=TRUE, echo=FALSE, width = 4.5, height = 4.5 >>=
@@ -4081,7 +4085,7 @@ lavorazioni, una media superiore rispetto alle tre autunnali.
     }
   \label{fig:boxplot_somma_moli}
 \end{figure}
-%\FloatBarrier
+\FloatBarrier
 
 
 
@@ -4091,29 +4095,18 @@ lavorazioni, una media superiore rispetto alle tre autunnali.
 % Gestione dopo aver dimostrato, con il modello lineare che non era
 % significativa.
 
+Potendo escludere questa variabile, possiamo riassumere in
+\autoref{fig:boxplot_somma_moli} i dati attraverso dei boxplot divisi
+per \emph{Lavorazione} e \emph{Stagione}.
+ L'estate, rappresentata dai tre boxplot più a destra, ha, in tutte e tre le
+lavorazioni, una media superiore rispetto alle tre autunnali.
+
 
 Guardando invece entro stagione vediamo che il rippato, in entrambe le
 stagioni, è quello avente una media maggiore rispetto alle altre due
 lavorazioni, con un valore pari a 3,74 in autunno e  
 pari a 4,47 in estate.
 
-<<TabANOVAsomme, echo=FALSE,  eval=TRUE, results =  tex >>=
-
-
- xtabANOVAsum <-
-    xtable(anova(lm.SommeMoli.2),
-           label  = "tab:ANOVAsum",
-           #align  = "lllllll",
-            caption =
-               c("Analisi della varianza per il modello \\ref{mod:ANOVAmoli}, che 
-            indica la significatività della lavorazione (TIL) e della stagione.")
-
- )
-print(xtabANOVAsum,
-      include.rownames=TRUE,
-      caption.placement = "top",
-      table.placement= "b")
-@
 
 %Dopo aver applicato il Tukey test (si hanno i coefficienti risultanti
 %sopra i boxplot), si può notare come non siano state trovate
@@ -4132,7 +4125,31 @@ starplot in \autoref{fig:starplot_campioni}. I valori
 medi sono riportati in \autoref{tab:ANOVAsummary}.
 
 
+<<TabANOVAsomme, echo=FALSE,  eval=TRUE, results =  tex >>=
+tabANOVAsom <-anova(lm.SommeMoli.2)
+row.names(tabANOVAsom) <-
+    c("LAVORAZIONE", "STAGIONE", "Residui")
+      
+      
+ xtabANOVAsum <-
+    xtable(tabANOVAsom,
+           label  = "tab:ANOVAsum",
+           #align  = "lllllll",
+            caption =
+               c("Analisi della varianza per il modello \\ref{mod:ANOVAmoli}, che 
+            indica la significatività della lavorazione (TIL) e della stagione.")
+
+ )
+print(xtabANOVAsum,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+@
+
+
 <<TabANOVAsummary, echo=FALSE,  eval=TRUE, results =  tex >>=
+
+
  xtabANOVAsummary <-
     xtable(summary(lm.SommeMoli.2),
            label  = "tab:ANOVAsummary",
@@ -4183,7 +4200,7 @@ insieme, rappresentano una percentuale totale del
 \Sexpr{100*sum(round((pcx.Y.MOLI$sdev)^2/sum((pcx.Y.MOLI$sdev^2)),2)[4:10])}
 \%.
 
-\begin{figure}[t]
+\begin{figure}[h]
   \centering
 
 <<label=printScreeplotComposiz, fig=TRUE, width = 4.5, height = 4.5, echo=FALSE>>=
@@ -4228,7 +4245,8 @@ identificati.  Notiamo alcuni composti che si distanziano nettamente
 lungo la prima componente, mentre meno visibile è la separazione lungo 
 la seconda.
 Questo era riscontrabile anche dall'analisi cromatografica in quanto 
-i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi (\autoref{tab:PM_PLFA}, in appendice), 
+i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi 
+(\autoref{tab:PM_PLFA}), 
 non sono stati identificati nei campioni autunnali, mentre sono presenti 
 in quelli  estivi,
 al contrario delle micorrize e di alcuni composti identificativi dei
@@ -4260,6 +4278,8 @@ legend(0.25,1, box.col = "transparent", cex = 1.5,
 text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
 points(x=-0.75, y=1.10, pch=1, col=1, cex=4)
 @
+
+
 
 <<FigPCAcomposizionale_2, eval = FALSE, echo = FALSE, results = hide>>=
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE, cex = 1,
@@ -4332,7 +4352,7 @@ fun.biplot(x=pcx.Y.MOLI,
   identificati). Nell'asse delle ascisse abbiamo la prima componente e
   nelle ordinate la seconda e i numeri che identificano le varie
   frecce rappresentano l'ordine di eluizione dei vari composti al
-  detector (\autoref{tab:PM_PLFA}, in appendice).}
+  detector (\autoref{tab:PM_PLFA}).}
   \label{fig:PCA_composizPLFA}
 \end{figure}
 \FloatBarrier
@@ -4357,7 +4377,7 @@ df.colori <-  df.colori[order(df.colori$origine),]
 
 
 plot(0, 0,
-     xlim=c(-0.6,0.6),
+     xlim=c(-0.6, 0.6),
      ylim=c(-0.6, 0.6),
      xlab = "Comp.1",
      ylab = "Comp.2",
@@ -4536,7 +4556,7 @@ dend1 <- set(dend1, "labels_cex", 0.8)
 # And plot:
 
 plot(dend1, 
-     main = "Titolo", 
+     main = "Cluster di tutti i campioni", 
      horiz =  FALSE,  
      nodePar = list(cex = .07))
 legend("topleft", 
@@ -4691,10 +4711,17 @@ PLFA e quindi, verosimilmente, la composizione della comunità
 microbica.
 
 
+
 <<ModelloComposizionale_2, eval = TRUE, results = tex, echo = FALSE>>=
 
+modello.composiz <-
+    anova(lm.2)
+row.names(modello.composiz) <-
+    c("(Intercetta)", "GESTIONE", "STAGIONE", "LAVORAZIONE",
+      "GES:STA", "GES:LAV", "STA:LAV", "Residui")
+
 xtabANOVAModAcomp <-
-    xtable(anova(lm.2),
+    xtable(modello.composiz,
            label  = "tab:ANOVAModAcomp",
            align  = "lllllll",
             caption =
@@ -5014,13 +5041,13 @@ dev.off()
 
 Il metodo di estrazione e purificazione di Blight \& Dyer, con le 
 successive modificazioni \cite{bligh_rapid_1959, white_determination_1979,
-  bossio_determinants_nodate} e il metodo cromatografico applicato
-sono risultati efficace a determinare i \acs{PLFA} di membrana dei 
+  bossio_determinants_nodate} e il metodo cromatografico applicati
+sono risultati efficaci a determinare i \acs{PLFA} di membrana dei 
 microrganismi del suolo. Con la prova di validazione abbiamo osservato che
-tale metodo seppur comprendendo molteplici passaggi --estrazione, 
+tale metodo seppur comprendendo molteplici passaggi --- estrazione, 
 purificazione 
-e derivatizzazione-- non comporta rilevanti perdite di segnale in confronto 
-ad una quantità di marcatore (fosfatidilcolina) aggiunto in quantità nota.
+e derivatizzazione --- non comporta rilevanti perdite di segnale in confronto 
+ad una quantità di marcatore aggiunto in quantità nota (fosfatidilcolina).
 In altre parole possiamo considerare il recupero dei fosfolipidi dal suolo come
 esaustivo (\autoref{fig:validazione}).
 
@@ -5029,8 +5056,8 @@ esaustivo (\autoref{fig:validazione}).
 \includegraphics[scale=0.4]{./foto/validazione.PNG}
 \caption[Cromatogrammi ottenuti dalla validazione]
 {I due cromatogrammi sono stati ottenuti durante la validazione, il primo 
-rappresenta il campione ma in cui erano stati iniettati 50\,µl di fosfatidilcolina, 
-il secondo è il campione con 1\,g di suolo e i soliti 50\,µl di standard.}
+rappresenta il campione in cui sono stati iniettati 50\,µl di fosfatidilcolina, 
+il secondo è il campione con 1\,g di suolo e 50\,µl di standard.}
 \label{fig:validazione}
 \end{figure}
 
@@ -5074,7 +5101,7 @@ attinomiceti come in accordo con \citet{Kroppenstedt1985,brennan1988,
   ovreas_population_2000, hamer_rhizosphere_2008}.
 
 Infine in questo studio non sono stati identificati tutti i 26 composti
-appartenenti al \acs{BAMEs} Mix (\autoref{tab:PM_PLFA}, in appendice), 
+appartenenti al \acs{BAMEs} Mix (\autoref{tab:PM_PLFA}), 
 ma solamente quelli con una catena uguale o
 superiore a 14 atomi di carbonio; questo perché i metilesteri aventi
 una catena più corta sono generici e non sono identificativi di alcun 
@@ -5109,11 +5136,11 @@ li abbiamo assegnati tramite l'interpretazione degli spettri.}
   \hline
 Metilesteri & Peso molecolare  \\
   \hline
-Metil-9-metilpentadecanoato  &   270  \\
-Metil-12-metilpentadecanoato  &   270  \\
-Metil-10-metilesadecanoato    &   284  \\
-Etil-13-metilpentadecanoato    &   284  \\
-Etil-12-metilesadecanoato    &   284  \\
+Metil-9-metilpentadecanoato    &   270  \\
+Metil-12-metilpentadecanoato   &   270  \\
+Metil-10-metilesadecanoato     &   284  \\
+Metil-13-etilpentadecanoato    &   284  \\
+Metil-12-etilpentadecanoato    &   284  \\
 Metil-15-metileptadecanoato    &   298  \\
 Metil-17-metiloctadecanoato    &   312  \\
 %Metil qualcosa-octadecenoato         &   296  \\
@@ -5128,27 +5155,26 @@ peso molecolare e alcuni ioni caratteristici per definire il gruppo di
 appartenenza di tali molecole e, per distinguere i vari isomeri, ci 
 siamo basati sul fatto che gli ioni sono diagnostici del punto di ramificazione.
 
-In Figura \autoref{rif:as} vediamo lo spettro del Metil eptadecanoato 
+In Figura \autoref{rif:as} vediamo lo spettro del metil eptadecanoato 
 lineare.
-Lo ione a m/z 284 è stato attribuito come lo ione molecolare e la presenza
-degli ioni caratteristici dei metil esteri saturi 74\,Th e 87\,Th
-e poi vari ioni dati dalle possibili frammentazione della molecola.
+Lo ione a m/z 284 è stato attribuito come ione molecolare, e sono presenti
+gli ioni caratteristici dei metil esteri saturi 74\,Th e 87\,Th
+e poi vari ioni dati dalle possibili frammentazioni della molecola.
 
-Invece nel cromatogramma successivo (Figura \autoref{rif:bs} al tempo 
-20.249)
-vediamo una molecola sconosciuta, isomeri del esadecanoate, 
-in quanto ha peso molecolare 284 e i tipici ioni a m/z 74, 84.
+Invece nel cromatogramma successivo (Figura \autoref{rif:bs})
+vediamo un isomero dell'eptadecanoato, in quanto anch'esso ha
+peso molecolare 284\,Th e i tipici ioni a m/z 74, 84.
 
 Il composto incognito (Figura \ref{rif:bs}) è stato da noi identificato come
-il 13 Etil C17; questo perché la prima perdita è data dalla differenza 
+il 13-Etil C17; questo perché la prima perdita è data dalla differenza 
 fra gli ioni a m/z 284 e 241, ovvero 
-dalla perdita di un frammento di 43\,Th; probabilmente
-dovuta alla frammentazione e relativa perdita di un \ce{CH3} e due \ce{CH2}. 
+dalla perdita di un frammento di 43\,Th, probabilmente
+dovuta alla frammentazione e relativa perdita di un gruppo propile. 
 Lo ione avente m/z 241 sarebbe diagnostico del punto di ramificazione. 
 Infine, il successivo ione ben evidente è
 il 199\,Th dato da una perdita di un frammento di m/z 85; questo è 
 spiegabile con l'allontanamento della catena propile spiegata precedentemente 
- e dalla perdita dell'etile (peso 29) e dell'\ce{CH} 
+ e dalla perdita dell'etile (peso 29\,Th) e dell'\ce{CH} 
 ovvero il C della ramificazione.
 
 
@@ -5156,22 +5182,21 @@ ovvero il C della ramificazione.
 \begin{landscape}
 \begin{figure}
 \centering
-\subfloat[][Spettro del Metil eptadecanoato al minuto 21.93.]
+\subfloat[][Spettro del metil eptadecanoato al minuto 21.93.]
 { \includegraphics[scale=0.380]{./foto/spettroc17lineare.png} \label{rif:as}} \\
-\subfloat[][Spettro dell'ipotetico 13 Etil Pentadecanoate al minuto 20.273.]
+\subfloat[][Spettro dell'ipotetico 13 etil pentadecanoate al minuto 20.273.]
 { \includegraphics[scale=0.38]{./foto/20273.png} \label{rif:bs}} \\
 \qquad
 \caption[Due spettri degli isomeri del \ce{C18H36O2}]
-{}
+{Due spettri degli isomeri del \ce{C18H36O2}.}
 \label{fig:c17}
 \end{figure}
 \end{landscape}
 \FloatBarrier
 
 
-
-E con questi ragionamenti abbiamo tentato il riconoscimento dei 
-successivi metil esteri sconosciuti.
+Con ragionamenti analoghi a quelli appena descritti, 
+abbiamo tentato il riconoscimento degli altri metil esteri incogniti.
 
 Naturalmente i nomi da noi attributi presenti in \autoref{tab:Metili_in_più} 
 sono solamente ipotetici, visto che non eravamo in possesso di alcun
@@ -5201,18 +5226,18 @@ standard per poter effettuare un'identificazione più accurata.
 Oltre al metodo di estrazione e derivatizzazione, anche la scelta del 
 \acs{GC-MS} è risultata ottimale, se non addirittura
 necessaria.  Durante l'analisi dei campioni autunnali infatti, 
-abbiamo notato nei cromatogrammi, al tempo 22.87, un picco
+abbiamo notato nei cromatogrammi, al minuto 22.87, un picco
 molto intenso (\autoref{fig:unk126}). Questo era presente in tutti i campioni, 
 compresi i bianchi, 
 ed è stato riconosciuto, tramite lo studio dello spettro, come un 
-inquinante di laboratorio  (\autoref{fig:spettro126}). 
+inquinante (\autoref{fig:spettro126}). 
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.41]{./foto/unk126qualit.png}
-\caption[Quattro cromatogrammi con ione specifico 126]
-{I quattro cromatogrammi sono di un campione e di 3 bianchi. Tutti mostrano
-al tempo 22.87 un picco, riconosciuto poi come un inquinante di laboratorio.}
+\caption[Quattro cromatogrammi con estratto lo ione di m/z 126]
+{I quattro cromatogrammi sono di un campione (CO10B1M) e di 3 bianchi. Tutti mostrano
+al minuto 22.87 un picco, riconosciuto poi come un inquinante.}
 \label{fig:unk126}
 \end{figure}
 \FloatBarrier
@@ -5220,8 +5245,9 @@ al tempo 22.87 un picco, riconosciuto poi come un inquinante di laboratorio.}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.42]{./foto/spettrounk126.png}
-\caption[Spettro preso dal campione CO10B1 al tempo 22.87]
-{Spettro preso, selezionando lo ione 126, dal campione CO10B1 al tempo 22.87.}
+\caption[Spettro preso dal campione CO10B1 al minuto 22.87]
+{Spettro preso, selezionando lo ione avente m/z 126, dal campione CO10B1 al minuto 
+22.87.}
 \label{fig:spettro126}
 \end{figure}
 \FloatBarrier
@@ -5231,6 +5257,9 @@ stato possibile riconoscerlo tramite la \emph{NIST14}.
 Lo ione a m/z 126, presente nello spettro,  potrebbe essere dovuto ad 
 un derivato del maltolo 
 \autoref{fig:mentholpropionate}.
+
+Anche la presenza degli ioni 43\,Th, 57\,Th e 97\,Th sembrano confermare quest'ipotesi.
+
 
 \begin{figure}[h]
 \centering
@@ -5292,9 +5321,12 @@ Massa.
 
 
 Inoltre con il metodo cromatografico da noi adottato, è stato possibile
-separare il Metil oleato, il Metil trans-9-octadecenoato e il 
-Metil cis-11-octadecenoato a differenza di quanto affermato sulla pagina web
-\url{https://www.sigmaaldrich.com/technical-documents/articles/analytical-applications/gc/gc-analysis-of-a-37-component-fame-mix-g004263.html}.
+separare il metil oleato (C18:1$\omega$9cis), il metil trans-9-octadecenoato 
+(C18:1$\omega$9trans) e il 
+metil cis-11-octadecenoato (C18:1$\omega$7cis) a differenza di quanto 
+affermato sulla pagina web
+\url{https://www.sigmaaldrich.com/technical-documents/articles/
+analytical-applications/gc/gc-analysis-of-a-37-component-fame-mix-g004263.html}.
 
 Vediamo in \autoref{fig:c18:1} i tre picchi rappresentativi dei tre 
 octadecenoati dal minuto 25 al 25.5. 
@@ -5309,38 +5341,32 @@ octadecenoati dal minuto 25 al 25.5.
 \FloatBarrier
 
 Osservando lo spettro di tutti e tre gli analiti (\autoref{fig:spettric18})
-vediamo che gli ioni
-alti non sono diagnostici, anche tramite la \emph{NIST 14} non è stato 
-infatti possibile distinguerli. Ma tramite l'aiuto del MS Interpreter è
+vediamo che gli ioni aventi elevati valori di m/z 
+non sono diagnostici e anche tramite la \emph{NIST 14} non è stato 
+ possibile distinguere i tre isomeri. Con l'aiuto del \emph{MS Interpreter} è
 stato possibile studiare più dettagliatamente le varie frammentazioni.  
-Ci siamo soffermati sullo ione 97, dovuto alla frammentazione tra il C11 e
-il C12 della catena lineare. Questo ione può risultare così alto nei 
-due C18:1$omega$9, ma non nel C18:1$omega$7 poiché la frammentazione più 
-frequente (?) dovrebbe risultare o prima o dopo il doppio legame.
-
-Osservando proprio tale ione è stato possibile osservare che nei primi
-due picchi questo è intenso e ben visibile (rispettivamente Figura 
+Ci siamo soffermati sullo ione 97\,Th, dovuto alla rottura del legame tra il C11 e
+il C12 della catena lineare. Questo ione può risultare alto nei 
+due C18:1$\omega$9 (cis e trans), ma non nel C18:1$\omega$7 poiché 
+le frammentazioni più 
+frequenti dovrebbero risultare prima o dopo il doppio legame.
+Dunque abbiamo constatato che nei primi
+due picchi lo ione avente m/z pari a 97 risulta essere intenso e ben visibile 
+(rispettivamente Figura 
 \autoref{rif:a3} e Figura \autoref{rif:b3}), mentre nel terzo 
 (Figura \autoref{rif:c3}), pur presente, 
 risulta più debole. 
-
-In questo modo, abbiamo potuto ipotizzare che il primo picco, al tempo
-di ritenzione di 25.063, sia il Metil oleato, il 
-secondo a 25.254 l'abbiamo segnalato come Metil 
-trans-9-octadecenoato\footnote{L'ordine di uscita cis e successivamente 
-trans è stato trovato in letteratura} e il Metil cis-11-octadecenoato dovrebbe
-invece rappresentare il terzo picco a 25.568.
 
 
 \begin{landscape}
 \begin{figure}
 \centering
 \subfloat[][Spettro del picco al minuto 25.063.]
-{ \includegraphics[scale=0.45]{./foto/18t.png} \label{rif:a3}} \\
+{ \includegraphics[scale=0.4]{./foto/18t.png} \label{rif:a3}} \\
 \subfloat[][Spettro del picco al minuto 25.230.]
-{ \includegraphics[scale=0.45]{./foto/18c.png} \label{rif:b3}} \\
+{ \includegraphics[scale=0.4]{./foto/18c.png} \label{rif:b3}} \\
 \subfloat[][Spettro del picco al minuto 25.525.]
-{ \includegraphics[scale=0.45]{./foto/187.png} \label{rif:c3}} 
+{ \includegraphics[scale=0.4]{./foto/187.png} \label{rif:c3}} 
 \qquad
 \caption[I tre spettri dei tre octadecenoati]
 {I 3 spettri dei tre octadecenoati.}
@@ -5349,6 +5375,11 @@ invece rappresentare il terzo picco a 25.568.
 \end{landscape}
 \FloatBarrier
 
+In questo modo, abbiamo potuto ipotizzare che il primo picco, al minuto 25.063, sia il metil oleato, il 
+secondo al minuto 25.254 l'abbiamo segnalato come metil 
+trans-9-octadecenoato\footnote{L'ordine di uscita cis e successivamente 
+trans è stato trovato in letteratura} e il metil cis-11-octadecenoato dovrebbe
+invece corrispondere al terzo picco al minuto 25.568.
 
    
 Per quanto riguarda lo scopo di questo studio, ovvero determinare 
@@ -5447,7 +5478,6 @@ dimensionalità del dataset tramite PCA per poter eventualmente
 distinguere i vari gruppi e se qualcuno di questi gruppi di
 microrganismi risultasse indicatore della diversa gestione e
 lavorazione del suolo.
-
 Abbiamo così osservato che la prima componente, avente il 63\% della
 varianza totale del dataset, suddivide nettamente i campioni tra
 quelli estivi e quelli autunnali, e quindi la stagione risulta essere
@@ -5541,8 +5571,8 @@ quali indici di modifiche all'ambiente agrario in seguito a due diverse
 gestioni (biologico e convenzionale) e a tre differenti lavorazioni 
 primarie (aratura, rippatura e frangizollatura), tenendo inoltre conto 
 della stagionalità (estate e autunno). I campi oggetto di studio  sono situati 
-nell'azienda agricola di Montepaldi, a San
-Casciano di Val di Pesa (Firenze). Tale azienda porta avanti sia
+nell'azienda agricola della Scuola di Agraria di Firenze, in località Montepaldi, 
+a San Casciano di Val di Pesa (Firenze). Tale azienda porta avanti sia
 l'agricoltura biologica che quella convenzionale da oltre 25 anni e questo studio 
 rientra in un progetto europeo iniziato nel 1991 (\acs{MoLTE}).
 Per valutare la qualità e la quantità 
@@ -5552,7 +5582,7 @@ presenti nelle membrane cellulari, in quanto essi risultano specifici dei
 diversi gruppi microbici \cite{bossio_determinants_nodate,
 kong_microbial_2012, zhang_assessing_2008}.
 
-I dati ottenuti per gasmassa, 
+I dati ottenuti per \acs{GC-MS}, 
 sono stati 
  elaborati tramite  il linguaggio
 di programmazione R con addattamento di
@@ -5612,8 +5642,8 @@ della comunità tellurica entro una medesima
 stagione e/o entro un unico ciclo colturale.
 Sarebbe quindi interessante osservare 
 come l'habitat microbico possa rispondere alle varie lavorazioni 
-effettuate -- dalla preparazione
-del letto di semina alla raccolta -- campionando prima e dopo ogni 
+effettuate --- dalla preparazione
+del letto di semina alla raccolta --- campionando prima e dopo ogni 
 operazione
 meccanica e chimica e durante le varie fasi di crescita 
 della pianta o anche la diversa fertilità 
@@ -5674,14 +5704,14 @@ applicando anche l'analisi PCR per avere  informazioni sul grado di biodiversit�
 
 \begin{table}[ht]
 \caption[Pesi molecolari e nomi di BAMEs]
-{Pesi molecolari e nomi molecole BAMEs, in corsivo ci sono i nomi dei
+{Pesi molecolari e nomi delle molecole BAMEs, in corsivo ci sono i nomi dei
 composti presenti nel BAMEs Mix della SIGMA-ALDRICH. }
 \label{tab:PM_PLFA}
 \centering
 \small
  \begin{tabular}{p{2.5cm}p{3cm}p{2cm}p{6.5cm}}
   \toprule
-Ordine di uscita & Nome in R        &Peso molecolare
+Ordine di \newline uscita & Nome in R        & PM
    &Nome              \\
    \midrule
 1	& i-C14:0 	                           &242	&Metil-12-metiltridecanoato	\\
@@ -5697,9 +5727,9 @@ Ordine di uscita & Nome in R        &Peso molecolare
 10	& 10Me C17:0                           &284	&Metil-10-metilesadecanoato	\\
 11	& C16:0     	                       &270	&\emph{Metil palmitato}		\\
 %12	& bohMe C17:0 sul 284              	   &284    &	\\
-12	& 13Et C17:0                    	   &284	&Etil-13-metilesadecanoato	\\
+12	& 13Et C17:0                    	   &284	&Metil-13-etilpentadecanoato	\\
 13  & C16:1$\omega$7                       &268	&\emph{Metil cis-9-esadecenoato}	\\
-14	& 12Et C17:0	                       &284	&Etil-12-metilesadecanoato		\\
+14	& 12Et C17:0	                       &284	&Metil-12-etilpentadecanoato		\\
 15  & C16:1$\omega$5                       &268 & Metil cis-11-esadecenoato	\\
 16	& i-C17:0                        	   &284	&\emph{Metil-15-metilesadecanoato}			\\
 17	& a-C17:0                       	   &284	& Metil-14-metilesadecanoato	\\
@@ -5737,8 +5767,8 @@ Ordine di uscita & Nome in R        &Peso molecolare
 \chapter{Acronimi e sigle}
 
 \begin{acronym}[WYSIWYM]
-\acro{A, R, F}[A, R, F]{Parcella dove è stata effettuata l'Aratura, la 
-Rippatura, la Frangizollatura.}
+\acro{A, R, F}[A, R, F]{Parcella dove è stata effettuata, rispettivamente,
+ l'Aratura, la Rippatura, la Frangizollatura.}
 
 \acro{APCI}[APCI]{\emph{Atmospheric Pressure Chemical Ionization} }
 {\small - Ionizzazione chimica a pressione atmosferica.\par}
@@ -5937,7 +5967,7 @@ Ai miei compagni di facoltà più vecchi, che mi hanno accompagnato
 in tutti e 5 gli anni di università: la Franci, la Cri, Pino, i Sera,
 i Sani, Caro e Gab, l'Isa e Dimitri; ma anche a quelli nuovi, 
 non per questo meno importanti: Alex, Gianma, Agne e Franceschino.
-Infine ai miei "bimbi" a cui ho fatto da tutor: Dario, Nicola, Albe 
+Infine ai miei “bimbi” a cui ho fatto da tutor: Dario, Nicola, Albe 
 e Francesco.
 
 Tutti voi, chi consapevolemnte e chi meno, mi avete regalato più di un
@@ -5953,7 +5983,7 @@ come io spero di trovare la mia, senza mai perderci di vista e rimanendo
 sempre noi stessi. Abbiamo fatto così tante cose insieme nell'ultimo anno,
 complici delle stesse pene e gioie, che mi sembra di conoscerti da una vita.
 
-Voglio poi ringraziare i miei "insegnanti", sia professori universitari che
+Voglio poi ringraziare i miei “insegnanti”, sia professori universitari che
 collaboratori del CNR, che hanno colto e coltivato la
 mia passione. Lavorare con loro, a prescindere dalla tesi, ma per il
 semplice piacere di sapere, mi ha dato la possibilità di entrare in
