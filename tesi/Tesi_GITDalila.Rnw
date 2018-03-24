@@ -125,6 +125,9 @@ backref=FALSE
 \AtEveryBibitem{\clearfield{url}}
 \usepackage[]{acronym}
 
+%usepackage[write, signatures]{frontespizio}
+
+
 %% siunitx serve per le unità di misura
 \usepackage{siunitx}
 \sisetup{detect-all = true, detect-family = true, output-decimal-marker = {,}}
@@ -299,20 +302,21 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 \begin{frontespizio}
-  \Margini{5cm}{1.5cm}{3cm}{1cm}
+  \Margini{3cm}{1.5cm}{3cm}{1cm}
   \Logo[2.5cm]{./foto/logo-unifi_positivo.png}
   \Istituzione{Universit\`a degli Studi di Firenze}
   \Divisione{Scuola di Agraria}
   \Scuola{Corso di Laurea in Scienze e tecnologie agrarie (LM-69)}
-  \Titolo{Analisi GC-MS dei PLFA microbici, in suoli agrari sottoposti
-  a diversi metodi di gestione.}
+  \Preambolo{\renewcommand{\fronttitlefont}{\fontsize{21}{30}\selectfont}}
+  \Titolo{\textbf{Analisi GC-MS dei PLFA microbici, in suoli agrari sottoposti
+  a diversi metodi di gestione.}}
   \NCandidato{Candidata}
-  \Candidato{Dalila Pasquini}
+  \Candidato{\itshape Dalila Pasquini}
   \NRelatore{Relatore}{}
-  \Relatore{Prof. Luca Calamai}
-  \NCorrelatore{Correlatori}{Correlatori}
-  \Correlatore{Dott. Ottorino-Luca Pantani}
-  \Correlatore{Prof. Gaio Cesare Pacini}
+  \Relatore{\itshape Prof. Luca Calamai\\[1em]\hline}
+  \NCorrelatore{Correlatore}{Correlatori}
+  \Correlatore{\itshape Dott. Ottorino-Luca Pantani\\[1em]\hline}
+  \Correlatore{\itshape Prof. Gaio Cesare Pacini\\[1em]\hline}
   \Piede{Anno accademico 2016-2017}
 \end{frontespizio}
 %\maketitle
@@ -4153,15 +4157,22 @@ print(xtabANOVAsum,
  xtabANOVAsummary <-
     xtable(summary(lm.SommeMoli.2),
            label  = "tab:ANOVAsummary",
-           #align  = "lllllll",
+           align  = "lllll",
             caption =
                c("Stima dei valori medi in funzione di lavorazione e stagione, 
                come calcolati dal modello \\ref{mod:ANOVAmoli}.")
            )
+           
+row.names(xtabANOVAsummary) <-
+     c("(Intercetta)", "LAV Rip", "LAV Fzo","STAGIONE Est")
+
+    
 print(xtabANOVAsummary,
       include.rownames=TRUE,
       caption.placement = "top",
       table.placement= "h")
+      
+
 @
 
 %\section{{\fontsize{6mm}{8mm}\selectfont Analisi composizionale}}
