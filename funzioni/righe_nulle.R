@@ -1,28 +1,30 @@
-info.sistema <-
-    Sys.info()[c(1,7)]
-if(info.sistema[1]=="Windows"){
-    DirMain <-
-        paste("C:/Users/",
-              info.sistema[2],
-              "/Dropbox/MOLTE_R", sep="")
-} else {
-    if(info.sistema[2]=="dalila" ){
-        DirMain <-"~/Dali_GIT"
-    }else{
-        DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
-    }
-}
+# info.sistema <-
+#     Sys.info()[c(1,7)]
+# if(info.sistema[1]=="Windows"){
+#     DirMain <-
+#         paste("C:/Users/",
+#               info.sistema[2],
+#               "/Dropbox/MOLTE_R", sep="")
+# } else {
+#     if(info.sistema[2]=="dalila" ){
+#         DirMain <-"~/Dali_GIT"
+#     }else{
+#         DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
+#     }
+# }
 
-DirData <-
-    file.path(DirMain,"dati_grezzi")
-DirElab <-
-    file.path(DirMain,"dati_elaborati")
-DirGraf <-
-    file.path(DirMain, "grafici")
-DirFunz <-
-    file.path(DirMain, "funzioni")
-DirCod <-
-    file.path(DirMain, "codice")
+# DirData <-
+#     file.path(DirMain,"dati_grezzi")
+# DirElab <-
+#     file.path(DirMain,"dati_elaborati")
+# DirGraf <-
+#     file.path(DirMain, "grafici")
+# DirFunz <-
+#     file.path(DirMain, "funzioni")
+# DirCod <-
+#     file.path(DirMain, "codice")
+## Righe sopra eliminate dopo tesi conseguita verificare su linux
+
 
 ## Gruppi_Microbici <-
 ##     read.table("/home/dalila/Dali_GIT/dati_grezzi/spettriBATCH1.csv",
