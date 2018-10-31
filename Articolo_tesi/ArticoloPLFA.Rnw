@@ -15,26 +15,26 @@
 % First comes an example EPS file -- just ignore it and
 % proceed on the \documentclass line
 % your LaTeX will extract the file if required
-\begin{filecontents*}{example.eps}
-%!PS-Adobe-3.0 EPSF-3.0
-%%BoundingBox: 19 19 221 221
-%%CreationDate: Mon Sep 29 1997
-%%Creator: programmed by hand (JK)
-%%EndComments
-gsave
-newpath
-  20 20 moveto
-  20 220 lineto
-  220 220 lineto
-  220 20 lineto
-closepath
-2 setlinewidth
-gsave
-  .4 setgray fill
-grestore
-stroke
-grestore
-\end{filecontents*}
+%% \begin{filecontents*}{example.eps}
+%% %!PS-Adobe-3.0 EPSF-3.0
+%% %%BoundingBox: 19 19 221 221
+%% %%CreationDate: Mon Sep 29 1997
+%% %%Creator: programmed by hand (JK)
+%% %%EndComments
+%% gsave
+%% newpath
+%%   20 20 moveto
+%%   20 220 lineto
+%%   220 220 lineto
+%%   220 20 lineto
+%% closepath
+%% 2 setlinewidth
+%% gsave
+%%   .4 setgray fill
+%% grestore
+%% stroke
+%% grestore
+%% \end{filecontents*}
 %
 \RequirePackage{fix-cm}
 %
@@ -51,13 +51,13 @@ grestore
 %
 % insert here the call for the packages your document requires
 \usepackage[
-%backend=biber,
-%sorting=nyt,
-%style=nature,
-%date=year,
-%autolang=hyphen,
-%natbib=true,
-%backref=FALSE
+% backend=biber,
+% sorting=nyt,
+% style=nature,
+% date=year,
+% autolang=hyphen,
+% natbib=true,
+% backref=FALSE
 ]{natbib}
 %% style=numeric
 
@@ -73,7 +73,86 @@ grestore
 
 %\usepackage{latexsym}
 % etc.
-%
+
+\usepackage[nogin]{Sweave}
+\SweaveOpts{concordance=TRUE, prefix.string=Grafici/FIG}
+\usepackage{siunitx}
+\sisetup{detect-all = true, detect-family = true, output-decimal-marker = {.}, range-phrase= --}
+% http://tex.stackexchange.com/questions/66713/can-i-make-siunitx-commands-use-serif-fonts-like-the-rest-of-the-math-in-beamer
+\usepackage[version=4]{mhchem}
+%% Pezzo per scrivere note a margine
+\usepackage[dvipsnames]{xcolor}
+\usepackage{xargs} % Use more than one optional parameter in a new commands
+\usepackage[colorinlistoftodos, prependcaption, italian, textsize=scriptsize]{todonotes}
+\newcommandx{\cambia}[2][1=]{\todo[linecolor=blue, backgroundcolor=blue!25, bordercolor=blue, #1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen, backgroundcolor=OliveGreen!25, bordercolor=OliveGreen, #1]{#2}}
+\newcommandx{\migliora}[2][1=]{\todo[linecolor=Plum, backgroundcolor=Plum!25, bordercolor=Plum, #1]{#2}}
+\newcommandx{\fatto}[2][1=]{\todo[linecolor=gray, backgroundcolor=black!15, #1]{#2}}
+\newcommandx{\nonvisibile}[2][1=]{\todo[disable,#1]{#2}}
+\presetkeys{todonotes}{fancyline}{}
+
+<<PacchettiRichiesti, echo=FALSE, eval=TRUE>>=
+rm(list=ls())
+library(plyr)
+library(lattice)
+library(xtable)
+library(agricolae)
+library(ggplot2)
+library(FactoMineR)
+library(compositions)
+library(multcomp)
+ltheme <- canonical.theme(color = FALSE)     ## in-built B&W theme
+ltheme$strip.background$col <- "transparent" ## change strip bg
+lattice.options(default.theme = ltheme)      ## set as defaul
+@
+
+
+<<Importazione_df,  include=FALSE, cache=FALSE, echo=FALSE>>=
+info.sistema <-
+    Sys.info()[c(1,4,7)]
+
+# Scommentare riga sotto per lavorare su Lenovo, provare a modificare con nodename(sys.info[])
+# info.sistema[3] <-
+# ifelse(info.sistema[3] == "Lorenzo Ferretti",  "Lorenzo Ferretti.LAPTOP-LDRBKLR9",  info.sistema[3])
+
+ if(info.sistema[2]=="LAPTOP-LDRBKLR9"){
+   DirMain <- paste("C:/Users/", info.sistema[3], ".", info.sistema[2],"/Documents/GitHub/PaperoSuoloMPaldi", sep="")
+   Sys.setenv(TEXINPUTS=getwd(), BIBINPUTS=getwd(), BSTINPUTS=getwd())
+ }else{
+   if(info.sistema[2]=="DESKTOP-VAAU252"){
+     DirMain <- paste("C:/Users/", info.sistema[3], "/Documents/GitHub/PaperoSuoloMPaldi", sep="")
+     Sys.setenv(TEXINPUTS=getwd(), BIBINPUTS=getwd(), BSTINPUTS=getwd())
+   } else {
+     if(info.sistema[3]=="ottorino"){
+       DirMain <-"~/Documenti/BitBucket/Dalila_GIT"
+     }else{
+       DirMain <-"~/Documenti/BitBucket/Simo_GIT"
+     }
+   }
+   }
+
+DirData <-
+    file.path(DirMain,"dati_grezzi")
+DirElab <-
+    file.path(DirMain,"dati_elaborati")
+DirFunz <-
+    file.path(DirMain, "funzioni")
+DirCod <-
+    file.path(DirMain, "codice")
+DirTab <-
+    file.path(DirMain, "tabelle")
+## Sys.setlocale(category = "LC_TIME", locale = "en_GB.utf8")
+## source(file.path(DirFunz, "Pettinatura_df.R"))
+## source(file.path(DirFunz, "tabellone.R"))
+## source(file.path(DirFunz, "pezzaXvanga.R"))
+## debug(fun.tabellone)
+
+@
+
+
+
+
+
 % please place your own definitions here and don't use \def but
 % \newcommand{}{}
 %
@@ -124,6 +203,26 @@ subject classification numbers as needed.
 \section{Introduction}
 \label{intro}
 Your text comes here. Separate text sections with
+
+
+\begin{figure}
+\centering
+
+<<label=printBoxplotCore, fig=TRUE, echo=FALSE, width=5.4, height=5.4 >>=
+plot(1:10)
+@ 
+
+\caption[Graph synthesis of the Core method]{Bulk densities measured
+  with \emph{Core} method, grouped by management (\emph{Conventional}
+  and \emph{Organic}) and by tillage (\emph{plowing, disk harrowing}
+  and \emph{chisel plowing}). Dashed lines are drawn at the means of
+  the two mangement systems}
+  \label{fig:boxplotCore}
+\end{figure}
+
+
+
+
 \section{Section title}
 \label{sec:1}
 Text with citations and \cite{usda_soil_1999}.
@@ -186,7 +285,7 @@ Ringraziamenti
 
 %% Qui sotto ci va il nome del file della bibliografia
 %\addbibresource{../tesi/bibliomoneDali.bib}
-\bibliography{../tesi/bibliomoneDali} % name your BibTeX data base
+\bibliography{../tesi/bibliomoneDali.bib} % name your BibTeX data base
 
 % Non-BibTeX users please use
 %\begin{thebibliography}{}
@@ -205,4 +304,3 @@ Ringraziamenti
 
 \end{document}
 % end of file template.tex
-

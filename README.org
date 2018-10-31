@@ -2,12 +2,9 @@
 #+STARTUP: hidestars
 #+LANGUAGE: it
 
-* Clonare un repository remoto di github
- qui ci scriverà la Dalila
-
-* Preparazione repository locali
+* PREPARAZIONE INIZIALE
   Si presuppone un repository centrale remoto e due locali, tipicamante
-  portatile e fisso
+  portatile e fisso 
 
   https://gist.github.com/joahking/780877
 
@@ -46,8 +43,67 @@
   che a dispetto del nome non è un repository nudo
   Verificabile con 
   > git rev-parse --is-bare-repository 
+* Windows
+** fine riga
+   https://help.github.com/articles/dealing-with-line-endings/
+
+   Dare sia su linux che su win il comando 
+   > git config --global core.autocrlf input
+
+   Per vedere (Win) dove scrive il file di configurazione globale
+   > git config --list --show-origin
+** Meld
+   > git config --global merge.tool meld
+   > git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"
+   Importante che sia "Program Files (x86)" e non in italiano
+** gitignore su windows 
+
+   1) creare un file "gitignoreGlobale.txt" sotto "C:\Users\Lorenzo Ferretti". 
+   L'estensione .txt ce la mette automaticamente Windows e il path è
+   in inglese Dentro metterci le righe coi file da ignorare
+
+   2) da prompt dei comandi  
+
+   > ren  gitignoreGlobale.txt .gitignoreGlobale
+
+   In questo modo il file diventa nascosto come deve
+
+   3) da GIT bash
+
+   > git config --global core.excludesfile 'C:/Users/Lorenzo Ferretti/.gitignoreGlobale'
+
+   4) creare un file "gitignore.txt" sotto "C:/Users/Lorenzo Ferretti/Documents/progettoGIT
+
+   L'estensione .txt ce la mette automaticamente Windows e il path è
+   in inglese Dentro metterci le righe coi file da ignorare specifici
+   del progetto
+
+   5) da prompt dei comandi  
+
+      > ren  gitignore.txt .gitignore
+
+   Per trovare il path corretto in inglese (C:/Users/Lorenzo
+   Ferretti/Documents/progettoGIT) usare il tab A questo punto nella
+   finestra di windows filebrowser deve apparire un file senza nome
+   nascosto che è il .gitignore. Lo si vede dando "dir" dentro il
+   terminale prompt dei comandi
+
+   6) uscire dalla sessione di windows (disconnettere l'utente Lorenzo
+      Ferretti) in modo che windows possa leggere tutti i file di
+      configurazione appena messi
+
+   7) rientrare nella sessione Lorenzo Ferretti e aprire una GIT bash
+      > git status --ignored 
+   dentro al progetto GIT per verificare che i comandi sopra siano andati
+   a buon fine.
+
+   8) ultimo passo eliminare i file che sono stati messi in cache e che
+      ancora sono pronti per essere committed
+
+       <file> 
+
 * Opzioni globali
-** .gitgnore
+** .gitignore
 
    Sotto alla /home/user/.emacs.d/ mettere un file nascosto
    denominato ".gitignoreGlobale", contenente le righe contenute in
@@ -83,6 +139,15 @@
    Per verificare cosa è attualmente ignorato
    > git status --ignored
    http://stackoverflow.com/questions/466764/git-command-to-show-which-specific-files-are-ignored-by-gitignore
+
+   Oppure
+   > git ls-files --others -i --exclude-standard
+   https://stackoverflow.com/questions/15931238/unable-to-remove-file-that-really-exists-fatal-pathspec-did-not-match-any
+
+** Ignora untracked files
+   > git status --porcelain | grep '^??' | cut -c4- >> .gitignore
+   preso da
+   https://stackoverflow.com/questions/11542687/git-how-to-ignore-all-present-untracked-files
 
 * stato di molti repositories 
   Da linea di comando, entro la directory Documenti/BitBucket dare
@@ -152,7 +217,9 @@
   Per mettere insieme piu' commit prima di un push (interactive)
   [[https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/][Vedi  qui]]
 
-  > git rebase -i
+  > git rebase -i HEAD~3
+
+  "3" significa fammi vedere gli ultimi tre commit
 
   Dentro una finestra emacs comparira' una cosa tipo;
   pick f392171 Added new feature X
@@ -166,6 +233,8 @@
 
   alla fine C-c C-c per eseguire e cambiare il messaggio di commit
 
+* log
+  > git log --all --grep='cesare'
 * gitk
   http://gitolite.com/gitk.html
 ** Colori della struttura 
@@ -178,14 +247,13 @@
 ** repository operations
 
 *** right clicking on a commit message
-         create a tag
-         create a new branch
-         reset the current branch to this commit (soft/mixed/hard)
-         cherry-pick this current onto the current branch
+    create a tag
+    create a new branch
+    reset the current branch to this commit (soft/mixed/hard)
+    cherry-pick this current onto the current branch
 *** right clicking on a branch name
-         checkout the branch (please heed the warning above
-         remove the branch
-
+    checkout the branch (please heed the warning above
+    remove the branch
 
 * notes
   Per aggiungere delle note ai commit, in modo da avere piu' spazio a
@@ -198,6 +266,21 @@
   aggiunge una nota al commit 2043d525c9...
 
   Se si vuole sovrascrivereuna nota, si aggiunge -f
+
+* merge
+  Sempre meglio fare 
+
+  > git merge nomebranch
+
+  da dentro master che 
+
+  > git merge master
+
+  da dentro nomebranch.
+
+  Nel primo caso la HEAD rimane sul master, nell'altro caso si
+  dovrebbe spostare su nomebranch. Forse non è vero, ma conviene
+  comunque mantenere master come punta del progetto
 
 * stash 
 
@@ -262,11 +345,10 @@
    ATTENZIONE: cancella i file anche dalla directory di lavoro e non solo da git
    Il comando "git clean -f" si comporta come se fosse un rm da terminale
 
-** Eliminare alcuni i file untracked
+** Eliminare alcuni file untracked
    [[http://gitready.com/beginner/2009/01/16/cleaning-up-untracked-files.html][Vedi qui]] 
 
    > git clean -d -n RelazioniEtAnalisi/#ProveVegan.R# 
-
 
 ** Pulizia generale da file temporanei inutili
    Lanciare questo "oneliner" sotto a ~/Documenti/BitBucket/
@@ -352,8 +434,8 @@
    echo -e $output | column -t -s ', '
 
 * Passa a una versione precedente
-  Mettiamo che siamo sul ramo "pippo": se si vuole tornare indietro
-  nella storia mentre si sta lavorando procedere come segue:
+  Mettiamo che siamo sul ramo "pippo". Se si vuole tornare indietro
+  nella storia mentre si sta lavorando, procedere come segue:
 
   Mettere da parte il lavoro attuale con 
 
@@ -377,21 +459,40 @@
 
 * Passa a commit precedenti
 
+
   La sequenza dovrebbe essere questa:
+
   > git branch
-  Per prendere nota su quale branch siamo e per tornarci alla fine delle prove. Mettiamo si chiami "mioRamo"
+  Per prendere nota su quale branch siamo e per tornarci alla fine
+  delle prove. Mettiamo si chiami "mioRamo"
+  
   > git stash
-  Per mettere da parte le eventuali modifiche ancora non inserite in un commit
+  Per mettere da parte le eventuali modifiche ancora non inserite in
+  un commit
+  
   > git log
-  Per prendere nota degli SHA-1 dei commmit precedenti (vedi quanto scritto in [[Differenze tra copia attuale e precedenti]] a proposito dell'autocompletamento)
-  > git checkout e25a2d26cea6fccb12607f42a482a721313ba7f7
-  Per riportare la situazione al momento del commit e25a... e sperimentare
+  Per prendere nota degli SHA-1 dei commmit precedenti (vedi quanto
+  scritto in [[Differenze tra copia attuale e precedenti]] a proposito
+  dell'autocompletamento)
+
+  > git checkout e25a2d26cea6fccb12607f42a482a721313ba7f7  
+  Per riportare la situazione al momento del commit e25a... e
+  sperimentare. Per un solo file che ci interessa invece si da il
+  comando sotto
+
+  > git checkout e25a2.... /Silene/Claudia/reports/PCAacomp.R
+  Il comando sopra estrae dal commit il solo file di interesse 
+
   > git checkout MioRamo
   Per tornare alla situazione di dove siamo partiti
-  Infine 
+ 
   > git stash apply
-  Per recuperare le modifiche non ancora inserite in un commit e messe da parte all'inzio di questa procedura 
-  Ulteriori dettagli sulla procedura si trovano [[https://www.atlassian.com/git/tutorials/undoing-changes][qui]].
+  Per recuperare le modifiche non ancora inserite in un commit e messe
+  da parte all'inzio di questa procedura Ulteriori dettagli sulla
+  procedura si trovano [[https://www.atlassian.com/git/tutorials/undoing-changes][qui]].
+
+  > git checkout e25a2.... /Silene/Claudia/reports/PCAacomp.R
+  Il comando sopra estrae dal commit il solo file di interesse 
 
 * Cambio di repository remoto
 
