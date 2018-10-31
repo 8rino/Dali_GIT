@@ -115,12 +115,12 @@ info.sistema <-
 # info.sistema[3] <-
 # ifelse(info.sistema[3] == "Lorenzo Ferretti",  "Lorenzo Ferretti.LAPTOP-LDRBKLR9",  info.sistema[3])
 
- if(info.sistema[2]=="LAPTOP-LDRBKLR9"){
-   DirMain <- paste("C:/Users/", info.sistema[3], ".", info.sistema[2],"/Documents/GitHub/PaperoSuoloMPaldi", sep="")
+ if(info.sistema[2]=="DESKTOP-C5SLFL3"){
+   DirMain <- "D:/dalila/GIT"
    Sys.setenv(TEXINPUTS=getwd(), BIBINPUTS=getwd(), BSTINPUTS=getwd())
  }else{
    if(info.sistema[2]=="DESKTOP-VAAU252"){
-     DirMain <- paste("C:/Users/", info.sistema[3], "/Documents/GitHub/PaperoSuoloMPaldi", sep="")
+     DirMain <- paste("C:/Users/", info.sistema[3], "/Documents/GIT", sep="")
      Sys.setenv(TEXINPUTS=getwd(), BIBINPUTS=getwd(), BSTINPUTS=getwd())
    } else {
      if(info.sistema[3]=="ottorino"){
