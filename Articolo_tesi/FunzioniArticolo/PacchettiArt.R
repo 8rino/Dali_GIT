@@ -1,0 +1,11 @@
+## <<PacchettiRichiesti, echo=FALSE, eval=TRUE>>=
+#library(nlme)
+library(plyr)
+#library(lattice)
+library(xtable)
+library(foreign)
+library(agricolae)
+library(multcomp)
+library(compositions)
+library(colorspace)
+library(dendextend)
