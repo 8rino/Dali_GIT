@@ -251,8 +251,8 @@ library(foreign)
 library(agricolae)
 library(multcomp)
 library(compositions)
-library(colorspace) 
-library(dendextend) 
+library(colorspace)
+library(dendextend)
 @
 
 <<setupDir, include=FALSE, cache=FALSE, echo=FALSE>>=
@@ -281,7 +281,7 @@ DirFunz <-
     file.path(DirMain, "funzioni")
 DirCod <-
     file.path(DirMain, "codice")
-## importo la listona dei dati 
+## importo la listona dei dati
 source(file.path(DirCod, "seconda importazione.R"))
 source(file.path(DirFunz, "biplotAcomp.R"))
 @
@@ -327,7 +327,7 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 
 \begin{abstract}
 
-%{\fontsize{4mm}{7mm}\selectfont 
+%{\fontsize{4mm}{7mm}\selectfont
 %\singlespacing{
   Lo scopo principale di questo lavoro è stato quello di determinare una
   possibile variazione nella comunità microbica tellurica, comparando due
@@ -342,19 +342,19 @@ source(file.path(DirFunz, "biplotAcomp.R"))
   Val di Pesa (Firenze).
 
   Per analizzare la microfauna e microflora edafica
-  si è utilizzato il metodo dello studio del profilo 
+  si è utilizzato il metodo dello studio del profilo
   degli acidi grassi dei
   fosfolipidi di membrana (\ac{PLFA}), poiché questi sono
   specifici per i diversi gruppi di microrganismi
- 
- I dati quantitativi ottenuti sono stati analizzati  
- tramite l'adattamento di modelli lineari e composizionali e attraverso 
+
+ I dati quantitativi ottenuti sono stati analizzati
+ tramite l'adattamento di modelli lineari e composizionali e attraverso
  l'analisi multivariata composizionale.
- 
-  I risultati non hanno mostrato una significativa variazione dovuta 
+
+  I risultati non hanno mostrato una significativa variazione dovuta
   ai due metodi di gestione, né riguardo alle tre lavorazioni osservate.
   Differenze significative sono state trovate solamente
-  confrontando i diversi profili ottenuti dalle comunità microbiche 
+  confrontando i diversi profili ottenuti dalle comunità microbiche
   campionate nelle due differenti stagioni.
 %}
 %}
@@ -364,7 +364,7 @@ source(file.path(DirFunz, "biplotAcomp.R"))
 \begin{otherlanguage*}{english}
 \begin{engabstract}
 
-%{\fontsize{4mm}{7mm}\selectfont 
+%{\fontsize{4mm}{7mm}\selectfont
 The main aim of this thesis is to determine possible variations in
 the telluric microbial community, comparing two agricultural systems
 (i.e. organic and conventional). Additionally, we aim to evaluate the impacts
@@ -380,16 +380,16 @@ To analyze the edaphic micro-fauna and -flora, the profiling method
 of fatty derivated from phospholipids of membran (\acs{PLFA}) has been used,
 since these acids are specific to different microbial groups.
 
-The obtained quantitative data has been analysed by fitting linear and 
+The obtained quantitative data has been analysed by fitting linear and
 compositional models and with compositional multivariate analysis.
 
 Results did not show significant
 variation nor between the two agricultural systems, neither with regards
 to the three different tillage systems.
-Significant differences were only found between profiles 
+Significant differences were only found between profiles
 collected in October and June.
 %}
- 
+
 \end{engabstract}%
 \end{otherlanguage*}
 
@@ -420,7 +420,7 @@ organismi che permettono la crescita e la diffusione della vita.
 
 La Soil Taxonomy, il sistema di classificazione elaborato \\
 dall’USDA\footnote{\ac{USDA}},
-ha definito il suolo come “un corpo naturale tridimensionale composto 
+ha definito il suolo come “un corpo naturale tridimensionale composto
 da solidi, da liquidi e da gas che deve trovarsi
 sulla superficie terrestre e deve essere caratterizzato da almeno una
 delle seguenti caratteristiche: deve permettere la vita e la crescita
@@ -730,7 +730,7 @@ più velocemente si liberano dell’acqua e si riempiono d’aria.
 Quest’ultima ha una composizione differente rispetto a quella
 atmosferica, c’è una simile percentuale di N, circa il 79\,\%, un po’
 meno ossigeno, circa il 18\,\%, ma soprattutto si ha una maggior
-concentrazione di vapore acqueo e di biossido di carbonio rispetto all'aria 
+concentrazione di vapore acqueo e di biossido di carbonio rispetto all'aria
 in atmosfera (nel suolo circa 0,3--5\,\%); queste due componenti permettono al suolo di essere un buon
 volano termico. Inoltre nel terreno si possono anche trovare gas come
 \ce{NH3} e \ce{CH4} formati dall’attività microbica.
@@ -855,7 +855,7 @@ variazioni di concentrazione dei gas.
 
 Gli organismi si possono classificare in aerobi stretti come ad esempio
 i funghi; i batteri invece sono sia strettamente anaerobi
-(\emph{clostridium} e \emph{botulinum}), che strettamente aerobi 
+(\emph{clostridium} e \emph{botulinum}), che strettamente aerobi
 (\emph{pseudonomas} e la maggior parte degli attinomiceti), ma ne
 esistono anche alcuni che crescono meglio a basse concentrazioni di
 ossigeno detti microareofili \citep{burges_micro-organisms_1958}.
@@ -885,7 +885,7 @@ montmorillonite, anche a basse concentrazioni, riduce la respirazione
 fungina, non permettendo una buona diffusione dell’ossigeno e stimola
 le attività batteriche \citep{stotzky_influence_1966}.
 
-Infine anche la temperatura del suolo ha un effetto; naturalmente 
+Infine anche la temperatura del suolo ha un effetto; naturalmente
 l’energia assorbita dipende dalla latitudine e
 altitudine, ma anche dall’inclinazione della superficie del suolo,
 nonché dalla densità della copertura vegetale e dal colore del
@@ -1077,11 +1077,11 @@ abbiano solitamente maggiori spese per i macchinari e le sementi
 \citep{pimentel_organic_2005}. Inoltre i sistemi biologici richiedono,
 annualmente, circa il 15\,\% in più di lavorazioni ad ettaro rispetto al
 convenzionale \cite{sorby_production_2002,
-granatstein_tree_2004}. Proprio in seguito a queste problematiche 
+granatstein_tree_2004}. Proprio in seguito a queste problematiche
 e a questi disturbi si
 rendono necessari studi per monitorare e capire come salvaguardare la
 fertilità del terreno \citep{feng_effects_2002} e valutare l’impatto
-che le lavorazioni hanno su di essa \citep{pagliai2002soil}. 
+che le lavorazioni hanno su di essa \citep{pagliai2002soil}.
 
 Per determinare la sostenibilità di un tipo di gestione, si osserva la
 componente biochimica e biologica perché questa è più suscettibile ai
@@ -1118,7 +1118,7 @@ principalmente alle caratteristiche della matrice, e nessuna di loro,
 singolarmente, è in grado di fornire una valutazione completa sulla
 diversità delle comunità microbiche del suolo.  Per questo motivo la
 letteratura scientifica a riguardo raccomanda la combinazione di più
-metodi che si complementino a vicenda \citep{zhang_assessing_2008}. 
+metodi che si complementino a vicenda \citep{zhang_assessing_2008}.
 
 La tecnica \acs{CLPP} produce grandi numeri di variabili ed è altamente
 sensibile ai cambiamenti della comunità microbica, però richiede la
@@ -1146,7 +1146,7 @@ La tecnica dei \acs{PLFA} fornisce una sorta di impronta digitale
 \citep{bossio_determinants_nodate} della struttura e dell’attività
 della comunità microbica e risente maggiormente dei cambiamenti dovuti
 alla differente gestione e lavorazione \cite{bossio_determinants_nodate,
-kong_microbial_2012}. 
+kong_microbial_2012}.
 Questa tecnica è stata
 dimostrata essere più adatta rispetto all’analisi \acs{CLPP}, \acs{PCR} e
 \acs{RFLP}
@@ -1184,7 +1184,7 @@ statisticamente rilevanti rispetto ai profili ottenibili con il \acs{PLFA}
 
 La scelta del metodo di analisi comunque varia in base allo studio da
 svolgere: se, ad esempio, servono delle informazioni a più basso
-livello, la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare. 
+livello, la \acs{PCR} fornisce delle risposte che la \acs{PLFA} non può dare.
 
 In
 generale, se si vogliono studiare gli effetti di un trattamento o
@@ -1199,7 +1199,7 @@ ramsey_choice_2006}.
 \subsection{Gas Cromatografia}
 
 La cromatografia è “la scienza e l’arte che si occupa di
-  separare, gli uni dagli altri, i componenti di una miscela” 
+  separare, gli uni dagli altri, i componenti di una miscela”
 \citep{tswett_physical-chemical_1906}.  Il termine cromatografia,
 indica un insieme di tecniche aventi l’obiettivo di separare una
 miscela complessa nei suoi componenti singoli. È impiegata a scopo
@@ -1239,8 +1239,8 @@ questo motivo si sono sviluppate numerose tecniche cromatografiche:
 \begin{itemize}
 \item cromatografia su strato sottile (\acs{TLC}, \emph{Thin Layer
     Chromatography}) dove la fase stazionaria può essere un gel di
-  silice, allumina, cellulosa in polvere, aderenti ad appositi supporti 
-  solidi opportunamente funzionalizzati. La fase mobile è invece derivante 
+  silice, allumina, cellulosa in polvere, aderenti ad appositi supporti
+  solidi opportunamente funzionalizzati. La fase mobile è invece derivante
   da vari solventi organici o miscela di essi;
 \item cromatografia su carta (\acs{PC}, \emph{Paper Chromatography}), dove
   la fase stazionaria è costituita dall’acqua presente nella cellulosa
@@ -1272,7 +1272,7 @@ sostanze che possono essere vaporizzate ad una temperatura compresa
 tra quella ambiente e i 350--400\,°C, ovvero la temperatura comunemente
 raggiunta dalle apparecchiature in commercio e compatibile con le
 colonne cromatografiche usate. Inoltre le sostanze da analizzare non
-devono essere termolabili. Per questo motivo, in alcuni casi tale 
+devono essere termolabili. Per questo motivo, in alcuni casi tale
 tecnica viene
 sostituita dall’\acs{HPLC}. A parte ciò le applicazioni possibili sono
 molteplici e abbracciano tutti i settori delle scienze e
@@ -1296,7 +1296,7 @@ james_gas-liquid_1952} e idrogeno.
 \end{figure}
 
 Il gascromatografo (\autoref{fig:gascromat}) è formato da un iniettore, da una colonna e da un
-detector, il quale fornisce in uscita un cromatogramma (\autoref{fig:2picchi}), 
+detector, il quale fornisce in uscita un cromatogramma (\autoref{fig:2picchi}),
 ovvero il segnale
 in funzione del tempo, dove lo 0 rappresenta
 il momento in cui il campione viene iniettato nella colonna.
@@ -1335,10 +1335,10 @@ colonna.
 
 L’iniezione può essere effettuata manualmente oppure tramite
 un’autocampionatore che fornisce miglior riproducibilità e ottimizza i
-tempi di analisi. 
+tempi di analisi.
 
 
-Il campione introdotto è di pochi microlitri nel caso 
+Il campione introdotto è di pochi microlitri nel caso
 di iniezione liquida, oppure, nell’analisi dello
 spazio di testa, si inseriscono i vapori del campione che si sono
 sviluppati in una vial chiusa e riscaldata. L’iniezione può essere
@@ -1368,12 +1368,12 @@ l’iniezione \emph{split} e quella \emph{splitless}. La prima
 concentrazione e quindi potrebbe saturare la risposta del detector e
 falsare il risultato. In questa tipologia il campione viene diluito
 con il \emph{carrier} e una frazione di questa miscela esce da uno
-sfiatatoio, che prende il nome di \emph{split valve} o 
-\emph{vent valve}. 
+sfiatatoio, che prende il nome di \emph{split valve} o
+\emph{vent valve}.
 
-Essendo nota 
-la resistenza idraulica della colonna, può essere calcolata la proporzione 
-del flusso in colonna e anche alla vent value, con il risultato 
+Essendo nota
+la resistenza idraulica della colonna, può essere calcolata la proporzione
+del flusso in colonna e anche alla vent value, con il risultato
 di introdurre in colonna solo la proporzione voluta del campione.
 
 Questo metodo è
@@ -1395,7 +1395,7 @@ lavanda, limone, etc.).
 Nell’iniezione splitless (\autoref{fig:splitless}) invece il campione
 è tutto inviato in colonna e, similmente all’iniezione \emph{on
  column}, si ha all’inizio del cromatogramma il picco del solvente.
-Questo tipo di iniezione si usa per l’analisi in tracce o comunque 
+Questo tipo di iniezione si usa per l’analisi in tracce o comunque
 per campioni molto diluiti.
 
 \begin{figure}[h]
@@ -1414,17 +1414,17 @@ per campioni molto diluiti.
 Sono ormai diffusi iniettori che possono, grazie all’uso di valvole,
 utilizzare entrambe le tecniche.
 
-Esistono poi iniettori in cui è possibile variare nel tempo la temperatura 
+Esistono poi iniettori in cui è possibile variare nel tempo la temperatura
 di iniezione, detti \ac{PTV}; in questi il campione viene
 iniettato in un inserto
 freddo, che poi mano a mano aumenta di temperatura comportando la vaporizzazione
 del campione. Questi iniettori sono quindi adatti a composti termolabili
-e/o presenti in tracce, e prevedono una tecnica di iniezione detta 
+e/o presenti in tracce, e prevedono una tecnica di iniezione detta
 \emph{Large Volume Injection}. La
 temperatura del \emph{liner}, inizialmente, è posta poco sotto la
-temperatura di ebollizione del solvente per permettere, con la valvola del 
-vent aperta, la dispersione di una buona quantità di questo, senza però 
-perdere i soluti, dato che la temperatura è troppo bassa per 
+temperatura di ebollizione del solvente per permettere, con la valvola del
+vent aperta, la dispersione di una buona quantità di questo, senza però
+perdere i soluti, dato che la temperatura è troppo bassa per
 farli gassificare.
 Poi la valvola viene chiusa e si alza la temperatura fino a superare
 il grado del componente della miscela più altobollente. Dunque è
@@ -1491,7 +1491,7 @@ efficienza, e consentono la separazione di un numero maggiore di
 componenti della miscela.
 
 Le colonne impaccate hanno però una maggior capacità e vengono
-utilizzate per analisi in cui non è necessario separare molti analiti, o in 
+utilizzate per analisi in cui non è necessario separare molti analiti, o in
 caso di cromatografia preparativa con raccolta delle frazioni separate.
 
 \begin{figure}[ht]
@@ -1523,8 +1523,8 @@ o selettivi se rivelano solo particolari categorie di composti:
 \begin{itemize}
 \item \acs{FID} (\emph{Flame Ionization Detector}) è un rivelatore a
   ionizzazione di fiamma distruttivo e non selettivo. \`E costituito da
-  una fiamma alimentata ad idrogeno posto fra due elettrodi; questi 
-  permettono il passaggio di una corrente elettrica di fondo e quando 
+  una fiamma alimentata ad idrogeno posto fra due elettrodi; questi
+  permettono il passaggio di una corrente elettrica di fondo e quando
   il carrier, mescolato all’aria giunge alla fiamma di idrogeno, si produce
   una corrente elettrica che, amplificata, rappresenta il segnale del
   detector. Facendo la differenza tra il gas puro e quello contenente
@@ -1533,7 +1533,7 @@ o selettivi se rivelano solo particolari categorie di composti:
   \ce{CO2} o l’acqua; è il \emph{detector } più usato perché molto
   robusto ed universale;
 \item \acs{TCD} (\emph{Thermal Conductivity Detector}) è un rivelatore a
-  conducibilità termica non distruttivo, universale e poco sensibile: 
+  conducibilità termica non distruttivo, universale e poco sensibile:
   è formato da
   due filamenti riscaldati elettricamente e mantenuti a temperatura
   costante. Su un filamento si ha lo scorrere del gas puro, sull’altro
@@ -1543,40 +1543,40 @@ o selettivi se rivelano solo particolari categorie di composti:
   variazione di resistenza che viene amplificata e rappresenta il
   segnale del \emph{detector};
 \item \acs{ECD} (\emph{Electron Capture Detector}) cioè il rivelatore a
-  cattura di elettroni, è non distruttivo, molto selettivo e altamente 
+  cattura di elettroni, è non distruttivo, molto selettivo e altamente
   sensibile: è formato
   da un catodo e un anodo. Il catodo è rivestito
-  da un materiale radioattivo emettitore di elettroni (\ap{63}Ni), 
+  da un materiale radioattivo emettitore di elettroni (\ap{63}Ni),
   mentre l’anodo, con
   forma tubolare, permette l’ingresso del gas. Il gas viene ionizzato
   dal catodo e i nuovi ioni così formati si dirigono ai rispettivi
   elettrodi così da creare una corrente di fondo che forma la linea di base.
   Se nel gas sono presenti sostanze elettronaffini, queste reagiscono
   e formano molecole neutre che abbassano la corrente di base.
-\item \acs{FPD} (\emph{Flame Photometric Detector}) è un rivelatore atto ad 
-  analizzare composti contenenti zolfo o 
-  fosforo, è distruttivo e selettivo. Tale rivelatore utilizza una fiamma 
-  a idrogeno e aria 
-  attraverso cui viene passato il campione. Gli idrocarburi contenenti 
-  fosforo e zolfo generano chemiluminescenza a determinate lunghezze 
-  d'onda che, se passata in un fotomoltiplicatore, genera un segnale 
-  elettrico che può essere misurato. 
-\item \acs{NPD} (\emph{Nitrogen Phosphorus Detector}) rivelatore  
+\item \acs{FPD} (\emph{Flame Photometric Detector}) è un rivelatore atto ad
+  analizzare composti contenenti zolfo o
+  fosforo, è distruttivo e selettivo. Tale rivelatore utilizza una fiamma
+  a idrogeno e aria
+  attraverso cui viene passato il campione. Gli idrocarburi contenenti
+  fosforo e zolfo generano chemiluminescenza a determinate lunghezze
+  d'onda che, se passata in un fotomoltiplicatore, genera un segnale
+  elettrico che può essere misurato.
+\item \acs{NPD} (\emph{Nitrogen Phosphorus Detector}) rivelatore
   utilizzato per analizzare composti organici contenenti azoto o fosforo, è
   distruttivo e selettivo.
-  \`E analoga alla tecnica \acs{FID}, ma l'NPD utilizza una sferetta 
-  di alcali di cloruro di cesio o rubidio riscaldata sopra la quale passa 
-  il gas carrier miscelato all'idrogeno. La sferetta calda emette elettroni 
-  che giungono all'anodo e questo fornisce la corrente di fondo. 
-  Usciti i vari analiti dalla colonna, l'azoto e il fosforo 
+  \`E analoga alla tecnica \acs{FID}, ma l'NPD utilizza una sferetta
+  di alcali di cloruro di cesio o rubidio riscaldata sopra la quale passa
+  il gas carrier miscelato all'idrogeno. La sferetta calda emette elettroni
+  che giungono all'anodo e questo fornisce la corrente di fondo.
+  Usciti i vari analiti dalla colonna, l'azoto e il fosforo
   contenuti nei composti vengono assorbiti dalla superficie della sferetta.
- % Quando un composto contenente azoto o fosforo esce dalla colonna, 
- % vede questi due elementi assorbiti sulla 
- % superficie della sferetta. 
-  Questo provoca l'aumento dell'emissione di 
+ % Quando un composto contenente azoto o fosforo esce dalla colonna,
+ % vede questi due elementi assorbiti sulla
+ % superficie della sferetta.
+  Questo provoca l'aumento dell'emissione di
   elettroni e della corrente che viene misurata.
 \item \acs{MS} (\emph{Mass Spectrometry}), altamente selettivo e non distruttivo.
-  Tale rivelatore separa gli ioni formatisi in sorgente in base al diverso 
+  Tale rivelatore separa gli ioni formatisi in sorgente in base al diverso
   rapporto massa/carica.
 \end{itemize}
 
@@ -1586,8 +1586,8 @@ o selettivi se rivelano solo particolari categorie di composti:
 Per valutare la qualità delle separazioni cromatografiche si deve tener conto:
 \begin{itemize}
 
- \item della selettività ($\alpha$), che misura la separazione relativa di due 
- picchi 
+ \item della selettività ($\alpha$), che misura la separazione relativa di due
+ picchi
 
    \begin{equation}
    \alpha = \frac{t\ped{R2} - t_M}{t\ped{R1} - t_M}
@@ -1606,12 +1606,12 @@ Per valutare la qualità delle separazioni cromatografiche si deve tener conto:
    \end{samepage}
 
  \item dell'efficienza ovvero la sua capacità di mantenere compatti i picchi
- lungo il percorso cromatografico. Sebbene la cromatografia sia un processo 
- in continuo, si può immaginare che la colonna sia divisa in N sezioni, 
+ lungo il percorso cromatografico. Sebbene la cromatografia sia un processo
+ in continuo, si può immaginare che la colonna sia divisa in N sezioni,
  in ciascuna delle quali viene raggiunto l’equilibrio tra fase
- stazionaria e fase mobile. 
- 
- 
+ stazionaria e fase mobile.
+
+
  Ognuna di queste sezioni è un piatto teorico (N). Se la lunghezza
  totale della colonna è L, l’altezza equivalente a un piatto teorico è:
 
@@ -1620,24 +1620,24 @@ Per valutare la qualità delle separazioni cromatografiche si deve tener conto:
    \end{equation}
 
 
-L’efficienza di una colonna è espressa in N piatti teorici 
-\footnote{Una 
-colonna cromatografica può arrivare ad avere anche diverse migliaia di 
-piatti teorici} e quindi tanto maggiore è il numero di piatti teorici, 
-tanto maggiore è l’efficienza della colonna, in quanto riuscirà a separare 
-meglio sostanze anche molto simili tra loro per proprietà chimico-fisiche. 
-Questa maggior efficienza si manifesta con picchi ben 
-separati e stretti. %Quindi possiamo dire che tanto più maggiore è N , 
+L’efficienza di una colonna è espressa in N piatti teorici
+\footnote{Una
+colonna cromatografica può arrivare ad avere anche diverse migliaia di
+piatti teorici} e quindi tanto maggiore è il numero di piatti teorici,
+tanto maggiore è l’efficienza della colonna, in quanto riuscirà a separare
+meglio sostanze anche molto simili tra loro per proprietà chimico-fisiche.
+Questa maggior efficienza si manifesta con picchi ben
+separati e stretti. %Quindi possiamo dire che tanto più maggiore è N ,
 %minore è HETP, e maggiore è l’efficienza della colonna.
 
-Misurando il tempo di ritenzione e la larghezza del picco alla base 
+Misurando il tempo di ritenzione e la larghezza del picco alla base
 si ricava il
 numero dei piatti teorici:
 
  \begin{equation}
   N = \frac{t^2_R}{\sigma^2}
  \end{equation}
- 
+
  \begin{samepage}
    Dove:
 
@@ -1649,14 +1649,14 @@ numero dei piatti teorici:
  \end{tabular}
 \end{samepage}
 
-Ovvero è dato dal rapporto tra la distanza che la sostanza di interessa ha 
+Ovvero è dato dal rapporto tra la distanza che la sostanza di interessa ha
 percorso all'interno della colonna e la varianza della banda.
 
 I fenomeni che comportano un allargamento del picco cromatografico
 sono riassunti dall’equazione di Van
-Deemter, che tiene conto delle proprietà fisiche, cinetiche e termodinamiche 
-della separazione. Secondo Van Deemter l’altezza equivalente del 
-piatto teorico (HETP), espressa in micron, 
+Deemter, che tiene conto delle proprietà fisiche, cinetiche e termodinamiche
+della separazione. Secondo Van Deemter l’altezza equivalente del
+piatto teorico (HETP), espressa in micron,
 in funzione della velocità
 lineare della fase mobile, è data da:
 
@@ -1671,23 +1671,23 @@ lineare della fase mobile, è data da:
  \begin{tabular}{lp{12cm}}
    $HETP$    & =  altezza equivalente del piatto teorico\\
    $A$       & =  fattore che corrisponde alla dispersione vorticosa dovuta al diverso
-    percorso che le molecole possono seguire per raggiungere il fondo della 
-    colonna %$A=2d_p \lambda$ con $d_p$ 
-    %diametro delle particelle impaccate e $\lamda$ misura dell'irregolarità 
+    percorso che le molecole possono seguire per raggiungere il fondo della
+    colonna %$A=2d_p \lambda$ con $d_p$
+    %diametro delle particelle impaccate e $\lamda$ misura dell'irregolarità
     %dell'impaccamento.
 \\
-   $B$       & = fattore che corrisponde alla dispersione longitudinale e consiste 
-    nello spostamento spontaneo delle molecole in tutte le direzioni, 
-    sia nella direzione del flusso 
+   $B$       & = fattore che corrisponde alla dispersione longitudinale e consiste
+    nello spostamento spontaneo delle molecole in tutte le direzioni,
+    sia nella direzione del flusso
     che in senso contrario, per effetto della differenza di concentrazione
     che si genera nel tratto di colonna in cui la sostanza si trova concentrata\\
    $u$       & = velocità lineare della fase mobile\\
-   $C$       & = fattore che corrisponde alla resistenza al trasferimento di massa ed 
+   $C$       & = fattore che corrisponde alla resistenza al trasferimento di massa ed
     è dovuto al trasferimento di massa nelle due fasi, che è
     spesso il fattore dominante nella deformazione del picco.
-    \`E legato all'interazione dinamica che sta 
+    \`E legato all'interazione dinamica che sta
     alla base del processo cromatografico, infatti
-    le sostanze sono soggette ad una serie di non equilibri successivi 
+    le sostanze sono soggette ad una serie di non equilibri successivi
     durante tutto lo spostamento in colonna
  \end{tabular}
  \end{samepage}
@@ -1697,72 +1697,72 @@ lineare della fase mobile, è data da:
 %\centering
 %\includegraphics[scale=1]{./foto/effic.gif}
 %\caption[Esempio di diverse efficienze cromatografiche]
-%{Esempio di due cromatogrammi, di una miscela 
+%{Esempio di due cromatogrammi, di una miscela
 %di due sostanze, ottenuti tramite
-%due colonne diverse. Nel caso riportato più in basso 
+%due colonne diverse. Nel caso riportato più in basso
 %si ha un'efficienza maggiore.}
 %\label{fig:efficienza}
-%\end{figure} 
+%\end{figure}
 
 
 Per migliorare la cromatografia, ovvero diminuire la larghezza del picco
 si può:
  \begin{itemize}
-  \item aumentare la velocità del flusso, anche se può comportare una sovrapposizione 
+  \item aumentare la velocità del flusso, anche se può comportare una sovrapposizione
         dei picchi;
   \item diminuire la viscosità dell'eluente;
   \item aumetare il gradiente di temperatura, anche se può comportare una sovrapposizione
         dei picchi;
-  \item diminuire le dimensioni delle particelle, nelle colonne impaccate oppure 
-        diminuire lo spessore del film nelle colonne capillari (questo è 
+  \item diminuire le dimensioni delle particelle, nelle colonne impaccate oppure
+        diminuire lo spessore del film nelle colonne capillari (questo è
         possibile solo con determinati analiti);
   \item effettuare un'iniezione split o aprire il vent una volta che il picco
-        ha raggiunto il suo massimo (se la concentrazione del campione 
+        ha raggiunto il suo massimo (se la concentrazione del campione
         lo permette);
-  \item non si deve invece aumentare troppo la lunghezza della colonna, 
+  \item non si deve invece aumentare troppo la lunghezza della colonna,
   altrimenti si avrebbero dei tempi di separazione troppo lunghi.
 \end{itemize}
 
 
-%Per efficienza di una colonna si intende la sua capacità di mantenere 
+%Per efficienza di una colonna si intende la sua capacità di mantenere
 %compatti i picchi lungo il percorso cromatografico. Tale grandezza viene
-%evidenziata con l'altezza equivalente al piatto teorico (HETP, abbreviata 
-%con H). L'equazione di Van Deemeter correla H con la velocità lineare della 
-%fase mobile (µ). L'equazione esprime in termini quantitative la teoria 
+%evidenziata con l'altezza equivalente al piatto teorico (HETP, abbreviata
+%con H). L'equazione di Van Deemeter correla H con la velocità lineare della
+%fase mobile (µ). L'equazione esprime in termini quantitative la teoria
 %del non-equilibrio di Giddings che individua i fenomeni che ostacolano
-%l'instaurarsi degli equilibri tra le due fasi presenti nel sistema 
+%l'instaurarsi degli equilibri tra le due fasi presenti nel sistema
 %cromatografico.
 %I fenomeni che rallentano il raggiungimento dell'equilibrio sono i seguenti:
 %\begin{itemize}
 %\item percorsi multipli (diffusione vorticosa): le differenti dimensioni
-%della fase stazionaria che fanno si che le molecole da eluire percorrano 
+%della fase stazionaria che fanno si che le molecole da eluire percorrano
 %nel loro moto casuale, strade diverse, arrivando al detector a tempi diversi
 %e provocando un allargamento del picco cromatografico;
-%\item diffusione molecolare longitudinale: questo fenomeno consiste 
-%nello spostamento spontaneo delle molecole, in tutte le direzioni, per effetto 
-%di gradienti di concentrazione che si generano nel tratto di colonna in cui 
+%\item diffusione molecolare longitudinale: questo fenomeno consiste
+%nello spostamento spontaneo delle molecole, in tutte le direzioni, per effetto
+%di gradienti di concentrazione che si generano nel tratto di colonna in cui
 %la sostanza si trova concentrata;
-%\item resistenza al trasferimento di massa: è un'interazione dinamica che sta 
-%alla base del processo cromatografico. L'equilibrio all'interfaccia 
+%\item resistenza al trasferimento di massa: è un'interazione dinamica che sta
+%alla base del processo cromatografico. L'equilibrio all'interfaccia
 %fase mobile/fase stazionaria non viene mai rigorosamente rispettato, infatti
-%le sostanze sono soggette ad una serie di non equilibri successivi 
+%le sostanze sono soggette ad una serie di non equilibri successivi
 %durante tutto lo spostamento in colonna.
 %\end{itemize}
 %
-%Tutte e tre i fenomeni causano un allargamento della banda e quindi 
+%Tutte e tre i fenomeni causano un allargamento della banda e quindi
 %perdita di efficienza della colonna verso una data sostanza. L'equazione di Van
 %Deemeter è data da:
 %\begin{equation}
 %H= A + B/\mu + C*\mu
 %\end{equation}
-%Il primo termine (A) è associato ai percorsi multipli, il secondo (B/µ) 
+%Il primo termine (A) è associato ai percorsi multipli, il secondo (B/µ)
 %è associato alla diffusione moleclare longitudinale e il terzo (C*µ) tiene conto
 %del fenomeno del trasferimento di massa.
 
 \subsection{Spettrometria di massa}
 
-Al \acs{GC}, preceduto o meno da un detector non distruttivo, 
-si può accoppiare 
+Al \acs{GC}, preceduto o meno da un detector non distruttivo,
+si può accoppiare
 uno spettrometro di massa così da ottenere indicazioni sulla natura e
 struttura di ogni singola sostanza eluita.
 
@@ -1771,8 +1771,8 @@ gas-cromatografia e permette di analizzare in tempo reale i singoli
 picchi in uscita dalla colonna, effettuando sia un’analisi
 quantitativa che qualitativa, mediante il confronto dello spettro
 ottenuto con opportune banche dati. Questo accoppiamento (\autoref{fig:GC-MS})
-viene solitamente effettuato poiché nella gas-cromatografia priva di massa 
-il tempo 
+viene solitamente effettuato poiché nella gas-cromatografia priva di massa
+il tempo
 di ritenzione non fornisce una conoscenza certa ed univoca della molecola.
 
 \begin{figure}[ht]
@@ -1788,9 +1788,9 @@ rivelabilità bassissimi, fino all’ordine dei picogrammi e in alcuni
 casi anche dei femtogrammi.
 
 Il campione, in fase gassosa, giunge nella sorgente dello spettrometro
-di massa e le molecole che lo compongono vengono ionizzate. 
-Le tecniche di ionizzazione possibili possono essere ad alta energia 
-(\emph{hard ionization}) o a bassa energia (\emph{soft ionization}). 
+di massa e le molecole che lo compongono vengono ionizzate.
+Le tecniche di ionizzazione possibili possono essere ad alta energia
+(\emph{hard ionization}) o a bassa energia (\emph{soft ionization}).
 Gli ioni proseguono nell’analizzatore che permette la
 loro separazione, poiché, immessi in un campo elettromagnetico,
 percorrono traiettorie diverse in base al rapporto
@@ -1799,11 +1799,11 @@ e si separano gli uni dagli altri.
 
 Infine si ha un moltiplicatore che amplifica il segnale e un
 rivelatore; in uscita si ottiene uno spettro che
-rappresenta l'unione dei vari ioni presenti in un determinato istante, 
+rappresenta l'unione dei vari ioni presenti in un determinato istante,
 ordinati in base al loro rapporto massa/carica.
 
-Nel caso di una ionizzazione hard lo spettro rappresenta una sorta di 
-impronta digitale, che permette di ricostruire la formula della 
+Nel caso di una ionizzazione hard lo spettro rappresenta una sorta di
+impronta digitale, che permette di ricostruire la formula della
 molecola e, confrontandolo
 con i numerosi spettri memorizzati nella banca dati, si possono
 riconoscere i vari componenti.
@@ -1827,7 +1827,7 @@ Le principali tipologie di sorgenti ioniche sono:
 \item interazione elettronica (\ac{EI}), ionizzazione hard;
 \item ionizzazione chimica (\ac{CI}), ionizzazione soft;
 \item ionizzazione di campo (\ac{FI}), ionizzazione soft;
-\item ionizzazione chimica a pressione atmosferica (\ac{APCI}), 
+\item ionizzazione chimica a pressione atmosferica (\ac{APCI}),
 ionizzazione soft;
 \item desassorbimento di campo (\ac{FD}), ionizzazione soft;
 \item ionizzazione chimica per desassorbimento (\ac{DCI}), ionizzazione soft;
@@ -1839,7 +1839,7 @@ campione in fase gassosa e la tecnica più comune tra queste è l’\acs{EI}
 dove le molecole gassose vengono bombardate da un fascio di elettroni
 ad alta energia (-70\,eV); a questo valore energetico l’aspetto
 qualitativo dello spettro rimane invariato e quello quantitativo
-cambia di pochissimo \cite{Watson2007}. 
+cambia di pochissimo \cite{Watson2007}.
 
 \vspace{-0.6em}
 
@@ -1851,7 +1851,7 @@ presenza di un anodo. \label{rif:EI}
 \vspace{-0.6em}
 
 La sorgente \acs{CI} invece prevede una ionizzazione primaria come nell’\acs{EI} e
-gli ioni formati reagiscono con le molecole neutre del gas reagente (metano, isobutano, 
+gli ioni formati reagiscono con le molecole neutre del gas reagente (metano, isobutano,
 etc.) introdotto
 nella sorgente ad elevata pressione. Da questa reazione si ha una
 ionizzazione secondaria e gli spettri ottenuti rappresentano i
@@ -1868,14 +1868,14 @@ fragile e meno sensibile dell’\acs{EI}.
 
 \vspace{-0.6em}
 
-Infine si ha la sorgente \acs{APCI} dove il campione viene 
+Infine si ha la sorgente \acs{APCI} dove il campione viene
 ionizzato tramite un plasma creato da un arco elettrico, a sua volta
-generato da una punta di ago portata a 4.000--5.000\,V. 
+generato da una punta di ago portata a 4.000--5.000\,V.
 Si ha prima la ionizzazione del gas ausiliario, con la formazione dei
-rispettivi ioni primari, e poi la ionizzazione chimica delle specie in 
-uscita dalla colonna. 
-Dunque è simile alla sorgente CI, ma in questa tipologia di sorgente 
-la ionizzazione avviene a pressione atmosferica e richiede, successivamente, 
+rispettivi ioni primari, e poi la ionizzazione chimica delle specie in
+uscita dalla colonna.
+Dunque è simile alla sorgente CI, ma in questa tipologia di sorgente
+la ionizzazione avviene a pressione atmosferica e richiede, successivamente,
 un sistema capillare di connessione e introduzione al vuoto.
 
 \vspace{-0.6em}
@@ -1910,7 +1910,7 @@ rapporto tra momento angolare e carica dello ione e quindi ioni con m/z
 maggiore percorrono dei raggi più ampi rispetto a ioni aventi un
 rapporto minore. La posizione della fenditura si comporta da filtro e
 permette il passaggio solo di alcuni ioni aventi uno specifico
-rapporto m/z. La separazione degli ioni avviene dunque mediante una scansione 
+rapporto m/z. La separazione degli ioni avviene dunque mediante una scansione
 di campo magnetico.
 
 Negli analizzatori con \emph{quadrupolo}, invece, ci si basa sulla stabilità
@@ -1925,10 +1925,10 @@ la radiofrequenza imposta, essi riescono a percorrere tutto il percorso ed a
 raggiungere il detector; invece, gli ioni con un valore m/z non idoneo
  collidono contro le barre e non vengono rivelati.  Cambiando
 radiofrequenza, altri ioni raggiungono il detector e modulando questa
-si ottiene lo spettro di massa. I sistemi con quadrupolo possono lavorare 
-ad un livello di vuoto più basso rispetto agli altri analizzatori e 
-quindi risultano più facili da accoppiare con 
-un \acs{GC}, però hanno una bassa risoluzione. 
+si ottiene lo spettro di massa. I sistemi con quadrupolo possono lavorare
+ad un livello di vuoto più basso rispetto agli altri analizzatori e
+quindi risultano più facili da accoppiare con
+un \acs{GC}, però hanno una bassa risoluzione.
  \label{rif:quadrupolo}
 
 \begin{figure}[ht]
@@ -1969,17 +1969,17 @@ Il principio di base è che ioni con ugual energia, ma massa
 diversa, richiederanno tempi di volo differenti per percorrere la stessa
 distanza.  I pregi di questo analizzatore sono l'acquisizione di
 spettri in tempi brevissimi ed una risoluzione uniforme su tutto
-l’intervallo di massa; però è una tecnica molto costosa e 
-richiede un vuoto molto spinto. 
+l’intervallo di massa; però è una tecnica molto costosa e
+richiede un vuoto molto spinto.
 
-L'\emph{orbitrap} è un analizzatore di massa non distruttivo. Si 
+L'\emph{orbitrap} è un analizzatore di massa non distruttivo. Si
 tratta di una particolare trappola ionica in cui gli ioni descrivono
-traiettorie attorno ad un elettrodo centrale fusiforme. 
+traiettorie attorno ad un elettrodo centrale fusiforme.
 Con questo movimento gli ioni generano una corrente indotta sulle
-pareti del detector e, siccome la frequenza degli ioni è legata 
-alla loro massa, risolvendo le singole frequenze tramite una 
+pareti del detector e, siccome la frequenza degli ioni è legata
+alla loro massa, risolvendo le singole frequenze tramite una
 trasformata di Fourier riesco a determinare i rapporti m/z degli ioni.
- 
+
 
 %\subsubsection{{\fontsize{5mm}{6mm}\selectfont Rivelatore}}
 
@@ -1994,11 +1994,11 @@ trasformata di Fourier riesco a determinare i rapporti m/z degli ioni.
 %\item lastra fotografica.
 %\end{itemize}
 %L’uso di uno o un’altro tipo di rivelatore va a differenziare lo strumento in
-%spettrometo.... 
+%spettrometo....
 
 %Devo fare tutta la classificazione o posso scrivere solo
-Il sistema di rivelazione negli spettrometri di massa prevede un 
-moltiplicatore elettronico, che può essere costituito o da più dinodi 
+Il sistema di rivelazione negli spettrometri di massa prevede un
+moltiplicatore elettronico, che può essere costituito o da più dinodi
 discreti o da un solo dinodo continuo (\emph{channeltron}) (\autoref{fig:moltiplicatori}).
 
 
@@ -2010,40 +2010,40 @@ discreti o da un solo dinodo continuo (\emph{channeltron}) (\autoref{fig:moltipl
 \label{fig:moltiplicatori}
 \end{figure}
 
- 
-In entrambi i casi questi 
-strumenti amplificano la debolissima corrente ionica e questo segnale 
+
+In entrambi i casi questi
+strumenti amplificano la debolissima corrente ionica e questo segnale
 viene poi trasmesso ad un calcolatore che darà in risposta
-l'abbondanza di ogni ione in funzione della massa, ovvero fornirà lo 
+l'abbondanza di ogni ione in funzione della massa, ovvero fornirà lo
 spettro.
 
 
 \subsubsection{Interpretazione degli spettri}
 
-L’interpretazione dei cromatogrammi rappresenta l’operazione più lunga. 
-\`E necessario innanzitutto avere una serie di informazioni sulla natura 
- dei composti da analizzare (loro peso molecolare, polarità, temperatura 
+L’interpretazione dei cromatogrammi rappresenta l’operazione più lunga.
+\`E necessario innanzitutto avere una serie di informazioni sulla natura
+ dei composti da analizzare (loro peso molecolare, polarità, temperatura
  di ebolizione, etc.).
 
 Inoltre per l’individuazione delle sostanze contenute nei campioni,
- ci basiamo sull'uso di librerie di Spettri di Massa come la NIST e/o 
- sui dati i dati trovati in 
-letteratura, quali i tempi di ritenzione, ma tali valori 
+ ci basiamo sull'uso di librerie di Spettri di Massa come la NIST e/o
+ sui dati i dati trovati in
+letteratura, quali i tempi di ritenzione, ma tali valori
 dipendono da molteplici fattori
-quali le caratteristiche dello strumento e le condizioni 
+quali le caratteristiche dello strumento e le condizioni
 operative.
 
-Proprio per il fatto che il tempo di ritenzione dei composti non è univoco, ma 
-cambia modificando il metodo cromatografico (temperatura, velocità del flusso, 
-colonna, etc.), è utile utilizzare gli indici di Kovats poiché 
-identificano i tempi relativi di eluizione dei vari composti in 
+Proprio per il fatto che il tempo di ritenzione dei composti non è univoco, ma
+cambia modificando il metodo cromatografico (temperatura, velocità del flusso,
+colonna, etc.), è utile utilizzare gli indici di Kovats poiché
+identificano i tempi relativi di eluizione dei vari composti in
 gas-cromatografia normalizzati tramite gli alcani saturi non ramificati.
 
 Il metodo si basa sulla formula:
 
 \begin{equation}
-I= 100 
-\biggl[n + (N-n) \frac{log(t'\ped{R(incognito)}) - 
+I= 100
+\biggl[n + (N-n) \frac{log(t'\ped{R(incognito)}) -
 log(t'\ped{R(n)})}{log(t'\ped{R(N)}) - log(t'\ped{R(n)})}\biggl]
 \end{equation}
 
@@ -2053,8 +2053,8 @@ log(t'\ped{R(n)})}{log(t'\ped{R(N)}) - log(t'\ped{R(n)})}\biggl]
    \nopagebreak
    \begin{tabular}{lp{12cm}}
       $I$                     & = indice di Kovats\\
-      $n$          			  & = numero di carboni dell'alcano minore\\
-      $N$          			  & = numero di carboni dell'alcano più grande\\
+      $n$                                 & = numero di carboni dell'alcano minore\\
+      $N$                                 & = numero di carboni dell'alcano più grande\\
       $t'\ped{R(incognito)}$       & = tempo di ritenzione della specie incognita\\
       $t'\ped{R(n)}$               & = tempo di ritenzione dell'alcano minore\\
       $t'\ped{R(N)}$               & = tempo di ritenzione dell'alcano più grande\\
@@ -2063,20 +2063,20 @@ log(t'\ped{R(n)})}{log(t'\ped{R(N)}) - log(t'\ped{R(n)})}\biggl]
 
 
 
-L'analisi quantitativa invece richiede l'ausilio di rette di calibrazione 
-e si basa sulla comparazione delle aree dei 
-picchi degli analiti rispetto  
+L'analisi quantitativa invece richiede l'ausilio di rette di calibrazione
+e si basa sulla comparazione delle aree dei
+picchi degli analiti rispetto
 alle aree ottenute iniettando degli standard a concentrazioni note.
 Bisogna però tenere conto di una serie di possibili complicazioni:
-\begin{itemize} 
-\item non è detto che tutte le sostanze presenti nel campione si vedano nel 
+\begin{itemize}
+\item non è detto che tutte le sostanze presenti nel campione si vedano nel
 cromatogramma;
 \item i rivelatori possono presentare diverse risposte per diverse sostanze;
 \item non tutti i picchi potrebbero essere ben separati;
-\item non è facile conoscere accuratamente la quantità di miscuglio 
+\item non è facile conoscere accuratamente la quantità di miscuglio
 effettivamente immesso in colonna.
 \end{itemize}
-A causa di ciò esistono diverse metodologie di studio quantitativo 
+A causa di ciò esistono diverse metodologie di studio quantitativo
 tramite GC, che si adattano alle diverse
 situazioni.
 
@@ -2095,29 +2095,29 @@ rippatura. I campionamenti sono stati effettuati sia in estate, nel
 mese di giugno, che in autunno, ottobre-novembre, per tenere conto
 anche di una possibile variazione dovuta alla stagionalità.
 
-Per analizzare la microfauna e microflora edafica è stato utilizzato il 
+Per analizzare la microfauna e microflora edafica è stato utilizzato il
 metodo dello studio del profilo degli acidi grassi dei fosfolipidi di membrana
 (\acs{PLFA}) che si basa sul principio secondo cui la composizione dei \acs{PLFA}
 è specifica per i diversi gruppi di
 microrganismi \cite{bossio_determinants_nodate,
 kong_microbial_2012, zhang_assessing_2008}. Con questo tipo di analisi
-si può misurare rapidamente la diversità di una comunità microbica 
+si può misurare rapidamente la diversità di una comunità microbica
 e valutarne i
 cambiamenti in funzione di sollecitazioni esterne come le pratiche agricole
 \cite{esperschutz_response_2007, steinbeiss_effect_2009} e
 ottenere una misura della qualità dei suoli
 \cite{mele_application_2008, winding_use_2005}.
 Tale metodo prevede l’estrazione degli acidi grassi dal campione, i
-quali subiranno poi una metilazione, per renderli volatili. 
+quali subiranno poi una metilazione, per renderli volatili.
 Infine verrà effettuata
-un’analisi mediante gas-cromatografia accoppiata con spettrometria di massa 
+un’analisi mediante gas-cromatografia accoppiata con spettrometria di massa
 \citep{ibekwe_fatty_1999}.
 
-I dati quantitativi ottenuti tramite il programma \emph{Mass Hunter} 
-sono stati analizzati  
+I dati quantitativi ottenuti tramite il programma \emph{Mass Hunter}
+sono stati analizzati
 tramite il linguaggio di programmazione
 R \cite{r_programming}, versione 3.4.3, attraverso l'adattamento
-di modelli lineari, 
+di modelli lineari,
 composizionali e
 di multivariata composizionale \cite{van2013analyzing}.
 
@@ -2129,37 +2129,37 @@ di multivariata composizionale \cite{van2013analyzing}.
 %\subsection{{\fontsize{5mm}{7mm}\selectfont Area di studio}}
 \chapter{Materiali e metodi}
 \subsection{Quadro Generale}
-Questo studio è inserito nel progetto \ac{MoLTE} (\emph{Montepaldi Long Term 
+Questo studio è inserito nel progetto \ac{MoLTE} (\emph{Montepaldi Long Term
 Experiment}), facente parte di un
-gruppo di sperimentazioni europee a lunga durata 
+gruppo di sperimentazioni europee a lunga durata
  della Società
-Internazionale di Ricerca sull’Agricoltura Biologica (\ac{ISOFAR}). 
+Internazionale di Ricerca sull’Agricoltura Biologica (\ac{ISOFAR}).
 Il progetto MoLTE è nato da un accordo tra l’azienda
-Montepaldi dell'Università degli Studi di Firenze e il \ac{DISAT} 
---- attuale \ac{DISPAA} --- dell' 
-Università Firenze  
-stipulato nel 1989. 
+Montepaldi dell'Università degli Studi di Firenze e il \ac{DISAT}
+--- attuale \ac{DISPAA} --- dell'
+Università Firenze
+stipulato nel 1989.
 Il fine del progetto \acs{MoLTE} è quello di
-valutare, sul lungo periodo, sistemi di gestione alternativi a quello 
+valutare, sul lungo periodo, sistemi di gestione alternativi a quello
 convenzionale intensivo e determinare
 la sostenibilità a livello sociale, economico ed ecologico-ambientale.
-La sperimentazione vera e propria è iniziata nel 1991 e 
+La sperimentazione vera e propria è iniziata nel 1991 e
 risulta essere la più duratura nell’area
-mediterranea e anche la più completa per quanto riguarda 
+mediterranea e anche la più completa per quanto riguarda
 la quantità di dati disponibili.
-L'esperimento \acs{MoLTE} è stato inizialmente supportato dal progetto europeo 
+L'esperimento \acs{MoLTE} è stato inizialmente supportato dal progetto europeo
 CAMAR (1991--1993), con
-l’obiettivo di paragonare le performance tra il sistema agricolo biologico, 
+l’obiettivo di paragonare le performance tra il sistema agricolo biologico,
 convenzionale e quello
 integrato.
-Dal 1993 al 1998 è stato finanziato dall’Unione Europea, successivamente 
-da una serie di progetti regionali e nazionali. A partire dal 
-2015 è entrato a far parte del progetto Fertilcrop Horizon 2020, 
-a cui partecipano 
+Dal 1993 al 1998 è stato finanziato dall’Unione Europea, successivamente
+da una serie di progetti regionali e nazionali. A partire dal
+2015 è entrato a far parte del progetto Fertilcrop Horizon 2020,
+a cui partecipano
 oltre 20 partners europei (\autoref{fig:fertilcrop}).
-Tale progetto --- oltre a sviluppare tematiche di gestione efficienti e 
-sostenibili per l'incremento della produttività dei sistemi a 
-conduzione biologica --- si interessa dell’interazione tra la coltura, 
+Tale progetto --- oltre a sviluppare tematiche di gestione efficienti e
+sostenibili per l'incremento della produttività dei sistemi a
+conduzione biologica --- si interessa dell’interazione tra la coltura,
 le infestanti e i macro e microrganismi del suolo.
 \begin{landscape}
 \begin{figure}[]
@@ -2206,7 +2206,7 @@ di piccole e medie dimensioni \citep{DISPAA}.
 \label{subsec:Dis_Sperim}
 
 Questo studio interessa una
-superficie di circa 15\,ha suddivisa in 10 campi sperimentali, 
+superficie di circa 15\,ha suddivisa in 10 campi sperimentali,
 di 1,3\,ha ciascuno, denominati
 OO01, OO02, OO03, OO04, CO09, CO10 e 4 appartenenti al BioNuovo
 (\autoref{fig:panorama_satellite}). Le sigle stanno ad indicare la
@@ -2224,10 +2224,10 @@ la gestione convenzionale.
 
 I quattro campi a conduzione biologica più recente, per questo
 definiti BioNuovo, non sono stati presi in considerazione in questo
-esperimento, poiché inizialmente gestiti a conduzione integrata e 
-solamente dal 2001 sono a conduzione biologica. Non sono 
-stati considerati neanche i campi OO01 ed OO03, poiché, pur essendo gestiti a 
-biologico dall'inizio dell'esperimentazione, erano a riposo nella fase 
+esperimento, poiché inizialmente gestiti a conduzione integrata e
+solamente dal 2001 sono a conduzione biologica. Non sono
+stati considerati neanche i campi OO01 ed OO03, poiché, pur essendo gestiti a
+biologico dall'inizio dell'esperimentazione, erano a riposo nella fase
  di campionamento.
 
 I campi del BioNuovo separano quelli a conduzione biologica da quelli
@@ -2238,12 +2238,12 @@ biologico nuovo e il convenzionale sono separati da una striscia
 inerbita di 8\,m. Il biologico vecchio prevede anche una siepe
 artificiale di 6\,m di larghezza più 4\,m di striscia inerbita,
 che lo separa dai campi adiacenti. Questa è stata piantata agli inizi
-del 1990 dai ricercatori del \acs{DISAT} ( Dipartimento di Scienze Agronomiche e Gestione del 
-Territorio Agroforestale, dipartimento dell'Università degli Studi di Firenze)   
+del 1990 dai ricercatori del \acs{DISAT} ( Dipartimento di Scienze Agronomiche e Gestione del
+Territorio Agroforestale, dipartimento dell'Università degli Studi di Firenze)
 con l’aiuto del WWF ed è formata da specie
-autoctone.  Infine una strada di 4\,m, adibita al transito dei mezzi 
+autoctone.  Infine una strada di 4\,m, adibita al transito dei mezzi
 agricoli, separa i campi OO01
-e OO02 dagli OO03 e OO04 (\autoref{fig:sitosperim}). 
+e OO02 dagli OO03 e OO04 (\autoref{fig:sitosperim}).
 
 \begin{figure}[h]
 \centering
@@ -2259,13 +2259,13 @@ Tali campi sono coltivati, fin dall'inizio del progetto,
 seguendo la rotazione:
 
 \begin{itemize}
-\item quadriennale nei campi biologici: 
-\newline sovescio + coltura da rinnovo; 
-\newline cereale + leguminosa; 
-\newline leguminosa; 
+\item quadriennale nei campi biologici:
+\newline sovescio + coltura da rinnovo;
+\newline cereale + leguminosa;
+\newline leguminosa;
 \newline cereale;
-\item biennale intensiva nei due campi convenzionali: 
-\newline coltura da rinnovo; 
+\item biennale intensiva nei due campi convenzionali:
+\newline coltura da rinnovo;
 \newline cereale \citep{DISPAA}.
 \end{itemize}
 
@@ -2292,11 +2292,11 @@ quindi, è suddiviso in nove parcelle: tre repliche per ognuna delle tre lavoraz
 
 
 
-In \autoref{tab:CarattMoLTE1992} sono riportate le caratteristiche 
-fisico-chimiche dei campi a inizio esperimento, mentre nella 
+In \autoref{tab:CarattMoLTE1992} sono riportate le caratteristiche
+fisico-chimiche dei campi a inizio esperimento, mentre nella
 \autoref{tab:lavorazioniCampiBio} sono elencate le lavorazioni effettuate
-nell'anno agrario 2016/2017 per la conduzione biologica e nella 
-\autoref{tab:lavorazioniCampiCONV} 
+nell'anno agrario 2016/2017 per la conduzione biologica e nella
+\autoref{tab:lavorazioniCampiCONV}
 per la conduzione convenzionale.
 
 \begin{landscape}
@@ -2315,7 +2315,7 @@ per la conduzione convenzionale.
   }
 \label{fig:bioconvmod}
 \end{figure}
-\end{landscape} 
+\end{landscape}
  \FloatBarrier
 
 
@@ -2344,7 +2344,7 @@ e convenzionale misurate nell'anno 1992 \citep{DISPAA}. }
  %\FloatBarrier
 
 
-%Di seguito sono riportate 2 tabelle (\autoref{tab:lavorazioniCampiBio}, 
+%Di seguito sono riportate 2 tabelle (\autoref{tab:lavorazioniCampiBio},
 %\autoref{tab:lavorazioniCampiCONV})
 %che mostrano le lavorazioni effettuate nell'anno
 %agrario 2016-2017, la prima riguardanti i campi biologici (\acs{OO}02 e \acs{OO}04),
@@ -2388,10 +2388,10 @@ Strigliatura                   & assente                            & 15/3/2017 
 {Lavorazioni nell'anno 2016/2017 per i due campi a conduzione convenzionale.\\
 * La lavorazione applicata varia in base alla parcella (\autoref{fig:bioconvmod}).\\
 ** Fosfato biammonico. \\
-*** Axial (1\,l) (p.a. pinoxaden 10,6\,\% e cloquintocet-mexyl 2,55\,\%) + 
-Axial Pronto (750\,ml) (p.a. pinoxaden 6,4\,\% e  
+*** Axial (1\,l) (p.a. pinoxaden 10,6\,\% e cloquintocet-mexyl 2,55\,\%) +
+Axial Pronto (750\,ml) (p.a. pinoxaden 6,4\,\% e
 cloquintocet-mexyl 1,55\,\%) + Logran (37\,g) (p.a.
-triasulfuron 20\,\%) (quantitativi 
+triasulfuron 20\,\%) (quantitativi
 ad ettaro e corrispondenti).\\
 **** P.a. oxifluorfen.}
 \label{tab:lavorazioniCampiCONV}
@@ -2422,7 +2422,7 @@ Terza \newline concimazione    & 11/4/2017 \newline urea \newline \SI{150}{\kg\p
  \end{table}
  \FloatBarrier
 
- 
+
 %\begin{table}[hb]
 %  \begin{threeparttable}
 %    \caption[Lavorazioni nell'anno 2016-2017 nei campi a convenzionale]
@@ -2467,7 +2467,7 @@ Terza \newline concimazione    & 11/4/2017 \newline urea \newline \SI{150}{\kg\p
 
 Di seguito è riportata la \autoref{tab:seminaCampi}
 che mostra
- le colture seminate nell'anno precedente allo studio 
+ le colture seminate nell'anno precedente allo studio
 effettuato
 e quelle presenti durante il campionamento e anche la loro densità di semina:
  la prima tabella è relativa ai campi biologici (\acs{OO}02 e \acs{OO}04),
@@ -2479,7 +2479,7 @@ la successiva ai due campi convenzionali (\acs{CO}09 e \acs{CO}10).
 * La coltura in questione è stata trattata con Apron-xl (p.a
 metalaxil-m all'30,95\%).\\
 ** La coltura in questione è stata trattata con Redigo
-(p.a. propiconazolo all’8,7\,\%).} 
+(p.a. propiconazolo all’8,7\,\%).}
 \label{tab:seminaCampi}
 \centering
 \small
@@ -2558,7 +2558,7 @@ Densità di semina   & 75.000 piante\newline ad ettaro                  & 75.000
 \subsection{Metodo di campionamento}
 
 Al centro di ogni parcella, si è prelevato un campione %3 campioni di terreno
- di circa 500\,g di suolo,  
+ di circa 500\,g di suolo,
 a 5--10\,cm di profondità.
 % Il primo è stato
 %preso al centro di ogni plot \todo{levare a e b}(m=medio) e gli altri due a 4 metri di
@@ -2570,7 +2570,7 @@ Il primo campionamento ha richiesto tre giorni tra fine ottobre e
 inizio novembre del 2016, il secondo è stato svolto a giugno 2017. In
 entrambi i casi, sono stati collezionati 36 campioni,
 %108 campioni,
-separati in appositi sacchetti di plastica (Figura \ref{fig:campione}) 
+separati in appositi sacchetti di plastica (Figura \ref{fig:campione})
 e poi portati in laboratorio.
 
 %
@@ -2593,7 +2593,7 @@ e poi portati in laboratorio.
 \end{figure}
 
 
-Appena portati in laboratorio, i campioni sono stati asciugati all’aria, 
+Appena portati in laboratorio, i campioni sono stati asciugati all’aria,
 ed una volta asciutti sono stati conservati in cella
 frigorifera a 3\,°C.
 
@@ -2625,44 +2625,44 @@ campioni dei due anni poiché composti da aliquote bilanciate.
 
 \section{Laboratorio}
 
-La procedura di estrazione utilizzata è stata modificata basandosi sul 
+La procedura di estrazione utilizzata è stata modificata basandosi sul
 metodo di
 \citet{bligh_rapid_1959}, a sua volta modificato da
 \citet{white_determination_1979} e da
 \citet{bossio_determinants_nodate}.
 
-I rapporti tra i solventi dell'estraente e il rapporto tra estraente e suolo 
-sono stati, da noi, mantenuti tali a quelli 
-di \citet{bligh_rapid_1959}, sia prima che 
+I rapporti tra i solventi dell'estraente e il rapporto tra estraente e suolo
+sono stati, da noi, mantenuti tali a quelli
+di \citet{bligh_rapid_1959}, sia prima che
 dopo la diluizione (inizialmente 1:2:0,8; successivamente 2:2:1,8).
 
-Tramite una procedura di omogeneizzazione dei campioni (come riportato nel 
+Tramite una procedura di omogeneizzazione dei campioni (come riportato nel
 paragrafo precedente) e l'utilizzo di micropipette tarate e di microvial
-di campionamento per lo spettrometro di massa, è stato possibile ridurre 
-di 100 volte la quantità di suolo e di solventi utilizzati. 
+di campionamento per lo spettrometro di massa, è stato possibile ridurre
+di 100 volte la quantità di suolo e di solventi utilizzati.
 
-Questo ha permesso, tra l'altro, un approccio più ecocompatibile alla 
-ricerca, producendo quantità 100 volte inferiori di solventi e campioni 
-esausti da smaltire in discarica. 
+Questo ha permesso, tra l'altro, un approccio più ecocompatibile alla
+ricerca, producendo quantità 100 volte inferiori di solventi e campioni
+esausti da smaltire in discarica.
 
-Inoltre il tempo di separazione delle due fasi dopo l'aggiunta del 
-cloroformio e del tampone citrato --- per raggiungere 
+Inoltre il tempo di separazione delle due fasi dopo l'aggiunta del
+cloroformio e del tampone citrato --- per raggiungere
 il rapporto finale di 2:2:1,8 --- è stato ridotto da 24\,h a 15\,min mediante
-una rapida centrifugazione a 604\,\emph{g} fino a separazione delle fasi. 
-Infine la temperatura di incubazione 
-nella fase di derivatizzazione è stata portata da 37\,°C a 60\,°C per 
+una rapida centrifugazione a 604\,\emph{g} fino a separazione delle fasi.
+Infine la temperatura di incubazione
+nella fase di derivatizzazione è stata portata da 37\,°C a 60\,°C per
 aumentare la cinetica di reazione.
 
 
 %Abbiamo però ridotto di 100 volte la quantità di suolo estratto
-%--da 100\,g ad 1\,g-- 
-%per rendere l'analisi più sostenibile nei riguardi della quantità di 
-%solventi necessari. Questa riduzione di materiale è stata 
-%effettuata anche visto che l'iniezione finale in GC-MS risulta 
-%essere di 1\,µl. Questa riduzione del campione poteva comportare una 
-%perdita di variabilità e per ovviare a questo abbiamo setacciato tutti i 
+%--da 100\,g ad 1\,g--
+%per rendere l'analisi più sostenibile nei riguardi della quantità di
+%solventi necessari. Questa riduzione di materiale è stata
+%effettuata anche visto che l'iniezione finale in GC-MS risulta
+%essere di 1\,µl. Questa riduzione del campione poteva comportare una
+%perdita di variabilità e per ovviare a questo abbiamo setacciato tutti i
 %500\,g di suolo campionato e di questo è stata presa un'aliquota di 5\,g.
-%Questa aliquota è stata poi macinata con il mulino a palle ed è stata 
+%Questa aliquota è stata poi macinata con il mulino a palle ed è stata
 %presa una subaliquota di 1\,g.
 
 
@@ -2682,14 +2682,14 @@ Reagenti:
 \item \ce{CHCl3} (cloroformio);
 \item tampone citrato 0,15 M, pH 4;
 \item estraente Bligh \& Dyer (B \& D): \\
-\ce{CHCl3} : \ce{CH3OH} : tampone citrato,\\ 
+\ce{CHCl3} : \ce{CH3OH} : tampone citrato,\\
 1 : 2 : 0.8 Vol/Vol/Vol.
 \end{enumerate}
 
 Procedura.
 
 Per ogni campione è stato pesato 1\,g di suolo ed è stato messo in una
-vial da 20\,ml di vetro prevista di tappo a vite; in ogni campione 
+vial da 20\,ml di vetro prevista di tappo a vite; in ogni campione
 sono stati aggiunti 9,2\,ml
 di estraente B \& D e successivamente è stato risospeso con l'ausilio
 del vortex e ultrasonicato per un minuto.
@@ -2709,21 +2709,21 @@ state messe in centrifuga a
 per 10\,min a 25--30\,°C e il supernatante è stato prelevato e aggiunto
 a quello preso precedentemente.
 
-In ogni vial ottenuta sono stati aggiunti 3,1\,ml di \ce{CHCl3} per far 
+In ogni vial ottenuta sono stati aggiunti 3,1\,ml di \ce{CHCl3} per far
 avvenire la separazione delle due fasi e
-altrettanti di tampone citrato, così da mantenere il giusto pH. 
+altrettanti di tampone citrato, così da mantenere il giusto pH.
 La soluzione è stata risospesa
 con il vortex e ultrasonicata per 1\,min e infine centrifugata per
 15\,min a 604\,\emph{g}. % 3'000 giri al minuto \todo{idem con patatine}.
 
-Infatti con questa aggiunta si raggiunge un rapporto di 2:2:1,8 
-\cite{bligh_rapid_1959} fra cloroformio, 
-metanolo e acqua che permette la separazione di due fasi: una organica inferiore, 
-contenente i fosfolipidi disciolti in cloroformio e una superiore costituita 
-dal metanolo e dall'acqua in cui sono disciolti amminoacidi, sali e le altre 
+Infatti con questa aggiunta si raggiunge un rapporto di 2:2:1,8
+\cite{bligh_rapid_1959} fra cloroformio,
+metanolo e acqua che permette la separazione di due fasi: una organica inferiore,
+contenente i fosfolipidi disciolti in cloroformio e una superiore costituita
+dal metanolo e dall'acqua in cui sono disciolti amminoacidi, sali e le altre
 sostanze polari presenti nell'estratto.
 
-Infine sono stati prelevati 3\,ml della fase organica 
+Infine sono stati prelevati 3\,ml della fase organica
 sottostante e portati a secco sotto flusso di \ce{N_2} a
 40\,°C.
 
@@ -2777,23 +2777,23 @@ di \ce{CHCl3}, in modo tale da far fuoriuscire l'aria tra le particelle di silic
 così da favorire il trattenimento delle molecole organiche del campione.
 
 Il campione secco ottenuto dalla fase precedente è stato
-recuperato con 0,25\,ml di cloroformio (\ce{CHCl3}); 
-è stato poi risospeso tramite 
+recuperato con 0,25\,ml di cloroformio (\ce{CHCl3});
+è stato poi risospeso tramite
 il vortex e ultrasonicato per 1\,min. Il materiale è stato quindi
 trasferito nella colonnina corrispondente.
 
-Ogni vial ha subito poi un secondo lavaggio con 0,25\,ml di cloroformio 
-come quello appena descritto e nuovamente il liquido è stato trasferito 
+Ogni vial ha subito poi un secondo lavaggio con 0,25\,ml di cloroformio
+come quello appena descritto e nuovamente il liquido è stato trasferito
 nella corrispettiva colonnina.
 
-Successivamente è stato aggiunto 1\,ml di \ce{CHCl3} ad ogni colonnina, 
+Successivamente è stato aggiunto 1\,ml di \ce{CHCl3} ad ogni colonnina,
 così da eluire i lipidi neutri. Percolato completamente il primo solvente
-di lavaggio sono stati aggiunti 4\,ml, in aliquote da 1\,ml, 
-di acetone (\ce{C3H6O}) 
-per eluire i glicolipidi. 
+di lavaggio sono stati aggiunti 4\,ml, in aliquote da 1\,ml,
+di acetone (\ce{C3H6O})
+per eluire i glicolipidi.
 
-Percolato anche il secondo solvente di lavaggio, si è posizionata, sotto 
-ogni colonnina, una vial etichettata corrispondente e si è proceduto 
+Percolato anche il secondo solvente di lavaggio, si è posizionata, sotto
+ogni colonnina, una vial etichettata corrispondente e si è proceduto
 all'ultimo lavaggio con 1\,ml di metanolo (\ce{CH3OH}), così da far eluire i fosfolipidi.
 
 Il contenuto delle vial così ottenuto è stato portato a secco sotto flusso di
@@ -2843,16 +2843,16 @@ Reagenti:
 Procedura.
 
 Ad ogni vial ottenuta nella fase precedente sono stati aggiunti 10\,µl di
-%ella \ref{rif:1}° soluzione, 
+%ella \ref{rif:1}° soluzione,
 \ce{C19H40} in esano,
 0,5\,ml di metanolo-toluene (\ce{CH3OH}--\ce{C7H8})
-%della \ref{rif:2}° 
+%della \ref{rif:2}°
 e 0,1\,ml di \ce{KOH} 2M.
 %della \ref{rif:3}° soluzione.
 Per far avvenire la derivatizzazione,
 i campioni sono stati messi in incubazione a 60\,°C per 15\,min.
 
-Successivamente è stato aggiunto 1\,ml della miscela esano-cloroformio 
+Successivamente è stato aggiunto 1\,ml della miscela esano-cloroformio
 (\ce{C6H14}--\ce{CHCl3})
 %della \ref{rif:4}° miscela
 e 0,3\,ml di acido acetico.
@@ -2894,11 +2894,11 @@ controllare la presenza di eventuali interferenti nel sistema di preparazione
 e iniezione, come ad esempio: vial sporche, solventi impuri, siringa
 del \acs{GC}, liner e/o colonna con residui di iniezioni precedenti, etc..
 
-Infine è stata preparata la curva di taratura tramite una miscela di 
+Infine è stata preparata la curva di taratura tramite una miscela di
 acidi grassi metilati certificata, ovvero il \acs{BAMEs} Mix
 (\emph{Bacterial Acid Metil Ester}) della \emph{SIGMA-ALDRICH} contenente 26
 acidi grassi metilesteri in \SI{10}{\mg\per\ml} %(10.000 ppm)
-totali (\autoref{tab:PM_PLFA}), ad una concentrazione di 
+totali (\autoref{tab:PM_PLFA}), ad una concentrazione di
 \SI{0,385}{\mg\per\ml} ciascuno.
 
 %\begin{table}[ht]
@@ -2962,22 +2962,22 @@ procedura. Per questo motivo, oltre ad aver utilizzato tale Mix per
 costruire la curva di taratura e permettere quindi l’analisi
 quantitativa, è stato usato uno standard di fosfolipide, quale la
 fosfatidilcolina, così da effettuare una prova di validazione della
-procedura di analisi. 
+procedura di analisi.
 
-Una quantità nota di fosfatidilcolina, 2,60\,µg --- valore 
-calcolato sommando le quantità molari dei BAMEs (ovvero i PLFA estratti 
-dai campioni suolo che hanno subito metilazione) individuati in un campione 
+Una quantità nota di fosfatidilcolina, 2,60\,µg --- valore
+calcolato sommando le quantità molari dei BAMEs (ovvero i PLFA estratti
+dai campioni suolo che hanno subito metilazione) individuati in un campione
 Mix e moltiplicando poi per il PM della fosfatidilcolina ---, è stata
 sciolta in 2,6ml di \ce{CHCl3}.
 Di questa soluzione (a 1.000\,ppm) sono stati iniettati tre volumi noti --- 26\,µl,
-50\,µl e 100\,µl --- in tre vial contenenti un grammo di suolo preso 
-dal campione Soil Mix 2017. Ogni campione è stato ripetuto in doppio, così da 
-ottenere 6 vial e a queste sono stati 
-aggiunti due bianchi senza lo standard di fosfolipide e senza suolo, altri due 
+50\,µl e 100\,µl --- in tre vial contenenti un grammo di suolo preso
+dal campione Soil Mix 2017. Ogni campione è stato ripetuto in doppio, così da
+ottenere 6 vial e a queste sono stati
+aggiunti due bianchi senza lo standard di fosfolipide e senza suolo, altri due
 contenenti solamente il grammo di terreno ma senza lo standard e due contenenti
-invece 50\,µl di fosfatidilcolina ma senza suolo. 
-Su questi dodici campioni ottenuti sono state 
-validate le tre fasi di estrazione, purificazione e 
+invece 50\,µl di fosfatidilcolina ma senza suolo.
+Su questi dodici campioni ottenuti sono state
+validate le tre fasi di estrazione, purificazione e
 derivatizzazione, verificando per confronto i risultati dei cromatogrammi finali.
 
 %\subsection{{\fontsize{5mm}{7mm}\selectfont Metodo cromatografico}}
@@ -2989,17 +2989,17 @@ La separazione cromatografica è stata effettuata tramite un sistema
 e di un sistema per la termostatazione della colonna cromatografica.
 
 La colonna utilizzata è una HP-INNOWax (Polyetilen
-Glycol) della ditta Agilent Technologies, avente una lunghezza di 50\,m, 
+Glycol) della ditta Agilent Technologies, avente una lunghezza di 50\,m,
 0,2\,mm di
 diametro e 0.4\,µm di film interno. La separazione cromatografica è
 stata effettuata mediante un flusso di \SI{1.2}{\ml\per\minute} (\ce{He}) con un
 gradiente di temperatura controllato.
 
 Il metodo di iniezione vede un volume di 2\,µl del campione a
-\emph{pulsed splitless}\footnote{\emph{Pulsed splitless}: viene applicata una 
-pressione più alta in testa al liner, in questo modo il gas del campione 
-entra in colonna con un flusso più veloce e si comprime permettendo di 
-iniettare volumi maggiori senza rischiare una fuoriuscita dal liner.} tramite una 
+\emph{pulsed splitless}\footnote{\emph{Pulsed splitless}: viene applicata una
+pressione più alta in testa al liner, in questo modo il gas del campione
+entra in colonna con un flusso più veloce e si comprime permettendo di
+iniettare volumi maggiori senza rischiare una fuoriuscita dal liner.} tramite una
 siringa da 10\,µl e una temperatura
 del liner di 260\,°C.
 
@@ -3014,14 +3014,14 @@ successiva%, senza rischiare un peggioramento nelle cromatografie
 .  La corsa dura 35,5 minuti per campione.
 
 Prima e dopo ogni iniezione, il metodo prevede anche un lavaggio della
-siringa, con un primo passaggio in metanolo (\ce{CH3OH}) e un secondo in 
+siringa, con un primo passaggio in metanolo (\ce{CH3OH}) e un secondo in
  acetato di etile (\ce{C4H8O2})
 così da annullare un possibile effetto memoria della siringa.
 
 Il sistema \acs{GC} è interfacciato direttamente con lo spettrometro di
 massa avente una sorgente \acs{EI}, in cui l’analisi è effettuata con
 ionizzazione positiva a temperatura di 230\,°C e voltaggio di
--70\,eV. 
+-70\,eV.
 %, ovvero quattro barre cilindriche
 %metalliche, lunghe circa 20\,cm e aventi carica alterna opposta. Queste
 %barre delimitano il percorso degli ioni provenienti dalla camera di
@@ -3112,7 +3112,7 @@ Gram-N & Gram-P & Attinomiceti & Funghi & Protozoi & Micorrize \\
   C16:1$\omega$7      & 12MeC14:0    & 10MeC17:0 & C18:1$\omega$9    & C20:2cis11,13 & C16:1$\omega$5 \\
   C16:1$\omega$5      & 13MeC15:0    & 10MeC18:0 & C18:1$\omega$7cis & C20:2cis11,14 &                \\
   C17:0$\Delta$       & 12MeC15:0    &           & C18:2             &               &                \\
-  C17:0$\omega$9      & 15MeC17:0    &           &                   &  			 &			      \\
+  C17:0$\omega$9      & 15MeC17:0    &           &                   &                           &                            \\
   C18:1$\omega$9      & 14MeC17:0    &           &                   &               &                \\
   C18:1$\omega$7cis   &              &           &                   &               &                \\
   C19.0$\Delta$       &              &           &                   &               &                \\
@@ -3144,11 +3144,11 @@ sono riportati i \acs{BAMEs}
 attribuiti agli attinomiceti secondo \citet{Kroppenstedt1985,brennan1988,
  zelles_determination_1995, Olsson_99, FIERER2003, De_Deyn75, ovreas_population_2000,
  hamer_rhizosphere_2008}.
- 
 
 
-I funghi sono identificati dai composti in quarta colonna 
-(\autoref{tab:GruppiMicrobici}), dove 
+
+I funghi sono identificati dai composti in quarta colonna
+(\autoref{tab:GruppiMicrobici}), dove
 i primi due \acs{BAMEs} sono stati attribuiti a questo gruppo microbico da
 \citet{frostegard_use_2011, BACH2010, guo_effects_2014,
 Kaiser, Bardgett1996, bossio_determinants_nodate,frosteg1993,zelles97,zelles_fatty_1999,
@@ -3164,10 +3164,10 @@ rappresentate dal solo C16:1$\omega$5 (\autoref{tab:GruppiMicrobici})
  \cite{frostegard_use_2011, De_Deyn75, OLSSON1995, hamer_rhizosphere_2008}.
 
 
-Il riconoscimento è stato possibile tramite la libreria di Spettri di Massa 
- \emph{NIST14}, tramite gli indici di ritenzione trovati in letteratura e 
+Il riconoscimento è stato possibile tramite la libreria di Spettri di Massa
+ \emph{NIST14}, tramite gli indici di ritenzione trovati in letteratura e
  grazie ai tempi di ritenzione degli standard autentici disponibili;
-mentre l'analisi quantitativa è stata effettuata utilizzando il programma 
+mentre l'analisi quantitativa è stata effettuata utilizzando il programma
 \emph{Agilent MS
   Quantitative Analysis}. Successivamente sono state considerate le
 aree dei composti contenuti nel \acs{BAMEs} Mix per poter quantificare anche
@@ -3221,16 +3221,16 @@ seguito specificato:
    è più una variabile continua (es. somma delle moli) ma una
    composizione (es. 3\% C16:0, 8\% C14:0, 18 \% C16:1$\omega$5 ,
    \ldots) e il modello composizionale, con conseguente ANOVA, stima la
-   significatività dei fattori considerati sui cambiamenti di composizione. 
- 
+   significatività dei fattori considerati sui cambiamenti di composizione.
+
  \end{itemize}
 
  L'analisi è stata condotta tramite il linguaggio di programmazione R,
  \cite{r_programming} versione 3.4.3 e alcune delle sue librerie
  \cite{agricolae,foreign,xtable,compositional, multcomp,
    colorspace,dendextend,wickham_11}
- 
- 
+
+
 \chapter{Risultati}
 %\chapter{{\fontsize{9mm}{11mm}\selectfont Risultati}}
 
@@ -3248,37 +3248,37 @@ Soil Mix:
 % \caption{Standard BAMEs MIX Diluito 50.}
 % \label{fig:crom_std}
 % \end{figure}
-il cromatogramma in Figura \autoref{rif:b1} rappresenta il Soil Mix 
-autunnale e il cromatogramma in Figura \autoref{rif:c1} 
+il cromatogramma in Figura \autoref{rif:b1} rappresenta il Soil Mix
+autunnale e il cromatogramma in Figura \autoref{rif:c1}
 quello estivo. %successivo (\autoref{fig:crom_CO10C3}) è
 % rappresentante un campione
 %preso a ottobre 2016, il CO10C3 (quindi su campo a gestione
 %convenzionale dove è stata effettuata la frangizollatura),
 Vediamo che tutti i composti del \acs{BAMEs} Mix risultano ben
 separati e identificati e che ci sono, nei due Mix, alcuni composti non
-presenti nello standard e questi sono riportati in \autoref{tab:Metili_campioni}. 
+presenti nello standard e questi sono riportati in \autoref{tab:Metili_campioni}.
 Questo è dovuto al fatto che il \acs{BAMEs}
 Mix in commercio non è specifico e quindi risulta mancante di
 alcuni acidi grassi presenti nell'ecosistema microbico del suolo.
 
 
-Invece, preso il cromatogramma di un campione qualsiasi 
+Invece, preso il cromatogramma di un campione qualsiasi
 (\acs{OO}02C3 in \autoref{fig:cromBIO})
 e paragonandolo ai tre campioni presi nella stessa stagione (autunno) e
-su cui è stata effettuata la medesima lavorazione (Frangizollatura), ma 
-di campi diffenti (in \autoref{fig:cromBIO} \acs{OO}04 e 
-in \autoref{fig:cromCONV} \acs{CO}09 e \acs{CO}10), vediamo che non ci 
-sono delle differenze immediatamente evidenti tra loro; notiamo 
+su cui è stata effettuata la medesima lavorazione (Frangizollatura), ma
+di campi diffenti (in \autoref{fig:cromBIO} \acs{OO}04 e
+in \autoref{fig:cromCONV} \acs{CO}09 e \acs{CO}10), vediamo che non ci
+sono delle differenze immediatamente evidenti tra loro; notiamo
 infatti la presenza degli stessi composti e con intensità simili.
 
 Infine, volendo osservare le risposte alle tre differenti lavorazioni, abbiamo
-comparato i cromatogrammi derivanti da campioni presi nella stessa 
+comparato i cromatogrammi derivanti da campioni presi nella stessa
 stagione (autunno)
-e medesimo campo (\acs{OO}04); nonché dall'identica fila di parcelle 
+e medesimo campo (\acs{OO}04); nonché dall'identica fila di parcelle
 e quindi stessa
-distanza dal fiume Pesa (replica numero 1), ma che hanno subito 
-lavorazioni differenti (\autoref{fig:cromLAV}). Vediamo i 
-medesimi picchi, con intensità non significativamente differenti. 
+distanza dal fiume Pesa (replica numero 1), ma che hanno subito
+lavorazioni differenti (\autoref{fig:cromLAV}). Vediamo i
+medesimi picchi, con intensità non significativamente differenti.
 
 
 \begin{landscape}
@@ -3296,12 +3296,12 @@ medesimi picchi, con intensità non significativamente differenti.
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
 in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
-poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare 
+poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare
 gli specifici ioni.\newline
-Il cromatogramma (c) ha una scala dei tempi di ritenzone non coincidente 
+Il cromatogramma (c) ha una scala dei tempi di ritenzone non coincidente
 con i cromatogrammi (a) e (b), infatti i picchi sono tutti anticipati in quanto
-è stato necessario tagliare la colonna di 2 metri per compensare 
-l'usura del sistema cromatografico 
+è stato necessario tagliare la colonna di 2 metri per compensare
+l'usura del sistema cromatografico
 e renderlo nuovamente efficiente.}
 \label{fig:cromSTD_CONV}
 \end{figure}
@@ -3325,7 +3325,7 @@ Nome MassHunter & Metilesteri & Peso molecolare & RT autunnale & RT estivo\\
 12-MeC14:0         & Metil-12-metiltridecanoate           & 242 & 14.35& 13.87\\
  9-MeC16:0         & Metil-9-metilpentadecanoato  & 270 & 16.88& 16.32\\
 12-MeC16:0         & Metil-12-metilpentadecanoato  & 270 & 18.05& 17.49\\
-10-MeC17:0         & Metil-10-metilesadecanoato    & 284 & 19.04& 18.47\\ 
+10-MeC17:0         & Metil-10-metilesadecanoato    & 284 & 19.04& 18.47\\
 13-EtC17:0         & Metil-13-etilpentadecanoato    & 284 & 20.24& 19.67\\
 12-EtC17:0         & Metil-12-etilpentadecanoato    & 284 & 20.40& 19.87\\
 C16:1$\omega$5     & Metil cis-11-esadecenoate            & 268 & 20.59& 20.01\\
@@ -3358,13 +3358,13 @@ C20:2 11,14        & Metil icosa-E,E-11,14-dienoato          & 322 & 33.01& 32.9
 %\subfloat[][Campione convenzionale, frangizollato, appezzamento 10.]
 %{ \includegraphics[scale=0.4]{./foto/autunnale_co10c3.png}}
 \caption[Due cromatogrammi rappresentanti dei campioni autunnali biologici]
-{I due cromatogrammi autunnali biologici presentano dei codici 
+{I due cromatogrammi autunnali biologici presentano dei codici
 alfanumerici ad indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA}. 
+in  \autoref{tab:PM_PLFA}.
 Alcune molecole, se coeluenti, sono oscurate
 dal picco più intenso
-poiché questo cromatogramma è ottenuto senza selezionare 
+poiché questo cromatogramma è ottenuto senza selezionare
 gli specifici ioni.
 %3 cromatogrammi a confronto: \\
 %a) biologico frangizollato autunnale;\\
@@ -3401,7 +3401,7 @@ poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 \end{figure}
 \end{landscape}
 
- 
+
 
 
 \begin{landscape}
@@ -3415,13 +3415,13 @@ poiché questo cromatogramma è ottenuto senza selezionare gli specifici ioni.
 { \includegraphics[scale=0.40]{./foto/rippatocrom.png} \label{rif:c}}
 \qquad
 \caption[Confronto cromatografico delle tre lavorazioni]
-{I 3 cromatogrammi presentano dei codici alfanumerici che stanno ad 
+{I 3 cromatogrammi presentano dei codici alfanumerici che stanno ad
 indicare i
 vari metilesteri, i nomi delle molecole corrispondenti sono riportati
-in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti, 
+in  \autoref{tab:PM_PLFA}. Alcune molecole, se coeluenti,
 sono oscurate
 dal picco più intenso
-poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare 
+poiché i cromatogrammi ivi riportati sono ottenuti senza selezionare
 gli specifici ioni.}
 \label{fig:cromLAV}
 \end{figure}
@@ -3433,8 +3433,8 @@ gli specifici ioni.}
 Invece osservando i due cromatogrammi (\autoref{fig:cromAUTEST})
 ottenuti da due campioni provenienti da stagioni differenti, ma dallo
 stesso campo e parcella di lavorazione (\acs{CO}10C3), vediamo che alcuni picchi sono
-mancanti in una delle due stagioni e presenti nell'altra. I composti 
-corrispondenti a tali picchi sono riportati in 
+mancanti in una delle due stagioni e presenti nell'altra. I composti
+corrispondenti a tali picchi sono riportati in
 \autoref{tab:BAMEs_mancanti}.
 
 
@@ -3450,8 +3450,8 @@ Metilestere assente   & Gruppo microbico   & Stagione \\
    \midrule
 C20:2 11,13       & protozoi                  & autunno 2016\\
 C20:2 11,14       & protozoi                  & autunno 2016\\
-C18:1$\omega$7cis & Gram-negativi \newline e funghi    & estate 2017 \\          
-C16:1$\omega$5    & Gram-negativi \newline e micorrize & estate 2017 \\ 
+C18:1$\omega$7cis & Gram-negativi \newline e funghi    & estate 2017 \\
+C16:1$\omega$5    & Gram-negativi \newline e micorrize & estate 2017 \\
 C19:0$\Delta$     & Gram-negativi             & estate 2017 \\
 C16:1$\omega$7    & Gram-negativi             & estate 2017 \\
 
@@ -3461,29 +3461,29 @@ C16:1$\omega$7    & Gram-negativi             & estate 2017 \\
  \end{table}
 \FloatBarrier
 
-In autunno sono dunque mancanti i due markers tipici dei protozoi, 
-in accordo con quanto riportato in bibliografia: 
-tali microrganismi preferiscono una temperatura superiore ai 20\,°C 
-\cite{Florenzano}; 
+In autunno sono dunque mancanti i due markers tipici dei protozoi,
+in accordo con quanto riportato in bibliografia:
+tali microrganismi preferiscono una temperatura superiore ai 20\,°C
+\cite{Florenzano};
 mentre in
 estate sono mancanti 4 dei 7 metilesteri dei Gram-negativi (uno di
-questi è quello comune con le micorrize --- C16:1$\omega$5 --- e uno con i 
+questi è quello comune con le micorrize --- C16:1$\omega$5 --- e uno con i
 funghi --- C18:1$\omega$7cis ---);
-%(\autoref{tab:GruppiMicrobici}) 
+%(\autoref{tab:GruppiMicrobici})
  anche in questo caso otteniamo risposte
-in accordo con la letteratura, la quale afferma che i batteri sono 
-suscettibili alle alte temperature \cite{Florenzano}. Quanto appena riportato 
+in accordo con la letteratura, la quale afferma che i batteri sono
+suscettibili alle alte temperature \cite{Florenzano}. Quanto appena riportato
 è stato osservato con l'analisi
-qualitativa, ma è stato anche riconfermato da quella quantitativa, 
+qualitativa, ma è stato anche riconfermato da quella quantitativa,
 effettuata con \emph{MS
   Quantitative Analysis}, dove otteniamo concentrazioni di
 questi composti, nelle rispettive stagioni, prossime a zero.
 
 
-Dunque, ad un primo esame comparativo sulla base dei cromatogrammi, 
+Dunque, ad un primo esame comparativo sulla base dei cromatogrammi,
 %anche se ci si aspetterebbe di
 %vedere andamenti cromatografici differenti in base alle due gestioni
-%e/o lavorazioni, queste 
+%e/o lavorazioni, queste
 non sono state riscontrate alcune differenze tra le due gestioni e/o
 lavorazioni; notiamo qualche differenza solo stagionale.
 
@@ -3555,29 +3555,29 @@ che la colonna cromatografica è stata accorciata di 2 metri.
 
 \section{Analisi esplorativa dei dati}
 
-Secondo \citet{Guckert_1986}, per monitorare situazioni di variazione 
+Secondo \citet{Guckert_1986}, per monitorare situazioni di variazione
 del contenuto di ossigeno nel
 terreno, devono essere studiati i rapporti tra le molecole cicliche e
 il loro precursore, ovvero: $\frac{C17:0\Delta}{C16:1\omega7}$,
-$\frac{C19:0\Delta}{C18:1\omega7cis}$ e secondo 
+$\frac{C19:0\Delta}{C18:1\omega7cis}$ e secondo
 \citet{ovreas_population_2000} anche il rapporto
 $\frac{C18:1\omega 9}{C18:1\omega 7}$. Questi sono tutti metilesteri
 identificativi dei Gram-negativi (\autoref{tab:GruppiMicrobici}), ma
 i tre composti al numeratore sono identificativi degli anaerobi e i tre al
 denominatore degli aerobi \citep{ovreas_population_2000}.
 
-Ma noi abbiamo utilizzato solamente il rapporto 
-$\frac{C19:0\Delta}{C18:1\omega7cis}$, poiché gli altri rapporti, secondo 
-ricerche più recenti \cite{frostegard_use_2011, barcenas09}, 
+Ma noi abbiamo utilizzato solamente il rapporto
+$\frac{C19:0\Delta}{C18:1\omega7cis}$, poiché gli altri rapporti, secondo
+ricerche più recenti \cite{frostegard_use_2011, barcenas09},
 potrebbero dare risultati
-non certi sull'effettiva condizione di anaerobiosi del terreno 
-in quanto potrebbero 
-significare solamente un incremento dei batteri anaerobi per motivi di 
+non certi sull'effettiva condizione di anaerobiosi del terreno
+in quanto potrebbero
+significare solamente un incremento dei batteri anaerobi per motivi di
 abbondanza di elementi nutritivi, o temperature più favorevoli
 alla loro moltiplicazione, più che un decremento dei microrganismi
 aerobi a favore di quelli anaerobi.
 
-Non sono stati considerati nemmeno i rapporti tra gli isomeri trans/cis 
+Non sono stati considerati nemmeno i rapporti tra gli isomeri trans/cis
 come invece sono utilizzati da \citet{Guckert_1986} poiché lavori recenti affermano che sono buoni indicatori nel
 breve periodo e in un ambiente controllato e non in un ambiente così vasto
 ed eterogeneo come il pieno campo \cite{Fisher10}.
@@ -3585,14 +3585,14 @@ ed eterogeneo come il pieno campo \cite{Fisher10}.
 %
 %Sono stati effettuati i rapporti C17:0$\Delta$/C16:1$\omega$7,
 %C19:0$\Delta$/C18:1$\omega$7cis (ovvero delle molecole cicliche fratto il loro
-%precursore) e anche C18:1$\omega$9/C18:1$\omega$7; 
+%precursore) e anche C18:1$\omega$9/C18:1$\omega$7;
 %questi sono tutti metilesteri identificativi dei Gram negativi (\autoref{tab:GruppiMicrobici}),
-%ma i tre al numeratore sono identificativi degli anaerobi 
+%ma i tre al numeratore sono identificativi degli anaerobi
 %e i tre al denominatore degli aerobi \citep{ovreas_population_2000}.
 % % http://aem.asm.org/content/52/4/794.full.pdf
-Comunque, il rapporto preso da noi in considerazione, 
-$\frac{C19:0\Delta}{C18:1\omega7cis}$, indica, se prossimo ad uno, 
-condizioni di anaerobiosi nel terreno 
+Comunque, il rapporto preso da noi in considerazione,
+$\frac{C19:0\Delta}{C18:1\omega7cis}$, indica, se prossimo ad uno,
+condizioni di anaerobiosi nel terreno
 \cite{feng_effects_2002, barcenas09, frostegard_use_2011};
 %Quando il rapporto assume un valore possimo ad 1 siamo in situazioni
 %di maggior ossigeno.
@@ -3601,8 +3601,8 @@ conseguentemente alla variazione dell'ambiente fisico e chimico
 circostante in seguito alle lavorazioni effettuate.
 Notiamo tramite i boxplot in  \autoref{fig:RapportiTILL} che non c'è
 una differente quantità di aria nel suolo tra le tre lavorazioni
-effettuate e nemmeno tra le gestioni, ma l'unica differenza 
-riscontrabile è legata alla stagione. 
+effettuate e nemmeno tra le gestioni, ma l'unica differenza
+riscontrabile è legata alla stagione.
 
 % \info{la discussione sul fatto che in estate forse più caldo meno
 % aria nella discussione?}
@@ -3618,10 +3618,10 @@ fattore <-interaction(lis.tutto$CATEGORIA$MAN, lis.tutto$CATEGORIA$TIL, lis.tutt
 
 
 boxplot(RapportoAnaerobiosiMoli ~ fattore,
-        ylab = "", 
+        ylab = "",
         xaxt="n",
         main = expression(frac(
-        paste("C19:0", Delta), 
+        paste("C19:0", Delta),
         paste("C18:1", omega, "7cis")
         )))
 labs <- levels(fattore)
@@ -3690,9 +3690,9 @@ terreno ($\frac{C19:0\Delta}{C18:1\omega7cis}$)]
 
 
 
-Successivamente (\autoref{fig:RapportiMAN}) è stato studiato il rapporto tra 
-le moli totali dei markers tipici dei Gram-positivi e le moli totali 
-dei metilesteri identificativi dei Gram-negativi 
+Successivamente (\autoref{fig:RapportiMAN}) è stato studiato il rapporto tra
+le moli totali dei markers tipici dei Gram-positivi e le moli totali
+dei metilesteri identificativi dei Gram-negativi
 (\autoref{tab:GruppiMicrobici}). Con questo rapporto è possibile
 mostrare se c'è una qualche differenza nella comunità microbica dovuta
 alle differenti gestioni \citep{sun2016, xue_soil_2008}.
@@ -3744,10 +3744,10 @@ boxplot(RapportoSumOrgInteMoli ~ lis.tutto$CATEGORIA$MAN,
 
 Poiché tramite questi rapporti tra i differenti \acs{BAMEs} non è stato
 possibile riscontrare alcun cambiamento significativo %della comunità
-%microbica esaminata 
+%microbica esaminata
 in seguito alla differente gestione e/o
-lavorazione effettuta, abbiamo voluto osservare, nella totalità, 
-i campioni tramite degli starplot. 
+lavorazione effettuta, abbiamo voluto osservare, nella totalità,
+i campioni tramite degli starplot.
 
 \begin{figure}[hb]
   \centering
@@ -3756,9 +3756,9 @@ i campioni tramite degli starplot.
 <<FigRapportiMAN>>
 @
   \caption[Boxplot che mostra l'effetto della gestione sulla comunità microbica]
-  {Boxplot ottenuto dal rapporto tra la sommatoria delle moli dei markers 
+  {Boxplot ottenuto dal rapporto tra la sommatoria delle moli dei markers
   tipici dei Gram-positivi e la somma delle moli dei composti identificativi
-  dei Gram-negativi. Tale rapporto mostra un cambiamento nella comunità 
+  dei Gram-negativi. Tale rapporto mostra un cambiamento nella comunità
   microbica nel
     terreno in seguito alle diverse gestioni applicate.}
   \label{fig:RapportiMAN}
@@ -3811,7 +3811,7 @@ df.butta <- df.butta[ ordina,]
           locations = matrix(c(
               rep(seq(1,18,length = 6), 12),
               rep(seq(18,1, length = 12), each = 6)),
-              ncol = 2, byrow = FALSE),         
+              ncol = 2, byrow = FALSE),
       draw.segments = TRUE, cex = 0.6,
       scale = TRUE,
       full = FALSE)
@@ -3827,10 +3827,10 @@ rm(df.butta)
 <<FigStarplotCampioni>>
 @
   \caption[Starplot dei 72 campioni]
-  {Ogni elemento (starplot) mostra 
+  {Ogni elemento (starplot) mostra
   la composizione in \acs{BAMEs} di uno dei 72
-  campioni, ogni raggio rappresenta uno dei 36 \acs{BAMEs} identificati. 
-  Il \acs{BAMEs} con concentrazione maggiore è posto uguale ad uno e gli 
+  campioni, ogni raggio rappresenta uno dei 36 \acs{BAMEs} identificati.
+  Il \acs{BAMEs} con concentrazione maggiore è posto uguale ad uno e gli
   altri hanno lunghezze proporzionalmente inferiori.
   Le sigle indicano: la stagione (Au= autunno e Es= estate), la conduzione
   (C= convenzionale e O= biologico) e le lavorazioni (A= aratura, F= frangizollatura
@@ -3843,18 +3843,18 @@ rm(df.butta)
 
 
 Gli starplot (\autoref{fig:starplot_campioni}) raffigurano i 72
-campioni misurati, i primi 36 sono quelli presi in autunno e i 
+campioni misurati, i primi 36 sono quelli presi in autunno e i
 rimanenti 36 sono quelli estivi.
 
-In questa figura possiamo vedere, per ogni campione rappresentato 
-da uno starplot specifico, la differenza  dei \acs{BAMEs} trovati sia 
-a livello qualitativo (assenza o presenza dei diversi raggi), sia a 
-livello quantitativo (lunghezza del raggio), tenendo conto della stagione 
+In questa figura possiamo vedere, per ogni campione rappresentato
+da uno starplot specifico, la differenza  dei \acs{BAMEs} trovati sia
+a livello qualitativo (assenza o presenza dei diversi raggi), sia a
+livello quantitativo (lunghezza del raggio), tenendo conto della stagione
 in cui è stato raccolto, del
 campo di appartenenza (gestione) e parcella (lavorazione).
-Nell'insieme vediamo che i campioni estivi presentano degli starplot 
+Nell'insieme vediamo che i campioni estivi presentano degli starplot
 più completi, sia a livello qualitativo che quantitativo, rispetto a
-quelli autunnali. Inoltre tutti i campioni, ma specialmente quelli 
+quelli autunnali. Inoltre tutti i campioni, ma specialmente quelli
 estivi sono caratterizzati da una grande eterogeneità.
 Ad esempio, i campioni 70 e 71, entrambi estivi arati, il primo
 convenzionale e il secondo biologico,
@@ -3868,17 +3868,17 @@ simile alla maggioranza dei campioni autunnali;
 % più a quelli estivi.
 
 
-L'eterogeneità, nella quantità totale di \acs{BAMEs}, è forte anche 
+L'eterogeneità, nella quantità totale di \acs{BAMEs}, è forte anche
 all'interno degli
 stessi gruppi di stagione-gestione-lavorazione; ad esempio prendendo
-gli estivi biologici arati (54, 59, 69, 61, 63 e 71 - terza riga dal basso) 
+gli estivi biologici arati (54, 59, 69, 61, 63 e 71 - terza riga dal basso)
 si osserva una forte diversità tra i 6 starplot.
 
 Per semplificare l'interpretazione dei dati abbiamo considerato
-la media delle moli, senza tener conto della 
-variabilità dovuta 
-alle repliche di lavorazione entro campo e il risultato è mostrato in 
-\autoref{fig:starplot_medie}. 
+la media delle moli, senza tener conto della
+variabilità dovuta
+alle repliche di lavorazione entro campo e il risultato è mostrato in
+\autoref{fig:starplot_medie}.
 Anche con questa rappresentazione notiamo una differenza
 tra le due stagioni, con un'estate avente una maggior abbondanza di
 \acs{PLFA} in tutte le combinazioni di gestione e lavorazione.
@@ -3919,10 +3919,10 @@ una maggiore quantità.
 \caption[Starplot delle medie]
 {Mostra 12 elementi ove ogni spicchio
   rappresenta uno dei 36 \acs{BAMEs}. Ogni elemento (starplot) è
-  normalizzato secondo il \acs{BAMEs} maggiore, che ha raggio unitario, 
+  normalizzato secondo il \acs{BAMEs} maggiore, che ha raggio unitario,
   mentre gli altri hanno lunghezze proporzionalmente inferiori.
-  Ogni starplot, identificato con la sigla Lavorazione-Stagione-Gestione, 
-  è ottenuto dalla media dei 6 campioni per riga mostrati in  
+  Ogni starplot, identificato con la sigla Lavorazione-Stagione-Gestione,
+  è ottenuto dalla media dei 6 campioni per riga mostrati in
   \autoref{fig:starplot_campioni}.
 %  Per righe vediamo le differenze dovute alle lavorazioni,
 %  mentre in colonna, a coppie, vediamo quelle legate alle due
@@ -4056,12 +4056,12 @@ boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
 labs <- levels(fattore)
 text(cex=0.8, x=(1:6), y=2.15, labs, xpd=TRUE, srt=45)
 testoMedie <-
-aggregate(log(lis.tutto$SOMME$nMOLI), 
-          by=list(fattore), 
+aggregate(log(lis.tutto$SOMME$nMOLI),
+          by=list(fattore),
           function(x) as.character(round(mean(x),2))
           )$x
-text(x=1:6, 
-     y=rep(c(2.7,3), each=3), 
+text(x=1:6,
+     y=rep(c(2.7,3), each=3),
      testoMedie, cex=0.8)
 #for(i in 1:6){
 #text(i,5.3, tuk.cld$mcletters$Letters[i], cex = 1.5)
@@ -4093,7 +4093,7 @@ escludere su base formale l'effetto della variabile \emph{Gestione}.
 
 
 
-%% Inoltre si vede bene che l'estate presenta una maggior varianza 
+%% Inoltre si vede bene che l'estate presenta una maggior varianza
 %% rispetto all'autunno.
 %; in questo grafico non è stata considerata la
 % Gestione dopo aver dimostrato, con il modello lineare che non era
@@ -4108,7 +4108,7 @@ lavorazioni, una media superiore rispetto alle tre autunnali.
 
 Guardando invece entro stagione vediamo che il rippato, in entrambe le
 stagioni, è quello avente una media maggiore rispetto alle altre due
-lavorazioni, con un valore pari a 3,74 in autunno e  
+lavorazioni, con un valore pari a 3,74 in autunno e
 pari a 4,47 in estate.
 
 
@@ -4122,10 +4122,10 @@ pari a 4,47 in estate.
 % tra le due stagioni.
 
 Dunque l'analisi formale del contenuto totale delle moli dei vari
-\acs{PLFA} (\autoref{tab:ANOVAsum}) mostra una differenza significativa sia 
+\acs{PLFA} (\autoref{tab:ANOVAsum}) mostra una differenza significativa sia
 tra le due stagioni
 che tra le lavorazioni, similmente a quanto ottenuto tramite gli
-starplot in \autoref{fig:starplot_campioni}. I valori 
+starplot in \autoref{fig:starplot_campioni}. I valori
 medi sono riportati in \autoref{tab:ANOVAsummary}.
 
 
@@ -4133,14 +4133,14 @@ medi sono riportati in \autoref{tab:ANOVAsummary}.
 tabANOVAsom <-anova(lm.SommeMoli.2)
 row.names(tabANOVAsom) <-
     c("LAVORAZIONE", "STAGIONE", "Residui")
-      
-      
+
+
  xtabANOVAsum <-
     xtable(tabANOVAsom,
            label  = "tab:ANOVAsum",
            #align  = "lllllll",
             caption =
-               c("Analisi della varianza per il modello \\ref{mod:ANOVAmoli}, che 
+               c("Analisi della varianza per il modello \\ref{mod:ANOVAmoli}, che
             indica la significatività della lavorazione (TIL) e della stagione.")
 
  )
@@ -4159,19 +4159,19 @@ print(xtabANOVAsum,
            label  = "tab:ANOVAsummary",
            align  = "lllll",
             caption =
-               c("Stima dei valori medi in funzione di lavorazione e stagione, 
+               c("Stima dei valori medi in funzione di lavorazione e stagione,
                come calcolati dal modello \\ref{mod:ANOVAmoli}.")
            )
-           
+
 row.names(xtabANOVAsummary) <-
      c("(Intercetta)", "LAV Rip", "LAV Fzo","STAGIONE Est")
 
-    
+
 print(xtabANOVAsummary,
       include.rownames=TRUE,
       caption.placement = "top",
       table.placement= "h")
-      
+
 
 @
 
@@ -4190,7 +4190,7 @@ Y.AREA <- acomp(lis.tutto$PLFA$AREA)
 pcx.Y.MOLI <- princomp(Y.MOLI)
 plot(pcx.Y.MOLI, type = "screeplot", main="")
 text(x = c(1:10),
-     y = c((pcx.Y.MOLI$sdev^2)[1:10]), 
+     y = c((pcx.Y.MOLI$sdev^2)[1:10]),
      pos = c(rep(4,3), rep(1,2), rep(3,5)),
      c(
      as.character(round((pcx.Y.MOLI$sdev)^2/
@@ -4203,10 +4203,10 @@ La  \autoref{fig:screeplot_composiz} rappresenta lo screeplot
 composizionale e si presenta come una spezzata di punti discendenti,
 poiché gli autovalori ottenuti sono in ordine decrescente.
 
-Da tale figura, 
+Da tale figura,
 vediamo che la prima componente contiene il 63\,\% della varianza
 totale; la seconda rappresenta solo il 12\,\% e la terza il 7\,\%,
-mentre le altre 7 componenti, delle 10 prese in considerazione, sommate 
+mentre le altre 7 componenti, delle 10 prese in considerazione, sommate
 insieme, rappresentano una percentuale totale del
 \Sexpr{100*sum(round((pcx.Y.MOLI$sdev)^2/sum((pcx.Y.MOLI$sdev^2)),2)[4:10])}
 \%.
@@ -4218,9 +4218,9 @@ insieme, rappresentano una percentuale totale del
 <<FigScreeplotcomposizionale>>
 @
   \caption[Screeplot composizionale delle moli]
-  {Screeplot composizionale delle 
+  {Screeplot composizionale delle
   somme
-  delle moli. Sopra ogni punto della spezzata troviamo il valore della 
+  delle moli. Sopra ogni punto della spezzata troviamo il valore della
   varianza della
   componente corrispondente.}
   \label{fig:screeplot_composiz}
@@ -4236,32 +4236,32 @@ poiché  la  diminuzione  degli  autovalori  può  essere  graduale,
 ma dato il grande salto tra il valore della prima e della seconda componente,
 sono state scelte queste due componenti principali, escludendo quindi
  il punto di flesso (il gomito)
-come in accordo con \citet{harman1976}. 
+come in accordo con \citet{harman1976}.
 
-Possiamo quindi vedere in  \autoref{fig:PCA_composiz} una divisione in due 
+Possiamo quindi vedere in  \autoref{fig:PCA_composiz} una divisione in due
 gruppi dei
-72 campioni secondo l'asse delle ascisse, rappresentante la prima 
-componente, mentre non c'è alcuna ripartizione sulle ordinate. 
+72 campioni secondo l'asse delle ascisse, rappresentante la prima
+componente, mentre non c'è alcuna ripartizione sulle ordinate.
 Osservando le etichette vediamo che la
-prima componente separa quasi perfettamente le due stagioni\footnote{Si ha 
-un solo outlier, un autunnale che si trova nelle colonna degli 
-estivi, con coordinate x=-0,75, y=1,10, evidenziato con un cerchio nero.}. 
+prima componente separa quasi perfettamente le due stagioni\footnote{Si ha
+un solo outlier, un autunnale che si trova nelle colonna degli
+estivi, con coordinate x=-0,75, y=1,10, evidenziato con un cerchio nero.}.
 Invece guardando i colori, dunque le
 lavorazioni, e le due gestioni, indicate con le lettere maiuscole “C”
 e “O”, non vediamo una separazione  altrettanto netta.
 
 In  \autoref{fig:PCA_composizPLFA} sono invece mostrati i 36 vettori
-rappresentanti le variabili dell'analisi, ovvero i 36 composti 
-identificati.  Notiamo alcuni composti che si distanziano nettamente 
-lungo la prima componente, mentre meno visibile è la separazione lungo 
+rappresentanti le variabili dell'analisi, ovvero i 36 composti
+identificati.  Notiamo alcuni composti che si distanziano nettamente
+lungo la prima componente, mentre meno visibile è la separazione lungo
 la seconda.
-Questo era riscontrabile anche dall'analisi cromatografica in quanto 
-i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi 
-(\autoref{tab:PM_PLFA}), 
-non sono stati identificati nei campioni autunnali, mentre sono presenti 
+Questo era riscontrabile anche dall'analisi cromatografica in quanto
+i composti C20:2 11,13 e C20:2 11,14, che identificano i protozoi
+(\autoref{tab:PM_PLFA}),
+non sono stati identificati nei campioni autunnali, mentre sono presenti
 in quelli  estivi,
 al contrario delle micorrize e di alcuni composti identificativi dei
-Gram-negativi, C16:1$\omega$5, C19:0$\Delta$, C16:1$\omega$7, C18:1$\omega$7cis 
+Gram-negativi, C16:1$\omega$5, C19:0$\Delta$, C16:1$\omega$7, C18:1$\omega$7cis
 assenti
 a giugno e presenti a novembre.
 
@@ -4462,8 +4462,8 @@ par(mfrow = c(2,3))
 <<FigPCAcomposizionale_gruppiMicrobo>>
 @
 
-\caption[Sei plot, uno per ogni gruppo microbico] 
-{\acs{PCA} composizionali delle 
+\caption[Sei plot, uno per ogni gruppo microbico]
+{\acs{PCA} composizionali delle
 moli dei gruppi microbici presi in esame. }
   \label{Fig: PCAcomposizionale_gruppiMicrobo}
 \end{figure}
@@ -4471,10 +4471,10 @@ moli dei gruppi microbici presi in esame. }
 \FloatBarrier
 
 
-In \autoref{Fig: PCAcomposizionale_gruppiMicrobo} sono mostrati 6 grafici, 
-uno per 
-ogni gruppo microbico preso in esame. All'interno dei plot vediamo come i 
-vettori rapprensentativi dei rispettivi markers identificativi si 
+In \autoref{Fig: PCAcomposizionale_gruppiMicrobo} sono mostrati 6 grafici,
+uno per
+ogni gruppo microbico preso in esame. All'interno dei plot vediamo come i
+vettori rapprensentativi dei rispettivi markers identificativi si
 distribuiscono rispetto alle due componenti considerate.
 
 Anche tramite l'ausilio di analisi cluster (\autoref{fig:clusterIndividui_1}),
@@ -4483,7 +4483,7 @@ riguardante la gestione e la lavorazione; l'unica separazione è legata alla
 stagionalità.
 
 Il secondo cluster (\autoref{fig:clusterIndividui_2}) è invece ottenuto tramite
-le medie, ma anche se più “leggibile”, non è visibile neanche in 
+le medie, ma anche se più “leggibile”, non è visibile neanche in
 questo modo alcuna “familiarità”
 tra gestione e lavorazione entro stagione.
 
@@ -4534,30 +4534,30 @@ fattore <-
     interaction(
                 lis.tutto$CATEGORIA$STAGIONE,
         lis.tutto$CATEGORIA$MAN,
-        lis.tutto$CATEGORIA$TIL) 
-fattore <- 
-    factor(fattore, 
-           levels = 
+        lis.tutto$CATEGORIA$TIL)
+fattore <-
+    factor(fattore,
+           levels =
                levels(fattore)[c(1,5,9, 3,7,11, 2,6,10, 4,8,12)]
            )
 fattoreNOstagione <-
     interaction(
         lis.tutto$CATEGORIA$MAN,
-        lis.tutto$CATEGORIA$TIL) 
-fattoreNOstagione <- 
+        lis.tutto$CATEGORIA$TIL)
+fattoreNOstagione <-
     factor(fattoreNOstagione,
-           levels = 
+           levels =
                levels(fattoreNOstagione)[c(1,3,5, 2,4,6)]
            )
 
-# Manually match the labels, as much as possible, to the real classification 
+# Manually match the labels, as much as possible, to the real classification
 labels_colors(dend1) <-
    rainbow(6)[sort_levels_values(
       as.numeric(fattoreNOstagione)[order.dendrogram(dend1)]
    )]
 
 # We shall add the flower type to the labels:
-labels(dend1) <- 
+labels(dend1) <-
      as.character(fattoreNOstagione[order.dendrogram(dend1)])
 # We hang the dend1rogram a bit:
 dend1 <- hang.dendrogram(dend1,hang_height=0.1)
@@ -4566,11 +4566,11 @@ dend1 <- hang.dendrogram(dend1,hang_height=0.1)
 dend1 <- set(dend1, "labels_cex", 0.8)
 # And plot:
 
-plot(dend1, 
-     main = "Cluster di tutti i campioni", 
-     horiz =  FALSE,  
+plot(dend1,
+     main = "Cluster di tutti i campioni",
+     horiz =  FALSE,
      nodePar = list(cex = .07))
-legend("topleft", 
+legend("topleft",
        legend = levels(fattoreNOstagione), fill = rainbow(6))
 text(10,15, "Autunno", cex = 2);text(49,15, "Estate", cex = 2)
 ## prova <- as.vector(cutree(hc, k = 3))
@@ -4608,9 +4608,9 @@ plot(dend1)
 @
 
 \caption[Cluster di tutti i campioni]
-{Cluster di tutti i campioni, le sigle e i colori indicano la gestione e 
-la lavorazione. Vediamo una separazione netta dovuta alla stagione, 
-ma nessun'altra classificazione per quanto riguarda le operazioni 
+{Cluster di tutti i campioni, le sigle e i colori indicano la gestione e
+la lavorazione. Vediamo una separazione netta dovuta alla stagione,
+ma nessun'altra classificazione per quanto riguarda le operazioni
 agronomiche.}
   \label{fig:clusterIndividui_1}
 \end{figure}
@@ -4637,17 +4637,17 @@ agronomiche.}
 Infine è stata condotta l'analisi dei modelli composizionali
 attraverso il confronto tra modelli marginali per la selezione del più
 parsimonioso ma ancora esplicativo. Il risultato del confronto
-(\autoref{tab:ANOVAmargAcomp}) indica che il modello 2) è il migliore 
-in quanto non significativamente diverso (\emph{p} = 0.436) 
-dal modello 1) più complesso con interazione a tre fattori. 
-Un modello più semplice (3), senza alcuna interazione tra i fattori, 
-è significativamente diverso (\emph{p} = 0.002) dal precedente. 
-E quindi non è possibile semplificare ulteriormente il modello 2) 
-se non a prezzo di importanti perdite di informazione 
+(\autoref{tab:ANOVAmargAcomp}) indica che il modello 2) è il migliore
+in quanto non significativamente diverso (\emph{p} = 0.436)
+dal modello 1) più complesso con interazione a tre fattori.
+Un modello più semplice (3), senza alcuna interazione tra i fattori,
+è significativamente diverso (\emph{p} = 0.002) dal precedente.
+E quindi non è possibile semplificare ulteriormente il modello 2)
+se non a prezzo di importanti perdite di informazione
 e probabili distorsioni.
 
 
- 
+
 <<ModelloComposizionale, eval = TRUE, results = tex, echo = FALSE>>=
 ## MetLin <- substr(names(lis.tutto$PLFA$AREA),5,7)
 ## MetLin[which(MetLin %in% c("Cyc", "Hyd"))] <- "BOH"
@@ -4699,7 +4699,7 @@ xtabANOVAmargAcomp <-
                c("Confronto tra modelli marginali per la composizione di PLFA nel suolo. \\newline
                modello 1) \\emph{Composizione $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
  modello 2) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione + Gestione : Stagione + Gestione : Lavorazione + Stagione : Lavorazione};\\newline
-               modello 3) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione}. \\newline 
+               modello 3) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione}. \\newline
                Il più parsimonioso risulta essere il modello 2.",
                "Confronto tra tre modelli marginali per la composizione di PLFA nel suolo")
 )
@@ -5050,14 +5050,14 @@ dev.off()
 
 
 
-Il metodo di estrazione e purificazione di Blight \& Dyer, con le 
+Il metodo di estrazione e purificazione di Blight \& Dyer, con le
 successive modificazioni \cite{bligh_rapid_1959, white_determination_1979,
   bossio_determinants_nodate} e il metodo cromatografico applicati
-sono risultati efficaci a determinare i \acs{PLFA} di membrana dei 
+sono risultati efficaci a determinare i \acs{PLFA} di membrana dei
 microrganismi del suolo. Con la prova di validazione abbiamo osservato che
-tale metodo seppur comprendendo molteplici passaggi --- estrazione, 
-purificazione 
-e derivatizzazione --- non comporta rilevanti perdite di segnale in confronto 
+tale metodo seppur comprendendo molteplici passaggi --- estrazione,
+purificazione
+e derivatizzazione --- non comporta rilevanti perdite di segnale in confronto
 ad una quantità di marcatore aggiunto in quantità nota (fosfatidilcolina).
 In altre parole possiamo considerare il recupero dei fosfolipidi dal suolo come
 esaustivo (\autoref{fig:validazione}).
@@ -5066,8 +5066,8 @@ esaustivo (\autoref{fig:validazione}).
 \centering
 \includegraphics[scale=0.4]{./foto/validazione.PNG}
 \caption[Cromatogrammi ottenuti dalla validazione]
-{I due cromatogrammi sono stati ottenuti durante la validazione, il primo 
-rappresenta il campione in cui sono stati iniettati 50\,µl di fosfatidilcolina, 
+{I due cromatogrammi sono stati ottenuti durante la validazione, il primo
+rappresenta il campione in cui sono stati iniettati 50\,µl di fosfatidilcolina,
 il secondo è il campione con 1\,g di suolo e 50\,µl di standard.}
 \label{fig:validazione}
 \end{figure}
@@ -5075,61 +5075,61 @@ il secondo è il campione con 1\,g di suolo e 50\,µl di standard.}
 
 
 
-Dal confronto tra i cromatogrammi (\autoref{fig:cromSTD_CONV}) 
-e ciò che è scritto in letteratura vediamo che sono stati trovati 
+Dal confronto tra i cromatogrammi (\autoref{fig:cromSTD_CONV})
+e ciò che è scritto in letteratura vediamo che sono stati trovati
 quasi tutti i metilesteri identificativi dei 6 gruppi microbici
-presi in esame (\autoref{tab:GruppiMicrobici}). 
-Abbiamo infatti identificato 36 \acs{BAMEs}, di cui 17 risultano marcatori 
-specifici delle categorie di organismi e 19 generici. 
-Gli unici markers specifici non trovati, rispetto alla letteratura, 
+presi in esame (\autoref{tab:GruppiMicrobici}).
+Abbiamo infatti identificato 36 \acs{BAMEs}, di cui 17 risultano marcatori
+specifici delle categorie di organismi e 19 generici.
+Gli unici markers specifici non trovati, rispetto alla letteratura,
 sono: il 10Me-C16:0
 (\emph{Metil-10-metilpentadecanoate}) identificativo
 secondo \citet{zelles_fatty_1999, kong_microbial_2012,
-  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0 
-  (\emph{Metil-14-metilpentadecanoate}) identificativo dei Gram-positivi 
-  secondo \citet{bossio_determinants_nodate, kong_microbial_2012} 
+  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0
+  (\emph{Metil-14-metilpentadecanoate}) identificativo dei Gram-positivi
+  secondo \citet{bossio_determinants_nodate, kong_microbial_2012}
   e il C18:3$\omega$6 e il
 C20:4$\omega$6, markers dei funghi secondo
 \citet{ovreas_population_2000}.
 
-Tra i \acs{BAMEs} trovati ci sono anche   
+Tra i \acs{BAMEs} trovati ci sono anche
 i 3 idrossidi (2OH-C14,
 3OH-C14, 2OH-C16), i quali non sono stati da noi attribuiti a nessun
 gruppo microbico specifico poiché in bibliografia solamente
-\citet{ovreas_population_2000} li attribuisce ai Gram-negativi, 
-mentre tutti gli altri \citep{white96, FIERER2003, 
-hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995, 
-Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99, 
-ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97, 
-Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004, 
-Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993, 
-zelles_fatty_1999, kong_microbial_2012, frost&baat96} li 
+\citet{ovreas_population_2000} li attribuisce ai Gram-negativi,
+mentre tutti gli altri \citep{white96, FIERER2003,
+hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995,
+Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99,
+ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97,
+Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004,
+Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993,
+zelles_fatty_1999, kong_microbial_2012, frost&baat96} li
 considerano generici.
-Inoltre, a differenza di \citet{feng_effects_2002}, 
+Inoltre, a differenza di \citet{feng_effects_2002},
 il 10 Metile C17:0 non è stato attribuito ai Gram-positivi, ma agli
 attinomiceti come in accordo con \citet{Kroppenstedt1985,brennan1988,
   zelles_determination_1995, Olsson_99, FIERER2003, De_Deyn75,
   ovreas_population_2000, hamer_rhizosphere_2008}.
 
 Infine in questo studio non sono stati identificati tutti i 26 composti
-appartenenti al \acs{BAMEs} Mix (\autoref{tab:PM_PLFA}), 
+appartenenti al \acs{BAMEs} Mix (\autoref{tab:PM_PLFA}),
 ma solamente quelli con una catena uguale o
 superiore a 14 atomi di carbonio; questo perché i metilesteri aventi
-una catena più corta sono generici e non sono identificativi di alcun 
-gruppo microbico presente nel suolo \citep{white96, FIERER2003, 
-hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995, 
-Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99, 
-ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97, 
-Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004, 
-Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993, 
+una catena più corta sono generici e non sono identificativi di alcun
+gruppo microbico presente nel suolo \citep{white96, FIERER2003,
+hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995,
+Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99,
+ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97,
+Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004,
+Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993,
 zelles_fatty_1999, kong_microbial_2012, frost&baat96}.
 
 
 
-La \autoref{tab:Metili_in_più} riporta alcui metilesteri 
+La \autoref{tab:Metili_in_più} riporta alcui metilesteri
 ramificati che, sebbene
-presenti nei campioni, non sono invece citati in bibliografia 
- e quindi 
+presenti nei campioni, non sono invece citati in bibliografia
+ e quindi
 non  ascrivibili ad alcun gruppo microbico.
 %Sono da segnalare anche alcuni metilesteri ramificati
 %(\autoref{tab:Metili_in_più}) non presenti in bibliografia
@@ -5140,7 +5140,7 @@ non  ascrivibili ad alcun gruppo microbico.
 \centering
 \caption[Metilesteri identificati, ma privi di attribuzione bibliografica]
 {Metilesteri identificati, ma privi di attribuzione bibliografica.\\
-I nomi qui segnalati sono ipotetici, 
+I nomi qui segnalati sono ipotetici,
 li abbiamo assegnati tramite l'interpretazione degli spettri.}
 \label{tab:Metili_in_più}
 \begin{tabular}{lc}
@@ -5161,12 +5161,12 @@ Metil-17-metiloctadecanoato    &   312  \\
 %\FloatBarrier
 
 Di questi composti è stata tentata un'identificazione
-tramite interpretazione degli spettri. È stato utilizzato il 
-peso molecolare e alcuni ioni caratteristici per definire il gruppo di 
-appartenenza di tali molecole e, per distinguere i vari isomeri, ci 
+tramite interpretazione degli spettri. È stato utilizzato il
+peso molecolare e alcuni ioni caratteristici per definire il gruppo di
+appartenenza di tali molecole e, per distinguere i vari isomeri, ci
 siamo basati sul fatto che gli ioni sono diagnostici del punto di ramificazione.
 
-In Figura \autoref{rif:as} vediamo lo spettro del metil eptadecanoato 
+In Figura \autoref{rif:as} vediamo lo spettro del metil eptadecanoato
 lineare.
 Lo ione a m/z 284 è stato attribuito come ione molecolare, e sono presenti
 gli ioni caratteristici dei metil esteri saturi 74\,Th e 87\,Th
@@ -5177,15 +5177,15 @@ vediamo un isomero dell'eptadecanoato, in quanto anch'esso ha
 peso molecolare 284\,Th e i tipici ioni a m/z 74, 84.
 
 Il composto incognito (Figura \ref{rif:bs}) è stato da noi identificato come
-il 13-Etil C17; questo perché la prima perdita è data dalla differenza 
-fra gli ioni a m/z 284 e 241, ovvero 
+il 13-Etil C17; questo perché la prima perdita è data dalla differenza
+fra gli ioni a m/z 284 e 241, ovvero
 dalla perdita di un frammento di 43\,Th, probabilmente
-dovuta alla frammentazione e relativa perdita di un gruppo propile. 
-Lo ione avente m/z 241 sarebbe diagnostico del punto di ramificazione. 
+dovuta alla frammentazione e relativa perdita di un gruppo propile.
+Lo ione avente m/z 241 sarebbe diagnostico del punto di ramificazione.
 Infine, il successivo ione ben evidente è
-il 199\,Th dato da una perdita di un frammento di m/z 85; questo è 
-spiegabile con l'allontanamento della catena propile spiegata precedentemente 
- e dalla perdita dell'etile (peso 29\,Th) e dell'\ce{CH} 
+il 199\,Th dato da una perdita di un frammento di m/z 85; questo è
+spiegabile con l'allontanamento della catena propile spiegata precedentemente
+ e dalla perdita dell'etile (peso 29\,Th) e dell'\ce{CH}
 ovvero il C della ramificazione.
 
 
@@ -5206,10 +5206,10 @@ ovvero il C della ramificazione.
 \FloatBarrier
 
 
-Con ragionamenti analoghi a quelli appena descritti, 
+Con ragionamenti analoghi a quelli appena descritti,
 abbiamo tentato il riconoscimento degli altri metil esteri incogniti.
 
-Naturalmente i nomi da noi attributi presenti in \autoref{tab:Metili_in_più} 
+Naturalmente i nomi da noi attributi presenti in \autoref{tab:Metili_in_più}
 sono solamente ipotetici, visto che non eravamo in possesso di alcun
 standard per poter effettuare un'identificazione più accurata.
 
@@ -5218,30 +5218,30 @@ standard per poter effettuare un'identificazione più accurata.
 
 
 
-%Però sono stati identificati anche dei \acs{BAMEs} in più (\autoref{tab:Metili_in_più} 
+%Però sono stati identificati anche dei \acs{BAMEs} in più (\autoref{tab:Metili_in_più}
 %non ancora
 %attribuibili a nessun gruppo microbico
 %
-%Come dalla letteratura abbiamo visto che il gruppo dei protozoi è 
-%presente in estate ma non in autunno e viceversa 3 dei markers identificativi 
+%Come dalla letteratura abbiamo visto che il gruppo dei protozoi è
+%presente in estate ma non in autunno e viceversa 3 dei markers identificativi
 %dei Gram-negativi.
 %
 %Secondo \info{dalila tali} la tecnica risulta adatta a
-%segnalare gestioni diverse tra ambiene forestale e agrario; ma noi, 
-%come/in disaccordo dagli studi effettuati da \info{dalila} non abbiamo 
+%segnalare gestioni diverse tra ambiene forestale e agrario; ma noi,
+%come/in disaccordo dagli studi effettuati da \info{dalila} non abbiamo
 %riscontrato differenze tra le due conduzioni agrarie prese in esame.
-%Probabilmente questo è dovuto al fatto che i disturbi effettuati tra 
+%Probabilmente questo è dovuto al fatto che i disturbi effettuati tra
 %gestione agraria e forestale sono nettamente differenti tra loro, mentre
 %tra due differenti pratiche agronomiche no.
 
-Oltre al metodo di estrazione e derivatizzazione, anche la scelta del 
+Oltre al metodo di estrazione e derivatizzazione, anche la scelta del
 \acs{GC-MS} è risultata ottimale, se non addirittura
-necessaria.  Durante l'analisi dei campioni autunnali infatti, 
+necessaria.  Durante l'analisi dei campioni autunnali infatti,
 abbiamo notato nei cromatogrammi, al minuto 22.87, un picco
-molto intenso (\autoref{fig:unk126}). Questo era presente in tutti i campioni, 
-compresi i bianchi, 
-ed è stato riconosciuto, tramite lo studio dello spettro, come un 
-inquinante (\autoref{fig:spettro126}). 
+molto intenso (\autoref{fig:unk126}). Questo era presente in tutti i campioni,
+compresi i bianchi,
+ed è stato riconosciuto, tramite lo studio dello spettro, come un
+inquinante (\autoref{fig:spettro126}).
 
 \begin{figure}[h]
 \centering
@@ -5257,16 +5257,16 @@ al minuto 22.87 un picco, riconosciuto poi come un inquinante.}
 \centering
 \includegraphics[scale=0.42]{./foto/spettrounk126.png}
 \caption[Spettro preso dal campione CO10B1 al minuto 22.87]
-{Spettro preso, selezionando lo ione avente m/z 126, dal campione CO10B1 al minuto 
+{Spettro preso, selezionando lo ione avente m/z 126, dal campione CO10B1 al minuto
 22.87.}
 \label{fig:spettro126}
 \end{figure}
 \FloatBarrier
 
-\`E stata tentata l'identificazione di tale composto in quanto non è 
+\`E stata tentata l'identificazione di tale composto in quanto non è
 stato possibile riconoscerlo tramite la \emph{NIST14}.
-Lo ione a m/z 126, presente nello spettro,  potrebbe essere dovuto ad 
-un derivato del maltolo 
+Lo ione a m/z 126, presente nello spettro,  potrebbe essere dovuto ad
+un derivato del maltolo
 \autoref{fig:mentholpropionate}.
 
 Anche la presenza degli ioni 43\,Th, 57\,Th e 97\,Th sembrano confermare quest'ipotesi.
@@ -5282,27 +5282,27 @@ Anche la presenza degli ioni 43\,Th, 57\,Th e 97\,Th sembrano confermare quest'i
 \FloatBarrier
 
 
-Il maltolo propionato ha peso molecolare pari a 182\,Th, mentre la molecola 
-sperimentale ha un peso molecolare di 210\,Th, 
-ovvero l'analita è una molecola con un gruppo etilico in più. 
-La localizzazione di questo gruppo eccedente non è però 
-determinabile e quindi sono necessarie ulteriori indagini per confermare 
+Il maltolo propionato ha peso molecolare pari a 182\,Th, mentre la molecola
+sperimentale ha un peso molecolare di 210\,Th,
+ovvero l'analita è una molecola con un gruppo etilico in più.
+La localizzazione di questo gruppo eccedente non è però
+determinabile e quindi sono necessarie ulteriori indagini per confermare
 quest'ipotesi.
-% 
-%anello fenolo legato ad una molecola di S, che fa da ponte ad una 
-%catena di peso 84, 
-%per arrivare al peso molecolare 210. 
-%La teoria dell'anello fenolico è in accordo con la posizione di tale 
-%composto nel 
-%cromatogramma data la sua polarità; ma non siamo certi che sia proprio un 
-%fenolo con S in quanto non torna il cluster dello S come mostrato dalla 
+%
+%anello fenolo legato ad una molecola di S, che fa da ponte ad una
+%catena di peso 84,
+%per arrivare al peso molecolare 210.
+%La teoria dell'anello fenolico è in accordo con la posizione di tale
+%composto nel
+%cromatogramma data la sua polarità; ma non siamo certi che sia proprio un
+%fenolo con S in quanto non torna il cluster dello S come mostrato dalla
 %\autoref{fig:clusterunk126camp} e dalla \autoref{fig:clusterS}.
 %
 %\begin{figure}[h]
 %\centering
 %\includegraphics[scale=0.30]{./foto/cluster126unk.png}
 %\caption[Ingrandimento del cluster dello ione 126]
-%{Ingrandimento del cluster dello ione 126 ottenuto da un campione 
+%{Ingrandimento del cluster dello ione 126 ottenuto da un campione
 %inquinato.}
 %\label{fig:clusterunk126camp}
 %\end{figure}
@@ -5312,14 +5312,14 @@ quest'ipotesi.
 %\begin{figure}[h]
 %\centering
 %\includegraphics[scale=0.22]{./foto/clusterS.png}
-%\caption[Ingrandimento del cluster dello ione 126 ottenuto dal 
+%\caption[Ingrandimento del cluster dello ione 126 ottenuto dal
 %\emph{MS Interpreter}]
 %{Ingrandimento del cluster dello ione 126 ottenuto dal \emph{MS Interpreter}.}
 %\label{fig:clusterS}
 %\end{figure}
 %\FloatBarrier
 
-Pur non avendolo identificanto precisamente, è stato possibile non 
+Pur non avendolo identificanto precisamente, è stato possibile non
 cadere in errore durante la
 determinazione dei picchi, solamente perché eravamo in possesso della
 Massa.
@@ -5332,15 +5332,15 @@ Massa.
 
 
 Inoltre con il metodo cromatografico da noi adottato, è stato possibile
-separare il metil oleato (C18:1$\omega$9cis), il metil trans-9-octadecenoato 
-(C18:1$\omega$9trans) e il 
-metil cis-11-octadecenoato (C18:1$\omega$7cis) a differenza di quanto 
+separare il metil oleato (C18:1$\omega$9cis), il metil trans-9-octadecenoato
+(C18:1$\omega$9trans) e il
+metil cis-11-octadecenoato (C18:1$\omega$7cis) a differenza di quanto
 affermato sulla pagina web
 \url{https://www.sigmaaldrich.com/technical-documents/articles/
 analytical-applications/gc/gc-analysis-of-a-37-component-fame-mix-g004263.html}.
 
-Vediamo in \autoref{fig:c18:1} i tre picchi rappresentativi dei tre 
-octadecenoati dal minuto 25 al 25.5. 
+Vediamo in \autoref{fig:c18:1} i tre picchi rappresentativi dei tre
+octadecenoati dal minuto 25 al 25.5.
 
 \begin{figure}[h]
 \centering
@@ -5352,21 +5352,21 @@ octadecenoati dal minuto 25 al 25.5.
 \FloatBarrier
 
 Osservando lo spettro di tutti e tre gli analiti (\autoref{fig:spettric18})
-vediamo che gli ioni aventi elevati valori di m/z 
-non sono diagnostici e anche tramite la \emph{NIST 14} non è stato 
+vediamo che gli ioni aventi elevati valori di m/z
+non sono diagnostici e anche tramite la \emph{NIST 14} non è stato
  possibile distinguere i tre isomeri. Con l'aiuto del \emph{MS Interpreter} è
-stato possibile studiare più dettagliatamente le varie frammentazioni.  
+stato possibile studiare più dettagliatamente le varie frammentazioni.
 Ci siamo soffermati sullo ione 97\,Th, dovuto alla rottura del legame tra il C11 e
-il C12 della catena lineare. Questo ione può risultare alto nei 
-due C18:1$\omega$9 (cis e trans), ma non nel C18:1$\omega$7 poiché 
-le frammentazioni più 
+il C12 della catena lineare. Questo ione può risultare alto nei
+due C18:1$\omega$9 (cis e trans), ma non nel C18:1$\omega$7 poiché
+le frammentazioni più
 frequenti dovrebbero risultare prima o dopo il doppio legame.
 Dunque abbiamo constatato che nei primi
-due picchi lo ione avente m/z pari a 97 risulta essere intenso e ben visibile 
-(rispettivamente Figura 
-\autoref{rif:a3} e Figura \autoref{rif:b3}), mentre nel terzo 
-(Figura \autoref{rif:c3}), pur presente, 
-risulta più debole. 
+due picchi lo ione avente m/z pari a 97 risulta essere intenso e ben visibile
+(rispettivamente Figura
+\autoref{rif:a3} e Figura \autoref{rif:b3}), mentre nel terzo
+(Figura \autoref{rif:c3}), pur presente,
+risulta più debole.
 
 
 \begin{landscape}
@@ -5377,7 +5377,7 @@ risulta più debole.
 \subfloat[][Spettro del picco al minuto 25.230.]
 { \includegraphics[scale=0.4]{./foto/18c.png} \label{rif:b3}} \\
 \subfloat[][Spettro del picco al minuto 25.525.]
-{ \includegraphics[scale=0.4]{./foto/187.png} \label{rif:c3}} 
+{ \includegraphics[scale=0.4]{./foto/187.png} \label{rif:c3}}
 \qquad
 \caption[I tre spettri dei tre octadecenoati]
 {I 3 spettri dei tre octadecenoati.}
@@ -5386,101 +5386,101 @@ risulta più debole.
 \end{landscape}
 \FloatBarrier
 
-In questo modo, abbiamo potuto ipotizzare che il primo picco, al minuto 25.063, sia il metil oleato, il 
-secondo al minuto 25.254 l'abbiamo segnalato come metil 
-trans-9-octadecenoato\footnote{L'ordine di uscita cis e successivamente 
+In questo modo, abbiamo potuto ipotizzare che il primo picco, al minuto 25.063, sia il metil oleato, il
+secondo al minuto 25.254 l'abbiamo segnalato come metil
+trans-9-octadecenoato\footnote{L'ordine di uscita cis e successivamente
 trans è stato trovato in letteratura} e il metil cis-11-octadecenoato dovrebbe
 invece corrispondere al terzo picco al minuto 25.568.
 
-   
-Per quanto riguarda lo scopo di questo studio, ovvero determinare 
-variazioni nell'habitat tellurico in seguito a diverse operazioni 
+
+Per quanto riguarda lo scopo di questo studio, ovvero determinare
+variazioni nell'habitat tellurico in seguito a diverse operazioni
 effettuate in ambiente agrario,
  a livello cromatografico (\autoref{fig:cromCONV} e
-\autoref{fig:cromBIO}), non abbiamo notato alcuna differenza tra le due 
- gestioni attuate. 
- 
+\autoref{fig:cromBIO}), non abbiamo notato alcuna differenza tra le due
+ gestioni attuate.
+
  Anche i cromatogrammi rappresentanti le tre lavorazioni prese in esame
  (\autoref{fig:cromLAV}) non hanno mostrato una grande differenza.
- I picchi identificati sono i medesimi in tutte e tre le lavorazioni, 
+ I picchi identificati sono i medesimi in tutte e tre le lavorazioni,
  magari con intensità poco differente, ma niente di significativo.
- 
 
 
 
 
 
-\section{Trattamento e analisi dati} 
+
+\section{Trattamento e analisi dati}
 Abbiamo per prima cosa utilizzato il rapporto tra la molecola ciclica
-C19:0$\Delta$ e il suo precursore, poiché in letteratura 
- è ritenuto 
+C19:0$\Delta$ e il suo precursore, poiché in letteratura
+ è ritenuto
 significativo per evidenziare effetti legati alla lavorazione e gestione
-\cite{frostegard_use_2011, barcenas09};  
+\cite{frostegard_use_2011, barcenas09};
 abbiamo anche osservato i rapporti tra i Gram-negativi / Gram-positivi
-in quanto sono considerati  utili per vedere alterazioni nella comunità 
-microbica tellurica in seguito a gestioni 
+in quanto sono considerati  utili per vedere alterazioni nella comunità
+microbica tellurica in seguito a gestioni
 differenti \citep{sun2016, xue_soil_2008}.
-In \autoref{fig:RapportiTILL} e in \autoref{fig:RapportiMAN} sono riportate 
-graficamente le distribuzioni di questi rapporti, che non mostrano 
+In \autoref{fig:RapportiTILL} e in \autoref{fig:RapportiMAN} sono riportate
+graficamente le distribuzioni di questi rapporti, che non mostrano
 differenze imputabili né alla lavorazione, né alla gestione applicata.
 
-Abbiamo quindi deciso di osservare la totalità dei campioni tramite 
-l'ausilio di starplot 
+Abbiamo quindi deciso di osservare la totalità dei campioni tramite
+l'ausilio di starplot
 (\autoref{fig:starplot_campioni}); in questo caso abbiamo riscontrato
-una certa suddivisione dovuta alla stagionalità, ed  
-è anche ben visibile la forte eterogeneità nella composizione dei campioni, 
-soprattutto entro quelli estivi. 
+una certa suddivisione dovuta alla stagionalità, ed
+è anche ben visibile la forte eterogeneità nella composizione dei campioni,
+soprattutto entro quelli estivi.
 
 Successivamente sono state valutata la composizione media condizionata
 alle combinazioni di gestione, lavorazione e stagione
-(\autoref{fig:starplot_medie}). 
+(\autoref{fig:starplot_medie}).
 
-Alcuni autori, a differenza di quanto riscontrato in questo studio,  
-\cite{bossio_determinants_nodate,feng_effects_2002,sun2016, 
-esperschutz_response_2007} 
-hanno riscontrato una maggior quantità di \acs{BAMEs} in campi condotti 
-biologicamente. 
-Questa discrepanza potrebbe essere spiegata dal fatto che 
-i campi biologici del progetto \acs{MoLTE} non hanno avuto alcun apporto 
-di sostanza organica dal 2006. 
-La concimazione organica con lunghe cadenze è, infatti, tipica della maggior 
+Alcuni autori, a differenza di quanto riscontrato in questo studio,
+\cite{bossio_determinants_nodate,feng_effects_2002,sun2016,
+esperschutz_response_2007}
+hanno riscontrato una maggior quantità di \acs{BAMEs} in campi condotti
+biologicamente.
+Questa discrepanza potrebbe essere spiegata dal fatto che
+i campi biologici del progetto \acs{MoLTE} non hanno avuto alcun apporto
+di sostanza organica dal 2006.
+La concimazione organica con lunghe cadenze è, infatti, tipica della maggior
 parte delle aziende agricole biologiche
-mediterranee. 
+mediterranee.
 Al contrario, i campi convenzionali, sebbene non ricevano apporti di sostanza
-organica allo stesso modo dei biologici,  vengono tuttavia concimati 
+organica allo stesso modo dei biologici,  vengono tuttavia concimati
 annualmente
 anche più volte nello stesso ciclo colturale con fertilizanti chimici .
-Possiamo ipotizzare quindi che la maggior abbondanza 
-di \acs{BAMEs} nei terreni convenzionali, sia data dal maggior 
-apporto di nutrienti, utilizzati sia dalla coltura che dagli organismi 
-presenti nell'habitat tellurico. 
+Possiamo ipotizzare quindi che la maggior abbondanza
+di \acs{BAMEs} nei terreni convenzionali, sia data dal maggior
+apporto di nutrienti, utilizzati sia dalla coltura che dagli organismi
+presenti nell'habitat tellurico.
 
-%Però non possiamo dire niente a livello di 
-%biodiversità; di questa vediamo una differenza stagionale, 
+%Però non possiamo dire niente a livello di
+%biodiversità; di questa vediamo una differenza stagionale,
 %ma nessuna variazione dovuta alle differenti pratiche agricole adottate.
 
-Non si sono invece riscontrate differenze relative alle tre lavorazioni in 
-accordo con \citet{bending_changes_nodate, 
-schutter_seasonal_nodate, kong_microbial_2012, SPEDDIN04, guo_effects_2014}, 
+Non si sono invece riscontrate differenze relative alle tre lavorazioni in
+accordo con \citet{bending_changes_nodate,
+schutter_seasonal_nodate, kong_microbial_2012, SPEDDIN04, guo_effects_2014},
 mentre quanto da noi
-ottenuto si discosta da quanto riportato da 
-\citet{Massaccesi15, xue_soil_2008,hamer_rhizosphere_2008, frosteg1993, 
+ottenuto si discosta da quanto riportato da
+\citet{Massaccesi15, xue_soil_2008,hamer_rhizosphere_2008, frosteg1993,
 winding_use_2005,Lupwayi}.
 
-Nel loro studio trattano però di diversi usi del suolo \cite{winding_use_2005}, 
-paragonando suoli adibiti alla pratica agricola con altri gestiti a 
-bosco \cite{xue_soil_2008} o studi dove si confronta l'ecosistema tellurico 
-relativo a diversi soprassuoli forestali \cite{Massaccesi15, frosteg1993}; 
-in ambito puramente agrario è invece confrontata la risposta tra campi 
-lavorati e campi a gestione no tillage o campi incolti 
+Nel loro studio trattano però di diversi usi del suolo \cite{winding_use_2005},
+paragonando suoli adibiti alla pratica agricola con altri gestiti a
+bosco \cite{xue_soil_2008} o studi dove si confronta l'ecosistema tellurico
+relativo a diversi soprassuoli forestali \cite{Massaccesi15, frosteg1993};
+in ambito puramente agrario è invece confrontata la risposta tra campi
+lavorati e campi a gestione no tillage o campi incolti
 \cite{hamer_rhizosphere_2008,Lupwayi}.
 
-Dunque i differenti risultati ottenuti sono ipoteticamente dovuti 
-alla maggior abbondanza e diversa tipologia di lettiera presente in un 
-suolo forestale rispetto ad uno agrario; infatti è stato 
+Dunque i differenti risultati ottenuti sono ipoteticamente dovuti
+alla maggior abbondanza e diversa tipologia di lettiera presente in un
+suolo forestale rispetto ad uno agrario; infatti è stato
 dimostrato l'effetto della lettiera nel comportare una forte variazione
-nell'habitat tellurico 
-\cite{cleveland_litter_2013, Melillo82, 
+nell'habitat tellurico
+\cite{cleveland_litter_2013, Melillo82,
 Daubenmire63, aerts97, cornwell08, smalla}.
 
 In questo studio è stata poi effettuata un'analisi multivariata
@@ -5500,9 +5500,9 @@ considerazione.
 
 
 Il modello composizionale, i cui risultati sono mostrati in
-\autoref{tab:ANOVAModAcomp}, indica la stagione e la lavorazione come i 
-principali fattori che influenzano e cambiano la composizione in PLFA 
-recuperati dal suolo, mentre la gestione risulta ininfluente.   
+\autoref{tab:ANOVAModAcomp}, indica la stagione e la lavorazione come i
+principali fattori che influenzano e cambiano la composizione in PLFA
+recuperati dal suolo, mentre la gestione risulta ininfluente.
 
 %utilizzare la PCA( Analisi in Componenti Principali) che ci permette
 %di sostituire le 37 variabili originari con un numero ridotto di
@@ -5537,19 +5537,19 @@ recuperati dal suolo, mentre la gestione risulta ininfluente.
 %permette di vedere come questi rapporti variano.
 %
 %(abbozzo:
-%parlo del GC, poi abbiamo guardato inizialmente i boxplot dei rapporti 
-%presi in letteratura riguardanti le alterazioni dell'habita in seguito 
-%alle lavorazioni e anche quelle dovute alla differente gestione ma non 
-%sono risultati significativi. 
+%parlo del GC, poi abbiamo guardato inizialmente i boxplot dei rapporti
+%presi in letteratura riguardanti le alterazioni dell'habita in seguito
+%alle lavorazioni e anche quelle dovute alla differente gestione ma non
+%sono risultati significativi.
 %
-%Si è guardato l'anamento dei campioni nel totale, ma si è visto una forte 
+%Si è guardato l'anamento dei campioni nel totale, ma si è visto una forte
 %eterogeneità.
-%si è fatta poi l'analisi pca composizionale ma anche così si è visto che 
+%si è fatta poi l'analisi pca composizionale ma anche così si è visto che
 %la componente primaria era la stagione.
 %
-%niente nè per quanto riguarda le lavorazioni ne il man. 
-%per quanto riguarda l'analisi dei modelli lineari/marginali si è vista 
-%una differenza significativa però non è di facile interpretazione 
+%niente nè per quanto riguarda le lavorazioni ne il man.
+%per quanto riguarda l'analisi dei modelli lineari/marginali si è vista
+%una differenza significativa però non è di facile interpretazione
 %perché ci sono interazioni /correlazioni di più fattori.
 %
 
@@ -5577,116 +5577,116 @@ recuperati dal suolo, mentre la gestione risulta ininfluente.
 \chapter{Conclusioni}
 
 Con questo lavoro ci siamo proposti di determinare eventuali variazioni
-nelle concentrazioni di PLFA prodotti dalla comunità microbica tellurica, 
-quali indici di modifiche all'ambiente agrario in seguito a due diverse 
-gestioni (biologico e convenzionale) e a tre differenti lavorazioni 
-primarie (aratura, rippatura e frangizollatura), tenendo inoltre conto 
-della stagionalità (estate e autunno). I campi oggetto di studio  sono situati 
-nell'azienda agricola della Scuola di Agraria di Firenze, in località Montepaldi, 
+nelle concentrazioni di PLFA prodotti dalla comunità microbica tellurica,
+quali indici di modifiche all'ambiente agrario in seguito a due diverse
+gestioni (biologico e convenzionale) e a tre differenti lavorazioni
+primarie (aratura, rippatura e frangizollatura), tenendo inoltre conto
+della stagionalità (estate e autunno). I campi oggetto di studio  sono situati
+nell'azienda agricola della Scuola di Agraria di Firenze, in località Montepaldi,
 a San Casciano di Val di Pesa (Firenze). Tale azienda porta avanti sia
-l'agricoltura biologica che quella convenzionale da oltre 25 anni e questo studio 
+l'agricoltura biologica che quella convenzionale da oltre 25 anni e questo studio
 rientra in un progetto europeo iniziato nel 1991 (\acs{MoLTE}).
-Per valutare la qualità e la quantità 
-dei microrganismi nel terreno è stata condotta l'analisi dei 
-\acs{PLFA} 
-presenti nelle membrane cellulari, in quanto essi risultano specifici dei 
+Per valutare la qualità e la quantità
+dei microrganismi nel terreno è stata condotta l'analisi dei
+\acs{PLFA}
+presenti nelle membrane cellulari, in quanto essi risultano specifici dei
 diversi gruppi microbici \cite{bossio_determinants_nodate,
 kong_microbial_2012, zhang_assessing_2008}.
 
-I dati ottenuti per \acs{GC-MS}, 
-sono stati 
+I dati ottenuti per \acs{GC-MS},
+sono stati
  elaborati tramite  il linguaggio
 di programmazione R con addattamento di
-modelli lineari e con rappresentazioni grafiche 
+modelli lineari e con rappresentazioni grafiche
 quali starplot e boxplot. Inoltre
 ci siamo serviti dell'analisi composizionale per ridurre la dimensionalità
 dei dati (36 composti e 72 campioni).
 
-Entambi i metodi di estrazione e quantificazione cromatografica 
- sono risultati efficienti e affidabili; infatti sono stati trovati 
-tutti i markers indicati in letteratura \cite{white96, FIERER2003, 
-hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995, 
-Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99, 
-ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97, 
-Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004, 
-Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993, 
-zelles_fatty_1999, kong_microbial_2012, frost&baat96}, tranne il 
+Entambi i metodi di estrazione e quantificazione cromatografica
+ sono risultati efficienti e affidabili; infatti sono stati trovati
+tutti i markers indicati in letteratura \cite{white96, FIERER2003,
+hamer_rhizosphere_2008, frostegard_use_2011, De_Deyn75, OLSSON1995,
+Kroppenstedt1985, brennan1988, zelles_determination_1995, Olsson_99,
+ovreas_population_2000, O_Leary88,guo_effects_2014,zelles97,
+Massaccesi15, BACH2010, schoug2008, soderberg_microbial_2004,
+Kaiser, Bardgett1996, bossio_determinants_nodate, frosteg1993,
+zelles_fatty_1999, kong_microbial_2012, frost&baat96}, tranne il
 10Me-C16:0  identificativo
 secondo \citet{zelles_fatty_1999, kong_microbial_2012,
-  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0 
-  identificativo dei Gram-positivi 
+  hamer_rhizosphere_2008} degli attinomiceti, i-C16:0
+  identificativo dei Gram-positivi
   secondo \citet{bossio_determinants_nodate, kong_microbial_2012}
    e il C18:3$\omega$6 e il
 C20:4$\omega$6, markers dei funghi secondo
 \citet{ovreas_population_2000}.
 
-L'assenza staginale di alcuni markers identificativi  è in accordo 
+L'assenza staginale di alcuni markers identificativi  è in accordo
 con quanto trovato in letteratura viste le
-condizioni ambientali non idonee per la vita dei protozoi in autunno e 
+condizioni ambientali non idonee per la vita dei protozoi in autunno e
 dei batteri in estate \cite{Florenzano}.
 
-Inoltre sono stati identificati dei metilesteri non ancora  
-segnalati in letteratura, che attualmente 
-non sono stati attribuiti a nessun gruppo microbico e  quindi non 
+Inoltre sono stati identificati dei metilesteri non ancora
+segnalati in letteratura, che attualmente
+non sono stati attribuiti a nessun gruppo microbico e  quindi non
 sappiamo se siano generici o specifici.
 
-Dopo 
-25 anni di diversa gestione, non è stato possibile 
-trovare una netta ripartizione dei 
- \acs{PLFA} dovuta alle due gestioni e alle tre 
-lavorazioni: tale risultato è in accordo con \citet{bending_changes_nodate, 
-schutter_seasonal_nodate, kong_microbial_2012, SPEDDIN04, guo_effects_2014}. 
+Dopo
+25 anni di diversa gestione, non è stato possibile
+trovare una netta ripartizione dei
+ \acs{PLFA} dovuta alle due gestioni e alle tre
+lavorazioni: tale risultato è in accordo con \citet{bending_changes_nodate,
+schutter_seasonal_nodate, kong_microbial_2012, SPEDDIN04, guo_effects_2014}.
 
-La mancanza di un effetto marcato per la differente gestione e per le 
-diverse lavorazioni, potrebbe essere dovuta alla rapida evoluzione 
-della popolazione microbica 
+La mancanza di un effetto marcato per la differente gestione e per le
+diverse lavorazioni, potrebbe essere dovuta alla rapida evoluzione
+della popolazione microbica
 e quindi dei \acs{PLFA} derivanti, i quali si rigenerano
 nel breve periodo:
-a riprova di ciò le uniche differenze marcatamente visibili 
+a riprova di ciò le uniche differenze marcatamente visibili
 sono riscontrate col cambio di  stagione e con le diverse lavorazioni.
 
 
-Per ulteriori ricerche future, 
-questo metodo, 
+Per ulteriori ricerche future,
+questo metodo,
 veloce, pratico e affidabile, potrebbe permettere il monitoraggio
-della comunità tellurica entro una medesima 
+della comunità tellurica entro una medesima
 stagione e/o entro un unico ciclo colturale.
-Sarebbe quindi interessante osservare 
-come l'habitat microbico possa rispondere alle varie lavorazioni 
+Sarebbe quindi interessante osservare
+come l'habitat microbico possa rispondere alle varie lavorazioni
 effettuate --- dalla preparazione
-del letto di semina alla raccolta --- campionando prima e dopo ogni 
+del letto di semina alla raccolta --- campionando prima e dopo ogni
 operazione
-meccanica e chimica e durante le varie fasi di crescita 
-della pianta o anche la diversa fertilità 
+meccanica e chimica e durante le varie fasi di crescita
+della pianta o anche la diversa fertilità
 in condizioni climatiche differenti.
 
 
-Con il metodo dei PLFA adottato, è stato possibile affermare 
-che nei campi a gestione convenzionale e a conduzione biologica 
-e anche nelle parcelle soggette alle tre lavorazioni ci sono gli 
-stessi gruppi microbici, presenti nelle stesse quantità. 
+Con il metodo dei PLFA adottato, è stato possibile affermare
+che nei campi a gestione convenzionale e a conduzione biologica
+e anche nelle parcelle soggette alle tre lavorazioni ci sono gli
+stessi gruppi microbici, presenti nelle stesse quantità.
 Ma non sappiamo con esattezza quali categorie siano presenti, ovvero
-se siano benefici o nocivi per le colture. 
+se siano benefici o nocivi per le colture.
 
 Per avere un quadro più completo sarebbe opportuno proseguire gli studi
-applicando anche l'analisi PCR per avere  informazioni sul grado di biodiversità. 
+applicando anche l'analisi PCR per avere  informazioni sul grado di biodiversità.
 
 
 
 %Il metodo è valido è stata trovato anche più roba, ma non è stata riscontrata
 %una classificazione come ci si aspettava. probabilmente perchè il metodo
-%pur essendo valido, forse, non è da utilizzare per esperimenti a lungo 
+%pur essendo valido, forse, non è da utilizzare per esperimenti a lungo
 %termine ma solo nel breve termine.
 %
-%questo perchè la comunità microbica si rigenere nel breve periodo ovvero 
-%sono composti in continuo dinamismo e per questo motivo si hanno 
+%questo perchè la comunità microbica si rigenere nel breve periodo ovvero
+%sono composti in continuo dinamismo e per questo motivo si hanno
 %
 %differenze visibili solamente entro stagione e non nel lungo termine.
 %
 %allora forse userei tale tecnica entro stessa coltura e/o stagione
-%monitorando le varie fasi di crescita della pianta e l'andamento della 
-%comunità microbica a ridosso delle lavorazioni così da segnalare le 
-%risposte alle varie sollecitazioni. 
+%monitorando le varie fasi di crescita della pianta e l'andamento della
+%comunità microbica a ridosso delle lavorazioni così da segnalare le
+%risposte alle varie sollecitazioni.
 %
 %o magari proseguirei studi applicando anche metodi differenti quali la PCR
 
@@ -5725,45 +5725,45 @@ composti presenti nel BAMEs Mix della SIGMA-ALDRICH. }
 Ordine di \newline uscita & Nome in R        & PM
    &Nome              \\
    \midrule
-1	& i-C14:0 	                           &242	&Metil-12-metiltridecanoato	\\
-%2	& a-C14:0	                           &242	&Metil-11-metiltridecanoato   \\
-2	& C14:0	                               &242	&\emph{Metil miristato}		\\
-3	& i-C15:0	                           &256	&\emph{Metil-13-metiltetradecanoato} \\
-4	& a-C15:0	                           &256	&\emph{Metil-12-metiltetradecanoato} \\
-5	& 9Me C16:0	                           &270	&Metil-9-metilpentadecanoato	                \\
-6	& C15:0	                               &256	&\emph{Metil pentadecanoato}		\\
-7	& 12Me C16:0                    	   &270	&Metil-12-metilpentadecanoato	\\
-8   & i-C16:0            				   &270 &\emph{Metil-14-metilpentadecanoato}\\
-9	& a-C16:0    	                       &270	&Metil-13-metilpentadecanoato	\\
-10	& 10Me C17:0                           &284	&Metil-10-metilesadecanoato	\\
-11	& C16:0     	                       &270	&\emph{Metil palmitato}		\\
-%12	& bohMe C17:0 sul 284              	   &284    &	\\
-12	& 13Et C17:0                    	   &284	&Metil-13-etilpentadecanoato	\\
-13  & C16:1$\omega$7                       &268	&\emph{Metil cis-9-esadecenoato}	\\
-14	& 12Et C17:0	                       &284	&Metil-12-etilpentadecanoato		\\
-15  & C16:1$\omega$5                       &268 & Metil cis-11-esadecenoato	\\
-16	& i-C17:0                        	   &284	&\emph{Metil-15-metilesadecanoato}			\\
-17	& a-C17:0                       	   &284	& Metil-14-metilesadecanoato	\\
-18	& 10Me C18:0                      	   &298	& Metil-10-metileptadecanoato	\\
-19	& C17:0	                               &284	&\emph{Metil eptadecanoato}			\\
-20	& a-C18:0		    				   &298	&Metil-15-metileptadecanoato		\\
-21	& C17$\Delta$       	               &282	&\emph{Metil cis-9,10-metilene esadecanoato}			\\
-%23	& unkC126        					   &210	&	\\
-22  & C17:1$\omega$9       	               &282	&Metil cis-8-eptadecenoato	\\
-23	& C18:0      						   &298	&\emph{Metil stearato}		\\
-24	& 2-OH C14:0						   &258	&\emph{Metil-2-idrossitetradecanoato}		\\
-25	& i-C19:0	                           &312	&Metil-17-metiloctadecanoato		\\
-26	& C18:1$\omega$9cis  	               &296	&\emph{Metil oleato}		\\
-27  & C18:1$\omega$9trans                  &296	&\emph{Metil trans-9-octadecenoato}\\
-28	& C18:1$\omega$7cis                	   &296	&\emph{Metil cis-11-octadecenoato}		\\
-29	& C18:2                         	   &294	&\emph{Metil linoleato}		\\
-30	& 3-OH C14:0                     	   &258	&\emph{Metil-3-idrossitetradecanoato}		\\
-31	& C19:0                         	   &312	&\emph{Metil nonadecanoato}		\\
-32	& C19:0$\Delta$                        &310	&\emph{Metil cis-9,10-metileneoctadecanoato}	\\
-33	& C20:0								   &326	&\emph{Metil eicosenoato}		\\
-34	& 2-OH C16:0                    	   &286	&\emph{Metil-2-idrossiesadecanoato}	\\
-35	& C20:2	11,13                          &322	&Metil icosa-E,E-11,13-dienoato\\
-36	& C20:2 11,14                          &322 &Metil icosa-E,E-11,14-dienoato\\
+1       & i-C14:0                                  &242 &Metil-12-metiltridecanoato     \\
+%2      & a-C14:0                                  &242 &Metil-11-metiltridecanoato   \\
+2       & C14:0                                &242     &\emph{Metil miristato}         \\
+3       & i-C15:0                                  &256 &\emph{Metil-13-metiltetradecanoato} \\
+4       & a-C15:0                                  &256 &\emph{Metil-12-metiltetradecanoato} \\
+5       & 9Me C16:0                                &270 &Metil-9-metilpentadecanoato                    \\
+6       & C15:0                                &256     &\emph{Metil pentadecanoato}            \\
+7       & 12Me C16:0                               &270 &Metil-12-metilpentadecanoato   \\
+8   & i-C16:0                                              &270 &\emph{Metil-14-metilpentadecanoato}\\
+9       & a-C16:0                              &270     &Metil-13-metilpentadecanoato   \\
+10      & 10Me C17:0                           &284     &Metil-10-metilesadecanoato     \\
+11      & C16:0                                &270     &\emph{Metil palmitato}         \\
+%12     & bohMe C17:0 sul 284                      &284    &    \\
+12      & 13Et C17:0                               &284 &Metil-13-etilpentadecanoato    \\
+13  & C16:1$\omega$7                       &268 &\emph{Metil cis-9-esadecenoato}        \\
+14      & 12Et C17:0                           &284     &Metil-12-etilpentadecanoato            \\
+15  & C16:1$\omega$5                       &268 & Metil cis-11-esadecenoato     \\
+16      & i-C17:0                                  &284 &\emph{Metil-15-metilesadecanoato}                      \\
+17      & a-C17:0                                  &284 & Metil-14-metilesadecanoato    \\
+18      & 10Me C18:0                               &298 & Metil-10-metileptadecanoato   \\
+19      & C17:0                                &284     &\emph{Metil eptadecanoato}                     \\
+20      & a-C18:0                                                  &298 &Metil-15-metileptadecanoato            \\
+21      & C17$\Delta$                          &282     &\emph{Metil cis-9,10-metilene esadecanoato}                    \\
+%23     & unkC126                                                  &210 &       \\
+22  & C17:1$\omega$9                           &282     &Metil cis-8-eptadecenoato      \\
+23      & C18:0                                                    &298 &\emph{Metil stearato}          \\
+24      & 2-OH C14:0                                               &258 &\emph{Metil-2-idrossitetradecanoato}           \\
+25      & i-C19:0                                  &312 &Metil-17-metiloctadecanoato            \\
+26      & C18:1$\omega$9cis                    &296     &\emph{Metil oleato}            \\
+27  & C18:1$\omega$9trans                  &296 &\emph{Metil trans-9-octadecenoato}\\
+28      & C18:1$\omega$7cis                        &296 &\emph{Metil cis-11-octadecenoato}              \\
+29      & C18:2                                    &294 &\emph{Metil linoleato}         \\
+30      & 3-OH C14:0                               &258 &\emph{Metil-3-idrossitetradecanoato}           \\
+31      & C19:0                                    &312 &\emph{Metil nonadecanoato}             \\
+32      & C19:0$\Delta$                        &310     &\emph{Metil cis-9,10-metileneoctadecanoato}    \\
+33      & C20:0                                                            &326 &\emph{Metil eicosenoato}               \\
+34      & 2-OH C16:0                               &286 &\emph{Metil-2-idrossiesadecanoato}     \\
+35      & C20:2 11,13                          &322     &Metil icosa-E,E-11,13-dienoato\\
+36      & C20:2 11,14                          &322 &Metil icosa-E,E-11,14-dienoato\\
 
         \bottomrule
   \end{tabular}
@@ -5808,7 +5808,7 @@ Ordine di \newline uscita & Nome in R        & PM
 Territorio Agroforestale}
 {\small - Università degli studi di Firenze.\par}
 
-\acro{DISPAA}[DISPAA]{Dipartimento di 
+\acro{DISPAA}[DISPAA]{Dipartimento di
 Scienze delle Produzioni Agroalimentari e dell'Ambiente}
 {\small - Università degli studi di Firenze.\par}
 
@@ -5842,7 +5842,7 @@ Scienze delle Produzioni Agroalimentari e dell'Ambiente}
 \acro{HPLC}[HPLC]{\emph{High Performance Liquid Chromatography} }
 {\small - Cromatografia in fase liquida ad elevate prestazioni.\par}
 
-\acro{ISOFAR}[ISOFAR]{\emph{International Society of Organic Agriculture 
+\acro{ISOFAR}[ISOFAR]{\emph{International Society of Organic Agriculture
 Research} }
 {\small - Società Internazionale di Ricerca sull’Agricoltura Biologica.\par}
 
@@ -5959,32 +5959,32 @@ del bisogno. Perdonami per tutti i miei attacchi d'ansia e grazie di
 sopportarmi ogni giorno; spero di poter costruire con te il futuro
 che tanto sogniamo di avere.
 
-Un caloroso ringraziamento va anche ai miei genitori 
+Un caloroso ringraziamento va anche ai miei genitori
 che mi hanno permesso di intraprendere questo meraviglioso percorso,
-sostenendomi in ogni momento e credendo sempre nelle mie capacità, 
+sostenendomi in ogni momento e credendo sempre nelle mie capacità,
 solitamente più di quanto ci credessi io.
 
 Grazie a tutti i miei amici, vecchi e nuovi e a tutti i miei compagni di
 facoltà.
 
-A chi mi è stato vicino da anni pur intraprendendo percorsi differenti: 
-Erica, Irene, Davide e Marco. Compagni di mangiate ma soprattutto 
+A chi mi è stato vicino da anni pur intraprendendo percorsi differenti:
+Erica, Irene, Davide e Marco. Compagni di mangiate ma soprattutto
 di bevute; pronti ad ascoltarmi a tutte le ore del giorno,
 anche alle meno opportune. Sempre capaci di regalarmi un sorriso
 e di portarmi via da casa per fare un fine settimana fuori nel momento
 del bisogno.
 
-Ai miei compagni di facoltà più vecchi, che mi hanno accompagnato 
+Ai miei compagni di facoltà più vecchi, che mi hanno accompagnato
 in tutti e 5 gli anni di università: la Franci, la Cri, Pino, i Sera,
-i Sani, Caro e Gab, l'Isa e Dimitri; ma anche a quelli nuovi, 
+i Sani, Caro e Gab, l'Isa e Dimitri; ma anche a quelli nuovi,
 non per questo meno importanti: Alex, Gianma, Agne e Franceschino.
-Infine ai miei “bimbi” a cui ho fatto da tutor: Dario, Nicola, Albe 
+Infine ai miei “bimbi” a cui ho fatto da tutor: Dario, Nicola, Albe
 e Francesco.
 
 Tutti voi, chi consapevolemnte e chi meno, mi avete regalato più di un
-sorriso, abbiamo faticato per superare le stesse difficoltà, ci siamo 
-aiutati sostenendoci e consigliandoci. 
-Abbiamo giocato a carte nei momenti di pausa, pranzato insieme non 
+sorriso, abbiamo faticato per superare le stesse difficoltà, ci siamo
+aiutati sostenendoci e consigliandoci.
+Abbiamo giocato a carte nei momenti di pausa, pranzato insieme non
 so quante volte e condiviso il sublime caffè della macchinetta...
 
 Grazie davvero a tutti!
@@ -6000,14 +6000,14 @@ mia passione. Lavorare con loro, a prescindere dalla tesi, ma per il
 semplice piacere di sapere, mi ha dato la possibilità di entrare in
 una linea di pensiero che nessun libro mai potrà trasmettere.
 
-Il Dr. Pantani che, negli ultimi mesi, intensivi, ma pieni di 
+Il Dr. Pantani che, negli ultimi mesi, intensivi, ma pieni di
 risate, mi ha aiutato a districarmi tra i fili nebulosi
 della statistica.
 
 Grazie del prezioso aiuto, senza di Lei non ce l'avrei mai fatta!
 
-Naturalmente il più grande e caloroso ringraziamento va al mio Professore, 
-che non solo mi ha trasmesso la passione per la sua materia e mi ha 
+Naturalmente il più grande e caloroso ringraziamento va al mio Professore,
+che non solo mi ha trasmesso la passione per la sua materia e mi ha
 insegnato tutto ciò che so della chimica e dello stare in
 laboratorio; ma è anche stato per me un maestro di
 vita, un amico, una spalla su cui sfogarmi, insomma un vero e proprio “babbo”.
