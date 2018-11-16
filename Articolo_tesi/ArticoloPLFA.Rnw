@@ -17,8 +17,9 @@
 %
 %\documentclass{svjour3}                     % onecolumn (standard format)
 %\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-\documentclass[smallextended]{svjour3}       % onecolumn (second format)
-%\documentclass[twocolumn]{svjour3}          % twocolumn
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%le due colonne sono valide sia per plant and soil che biology and fertility of soil
+\documentclass[twocolumn]{svjour3}          % twocolumn
 %
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
@@ -51,8 +52,9 @@
 %\usepackage{latexsym}
 % etc.
 
-\usepackage[nogin]{Sweave}
-\SweaveOpts{concordance=TRUE, prefix.string=Grafici/FIG}
+\usepackage[]{Sweave}
+\SweaveOpts{concordance=TRUE, prefix.string=Grafici/FIG, width=8, height=8}
+
 %% siunitx serve per le unita di misura
 \usepackage{siunitx}
 \sisetup{detect-all = true, detect-family = true, output-decimal-marker = {.}, range-phrase= --}
@@ -102,7 +104,7 @@ info.sistema <-
 # ifelse(info.sistema[3] == "Lorenzo Ferretti",  "Lorenzo Ferretti.LAPTOP-LDRBKLR9",  info.sistema[3])
 
  if(info.sistema[2]=="DESKTOP-C5SLFL3"){## Questo è il portatile3 nuovo win di Dalila
-   DirMain <- "D:/dalila/GIT"
+   DirMain <- "D:/dalila/GIT/Articolo_tesi"
    Sys.setenv(TEXINPUTS=getwd(), BIBINPUTS=getwd(), BSTINPUTS=getwd())
  }else{
    if(info.sistema[2]=="DESKTOP-VAAU252"){## Computer indemoniato
@@ -148,6 +150,8 @@ source(file.path(DirFunz, "biplotAcompArt.R"))
 % \journalname{myjournal}
 %
 \begin{document}
+%serve per rimpicciolire e mettere le immagini in colonna. non va bene textwidth
+\setkeys{Gin}{width=0.75\columnwidth}
 
 
 \title{PLFA on Conventional and Organic fields after 25  years of cultivation
@@ -178,12 +182,34 @@ source(file.path(DirFunz, "biplotAcompArt.R"))
     Piazzale delle Cascine, 18 -- 50144 Firenze, Italia \\
     Tel.: +123-45-678910\\
     Fax: +123-45-678910\\
-    \email{fauthor@example.com}           %  \\
+    \email{luca.calamai@unifi.it}           %  \\
     % \emph{Present address:} of F. Author  %  if needed
     \and
     Gaio Cesare Pacini \at
-              second address
+              Dipartimento di Scienze delle Produzioni
+    Agroalimentari e dell'Ambiente\\
+    Piazzale delle Cascine, 28 -- 50144 Firenze, Italia\\
+    Tel.: +39 055 2755790\\
+    Fax.: \\
+    \email{gaiocesare.pacini@unifi.it}
+    \and
+    Ottorino-Luca Pantani \at
+              Dipartimento di Scienze delle Produzioni
+    Agroalimentari e dell'Ambiente\\
+    Piazzale delle Cascine, 18 -- 50144 Firenze, Italia\\
+              Tel.: +39 	055 2755840\\
+              Fax.: \\
+              \email{ottorinoluca.pantani@unifi.it}
+    \and
+    Dalila Pasquini \at
+              Dipartimento di Scienze Produzioni 
+    Agroalimentari e dell'Ambiente\\
+              Viale delle Idee, 30 -- 50019 Sesto Fiorentino, Italia\\
+              Tel.:\\
+              Fax.:\\
+              \email{dalila.pasquini@unifi.it}
 }
+
 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
@@ -215,7 +241,41 @@ subject classification numbers as needed.
 \label{intro}
 Your text comes here. Separate text sections with
 
-<<FigRapportiTILL, fig=TRUE,  width=4.8, height=4.8, echo=FALSE, results = tex >>=
+\section{Materials and methods}
+\subsection{Study area and experimental design}
+
+The study was carried out at Montepaldi Long Term Experiment (MOLTE),
+the University of Florence  experimental farm active since 1991 located
+in San Casciano Val di Pesa, Florence, Italy (\SI{90}{\meter} a.s.l., latitude 
+$ 11^\circ 09' 08^\prime$ E, longitude $ 43^\circ 40' 16^\prime$ N).
+The climate is sub-Apennine, with hot, dry summers and wet, cold winters. 
+Annual mean temperature is $14.1^\circ C$, whit an annual rainfall of about 
+\SI{770}{\milli\meter}. Soil can be classified a mixture of silty clay loam 
+and clay loam with widespread gravel, covering a 15ha surface characterised by 
+a slight slope. 
+
+The experiment had two main factors: management (MAN), with two levels
+(Conventional, \emph{Co} and Organic \emph{Or}), and Tillage (TIL),
+with three levels (plowing, \emph{plw}, chisel plowing, \emph{chp} and
+disk harrowing \emph{dsh}). Two fields (47 x \SI{132}{\meter} each) per
+management option (Or02, Or04, Co09 and Co10) were divided into 9
+plots (12 x \SI{36}{\meter} each) where three replicates for each tillage option
+were allocated.
+
+\subsection{Soil sampling and chemical analysis}
+
+The field sampling campaigns were carried out in October-November 2016 and 
+in June 2017. At the centre of each plot, we collected on sample of soil 
+(\SI{500}{\g} circa, at \numrange[range-phrase=-]{5}{10} \si{\cm} depth).
+
+These samples were stored at $3^\circ$ C and have then  been sieved at 
+\SI{2}{\mm}. Out of each soil sample we took \SI{5}{\g} which were then been 
+grounded to \SI{200}{\micro\meter}.
+
+
+
+
+<<FigRapportiTILL, fig=TRUE, echo=FALSE, results = tex >>=
 
 NumeratoreMoli <- lis.tutto$PLFA$nMOLI$C.00CycC19.0
 DenominatoreMoli <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1.omega9t&omega7c`
@@ -238,11 +298,8 @@ text(cex=0.7, x=(1:12), y=-0.15, labs, xpd=TRUE, srt=90)
 
 @
 
-
 \begin{figure}
-\centering
-
-<<label=printBoxplotCore, fig=TRUE, echo=FALSE, width=4.8, height=4.8 >>=
+<<label=printBoxplotCore, fig=TRUE, echo=FALSE >>=
 plot(1:10)
 @
 
@@ -253,6 +310,838 @@ plot(1:10)
   the two mangement systems}
   \label{fig:boxplotCore}
 \end{figure}
+
+<<FigRapportiTILL2, fig=TRUE, echo=FALSE, include = FALSE, results = hide >>=
+
+Numeratore2 <- lis.tutto$PLFA$nMOLI$C.00CycC17.0
+Denominatore2 <- lis.tutto$PLFA$nMOLI$C.00LinC16.1.omega7
+Rapporto2 <- Numeratore2/Denominatore2
+
+fattore <- interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
+boxplot(Rapporto2 ~ fattore,
+        ylab = "",
+        main = ""
+)
+@
+
+<<FigRapportiTILL3, fig=TRUE, echo=FALSE, include = FALSE, results = hide >>=
+
+
+Numeratore3 <- lis.tutto$PLFA$nMOLI$C.00LinC18.1.omega9cis
+Denominatore3 <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1.omega9t&omega7cis`
+Rapporto3 <- Numeratore3/Denominatore3
+fattore <-interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
+
+boxplot(Rapporto3 ~ fattore,
+        ylab = "",
+        main = ""
+)
+@
+
+<<FigRapportiMAN, fig=TRUE, echo=FALSE, include = FALSE, results=hide>>=
+
+oldpar <- par()
+## par(mfrow=c(2,3))
+
+
+NumeratoreMoli2 <- lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramN]
+DenominatoreMoli2 <- lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramP]
+RapportoOrgInteMoli <- NumeratoreMoli2/DenominatoreMoli2
+
+## par(mfrow=c(2,3))
+
+lis.rapporti <-
+    list(
+        expression(frac(paste("C16:1", omega, "7"), "i-C14:0")),
+        expression(frac(paste("C16:1", omega, "5"), "i-C15:0")),
+        expression(frac(paste("C17", Delta), "a-C15:0")),
+        expression(frac(paste("C18:1", omega, "9cis"),"i-C16:0")),
+        expression(frac(paste("C18:1", omega, "7"), "i-C17:0")),
+        expression(frac(paste("C19:0", Delta), "a-C17:0"))
+    )
+
+## for(i in 1:6){
+##   boxplot(RapportoOrgInteMoli[,i] ~ lis.tutto$CATEGORIA$MAN,
+##           ylab = "",
+##           main =  lis.rapporti[[i]]
+##   )
+## }
+
+SumNumMoli <-
+    apply(lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramN], 1, sum)
+SumDenomMoli <-
+    apply(lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramP], 1, sum)
+RapportoSumOrgInteMoli <- SumNumMoli/SumDenomMoli
+
+boxplot(RapportoSumOrgInteMoli ~ lis.tutto$CATEGORIA$MAN,
+          ylab = "",
+          main =  expression(frac("Gram-positivi", "Gram-negativi"))
+        )
+@
+
+\begin{figure}[hb]
+  \centering
+
+<<label=RapportiMAN, fig=TRUE, echo=FALSE>>=
+<<FigRapportiMAN>>
+@
+  \caption[Boxplot che mostra l'effetto della gestione sulla comunità microbica]
+  {Boxplot ottenuto dal rapporto tra la sommatoria delle moli dei markers
+  tipici dei Gram-positivi e la somma delle moli dei composti identificativi
+  dei Gram-negativi. Tale rapporto mostra un cambiamento nella comunità
+  microbica nel
+    terreno in seguito alle diverse gestioni applicate.}
+  \label{fig:RapportiMAN}
+\end{figure}
+
+
+<<FigStarplotMedie, fig=FALSE, echo=FALSE, include = FALSE >>=
+lis.disastro <-
+    with(lis.tutto$CATEGORIA,
+        list(TIL, STAGIONE, MAN)
+        )
+df.disastro <-
+    aggregate(lis.tutto$PLFA$nMOLI,
+              by= lis.disastro,
+              function(x) mean(x, na.rm=TRUE))
+names(df.disastro)[1:3] <-
+    c("TIL", "STAGIONE", "MAN")
+row.names(df.disastro) <-
+    as.character(interaction(df.disastro[,1],df.disastro[,2],df.disastro[,3]))
+ordina <- with(df.disastro, order(STAGIONE, MAN,TIL))
+df.disastro <- df.disastro[ordina,]
+    stars(df.disastro,
+      #key.loc = c(0.8,1),
+      #key.xpd=TRUE,
+      draw.segments = TRUE,
+      scale = TRUE,
+      full = FALSE)
+@
+
+\begin{figure}[h]
+  \centering
+
+<<label=StarplotMedie, fig=TRUE, echo=FALSE>>=
+<<FigStarplotMedie>>
+@
+% \caption[Starplot delle medie]
+% {Mostra 12 elementi ove ogni spicchio
+%   rappresenta uno dei 36 \acs{BAMEs}. Ogni elemento (starplot) è
+%   normalizzato secondo il \acs{BAMEs} maggiore, che ha raggio unitario,
+%   mentre gli altri hanno lunghezze proporzionalmente inferiori.
+%   Ogni starplot, identificato con la sigla Lavorazione-Stagione-Gestione,
+%   è ottenuto dalla media dei 6 campioni per riga mostrati in
+%   \autoref{fig:starplot_campioni}.
+% %  Per righe vediamo le differenze dovute alle lavorazioni,
+% %  mentre in colonna, a coppie, vediamo quelle legate alle due
+% %  gestioni. Inoltre i primi sei dall'alto appartengono tutti alla
+% %  stagione autunnale, mentre nei successivi sei abbiamo i
+% %  campioni presi in estate.
+% }
+%   \label{fig:starplot_medie}
+\end{figure}
+
+<<FigStarplotCampioni, fig=FALSE, echo=FALSE, include = FALSE >>=
+df.butta <-
+    lis.tutto$PLFA$nMOLI
+row.names(df.butta) <-
+    with(lis.tutto$CATEGORIA,
+         paste(substr(as.character(STAGIONE), 1,2),
+               substr(as.character(MAN),1,1),
+              substr( as.character(TIL),1,1),
+               1:dim(df.butta)[1],
+               sep  = ".")
+         )
+ordina <-
+    with(lis.tutto$CATEGORIA, order(STAGIONE, MAN,TIL, FIELD))
+df.butta <- df.butta[ ordina,]
+#oldpar <- par()
+#par(fin = c(2.5, 5))
+   stars(df.butta,
+      #key.loc = c(0.8,1),
+      #key.xpd=TRUE,
+          locations = matrix(c(
+              rep(seq(1,18,length = 6), 12),
+              rep(seq(18,1, length = 12), each = 6)),
+              ncol = 2, byrow = FALSE),
+      draw.segments = TRUE, cex = 0.6,
+      scale = TRUE,
+      full = FALSE)
+#par(oldpar)
+rm(df.butta)
+
+@
+
+\begin{figure}[h]
+  \centering
+
+<<label=StarplotCampioni, fig=TRUE, echo=FALSE>>=
+<<FigStarplotCampioni>>
+@
+  % \caption[Starplot dei 72 campioni]
+  % {Ogni elemento (starplot) mostra
+  % la composizione in \acs{BAMEs} di uno dei 72
+  % campioni, ogni raggio rappresenta uno dei 36 \acs{BAMEs} identificati.
+  % Il \acs{BAMEs} con concentrazione maggiore è posto uguale ad uno e gli
+  % altri hanno lunghezze proporzionalmente inferiori.
+  % Le sigle indicano: la stagione (Au= autunno e Es= estate), la conduzione
+  % (C= convenzionale e O= biologico) e le lavorazioni (A= aratura, F= frangizollatura
+  % e R= rippatura), i numeri identificano la riga della matrice dei dati,
+  % ovvero il singolo campione.}
+  % \label{fig:starplot_campioni}
+\end{figure}
+
+
+<< anovaSommeMoli,  echo=FALSE, eval=TRUE, results=tex>>=
+
+#summary(lm(log(lis.tutto$SOMME$nMOLI) ~
+ #          til))
+
+
+logMoli <- log(lis.tutto$SOMME$nMOLI)
+
+lm.SommeMoli.1 <-
+    lm(logMoli ~
+           MAN*TIL*STAGIONE,
+       data  =  lis.tutto$CATEGORIA)
+
+lm.SommeMoli.2 <-
+    lm(logMoli ~
+           TIL+STAGIONE,
+       data  =  lis.tutto$CATEGORIA)
+
+df.xtabANOVAmarginali <-
+cbind.data.frame(
+    ## Modello =  c("log(Mol\info{dali) ~ MAN * TIL * Stagione",
+    ##              "log(Moli) ~ Lavorazione + Stagione"),
+        anova(lm.SommeMoli.1, lm.SommeMoli.2)
+    )
+
+ xtabANOVAmarginali <-
+    xtable(df.xtabANOVAmarginali,
+           label  = "tab:ANOVAmarginali",
+           align  = "lllllll",
+            caption =
+               c("Confronto tra modelli marginali per la quantità di PLFA nel suolo. \\newline
+               Modello 1) con tutte le interazioni, \\emph{log(Moli) $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
+                Modello 2) \\emph{log(Moli) $\\sim$ Lavorazione + Stagione}, questo risulta il più parsimonioso.\\newline",
+                "Confronto tra due modelli  marginali per la quantità di PLFA nel suolo")
+
+ )
+print(xtabANOVAmarginali,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+
+#summary(lm.SommeMoli.2)
+
+fattore <-
+    interaction(lis.tutto$CATEGORIA$TIL, lis.tutto$CATEGORIA$STAGIONE)
+
+amod <-
+    aov(log(lis.tutto$SOMME$nMOLI) ~ fattore)
+HSD.test(amod, "fattore", group=TRUE, alpha = 0.05)
+tuk <- glht(amod, linfct = mcp(fattore = "Tukey"))
+tuk.cld <- cld(tuk)
+
+@
+
+\begin{equation}
+  \label{eq:ANOVAmoli}
+  log(y) \sim \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon
+\end{equation}
+%\nopagebreak
+
+
+Dove:
+
+\nopagebreak
+\begin{tabular}{lp{12cm}}
+  $y$        & = $\displaystyle \sum_{i=1}^{36} PLFA_i(moli)$\\
+  $\beta_0$  & = media generale (intercetta del modello)\\
+  $x_1$      & = variabile categorica \emph{lavorazione}, tre livelli: \emph{Arato, Rippato, Frangizollato}\\
+  $x_2$      & = variabile categorica \emph{stagione}, due livelli:
+           \emph{Autunno, Estate}\\
+
+  $\epsilon$ & = residui o errore
+\end{tabular}
+
+
+
+<<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
+
+boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
+        ylab = "log(somma moli PLFA)", xaxt="n",
+        main = "", ylim= c(2.5,5.5)
+        )
+labs <- levels(fattore)
+text(cex=0.8, x=(1:6), y=2.15, labs, xpd=TRUE, srt=45)
+testoMedie <-
+aggregate(log(lis.tutto$SOMME$nMOLI),
+          by=list(fattore),
+          function(x) as.character(round(mean(x),2))
+          )$x
+text(x=1:6,
+     y=rep(c(2.7,3), each=3),
+     testoMedie, cex=0.8)
+#for(i in 1:6){
+#text(i,5.3, tuk.cld$mcletters$Letters[i], cex = 1.5)
+#}
+
+
+@
+
+\begin{figure}[h]
+  \centering
+
+<<label=boxplotsommamoli,fig=TRUE, echo=FALSE>>=
+<<FigBoxplotSomme>>
+@
+
+  \caption[Boxplot della somma delle moli, con applicata la funzione log()]
+  {In figura vediamo i sei boxplot ottenuti facendo il log() delle
+    somme delle moli, uno per ogni lavorazione (aratura, rippatura,
+    frangizollatura) entro stagione (autunno, estate). %Le lettere in
+%    alto sono invece il risultato del Tukey test ($p<=0.05$).
+    }
+  \label{fig:boxplot_somma_moli}
+\end{figure}
+
+<<TabANOVAsomme, echo=FALSE,  eval=TRUE, results =  tex >>=
+tabANOVAsom <-anova(lm.SommeMoli.2)
+row.names(tabANOVAsom) <-
+    c("LAVORAZIONE", "STAGIONE", "Residui")
+
+
+ xtabANOVAsum <-
+    xtable(tabANOVAsom,
+           label  = "tab:ANOVAsum",
+           #align  = "lllllll",
+            caption =
+               c("Analisi della varianza per il modello \\ref{mod:ANOVAmoli}, che
+            indica la significatività della lavorazione (TIL) e della stagione.")
+
+ )
+print(xtabANOVAsum,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+@
+
+<<TabANOVAsummary, echo=FALSE,  eval=TRUE, results =  tex >>=
+
+
+ xtabANOVAsummary <-
+    xtable(summary(lm.SommeMoli.2),
+           label  = "tab:ANOVAsummary",
+           align  = "lllll",
+            caption =
+               c("Stima dei valori medi in funzione di lavorazione e stagione,
+               come calcolati dal modello \\ref{mod:ANOVAmoli}.")
+           )
+
+row.names(xtabANOVAsummary) <-
+     c("(Intercetta)", "LAV Rip", "LAV Fzo","STAGIONE Est")
+
+
+print(xtabANOVAsummary,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+
+
+@
+
+<<FigScreeplotcomposizionale, eval = TRUE, results = tex, echo = FALSE>>=
+Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
+Y.CONC <- acomp(lis.tutto$PLFA$CONC.ng.ul)
+Y.AREA <- acomp(lis.tutto$PLFA$AREA)
+pcx.Y.MOLI <- princomp(Y.MOLI)
+plot(pcx.Y.MOLI, type = "screeplot", main="")
+text(x = c(1:10),
+     y = c((pcx.Y.MOLI$sdev^2)[1:10]),
+     pos = c(rep(4,3), rep(1,2), rep(3,5)),
+     c(
+     as.character(round((pcx.Y.MOLI$sdev)^2/
+                        sum((pcx.Y.MOLI$sdev^2)),2)[1:10])),
+     cex = 0.7
+)
+@
+
+\begin{figure}[h]
+  \centering
+
+<<label=printScreeplotComposiz, fig=TRUE, echo=FALSE>>=
+<<FigScreeplotcomposizionale>>
+@
+  \caption[Screeplot composizionale delle moli]
+  {Screeplot composizionale delle
+  somme
+  delle moli. Sopra ogni punto della spezzata troviamo il valore della
+  varianza della
+  componente corrispondente.}
+  \label{fig:screeplot_composiz}
+\end{figure}
+
+<<FigPCAcomposizionale_1, eval = FALSE, echo = FALSE, results = hide>>=
+
+df.colori <-
+    cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
+
+df.colori <- df.colori[order(df.colori$MASSE),]
+df.colori$COLORI <- 1:36
+df.colori <-  df.colori[order(df.colori$origine),]
+##
+
+coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE,
+              col = c(1,"transparent"),
+              xlabs.pc=as.character(lis.tutto$CATEGORIA$MAN),
+              xlabs.col=as.numeric(lis.tutto$CATEGORIA$TIL),
+              ylabs = names(lis.tutto$PLFA$nMOLI), main = "Campioni"
+              )
+legend(0.25,1, box.col = "transparent", cex = 1.5,
+       legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+text(c(-1,0), -1.1, c("Estate", "Autunno"), col = 1, cex = 1.5)
+points(x=-0.75, y=1.10, pch=1, col=1, cex=4)
+@
+
+
+
+<<FigPCAcomposizionale_2, eval = FALSE, echo = FALSE, results = hide>>=
+coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE, cex = 1,
+              col = c("transparent",1),arrow.len = 0.05,
+              ylabs = 1:36,#substr(names(lis.tutto$PLFA$nMOLI),3,7)
+               main = "PLFA")
+
+
+## fun.biplot(x=pcx.Y.MOLI,
+##            col=c(1,5),
+##            choices=c(1,2), ## assi/componenti da considerare
+##            scale=0,
+##            pc.biplot=FALSE,
+##            col.obs =  as.numeric(lis.tutto$CATEGORIA$TIL),
+##            ## as.numeric(interaction(lis.tutto$CATEGORIA$TIL,
+##            ##                             lis.tutto$CATEGORIA$MAN)),
+##            etich = as.character(lis.tutto$CATEGORIA$MAN)
+##                ## interaction(lis.tutto$CATEGORIA$TIL,
+##                ##             lis.tutto$CATEGORIA$MAN)
+##            )
+## legend(-0.8,-0.2, box.col = "transparent", cex = 1.5,
+##        legend = levels(lis.tutto$CATEGORIA$TIL), text.col = 1:3, pch = NULL)
+@
+
+<<FigPCAcomposizionale_3_4, eval = FALSE, results = tex, echo =  FALSE>>=
+fun.biplot(x=pcx.Y.MOLI,
+           col=c(1,5),
+           choices=c(2,3), ## assi/componenti da considerare
+           scale=0,
+           pc.biplot=FALSE,
+           col.obs =  as.numeric(lis.tutto$CATEGORIA$TIL),
+           ## as.numeric(interaction(lis.tutto$CATEGORIA$TIL,
+           ##                             lis.tutto$CATEGORIA$MAN)),
+           etich = as.character(lis.tutto$CATEGORIA$MAN)
+               ## interaction(lis.tutto$CATEGORIA$TIL,
+               ##             lis.tutto$CATEGORIA$MAN)
+           )
+@
+
+
+\begin{figure}[t]
+  \centering
+
+<<label=printPCAcomposizionale_1, fig=TRUE, echo=FALSE>>=
+<<FigPCAcomposizionale_1>>
+@
+  \caption[PCA composizionale delle 72 osservazioni]
+  {PCA composizionale delle moli delle 72 osservazioni. In ascissa
+    abbiamo la prima componente e in ordinata la seconda. Le lettere
+    “C” e “O” stanno ad indicare la gestione e i colori le
+    lavorazioni, come riportato in legenda.}
+  \label{fig:PCA_composiz}
+\end{figure}
+
+
+\begin{figure}[]
+\centering
+
+<<label=printPCAcomposizionale_2, fig=TRUE, echo=FALSE>>=
+<<FigPCAcomposizionale_2>>
+@
+
+% \caption[PCA composizionale delle 36 variabili]
+%{\acs{PCA}
+  % composizionale delle moli delle 36 variabili (%\acs{BAMEs}
+  % identificati). Nell'asse delle ascisse abbiamo la prima componente e
+  % nelle ordinate la seconda e i numeri che identificano le varie
+  % frecce rappresentano l'ordine di eluizione dei vari composti al
+  % detector (\autoref{tab:PM_PLFA}).}
+  %\label{fig:PCA_composizPLFA}
+\end{figure}
+
+<<FigPCAcomposizionale_PM, eval = FALSE, results = tex, echo=FALSE>>=
+
+df.colori <-
+    cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
+
+df.colori <- df.colori[order(df.colori$MASSE),]
+df.colori$COLORI <- 1:36
+df.colori <-  df.colori[order(df.colori$origine),]
+
+
+plot(0, 0,
+     xlim=c(-0.6, 0.6),
+     ylim=c(-0.6, 0.6),
+     xlab = "Comp.1",
+     ylab = "Comp.2",
+     main = "PLFA secondo i pesi molecolari"
+)
+for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
+  posizioneX <-
+    pcx.Y.MOLI$loadings[,1]
+  posizioneY <- pcx.Y.MOLI$loadings[,2]
+  #titolo <-
+   # names(df.gruppiMicrobici)[dalila]
+    #col= (prova)
+  # colore <-
+  #     ifelse(df.gruppiMicrobici[i, dalila]==1,
+  #            "black", ## nero se vero
+  #            "transparent")# grifgiochiaro se falso
+  arrows(0, 0,
+         posizioneX,
+         posizioneY,
+         col=#as.numeric(cut(df.colori$MASSE, breaks = 2)),
+              ifelse(df.colori$origine <= 15, "gray", "black"),
+             #ifelse(df.colori$MASSE < 275, "gray", "black"),
+          length=0.1)
+     text(posizioneX,
+          posizioneY,
+          label = df.colori$MASSE,
+          pos= 1, cex = 0.8,
+          offset=-0.5,
+          col="black")
+}
+
+@
+
+
+<<FigPCAcomposizionale_gruppiMicrobo, eval = FALSE, results = tex, echo=FALSE>>=
+par(mfrow = c(2,3))
+ for (classeMicrobo in 2:7){
+    titolo <-
+        names(df.gruppiMicrobici)[classeMicrobo]
+    plot(0, 0,
+         xlim=c(-0.6,0.6),
+         ylim=c(-0.6, 0.6),
+         main = titolo
+         )
+    for (i in 1:dim(pcx.Y.MOLI$loadings)[1]){
+        posizioneX <-
+            pcx.Y.MOLI$loadings[i,1]
+        posizioneY <- pcx.Y.MOLI$loadings[i,2]
+        titolo <-
+            names(df.gruppiMicrobici)[classeMicrobo]
+        colore <-
+            ifelse(df.gruppiMicrobici[i, classeMicrobo]==1,
+                   "black", ## nero se vero
+                   "transparent")# grifgiochiaro se falso
+        arrows(0, 0,
+               posizioneX, posizioneY,
+               col=colore,
+               length=0.1)
+        text(posizioneX, posizioneY,
+             label = i,
+             pos= 1,
+             offset=0.5, col=colore)
+    }
+ }
+@
+
+\begin{figure}[]
+\centering
+
+<<label=FigPCAcomposizionale_gruppiMicrobo, fig=TRUE, width = 8.5, height = 4.5, echo=FALSE>>=
+<<FigPCAcomposizionale_gruppiMicrobo>>
+@
+
+% \caption[Sei plot, uno per ogni gruppo microbico]
+% {\acs{PCA} composizionali delle
+% moli dei gruppi microbici presi in esame. }
+%   \label{Fig: PCAcomposizionale_gruppiMicrobo}
+\end{figure}
+
+<<clusterIndividui_1, fig=FALSE, fig.width = 0.1, fig.height = 0.1, echo=FALSE  >>=
+xc <- Y.MOLI
+row.names(xc) <-
+    as.character(with(
+        lis.tutto$CATEGORIA,
+        interaction(STAGIONE, MAN,TIL))
+        )
+dd <- dist(xc)
+hc <-  hclust(dd, method="ward.D2")
+dend1 <- as.dendrogram(hc, horizontal = TRUE)
+##dend1 <- rotate(dend1, 1:150)
+
+fattore <-
+    interaction(
+                lis.tutto$CATEGORIA$STAGIONE,
+        lis.tutto$CATEGORIA$MAN,
+        lis.tutto$CATEGORIA$TIL)
+fattore <-
+    factor(fattore,
+           levels =
+               levels(fattore)[c(1,5,9, 3,7,11, 2,6,10, 4,8,12)]
+           )
+fattoreNOstagione <-
+    interaction(
+        lis.tutto$CATEGORIA$MAN,
+        lis.tutto$CATEGORIA$TIL)
+fattoreNOstagione <-
+    factor(fattoreNOstagione,
+           levels =
+               levels(fattoreNOstagione)[c(1,3,5, 2,4,6)]
+           )
+
+# Manually match the labels, as much as possible, to the real classification
+labels_colors(dend1) <-
+   rainbow(6)[sort_levels_values(
+      as.numeric(fattoreNOstagione)[order.dendrogram(dend1)]
+   )]
+
+# We shall add the flower type to the labels:
+labels(dend1) <-
+     as.character(fattoreNOstagione[order.dendrogram(dend1)])
+# We hang the dend1rogram a bit:
+dend1 <- hang.dendrogram(dend1,hang_height=0.1)
+# reduce the size of the labels:
+# dend <- assign_values_to_leaves_nodePar(dend, 0.5, "lab.cex")
+dend1 <- set(dend1, "labels_cex", 0.8)
+# And plot:
+
+plot(dend1,
+     main = "Cluster di tutti i campioni",
+     horiz =  FALSE,
+     nodePar = list(cex = .07))
+legend("topleft",
+       legend = levels(fattoreNOstagione), fill = rainbow(6))
+text(10,15, "Autunno", cex = 2);text(49,15, "Estate", cex = 2)
+## prova <- as.vector(cutree(hc, k = 3))
+@
+
+<<clusterIndividui_2, fig=FALSE, fig.width = 0.1, fig.height = 0.1, echo=FALSE  >>=
+xc <-
+    aggregate(Y.MOLI,
+              by = list(STAGIONE = lis.tutto$CATEGORIA$STAGIONE,
+                        MAN = lis.tutto$CATEGORIA$MAN,
+                        TIL = lis.tutto$CATEGORIA$TIL),
+              mean)
+
+row.names(xc) <-
+    with(xc, as.character(interaction(STAGIONE, MAN, TIL)))
+
+dd <- dist(xc[,-(1:3)])
+hc <-  hclust(dd, method="ward.D2")
+dend1 <- as.dendrogram(hc, horizontal = TRUE)
+plot(dend1)
+
+@
+
+
+
+\begin{figure}[]
+\centering
+
+<<label=clusterIndividui_1, fig=TRUE, width = 9, height = 5, echo=FALSE>>=
+<<clusterIndividui_1>>
+@
+
+\caption[Cluster di tutti i campioni]
+{Cluster di tutti i campioni, le sigle e i colori indicano la gestione e
+la lavorazione. Vediamo una separazione netta dovuta alla stagione,
+ma nessun'altra classificazione per quanto riguarda le operazioni
+agronomiche.}
+  \label{fig:clusterIndividui_1}
+\end{figure}
+
+
+
+\begin{figure}[]
+\centering
+
+<<label=clusterIndividui_2, fig=TRUE, width = 5, height = 5, echo=FALSE>>=
+<<clusterIndividui_2>>
+@
+
+\caption[Cluster delle medie senza considerare le repliche di lavorazione]
+{Cluster delle medie senza considerare le repliche di lavorazione.}
+  \label{fig:clusterIndividui_2}
+\end{figure}
+
+
+
+<<ModelloComposizionale, eval = TRUE, results = tex, echo = FALSE>>=
+attach(lis.tutto$CATEGORIA)
+lm.1 <-
+    lm(ilr(Y.MOLI) ~  MAN * STAGIONE * TIL)
+
+lm.2 <-
+    lm(ilr(Y.MOLI) ~ MAN +
+           STAGIONE + TIL+
+           MAN:STAGIONE +
+           MAN:TIL+STAGIONE:TIL)
+
+lm.3 <-
+    lm(ilr(Y.MOLI) ~ MAN +
+           STAGIONE + TIL )
+
+detach(lis.tutto$CATEGORIA)
+
+xtabANOVAmargAcomp <-
+    xtable(anova(lm.1, lm.2, lm.3),
+           label  = "tab:ANOVAmargAcomp",
+           align  = "lllllllll",
+            caption =
+               c("Confronto tra modelli marginali per la composizione di PLFA nel suolo. \\newline
+               modello 1) \\emph{Composizione $\\sim$ Gestione * Lavorazione * Stagione}; \\newline
+ modello 2) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione + Gestione : Stagione + Gestione : Lavorazione + Stagione : Lavorazione};\\newline
+               modello 3) \\emph{Composizione $\\sim$ Gestione + Lavorazione + Stagione}. \\newline
+               Il più parsimonioso risulta essere il modello 2.",
+               "Confronto tra tre modelli marginali per la composizione di PLFA nel suolo")
+)
+print(xtabANOVAmargAcomp,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+
+@
+
+
+
+
+<<ModelloComposizionale_2, eval = TRUE, results = tex, echo = FALSE>>=
+
+modello.composiz <-
+    anova(lm.2)
+row.names(modello.composiz) <-
+    c("(Intercetta)", "GESTIONE", "STAGIONE", "LAVORAZIONE",
+      "GES:STA", "GES:LAV", "STA:LAV", "Residui")
+
+xtabANOVAModAcomp <-
+    xtable(modello.composiz,
+           label  = "tab:ANOVAModAcomp",
+           align  = "lllllll",
+            caption =
+               "Tabella ANOVA per la composizione in PLFA"
+)
+print(xtabANOVAModAcomp,
+      include.rownames=TRUE,
+      caption.placement = "top",
+      table.placement= "h")
+
+@
+
+
+
+
+
+<<ModelloComposizionale_prove, eval = FALSE, results = hide, echo = FALSE>>=
+
+stag <- lis.tutto$CATEGORIA$STAGIONE
+til <- lis.tutto$CATEGORIA$TIL
+man <- lis.tutto$CATEGORIA$MAN
+contrasts(stag) <- "contr.sum"
+contrasts(til) <- "contr.sum"
+contrasts(man) <- "contr.sum"
+
+fattore <-
+    interaction(lis.tutto$CATEGORIA$STAGIONE,
+                lis.tutto$CATEGORIA$TIL,
+                lis.tutto$CATEGORIA$MAN)
+contrasts(fattore) <- "contr.sum"
+
+lm.2 <-
+    lm(ilr(Y.MOLI) ~  man +
+           stag + til+
+           man:stag +
+           man:til+stag:til)
+
+anova(lm.2)
+coefs <-
+    ilrInv(coef(lm.2), orig=Y.MOLI)
+#barplot(coefs, las=2, col=rainbow(4))
+B <- clr(coefs[-1,])
+svdlm <- svd(B)
+nomi.frecce <-
+    substr(
+        dimnames(B)[[1]]
+       ,8,21)
+
+coloredBiplot(x=svdlm$v[,1:2], pc.biplot = TRUE,
+              y=svdlm$u[,1:2],
+              scale=0,
+              xlabs.pc= dimnames(B)[[2]],
+              xlabs.col  = 1,#ifelse(substr(dimnames(B)[[2]],5,5) == "M", 3,4),
+              ylabs = nomi.frecce
+
+              )
+
+## xarrows=TRUE,
+##               ypch=4, ynames=colnames(B),
+##               xnames=rownames(B)
+##               )
+
+sum(svdlm$d[1:2]^2/sum(svdlm$d^2))
+
+require(MASS)
+
+ questi <- names(lis.tutto$PLFA$AREA)[-composti.non.assegnabili]
+
+xc <- acomp(lis.tutto$PLFA$nMOLI)
+dd <- as.dist(
+    variation(xc))
+hc <-  hclust(dd, method="ward.D2")
+      (dend1 <- as.dendrogram(hc, horizontal = TRUE)) # "print()" method
+plot(dend1)
+rect.hclust(hc , k=3, border="red")
+
+prova <- as.vector(cutree(hc, k = 3))
+
+
+df.prova <-
+    cbind.data.frame(
+        UNOtanti = apply(lis.tutto$PLFA$nMOLI[,prova == 1], 1,sum),
+        DUEmedi = apply(lis.tutto$PLFA$nMOLI[,prova == 2], 1,sum),
+        TREpochi = apply(lis.tutto$PLFA$nMOLI[,prova == 3], 1,sum)
+    )
+
+Y.prova <- acomp(df.prova)
+plot(Y.prova, col = as.numeric(stag))
+lm.1 <-
+    lm(ilr(Y.prova) ~  STAGIONE, data = lis.tutto$CATEGORIA)
+anova(lm.1)
+
+    ilrInv(coef(lm.1), orig=Y.prova)
+############ linear discriminant analysis
+fattore <-
+    interaction(lis.tutto$CATEGORIA$STAGIONE,
+                lis.tutto$CATEGORIA$TIL,
+                lis.tutto$CATEGORIA$MAN)
+fattore <-
+    interaction(
+       substr(fattore, 1,1),
+        substr(fattore, 5,5),
+        substr(fattore, 9,9), sep = ""
+        )
+
+
+res <- lda(x=data.frame(ilr(xc)), grouping=fattore)
+ilrInv(res$means, orig=xc)
+pdf("getta.pdf", paper = "A4")
+pairs(res, col=as.integer(fattore))
+dev.off()
+@
+
+
+
 
 
 

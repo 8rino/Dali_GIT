@@ -60,9 +60,9 @@ for(j in 1:2){## j è l'indice per AREA e CONCENTRAZIONE
         names(df.data) <- vec.nomi.colonne
         if(i==1){
             df.autunno <- df.data
-            df.autunno$STAGIONE <- "Aut"
+            df.autunno$STAGIONE <- "Fall"
         }else{
-            df.data$STAGIONE <- "Est"
+            df.data$STAGIONE <- "Summer"
             df.data <-
                 rbind.data.frame(df.autunno, df.data)
             rm(df.autunno)
@@ -106,10 +106,15 @@ for(j in 1:2){## j è l'indice per AREA e CONCENTRAZIONE
     df.data$TIL <-
         mapvalues(df.data$TIL,
                   from = LETTERS[1:3],
-                  to = c("Ara", "Rip","Fzo")
+                  to = c("plw", "chp","dsh")
                   )
+    df.data$MAN <-
+      mapvalues(df.data$MAN,
+                from = c("CO", "OO", "MS", "ST", "BI"),
+                to = c("Co", "Or", "MS", "ST", "BI")
+                )
     df.data$STAGIONE <-
-        factor(df.data$STAGIONE, levels= c("Aut", "Est"))
+        factor(df.data$STAGIONE, levels= c("Fall", "Summer"))
     df.data$Acq.Date.Time <-
         strptime(as.character(df.data$Acq.Date.Time), "%d/%m/%Y %R")
     df.data <- ## riorganizza le colonne
@@ -144,7 +149,7 @@ for(j in 1:2){## j è l'indice per AREA e CONCENTRAZIONE
         split(df.data, df.data$Type)
     ## Pettinatura categorie
     lis.data$Sample <-
-        lis.data$Sample[lis.data$Sample$MAN %in% c( "CO", "OO" ),]
+        lis.data$Sample[lis.data$Sample$MAN %in% c( "Co", "Or" ),]
     lis.data$Sample$MAN <- lis.data$Sample$MAN[drop=TRUE]
     lis.data$Sample$TIL <- lis.data$Sample$TIL[drop=TRUE]
     lis.data$Sample$FIELD <- lis.data$Sample$FIELD[drop=TRUE]

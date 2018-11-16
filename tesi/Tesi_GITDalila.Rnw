@@ -3065,7 +3065,7 @@ specifici \emph{markers} di determinati gruppi microbici
 %      caption.placement = "top",
 %      table.placement= "hb")
 %
-%@
+@
 %\end{landscape}
 
 % \begin{table}[ht]
@@ -3736,7 +3736,7 @@ RapportoSumOrgInteMoli <- SumNumMoli/SumDenomMoli
 
 boxplot(RapportoSumOrgInteMoli ~ lis.tutto$CATEGORIA$MAN,
           ylab = "",
-          main =  expression(frac("Gram-positivi", "Gram-negativi")),
+          main =  expression(frac("Gram-positivi", "Gram-negativi"))
         )
 @
 
@@ -5036,7 +5036,7 @@ dev.off()
 %      caption.placement = "top",
 %      table.placement= "hb")
 %
-%@
+@
 %\chapter{{\fontsize{9mm}{11mm}\selectfont Discussione}}
 
 \chapter{Discussione}
