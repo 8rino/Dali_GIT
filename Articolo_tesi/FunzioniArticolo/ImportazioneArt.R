@@ -60,9 +60,9 @@ for(j in 1:2){## j è l'indice per AREA e CONCENTRAZIONE
         names(df.data) <- vec.nomi.colonne
         if(i==1){
             df.autunno <- df.data
-            df.autunno$STAGIONE <- "Fall"
+            df.autunno$SEASON <- "Fa"
         }else{
-            df.data$STAGIONE <- "Summer"
+            df.data$SEASON <- "Su"
             df.data <-
                 rbind.data.frame(df.autunno, df.data)
             rm(df.autunno)
@@ -113,8 +113,8 @@ for(j in 1:2){## j è l'indice per AREA e CONCENTRAZIONE
                 from = c("CO", "OO", "MS", "ST", "BI"),
                 to = c("Co", "Or", "MS", "ST", "BI")
                 )
-    df.data$STAGIONE <-
-        factor(df.data$STAGIONE, levels= c("Fall", "Summer"))
+    df.data$SEASON <-
+        factor(df.data$SEASON, levels= c("Fa", "Su"))
     df.data$Acq.Date.Time <-
         strptime(as.character(df.data$Acq.Date.Time), "%d/%m/%Y %R")
     df.data <- ## riorganizza le colonne
