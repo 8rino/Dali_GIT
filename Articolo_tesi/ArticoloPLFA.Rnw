@@ -139,7 +139,8 @@ source(file.path(DirFunz, "biplotAcompArt.R"))
 ## source(file.path(DirFunz, "tabellone.R"))
 ## source(file.path(DirFunz, "pezzaXvanga.R"))
 ## debug(fun.tabellone)
-
+## si salvano i parametri grafici che ci comodano dentro l'oggetto my.par
+my.par <- par(cex.axis =1.5,  cex.lab=1.5, cex=1.5)
 @
 
 
@@ -167,10 +168,10 @@ source(file.path(DirFunz, "biplotAcompArt.R"))
         Luca Calamai
   \and
         Gaio Cesare Pacini
-  \and      
-        Ottorino-Luca Pantani 
+  \and
+        Ottorino-Luca Pantani
     \and
-        Dalila Pasquini         
+        Dalila Pasquini
         % etc.
 }
 
@@ -197,12 +198,12 @@ source(file.path(DirFunz, "biplotAcompArt.R"))
               Dipartimento di Scienze delle Produzioni
     Agroalimentari e dell'Ambiente\\
     Piazzale delle Cascine, 18 -- 50144 Firenze, Italia\\
-              Tel.: +39 	055 2755840\\
+              Tel.: +39         055 2755840\\
               Fax.: \\
               \email{ottorinoluca.pantani@unifi.it}
     \and
     Dalila Pasquini \at
-              Dipartimento di Scienze Produzioni 
+              Dipartimento di Scienze Produzioni
     Agroalimentari e dell'Ambiente\\
               Viale delle Idee, 30 -- 50019 Sesto Fiorentino, Italia\\
               Tel.:\\
@@ -246,13 +247,13 @@ Your text comes here. Separate text sections with
 
 The study was carried out at Montepaldi Long Term Experiment (MOLTE),
 the University of Florence  experimental farm active since 1991 located
-in San Casciano Val di Pesa, Florence, Italy (\SI{90}{\meter} a.s.l., latitude 
+in San Casciano Val di Pesa, Florence, Italy (\SI{90}{\meter} a.s.l., latitude
 $ 11^\circ 09' 08^\prime$ E, longitude $ 43^\circ 40' 16^\prime$ N).
-The climate is sub-Apennine, with hot, dry summers and wet, cold winters. 
-Annual mean temperature is $14.1^\circ C$, whit an annual rainfall of about 
-\SI{770}{\milli\meter}. Soil can be classified a mixture of silty clay loam 
-and clay loam with widespread gravel, covering a 15ha surface characterised by 
-a slight slope. 
+The climate is sub-Apennine, with hot, dry summers and wet, cold winters.
+Annual mean temperature is $14.1^\circ C$, whit an annual rainfall of about
+\SI{770}{\milli\meter}. Soil can be classified a mixture of silty clay loam
+and clay loam with widespread gravel, covering a 15ha surface characterised by
+a slight slope.
 
 The experiment had two main factors: management (MAN), with two levels
 (Conventional, \emph{Co} and Organic \emph{Or}), and Tillage (TIL),
@@ -264,19 +265,19 @@ were allocated.
 
 \subsection{Soil sampling and chemical analysis}
 
-The field sampling campaigns were carried out in October-November 2016 and 
-in June 2017. At the centre of each plot, we collected on sample of soil 
+The field sampling campaigns were carried out in October-November 2016 and
+in June 2017. At the centre of each plot, we collected on sample of soil
 (\SI{500}{\g} circa, at \numrange[range-phrase=-]{5}{10} \si{\cm} depth).
 
-These samples were stored at $3^\circ$ C and have then  been sieved at 
-\SI{2}{\mm}. Out of each soil sample we took \SI{5}{\g} which were then been 
+These samples were stored at $3^\circ$ C and have then  been sieved at
+\SI{2}{\mm}. Out of each soil sample we took \SI{5}{\g} which were then been
 grounded to \SI{200}{\micro\meter}.
 
 
 
 
 <<FigRapportiTILL, fig=TRUE, echo=FALSE, results = tex >>=
-
+par(my.par)
 NumeratoreMoli <- lis.tutto$PLFA$nMOLI$C.00CycC19.0
 DenominatoreMoli <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1.omega9t&omega7c`
 
@@ -293,13 +294,14 @@ boxplot(RapportoAnaerobiosiMoli ~ fattore,
         paste("C18:1", omega, "7cis")
         )))
 labs <- levels(fattore)
-text(cex=0.7, x=(1:12), y=-0.15, labs, xpd=TRUE, srt=90)
+text(cex=1, x=(1:12), y=-0.15, labs, xpd=TRUE, srt=90)
 
 
 @
 
 \begin{figure}
 <<label=printBoxplotCore, fig=TRUE, echo=FALSE >>=
+par(my.par)
 plot(1:10)
 @
 
@@ -312,7 +314,7 @@ plot(1:10)
 \end{figure}
 
 <<FigRapportiTILL2, fig=TRUE, echo=FALSE, include = FALSE, results = hide >>=
-
+par(my.par)
 Numeratore2 <- lis.tutto$PLFA$nMOLI$C.00CycC17.0
 Denominatore2 <- lis.tutto$PLFA$nMOLI$C.00LinC16.1.omega7
 Rapporto2 <- Numeratore2/Denominatore2
@@ -325,7 +327,7 @@ boxplot(Rapporto2 ~ fattore,
 @
 
 <<FigRapportiTILL3, fig=TRUE, echo=FALSE, include = FALSE, results = hide >>=
-
+par(my.par)
 
 Numeratore3 <- lis.tutto$PLFA$nMOLI$C.00LinC18.1.omega9cis
 Denominatore3 <- lis.tutto$PLFA$nMOLI$`C.00LinC18.1.omega9t&omega7cis`
@@ -339,16 +341,11 @@ boxplot(Rapporto3 ~ fattore,
 @
 
 <<FigRapportiMAN, fig=TRUE, echo=FALSE, include = FALSE, results=hide>>=
-
-oldpar <- par()
-## par(mfrow=c(2,3))
-
+par(my.par)
 
 NumeratoreMoli2 <- lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramN]
 DenominatoreMoli2 <- lis.tutto$PLFA$nMOLI[,lis.nomi.PLFA.microbi$gramP]
 RapportoOrgInteMoli <- NumeratoreMoli2/DenominatoreMoli2
-
-## par(mfrow=c(2,3))
 
 lis.rapporti <-
     list(
@@ -396,6 +393,7 @@ boxplot(RapportoSumOrgInteMoli ~ lis.tutto$CATEGORIA$MAN,
 
 
 <<FigStarplotMedie, fig=FALSE, echo=FALSE, include = FALSE >>=
+par(my.par)
 lis.disastro <-
     with(lis.tutto$CATEGORIA,
         list(TIL, STAGIONE, MAN)
@@ -442,6 +440,7 @@ df.disastro <- df.disastro[ordina,]
 \end{figure}
 
 <<FigStarplotCampioni, fig=FALSE, echo=FALSE, include = FALSE >>=
+par(my.par)
 df.butta <-
     lis.tutto$PLFA$nMOLI
 row.names(df.butta) <-
@@ -455,8 +454,6 @@ row.names(df.butta) <-
 ordina <-
     with(lis.tutto$CATEGORIA, order(STAGIONE, MAN,TIL, FIELD))
 df.butta <- df.butta[ ordina,]
-#oldpar <- par()
-#par(fin = c(2.5, 5))
    stars(df.butta,
       #key.loc = c(0.8,1),
       #key.xpd=TRUE,
@@ -467,7 +464,6 @@ df.butta <- df.butta[ ordina,]
       draw.segments = TRUE, cex = 0.6,
       scale = TRUE,
       full = FALSE)
-#par(oldpar)
 rm(df.butta)
 
 @
@@ -569,6 +565,7 @@ Dove:
 
 
 <<FigBoxplotSomme, fig=FALSE, echo=FALSE, include = FALSE >>=
+par(my.par)
 
 boxplot(log(lis.tutto$SOMME$nMOLI) ~ fattore,
         ylab = "log(somma moli PLFA)", xaxt="n",
@@ -653,6 +650,7 @@ print(xtabANOVAsummary,
 @
 
 <<FigScreeplotcomposizionale, eval = TRUE, results = tex, echo = FALSE>>=
+par(my.par)
 Y.MOLI <- acomp(lis.tutto$PLFA$nMOLI)
 Y.CONC <- acomp(lis.tutto$PLFA$CONC.ng.ul)
 Y.AREA <- acomp(lis.tutto$PLFA$AREA)
@@ -684,7 +682,7 @@ text(x = c(1:10),
 \end{figure}
 
 <<FigPCAcomposizionale_1, eval = FALSE, echo = FALSE, results = hide>>=
-
+par(my.par)
 df.colori <-
     cbind.data.frame(origine = 1:36, MASSE = df.masse[-c(2,23),2])
 
@@ -708,6 +706,7 @@ points(x=-0.75, y=1.10, pch=1, col=1, cex=4)
 
 
 <<FigPCAcomposizionale_2, eval = FALSE, echo = FALSE, results = hide>>=
+par(my.par)
 coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE, cex = 1,
               col = c("transparent",1),arrow.len = 0.05,
               ylabs = 1:36,#substr(names(lis.tutto$PLFA$nMOLI),3,7)
@@ -731,6 +730,7 @@ coloredBiplot(pcx.Y.MOLI, pc.biplot=TRUE, cex = 1,
 @
 
 <<FigPCAcomposizionale_3_4, eval = FALSE, results = tex, echo =  FALSE>>=
+par(my.par)
 fun.biplot(x=pcx.Y.MOLI,
            col=c(1,5),
            choices=c(2,3), ## assi/componenti da considerare
@@ -1195,23 +1195,22 @@ a^2+b^2=c^2
 %% \end{table}
 
 \begin{table}[h]
-\caption[Caratteristiche fisico chimiche del 1992]
-{Caratteristiche fisico chimiche dei campi a conduzione biologica
-e convenzionale misurate nell'anno 1992 \citep{DISPAA}. }
+\caption[Physico-chemical characteristics of soils used in this experiment]
+{[Physico-chemical characteristics of soils used in this experiment]\citep{DISPAA}. }
  \label{tab:CarattMoLTE1992}
 \centering
-  \begin{tabular}{ll}
+  \begin{tabular}{llll}
 \hline\noalign{\smallskip}
-    Biologico & Convenzionale   \\
+    Parameter & Unit & Organic & Conventional   \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-    32,9\,\% argilla            &  33,8\,\% argilla \\
-    46,3\,\% limo               &  44,6\,\% limo\\
-    20,2\,\% sabbia             &  21,0\,\% sabbia    \\
-    6,3\,\% scheletro           &  6,1\,\% scheletro\\
-    8,3 pH$(_{H_2 O})$           &  8,3 pH$(_{H_2 O})$ \\
-    \SI{17.6}{\cmol\per\kg} CSC & \SI{19.4}{\cmol\per\kg} CSC \\
-    1,63\,\%  \ce{P2O5} totale  & 1,60\,\% \ce{P2O5} totale \\
-    171\,ppm \ce{K2O}             & 134\,ppm \ce{K2O} \\
+    clay            & \%                & 32.9 & 33.8 \\
+    silt            & \%                & 46.3 & 44.6 \\
+    sand            & \%                & 20.2 & 21.0 \\
+%%  gravel          & \%                &  6,3 &  6,1 \\
+    pH$(_{H_2 O})$   &                   &  8.3   &  8.3 \\
+    CEC             & \si{\cmol\per\kg} & 17.6   & 19.4 \\
+    total \ce{P2O5} & \%                &  1.63  & 1.60 \\
+    total \ce{K2O}  & \si{\mg\per\kg  } & 171    & 134 \\
 \noalign{\smallskip}\hline
   \end{tabular}
 \end{table}
@@ -1220,7 +1219,7 @@ e convenzionale misurate nell'anno 1992 \citep{DISPAA}. }
 
 The authors gratefully thanks Giovanna Casella and Fabrizio Filindassi
 for their precious constructive help and assistance in the field and
-in the lab. \migliora[inline]{Nei riconoiscimenti c\i andrà messo
+in the lab. \migliora[inline]{Nei riconoiscimenti ci andr\`a messo
   qualcosa sul finanziamento ?}
 \end{acknowledgements}
 
