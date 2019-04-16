@@ -238,11 +238,21 @@ subject classification numbers as needed.
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
 
+\todo{controllare bibliografia e scegliere rivista: applied soil ecology e, 
+potenzialmente SBB}
+\todo{controllare format richiesta rivista (latex ok in entrambe), controlla 
+struttura}
+\todo{buttare giu max 3 conclusioni e scrivere all'indietro}
+\todo{controllare di avere tutte le figure e tabelle per le conclusioni}
+\todo{modificare tabelle e immagini:inglese-ita e dimensione testo}
+\todo{scheletro e controlla riviste}
+
+
 \section{Introduction}
 \label{intro}
 Your text comes here. Separate text sections with
 
-\section{Materials and methods}
+\section{Methodology}
 \subsection{Study area and experimental design}
 
 The study was carried out at Montepaldi Long Term Experiment (MOLTE),
@@ -273,7 +283,11 @@ These samples were stored at $3^\circ$ C and have then  been sieved at
 \SI{2}{\mm}. Out of each soil sample we took \SI{5}{\g} which were then been 
 grounded to \SI{200}{\micro\meter}.
 
+\subsection{Statistical methodology}
 
+\section{Results}
+\section{Discussion}
+\section{Conclusion}
 
 
 <<FigRapportiTILL, fig=FALSE, echo=FALSE, results = tex >>=
